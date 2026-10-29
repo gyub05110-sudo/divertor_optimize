@@ -1,0 +1,8 @@
+{
+  "name": "public_lower_horizontal_shelf_reference",
+  "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+  "segment_index": 59,
+  "endpoints_RZ_m": [[1.6452, -1.2448], [1.40117, -1.24477]],
+  "physical_identity_validated": false,
+  "basis": "Explicit public contour reference at the lower horizontal shelf elevation; no shot-specific hardware identity or campaign match is asserted."
+}

@@ -1,0 +1,156 @@
+{
+  "checked_at_utc": "2026-10-03T07:02:52.980519+00:00",
+  "transfer_status": "moved_and_hash_verified",
+  "transferred_files": 147,
+  "viewer_updates_since_verified_move": [
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\history_desktop.png",
+      "status": "added_after_move",
+      "sha256": "4e14b3ce1d735d1a2afa829ac9e1dfaf8a93cc4c5e00cdfe774c50cc1b06f9bc"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\history_browser_check.json",
+      "status": "added_after_move",
+      "sha256": "dc22aa93f0b22b64665dfb0358de766a280bdd28578f20e8f25e4f756db468cb"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\history-ui.mjs",
+      "status": "added_after_move",
+      "sha256": "6d338ab6b3112a662a5049f6c1f7ce5f7de3be92c0646330519711edc6bb5201"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\history_browser_check.cjs",
+      "status": "added_after_move",
+      "sha256": "3b7be6248654f9e4a8e56e83233e81581947111b9cc588a49a8d86e525ec0bae"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\history_mobile.png",
+      "status": "added_after_move",
+      "sha256": "1fc3e1f48c51279a493099240bbbf7b3218e5c9933d3fa65d0b8664ca8f2d546"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\index.html",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "ed2cdf79a1d18e170988e604eca1e7fdf0c23def0f7883792c7518692f865579",
+      "current_sha256": "6ad3e1ea5ff03b632fabad553955051ab9f6c204da3c711938c2d460e72f3669"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\__pycache__\\history_data.cpython-313.pyc",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "0ea1c8dcc7982f5efb083dfc8c212b31248daa979c9f1bf8076672e9c58f500a",
+      "current_sha256": "28c3bdb89572dd098c75e5d7bbc7efb2d6d4da4efae19a82dd096774beb545e9"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\__pycache__\\test_history_data.cpython-313.pyc",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "562bf21bcbc482f1018086861bffb53eac0714512e6a36ff930e7ec370de6901",
+      "current_sha256": "fd1ee6457210b652164f7d9e53b299013d4a0ada814084477add04d1bd8c6238"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\app.mjs",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "d30979ef9d825ddedc891c353a27f4a2838e1d0bdd08c54b1b7dda8508b135a7",
+      "current_sha256": "a2cb2b7b4aa171f42553c6b023f9c8b9c55e2d3c3d381ba6b7bfca98969a205d"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\browser_check.cjs",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "97734d2f1e17c67d52c836650f2403df49a1303d9cc3a5994f1e8fd8fbae9d50",
+      "current_sha256": "36544084de3bcc199413e4b1b183369424c255d54a6806b5a31290fe29477bc1"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\desktop.png",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "83d5468f7a3c2274ddeee8e94b69cc7508d58e8f738db3fca3e71050d5d74d38",
+      "current_sha256": "b81f36336cf134bc3315f819a3db9993c03e5ba2a8a0d0a37f1f20f1df7a86a9"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\export_check.png",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "24c4ac0cd523426e4b4a27c6ed232f2e1f00a9c5f93ba92a5e8da4759402d428",
+      "current_sha256": "afd44eb79760368acea90cbdf7dab88b0678f2d9bcead4a9c74001d2e5861bec"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\export_history.py",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "9ffa8d7ffd9f7ae32b79cdd4f2630a9c98893e9af734ec922e3af4638f30bf4b",
+      "current_sha256": "524be913c377681b43dfa9d4c96cf5c7482cf01aa44435ef6922315f5dcc62a7"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\mobile.png",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "f03eb2612f0a6ae9fcccd56bb67bcb2370735b48030272c912bd39c90aa8c3f4",
+      "current_sha256": "6fb27e430d0b7163c8745406fae33fe62dcada247eb6473872fe94163114e090"
+    },
+    {
+      "file": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\README.md",
+      "status": "viewer_updated_after_move",
+      "transfer_sha256": "d1b86cc5996302d1bfe9bf99c7e66b61598559cf24d9c87f6bc75fbe8d5dafda",
+      "current_sha256": "14551e27a6bd6977cf6993c5122db6450fb87c991ad5403a53a0ec85811a6345"
+    }
+  ],
+  "scientific_result_files_still_match_transfer_hashes": true,
+  "legacy_main_only_two_d3d_dispatch_insertions": true,
+  "legacy_backup_sha256": "5cae0fdb41a67d70c0e7909c04460a62f7dd29976b16e54386585a6e23442c2c",
+  "main_sha256": "60c9472e8da2f5c16c810d1067fdf7bd9085100b1ff47c59bee4cd08a4c62fa5",
+  "tests": {
+    "command": "python -m pytest verification/test_d3d_multisurface.py verification/test_d3d_frozen_heat.py verification/test_d3d_fixed_equilibrium_integration.py verification/test_heat_conditional_policy.py verification/test_first_objective.py -q",
+    "passed": 78
+  },
+  "compileall_passed": true,
+  "integration_search_counts": {
+    "evaluated": 3193,
+    "geometry_valid": 2334,
+    "feasible": 345
+  },
+  "latest_floor_shelf_integration_counts": {
+    "evaluated": 2113,
+    "geometry_valid": 1576,
+    "feasible": 349
+  },
+  "latest_floor_shelf_checked_reduction_percent": [
+    16.625257385772763,
+    16.59301012184652,
+    16.679755119048888
+  ],
+  "latest_floor_shelf_verification_passed": true,
+  "numeric_checks": [
+    {
+      "name": "cubic_coarse",
+      "minimum_target_angle_deg": 1.502226918699796,
+      "worst_all_wall_peak_ratio": 1.0
+    },
+    {
+      "name": "cubic_refined",
+      "minimum_target_angle_deg": 1.5041395883224753,
+      "worst_all_wall_peak_ratio": 1.0
+    },
+    {
+      "name": "quintic_refined",
+      "minimum_target_angle_deg": 1.504164605955873,
+      "worst_all_wall_peak_ratio": 1.0
+    },
+    {
+      "name": "cubic_finer",
+      "minimum_target_angle_deg": 1.5045545028654101,
+      "worst_all_wall_peak_ratio": 1.0
+    }
+  ],
+  "input_authentication_and_cache_fingerprint_passed": true,
+  "implementation_sha256": {
+    "authentication.py": "44100aab406ecf7edb33bfa4fe9bb6a801ea7c89251202ca1d7085b8827ec8ea",
+    "case.py": "75e4ec25c9d5f53640d22461b6c5354e95ff2116b4fcb23bcce40784b3d3bc07",
+    "expanded_search.py": "4c4459f7fe49a56dfe14570b8e2e5375ab99f5661ae14e198a99e93fe54692f6",
+    "final_refinement.py": "644f0de404fd961ddd2937de252b837858f4be5d47531ca1bd0c550a2ab912bd",
+    "frozen_field.py": "2e224446aa2c2712f60943305c56bcdb2767f2bf5fd6a7410eb22d52597e6488",
+    "frozen_mapping.py": "961c3a3fe0b0f3e3f6fd44ee6653bc0a0e96cf857b848e001a8fec0aea086e3e",
+    "multisurface.py": "654244e36aa085ea8a27c996fa142b04d44b863e3ff99a058e2f1a395bd08f18",
+    "multisurface_search.py": "e91d2bd8e08106b33825004a40a2229fb6a69cc575b5ab235e0abf90d0d817be",
+    "multisurface_validate.py": "b7b39b42b8209685abbf9624d58188700cdaecd162c92c0e30fd5fcc72f032bd",
+    "reporting.py": "e8635b1305e09c8edfb9ac693f212731dbc01ececc326ce01cb7bc0d7e7b8dcf",
+    "shape.py": "7e1e3d31e4b722d5a3212c5099f6965f672f15be3fc493655570e0e25c870562",
+    "validate_expanded.py": "39cf51548d11fdbf90fd8b67cee6153697b228d32c9c7b10ac820f0960cce206",
+    "__init__.py": "897e2557bc2434d17ee1e2cc5efa428038891f438cd9603a09cba876e70dbde4"
+  },
+  "limitations": "Targeted checks and this fixed case; not a full legacy-project test suite or physical heat-load certification."
+}

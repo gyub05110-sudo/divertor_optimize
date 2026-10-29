@@ -1,0 +1,77 @@
+{
+  "case": 1,
+  "stage": "initial",
+  "coefficients_m": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "geometry_valid": true,
+  "feasible": true,
+  "baseline_admissible": true,
+  "peak_q": [
+    2.6754858906824177
+  ],
+  "baseline_peak_q": [
+    2.6754858906824177
+  ],
+  "peak_ratios": [
+    1.0
+  ],
+  "worst_peak_ratio": 1.0,
+  "missing_power": 0.0,
+  "balance_error": 0.0,
+  "surface_power": {
+    "omp_entry": [
+      0.0
+    ],
+    "shelf": [
+      0.0
+    ],
+    "omp_connector": [
+      0.0
+    ],
+    "floor": [
+      0.0
+    ],
+    "imp_sloped": [
+      0.8811584112557107
+    ],
+    "imp_vertical": [
+      0.08901399116739264
+    ]
+  },
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "mode": "direct",
+  "peak_q_MW_m2": [
+    2.6754858906824177
+  ]
+}

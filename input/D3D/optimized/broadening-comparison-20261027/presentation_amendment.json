@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-10-27T08:05:59.487707+00:00",
+  "phase": "after both complete numerical validations and full original provenance checks",
+  "changed_file": "verification/plot_broadening.py",
+  "original_sha256": "988338450b7783d5e7ad09f2d12919b88dfa0161549f55473542986232c7e373",
+  "current_sha256": "0e63f73067265140a75c4f74dfdac74828c3c5d49450b13a8f79be285b281c31",
+  "frozen_source": "frozen_source\\verification\\plot_broadening.py",
+  "changes": [
+    "Handle incomplete validation checkpoints without KeyError",
+    "Distinguish search missing power from refined baseline failures",
+    "Label anchor-sensitive numerical improvements as conditional"
+  ],
+  "numerical_files_and_inputs_unchanged": true,
+  "historical_provenance_rewritten": false,
+  "limitation": "Strict historical verifier correctly rejects the current plotting hash. Reproduce historical code using archived plotting source in a separate copy; use a new output directory for any rerun."
+}

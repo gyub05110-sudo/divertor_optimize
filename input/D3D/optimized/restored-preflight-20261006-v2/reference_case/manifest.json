@@ -1,0 +1,226 @@
+{
+  "shot_path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor_no-transport\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+  "shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+  "geometry": {
+    "commit": "51739c7a3908f80ef40b670222d2a17a61ea675e",
+    "url": "https://raw.githubusercontent.com/hansec/OpenFUSIONToolkit/51739c7a3908f80ef40b670222d2a17a61ea675e/src/examples/TokaMaker/DIIID/DIIID_geom.json",
+    "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "campaign_match": "unknown; public research baseline"
+  },
+  "time_ms": 1400.0,
+  "angle_floor_deg": 1.5,
+  "angle_sensitivity": false,
+  "widths_mm": [
+    1,
+    2,
+    3,
+    5,
+    10
+  ],
+  "outer_branch_power": 1.0,
+  "source_max_x_m": 0.1,
+  "source_profile": "q_parallel,u proportional to exp(-x/lambda_q)",
+  "tf_model": "ideal axisymmetric 144-turn field, bcoil kA to A",
+  "tf_current_ka": 123.78460159301758,
+  "interpolation": "cubic",
+  "r_sep_m": 2.251311109214891,
+  "xpoint_m": [
+    1.1765919407581311,
+    -1.2523989728504332
+  ],
+  "psi_sep_Wb_per_rad": -0.0024048686880576917,
+  "max_path_psi_drift": 2.7499963430564767e-08,
+  "target_original_segment": 59,
+  "tubes": 320,
+  "step_m": 0.002,
+  "target_configuration": {
+    "name": "public_lower_horizontal_shelf_reference",
+    "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "segment_index": 59,
+    "endpoints_RZ_m": [
+      [
+        1.6452,
+        -1.2448
+      ],
+      [
+        1.40117,
+        -1.24477
+      ]
+    ],
+    "physical_identity_validated": false,
+    "basis": "Explicit public contour reference at the lower horizontal shelf elevation; no shot-specific hardware identity or campaign match is asserted."
+  },
+  "angle_application": {
+    "scope": "positive_power_first_hits_on_explicit_target",
+    "target_hit_count": 124,
+    "applied_hit_count": 124,
+    "excluded_zero_power_target_hit_count": 0,
+    "minimum_angle_deg": 1.5698934375169624,
+    "angle_constraint_passed": true,
+    "status": "angle_satisfied"
+  },
+  "angle_constraint_scope": "positive_power_first_hits_on_explicit_target",
+  "constraint_penalties": {
+    "angle_lower_bound": 0,
+    "target_unilluminated": 0.0,
+    "invalid_target_angle": 0.0,
+    "unmapped_power": 0
+  },
+  "python": "3.13.12",
+  "elapsed_seconds": 1.2805189000209793,
+  "preflight_only": true,
+  "optimizer": null,
+  "feasible_candidate": true,
+  "coefficients_m": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "minimum_target_angle_deg": 1.5698934375169624,
+  "results": [
+    {
+      "geometry": "baseline",
+      "lambda_q_mm": 1,
+      "q_over_P_peak_m2inv": 8.71866911464112,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.00015625505120269188,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 1.3895996494260875e-05,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.999986104003506,
+      "unmapped_power": 8.766814440400707e-44,
+      "power_balance_error": 4.440892098500627e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "baseline",
+      "lambda_q_mm": 2,
+      "q_over_P_peak_m2inv": 4.361480689008827,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.02205760559321755,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.003721197613082967,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.9962788023869172,
+      "unmapped_power": 1.587051223223207e-22,
+      "power_balance_error": 3.33066907387547e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "baseline",
+      "lambda_q_mm": 3,
+      "q_over_P_peak_m2inv": 2.9086796538656334,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.09648663352225094,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.023983298013619404,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.9760167019863788,
+      "unmapped_power": 1.6363284667285094e-15,
+      "power_balance_error": 1.1102230246251565e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "baseline",
+      "lambda_q_mm": 5,
+      "q_over_P_peak_m2inv": 1.7463871765754946,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.2608490580687509,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.10644172919999104,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.8935582702443576,
+      "unmapped_power": 5.556515030980008e-10,
+      "power_balance_error": 2.220446049250313e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "baseline",
+      "lambda_q_mm": 10,
+      "q_over_P_peak_m2inv": 0.8877274613266531,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.40392697713741393,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.3202293868198646,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.6797648637245448,
+      "unmapped_power": 5.749455590774493e-06,
+      "power_balance_error": 2.220446049250313e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "candidate",
+      "lambda_q_mm": 1,
+      "q_over_P_peak_m2inv": 8.71866911464112,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.00015625505120269188,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 1.3895996494260875e-05,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.999986104003506,
+      "unmapped_power": 8.766814440400707e-44,
+      "power_balance_error": 4.440892098500627e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "candidate",
+      "lambda_q_mm": 2,
+      "q_over_P_peak_m2inv": 4.361480689008827,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.02205760559321755,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.003721197613082967,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.9962788023869172,
+      "unmapped_power": 1.587051223223207e-22,
+      "power_balance_error": 3.33066907387547e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "candidate",
+      "lambda_q_mm": 3,
+      "q_over_P_peak_m2inv": 2.9086796538656334,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.09648663352225094,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.023983298013619404,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.9760167019863788,
+      "unmapped_power": 1.6363284667285094e-15,
+      "power_balance_error": 1.1102230246251565e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "candidate",
+      "lambda_q_mm": 5,
+      "q_over_P_peak_m2inv": 1.7463871765754946,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.2608490580687509,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.10644172919999104,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.8935582702443576,
+      "unmapped_power": 5.556515030980008e-10,
+      "power_balance_error": 2.220446049250313e-16,
+      "feasible": true
+    },
+    {
+      "geometry": "candidate",
+      "lambda_q_mm": 10,
+      "q_over_P_peak_m2inv": 0.8877274613266531,
+      "all_wall_peak_ratio": 1.0,
+      "target_peak_m2inv": 0.40392697713741393,
+      "minimum_target_angle_deg": 1.5698934375169624,
+      "target_power": 0.3202293868198646,
+      "angle_status": "angle_satisfied",
+      "other_wall_power": 0.6797648637245448,
+      "unmapped_power": 5.749455590774493e-06,
+      "power_balance_error": 2.220446049250313e-16,
+      "feasible": true
+    }
+  ],
+  "numerically_verified_feasible": false,
+  "certified_heat_optimum": false,
+  "scope": "conditional direct magnetic heat mapping; unknown campaign match; no measured heat load"
+}

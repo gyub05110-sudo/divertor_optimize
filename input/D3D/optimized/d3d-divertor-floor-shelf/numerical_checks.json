@@ -1,0 +1,176 @@
+[
+  {
+    "name": "cubic_coarse",
+    "feasible": true,
+    "geometry_valid": true,
+    "peak_ratios": [
+      0.6036063359985828,
+      0.6036063359985828,
+      0.6036063359985829,
+      0.6036063359985828,
+      0.6442257832483174
+    ],
+    "angles": {
+      "floor": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 101,
+        "applied_hit_count": 0,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 0.5243640569849687,
+        "angle_constraint_passed": null,
+        "status": "diagnostic_only_no_angle_floor",
+        "angle_floor_deg": null
+      },
+      "shelf": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 124,
+        "applied_hit_count": 124,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 1.5881733967003042,
+        "angle_constraint_passed": true,
+        "status": "angle_satisfied",
+        "angle_floor_deg": 1.5
+      }
+    },
+    "unmapped_power": 5.749455590774493e-06,
+    "surface_power": {
+      "shelf": [
+        1.3895996494260877e-05,
+        0.003721197613082968,
+        0.023983298013619404,
+        0.10644172919999104,
+        0.3202293868198647
+      ],
+      "floor": [
+        0.9999529704437219,
+        0.993152657866393,
+        0.9639804141045439,
+        0.8640756121673256,
+        0.6321023144623323
+      ]
+    },
+    "power_balance_error": 2.2204460492503136e-16,
+    "angle_penalty": 0.0,
+    "max_path_psi_drift": 2.7499963430564767e-08,
+    "vessel_clearance_m": {
+      "floor": 0.034660000000000135,
+      "shelf": 0.04720180564704379
+    }
+  },
+  {
+    "name": "cubic_refined",
+    "feasible": true,
+    "geometry_valid": true,
+    "peak_ratios": [
+      0.6024451454270364,
+      0.6024451454270364,
+      0.6024451454270365,
+      0.6024451454270363,
+      0.6428405324085043
+    ],
+    "angles": {
+      "floor": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 202,
+        "applied_hit_count": 0,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 0.529378244556834,
+        "angle_constraint_passed": null,
+        "status": "diagnostic_only_no_angle_floor",
+        "angle_floor_deg": null
+      },
+      "shelf": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 247,
+        "applied_hit_count": 247,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 1.575503565383704,
+        "angle_constraint_passed": true,
+        "status": "angle_satisfied",
+        "angle_floor_deg": 1.5
+      }
+    },
+    "unmapped_power": 5.749455590773091e-06,
+    "surface_power": {
+      "shelf": [
+        1.3895996494260924e-05,
+        0.0037211976125187617,
+        0.023983295830275756,
+        0.10644038505037279,
+        0.3201073657531923
+      ],
+      "floor": [
+        0.999952970443722,
+        0.9931526578663931,
+        0.9639804141045412,
+        0.864075612167296,
+        0.632102314462178
+      ]
+    },
+    "power_balance_error": 2.2204460492503126e-16,
+    "angle_penalty": 0.0,
+    "max_path_psi_drift": 3.6151891267925673e-09,
+    "vessel_clearance_m": {
+      "floor": 0.034660000000000135,
+      "shelf": 0.04720180564704379
+    }
+  },
+  {
+    "name": "quintic_refined",
+    "feasible": true,
+    "geometry_valid": true,
+    "peak_ratios": [
+      0.6028407425959778,
+      0.6028407425959776,
+      0.6028407425959776,
+      0.6028407425959776,
+      0.6428105014535117
+    ],
+    "angles": {
+      "floor": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 202,
+        "applied_hit_count": 0,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 0.5312864933389566,
+        "angle_constraint_passed": null,
+        "status": "diagnostic_only_no_angle_floor",
+        "angle_floor_deg": null
+      },
+      "shelf": {
+        "scope": "positive_power_first_hits_on_explicit_target",
+        "target_hit_count": 247,
+        "applied_hit_count": 247,
+        "excluded_zero_power_target_hit_count": 0,
+        "minimum_angle_deg": 1.5755281798524172,
+        "angle_constraint_passed": true,
+        "status": "angle_satisfied",
+        "angle_floor_deg": 1.5
+      }
+    },
+    "unmapped_power": 5.749260364802501e-06,
+    "surface_power": {
+      "shelf": [
+        1.3894679589449486e-05,
+        0.0037208352891608142,
+        0.023981032330027564,
+        0.10643188253688636,
+        0.32009175235386994
+      ],
+      "floor": [
+        0.9999529742764125,
+        0.9931532431304659,
+        0.9639834571905818,
+        0.864085625987385,
+        0.6321193898443638
+      ]
+    },
+    "power_balance_error": 2.220446049250313e-16,
+    "angle_penalty": 0.0,
+    "max_path_psi_drift": 5.5406066106628016e-09,
+    "vessel_clearance_m": {
+      "floor": 0.034660000000000135,
+      "shelf": 0.04720180564704379
+    }
+  }
+]

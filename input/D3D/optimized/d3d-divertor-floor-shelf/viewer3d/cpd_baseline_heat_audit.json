@@ -1,0 +1,160 @@
+{
+  "source_definition": {
+    "schema": "native-separatrix-aligned-source.v1",
+    "native_field_sha256": "3240d34ddb9d71739d34c5e19d37dd0db61f2e10ed09bef95f30982f93e41998",
+    "profile": "normalized_exponential_in_native_psiN",
+    "native_psiN_band": [
+      1.0000000007159418,
+      1.032275340554909
+    ],
+    "source_reference": "observed_native_lower_saddle",
+    "R_OMP_band_m": [
+      5.320938328369039,
+      5.350938328767257
+    ],
+    "Z_OMP_m": 0.0019151363437125352,
+    "physical_lambda_q_m": 0.0007678087174541923,
+    "lambda_native_psiN": 0.0008299169826033493,
+    "native_OMP_gradient_per_m": 1.0808902839174424,
+    "radial_extent_m": 0.030000000398218596,
+    "total_power_W": 100000000.0,
+    "plus_B_fraction": 0.5,
+    "minus_B_fraction": 0.5,
+    "discarded_untruncated_tail_fraction": 1.2893073915590692e-17,
+    "finite_band_power_normalization": 1.0,
+    "numerical_anchor_flux_residual": -4.440892098500626e-16,
+    "minimum_native_derivative_diagnostic": 1.0709086747052146,
+    "width_conversion": "local_native_OMP_derivative_at_saddle_reference",
+    "old_source_relabelled": false,
+    "open_field_connectivity_certified": false,
+    "critical_reference_certified": false,
+    "source_model_changed": true
+  },
+  "raw_geometry_sha256": "492499214c07d6d963317bae6aeacae7c86867f68676e0fde759c529075c7549",
+  "exported_samples_exact_match": true,
+  "exported_peak_exact_match": true,
+  "sample_count": 138,
+  "independent_local_heat_max_relative_error": 3.868544982877637e-12,
+  "max_hit_source_psiN_difference": 2.1405099914773018e-13,
+  "sampled_surface_integral_MW": 112.9358491508828,
+  "source_power_MW": 100.0,
+  "sampled_surface_integral_relative_residual": 0.12935849150882794,
+  "native_flux_interval_power_MW": 99.99923407124449,
+  "groups": [
+    {
+      "face": 12,
+      "direction": -1,
+      "role": "structure",
+      "samples": 11,
+      "face_length_mm": 731.4594999041301,
+      "sampled_span_mm": 115.24902907625912,
+      "peak_MW_per_m2": 7.16148471740486e-15,
+      "peak_fraction_of_global": 1.1486042033058985e-17,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 34.58723785569358,
+        "0.1": 62.8323591451494,
+        "0.01": 62.8323591451494
+      },
+      "viewer_integral_MW": 9.497908299715698e-15,
+      "native_flux_interval_power_MW": 9.626182920095515e-15,
+      "packet_ledger_MW": 1.6861270995443816e-14,
+      "central_90pct_power_width_mm": 72.28346083836979
+    },
+    {
+      "face": 14,
+      "direction": 1,
+      "role": "structure",
+      "samples": 22,
+      "face_length_mm": 744.4971457299216,
+      "sampled_span_mm": 179.88901362033084,
+      "peak_MW_per_m2": 7.601761211750796e-12,
+      "peak_fraction_of_global": 1.2192185314763542e-14,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 34.76490343749106,
+        "0.1": 36.60134137848688,
+        "0.01": 48.11917432393642
+      },
+      "viewer_integral_MW": 8.326702516627626e-12,
+      "native_flux_interval_power_MW": 8.524190066969992e-12,
+      "packet_ledger_MW": 1.702681104090561e-11,
+      "central_90pct_power_width_mm": 32.30124923155486
+    },
+    {
+      "face": 21,
+      "direction": 1,
+      "role": "outer_target",
+      "samples": 40,
+      "face_length_mm": 190.85195955700442,
+      "sampled_span_mm": 106.8231414767169,
+      "peak_MW_per_m2": 539.6423595802617,
+      "peak_fraction_of_global": 0.8655125395846889,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 2.9030134602670024,
+        "0.1": 12.586745797764003,
+        "0.01": 18.942862958099482
+      },
+      "viewer_integral_MW": 57.07612554291697,
+      "native_flux_interval_power_MW": 49.99999499184142,
+      "packet_ledger_MW": 49.999999999982975,
+      "central_90pct_power_width_mm": 12.951060109609003
+    },
+    {
+      "face": 24,
+      "direction": -1,
+      "role": "inner_target",
+      "samples": 23,
+      "face_length_mm": 227.2017796901469,
+      "sampled_span_mm": 47.357743538714914,
+      "peak_MW_per_m2": 623.4945594655462,
+      "peak_fraction_of_global": 1.0,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 2.9978082218748785,
+        "0.1": 12.555719522450277,
+        "0.01": 19.90931889557401
+      },
+      "viewer_integral_MW": 55.85972183419175,
+      "native_flux_interval_power_MW": 49.99923732316757,
+      "packet_ledger_MW": 49.999242323911375,
+      "central_90pct_power_width_mm": 13.106049655988272
+    },
+    {
+      "face": 25,
+      "direction": -1,
+      "role": "baffle",
+      "samples": 8,
+      "face_length_mm": 101.6135014848598,
+      "sampled_span_mm": 45.787966902443245,
+      "peak_MW_per_m2": 0.0028138055012603904,
+      "peak_fraction_of_global": 4.5129591887254935e-06,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 0.0,
+        "0.1": 0.0,
+        "0.01": 0.0
+      },
+      "viewer_integral_MW": 1.17660352184349e-06,
+      "native_flux_interval_power_MW": 1.170592497533038e-06,
+      "packet_ledger_MW": 0.0007568953648910392,
+      "central_90pct_power_width_mm": 5.328813072949856
+    },
+    {
+      "face": 27,
+      "direction": -1,
+      "role": "baffle",
+      "samples": 34,
+      "face_length_mm": 522.4983535971537,
+      "sampled_span_mm": 128.45815483441748,
+      "peak_MW_per_m2": 5.479843084025935e-06,
+      "peak_fraction_of_global": 8.788918845937014e-09,
+      "heat_above_local_peak_width_mm": {
+        "0.5": 5.079948764147081,
+        "0.1": 10.037250758799132,
+        "0.01": 10.037250758799132
+      },
+      "viewer_integral_MW": 5.971622066810177e-07,
+      "native_flux_interval_power_MW": 5.856344679722976e-07,
+      "packet_ledger_MW": 7.807237168859187e-07,
+      "central_90pct_power_width_mm": 8.821971067874301
+    }
+  ],
+  "note": "Full-torus integral of the viewer piecewise linear q between same-face same-direction samples within 20 mm; does not certify unsampled regions or continuous maxima."
+}

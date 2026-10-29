@@ -1,0 +1,25 @@
+{
+  "case_id": "220a33e961eb-1400ms-9b002084",
+  "stage_count": 14,
+  "core_levels": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.95
+  ],
+  "normalization": {
+    "psi_axis": -0.3152270743606404,
+    "psi_separatrix": -0.05258919238239227,
+    "axis_RZ_m": [
+      1.7162779569625854,
+      -0.003836641553789377
+    ],
+    "definition": "(psi - psi_axis)/(psi_Xpoint - psi_axis)",
+    "method": "cubic EFIT spline; closed axis-enclosing contours"
+  },
+  "max_contour_residual": 6.316369035799796e-05,
+  "first_hit_sol_paths_per_stage": 8,
+  "recorded_scores_verified": true,
+  "sol_truncated_to_material": true
+}

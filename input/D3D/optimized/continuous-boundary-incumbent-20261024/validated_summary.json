@@ -1,0 +1,16 @@
+{
+  "OMP": {
+    "numerically_verified_feasible": true,
+    "resolution_screen_passed": true,
+    "nonworsening": true,
+    "improvement_confirmed": true,
+    "finest_worst_peak_ratio": 0.6430561243338871,
+    "finest_reduction_percent": 35.69438756661128,
+    "max_fine_grid_ratio_change": 0.000462579507338412,
+    "max_interpolant_ratio_change": 0.0007626416705445171,
+    "measured_uncertainty_indicator": 0.0007626416705445171,
+    "verification_status": "passed",
+    "global_optimum_proven": false,
+    "experimental_validation": false
+  }
+}

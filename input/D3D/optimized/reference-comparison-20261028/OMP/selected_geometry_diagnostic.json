@@ -1,0 +1,152 @@
+{
+  "161": [
+    {
+      "name": "omp_entry",
+      "length_ratio": 1.1569792302560615,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "shelf",
+      "length_ratio": 1.0102978736678454,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "omp_connector",
+      "length_ratio": 1.0572591644850697,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "floor",
+      "length_ratio": 1.1999980442344802,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_sloped",
+      "length_ratio": 1.1750728116824525,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_vertical",
+      "length_ratio": 1.1030592501355476,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    }
+  ],
+  "321": [
+    {
+      "name": "omp_entry",
+      "length_ratio": 1.1570463117821865,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "shelf",
+      "length_ratio": 1.0103018608381014,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "omp_connector",
+      "length_ratio": 1.0572720383162435,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "floor",
+      "length_ratio": 1.2000480036306724,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_sloped",
+      "length_ratio": 1.1751652977017901,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_vertical",
+      "length_ratio": 1.1030918446474907,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    }
+  ],
+  "641": [
+    {
+      "name": "omp_entry",
+      "length_ratio": 1.1570630935637387,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "shelf",
+      "length_ratio": 1.010302858176664,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "omp_connector",
+      "length_ratio": 1.0572752584635094,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "floor",
+      "length_ratio": 1.2000605000259081,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_sloped",
+      "length_ratio": 1.1751884370967682,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    },
+    {
+      "name": "imp_vertical",
+      "length_ratio": 1.1030999976654188,
+      "simple": true,
+      "fixed_intersection": false,
+      "lcfs_intersection": false,
+      "vessel_intersection": false
+    }
+  ]
+}

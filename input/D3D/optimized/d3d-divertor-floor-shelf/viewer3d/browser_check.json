@@ -1,0 +1,20 @@
+{
+  "browser": "Chrome",
+  "passed": true,
+  "checks": [
+    "WebGL ready",
+    "source peaks",
+    "rotation by drag",
+    "model toggle",
+    "width toggle",
+    "cutaway",
+    "context toggle",
+    "camera presets",
+    "zoom",
+    "PNG download",
+    "mobile no horizontal overflow",
+    "keyboard",
+    "local-only requests"
+  ],
+  "errors": []
+}

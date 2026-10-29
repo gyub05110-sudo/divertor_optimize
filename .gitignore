@@ -1,0 +1,12 @@
+.local_dependencies/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+.env
+.env.*
+!.env.example
+runtime/
+new-runs/

@@ -1,0 +1,140 @@
+{
+  "case": 217,
+  "stage": "differential_evolution",
+  "coefficients_m": [
+    0.005107050833739324,
+    -0.0003310942728563693,
+    0.0059265843143388565,
+    -0.0042224261644649656,
+    0.015235979087078766,
+    -0.0005222359590498771,
+    -0.0034290397618728543,
+    -8.634033806403929e-05,
+    -0.0011077285151605333,
+    -0.0038721566537166076,
+    0.0004232332762251323,
+    -0.0005392691691672336,
+    -0.023997365477659807,
+    0.016360614689910857,
+    -0.03865230358870675,
+    -0.08694844011449264,
+    0.015318066333737468,
+    -0.006361553767982098,
+    0.021707513318999783,
+    -0.015121922590926451,
+    0.0028650730779475886,
+    0.0014749566958796479,
+    0.0021246832605159804,
+    0.015566063968541988
+  ],
+  "geometry_valid": true,
+  "feasible": true,
+  "errors": [],
+  "precise_length_ratios": {
+    "omp_entry": 1.0794441066576415,
+    "shelf": 1.0076979945227265,
+    "omp_connector": 1.1092544161674083,
+    "floor": 1.1999108435438828,
+    "imp_sloped": 1.1271950425357786,
+    "imp_vertical": 1.0786638435895273
+  },
+  "length_integration_error": 1.1812772982011666e-13,
+  "elapsed_seconds": 1.949773000087589,
+  "peak_q": 1.4133036215688874,
+  "peak_MW_m2": 1.4133036215688874,
+  "peak_ratio": 0.5175689107923962,
+  "peak_RZ_m": [
+    1.2061347077661,
+    -1.3131794211441392
+  ],
+  "ledger": {
+    "prescribed": 1.0,
+    "deposited": 0.9999999999999999,
+    "unhit": 0.0,
+    "unresolved": 0.0,
+    "balance_error": 1.1102230246251565e-16
+  },
+  "diagnostics": {
+    "max_donor_closure_error": 2.220446049250313e-16,
+    "peak_refinement_brackets": 5,
+    "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+    "broad_kernel_power_fraction": 8.344936396894815e-08,
+    "power_beyond_0p1m_wall_distance": 5.2220901052543564e-05,
+    "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+    "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+    "missing_power_renormalized": false
+  },
+  "area_quadrature_error": 9.603429163007604e-14,
+  "receiving_angles": {
+    "omp_entry": {
+      "minimum_angle_deg": 0.44321241834275005,
+      "passed": true
+    },
+    "shelf": {
+      "minimum_angle_deg": 1.5641012610892835,
+      "passed": true
+    },
+    "omp_connector": {
+      "minimum_angle_deg": 0.022341414735002882,
+      "passed": true
+    },
+    "floor": {
+      "minimum_angle_deg": 0.4669124589036,
+      "passed": true
+    },
+    "imp_sloped": {
+      "minimum_angle_deg": 0.432074253808325,
+      "passed": true
+    },
+    "imp_vertical": {
+      "minimum_angle_deg": 0.07354457515021275,
+      "passed": true
+    }
+  },
+  "region_power": {
+    "fixed": 0.0034602444945543323,
+    "omp_entry": 6.307268458721177e-06,
+    "shelf": 0.02308056761260693,
+    "omp_connector": 0.008594846729679667,
+    "floor": 0.9648580028720972,
+    "imp_sloped": 2.1427353651606486e-08,
+    "imp_vertical": 9.595249446843254e-09
+  },
+  "sigma_physical_mean_m": 0.004601804430948748,
+  "mean_wall_transport_distance_m": 0.003677586520490343,
+  "max_wall_displacement_m": 0.06229074897110346,
+  "thermal": {
+    "resolved_power_fraction": 1.0,
+    "cold_target_power_fraction": 0.017646656073478657,
+    "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+    "weak_conduction_power_fraction": 0.5497842461292769,
+    "sigma_above_0p3_lambda_power_fraction": 0.08273150434080007,
+    "Tu_eV": {
+      "min": 0.004104497028696974,
+      "max": 220.04266247084348,
+      "power_weighted_mean": 129.95076758840088
+    },
+    "Tt_eV": {
+      "min": 7.293571548814417e-18,
+      "max": 212.1986051861089,
+      "power_weighted_mean": 124.81797822758554
+    },
+    "nt_m3": {
+      "min": 5.09088438300176e+18,
+      "max": 2.8137771743420867e+33,
+      "power_weighted_mean": 1.1810559353454897e+20
+    },
+    "sigma_m": {
+      "min": 0.0001156092588273854,
+      "max": 87.75183879527422,
+      "power_weighted_mean": 0.00040160984776448593
+    },
+    "length_m": {
+      "min": 4.44242705960771,
+      "max": 73.6652380540268,
+      "power_weighted_mean": 22.452207247454524
+    },
+    "conduction_relative_residual": 3.670301807128943e-15,
+    "sheath_relative_residual": 3.3048862741598606e-14
+  }
+}

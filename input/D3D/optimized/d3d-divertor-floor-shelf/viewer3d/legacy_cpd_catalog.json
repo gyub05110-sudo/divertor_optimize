@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "id": "cpd2-8e4e1c9782c1-diffusion-0",
+      "device_id": "cpd2",
+      "device_label": "CPD-2",
+      "shot_name": "equilibrium.geqdsk",
+      "shot_sha256": "8e4e1c9782c140f74cb943edb3149e6861f1ff14bb4914031e3fde0673cea530",
+      "time_ms": null,
+      "run_name": "보관 · 이전 모델 · CPD-2 · 직접 매핑",
+      "stage_count": 7,
+      "bundle_url": "cases/cpd2-8e4e1c9782c1-diffusion-0/case.json",
+      "archived_model": true
+    },
+    {
+      "id": "cpd2-8e4e1c9782c1-diffusion-1",
+      "device_id": "cpd2",
+      "device_label": "CPD-2",
+      "shot_name": "equilibrium.geqdsk",
+      "shot_sha256": "8e4e1c9782c140f74cb943edb3149e6861f1ff14bb4914031e3fde0673cea530",
+      "time_ms": null,
+      "run_name": "보관 · 이전 모델 · CPD-2 · 확산 σ/λq=0.25",
+      "stage_count": 7,
+      "bundle_url": "cases/cpd2-8e4e1c9782c1-diffusion-1/case.json",
+      "archived_model": true
+    },
+    {
+      "id": "cpd2-8e4e1c9782c1-diffusion-2",
+      "device_id": "cpd2",
+      "device_label": "CPD-2",
+      "shot_name": "equilibrium.geqdsk",
+      "shot_sha256": "8e4e1c9782c140f74cb943edb3149e6861f1ff14bb4914031e3fde0673cea530",
+      "time_ms": null,
+      "run_name": "보관 · 이전 모델 · CPD-2 · 확산 σ/λq=0.5",
+      "stage_count": 7,
+      "bundle_url": "cases/cpd2-8e4e1c9782c1-diffusion-2/case.json",
+      "archived_model": true
+    },
+    {
+      "id": "cpd2-8e4e1c9782c1-diffusion-3",
+      "device_id": "cpd2",
+      "device_label": "CPD-2",
+      "shot_name": "equilibrium.geqdsk",
+      "shot_sha256": "8e4e1c9782c140f74cb943edb3149e6861f1ff14bb4914031e3fde0673cea530",
+      "time_ms": null,
+      "run_name": "보관 · 이전 모델 · CPD-2 · 확산 σ/λq=1",
+      "stage_count": 7,
+      "bundle_url": "cases/cpd2-8e4e1c9782c1-diffusion-3/case.json",
+      "archived_model": true
+    }
+  ]
+}

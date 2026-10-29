@@ -1,0 +1,66 @@
+{
+  "reason": "Default coarse trace step failed independent connection-length integration; tighten step without changing physics, candidates or thresholds.",
+  "search_tubes": 320,
+  "search_step_m": 0.001,
+  "levels": [
+    [
+      "cubic",
+      320,
+      0.0005,
+      161,
+      0.002
+    ],
+    [
+      "cubic",
+      640,
+      0.00025,
+      321,
+      0.001
+    ],
+    [
+      "cubic",
+      1280,
+      0.000125,
+      641,
+      0.0005
+    ],
+    [
+      "quintic",
+      640,
+      0.00025,
+      321,
+      0.001
+    ]
+  ],
+  "initial_failed_diagnostic": {
+    "IMP": {
+      "tubes": 320,
+      "step_m": 0.002,
+      "max_length_relative_error": 0.02182338373808669,
+      "density_integral_error": 6.0417945467405865e-05,
+      "drift_over_sigma": 0.012187210172638066
+    },
+    "OMP": {
+      "tubes": 320,
+      "step_m": 0.002,
+      "max_length_relative_error": 0.019719682989628992,
+      "density_integral_error": 1.234780093617438e-06,
+      "drift_over_sigma": 0.002516521797723418
+    }
+  },
+  "refined_baseline_diagnostic": {
+    "IMP": {
+      "tubes": 320,
+      "step_m": 0.0005,
+      "max_length_relative_error": 0.001263254504277685,
+      "audit_passed": true
+    },
+    "OMP": {
+      "tubes": 320,
+      "step_m": 0.0005,
+      "max_length_relative_error": 0.0008717514496621335,
+      "audit_passed": true
+    }
+  },
+  "thresholds_changed": false
+}

@@ -1,0 +1,8 @@
+{
+  "cpd_single_branch_100_percent": true,
+  "outer_target_2_degree": true,
+  "cpd_widths_3_and_10": true,
+  "cpd_diffusion_0_and_1": true,
+  "d3d_switch_preserved": true,
+  "screenshot": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf\\viewer3d\\cpd-single-branch-result-20261004.png"
+}

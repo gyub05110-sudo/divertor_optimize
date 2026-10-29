@@ -1,0 +1,671 @@
+{
+  "source": "OMP",
+  "coefficients_m": [
+    0.0017531457781194916,
+    -0.006377942703804141,
+    0.00448068436245459,
+    -0.003333810426430639,
+    0.015029334805104912,
+    -0.0022094020314093465,
+    -0.003265124641577655,
+    0.0056871526200530376,
+    -0.0018678254288403862,
+    -0.0003398994957513391,
+    -0.002691453570855529,
+    0.0006076115746025846,
+    0.020615267906217396,
+    0.016508227341348825,
+    -0.039723558258687,
+    -0.0800780968913991,
+    0.014985141114000977,
+    -0.014299969827487637,
+    0.02242011104015247,
+    -0.016783864596217224,
+    -0.0021557779316913827,
+    0.0012767550830597109,
+    0.004340769641089515,
+    0.01472336891627677
+  ],
+  "levels": [
+    {
+      "tubes": 320,
+      "step_m": 0.002,
+      "target_nodes": 161,
+      "geometry_valid": true,
+      "feasible": true,
+      "full_first_hit_segment_mismatches": 0,
+      "full_first_hit_point_max_delta_m": 0.0,
+      "independent_q_max_delta": 0.0,
+      "wall_simple": true,
+      "wall_polygon_valid": true,
+      "lcfs_intersection": false,
+      "vessel_intersection": false,
+      "unmapped_power": 0.0,
+      "accounting_error": 2.220446049250313e-16,
+      "baseline_peaks": [
+        8.718715669761455,
+        4.361490942866727,
+        2.908683594463867,
+        1.74638815163992,
+        0.8877291369896564
+      ],
+      "candidate_peaks": [
+        5.193360267170456,
+        2.5979507333707557,
+        1.7325764919310058,
+        1.0402475755964364,
+        0.5729915022766321
+      ],
+      "ratios": [
+        0.595656569600296,
+        0.5956565696002961,
+        0.5956565696002961,
+        0.5956565696002961,
+        0.6454575820499496
+      ],
+      "angles": {
+        "omp_entry": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 16,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.4778893825535493,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "shelf": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 124,
+          "applied_hit_count": 124,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.5848215154418648,
+          "angle_constraint_passed": true,
+          "status": "angle_satisfied",
+          "angle_floor_deg": 1.5
+        },
+        "omp_connector": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 5,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.14335926422528,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "floor": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 102,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.5125677727905509,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_sloped": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_vertical": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        }
+      },
+      "fixed_segment_max_coordinate_change_m": 0.0,
+      "peak_hits": [
+        {
+          "point": [
+            1.2038152302554033,
+            -1.3193774694582485
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038152302554033,
+            -1.3193774694582485
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038152302554033,
+            -1.3193774694582485
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038152302554033,
+            -1.3193774694582485
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.248019625984711,
+            -1.304733834041524
+          ],
+          "original_segment": 68,
+          "movable": true
+        }
+      ],
+      "source_weight_sums": [
+        1.0,
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_normalization_relative_errors_vs_adaptive_quad": [
+        1.2573146299798852e-16,
+        4.7160995241862174e-14,
+        6.422345300399049e-13,
+        7.967295603574528e-13,
+        6.158229856060124e-12
+      ],
+      "max_psiN_drift_to_first_hit": 1.0181993520154253e-06,
+      "elapsed_seconds": 1.5030103999888524
+    },
+    {
+      "tubes": 640,
+      "step_m": 0.001,
+      "target_nodes": 321,
+      "geometry_valid": true,
+      "feasible": true,
+      "full_first_hit_segment_mismatches": 0,
+      "full_first_hit_point_max_delta_m": 0.0,
+      "independent_q_max_delta": 0.0,
+      "wall_simple": true,
+      "wall_polygon_valid": true,
+      "lcfs_intersection": false,
+      "vessel_intersection": false,
+      "unmapped_power": 0.0,
+      "accounting_error": 2.2204460492503126e-16,
+      "baseline_peaks": [
+        8.72141651072662,
+        4.362053014638309,
+        2.908883064827602,
+        1.7464236819203696,
+        0.8877297966722314
+      ],
+      "candidate_peaks": [
+        5.1818372663404295,
+        2.5923426961591205,
+        1.728871228157277,
+        1.0380396049445755,
+        0.5718283661507978
+      ],
+      "ratios": [
+        0.5941508767488858,
+        0.5942941746603397,
+        0.5943419483105762,
+        0.5943801699958317,
+        0.6441468657404196
+      ],
+      "angles": {
+        "omp_entry": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 32,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.4725326690976261,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "shelf": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 248,
+          "applied_hit_count": 248,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.5861807088714321,
+          "angle_constraint_passed": true,
+          "status": "angle_satisfied",
+          "angle_floor_deg": 1.5
+        },
+        "omp_connector": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 11,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.5736458514500447,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "floor": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 203,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.5140227730478636,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_sloped": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_vertical": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        }
+      },
+      "fixed_segment_max_coordinate_change_m": 0.0,
+      "peak_hits": [
+        {
+          "point": [
+            1.2038165395408926,
+            -1.319375760130097
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038165395408926,
+            -1.319375760130097
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038165395408926,
+            -1.319375760130097
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038165395408926,
+            -1.319375760130097
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.25055612453712,
+            -1.3062324349081933
+          ],
+          "original_segment": 68,
+          "movable": true
+        }
+      ],
+      "source_weight_sums": [
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        1.0
+      ],
+      "source_normalization_relative_errors_vs_adaptive_quad": [
+        2.5146292599597704e-16,
+        4.778980851175367e-14,
+        6.576656025819972e-13,
+        5.973457725025796e-13,
+        7.189914956126815e-12
+      ],
+      "max_psiN_drift_to_first_hit": 2.563688948492064e-07,
+      "local_probe_better_feasible_candidates": 1,
+      "best_local_probe": {
+        "coefficient": 14,
+        "delta_m": 0.0001,
+        "ratio": 0.6439775849060804
+      },
+      "elapsed_seconds": 19.536013400007505
+    },
+    {
+      "tubes": 1280,
+      "step_m": 0.0005,
+      "target_nodes": 641,
+      "geometry_valid": true,
+      "feasible": true,
+      "full_first_hit_segment_mismatches": 0,
+      "full_first_hit_point_max_delta_m": 0.0,
+      "independent_q_max_delta": 0.0,
+      "wall_simple": true,
+      "wall_polygon_valid": true,
+      "lcfs_intersection": false,
+      "vessel_intersection": false,
+      "unmapped_power": 0.0,
+      "accounting_error": 2.2204460492503126e-16,
+      "baseline_peaks": [
+        8.722097924824327,
+        4.362196581267624,
+        2.9089349600281733,
+        1.746433780633848,
+        0.8877283867820568
+      ],
+      "candidate_peaks": [
+        5.178188103936722,
+        2.5902438166740827,
+        1.7274107041243991,
+        1.0371335053940882,
+        0.5712698208250513
+      ],
+      "ratios": [
+        0.5936860774285582,
+        0.5937934635493607,
+        0.5938292632392403,
+        0.5938579045451541,
+        0.6435187038412256
+      ],
+      "angles": {
+        "omp_entry": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 62,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.6297181054549131,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "shelf": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 498,
+          "applied_hit_count": 498,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.5682877958538237,
+          "angle_constraint_passed": true,
+          "status": "angle_satisfied",
+          "angle_floor_deg": 1.5
+        },
+        "omp_connector": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 23,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.7255174913453452,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "floor": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 407,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.514925576181226,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_sloped": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_vertical": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        }
+      },
+      "fixed_segment_max_coordinate_change_m": 0.0,
+      "peak_hits": [
+        {
+          "point": [
+            1.2038131968959678,
+            -1.3193800475218411
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038131968959678,
+            -1.3193800475218411
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038131968959678,
+            -1.3193800475218411
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038131968959678,
+            -1.3193800475218411
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2514544078582308,
+            -1.3068016623444827
+          ],
+          "original_segment": 68,
+          "movable": true
+        }
+      ],
+      "source_weight_sums": [
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0000000000000002
+      ],
+      "source_normalization_relative_errors_vs_adaptive_quad": [
+        2.5146292599597704e-16,
+        4.778980851175367e-14,
+        6.591751640263324e-13,
+        5.790185758411721e-13,
+        7.272845246783457e-12
+      ],
+      "max_psiN_drift_to_first_hit": 6.468443705311865e-08,
+      "elapsed_seconds": 14.948203800013289
+    },
+    {
+      "tubes": 2560,
+      "step_m": 0.00025,
+      "target_nodes": 1281,
+      "geometry_valid": true,
+      "feasible": true,
+      "full_first_hit_segment_mismatches": 0,
+      "full_first_hit_point_max_delta_m": 0.0,
+      "independent_q_max_delta": 0.0,
+      "wall_simple": true,
+      "wall_polygon_valid": true,
+      "lcfs_intersection": false,
+      "vessel_intersection": false,
+      "unmapped_power": 0.0,
+      "accounting_error": 2.220446049250313e-16,
+      "baseline_peaks": [
+        8.722265025578178,
+        4.362230842708051,
+        2.9089468463730412,
+        1.7464356523622524,
+        0.8877279752537127
+      ],
+      "candidate_peaks": [
+        5.175228972811955,
+        2.5888513856824082,
+        1.7265016204636372,
+        1.0365970677165153,
+        0.5708589112294213
+      ],
+      "ratios": [
+        0.5933354418417138,
+        0.5934695982469516,
+        0.5935143237891367,
+        0.5935501066497355,
+        0.6430561243338871
+      ],
+      "angles": {
+        "omp_entry": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 124,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.0849271813079042,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "shelf": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 995,
+          "applied_hit_count": 995,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 1.5661136457956426,
+          "angle_constraint_passed": true,
+          "status": "angle_satisfied",
+          "angle_floor_deg": 1.5
+        },
+        "omp_connector": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 45,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.7237472087768593,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "floor": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 814,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": 0.515413074452654,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_sloped": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        },
+        "imp_vertical": {
+          "scope": "positive_power_first_hits_on_explicit_target",
+          "target_hit_count": 0,
+          "applied_hit_count": 0,
+          "excluded_zero_power_target_hit_count": 0,
+          "minimum_angle_deg": null,
+          "angle_constraint_passed": null,
+          "status": "diagnostic_only_no_angle_floor",
+          "angle_floor_deg": null
+        }
+      },
+      "fixed_segment_max_coordinate_change_m": 0.0,
+      "peak_hits": [
+        {
+          "point": [
+            1.2038142479068246,
+            -1.319378688898444
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038142479068246,
+            -1.319378688898444
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038142479068246,
+            -1.319378688898444
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2038142479068246,
+            -1.319378688898444
+          ],
+          "original_segment": 68,
+          "movable": true
+        },
+        {
+          "point": [
+            1.2520816287502314,
+            -1.3072108528531179
+          ],
+          "original_segment": 68,
+          "movable": true
+        }
+      ],
+      "source_weight_sums": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        0.9999999999999999,
+        1.0
+      ],
+      "source_normalization_relative_errors_vs_adaptive_quad": [
+        2.5146292599597704e-16,
+        4.791557116573197e-14,
+        6.591751640263324e-13,
+        5.782129847791322e-13,
+        7.276679007178776e-12
+      ],
+      "max_psiN_drift_to_first_hit": 1.630758216420606e-08,
+      "elapsed_seconds": 67.11279610000202
+    }
+  ],
+  "audit_script_sha256": "7eb214588c2196367d9f49987a3ae7aff47f586d0ad2603a9be7a8cea963edf5",
+  "physical_scope": "prescribed direct magnetic mapping; no transverse transport; no experimental validation"
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    "audited patches",
+    "five widths",
+    "independent integral report",
+    "coarse history label",
+    "baseline zero reduction",
+    "unknown equilibrium clears audit",
+    "registry recovery",
+    "mobile overflow"
+  ],
+  "state": {
+    "model": "candidate",
+    "width": 3,
+    "angle": 240,
+    "wall": true,
+    "plasma": true,
+    "flux": true,
+    "sol": true,
+    "density": 3,
+    "caseId": "cae740322035-1400ms-a395bb40",
+    "stageId": "verified_final",
+    "stageCount": 29,
+    "baselinePeak": 2.9089274250096686,
+    "candidatePeak": 1.756248795586002,
+    "qualityApplied": true,
+    "qualityVerified": true,
+    "qualitySourceCells": 2502,
+    "ready": true
+  },
+  "errors": []
+}

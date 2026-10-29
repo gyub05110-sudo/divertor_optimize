@@ -1,0 +1,11 @@
+{
+  "source_run": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\optimized\\cpd2_lower_outboard_20261004",
+  "summary_sha256": "8b98d581c46e9cef75aa7925d2536707a667a7a2c073067084318c5c416fb7d9",
+  "cases": [
+    "cpd2-unified-8e4e1c9782c1-sigma-0-lower-outboard-angle-2",
+    "cpd2-unified-8e4e1c9782c1-sigma-0.25-lower-outboard-angle-2",
+    "cpd2-unified-8e4e1c9782c1-sigma-0.5-lower-outboard-angle-2",
+    "cpd2-unified-8e4e1c9782c1-sigma-1-lower-outboard-angle-2"
+  ],
+  "connected_support_and_export_integrals_checked": true
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "browser": "Chrome",
+  "stageCount": 29,
+  "checks": [
+    "final peak",
+    "29 snapshots",
+    "lazy stage switching",
+    "previous/next",
+    "baseline zero reduction",
+    "coarse refinement rejection label",
+    "LCFS/flux/SOL toggle",
+    "density",
+    "matching parquet hash",
+    "unknown parquet clears old view",
+    "registry recovery",
+    "width comparison",
+    "mobile overflow"
+  ],
+  "errors": []
+}

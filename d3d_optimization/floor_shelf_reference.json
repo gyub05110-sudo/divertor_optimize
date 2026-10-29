@@ -1,0 +1,26 @@
+{
+  "name": "public_lower_divertor_floor_and_shelf",
+  "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+  "coefficient_bound_m": 0.1,
+  "max_length_ratio": 1.2,
+  "surfaces": [
+    {
+      "name": "floor",
+      "segment_index": 68,
+      "endpoints_RZ_m": [[1.4277, -1.35782], [1.1645, -1.35894]],
+      "angle_floor_deg": null,
+      "physical_identity_validated": false,
+      "role": "public lower floor reference; contains the fixed-case peak first hits"
+    },
+    {
+      "name": "shelf",
+      "segment_index": 59,
+      "endpoints_RZ_m": [[1.6452, -1.2448], [1.40117, -1.24477]],
+      "angle_floor_deg": 1.5,
+      "physical_identity_validated": false,
+      "role": "public lower horizontal shelf reference"
+    }
+  ],
+  "angle_policy": "User explicitly selected shelf-only 1.5 deg on 2026-10-03; floor angles are diagnostic only.",
+  "campaign_match": "unknown; public reference geometry, not certified shot hardware"
+}

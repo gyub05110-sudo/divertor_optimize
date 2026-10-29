@@ -1,0 +1,183 @@
+{
+  "geometry_valid": true,
+  "feasible": true,
+  "baseline_admissible": true,
+  "peak_q": [
+    2.5412205559504204
+  ],
+  "baseline_peak_q": [
+    2.5412205559504204
+  ],
+  "peak_ratios": [
+    1.0
+  ],
+  "worst_peak_ratio": 1.0,
+  "missing_power": 5.378631897478963e-06,
+  "balance_error": 0.0,
+  "surface_power": {
+    "omp_entry": [
+      0.0
+    ],
+    "shelf": [
+      0.0
+    ],
+    "omp_connector": [
+      0.0
+    ],
+    "floor": [
+      0.0
+    ],
+    "imp_sloped": [
+      0.8708373279357555
+    ],
+    "imp_vertical": [
+      0.089678413368598
+    ]
+  },
+  "power_ledger": {
+    "prescribed": [
+      1.0
+    ],
+    "deposited": [
+      0.9999946213681026
+    ],
+    "blocked": [
+      0.0
+    ],
+    "branch_tail": [
+      5.378631897478963e-06
+    ],
+    "unhit": [
+      0.0
+    ],
+    "unresolved": [
+      5.378631897478963e-06
+    ],
+    "balance_error": [
+      0.0
+    ]
+  },
+  "model_errors": [],
+  "receiving_angles": {
+    "omp_entry": {
+      "minimum_angle_deg": null,
+      "floor_deg": null,
+      "receiving_sample_count": 0,
+      "passed": true
+    },
+    "shelf": {
+      "minimum_angle_deg": null,
+      "floor_deg": 1.5,
+      "receiving_sample_count": 0,
+      "passed": true
+    },
+    "omp_connector": {
+      "minimum_angle_deg": null,
+      "floor_deg": null,
+      "receiving_sample_count": 0,
+      "passed": true
+    },
+    "floor": {
+      "minimum_angle_deg": null,
+      "floor_deg": null,
+      "receiving_sample_count": 0,
+      "passed": true
+    },
+    "imp_sloped": {
+      "minimum_angle_deg": 0.5972393739916666,
+      "floor_deg": null,
+      "receiving_sample_count": 1428,
+      "passed": true
+    },
+    "imp_vertical": {
+      "minimum_angle_deg": 0.6056524028935825,
+      "floor_deg": null,
+      "receiving_sample_count": 1038,
+      "passed": true
+    }
+  },
+  "peak_points_RZ_m": [
+    [
+      1.0856838720262183,
+      -1.282836862553751
+    ]
+  ],
+  "connection_length_m": {
+    "min": 0.6656044335150545,
+    "max": 80.25095471617225,
+    "power_weighted_mean": [
+      27.899993774076616
+    ]
+  },
+  "independent_density_integral": [
+    0.9999946231933285
+  ],
+  "density_vs_cdf_power_max_error": 1.8252259703643858e-09,
+  "max_independent_length_relative_error": 0.001263254504277685,
+  "max_path_flux_drift_over_sigma": 3.0421364835331185e-05,
+  "full_first_hit_segment_mismatches": 0,
+  "full_first_hit_point_error_m": 0.0,
+  "full_wall_geometry_passed": true,
+  "fixed_wall_coordinate_error_m": 0.0,
+  "source_normalization_relative_errors": [
+    9.375244974875965e-12
+  ],
+  "audit_passed": true,
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "mode": "thermal",
+  "peak_q_MW_m2": [
+    2.5412205559504204
+  ],
+  "thermal": {
+    "resolved_power_fraction": 1.0,
+    "cold_target_power_fraction": 0.01027928940414105,
+    "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+    "weak_conduction_power_fraction": 0.628464940572507,
+    "sigma_above_0p3_lambda_power_fraction": 0.04288746259743386,
+    "Tu_eV": {
+      "min": 0.012573251225765282,
+      "max": 282.11346528288084,
+      "power_weighted_mean": 172.01416229073874
+    },
+    "Tt_eV": {
+      "min": 7.685720158773234e-14,
+      "max": 275.3217966389184,
+      "power_weighted_mean": 166.7312499925199
+    },
+    "nt_m3": {
+      "min": 5.074034155789819e+18,
+      "max": 8.233935176579228e+29,
+      "power_weighted_mean": 1.923578384532348e+19
+    },
+    "sigma_m": {
+      "min": 7.9279386220912e-05,
+      "max": 4.4009705475102185,
+      "power_weighted_mean": 0.00025150601533751964
+    },
+    "length_m": {
+      "min": 0.6656044335150545,
+      "max": 80.25095471617225,
+      "power_weighted_mean": 27.899993774076613
+    },
+    "conduction_relative_residual": 3.890439237735352e-15,
+    "sheath_relative_residual": 3.1725717310560524e-14
+  },
+  "deposited_width_statistics": {
+    "min_m": 7.9279386220912e-05,
+    "max_m": 4.4009705475102185,
+    "power_weighted_mean_m": 0.00025150601533751964,
+    "fixed_at_baseline": false
+  },
+  "independent_thermal_max_relative_errors": {
+    "sigma_m": 3.6847261349808455e-05,
+    "length_m": 0.001263254504276265,
+    "integral_Bratio_m": 0.0012403613986906527
+  }
+}

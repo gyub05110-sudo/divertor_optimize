@@ -1,0 +1,624 @@
+{
+  "scope": "320 donor CPU diagnostic; other OMP coefficients held at selected values; not optimized or fully refined",
+  "cases": [
+    {
+      "floor_multiplier": 1,
+      "min_delta_Z_mm": 0.0,
+      "max_delta_Z_mm": 64.95265962301566,
+      "floor_intersects_vessel": false,
+      "floor_vessel_distance_mm": 26.88133175176192,
+      "result": {
+        "geometry_valid": true,
+        "feasible": true,
+        "errors": [],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.1628016815032027,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 1.1102230246251565e-15,
+        "elapsed_seconds": 1.8261927999556065,
+        "peak_q": 1.3579014905043165,
+        "peak_MW_m2": 1.3579014905043165,
+        "peak_ratio": 0.49727997910563204,
+        "peak_RZ_m": [
+          1.2055405190720947,
+          -1.3119224743576914
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999999,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251565e-16
+        },
+        "diagnostics": {
+          "max_donor_closure_error": 2.220446049250313e-16,
+          "peak_refinement_brackets": 5,
+          "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+          "broad_kernel_power_fraction": 8.344936396894815e-08,
+          "power_beyond_0p1m_wall_distance": 5.3320380661666045e-05,
+          "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+          "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+          "missing_power_renormalized": false
+        },
+        "area_quadrature_error": 2.5736079933835754e-12,
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": 0.8256628360672623,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": 1.5217821062178556,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": 0.006839414178740714,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": 0.438092627477813,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916666,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935825,
+            "passed": true
+          }
+        },
+        "region_power": {
+          "fixed": 0.0041688077034245105,
+          "omp_entry": 5.923434765512364e-06,
+          "shelf": 0.022320593359516337,
+          "omp_connector": 0.008646646815638976,
+          "floor": 0.9648579980230159,
+          "imp_sloped": 2.0700409862834027e-08,
+          "imp_vertical": 9.963228937535029e-09
+        },
+        "sigma_physical_mean_m": 0.004718249565157335,
+        "mean_wall_transport_distance_m": 0.0037709518477336136,
+        "max_wall_displacement_m": 0.0649532476933243,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.017646656073478657,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.5640894827362686,
+          "sigma_above_0p3_lambda_power_fraction": 0.08273150434080007,
+          "Tu_eV": {
+            "min": 0.004104497028696974,
+            "max": 220.0947840807102,
+            "power_weighted_mean": 129.89078857955178
+          },
+          "Tt_eV": {
+            "min": 7.293571548814417e-18,
+            "max": 212.27091479777627,
+            "power_weighted_mean": 124.85809270388546
+          },
+          "nt_m3": {
+            "min": 5.089934913218722e+18,
+            "max": 2.8137771743420867e+33,
+            "power_weighted_mean": 1.1810789135482048e+20
+          },
+          "sigma_m": {
+            "min": 0.00011548854070621898,
+            "max": 87.75183879527422,
+            "power_weighted_mean": 0.00040055624576190604
+          },
+          "length_m": {
+            "min": 4.44242705960771,
+            "max": 73.54843970231924,
+            "power_weighted_mean": 22.172578185185248
+          },
+          "conduction_relative_residual": 4.927568726256168e-15,
+          "sheath_relative_residual": 3.647277573875498e-14
+        }
+      }
+    },
+    {
+      "floor_multiplier": 0,
+      "min_delta_Z_mm": 0.0,
+      "max_delta_Z_mm": 0.0,
+      "floor_intersects_vessel": false,
+      "floor_vessel_distance_mm": 34.66000000000014,
+      "result": {
+        "geometry_valid": true,
+        "feasible": true,
+        "errors": [],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.0,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 4.440892098500626e-16,
+        "elapsed_seconds": 1.518728000111878,
+        "peak_q": 2.730657881630874,
+        "peak_MW_m2": 2.730657881630874,
+        "peak_ratio": 1.0000000028114808,
+        "peak_RZ_m": [
+          1.2252364068118395,
+          -1.358681547205056
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999998,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "diagnostics": {
+          "max_donor_closure_error": 2.220446049250313e-16,
+          "peak_refinement_brackets": 3,
+          "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+          "broad_kernel_power_fraction": 8.344936396894815e-08,
+          "power_beyond_0p1m_wall_distance": 5.332038046203382e-05,
+          "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+          "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+          "missing_power_renormalized": false
+        },
+        "area_quadrature_error": 2.4424906541753444e-15,
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": 0.8256628360672623,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": 1.5217821062178556,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": 0.006839414178740714,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": 0.5034018172133269,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916666,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935825,
+            "passed": true
+          }
+        },
+        "region_power": {
+          "fixed": 0.0041688247923207435,
+          "omp_entry": 5.923434799098793e-06,
+          "shelf": 0.022320593359728157,
+          "omp_connector": 0.00864664681565189,
+          "floor": 0.9648579742601042,
+          "imp_sloped": 2.5344231222623406e-08,
+          "imp_vertical": 1.1993164651230955e-08
+        },
+        "sigma_physical_mean_m": 0.0035802856515760803,
+        "mean_wall_transport_distance_m": 0.002863932852545927,
+        "max_wall_displacement_m": 0.011917365713085831,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.017646656073478657,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.4707856996689539,
+          "sigma_above_0p3_lambda_power_fraction": 0.08752511619833084,
+          "Tu_eV": {
+            "min": 0.004104497028696974,
+            "max": 218.10103107192487,
+            "power_weighted_mean": 129.5249607383044
+          },
+          "Tt_eV": {
+            "min": 7.293571548814417e-18,
+            "max": 209.65394608625598,
+            "power_weighted_mean": 123.80873928515004
+          },
+          "nt_m3": {
+            "min": 5.10979112699968e+18,
+            "max": 2.8137771743420867e+33,
+            "power_weighted_mean": 1.1814883436495877e+20
+          },
+          "sigma_m": {
+            "min": 0.00012003293937266882,
+            "max": 87.75183879527422,
+            "power_weighted_mean": 0.00040727168265821843
+          },
+          "length_m": {
+            "min": 4.44242705960771,
+            "max": 76.81729799967037,
+            "power_weighted_mean": 25.17285892095387
+          },
+          "conduction_relative_residual": 3.825282753092405e-15,
+          "sheath_relative_residual": 3.456742867134612e-14
+        }
+      }
+    },
+    {
+      "floor_multiplier": -0.1,
+      "min_delta_Z_mm": -6.495265962301655,
+      "max_delta_Z_mm": 0.0,
+      "floor_intersects_vessel": false,
+      "floor_vessel_distance_mm": 34.66000000000014,
+      "result": {
+        "geometry_valid": true,
+        "feasible": true,
+        "errors": [],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.0020187147196995,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 4.440892098500626e-16,
+        "elapsed_seconds": 1.5148399998433888,
+        "peak_q": 2.8768555424658317,
+        "peak_MW_m2": 2.8768555424658317,
+        "peak_ratio": 1.0535393576422198,
+        "peak_RZ_m": [
+          1.228068321608741,
+          -1.36514074493934
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999999,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251565e-16
+        },
+        "diagnostics": {
+          "max_donor_closure_error": 2.220446049250313e-16,
+          "peak_refinement_brackets": 3,
+          "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+          "broad_kernel_power_fraction": 8.344936396894815e-08,
+          "power_beyond_0p1m_wall_distance": 5.332038046454538e-05,
+          "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+          "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+          "missing_power_renormalized": false
+        },
+        "area_quadrature_error": 8.104628079763643e-15,
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": 0.8256628360672623,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": 1.5217821062178556,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": 0.006839414178740714,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": 0.4976048967062186,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916666,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935825,
+            "passed": true
+          }
+        },
+        "region_power": {
+          "fixed": 0.004168824553202993,
+          "omp_entry": 5.9234347986759045e-06,
+          "shelf": 0.02232059335972549,
+          "omp_connector": 0.008646646815651728,
+          "floor": 0.9648579745928925,
+          "imp_sloped": 2.5278843908633273e-08,
+          "imp_vertical": 1.196488483588818e-08
+        },
+        "sigma_physical_mean_m": 0.003487556092360373,
+        "mean_wall_transport_distance_m": 0.002792805459521909,
+        "max_wall_displacement_m": 0.011917365713085831,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.017646656073478657,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.45564270027512155,
+          "sigma_above_0p3_lambda_power_fraction": 0.08752511619833084,
+          "Tu_eV": {
+            "min": 0.004104497028696974,
+            "max": 217.78618301588014,
+            "power_weighted_mean": 129.42355249808904
+          },
+          "Tt_eV": {
+            "min": 7.293571548814417e-18,
+            "max": 209.25983162217648,
+            "power_weighted_mean": 123.64404466760878
+          },
+          "nt_m3": {
+            "min": 5.111720301616033e+18,
+            "max": 2.8137771743420867e+33,
+            "power_weighted_mean": 1.1815291802047388e+20
+          },
+          "sigma_m": {
+            "min": 0.00012074000658042342,
+            "max": 87.75183879527422,
+            "power_weighted_mean": 0.00040812400473777153
+          },
+          "length_m": {
+            "min": 4.44242705960771,
+            "max": 77.18444901436065,
+            "power_weighted_mean": 25.418707425395578
+          },
+          "conduction_relative_residual": 4.71669981930419e-15,
+          "sheath_relative_residual": 3.329569568767429e-14
+        }
+      }
+    },
+    {
+      "floor_multiplier": -0.25,
+      "min_delta_Z_mm": -16.238164905753916,
+      "max_delta_Z_mm": 0.0,
+      "floor_intersects_vessel": false,
+      "floor_vessel_distance_mm": 34.66000000000014,
+      "result": {
+        "geometry_valid": true,
+        "feasible": true,
+        "errors": [],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.0123992582835941,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 4.440892098500626e-16,
+        "elapsed_seconds": 1.5381363001652062,
+        "peak_q": 3.1661219109507854,
+        "peak_MW_m2": 3.1661219109507854,
+        "peak_ratio": 1.1594722067347827,
+        "peak_RZ_m": [
+          1.2324787043696996,
+          -1.3748808408077704
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999999,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251565e-16
+        },
+        "diagnostics": {
+          "max_donor_closure_error": 2.220446049250313e-16,
+          "peak_refinement_brackets": 3,
+          "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+          "broad_kernel_power_fraction": 8.344936396894815e-08,
+          "power_beyond_0p1m_wall_distance": 5.332038047741209e-05,
+          "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+          "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+          "missing_power_renormalized": false
+        },
+        "area_quadrature_error": 9.880984919163893e-15,
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": 0.8256628360672623,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": 1.5217821062178556,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": 0.006839414178740714,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": 0.41318670159833165,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916666,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935825,
+            "passed": true
+          }
+        },
+        "region_power": {
+          "fixed": 0.004168823338986726,
+          "omp_entry": 5.923434796510135e-06,
+          "shelf": 0.02232059335971183,
+          "omp_connector": 0.008646646815650895,
+          "floor": 0.9648579762826642,
+          "imp_sloped": 2.4946967435964054e-08,
+          "imp_vertical": 1.1821222331497762e-08
+        },
+        "sigma_physical_mean_m": 0.00335924430838913,
+        "mean_wall_transport_distance_m": 0.00269057158752979,
+        "max_wall_displacement_m": 0.016238311923331073,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.017646656073478657,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.4404148855850935,
+          "sigma_above_0p3_lambda_power_fraction": 0.08752511619833084,
+          "Tu_eV": {
+            "min": 0.004104497028696974,
+            "max": 217.29042594717717,
+            "power_weighted_mean": 129.26070579250046
+          },
+          "Tt_eV": {
+            "min": 7.293571548814417e-18,
+            "max": 208.64605304858898,
+            "power_weighted_mean": 123.39027618525803
+          },
+          "nt_m3": {
+            "min": 5.114512461704662e+18,
+            "max": 2.8137771743420867e+33,
+            "power_weighted_mean": 1.181589279867206e+20
+          },
+          "sigma_m": {
+            "min": 0.0001218471583206218,
+            "max": 87.75183879527422,
+            "power_weighted_mean": 0.00040942155107805757
+          },
+          "length_m": {
+            "min": 4.44242705960771,
+            "max": 77.70841087363817,
+            "power_weighted_mean": 25.76061088963165
+          },
+          "conduction_relative_residual": 4.680180982541301e-15,
+          "sheath_relative_residual": 3.382157872722442e-14
+        }
+      }
+    },
+    {
+      "floor_multiplier": -0.5,
+      "min_delta_Z_mm": -32.47632981150783,
+      "max_delta_Z_mm": 0.0,
+      "floor_intersects_vessel": false,
+      "floor_vessel_distance_mm": 32.01610873459559,
+      "result": {
+        "geometry_valid": true,
+        "feasible": true,
+        "errors": [],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.047015743378233,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 4.440892098500626e-16,
+        "elapsed_seconds": 1.442176999989897,
+        "peak_q": 3.7847565355692994,
+        "peak_MW_m2": 3.7847565355692994,
+        "peak_ratio": 1.3860237020793098,
+        "peak_RZ_m": [
+          1.239802633512784,
+          -1.3903355374820845
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999999,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251565e-16
+        },
+        "diagnostics": {
+          "max_donor_closure_error": 2.220446049250313e-16,
+          "peak_refinement_brackets": 2,
+          "wall_distance_estimate_error_bound_m": 0.0004999999999999449,
+          "broad_kernel_power_fraction": 8.344936396894815e-08,
+          "power_beyond_0p1m_wall_distance": 5.3320380520183964e-05,
+          "width_convention": "field-normal width converted to area; no grazing-incidence projection",
+          "receiver": "single connected closed boundary; area-measure periodic Gaussian",
+          "missing_power_renormalized": false
+        },
+        "area_quadrature_error": 1.0199618927231313e-12,
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": 0.8256628360672623,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": 1.5217821062178556,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": 0.006839414178740714,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": 0.17864921259025368,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916666,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935825,
+            "passed": true
+          }
+        },
+        "region_power": {
+          "fixed": 0.004168819424676608,
+          "omp_entry": 5.9234347893112454e-06,
+          "shelf": 0.022320593359666432,
+          "omp_connector": 0.008646646815648126,
+          "floor": 0.9648579817288657,
+          "imp_sloped": 2.3878927209345038e-08,
+          "imp_vertical": 1.1357426720949839e-08
+        },
+        "sigma_physical_mean_m": 0.0031733067876220824,
+        "mean_wall_transport_distance_m": 0.0025444121132048203,
+        "max_wall_displacement_m": 0.032476623846662146,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.017646656073478657,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.4216147536686247,
+          "sigma_above_0p3_lambda_power_fraction": 0.08752511619833084,
+          "Tu_eV": {
+            "min": 0.004104497028696974,
+            "max": 216.4583974545871,
+            "power_weighted_mean": 128.9777733837716
+          },
+          "Tt_eV": {
+            "min": 7.293571548814417e-18,
+            "max": 207.63061216238697,
+            "power_weighted_mean": 122.96840337979995
+          },
+          "nt_m3": {
+            "min": 5.118749423165586e+18,
+            "max": 2.8137771743420867e+33,
+            "power_weighted_mean": 1.1816853892157895e+20
+          },
+          "sigma_m": {
+            "min": 0.00012368860420062657,
+            "max": 87.75183879527422,
+            "power_weighted_mean": 0.0004115760590371468
+          },
+          "length_m": {
+            "min": 4.44242705960771,
+            "max": 78.46467922698248,
+            "power_weighted_mean": 26.2547553392237
+          },
+          "conduction_relative_residual": 4.138019015239637e-15,
+          "sheath_relative_residual": 3.335266379913692e-14
+        }
+      }
+    },
+    {
+      "floor_multiplier": -1,
+      "min_delta_Z_mm": -64.95265962301566,
+      "max_delta_Z_mm": 0.0,
+      "floor_intersects_vessel": true,
+      "floor_vessel_distance_mm": 0.0,
+      "result": {
+        "geometry_valid": false,
+        "feasible": false,
+        "errors": [
+          "geometry_constraint_failed"
+        ],
+        "precise_length_ratios": {
+          "omp_entry": 1.040833214215094,
+          "shelf": 1.0151695185809773,
+          "omp_connector": 1.0860599945410576,
+          "floor": 1.1628016815032027,
+          "imp_sloped": 1.0,
+          "imp_vertical": 1.0000000000000002
+        },
+        "length_integration_error": 1.1102230246251565e-15,
+        "elapsed_seconds": 0.014139700215309858
+      }
+    }
+  ]
+}

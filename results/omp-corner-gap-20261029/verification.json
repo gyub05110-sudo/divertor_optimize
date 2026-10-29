@@ -1,0 +1,10 @@
+{
+  "source_files_preserved": 180,
+  "original_study_inputs_unchanged": true,
+  "selected_case_reproduced": true,
+  "counterfactuals_feasible": 5,
+  "report_links_passed": true,
+  "figure_visually_inspected": true,
+  "full_refinement_of_counterfactuals": false,
+  "analysis_script_sha256": "2a07ae2c69d57354460886721f636e0b48678d759bf12aaa6e720cc22df81acf"
+}

@@ -1,0 +1,30 @@
+{
+  "IMP": {
+    "numerically_verified_feasible": true,
+    "resolution_screen_passed": true,
+    "nonworsening": true,
+    "improvement_confirmed": false,
+    "finest_worst_peak_ratio": 1.0,
+    "finest_reduction_percent": 0.0,
+    "max_fine_grid_ratio_change": 0.0,
+    "max_interpolant_ratio_change": 0.0,
+    "measured_uncertainty_indicator": 0.0,
+    "verification_status": "passed",
+    "global_optimum_proven": false,
+    "experimental_validation": false
+  },
+  "OMP": {
+    "numerically_verified_feasible": true,
+    "resolution_screen_passed": true,
+    "nonworsening": true,
+    "improvement_confirmed": true,
+    "finest_worst_peak_ratio": 0.6450462609210327,
+    "finest_reduction_percent": 35.495373907896735,
+    "max_fine_grid_ratio_change": 0.00046067902596325094,
+    "max_interpolant_ratio_change": 0.0012305883786976057,
+    "measured_uncertainty_indicator": 0.0012305883786976057,
+    "verification_status": "passed",
+    "global_optimum_proven": false,
+    "experimental_validation": false
+  }
+}

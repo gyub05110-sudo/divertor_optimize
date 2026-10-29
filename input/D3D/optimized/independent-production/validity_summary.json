@@ -1,0 +1,22 @@
+[
+  {
+    "source": "IMP",
+    "finest_worst_peak_ratio": 1.0,
+    "finest_reduction_percent": 0.0,
+    "improvement_confirmed": false,
+    "validity_note": "추가 2560경로 검증: IMP 최대 열유속 감소 0%. 이전 약 1% 개선은 해상도 의존.",
+    "feasible": true,
+    "physical_scope": "prescribed direct magnetic mapping; no transverse transport; no experimental validation",
+    "global_optimum_proven": false
+  },
+  {
+    "source": "OMP",
+    "finest_worst_peak_ratio": 0.6430561243338871,
+    "finest_reduction_percent": 35.69438756661128,
+    "improvement_confirmed": true,
+    "validity_note": "추가 2560경로 검증: 최대 열유속 감소 35.69%.",
+    "feasible": true,
+    "physical_scope": "prescribed direct magnetic mapping; no transverse transport; no experimental validation",
+    "global_optimum_proven": false
+  }
+]

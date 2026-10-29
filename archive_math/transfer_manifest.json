@@ -1,0 +1,775 @@
+{
+  "source_root": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization",
+  "destination_root": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized",
+  "transfers": [
+    {
+      "source": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\output\\d3d-divertor-floor-shelf",
+      "destination": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-divertor-floor-shelf",
+      "files": [
+        {
+          "relative_path": "__pycache__/run_search.cpython-313.pyc",
+          "sha256": "93beb4c24f9397d8b2406f65a3f554758bb771365f495215b2d3a065e83543a0",
+          "bytes": 10446
+        },
+        {
+          "relative_path": "__pycache__/validate_report.cpython-313.pyc",
+          "sha256": "c0c4bc71b64024d18d2d2bfdc703e8e34c8f9a8122df00ad7ab7dcbcf5fa528e",
+          "bytes": 23039
+        },
+        {
+          "relative_path": "angle_scope.csv",
+          "sha256": "36512656eedce4fae5d102c112192141e469c2dd4ec28f2037974bd04cb7c41a",
+          "bytes": 75135
+        },
+        {
+          "relative_path": "best_checkpoint.json",
+          "sha256": "900d59fdb70fb83f255b2326fa7461e893977d7bc40efae2694eeab5db7277b5",
+          "bytes": 1804
+        },
+        {
+          "relative_path": "candidate_verification.json",
+          "sha256": "0d38e09fe4b7782369ee3c9816390a37ae1584c8e1d1ecfab52ee3d15c3faa1b",
+          "bytes": 12402
+        },
+        {
+          "relative_path": "case_arrays.npz",
+          "sha256": "548e953164a26875e20e1c32be6d211e08e7b94b24b4d5527538f8e98505b717",
+          "bytes": 38082
+        },
+        {
+          "relative_path": "comparison/full_geometry_heat_10mm.pdf",
+          "sha256": "457b2db15c4fb6a182ad3d7845e053dcb3f3916343a608e949ed0dbb84d02b1f",
+          "bytes": 307426
+        },
+        {
+          "relative_path": "comparison/full_geometry_heat_10mm.png",
+          "sha256": "461d7243a2a216e51482f40443dac9b6dff84734aca057a5824b2309cc024408",
+          "bytes": 332725
+        },
+        {
+          "relative_path": "comparison/full_geometry_heat_3mm.pdf",
+          "sha256": "f18feeb3edfab85928260620831cd94b960864c25fca7c384aafd6c2325838d9",
+          "bytes": 307577
+        },
+        {
+          "relative_path": "comparison/full_geometry_heat_3mm.png",
+          "sha256": "140ea59375b07d35c8b5b09a738e64fdc13efcaeec8889997fd4016e3454292b",
+          "bytes": 322312
+        },
+        {
+          "relative_path": "comparison/heat_peak_comparison.pdf",
+          "sha256": "9db9ae9c1698359ea6421a4306bc1a8151575375c65a6f9da504d249b9a8123f",
+          "bytes": 46107
+        },
+        {
+          "relative_path": "comparison/heat_peak_comparison.png",
+          "sha256": "a9f88a4fded7db455590fbf8067c286c0cb974315e4df89cab648355561ba58c",
+          "bytes": 90363
+        },
+        {
+          "relative_path": "comparison/heat_profiles_by_surface.pdf",
+          "sha256": "df4ab604f4dad5b814f8e6481c7d67aa6f97803b7dd466c67bb9378a8e5d910d",
+          "bytes": 68382
+        },
+        {
+          "relative_path": "comparison/heat_profiles_by_surface.png",
+          "sha256": "00918cd4a66ad0ab6ecc245e915874b205b372193b42151337dbc95d23a37006",
+          "bytes": 304683
+        },
+        {
+          "relative_path": "comparison/heat_samples.csv",
+          "sha256": "89fd838ce9752c46c3368d1adcf8a0aac172a7da687d674df5bf3347ba75d16c",
+          "bytes": 287350
+        },
+        {
+          "relative_path": "comparison/heat_spatial_3mm.pdf",
+          "sha256": "d0d8b60b40a6b8c9e3fd124fd379848210bc655a593a38c55463b783229737c8",
+          "bytes": 60045
+        },
+        {
+          "relative_path": "comparison/heat_spatial_3mm.png",
+          "sha256": "5a17ac8a3a4e317678050149ace910a5f71c247d17712d8c660808cd56138d47",
+          "bytes": 118711
+        },
+        {
+          "relative_path": "comparison/README.md",
+          "sha256": "f6f85c6eb6dd4ac8311eb6aee2102fc5e512e362f23f08583e8ccf2afe2e8fc2",
+          "bytes": 326
+        },
+        {
+          "relative_path": "DIIID_geom.json",
+          "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+          "bytes": 51630
+        },
+        {
+          "relative_path": "evaluations.jsonl",
+          "sha256": "a0f492fdaa83eeab97f53b4c00a600854674434fe3601dc29a6123746c133cf8",
+          "bytes": 7510432
+        },
+        {
+          "relative_path": "geometry.png",
+          "sha256": "bb8ed29b3f18c8c2a765b2f29b9f4e22256b4ff082871a2e41cfd399a8530e57",
+          "bytes": 167761
+        },
+        {
+          "relative_path": "geometry_provenance.json",
+          "sha256": "a69872b21a27d49ab9a062dcde89c71d6c208b7079cbb3206d757dbdc70e26ff",
+          "bytes": 357
+        },
+        {
+          "relative_path": "heat_profiles.png",
+          "sha256": "e5eaab2588c24bd7ec1ef9b37537ddd779e10e7a5d2541a259a88ca87bd15220",
+          "bytes": 163980
+        },
+        {
+          "relative_path": "manifest.json",
+          "sha256": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739",
+          "bytes": 12911
+        },
+        {
+          "relative_path": "numerical_checks.json",
+          "sha256": "816be9e821d074fcae99bf241e7449094caa48358d31013b86b16bf14f3c5d06",
+          "bytes": 5156
+        },
+        {
+          "relative_path": "plot_full_geometry_heat.py",
+          "sha256": "28ba40b06b2c4b2781d57cd23112714f52f486bd55f4c64d4e3437871ff2bacd",
+          "bytes": 5191
+        },
+        {
+          "relative_path": "plot_heat_comparison.py",
+          "sha256": "c1d09853fc84f63ca79238898f8e2ff3ccc933beac5fbf4339937cfe4a379f83",
+          "bytes": 6876
+        },
+        {
+          "relative_path": "render_geometry.py",
+          "sha256": "c459fcabbd2a3f508f29853c5aba83ccb199d3dedf976a831e0788d18b584049",
+          "bytes": 1512
+        },
+        {
+          "relative_path": "REPORT.md",
+          "sha256": "68242a6b8d5ebbb0e772b62dc6577f30415bc9203aa3953422f5d3587959e6f2",
+          "bytes": 4198
+        },
+        {
+          "relative_path": "run_search.py",
+          "sha256": "fe3184c8b2f8b7e16cb4966082f9f64ba5df0b38c42c3add5a4fe8171edc091c",
+          "bytes": 5692
+        },
+        {
+          "relative_path": "validate_report.py",
+          "sha256": "e70873651716c90b002bdaa200499cc7cf21daffc06736f6bb988e3f5c13baa9",
+          "bytes": 14964
+        },
+        {
+          "relative_path": "vessel_geometry_audit.csv",
+          "sha256": "94ad1ce558bebf75aeb364e4a2041c2c0b7c6008d4f25c896a5fed567090bbc7",
+          "bytes": 120224
+        },
+        {
+          "relative_path": "viewer3d/data.json",
+          "sha256": "338a1888fa6c410bc0bda8e9864aae98024060c3d77f42d06c506ba1d2b0b645",
+          "bytes": 206727
+        },
+        {
+          "relative_path": "viewer3d/export_data.py",
+          "sha256": "5a2effa60ca136aa5b501eb9911571c1b65684e5fb6627e79838540100eb62d7",
+          "bytes": 2661
+        },
+        {
+          "relative_path": "viewer3d/geometry.mjs",
+          "sha256": "9ce54e4ef252bfacfa89b07e3619ab81e966665759119a01951e566b20cd9b64",
+          "bytes": 837
+        },
+        {
+          "relative_path": "viewer3d/geometry.test.mjs",
+          "sha256": "7c9c67a8afd394f1260565d23326514fcd678aa5fce88e75c01147f89d2da4f8",
+          "bytes": 751
+        },
+        {
+          "relative_path": "viewer3d/index.html",
+          "sha256": "ed2cdf79a1d18e170988e604eca1e7fdf0c23def0f7883792c7518692f865579",
+          "bytes": 5362
+        },
+        {
+          "relative_path": "viewer3d/style.css",
+          "sha256": "934ede59b4c5ce556a538d5e32a3db5b9bc0411fa41c1fff5a309e07a8cc21b7",
+          "bytes": 6039
+        },
+        {
+          "relative_path": "viewer3d/vendor/LICENSE",
+          "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+          "bytes": 1081
+        },
+        {
+          "relative_path": "viewer3d/vendor/OrbitControls.js",
+          "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+          "bytes": 38703
+        },
+        {
+          "relative_path": "viewer3d/vendor/provenance.json",
+          "sha256": "765f5c98a8ef4d5d0a7117c61d7007ac04d6a185387077dc3c243531df5a4599",
+          "bytes": 479
+        },
+        {
+          "relative_path": "viewer3d/vendor/three.core.js",
+          "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+          "bytes": 1403455
+        },
+        {
+          "relative_path": "viewer3d/vendor/three.module.js",
+          "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+          "bytes": 603113
+        },
+        {
+          "relative_path": "width_scan.csv",
+          "sha256": "23f2d4874a7417493f685181d7bddb08f0fe10aab4057745f729c5cf0e3f84dd",
+          "bytes": 2919
+        },
+        {
+          "relative_path": "viewer3d/__pycache__/history_data.cpython-313.pyc",
+          "sha256": "0ea1c8dcc7982f5efb083dfc8c212b31248daa979c9f1bf8076672e9c58f500a",
+          "bytes": 4581
+        },
+        {
+          "relative_path": "viewer3d/__pycache__/test_history_data.cpython-313.pyc",
+          "sha256": "562bf21bcbc482f1018086861bffb53eac0714512e6a36ff930e7ec370de6901",
+          "bytes": 2089
+        },
+        {
+          "relative_path": "viewer3d/app.mjs",
+          "sha256": "d30979ef9d825ddedc891c353a27f4a2838e1d0bdd08c54b1b7dda8508b135a7",
+          "bytes": 12353
+        },
+        {
+          "relative_path": "viewer3d/browser_check.cjs",
+          "sha256": "97734d2f1e17c67d52c836650f2403df49a1303d9cc3a5994f1e8fd8fbae9d50",
+          "bytes": 3327
+        },
+        {
+          "relative_path": "viewer3d/browser_check.json",
+          "sha256": "b03c82527f5f13cb12060c7e13608ed42dff7f620eec04b632d7aa0584424c5b",
+          "bytes": 351
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/case.json",
+          "sha256": "bddb82f93607e9f9ebae3eda9516e3348ce86f325562bbd0df7219716139f37b",
+          "bytes": 393835
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_1.json",
+          "sha256": "62566be87eea8b7f9020773ffde387048a74dd98e129b6ed37a23bafd03c0229",
+          "bytes": 137263
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_1458.json",
+          "sha256": "5e799e9e317bc2cd59b8870c12579bcf69b5c9c314acb2c863becdb472e8286f",
+          "bytes": 146079
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2147.json",
+          "sha256": "98d6f9f7056c2b4bc2dfe524c3bb946d632cbca2ca9ffad92bda38301ef37ca1",
+          "bytes": 146037
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2232.json",
+          "sha256": "836ab219f098010f70679f27df6548c53ad5db4d26369c7614308249ed04104c",
+          "bytes": 146054
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2289.json",
+          "sha256": "de46e293b80e8089bc378ab2ba3aa76e5bc395ddc13ee9f1098f7241cd10506b",
+          "bytes": 145990
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2291.json",
+          "sha256": "d4b68d91dac6ca8bb037e904c64fcd94ccfbfb44773a4cb9c0158491e5aaf457",
+          "bytes": 145877
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2441.json",
+          "sha256": "b50d814f647937d1d7e441031d0add78be0fe46b735bfa3a967ae36d833bc90b",
+          "bytes": 145853
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2583.json",
+          "sha256": "15a8467f84cf4e13a5e6e96eea3aae304ad3ca3ca2f7a7b8cf59e9b7a7548c0e",
+          "bytes": 145548
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2658.json",
+          "sha256": "1ca9789fcfa128ed2f1b44c18c4c087d9fd9ae41b5103a91eab14e5913c5db66",
+          "bytes": 145744
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_2873.json",
+          "sha256": "74a9f6dfba35ce94a97e786a9bbe86ef5825b27a8fcaa27a46647d7df1a696e8",
+          "bytes": 145832
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_3216.json",
+          "sha256": "4e0ab0a3fc1d41fe7b1d77f348ce16e98a473abde02c04c63c030d2fe4514454",
+          "bytes": 145680
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_3282.json",
+          "sha256": "78f358ee9de15720d6b0c3eb8de252daee73868681991a9071b9f8e349a0aa4d",
+          "bytes": 145740
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_3515.json",
+          "sha256": "c732f50d0170d4d6a0de24ad9054279606faaeed8dce2d8b5d38dfa74c39abdc",
+          "bytes": 145672
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_3554.json",
+          "sha256": "41f3cf72adb88a3ae30d24c0ff14ee393a1837523f7eabb4d861ec734edfcd97",
+          "bytes": 145727
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_4.json",
+          "sha256": "d809d9405ccc082828f45b2cb986026d58ea0e01cbe93d102fda389787e802ec",
+          "bytes": 146092
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_4005.json",
+          "sha256": "7c4ec891051923e99e056521fc4c7afad6338dae02096eb6f8d090c26cb3979c",
+          "bytes": 145737
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_4628.json",
+          "sha256": "bfa64b000fc23fef61761717be0cf37121a26692c8a9761cf7f70fba4e3c0ca0",
+          "bytes": 145809
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_5482.json",
+          "sha256": "374b01e878c7e567ef61ba11935844f655f5379cb65d5c03bc60ece4fbfb3623",
+          "bytes": 145762
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_5555.json",
+          "sha256": "9a8234bad886889141cb6f781f8d33ece03c1943dc08dcebb714c0a502d53baf",
+          "bytes": 145817
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_5581.json",
+          "sha256": "957bb3774c787a2e7ff263f9e1e0d1b306c009247fdd4e9f99a6c89f6fe60b2f",
+          "bytes": 145804
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6129.json",
+          "sha256": "5bf21abc59cc021407c229fcd31c9d6fdfc8c098edf2038ac64b489074c2727b",
+          "bytes": 145895
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6377.json",
+          "sha256": "81939d28f358b9ca1eb21008b9ba11a52f1b8193c5d887d0cf812ccf56703197",
+          "bytes": 145863
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6562.json",
+          "sha256": "2e091973ca1292430ab010209f9233e6593857662a8a86bd543483b337b9bded",
+          "bytes": 145838
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6615.json",
+          "sha256": "fa4487e588f5de432195202397e3d1db4b1dc37ef27bf8724207ca30e0b1132d",
+          "bytes": 145935
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6704.json",
+          "sha256": "c9b3edad7a9260a5e1e2b4f894e0b03ff34287d2e0e25656dd22922b705c4a5b",
+          "bytes": 145793
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6758.json",
+          "sha256": "e856f6e543769f132987e88b8db5a04fe86cdb133bbaed7d8f40e29cd72a1b77",
+          "bytes": 145878
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_6952.json",
+          "sha256": "acf19d6e5c0c3a1d08452b7b9f330ca99d53307f94e33243ece227e98582bb70",
+          "bytes": 145818
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/case_882.json",
+          "sha256": "6d419f4fa9f77c9d0db16c7c0280a2c041c2c8666d559759ae5e93ced93c214d",
+          "bytes": 146223
+        },
+        {
+          "relative_path": "viewer3d/cases/cae740322035-1400ms-a395bb40/stages/verified_final.json",
+          "sha256": "ddc79e425d5f2a05869b90f8f301c3efd358462bd7bb1cfb7284715c8705e26a",
+          "bytes": 145879
+        },
+        {
+          "relative_path": "viewer3d/catalog.json",
+          "sha256": "f8bcf0580f9f8f827298947b700e0c9b760c5f79d222c7769db2e930b2374063",
+          "bytes": 414
+        },
+        {
+          "relative_path": "viewer3d/desktop.png",
+          "sha256": "83d5468f7a3c2274ddeee8e94b69cc7508d58e8f738db3fca3e71050d5d74d38",
+          "bytes": 126917
+        },
+        {
+          "relative_path": "viewer3d/export_check.png",
+          "sha256": "24c4ac0cd523426e4b4a27c6ed232f2e1f00a9c5f93ba92a5e8da4759402d428",
+          "bytes": 39879
+        },
+        {
+          "relative_path": "viewer3d/export_history.py",
+          "sha256": "9ffa8d7ffd9f7ae32b79cdd4f2630a9c98893e9af734ec922e3af4638f30bf4b",
+          "bytes": 7279
+        },
+        {
+          "relative_path": "viewer3d/history_data.py",
+          "sha256": "0283164c91762befe5a71a65693924cd4263fcf0219246597aaacec4edc5d0a2",
+          "bytes": 2160
+        },
+        {
+          "relative_path": "viewer3d/history_export_checks.json",
+          "sha256": "d36ab39098dc6e0ce774636d48f6d0ee027ef6a953a8f8c10b7ae241331e4ec5",
+          "bytes": 636
+        },
+        {
+          "relative_path": "viewer3d/mobile.png",
+          "sha256": "f03eb2612f0a6ae9fcccd56bb67bcb2370735b48030272c912bd39c90aa8c3f4",
+          "bytes": 94865
+        },
+        {
+          "relative_path": "viewer3d/README.md",
+          "sha256": "d1b86cc5996302d1bfe9bf99c7e66b61598559cf24d9c87f6bc75fbe8d5dafda",
+          "bytes": 1280
+        },
+        {
+          "relative_path": "viewer3d/registry.mjs",
+          "sha256": "c78cb88fe91e15c73474d153418520e626c7960f834474109c071ea97d9b7a87",
+          "bytes": 297
+        },
+        {
+          "relative_path": "viewer3d/registry.test.mjs",
+          "sha256": "f34b457bb9816ce2d65f198f4c325ffce7f12f77f1b9d789f9b12c7695de083c",
+          "bytes": 464
+        },
+        {
+          "relative_path": "viewer3d/server-errors.log",
+          "sha256": "71ffbbdbef22993f537bb8aa64b7b0c262e0420851149b4e51a9e8a72147027d",
+          "bytes": 2698
+        },
+        {
+          "relative_path": "viewer3d/server.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "relative_path": "viewer3d/server.py",
+          "sha256": "2fb747f47c41dcc2e4fbd429cda15e62712a011eba28015a7a5a50eb191541e3",
+          "bytes": 788
+        },
+        {
+          "relative_path": "viewer3d/start_viewer.ps1",
+          "sha256": "a3554f203666e7a4ab67f374cc709093d4663b6642a779de82edc88a5e5a9b15",
+          "bytes": 1306
+        },
+        {
+          "relative_path": "viewer3d/test_history_data.py",
+          "sha256": "539ae2d90854c1fe2acfbbba776900fb50a4f91322328507df13a95436cafd1f",
+          "bytes": 677
+        }
+      ]
+    },
+    {
+      "source": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\output\\d3d-frozen-heat",
+      "destination": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-frozen-heat",
+      "files": [
+        {
+          "relative_path": "case_arrays.npz",
+          "sha256": "79da69e34c4427bf2a5401aaa636b31017ab1a1022757b8803b2a836c82dcbae",
+          "bytes": 30204
+        },
+        {
+          "relative_path": "DIIID_geom.json",
+          "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+          "bytes": 51630
+        },
+        {
+          "relative_path": "evaluations.json",
+          "sha256": "36e21f5dfc3c02f1843e0e0ff898856a467a81232fe2be467b2cc375e7e1e70a",
+          "bytes": 159898
+        },
+        {
+          "relative_path": "geometry.png",
+          "sha256": "42a924500ef73aa6c4dd9e22897e761d40cf17e5d81dd1ceca299eb08d87aa9a",
+          "bytes": 373784
+        },
+        {
+          "relative_path": "geometry_provenance.json",
+          "sha256": "a69872b21a27d49ab9a062dcde89c71d6c208b7079cbb3206d757dbdc70e26ff",
+          "bytes": 357
+        },
+        {
+          "relative_path": "heat_profiles.png",
+          "sha256": "d3228d0ff7c971c8334436a40022cf74d83d03a084e10744ac293df39299bfa9",
+          "bytes": 217629
+        },
+        {
+          "relative_path": "manifest.json",
+          "sha256": "8a6e95b5fb7fa76c55169141b9bdff16b63a3a14e93f025d15eb30b64839096c",
+          "bytes": 7274
+        },
+        {
+          "relative_path": "numerical_checks.json",
+          "sha256": "e8586cda26b242d1d22c1235940d273afeb44ba1fc7ccb754048466a18e7fe9b",
+          "bytes": 2644
+        },
+        {
+          "relative_path": "REPORT.md",
+          "sha256": "40e18891e41cd69e93bddb1ccb476eda5a1ce137c6d16f84df9e35ec168e3348",
+          "bytes": 5439
+        },
+        {
+          "relative_path": "width_scan.csv",
+          "sha256": "1c83d238578d02559648ac8e86abf7c574bcf00e54093988ee402d14147cf280",
+          "bytes": 1792
+        }
+      ]
+    },
+    {
+      "source": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\output\\d3d-frozen-heat-expanded",
+      "destination": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-frozen-heat-expanded",
+      "files": [
+        {
+          "relative_path": "__pycache__/run_expanded.cpython-313.pyc",
+          "sha256": "041138621f25999fcdcf418c576e65a8c3aa2d9cb444fb8df94e3f968e2bfae4",
+          "bytes": 11911
+        },
+        {
+          "relative_path": "__pycache__/validate_and_report.cpython-313.pyc",
+          "sha256": "bcd4ae0335432ef7b61515e5ee36d2660180e909f0b2255b78724c5d78c6b7e7",
+          "bytes": 13483
+        },
+        {
+          "relative_path": "angle_scope.csv",
+          "sha256": "c2a069298f3bf97a7fd20e39a33817cbf8062fa2c672c6528010898fbf866c09",
+          "bytes": 144897
+        },
+        {
+          "relative_path": "best_checkpoint.json",
+          "sha256": "d18ccd77b436449861d25624e2a18302987e30d177adf8fc5962ee82c71531c3",
+          "bytes": 1415
+        },
+        {
+          "relative_path": "candidate_verification.json",
+          "sha256": "23f6082cb0cacb4791fbc4ca329b1381ff43530c955d867f3f9b415681b99e70",
+          "bytes": 2205225
+        },
+        {
+          "relative_path": "case_arrays.npz",
+          "sha256": "bd3146d0b90e0e2b9baea1754d5965b0f75f40427e07db1d6d096c621cb3f7a0",
+          "bytes": 30252
+        },
+        {
+          "relative_path": "DIIID_geom.json",
+          "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+          "bytes": 51630
+        },
+        {
+          "relative_path": "evaluations.jsonl",
+          "sha256": "93db0eeed93911e693deb89dc4c311b4a2737a3062aff18b055e8ddbc9ec9385",
+          "bytes": 17216065
+        },
+        {
+          "relative_path": "final_refinement.py",
+          "sha256": "ffec8b963b48be0259c627569cc4af02e07f9b1cd3078012fa5575017698e7e1",
+          "bytes": 4131
+        },
+        {
+          "relative_path": "finer_check.json",
+          "sha256": "9a11e5e4c252d49e119d26b31548d3422b5ee3accfef77d14b2f1b6a5ae5ad91",
+          "bytes": 1220
+        },
+        {
+          "relative_path": "geometry.png",
+          "sha256": "a4bcb128050f2ef0f6c2cb4109a6fcd58ff6cca8043f55857ec8b1bec123d1a2",
+          "bytes": 373541
+        },
+        {
+          "relative_path": "geometry_provenance.json",
+          "sha256": "a69872b21a27d49ab9a062dcde89c71d6c208b7079cbb3206d757dbdc70e26ff",
+          "bytes": 357
+        },
+        {
+          "relative_path": "heat_profiles.png",
+          "sha256": "c21d55c0f27e266bcd383161fbfca1de1ab263d33ca23f69c95242baab3adbb2",
+          "bytes": 218437
+        },
+        {
+          "relative_path": "manifest.json",
+          "sha256": "898a5900b1e95abf779633fba9431cac52feed3ad334c359bb841f53378300b7",
+          "bytes": 10031
+        },
+        {
+          "relative_path": "numerical_checks.json",
+          "sha256": "4b061844b663a2b77a0fa10945fc48550abeb40f413b46153e7d07d328abe2c0",
+          "bytes": 4413
+        },
+        {
+          "relative_path": "REPORT.md",
+          "sha256": "78cdfb9bc12aacbf998a1b71e960e3b1de177ad83acd9bbf93f4293b137b7c7e",
+          "bytes": 5108
+        },
+        {
+          "relative_path": "run_expanded.py",
+          "sha256": "80704e2aa0ea868d7e7404e1540ce48d4bdfda4660862487d569ad668351b0dd",
+          "bytes": 7968
+        },
+        {
+          "relative_path": "validate_and_report.py",
+          "sha256": "3f75af19b0ee3e8b43218106ca51d625d24594636e23b1f77fc99d7fd25ccbea",
+          "bytes": 9752
+        },
+        {
+          "relative_path": "width_scan.csv",
+          "sha256": "d4096288e5f368978d5e7d1f609b9373b17e7aee0daf8e1f93623cf3541ddd7a",
+          "bytes": 1969
+        }
+      ]
+    },
+    {
+      "source": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\output\\d3d-frozen-heat-shelf-optimization",
+      "destination": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-frozen-heat-shelf-optimization",
+      "files": [
+        {
+          "relative_path": "angle_scope.csv",
+          "sha256": "aa73b128a987c07a6517613dfc5cdc65215629c8d047c397055d8b7476a4180d",
+          "bytes": 144877
+        },
+        {
+          "relative_path": "case_arrays.npz",
+          "sha256": "e0a9c98196eba118a5e1d7abbbb66de6eba2de8a26e1cfeb56daeef77b0c5b0b",
+          "bytes": 29578
+        },
+        {
+          "relative_path": "check_fixed_peak.py",
+          "sha256": "1c029aa5b9e2247a021eaab797418aa639601482d609fc23c0657fab199a4746",
+          "bytes": 2282
+        },
+        {
+          "relative_path": "DIIID_geom.json",
+          "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+          "bytes": 51630
+        },
+        {
+          "relative_path": "evaluations.json",
+          "sha256": "0fd063723fcd790472008a5e40dd7f84ab5dec17bde9f7a5486ba640367c59f8",
+          "bytes": 73401
+        },
+        {
+          "relative_path": "fixed_peak_diagnostic.json",
+          "sha256": "c534e9a30bea381ed5edbe0f7f6e95b527316a297cb9f9f05a0589cabec48957",
+          "bytes": 2396
+        },
+        {
+          "relative_path": "geometry.png",
+          "sha256": "9598e1c91bbd83f6be70c1500ed312b3be753c6aff744bf2a44676f586713c97",
+          "bytes": 363128
+        },
+        {
+          "relative_path": "geometry_provenance.json",
+          "sha256": "a69872b21a27d49ab9a062dcde89c71d6c208b7079cbb3206d757dbdc70e26ff",
+          "bytes": 357
+        },
+        {
+          "relative_path": "heat_profiles.png",
+          "sha256": "b701af7df609688d62d8412d2177ac4abe67f45d01fd05b36e6c46dfe5ff8838",
+          "bytes": 197403
+        },
+        {
+          "relative_path": "manifest.json",
+          "sha256": "99ef4f25c4bca1914077687992d8f9682f3a4435e726b56b58931a5572d95746",
+          "bytes": 9105
+        },
+        {
+          "relative_path": "numerical_checks.json",
+          "sha256": "5f35b25884a091a4f55ea0ce2214bf0482be47570e6ecb9325163a846b07a148",
+          "bytes": 3934
+        },
+        {
+          "relative_path": "REPORT.md",
+          "sha256": "8d6754299c7e9aa1331a02b7e023d3c04354e63e08b54dc87d541d924ef63178",
+          "bytes": 7713
+        },
+        {
+          "relative_path": "width_scan.csv",
+          "sha256": "57896c6539611c26409d04dd19f1145322fd6f1db52c8a8a831e5c567f446e36",
+          "bytes": 1985
+        }
+      ]
+    },
+    {
+      "source": "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\output\\d3d-frozen-heat-target-tagged",
+      "destination": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\optimized\\d3d-frozen-heat-target-tagged",
+      "files": [
+        {
+          "relative_path": "angle_scope.csv",
+          "sha256": "aa73b128a987c07a6517613dfc5cdc65215629c8d047c397055d8b7476a4180d",
+          "bytes": 144877
+        },
+        {
+          "relative_path": "case_arrays.npz",
+          "sha256": "e0a9c98196eba118a5e1d7abbbb66de6eba2de8a26e1cfeb56daeef77b0c5b0b",
+          "bytes": 29578
+        },
+        {
+          "relative_path": "DIIID_geom.json",
+          "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+          "bytes": 51630
+        },
+        {
+          "relative_path": "evaluations.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "bytes": 2
+        },
+        {
+          "relative_path": "geometry.png",
+          "sha256": "9598e1c91bbd83f6be70c1500ed312b3be753c6aff744bf2a44676f586713c97",
+          "bytes": 363128
+        },
+        {
+          "relative_path": "geometry_provenance.json",
+          "sha256": "a69872b21a27d49ab9a062dcde89c71d6c208b7079cbb3206d757dbdc70e26ff",
+          "bytes": 357
+        },
+        {
+          "relative_path": "heat_profiles.png",
+          "sha256": "b701af7df609688d62d8412d2177ac4abe67f45d01fd05b36e6c46dfe5ff8838",
+          "bytes": 197403
+        },
+        {
+          "relative_path": "manifest.json",
+          "sha256": "a6fac52944e56818ac01fe2c7e7585ad2052869120acd495c532fbae775235f5",
+          "bytes": 8584
+        },
+        {
+          "relative_path": "numerical_checks.json",
+          "sha256": "5f35b25884a091a4f55ea0ce2214bf0482be47570e6ecb9325163a846b07a148",
+          "bytes": 3934
+        },
+        {
+          "relative_path": "REPORT.md",
+          "sha256": "d444f8c075920d92009d62a21faa2254a6400b17f35ab13e054a621fa9bfccf0",
+          "bytes": 6549
+        },
+        {
+          "relative_path": "width_scan.csv",
+          "sha256": "57896c6539611c26409d04dd19f1145322fd6f1db52c8a8a831e5c567f446e36",
+          "bytes": 1985
+        }
+      ]
+    }
+  ],
+  "status": "moved_and_hash_verified",
+  "legacy_main_backup": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\backup\\d3d-integration-20261003-152601\\optimize_divertor.py",
+  "legacy_main_original_sha256": "5cae0fdb41a67d70c0e7909c04460a62f7dd29976b16e54386585a6e23442c2c",
+  "completed_at": "2026-10-03T15:49:22.4965876+09:00"
+}

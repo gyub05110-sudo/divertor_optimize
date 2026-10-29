@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "source_tests": {
+    "passed": 177,
+    "skipped": 1,
+    "seconds": 27.21
+  },
+  "publication_tests": {
+    "passed": 177,
+    "skipped": 1,
+    "seconds": 28.96
+  },
+  "copied_project_files_verified": 657,
+  "preserved_python_files_verified": 180,
+  "verified_study_provenance_records": 4,
+  "saved_qualified_verdicts_passed": 2,
+  "credential_pattern_matches": 0,
+  "files_over_50_MiB": 0,
+  "new_publication_files_whitespace_check": true,
+  "historical_bytes_preserved": true,
+  "dependency_restore": "Fresh PyPI pyarrow==25.0.1 CPython 3.13 Windows wheel installed into ignored local target; all preservation hashes passed",
+  "excluded": "installed dependencies, caches, server logs, duplicate final-study snapshots and geometry ZIP",
+  "notes": "Historical CRLF/trailing whitespace preserved for hashes. New publication files checked separately."
+}

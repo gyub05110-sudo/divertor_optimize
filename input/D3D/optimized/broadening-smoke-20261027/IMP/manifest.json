@@ -1,0 +1,4580 @@
+{
+  "schema": "connection-broadening-study.v1",
+  "source": "IMP",
+  "mode": "optimize",
+  "smoke_test": true,
+  "metadata": {
+    "source": "IMP",
+    "source_power": 1.0,
+    "source_split": null,
+    "shot_path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor_no-transport\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+    "shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "time_ms": 1400.0,
+    "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "source_RZ_m": [
+      1.10136428016296,
+      -0.06456411629915237
+    ],
+    "support_mm": 84.05382553856855,
+    "tubes": 48,
+    "step_m": 0.002,
+    "target_nodes": 41,
+    "interpolation": "cubic",
+    "dimension": 24,
+    "surfaces": [
+      {
+        "name": "omp_entry",
+        "segment_index": 59,
+        "original_segment": 58,
+        "endpoints_RZ_m": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "angle_floor_deg": null
+      },
+      {
+        "name": "shelf",
+        "segment_index": 61,
+        "original_segment": 59,
+        "endpoints_RZ_m": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "angle_floor_deg": 1.5
+      },
+      {
+        "name": "omp_connector",
+        "segment_index": 63,
+        "original_segment": 60,
+        "endpoints_RZ_m": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "angle_floor_deg": null
+      },
+      {
+        "name": "floor",
+        "segment_index": 72,
+        "original_segment": 68,
+        "endpoints_RZ_m": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ],
+        "angle_floor_deg": null
+      },
+      {
+        "name": "imp_sloped",
+        "segment_index": 74,
+        "original_segment": 69,
+        "endpoints_RZ_m": [
+          [
+            1.0882576947643479,
+            -1.2853220897608946
+          ],
+          [
+            1.0175,
+            -1.217
+          ]
+        ],
+        "angle_floor_deg": null
+      },
+      {
+        "name": "imp_vertical",
+        "segment_index": 75,
+        "original_segment": 70,
+        "endpoints_RZ_m": [
+          [
+            1.0175,
+            -1.217
+          ],
+          [
+            1.017488980263158,
+            -1.15
+          ]
+        ],
+        "angle_floor_deg": null
+      }
+    ],
+    "split_to_original_segment": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      58,
+      58,
+      59,
+      60,
+      60,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      69,
+      70,
+      70,
+      71,
+      72
+    ],
+    "policy": {
+      "schema": "user-selected-no-transport-design-regions.v1",
+      "user_instruction_date": "2026-10-06",
+      "existing_design_segments": [
+        68,
+        59
+      ],
+      "imp_maximum_Z_m": -1.15,
+      "excluded_omp_segments": [
+        53,
+        54,
+        55
+      ],
+      "interpretation": "Attached cropped green sloped wall is original segments 53/54/55. IMP cyan wall eligible only at Z<=-1.15 m. Existing floor/shelf and nearby OMP portions on 58/60 retained.",
+      "excluded_wall_is_fixed": true,
+      "excluded_wall_heat_remains_in_accounting": true,
+      "first_hit_physics_modified": false
+    },
+    "widths_mm": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ],
+    "boundary_mode": "continuous",
+    "imp_buffer_m": 0.0,
+    "objective_version": "sol-limit-guard.v1"
+  },
+  "models": {
+    "direct": {
+      "config": {
+        "sigma_ref_m": 0.0,
+        "length_ref_m": 10.0,
+        "exponent": 1.0,
+        "wall_step_m": 0.003,
+        "anchor_m": 0.005,
+        "missing_tolerance": 0.001
+      },
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        }
+      },
+      "search": {
+        "status": "candidate_found",
+        "best_coefficients_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "best_worst_peak_ratio": 1.0,
+        "evaluated": 18,
+        "feasible_evaluations": 16,
+        "elapsed_seconds": 0.25278969993814826,
+        "generations": 1,
+        "optimizer_message": "Maximum number of iterations has been exceeded.",
+        "global_optimum_proven": false,
+        "search_scope": "bounded exploratory matched-budget search"
+      }
+    },
+    "sigma_0.1mm": {
+      "config": {
+        "sigma_ref_m": 0.0001,
+        "length_ref_m": 10.0,
+        "exponent": 1.0,
+        "wall_step_m": 0.003,
+        "anchor_m": 0.005,
+        "missing_tolerance": 0.001
+      },
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        }
+      },
+      "search": {
+        "status": "candidate_found",
+        "best_coefficients_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "best_worst_peak_ratio": 1.0,
+        "evaluated": 18,
+        "feasible_evaluations": 16,
+        "elapsed_seconds": 3.589598000049591,
+        "generations": 1,
+        "optimizer_message": "Maximum number of iterations has been exceeded.",
+        "global_optimum_proven": false,
+        "search_scope": "bounded exploratory matched-budget search"
+      }
+    },
+    "sigma_0.25mm": {
+      "config": {
+        "sigma_ref_m": 0.00025,
+        "length_ref_m": 10.0,
+        "exponent": 1.0,
+        "wall_step_m": 0.003,
+        "anchor_m": 0.005,
+        "missing_tolerance": 0.001
+      },
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        }
+      },
+      "search": {
+        "status": "candidate_found",
+        "best_coefficients_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "best_worst_peak_ratio": 1.0,
+        "evaluated": 18,
+        "feasible_evaluations": 16,
+        "elapsed_seconds": 3.71386309992522,
+        "generations": 1,
+        "optimizer_message": "Maximum number of iterations has been exceeded.",
+        "global_optimum_proven": false,
+        "search_scope": "bounded exploratory matched-budget search"
+      }
+    },
+    "sigma_0.5mm": {
+      "config": {
+        "sigma_ref_m": 0.0005,
+        "length_ref_m": 10.0,
+        "exponent": 1.0,
+        "wall_step_m": 0.003,
+        "anchor_m": 0.005,
+        "missing_tolerance": 0.001
+      },
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        }
+      },
+      "search": {
+        "status": "baseline_inadmissible",
+        "best_coefficients_m": null,
+        "evaluated": 0
+      }
+    }
+  },
+  "candidates": {
+    "baseline": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "historical_direct": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "direct_best": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sigma_0.1mm_best": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sigma_0.25mm_best": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "settings": {
+    "output": "input\\D3D\\optimized\\broadening-smoke-20261027",
+    "mode": "optimize",
+    "source": "both",
+    "sigma_mm": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "length_ref_m": 10.0,
+    "exponent": 1.0,
+    "tubes": 48,
+    "nodes": 41,
+    "step_mm": 2.0,
+    "wall_step_mm": 3.0,
+    "anchor_mm": 5.0,
+    "sobol_power": 3,
+    "population": 8,
+    "generations": 1,
+    "seed": 20261027,
+    "bound_mm": 100.0,
+    "smoke": true
+  },
+  "physical_scope": "fixed equilibrium; phenomenological endpoint deposition; no solved transport PDE",
+  "physical_validation": false,
+  "global_optimum_proven": false,
+  "validation_status": "not_run",
+  "historical_warm_start_status": "included",
+  "elapsed_seconds": 13.159120199969038,
+  "cross_evaluation": {
+    "direct": {
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "historical_direct": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "direct_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.1mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.25mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "baseline_peak_q": [
+          7.998947396923846,
+          4.006306433114244,
+          2.67548589067481,
+          1.6109313327441317,
+          0.8130455540174268
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.0,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.9979213434190662,
+            0.95465249248654,
+            0.8732960182355186,
+            0.711764650803774,
+            0.46625205477801795
+          ],
+          "imp_vertical": [
+            0.0020527663763390846,
+            0.04030655839860205,
+            0.09748910321341588,
+            0.16910398330640086,
+            0.1920794050197015
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      }
+    },
+    "sigma_0.1mm": {
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "historical_direct": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "direct_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.1mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.25mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "baseline_peak_q": [
+          4.562662986477108,
+          3.0333669864159396,
+          2.270593793475676,
+          1.514424759731309,
+          1.4715278890661712
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 2.1103486471379113e-13,
+        "balance_error": 2.220446049250313e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.8806224673499313,
+            0.8909108294595038,
+            0.8306570775641756,
+            0.6871613548495847,
+            0.45502357337379085
+          ],
+          "imp_vertical": [
+            0.0019772142888452963,
+            0.03925917226328139,
+            0.0953675675978478,
+            0.16599663489609717,
+            0.18902266280205726
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9999999999997887,
+            0.9999999999998931,
+            0.9999999999999285,
+            0.9999999999999568,
+            0.9999999999999785
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            2.1103486471379113e-13,
+            1.0679300381972685e-13,
+            7.162200236278335e-14,
+            4.332397549528036e-14,
+            2.1983446128971528e-14
+          ],
+          "balance_error": [
+            2.220446049250313e-16,
+            1.1102230246251568e-16,
+            2.220446049250313e-16,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 303,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0807479697285534,
+            -1.2780708627433388
+          ],
+          [
+            1.0790624618530273,
+            -1.276443373030059
+          ],
+          [
+            1.0779986458755286,
+            -1.275416175480085
+          ],
+          [
+            1.0772018049574186,
+            -1.2746467632357548
+          ],
+          [
+            1.0174790679456558,
+            -1.089733109586332
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      }
+    },
+    "sigma_0.25mm": {
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "historical_direct": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "direct_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.1mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.25mm_best": {
+        "geometry_valid": true,
+        "feasible": true,
+        "baseline_admissible": true,
+        "peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "baseline_peak_q": [
+          2.9216566450446395,
+          2.3131989348661177,
+          1.8829237300062982,
+          1.3661259831346748,
+          0.8140167374362439
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.00015917625642899354,
+        "balance_error": 4.440892098500627e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.7863613211783574,
+            0.8285623617817051,
+            0.7862065257383152,
+            0.660680726266628,
+            0.4431701900010245
+          ],
+          "imp_vertical": [
+            0.002079701148810359,
+            0.03847464656462855,
+            0.09256136104826193,
+            0.16049610101268358,
+            0.18258672866325382
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9998408237435709,
+            0.9999186404663345,
+            0.9999452898101373,
+            0.9999668741739282,
+            0.9999832140935011
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.00015917625642899354,
+            8.135953366562649e-05,
+            5.471018986271251e-05,
+            3.312582607185621e-05,
+            1.6785906499162602e-05
+          ],
+          "balance_error": [
+            1.1102230246251565e-16,
+            4.440892098500627e-16,
+            0.0,
+            4.440892098500624e-16,
+            0.0
+          ]
+        },
+        "model_errors": [],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 298,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.075875098180587,
+            -1.273365724052738
+          ],
+          [
+            1.0718949778500924,
+            -1.2695226065036878
+          ],
+          [
+            1.0697344278457026,
+            -1.26743642645183
+          ],
+          [
+            1.0670303863350434,
+            -1.2648254628326263
+          ],
+          [
+            1.0639347371891033,
+            -1.2618363714055871
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      }
+    },
+    "sigma_0.5mm": {
+      "baseline": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "historical_direct": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "direct_best": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.1mm_best": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      },
+      "sigma_0.25mm_best": {
+        "geometry_valid": true,
+        "feasible": false,
+        "baseline_admissible": false,
+        "peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "baseline_peak_q": [
+          1.8326895295042323,
+          1.6809647251387303,
+          1.4857103375347198,
+          1.1792765472173818,
+          0.7701341026651022
+        ],
+        "peak_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "worst_peak_ratio": 1.0,
+        "missing_power": 0.012770199433951558,
+        "balance_error": 2.2204460492503136e-16,
+        "surface_power": {
+          "omp_entry": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shelf": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "omp_connector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "floor": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "imp_sloped": [
+            0.6987265962757303,
+            0.7515731758276485,
+            0.7214821966656381,
+            0.613352813941626,
+            0.41574533493739146
+          ],
+          "imp_vertical": [
+            0.004632781180498193,
+            0.044854092967569766,
+            0.09972160887755704,
+            0.16616585665449898,
+            0.18549715666451339
+          ]
+        },
+        "power_ledger": {
+          "prescribed": [
+            1.0,
+            0.9999999999999998,
+            1.0,
+            1.0000000000000004,
+            1.0000000000000002
+          ],
+          "deposited": [
+            0.9872298005660485,
+            0.9929728451524592,
+            0.9951456144882244,
+            0.996993930524113,
+            0.9984499111453532
+          ],
+          "blocked": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "branch_tail": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "unhit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unresolved": [
+            0.012770199433951558,
+            0.007027154847540745,
+            0.004854385511775584,
+            0.0030060694758872316,
+            0.0015500888546472454
+          ],
+          "balance_error": [
+            0.0,
+            2.2204460492503136e-16,
+            0.0,
+            2.220446049250312e-16,
+            2.2204460492503126e-16
+          ]
+        },
+        "model_errors": [
+          "unresolved_power_exceeds_tolerance"
+        ],
+        "receiving_angles": {
+          "omp_entry": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "shelf": {
+            "minimum_angle_deg": null,
+            "floor_deg": 1.5,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "omp_connector": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "floor": {
+            "minimum_angle_deg": null,
+            "floor_deg": null,
+            "receiving_sample_count": 0,
+            "passed": true
+          },
+          "imp_sloped": {
+            "minimum_angle_deg": 0.5972393739916344,
+            "floor_deg": null,
+            "receiving_sample_count": 293,
+            "passed": true
+          },
+          "imp_vertical": {
+            "minimum_angle_deg": 0.6056524028935826,
+            "floor_deg": null,
+            "receiving_sample_count": 232,
+            "passed": true
+          }
+        },
+        "peak_points_RZ_m": [
+          [
+            1.0708770316723577,
+            -1.2685396998338399
+          ],
+          [
+            1.0643769727813805,
+            -1.2622633844665927
+          ],
+          [
+            1.0603968524508858,
+            -1.2584202669175424
+          ],
+          [
+            1.0558940283422118,
+            -1.2540724379788675
+          ],
+          [
+            1.0497831982362338,
+            -1.2481719534534081
+          ]
+        ],
+        "connection_length_m": {
+          "min": 1.0737191738266,
+          "max": 55.880158982487075,
+          "power_weighted_mean": [
+            34.27402021697675,
+            30.24251752288774,
+            27.806882835001616,
+            24.544052324654768,
+            19.82659880733215
+          ]
+        },
+        "max_wall_displacement_m": 0.0,
+        "max_wall_difference_from_direct_selected_m": 0.0
+      }
+    }
+  }
+}

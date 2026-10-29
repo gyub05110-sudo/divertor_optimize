@@ -1,0 +1,295 @@
+{
+  "IMP": {
+    "direct": {
+      "baseline": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009934963563681303
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009934963563681303
+      },
+      "direct_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009934963563681303
+      },
+      "frozen_transport_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0011724131774958346,
+        "max_absolute_peak_relative_change": 0.00216474474564393
+      },
+      "thermal_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0011724131774958346,
+        "max_absolute_peak_relative_change": 0.00216474474564393
+      }
+    },
+    "frozen_transport": {
+      "baseline": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "direct_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "frozen_transport_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": true,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 0.8669244440947206,
+        "finest_reduction_percent": 13.307555590527942,
+        "max_ratio_change": 0.001247860702078274,
+        "max_absolute_peak_relative_change": 0.0014326707245738207
+      },
+      "thermal_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": true,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 0.8669244440947206,
+        "finest_reduction_percent": 13.307555590527942,
+        "max_ratio_change": 0.001247860702078274,
+        "max_absolute_peak_relative_change": 0.0014326707245738207
+      }
+    },
+    "thermal": {
+      "baseline": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "direct_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.0009211829939374695
+      },
+      "frozen_transport_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": true,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 0.8668979298908718,
+        "finest_reduction_percent": 13.310207010912823,
+        "max_ratio_change": 0.0012477844938553195,
+        "max_absolute_peak_relative_change": 0.001432626965930138
+      },
+      "thermal_best": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": true,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 0.8668979298908718,
+        "finest_reduction_percent": 13.310207010912823,
+        "max_ratio_change": 0.0012477844938553195,
+        "max_absolute_peak_relative_change": 0.001432626965930138
+      }
+    }
+  },
+  "OMP": {
+    "direct": {
+      "baseline": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 1.0,
+        "finest_reduction_percent": 0.0,
+        "max_ratio_change": 0.0,
+        "max_absolute_peak_relative_change": 0.00035510287727111815
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": true,
+        "improvement_confirmed": true,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "passed",
+        "resolution_screen_passed": true,
+        "finest_peak_ratio": 0.5938260527485723,
+        "finest_reduction_percent": 40.61739472514277,
+        "max_ratio_change": 0.0006687323754666075,
+        "max_absolute_peak_relative_change": 0.0008454864467167159
+      },
+      "direct_best": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": true,
+        "verification_status": "incomplete_or_invalid_evidence"
+      }
+    },
+    "frozen_transport": {
+      "baseline": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      },
+      "direct_best": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      }
+    },
+    "thermal": {
+      "baseline": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      },
+      "historical_direct": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      },
+      "direct_best": {
+        "numerically_verified_feasible": false,
+        "improvement_confirmed": false,
+        "physical_validation": false,
+        "global_optimum_proven": false,
+        "original_screen_passed": false,
+        "verification_status": "original_screen_failed"
+      }
+    }
+  }
+}

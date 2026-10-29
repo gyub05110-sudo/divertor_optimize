@@ -1,0 +1,16 @@
+{
+  "schema_version": 4,
+  "cases": [
+    {
+      "id": "cae740322035-1400ms-a395bb40",
+      "shot_name": "d3d_shot_1a3155370c.parquet",
+      "shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+      "time_ms": 1400.0,
+      "run_name": "보관 · 이전 모델 · d3d-divertor-floor-shelf",
+      "stage_count": 29,
+      "bundle_url": "cases/cae740322035-1400ms-a395bb40/case.json",
+      "device_id": "d3d",
+      "archived_model": true
+    }
+  ]
+}

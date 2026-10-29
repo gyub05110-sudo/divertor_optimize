@@ -1,0 +1,25 @@
+{
+  "device": "b'NVIDIA GeForce RTX 3090'",
+  "backend": "CuPy RawKernel FP64, no fast math; CPU CDF and peak refinement",
+  "rows": [
+    {
+      "cpu_seconds": 1.6164668002165854,
+      "gpu_seconds": 1.081281099934131,
+      "q_max_relative_difference": 4.878925486274236e-16,
+      "peak_relative_difference": 0.0
+    },
+    {
+      "cpu_seconds": 1.5348535000812262,
+      "gpu_seconds": 1.0652340999804437,
+      "q_max_relative_difference": 4.87892548630261e-16,
+      "peak_relative_difference": 0.0
+    },
+    {
+      "cpu_seconds": 1.5779232999775559,
+      "gpu_seconds": 1.1348033000249416,
+      "q_max_relative_difference": 4.878925486349756e-16,
+      "peak_relative_difference": 0.0
+    }
+  ],
+  "gpu_speedup": 1.4593090548550967
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "caseId": "220a33e961eb-1400ms-9b002084",
+  "stageCount": 14,
+  "qualityVerified": true,
+  "checks": [
+    "matching new parquet",
+    "7233 unique trials",
+    "40+40 DE generations",
+    "new history",
+    "infeasible reference warning",
+    "increase label",
+    "five widths",
+    "coarse stage audit isolation",
+    "both equilibrium switching",
+    "mobile overflow"
+  ],
+  "errors": []
+}

@@ -1,0 +1,84 @@
+{
+  "source_run": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\optimized\\cpd2_transport_sensitivity_20261004_133900",
+  "source_run_identity_sha256": "b3562abda777905aaa8584183c08709e80b18b3ee2dffaa3c680e336af021f52",
+  "source_run_summary_sha256": "12e88c776c46c6e995da2765dee5d4330d8313ec5c83f3980d6cc3e1430170f9",
+  "equilibrium_sha256": "8e4e1c9782c140f74cb943edb3149e6861f1ff14bb4914031e3fde0673cea530",
+  "entries": [
+    {
+      "case_id": "cpd2-8e4e1c9782c1-diffusion-0",
+      "stage_count": 7,
+      "baseline_peak_q_over_P": 6.234945594655462,
+      "candidate_peak_q_over_P": 6.2348948561175375,
+      "sample_count": 138,
+      "sol_curves": 8,
+      "sol_omitted": 0,
+      "all_exported_contact_peaks_verified": true
+    },
+    {
+      "case_id": "cpd2-8e4e1c9782c1-diffusion-1",
+      "stage_count": 7,
+      "baseline_peak_q_over_P": 5.162935824979019,
+      "candidate_peak_q_over_P": 5.162893810025702,
+      "sample_count": 138,
+      "sol_curves": 8,
+      "sol_omitted": 0,
+      "all_exported_contact_peaks_verified": true
+    },
+    {
+      "case_id": "cpd2-8e4e1c9782c1-diffusion-2",
+      "stage_count": 7,
+      "baseline_peak_q_over_P": 4.359709293448444,
+      "candidate_peak_q_over_P": 4.359673814994198,
+      "sample_count": 138,
+      "sol_curves": 8,
+      "sol_omitted": 0,
+      "all_exported_contact_peaks_verified": true
+    },
+    {
+      "case_id": "cpd2-8e4e1c9782c1-diffusion-3",
+      "stage_count": 7,
+      "baseline_peak_q_over_P": 3.261853186382061,
+      "candidate_peak_q_over_P": 3.2618266420642543,
+      "sample_count": 138,
+      "sol_curves": 8,
+      "sol_omitted": 0,
+      "all_exported_contact_peaks_verified": true
+    }
+  ],
+  "trace_sources": [
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_00_half_0_minus.json",
+      "sha256": "44260247da5feb57634733d12edcc05f5c11ae376e478578b06233eee3511f68"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_00_half_1_minus.json",
+      "sha256": "66f0da578fb15996e1a7312656a2245c5f17128406faf1f9abcb696fb52a1a71"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_01_half_0_minus.json",
+      "sha256": "3f6093990a86b97b9898b872789e5e561e942e5d1d466f147daa5a6e9f03c26f"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\approved_direction_20260930\\refined_inner_rotation_direct_v1\\refinement_minus_fixed_N_0x1.0177b5aaea829p+0.json.gz",
+      "sha256": "dff78dde85dcf28d48da9cd328e0274721b6e9153cbda0a63df8d749563e31d4"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_00_half_0_plus.json",
+      "sha256": "782df9532c7325f36544aee59ba2098aa0ee3faf454ce3df4b7ac7968d36684d"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_00_half_1_plus.json",
+      "sha256": "d3c6d12b6cafd158eceb4b7acb4d60bed79458f989c560923ff2705565ccf773"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\coupled_inner_scenario_20260924\\native_common_trajectory_v1\\full_v1\\power_bin_01_half_0_plus.json",
+      "sha256": "0a6e8a6ebe43ef75dfceaefcae2ed147af64e24e296647d9cb76d68a4b9f97da"
+    },
+    {
+      "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\Base_of_CPD2\\approved_direction_20260930\\refined_inner_rotation_direct_v1\\refinement_plus_fixed_N_0x1.0177b5aaea829p+0.json.gz",
+      "sha256": "dfdbf82741e3291bf9255b6d23f34dd70aa4e772e2fee455984d1757a4e07650"
+    }
+  ],
+  "core_max_residual": 0.00011996291786015023,
+  "optimization_executed": false
+}

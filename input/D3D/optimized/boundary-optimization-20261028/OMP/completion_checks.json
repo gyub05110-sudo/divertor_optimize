@@ -1,0 +1,38 @@
+{
+  "preservation": {
+    "files": 169,
+    "unchanged": true
+  },
+  "full_pytest": {
+    "passed": 174,
+    "skipped": 1,
+    "seconds": 34.35
+  },
+  "final_verdict": {
+    "improvement_confirmed": true,
+    "resolution_screen_passed": true,
+    "global_optimum_proven": false,
+    "scope": "same boundary-footprint model and fixed operating inputs; numerical comparison only",
+    "max_peak_ratio_change": 0.0017974228357336974,
+    "max_absolute_peak_relative_change": 0.003108403857416188,
+    "max_region_power_l1_change": 0.0011781943732035683,
+    "max_wall_cdf_change": 0.0010090825612608656,
+    "max_peak_location_change_m": 0.00012401499933924692,
+    "finest_reduction_percent": 48.2519286347219
+  },
+  "input_variants": 10,
+  "composite_input_smoke_sources": [
+    "IMP",
+    "OMP"
+  ],
+  "artifact_sha256": {
+    "manifest.json": "ceb6f8ef6137a3b0e1ac45f4649046ac520a8eb3b97b766d0f13dd32c6b84f7d",
+    "validation.json": "7dbc4b12757fca85a1adac14608310e78f25d7a5ca2ba5e9fa58a46ae33cf953",
+    "REPORT.ko.md": "0bd73915981a4abd124eece848e7befd92579ab2007ed2db92499c7de864bea9",
+    "comparison.png": "95aa7c5acdd5a040d312cb96b3180b2bc76eab0e58b71e7adb62212d8e508a51",
+    "arrival_map.png": "7ea2f201197d142587a8487e05d2f1250e6b6983b1e8a7f5838e3959361bc7f7",
+    "baseline_refined.npz": "49d066791a8edb9eb84d9a5c6614f856190b6b2fc474b68159482584bdcfa2f0",
+    "selected_refined.npz": "172aa59ffc94a270eea4109c70666843a3fae3c652a4488cf7785b1bc9e8eada"
+  },
+  "report_script_sha256": "0e0e5d42842ec1301d2fa72b82bc1433c09a2c43509364919cc178ef940c5784"
+}

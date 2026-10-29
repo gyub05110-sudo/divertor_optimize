@@ -1,0 +1,173 @@
+{
+  "case": 8222,
+  "stage": "DE_93",
+  "coefficients_m": [
+    -0.0022874228235567396,
+    0.001169896120627345,
+    -0.001538241957117792,
+    -0.004913334805003444,
+    0.009705477535973617,
+    0.004641430117487144,
+    8.736495494319208e-05,
+    -0.0018834056480681151,
+    -0.0014880830191891237,
+    -0.0023592354099246427,
+    -0.0017083915110220227,
+    -0.002652853520819287,
+    0.026112105193766902,
+    0.024984893979218437,
+    -0.03264410917321033,
+    -0.0755240893295836,
+    0.005068059837633987,
+    -0.0027137923474831907,
+    0.009653842532945123,
+    -0.013074434209878395,
+    0.008700594129441975,
+    -0.00617878301742687,
+    -0.005239222374123509,
+    0.017034249963877836
+  ],
+  "geometry_valid": true,
+  "feasible": true,
+  "peak_ratios": [
+    0.6242816261552312,
+    0.624424835579998,
+    0.6244750313499818,
+    0.6245151908712236,
+    0.6483176873343733
+  ],
+  "worst_all_wall_peak_ratio": 0.6483176873343733,
+  "angles": {
+    "omp_entry": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 16,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 1.7999856094888362,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    },
+    "shelf": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 124,
+      "applied_hit_count": 124,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 1.5713201603371643,
+      "angle_constraint_passed": true,
+      "status": "angle_satisfied",
+      "angle_floor_deg": 1.5
+    },
+    "omp_connector": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 5,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 1.0482208397056463,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    },
+    "floor": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 102,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 0.5621020291366986,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    },
+    "imp_sloped": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 0,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": null,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    },
+    "imp_vertical": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 0,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": null,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    }
+  },
+  "surface_power": {
+    "omp_entry": [
+      2.7662645763045886e-23,
+      5.073856188287345e-12,
+      2.7276820030407512e-08,
+      2.337791232515715e-05,
+      0.0028513128677482673
+    ],
+    "shelf": [
+      1.2949471518909569e-05,
+      0.0035921799055413264,
+      0.023425469744677824,
+      0.1049464992088926,
+      0.3178302408812375
+    ],
+    "omp_connector": [
+      2.7744790693359336e-05,
+      0.0026139190398168297,
+      0.010038432744583629,
+      0.02449576148609192,
+      0.03516107700692659
+    ],
+    "floor": [
+      0.9999563201850452,
+      0.9934011066386935,
+      0.964857395482824,
+      0.8660726777453469,
+      0.6348249506040008
+    ],
+    "imp_sloped": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "imp_vertical": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "unmapped_power": 0.0,
+  "power_balance_error": 2.220446049250313e-16,
+  "boundary_witness": {
+    "resolved": true,
+    "point": [
+      1.2045469132600615,
+      -1.3211026051559704
+    ],
+    "q": [
+      5.4451855184676345,
+      2.7232681696291627,
+      1.8160048584517476,
+      1.090268269034083,
+      0.5461602577841556
+    ],
+    "angle_deg": 0.5937080695716432,
+    "angle_passed": true,
+    "surface": "floor",
+    "split_segment": 72,
+    "psi_residual": 4.336808689942018e-19,
+    "refinement_distance_m": 5.788135895464205e-06,
+    "normal_RZ": [
+      0.7620091215789813,
+      -0.6475662889854826
+    ],
+    "zero_power_limit": true
+  }
+}

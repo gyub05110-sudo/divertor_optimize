@@ -1,0 +1,19 @@
+{
+  "status": "candidate_found",
+  "best_coefficients_m": [
+    0.023015273434083584,
+    0.026068483666802145,
+    0.026383763773966007,
+    0.0015562651740975708,
+    0.0038122744249692087,
+    0.018650183096225414,
+    -0.001935902378253751,
+    -0.0018888640754840204
+  ],
+  "best_peak_ratio": 0.7801375804986553,
+  "evaluated": 329,
+  "feasible_evaluations": 195,
+  "elapsed_seconds": 211.6068628001958,
+  "optimizer_message": "Maximum number of iterations has been exceeded.",
+  "global_optimum_proven": false
+}

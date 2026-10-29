@@ -1,0 +1,18 @@
+{
+  "IMP": {
+    "evaluations": 329,
+    "feasible": 195,
+    "peak": 1.9890297439624343,
+    "reduction": 21.986241950134467,
+    "seconds": 223.85726940003224,
+    "fixed_error": 0.0
+  },
+  "OMP": {
+    "evaluations": 331,
+    "feasible": 184,
+    "peak": 1.2553119335848282,
+    "reduction": 54.02895596850148,
+    "seconds": 308.5498315000441,
+    "fixed_error": 0.0
+  }
+}

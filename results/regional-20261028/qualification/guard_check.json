@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "screen_sha256": "cc5c5a93b58bcca83d92434af46b3e0e1d2f1d42bc0418d9a0d704942dea1ff7",
+  "returncode": 1,
+  "guard": "existing qualified target rejected before writing"
+}

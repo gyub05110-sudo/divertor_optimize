@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기준 형상 · 두 leg와 SOL 최초 충돌</title>
+<script type="importmap">{"imports":{"three":"../input/D3D/optimized/d3d-divertor-floor-shelf/viewer3d/vendor/three.module.js"}}</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:#223449;font:15px/1.6 'Malgun Gothic',sans-serif}header{padding:24px 32px;background:white;border-bottom:1px solid #dce6ef}h1{font-size:24px;margin:0 0 5px}h2{font-size:17px;margin:0 0 12px}p{margin:8px 0}.tag{font-size:12px;color:#617993}.layout{display:grid;grid-template-columns:280px 1fr;gap:18px;padding:20px;max-width:1800px;margin:auto}aside,.card{background:white;border:1px solid #dce6ef;border-radius:10px;padding:20px}aside label{display:block;padding:7px 0}input{accent-color:#46687c}button{padding:9px 13px;border:1px solid #d9e1eb;background:white;border-radius:7px;color:#36536e;cursor:pointer}.buttons{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.hint{color:#6d7f91;font-size:12px}.dot{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:7px}.scene{height:650px;background:#f8fafc;position:relative;border-radius:8px;overflow:hidden}.scene canvas{width:100%;height:100%;display:block}.scene-note{position:absolute;left:16px;top:14px;background:#ffffffd9;padding:5px 10px;pointer-events:none;font-size:13px;z-index:1}a{color:#38698e}.summary{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:15px}.summary div{padding:13px;background:#f5f8fb;border-radius:6px}.summary b{display:block}.image{width:100%;height:auto}details{margin-top:14px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:8px;text-align:left;border-bottom:1px solid #e6edf4}.status{color:#56718a;margin:12px 0}.warn{color:#8a4167;background:#fbf1f7;padding:12px;border-radius:8px}@media(max-width:850px){.layout{grid-template-columns:1fr;padding:10px}.scene{height:480px}.summary{grid-template-columns:1fr}header{padding:16px}}
+</style></head><body>
+<header><span class="tag">DIII-D · 사진 실행의 기준 형상 · EFIT 1400 ms · 횡방향 수송 없음</span><h1>두 separatrix leg와 SOL 최초 충돌 영역</h1><p>추가 요청을 확인하기 위한 기준 형상 검토입니다. 색은 열유속이 아닌 경로·영역 구분입니다.</p></header>
+<main class="layout"><aside><h2>표시 설정</h2>
+<label><input type="checkbox" id="wall" checked> 주변 벽</label>
+<label><input type="checkbox" id="lcfs" checked> LCFS</label>
+<label><input type="checkbox" id="legs" checked> X-point의 두 leg</label>
+<label><input type="checkbox" id="design" checked> 기존 floor + shelf 전체</label>
+<label><input type="checkbox" id="imp" checked> IMP 경로 · 선택 설계영역</label>
+<label><input type="checkbox" id="omp" checked> OMP 경로 · 선택 설계영역</label>
+<label><input type="checkbox" id="pfr" checked> PFR 단면 · 열분포 미정</label>
+<label>회전 범위 <output id="angleValue">240°</output><input type="range" id="angle" min="60" max="360" value="240" step="15" style="width:100%"></label>
+<div class="buttons"><button id="section">R-Z 단면</button><button id="focus">디버터 확대</button><button id="overview">3D 전체</button></div>
+<h2>독립 최적화 결과</h2><label>결과 불러오기 <input id="resultFile" type="file" accept="application/json,.json"></label><p class="hint">IMP 또는 OMP 실행 폴더의 viewer_result.json을 선택하세요.</p><label>열유속 폭 λq <select id="heatWidth"><option>1</option><option>2</option><option selected>3</option><option>5</option><option>10</option></select> mm</label><label><input id="resultShow" type="checkbox" checked> 후보 형상 · 최초 충돌 열유속 표시</label><p id="resultStatus" class="hint">결과 미선택</p>
+<p class="hint">드래그: 회전 · 휠: 확대 · 우클릭: 이동<br>두 leg는 separatrix의 폴로이달 가지입니다. 3D 면은 축대칭 회전 표시입니다.</p>
+<p><span class="dot" style="background:#bc35a2"></span>inner leg<br><span class="dot" style="background:#d34730"></span>outer leg<br><span class="dot" style="background:#ed9c18"></span>기존 floor · shelf<br><span class="dot" style="background:#008d99"></span>IMP 선택 설계영역<br><span class="dot" style="background:#36a25b"></span>OMP 선택 설계영역<br><span class="dot" style="background:#9cabb5"></span>고정 벽 · 최적화 제외</p>
+<p class="warn">분홍 PFR의 열분포는 현재 직접 SOL 매핑으로 결정할 수 없습니다. 물리적 열유속 0으로 표시하지 않습니다.</p>
+<a href="../input/D3D/optimized/d3d-divertor-floor-shelf/viewer3d/#device=d3d&case=cae740322035-1400ms-a395bb40&model=baseline">사진 실행의 복원된 열분포·29단계 이력 →</a>
+</aside><section><div class="card"><div class="summary"><div><b>열원: IMP / OMP 독립</b>실제 두 중간면에서 별도 열원·별도 정규화로 최적화합니다. 50:50 분배를 적용하지 않습니다.</div><div><b>선택 설계영역</b>floor + shelf 전체에 선택 SOL 충돌 구간을 더합니다. IMP 왼쪽 벽은 Z=-1.15 m부터 아래쪽만 포함합니다. 첨부한 OMP 경사 벽(53/54/55)은 고정하며 열부하 계산은 유지합니다.</div></div>
+<div class="scene" id="scene"><span class="scene-note">기준 형상 · Z가 높이축 · 단위 m</span></div><p id="status" class="status">데이터 로드 중…</p>
+<details open><summary>기준 형상에서 확인한 위치</summary><table><thead><tr><th>항목</th><th>위치 / 구간</th></tr></thead><tbody id="positions"></tbody></table><p class="hint">충돌 구간은 800개 열원 표본의 포락 범위입니다. 연속 경계 확정이나 열유속 계산 결과가 아닙니다. 전체 열원 범위를 포함해 표시하므로 매우 약한 SOL tail의 충돌도 포함합니다.</p></details></div>
+<div class="card" style="margin-top:18px"><h2>R-Z 단면에서 요청사항 확인</h2><img class="image" src="baseline_requested_regions.png" alt="IMP OMP 열원, 최초 충돌 벽 구간, X-point 두 leg와 PFR를 표시한 기준 형상"><p><a href="baseline_requested_regions.pdf">그림 PDF</a> · <a href="baseline_review.json">좌표와 계산 자료 JSON</a></p></div></section></main>
+<script type="module" src="review.mjs"></script></body></html>

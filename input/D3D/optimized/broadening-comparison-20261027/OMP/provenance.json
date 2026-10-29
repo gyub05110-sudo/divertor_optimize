@@ -1,0 +1,30 @@
+{
+  "schema": "connection-broadening-provenance.v1",
+  "captured_at_utc": "2026-10-27T07:47:13.821818+00:00",
+  "files": {
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "compare_broadening.py": "54b8a3cc85dd7a1cfe93e2e83407d9b94dda8cb6713b0594330b1598692e0b50",
+    "d3d_optimization/__init__.py": "897e2557bc2434d17ee1e2cc5efa428038891f438cd9603a09cba876e70dbde4",
+    "d3d_optimization/broadened_evaluator.py": "98664db9607ded23858a398385b7bf24bf8c0ad140f1fd4a9ce2cb671cc12594",
+    "d3d_optimization/broadening.py": "225a30d1b30107b9f4d530c091790275f4829a596c15dc95ea332e73ee4a7e60",
+    "d3d_optimization/broadening_study.py": "dd93d46416fa564ded86e20807355459fe0ce7905ca64e917c0a287b7e5dbde1",
+    "d3d_optimization/case.py": "584d026f9aa46ac35a9fbcbf589153e50e479503f39a5b6bc71b7ac60c572dac",
+    "d3d_optimization/continuous_boundary.py": "67f5d5a43033e3cd4fe5634d7b6a45b04f34d8304638eef3865f6c203631c92d",
+    "d3d_optimization/frozen_field.py": "e0b6e03baf0064eb4d63a14e2eb1f778970ea3796131ad3eb85e2f3d685071de",
+    "d3d_optimization/frozen_mapping.py": "5020df98680f3f179092f38e888e747e20c501ed2d11e3f0d2d28f130f08d528",
+    "d3d_optimization/independent_sources.py": "28af23f44bdc9059d2da264e6fe02dd8c6df328655c2eb7c13ab2c28af775a5d",
+    "d3d_optimization/multisurface.py": "654244e36aa085ea8a27c996fa142b04d44b863e3ff99a058e2f1a395bd08f18",
+    "d3d_optimization/shape.py": "7e1e3d31e4b722d5a3212c5099f6965f672f15be3fc493655570e0e25c870562",
+    "docs/superpowers/plans/2026-10-27-broadening-preservation.json": "53c9a9e939bd886109f3eec98188bc10a210d121ce6b24cc16071f1f34e6b7a1",
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "input/D3D/optimized/continuous-boundary-incumbent-20261024/OMP/manifest.json": "1ee5233b42f3d5103f796b621abbffaf8df4938550bea7602072f26bed78bf52",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739",
+    "optimize_independent_sources.py": "10d82399fb49193fd844ceb20f1d76895b85df512e16f560f020b296ae192510",
+    "verification/plot_broadening.py": "988338450b7783d5e7ad09f2d12919b88dfa0161549f55473542986232c7e373",
+    "verification/validate_broadening.py": "1245ec6b5ead7db69ccf70befc00fa25658e719ef34a3e2cfe7e890651a81d6a"
+  },
+  "extra_files": [
+    "input/D3D/optimized/continuous-boundary-incumbent-20261024/OMP/manifest.json"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "user-selected-no-transport-design-regions.v1",
+  "user_instruction_date": "2026-10-06",
+  "existing_design_segments": [68, 59],
+  "imp_maximum_Z_m": -1.15,
+  "excluded_omp_segments": [53, 54, 55],
+  "interpretation": "Attached cropped green sloped wall is original segments 53/54/55. IMP cyan wall eligible only at Z<=-1.15 m. Existing floor/shelf and nearby OMP portions on 58/60 retained.",
+  "excluded_wall_is_fixed": true,
+  "excluded_wall_heat_remains_in_accounting": true,
+  "first_hit_physics_modified": false
+}

@@ -1,0 +1,321 @@
+{
+  "checked_at": "2026-10-04T05:27:06.968Z",
+  "site": "http://127.0.0.1:8765/#device=cpd2&case=cpd2-8e4e1c9782c1-diffusion-0&stage=finite_final&model=candidate&width=0.7678087174541923&angle=240",
+  "observations": [
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "3.261827",
+      "run": "CPD-2 · 확산 σ/λq=1 · 고정 평형",
+      "stage": "2 / 7 · 정밀 검증 후보 01 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "5.162894",
+      "run": "CPD-2 · 확산 σ/λq=0.25 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "4.359674",
+      "run": "CPD-2 · 확산 σ/λq=0.5 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "d3d",
+      "overflow": false,
+      "peak": "1.756",
+      "run": "d3d_shot_1a3155370c.parquet · 1400 ms · d3d-divertor-floor-shelf",
+      "stage": "29 / 29 · 최종 검증 형상 · 검색 당시 다섯 폭 worst ratio 0.64423 · 세분화/보간 재검증 통과",
+      "status": "ready",
+      "units": "q/P_outer (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "10"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "d3d",
+      "overflow": false,
+      "peak": "1.553",
+      "run": "d3d_shot_adab1e3953.parquet · 1400 ms · d3d-divertor-floor-shelf-adab1e3953-1400ms",
+      "stage": "14 / 14 · 최종 검증 형상 · 검색 당시 다섯 폭 worst ratio 1.13041 · 세분화/보간 재검증 통과",
+      "status": "ready",
+      "units": "q/P_outer (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "10"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "4.359674",
+      "run": "CPD-2 · 확산 σ/λq=0.5 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "6.234895",
+      "run": "CPD-2 · 직접 매핑 · 고정 평형",
+      "stage": "4 / 7 · 정밀 검증 후보 03 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 398,
+          "width": 353
+        },
+        {
+          "height": 320,
+          "width": 329
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "6.234895",
+      "run": "CPD-2 · 직접 매핑 · 고정 평형",
+      "stage": "4 / 7 · 정밀 검증 후보 03 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "6.234895",
+      "run": "CPD-2 · 직접 매핑 · 고정 평형",
+      "stage": "4 / 7 · 정밀 검증 후보 03 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "4.359674",
+      "run": "CPD-2 · 확산 σ/λq=0.5 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 478,
+          "width": 742
+        },
+        {
+          "height": 280,
+          "width": 706
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "4.359674",
+      "run": "CPD-2 · 확산 σ/λq=0.5 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 568,
+          "width": 1069
+        },
+        {
+          "height": 280,
+          "width": 1033
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "6.234895",
+      "run": "CPD-2 · 직접 매핑 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    },
+    {
+      "canvas": [
+        {
+          "height": 568,
+          "width": 1084
+        },
+        {
+          "height": 280,
+          "width": 1048
+        }
+      ],
+      "device": "cpd2",
+      "overflow": false,
+      "peak": "6.234895",
+      "run": "CPD-2 · 직접 매핑 · 고정 평형",
+      "stage": "7 / 7 · 정밀 표본 최종 형상 · 실행 시작 대비 q 비율 0.99999186 · 정밀 유한 표본 제약 충족 · 연속 최대값 인증 미실시",
+      "status": "ready",
+      "units": "q/P_SOL (m⁻²) · 두 형상 공통 범위",
+      "widths": [
+        "0.7678087174541923"
+      ]
+    }
+  ],
+  "checks": {
+    "all_four_cpd_runs": true,
+    "both_d3d_runs": true,
+    "stage_navigation": true,
+    "camera_presets": true,
+    "visibility_toggles": true,
+    "density_select": true,
+    "rapid_device_changes": true,
+    "deep_link_and_reload": true,
+    "back_navigation": true,
+    "equilibrium_hash_match": true,
+    "unknown_file_clears_scene": true,
+    "registered_list_recovery": true,
+    "responsive_widths": [
+      390,
+      776,
+      1440
+    ],
+    "png_download_completion": "not observed in in-app browser; PNG button invoked without console error"
+  },
+  "console": []
+}

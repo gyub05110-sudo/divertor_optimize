@@ -1,0 +1,63 @@
+{
+  "preserved_python_files": 180,
+  "sources": {
+    "IMP": {
+      "passed": true,
+      "selected_case": 250,
+      "original_search_rank": 2,
+      "peak_MW_m2": 2.0091040949063035,
+      "reduction_percent": 21.20119119556807,
+      "deposited_power_W": 999999.9999999997,
+      "opposite_region_error_m": 0.0,
+      "validation": {
+        "improvement_confirmed": true,
+        "resolution_screen_passed": true,
+        "global_optimum_proven": false,
+        "scope": "same boundary-footprint model and fixed operating inputs; numerical comparison only",
+        "max_peak_ratio_change": 0.00011840935745865977,
+        "max_absolute_peak_relative_change": 0.0009260655543065227,
+        "max_region_power_l1_change": 0.0004625675969104243,
+        "max_wall_cdf_change": 0.0013874777600324517,
+        "max_peak_location_change_m": 5.577131098016213e-05,
+        "finest_reduction_percent": 21.20119119556807
+      },
+      "geometry_csv_exact_match": true,
+      "provenance_and_snapshots_passed": true
+    },
+    "OMP": {
+      "passed": true,
+      "selected_case": 236,
+      "original_search_rank": 46,
+      "peak_MW_m2": 1.3577396595848363,
+      "reduction_percent": 50.27971736172845,
+      "deposited_power_W": 999999.9999999985,
+      "opposite_region_error_m": 0.0,
+      "validation": {
+        "improvement_confirmed": true,
+        "resolution_screen_passed": true,
+        "global_optimum_proven": false,
+        "scope": "same boundary-footprint model and fixed operating inputs; numerical comparison only",
+        "max_peak_ratio_change": 0.0019707844550806985,
+        "max_absolute_peak_relative_change": 0.003598579819334647,
+        "max_region_power_l1_change": 0.0011781943732035683,
+        "max_wall_cdf_change": 0.0006344694495362679,
+        "max_peak_location_change_m": 0.000121598542804565,
+        "finest_reduction_percent": 50.27971736172845
+      },
+      "geometry_csv_exact_match": true,
+      "provenance_and_snapshots_passed": true
+    }
+  },
+  "tests": {
+    "passed": 177,
+    "skipped": 1,
+    "evidence": "review.md records the full regression run in this study"
+  },
+  "output_root": "D:\\DivertorOptimization\\studies\\regional-20261028",
+  "output_file_count": 585,
+  "output_bytes": 150955911,
+  "geometry_zip_sha256": "f3ba404f3a9f76609b0f8887fe389c0d216125be5272075faa6c3f5cc3524597",
+  "report_local_links_passed": 12,
+  "figures_visually_inspected": true,
+  "report_sha256": "0a7292a11fcbfd973200c82159bee71df219269312f439229184c09bc2096a33"
+}

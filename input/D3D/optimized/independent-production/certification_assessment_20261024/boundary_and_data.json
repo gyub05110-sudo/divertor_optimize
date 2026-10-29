@@ -1,0 +1,124 @@
+{
+  "shot_path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor_no-transport\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+  "shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+  "time_ms": 1400.0,
+  "available_columns": [
+    "source",
+    "efit_times",
+    "efit_psirz",
+    "magnetics_ECOILA",
+    "magnetics_F1A",
+    "magnetics_F1B",
+    "magnetics_F2A",
+    "magnetics_F2B",
+    "magnetics_F3A",
+    "magnetics_F3B",
+    "magnetics_F4A",
+    "magnetics_F4B",
+    "magnetics_F5A",
+    "magnetics_F5B",
+    "magnetics_F6A",
+    "magnetics_F6B",
+    "magnetics_F7A",
+    "magnetics_F7B",
+    "magnetics_F8A",
+    "magnetics_F8B",
+    "magnetics_F9A",
+    "magnetics_F9B",
+    "magnetics_bcoil",
+    "thomson_core_times",
+    "thomson_core_Te",
+    "thomson_core_ne",
+    "thomson_core_R",
+    "thomson_edge_times",
+    "thomson_edge_Te",
+    "thomson_edge_ne",
+    "thomson_edge_spatial",
+    "magnetics_plasma_current",
+    "magnetics_plasma_current_times",
+    "magnetics_dsep",
+    "magnetics_dsep_times",
+    "magnetics_time",
+    "efit_beta_n",
+    "efit_li",
+    "efit_q95",
+    "efit_r_axis",
+    "efit_z_axis",
+    "efit_lcfs_n",
+    "efit_lcfs_r",
+    "efit_lcfs_z",
+    "efit_grid_R",
+    "efit_grid_Z",
+    "coil_name",
+    "coil_input_column",
+    "coil_R",
+    "coil_Z",
+    "coil_width",
+    "coil_height",
+    "coil_angle1",
+    "coil_angle2",
+    "thomson_chord_name",
+    "thomson_chord_R",
+    "thomson_chord_Z"
+  ],
+  "divertor_surface_heat_measurement_columns": [],
+  "experimentally_validated": false,
+  "xpoint_RZ_m": [
+    1.1765919407581311,
+    -1.2523989728504332
+  ],
+  "continuous_strike_RZ_m": [
+    1.0882576947643476,
+    -1.2853220897608946
+  ],
+  "sampled_design_endpoint_RZ_m": [
+    1.0882569881152064,
+    -1.2853214074358665
+  ],
+  "endpoint_gap_m": 9.823036458466345e-07,
+  "flux_residual": 3.469446951953614e-18,
+  "basis_endpoint_constraints": [
+    {
+      "displacement": [
+        0.0,
+        0.0
+      ],
+      "slope": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "displacement": [
+        0.0,
+        0.0
+      ],
+      "slope": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "displacement": [
+        0.0,
+        0.0
+      ],
+      "slope": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "displacement": [
+        0.0,
+        0.0
+      ],
+      "slope": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "implication": "Moving the endpoint to the separatrix strike alone still fixes both its position and tangent. A peak reduction is not guaranteed.",
+  "design_policy_changed": false
+}

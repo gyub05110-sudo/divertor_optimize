@@ -1,0 +1,100 @@
+{
+  "schema": "global-proof-attempt.v1",
+  "global_optimum_proven": false,
+  "continuous_physical_model_proven": false,
+  "IMP": {
+    "IMP-cubic-2560": {
+      "artifact": "IMP-cubic-2560.json",
+      "artifact_sha256": "f29b7398a6c3cf541713f2ce92b3fc6a80c54e861286a1de788eace142abea0f",
+      "geometry": {
+        "all_moving_edges_excluded": true,
+        "edge_count": 7680,
+        "failed_edges": [],
+        "fixed_index": 73,
+        "prefix_edges": 1508,
+        "first_fixed_point_m": [
+          1.0882576947701457,
+          -1.2853220897664928
+        ],
+        "conservative_separation_lower_bound_m": 5.741024053186218e-12
+      },
+      "conclusion": {
+        "exact_stored_geometry_exclusion": true,
+        "conditional_frozen_model_global_minimum": 1.0,
+        "global_optimum_proven": false,
+        "continuous_model_proven": false,
+        "experimental_validation": false
+      }
+    },
+    "IMP-cubic-320": {
+      "artifact": "IMP-cubic-320.json",
+      "artifact_sha256": "b2fb872706cfdf2669c6b67e353b14a91625a9de4dea0895056c4e680b1b904c",
+      "geometry": {
+        "all_moving_edges_excluded": true,
+        "edge_count": 960,
+        "failed_edges": [],
+        "fixed_index": 73,
+        "prefix_edges": 189,
+        "first_fixed_point_m": [
+          1.0882577260451447,
+          -1.285322119964951
+        ],
+        "conservative_separation_lower_bound_m": 3.128073998707905e-08
+      },
+      "conclusion": {
+        "exact_stored_geometry_exclusion": true,
+        "conditional_frozen_model_global_minimum": 1.0,
+        "global_optimum_proven": false,
+        "continuous_model_proven": false,
+        "experimental_validation": false
+      }
+    },
+    "IMP-quintic-1280": {
+      "artifact": "IMP-quintic-1280.json",
+      "artifact_sha256": "072205d5e8d26e698719fbed798ec333c4d07814239928b05da7abe6885a8186",
+      "geometry": {
+        "all_moving_edges_excluded": false,
+        "reason": "stored path has no fixed-wall intersection",
+        "fixed_index": null,
+        "edge_count": 0,
+        "failed_edges": [],
+        "conservative_separation_lower_bound_m": null
+      },
+      "conclusion": {
+        "exact_stored_geometry_exclusion": false,
+        "conditional_frozen_model_global_minimum": null,
+        "global_optimum_proven": false,
+        "continuous_model_proven": false,
+        "experimental_validation": false
+      }
+    }
+  },
+  "OMP": {
+    "OMP-challenge-cubic-2560": {
+      "artifact": "OMP-challenge-cubic-2560.json",
+      "artifact_sha256": "b5634b2eefbaf6c9bb696b4fa5f342da2f0c12a31b7a7ac0dcdba652e3b24613",
+      "incumbent": 0.6430561243338871,
+      "feasible_counterexample": 0.6430314217530947,
+      "coefficient_index": 15,
+      "delta_m": -1e-05
+    },
+    "OMP-challenge-cubic-320": {
+      "artifact": "OMP-challenge-cubic-320.json",
+      "artifact_sha256": "1e0134f7204e8e34e58b06df51e762afa71ba14c88e362d128fe1fbe3e79cfd5",
+      "incumbent": 0.6454575820499496,
+      "feasible_counterexample": 0.6454341942921014,
+      "coefficient_index": 15,
+      "delta_m": -1e-05
+    },
+    "OMP-challenge-quintic-1280": {
+      "artifact": "OMP-challenge-quintic-1280.json",
+      "artifact_sha256": "0226655ab72fe137caee9968e18bb2043f65b2d6e65eae97476bb9f2d370d3fb",
+      "incumbent": 0.644253843482519,
+      "feasible_counterexample": 0.6442426898706576,
+      "coefficient_index": 15,
+      "delta_m": -1e-05
+    }
+  },
+  "tests_passed": 58,
+  "restored_files_verified": 898
+}

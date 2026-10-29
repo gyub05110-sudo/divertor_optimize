@@ -1,0 +1,109 @@
+{
+  "shot_path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor_no-transport\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+  "shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+  "geometry": {
+    "commit": "51739c7a3908f80ef40b670222d2a17a61ea675e",
+    "url": "https://raw.githubusercontent.com/hansec/OpenFUSIONToolkit/51739c7a3908f80ef40b670222d2a17a61ea675e/src/examples/TokaMaker/DIIID/DIIID_geom.json",
+    "sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "campaign_match": "unknown; public research baseline"
+  },
+  "config": {
+    "name": "public_lower_divertor_floor_and_shelf",
+    "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "coefficient_bound_m": 0.1,
+    "max_length_ratio": 1.2,
+    "surfaces": [
+      {
+        "name": "floor",
+        "segment_index": 68,
+        "endpoints_RZ_m": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ],
+        "angle_floor_deg": null,
+        "physical_identity_validated": false,
+        "role": "public lower floor reference; contains the fixed-case peak first hits"
+      },
+      {
+        "name": "shelf",
+        "segment_index": 59,
+        "endpoints_RZ_m": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "angle_floor_deg": 1.5,
+        "physical_identity_validated": false,
+        "role": "public lower horizontal shelf reference"
+      }
+    ],
+    "angle_policy": "User explicitly selected shelf-only 1.5 deg on 2026-10-03; floor angles are diagnostic only.",
+    "campaign_match": "unknown; public reference geometry, not certified shot hardware"
+  },
+  "time_ms": 1400.0,
+  "baseline_angles": {
+    "floor": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 101,
+      "applied_hit_count": 0,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 0.9643074233970896,
+      "angle_constraint_passed": null,
+      "status": "diagnostic_only_no_angle_floor",
+      "angle_floor_deg": null
+    },
+    "shelf": {
+      "scope": "positive_power_first_hits_on_explicit_target",
+      "target_hit_count": 124,
+      "applied_hit_count": 124,
+      "excluded_zero_power_target_hit_count": 0,
+      "minimum_angle_deg": 1.5698934375169624,
+      "angle_constraint_passed": true,
+      "status": "angle_satisfied",
+      "angle_floor_deg": 1.5
+    }
+  },
+  "baseline_surface_power": {
+    "shelf": [
+      1.3895996494260875e-05,
+      0.003721197613082967,
+      0.023983298013619404,
+      0.10644172919999104,
+      0.3202293868198646
+    ],
+    "floor": [
+      0.9999529704437218,
+      0.9931526578663931,
+      0.9639804141045439,
+      0.8640756121673256,
+      0.6321023144623323
+    ]
+  },
+  "baseline_peak": [
+    8.718669114641342,
+    4.361480689008938,
+    2.908679653865707,
+    1.746387176575539,
+    0.8877274613266684
+  ],
+  "widths_mm": [
+    1,
+    2,
+    3,
+    5,
+    10
+  ],
+  "outer_branch_power": 1.0,
+  "preflight_only": true
+}
