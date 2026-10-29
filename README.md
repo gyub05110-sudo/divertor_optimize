@@ -21,6 +21,10 @@ python summarize_global_campaign.py --output D:/DivertorOptimization/studies/imp
 
 전체 결과·로그·체크포인트는 지정한 D 드라이브 폴더에 저장합니다. `summary.json/csv`, `REPORT.ko.md`, `qualified_geometry.png`, `search_progress.png`는 두 번째 명령으로 생성합니다. 결과 표의 정밀 peak와 탐색 중 거친 격자의 peak는 구분합니다.
 
+2026-10-29 15:10 KST에 `D:/DivertorOptimization/studies/imp-omp-global-20261029`에서 본 탐색을 시작했습니다. 절대 종료 시한은 2026-11-01 15:10 KST입니다. 실제 중단/재개 시험에서 탐색 기록과 종료 시한 보존을 확인했고, 전체 테스트 197 passed / 1 skipped 및 원본 보존 검사를 통과했습니다. 1시간 간격 점검을 설정했습니다. 초기 후보의 CPU/GPU 분포 차이는 peak 기준 약 4.4e-16~6.1e-16이었고 초기 전체 후보 평가 가속은 약 1.35~1.44배였습니다.
+
+[짧은 IMP 초기 탐색 보고서](results/imp-tangent-pilot-20261029/REPORT.ko.md): 기준 2.549663 MW/m²에서 20 mm는 2.404015 MW/m²(5.712% 감소), 50 mm는 2.530360 MW/m²(0.757% 감소)로 정밀 검증을 통과했습니다. 100 mm는 아직 유효 후보를 찾지 못했습니다. 짧은 시험은 정해진 18분 시한에 종료됐으며 일부 OMP 후속 검증은 시간 내 완료하지 못했습니다. 이 결과를 72시간 탐색의 최종 결과로 해석하지 않습니다. 본 탐색은 초기 후보를 재평가하여 활용하고, 새 결과는 D 드라이브 실행 폴더에 계속 저장합니다.
+
 ## 직전 OMP 제약 최적화 결과
 
 OMP 왼쪽 접합부의 접선 연결, 최소 곡률반경, 오른쪽 개구부 간격을 함께 적용한 재최적화입니다. 원본 기준 형상과 IMP 영역은 보존했습니다. 중앙 바닥이 아래로 내려가는 후보도 탐색했습니다.

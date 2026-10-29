@@ -1,0 +1,22 @@
+{
+  "full_data_directory": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3",
+  "copied_files_sha256": {
+    "REPORT.ko.md": "0eb216ea2ef289217342b05768096723758216f2dbbb76e0b640af8f2fe48b47",
+    "summary.json": "a3064b6de547e22bfdd85872bd068f7cf5ce69e02a0a43be16349c49e406af4b",
+    "summary.csv": "0e3f8e068762256a0cca91f5675ab82aa9f41297274c6eea694e0b4c084d39fd",
+    "qualified_geometry.png": "2114d2f952afd8e1513e787a13b6ecb9d1c90eef0c81b0fac7c31707b585ed29",
+    "search_progress.png": "72cf58553b51a50e783e3c32ba39805b92d0d4c52391fa011321e8b701fd328f",
+    "campaign.json": "61d831c7c68778168412807fa23d0571073a12d90dd5c8531df6b43a6fac5f45",
+    "IMP/worker_status.json": "78c2168e615347d62df5f8929e565e31b78d1b4b27c09070c4848277b81f6fd8",
+    "IMP/hard_deadline.json": "55e176f4574b58af0712811d27220574d6c56395bcacb5db22c5ae4c89c4f157",
+    "IMP/R020/manifest.json": "55d49e89c2d0a960ce19d7fa5d721e2ae59c37fea4f86440a44ec4770e84d4e6",
+    "IMP/R050/manifest.json": "6b5192e356b09427d196cc53cce20c616aab1f08f66b0430f756f94bcb39720c",
+    "IMP/R100/manifest.json": "5e22daca946f9141c45094f29000aa6a67bf69bd3009eed92eb712985232b70b",
+    "OMP/worker_status.json": "86ff66095178d35a316c6816331b508d6d51e76401b30f7402056387502e2884",
+    "OMP/hard_deadline.json": "e3015256b0f9a22f3f6a866cd4a6268de029c7dac822993ee94b84dd903ac1ce",
+    "OMP/R020/manifest.json": "9cfd3a2db31f6af5e811b0357213acc085111fcc4c3f7b87751c384829f8b9b3",
+    "OMP/R050/manifest.json": "c58877bc14af8838a49ddafde73e49679e4366b7cbad5457b487775b58e45b5b",
+    "OMP/R100/manifest.json": "726b754ee1158fbe634855a18b98ac845d85a42b66d49d6f797f9bf23a5b63b1"
+  },
+  "note": "Short pilot: 180 second search; 18 minute total deadline. IMP 20/50 and OMP 50/100 qualified; IMP 100 no feasible candidate found; OMP 20 final validation incomplete at pilot deadline. Ongoing full campaign has 71 hour search plus 1 hour validation."
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "regional-global-campaign.v1",
+  "created_epoch": 1793253261.8235605,
+  "deadline_epoch": 1793254341.8235605,
+  "search_deadline_epoch": 1793253441.8235605,
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "hours": 0.3,
+  "population": 24,
+  "projected_seeds": 10,
+  "slice_seconds": 25.0,
+  "seed": 20261029,
+  "backend": "gpu",
+  "qualify_interval_seconds": 7200.0,
+  "search_seconds": 180.0,
+  "frozen_root": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\snapshot",
+  "original_root": "D:\\DivertorOptimization\\repositories\\divertor_optimize",
+  "frozen_files_sha256": "8f7cb757a8fa735b9f249f3ec86fdee684de7c36f0d022016fe3634fd16f06e1",
+  "executable": "C:\\Users\\FPL-user\\miniforge3\\python.exe",
+  "python": "3.13.12",
+  "numpy": "2.4.3",
+  "objective": "minimum global wall peak at fixed independent source power",
+  "global_optimum_proven": false,
+  "runtime": {
+    "executable": "C:\\Users\\FPL-user\\miniforge3\\python.exe",
+    "python": "3.13.12",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "shapely": "2.1.2",
+    "cupy": "14.2.0",
+    "cuda_runtime": 12090,
+    "cuda_driver": 13030,
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "fingerprint": "5e8f221223cf6c521ccdb0037228fbad8855bae2b34e5df06071337f37780ba2"
+}

@@ -16,6 +16,8 @@ def run(folder):
     folder=Path(folder);config=load_json(folder/'campaign.json');rows=[];manifests={};sources={}
     for source in ['IMP','OMP']:
         path=folder/source/'worker_status.json';sources[source]=load_json(path) if path.exists() else {'status':'not_started'}
+        hard_stop=folder/source/'hard_deadline.json'
+        if hard_stop.exists():sources[source]=dict(sources[source],status='deadline_stopped',hard_deadline=load_json(hard_stop))
         for mm in [20,50,100]:
             path=folder/source/f'R{mm:03d}'/'manifest.json';progress=folder/source/f'R{mm:03d}'/'progress.json'
             m=load_json(path) if path.exists() else {};p=load_json(progress) if progress.exists() else {}
@@ -23,6 +25,8 @@ def run(folder):
             status='qualified' if qualified else m.get('status','searching')
             if not qualified and p.get('best') and sources[source]['status'] in ('searching','validating','starting'):
                 status='validation_pending'
+            if not qualified and p.get('best') and sources[source]['status']=='deadline_stopped' and len(m.get('qualification_attempts',[]))<4:
+                status='validation_incomplete_deadline'
             row=dict(source=source,radius_mm=mm,status=status,
                 baseline_peak_MW_m2=m.get('baseline',{}).get('peak_MW_m2') if qualified else None,
                 selected_peak_MW_m2=m.get('selected',{}).get('peak_MW_m2') if qualified else None,
@@ -74,7 +78,8 @@ def run(folder):
                     if peak is not None:label+=f'\nqmax = {peak:.4f} MW/m²'
                 else:
                     row=next((r for r in rows if r['source']==source and r['radius_mm']==mm),{})
-                    label_status='Qualification pending' if row.get('status')=='validation_pending' else 'No qualified candidate'
+                    label_status={'validation_pending':'Qualification pending',
+                                  'validation_incomplete_deadline':'Validation budget ended'}.get(row.get('status'),'No qualified candidate')
                     ax.text(.5,.5,label_status,ha='center',va='center',transform=ax.transAxes)
                 ax.set(title=label,xlabel='R [m]',ylabel='Z [m]')
                 ax.set_xlim((.99,1.19) if source=='IMP' else (1.12,1.72));ax.set_ylim((-1.37,-1.10) if source=='IMP' else (-1.46,-1.20))
@@ -85,7 +90,7 @@ def run(folder):
     deadline=datetime.fromtimestamp(config['deadline_epoch'],timezone.utc).astimezone().isoformat(timespec='seconds')
     lines=['# IMP·OMP 접선·곡률 제약 전역 탐색', '',
         f'- 종료 시한: {deadline}', '- IMP·OMP는 각각 독립적인 1 MW 열원 실험입니다.',
-        '- 기준 D3D, 입력 전력과 수송 조건은 고정했습니다. 표의 최종 peak는 1280개 격자 결과입니다.',
+        '- 기준 D3D, 입력 전력과 수송 조건은 고정했습니다. 표의 최종 peak는 상류 flux tube 1280개 결과입니다.',
         '- 전역 최적성 증명은 아닙니다. 정해진 곡선 계열과 계수 범위에서 찾은 최선 후보입니다.',
         '- IMP 공통 접선은 두 구간에 대해 정규화 내적 ≥0.2인 방향 범위에서 탐색합니다.',
         '- IMP의 3개 연결, OMP 바닥 왼쪽 연결에 G1 조건을 적용합니다. 곡률 제한은 양쪽 부호를 허용합니다.',

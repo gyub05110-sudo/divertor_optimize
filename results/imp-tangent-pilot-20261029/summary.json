@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "source": "IMP",
+      "radius_mm": 20,
+      "status": "qualified",
+      "baseline_peak_MW_m2": 2.549663028400125,
+      "selected_peak_MW_m2": 2.4040147427421164,
+      "reduction_percent": 5.712452352944874,
+      "proposals": 453,
+      "physics_evaluations": 15,
+      "restarts": 0,
+      "coarse_best_ratio": 0.9429051587855403,
+      "global_optimum_proven": false
+    },
+    {
+      "source": "IMP",
+      "radius_mm": 50,
+      "status": "qualified",
+      "baseline_peak_MW_m2": 2.549663028400125,
+      "selected_peak_MW_m2": 2.5303595014967675,
+      "reduction_percent": 0.7571011027080798,
+      "proposals": 465,
+      "physics_evaluations": 12,
+      "restarts": 0,
+      "coarse_best_ratio": 0.992424375810895,
+      "global_optimum_proven": false
+    },
+    {
+      "source": "IMP",
+      "radius_mm": 100,
+      "status": "no_qualified_candidate_found",
+      "baseline_peak_MW_m2": null,
+      "selected_peak_MW_m2": null,
+      "reduction_percent": null,
+      "proposals": 888,
+      "physics_evaluations": 0,
+      "restarts": 1,
+      "coarse_best_ratio": null,
+      "global_optimum_proven": false
+    },
+    {
+      "source": "OMP",
+      "radius_mm": 20,
+      "status": "validation_incomplete_deadline",
+      "baseline_peak_MW_m2": null,
+      "selected_peak_MW_m2": null,
+      "reduction_percent": null,
+      "proposals": 62,
+      "physics_evaluations": 27,
+      "restarts": 0,
+      "coarse_best_ratio": 0.529715874175417,
+      "global_optimum_proven": false
+    },
+    {
+      "source": "OMP",
+      "radius_mm": 50,
+      "status": "qualified",
+      "baseline_peak_MW_m2": 2.730756117101662,
+      "selected_peak_MW_m2": 1.9958528550592363,
+      "reduction_percent": 26.91207967785967,
+      "proposals": 107,
+      "physics_evaluations": 31,
+      "restarts": 0,
+      "coarse_best_ratio": 0.7310358982170156,
+      "global_optimum_proven": false
+    },
+    {
+      "source": "OMP",
+      "radius_mm": 100,
+      "status": "qualified",
+      "baseline_peak_MW_m2": 2.730756117101662,
+      "selected_peak_MW_m2": 3.014483425200404,
+      "reduction_percent": -10.390063994432452,
+      "proposals": 146,
+      "physics_evaluations": 30,
+      "restarts": 0,
+      "coarse_best_ratio": 1.1039522194882754,
+      "global_optimum_proven": false
+    }
+  ],
+  "worker_status": {
+    "IMP": {
+      "status": "deadline_stopped",
+      "pid": 113244,
+      "epoch": 1793253441.981987,
+      "hard_deadline": {
+        "epoch": 1793254341.823916,
+        "status": "hard_deadline_stop",
+        "pid": 113244
+      }
+    },
+    "OMP": {
+      "status": "deadline_stopped",
+      "pid": 49300,
+      "epoch": 1793253441.9482582,
+      "hard_deadline": {
+        "epoch": 1793254341.8239179,
+        "status": "hard_deadline_stop",
+        "pid": 49300
+      }
+    }
+  },
+  "epoch": 1793254681.575946,
+  "fingerprint": "5e8f221223cf6c521ccdb0037228fbad8855bae2b34e5df06071337f37780ba2",
+  "source_manifest_hashes": {
+    "IMP/R020/manifest.json": "55d49e89c2d0a960ce19d7fa5d721e2ae59c37fea4f86440a44ec4770e84d4e6",
+    "IMP/R050/manifest.json": "6b5192e356b09427d196cc53cce20c616aab1f08f66b0430f756f94bcb39720c",
+    "OMP/R050/manifest.json": "c58877bc14af8838a49ddafde73e49679e4366b7cbad5457b487775b58e45b5b",
+    "OMP/R100/manifest.json": "726b754ee1158fbe634855a18b98ac845d85a42b66d49d6f797f9bf23a5b63b1"
+  },
+  "author_script_sha256": "9cf1f4eb6443e84bcdd9c3003cf9b13890e8082bb28a9246d06f12062e92bdd5",
+  "global_optimum_proven": false
+}
