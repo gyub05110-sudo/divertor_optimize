@@ -1,0 +1,11 @@
+{
+  "files": {
+    "qualify_tangent_candidates.py": "e003e0868b69cfdf720ccad1c7df44d5afea54af7bf77923bd9e91c5b9820143",
+    "verification/validate_tangent_curvature.py": "718f9d245d0a38dde3c92157daa78733ef5ff7cc68e4fcd4e1316523cfa4b3e5",
+    "visualize_tangent_curvature.py": "f6d635ec300a4f02138cc85ec3607a68cc2c5c0e6622a1bc944e72e19f66f66b",
+    "verification/test_tangent_geometry.py": "15557a2199d2a46b166602a8e0b79a28f69b515e7f1006f685402b3d83044411",
+    "verification/test_tangent_evaluator.py": "7a9a939375d65604ba4d50d8e114140b4c5e26400b5e24c61dacbcbfda2ef119",
+    "docs/superpowers/plans/2026-10-29-omp-tangent-curvature.md": "6a3cca00b947f01acdfe4317c050867e11870e0661ff36020c9119506247386e"
+  },
+  "note": "supplement to original search provenance; original snapshot unchanged"
+}

@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "search_provenance_verified": true,
+  "analysis_provenance_verified": true,
+  "baseline_preservation": {
+    "baseline_wall_bitwise_equal_to_previous_study": true,
+    "baseline_peak_previous": 2.730756117101662,
+    "baseline_peak_current": 2.730756117101662,
+    "baseline_q_max_absolute_difference": 0.0
+  },
+  "historical_preservation": {
+    "copied_project_files_verified": 657,
+    "preserved_python_files_verified": 180,
+    "study_provenance_verified": 4,
+    "saved_qualified_verdicts_passed": 2,
+    "scope": "fingerprints and saved verdicts; not a fresh numerical refinement"
+  },
+  "tests": "182 passed, 1 skipped",
+  "tests_log": "tests.txt",
+  "independent_code_review": "No remaining blocking findings; review fixes recorded in plan",
+  "visual_inspection": "All three PNG figures inspected; full floor and junction/opening details visible",
+  "cases": [
+    {
+      "radius_mm": 20,
+      "improvement_confirmed": true,
+      "peak_MW_m2": 1.4462582843925467,
+      "search_evaluations": 439,
+      "search_seconds": 411.1117388000712,
+      "balance_error": 1.2212453270876722e-15
+    },
+    {
+      "radius_mm": 50,
+      "improvement_confirmed": true,
+      "peak_MW_m2": 1.995852855059239,
+      "search_evaluations": 441,
+      "search_seconds": 269.82396579999477,
+      "balance_error": 1.1102230246251565e-15
+    },
+    {
+      "radius_mm": 100,
+      "improvement_confirmed": false,
+      "peak_MW_m2": 3.1111724736614956,
+      "search_evaluations": 438,
+      "search_seconds": 243.0422424003482,
+      "balance_error": 1.6653345369377348e-15
+    }
+  ],
+  "global_optimum_proven": false
+}

@@ -6,6 +6,34 @@
 
 ## 최신 결과
 
+OMP 왼쪽 접합부의 접선 연결, 최소 곡률반경, 오른쪽 개구부 간격을 함께 적용한 재최적화입니다. 원본 기준 형상과 IMP 영역은 보존했습니다. 중앙 바닥이 아래로 내려가는 후보도 탐색했습니다.
+
+| 최소 곡률반경 제약 | peak [MW/m²] | 기준 대비 | 오른쪽 최소 간격 |
+|---|---:|---:|---:|
+| 20 mm | 1.446258 | 47.038% 감소 | 42.577 mm |
+| 50 mm | 1.995853 | 26.912% 감소 | 44.781 mm |
+| 100 mm | 3.111172 | 13.931% 증가 | 41.239 mm |
+
+기준 peak는 2.730756 MW/m², 요구 간격은 33.354336 mm입니다. 세 후보 모두 형상·전력·격자·보간 검증을 통과했으며, 20·50 mm에서 개선을 확인했습니다. 접선 연속(G1)을 적용했고, 접합부 곡률 연속(G2)은 강제하지 않았습니다. 기록된 탐색 예산에서 찾은 결과이며 전역 최적을 증명하지 않습니다.
+
+![접선·곡률·간격 제약 비교](results/omp-tangent-curvature-20261029/geometry_constraints.png)
+
+- [재최적화 보고서](results/omp-tangent-curvature-20261029/REPORT.ko.md)
+- [비교 데이터](results/omp-tangent-curvature-20261029/summary.csv)
+- [검증 기록](results/omp-tangent-curvature-20261029/completion_checks.json)
+- [설계·구현 계획](docs/superpowers/plans/2026-10-29-omp-tangent-curvature.md)
+
+동일한 고정 입력으로 새 비교를 실행하려면 다음 순서를 사용합니다. 후보 선별·검증 스크립트는 현재 CuPy/CUDA 환경을 사용합니다. 전체 원본 실행 데이터와 코드/입력 스냅샷은 `D:/DivertorOptimization/studies/omp-tangent-curvature-20261029-v2`에 보존했습니다. 저장소 결과 폴더에서는 중복 입력 스냅샷과 테스트 사본을 제외했습니다. 테스트 원본은 `verification/`에 있습니다.
+
+```powershell
+python run_tangent_curvature_study.py --output D:/DivertorOptimization/studies/new-constrained-run
+python qualify_tangent_candidates.py --output D:/DivertorOptimization/studies/new-constrained-run
+python verification/validate_tangent_curvature.py --output D:/DivertorOptimization/studies/new-constrained-run
+python visualize_tangent_curvature.py --output D:/DivertorOptimization/studies/new-constrained-run
+```
+
+## 이전 IMP·OMP 독립 최적화 — 추가 접선·곡률·간격 제약 전
+
 각 열원에 **1 MW씩 별도로** 부여한 독립 실험입니다. IMP 실행은 IMP의 두 표면만, OMP 실행은 OMP의 네 표면만 바꾸고 반대 영역은 고정했습니다.
 
 | 영역 | 기준 peak [MW/m²] | 검증 후 채택 peak [MW/m²] | 감소율 |
