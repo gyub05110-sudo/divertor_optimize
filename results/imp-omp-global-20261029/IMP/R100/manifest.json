@@ -1,0 +1,17 @@
+{
+  "fingerprint": "3dbaa5eeb26c404cbc1334814f048a2fc2588c9560cc86f208faf7c187976b00",
+  "source": "IMP",
+  "radius_mm": 100,
+  "global_optimum_proven": false,
+  "qualification_attempts": [],
+  "status": "no_qualified_candidate_found",
+  "search_best": null,
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  }
+}
