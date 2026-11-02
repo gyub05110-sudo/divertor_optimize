@@ -1,0 +1,9 @@
+{
+  "paths": 16,
+  "geometry": [
+    "local",
+    "wide",
+    "full_cover"
+  ],
+  "passed": true
+}

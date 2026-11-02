@@ -1,0 +1,232 @@
+[
+  {
+    "case": "IMP_local",
+    "continuous_transport_proven": true,
+    "resolved_donors": 16,
+    "donors": 16,
+    "reused_box_seconds": 4.0652922000736,
+    "path_preparation_seconds": 46.44787910068408,
+    "path_replay_seconds": 123.68465789966285,
+    "peak_bracket_MW_m2": [
+      "0.0135060486486798814740448857691308534275013",
+      "126.504804326621629327043955744088688489969"
+    ],
+    "unresolved": []
+  },
+  {
+    "case": "IMP_wide",
+    "continuous_transport_proven": true,
+    "resolved_donors": 16,
+    "donors": 16,
+    "reused_box_seconds": 3.674431700259447,
+    "path_preparation_seconds": 46.44787910068408,
+    "path_replay_seconds": 123.68465789966285,
+    "peak_bracket_MW_m2": [
+      "0.0134991957677117159831112973280767744451935",
+      "126.730557648224777220445528936806804718089"
+    ],
+    "unresolved": []
+  },
+  {
+    "case": "IMP_full_domain",
+    "seconds": 12.455312000121921,
+    "leaves": 3,
+    "resolved_leaves": 0,
+    "split_history": [
+      {
+        "parent": 1,
+        "dimension": 8,
+        "boundary": "0.5"
+      },
+      {
+        "parent": 3,
+        "dimension": 0,
+        "boundary": "-0.0"
+      }
+    ],
+    "unresolved": [
+      {
+        "id": 2,
+        "reasons": [
+          {
+            "stage": "geometry",
+            "reason": "junction denominator not proven positive; subdivide box"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "reasons": [
+          {
+            "stage": "donor",
+            "index": 1,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 2,
+            "reason": "gradient enclosure includes zero"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "reasons": [
+          {
+            "stage": "donor",
+            "index": 0,
+            "reason": "no guaranteed first hit in proved continuous prefix"
+          },
+          {
+            "stage": "donor",
+            "index": 1,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 2,
+            "reason": "gradient enclosure includes zero"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case": "OMP_local",
+    "continuous_transport_proven": true,
+    "resolved_donors": 16,
+    "donors": 16,
+    "reused_box_seconds": 4.131103499792516,
+    "path_preparation_seconds": 136.1651339996606,
+    "path_replay_seconds": 127.13752919994295,
+    "peak_bracket_MW_m2": [
+      "0.0135009514088527837231221347249535649180384",
+      "208.058570623224999774833837261212654377633"
+    ],
+    "unresolved": []
+  },
+  {
+    "case": "OMP_wide",
+    "continuous_transport_proven": true,
+    "resolved_donors": 16,
+    "donors": 16,
+    "reused_box_seconds": 3.9743206999264657,
+    "path_preparation_seconds": 136.1651339996606,
+    "path_replay_seconds": 127.13752919994295,
+    "peak_bracket_MW_m2": [
+      "0.0134915772138046930879774494273102893869021",
+      "208.655308599351486819811354867367023065929"
+    ],
+    "unresolved": []
+  },
+  {
+    "case": "OMP_full_domain",
+    "seconds": 22.49376380024478,
+    "leaves": 3,
+    "resolved_leaves": 0,
+    "split_history": [
+      {
+        "parent": 1,
+        "dimension": 0,
+        "boundary": "-0.0"
+      },
+      {
+        "parent": 2,
+        "dimension": 1,
+        "boundary": "-0.0"
+      }
+    ],
+    "unresolved": [
+      {
+        "id": 4,
+        "reasons": [
+          {
+            "stage": "donor",
+            "index": 0,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 1,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 2,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 3,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 4,
+            "reason": "gradient enclosure includes zero"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "reasons": [
+          {
+            "stage": "donor",
+            "index": 0,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 1,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 2,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 3,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 4,
+            "reason": "gradient enclosure includes zero"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "reasons": [
+          {
+            "stage": "donor",
+            "index": 0,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 1,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 2,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 3,
+            "reason": "gradient enclosure includes zero"
+          },
+          {
+            "stage": "donor",
+            "index": 4,
+            "reason": "gradient enclosure includes zero"
+          }
+        ]
+      }
+    ]
+  }
+]

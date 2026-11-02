@@ -1,0 +1,178 @@
+[
+  {
+    "donor": 0,
+    "passed": true,
+    "checks": 4313,
+    "max_raw_excess": 8.254463779167054e-11,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 1,
+    "passed": true,
+    "checks": 3933,
+    "max_raw_excess": 1.4231578138179657e-09,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 2,
+    "passed": true,
+    "checks": 3762,
+    "max_raw_excess": 1.9712120824522117e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 3,
+    "passed": true,
+    "checks": 3591,
+    "max_raw_excess": 7.629383791396549e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 4,
+    "passed": true,
+    "checks": 3515,
+    "max_raw_excess": 3.164062345462071e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 5,
+    "passed": true,
+    "checks": 3458,
+    "max_raw_excess": 1.1737788518928483e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 6,
+    "passed": true,
+    "checks": 3420,
+    "max_raw_excess": 4.0502734499625603e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 7,
+    "passed": true,
+    "checks": 3382,
+    "max_raw_excess": 3.274869264657809e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 8,
+    "passed": true,
+    "checks": 3344,
+    "max_raw_excess": 2.0134760525536421e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 9,
+    "passed": true,
+    "checks": 3325,
+    "max_raw_excess": 1.0412692930117373e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 10,
+    "passed": true,
+    "checks": 3306,
+    "max_raw_excess": 4.674787223990506e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 11,
+    "passed": true,
+    "checks": 3800,
+    "max_raw_excess": 1.350559664103912e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 12,
+    "passed": true,
+    "checks": 3249,
+    "max_raw_excess": 1.7133205965080833e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 13,
+    "passed": true,
+    "checks": 3230,
+    "max_raw_excess": 1.5112755491486496e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 14,
+    "passed": true,
+    "checks": 3211,
+    "max_raw_excess": 1.429216744952555e-10,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  },
+  {
+    "donor": 15,
+    "passed": true,
+    "checks": 3211,
+    "max_raw_excess": 7.706058013923212e-11,
+    "is_proof": false,
+    "tolerance": "2e-8 * max(1,abs(value))",
+    "rtol": 3e-13,
+    "atol": 1e-14,
+    "method": "independent floating DOP853; no invariant projection"
+  }
+]

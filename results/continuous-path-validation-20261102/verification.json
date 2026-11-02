@@ -1,0 +1,36 @@
+{
+  "study": "D:\\DivertorOptimization\\studies\\continuous-path-validation-20261102-v2",
+  "pytest": {
+    "command": "python -m pytest verification/test_continuous_path_bounds.py verification/test_geometry_transport_bounds.py verification/test_transport_peak_bounds.py verification/test_optimality_bounds.py verification/test_campaign_incumbents.py verification/test_campaign_consistency.py verification/test_global_campaign.py verification/test_tangent_geometry.py verification/test_global_certificate_geometry.py verification/test_run_provenance.py -q",
+    "passed": 117,
+    "seconds": 5.52,
+    "exit_code": 0
+  },
+  "protected_files_sha256_verified": 1022,
+  "study_artifacts_sha256_verified": 150,
+  "source_snapshot_matches_current_files": 96,
+  "independent_numeric_audit": {
+    "paths": 32,
+    "checks": 102049,
+    "passed": true,
+    "max_raw_excess_mixed_units": 1.4231578138179657e-09,
+    "is_proof": false
+  },
+  "replay": {
+    "paths": 32,
+    "local_wide_boxes": 4,
+    "full_domain_trees": 2,
+    "passed": true
+  },
+  "continuous_model_enclosure_cases": [
+    "IMP_local",
+    "IMP_wide",
+    "OMP_local",
+    "OMP_wide"
+  ],
+  "geometry_feasibility_proven": false,
+  "continuous_source_enclosure_proven": false,
+  "field_reconstruction_error_enclosed": false,
+  "geometry_global_optimum_proven": false,
+  "certified_geometry_optimality_gap": null
+}

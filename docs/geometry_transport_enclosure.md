@@ -1,5 +1,7 @@
 # Geometry-to-transport interval verifier
 
+The continuous-fieldline extension is documented separately in [continuous_path_validation.md](continuous_path_validation.md). The frozen-polyline verifier below remains unchanged and reproducible; its scope flags are not upgraded by the existence of the new verifier.
+
 ## Contract and scope
 
 `geometry_transport_certificate.certify_box` encloses every coefficient vector in a supplied box of the **declared frozen-path model**. The exported model contains all IMP 9 or OMP 16 variables. A resolved record includes possible first-hit branches, arrival R/Z, toroidal connection length, magnetic integral, spreading width, rotation area, and periodic-kernel parameters. An unresolved record is a valid refusal to certify, not an infeasibility result.
