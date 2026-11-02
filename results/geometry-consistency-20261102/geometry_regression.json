@@ -1,0 +1,636 @@
+{
+  "geometry_only": true,
+  "new_transport_solves": 0,
+  "new_optimization_runs": 0,
+  "reproductions": [
+    {
+      "case": "OMP/R020",
+      "candidate_identity": "2cf535829c0c1fdd4f31dc12d023552487470679bef9a60ce56146a3006754f7",
+      "screens": {
+        "old_coarse": {
+          "policy": "diagnostic-only",
+          "chord_tolerance_m": null,
+          "points": 1034,
+          "passed": true,
+          "errors": []
+        },
+        "shared_fine": {
+          "policy": "full-wall-chord-1e-7.v2",
+          "chord_tolerance_m": 1e-07,
+          "points": 4497,
+          "passed": false,
+          "errors": [
+            "vessel_intersection"
+          ]
+        }
+      },
+      "median_seconds": {
+        "old_coarse": 0.0021140999160706997,
+        "shared_fine": 0.003617699956521392
+      }
+    },
+    {
+      "case": "OMP/R100",
+      "candidate_identity": "b9d795d933a149de6a20ad46cba900931d84ef12141934b5d43998003fb0d472",
+      "screens": {
+        "old_coarse": {
+          "policy": "diagnostic-only",
+          "chord_tolerance_m": null,
+          "points": 1034,
+          "passed": true,
+          "errors": []
+        },
+        "shared_fine": {
+          "policy": "full-wall-chord-1e-7.v2",
+          "chord_tolerance_m": 1e-07,
+          "points": 3033,
+          "passed": true,
+          "errors": []
+        }
+      },
+      "median_seconds": {
+        "old_coarse": 0.0018863501027226448,
+        "shared_fine": 0.0024433499202132225
+      }
+    },
+    {
+      "case": "IMP/R020",
+      "candidate_identity": "f7abd7f35363c79722e1c7a82220ea8917143c49415cbb31374c4a85606be204",
+      "screens": {
+        "old_coarse": {
+          "policy": "diagnostic-only",
+          "chord_tolerance_m": null,
+          "points": 1034,
+          "passed": true,
+          "errors": []
+        },
+        "shared_fine": {
+          "policy": "full-wall-chord-1e-7.v2",
+          "chord_tolerance_m": 1e-07,
+          "points": 2194,
+          "passed": true,
+          "errors": []
+        }
+      },
+      "median_seconds": {
+        "old_coarse": 0.0021902502048760653,
+        "shared_fine": 0.0026347001548856497
+      }
+    },
+    {
+      "case": "IMP/R050",
+      "candidate_identity": "1770d3ed1ca99b29418518e52b9edde98d216a07a0c59d2906a08e5770705a7a",
+      "screens": {
+        "old_coarse": {
+          "policy": "diagnostic-only",
+          "chord_tolerance_m": null,
+          "points": 1034,
+          "passed": true,
+          "errors": []
+        },
+        "shared_fine": {
+          "policy": "full-wall-chord-1e-7.v2",
+          "chord_tolerance_m": 1e-07,
+          "points": 1665,
+          "passed": true,
+          "errors": []
+        }
+      },
+      "median_seconds": {
+        "old_coarse": 0.002141500124707818,
+        "shared_fine": 0.0024502500891685486
+      }
+    }
+  ],
+  "protected_imports": [
+    {
+      "origin": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\IMP\\R020\\manifest.json",
+      "origin_sha256": "55d49e89c2d0a960ce19d7fa5d721e2ae59c37fea4f86440a44ec4770e84d4e6",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 20,
+        "vector": [
+          0.0064174576816584915,
+          -1.1882084440462408e-05,
+          -0.007633645439484716,
+          0.004353595903489073,
+          0.0135107921404066,
+          0.015286747202953838,
+          0.008583169375423179,
+          -0.000590330154738121,
+          0.7643814035159184
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.4040147427421164,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2098,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\IMP\\R050\\manifest.json",
+      "origin_sha256": "6b5192e356b09427d196cc53cce20c616aab1f08f66b0430f756f94bcb39720c",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 50,
+        "vector": [
+          0.0007999998308819482,
+          0.003299999830881948,
+          0.005369934031568338,
+          0.0060666494210763295,
+          0.004180722090229805,
+          0.004112478270624901,
+          0.00042318289771764385,
+          -1.391881441259141e-10,
+          0.4986959624799386
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.5303595014967675,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 1554,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\OMP\\R050\\manifest.json",
+      "origin_sha256": "c58877bc14af8838a49ddafde73e49679e4366b7cbad5457b487775b58e45b5b",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 50,
+        "vector": [
+          9.715949480737051e-05,
+          -0.0002877389982024005,
+          -0.0001856372127566331,
+          -0.0001183524401901041,
+          -0.006074165463599998,
+          -0.008892867043440465,
+          0.011256039331750785,
+          -0.006074165463599998,
+          -2.6689816327532787e-05,
+          2.989728822734597e-05,
+          -2.606998404891839e-05,
+          -2.6632466906454074e-05,
+          0.008906327750742675,
+          0.06712530058595041,
+          0.06690266464775839,
+          0.015056050816990752
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 1.9958528550592363,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3640,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\OMP\\R100\\manifest.json",
+      "origin_sha256": "726b754ee1158fbe634855a18b98ac845d85a42b66d49d6f797f9bf23a5b63b1",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 100,
+        "vector": [
+          0.0,
+          -3.147671281651705e-05,
+          -3.147671281651705e-05,
+          -3.147671281651705e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.009190548923787827,
+          0.04454184143049465,
+          0.0494970351993018,
+          0.028784290134258313
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 3.014483425200404,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2326,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-omp-global-20261029\\IMP\\R020\\manifest.json",
+      "origin_sha256": "0e30507d1a7846cd457a43f73b7d96ef1e20b99bc02aba33db32ff187428031d",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 20,
+        "vector": [
+          0.006449706190312663,
+          0.031175458340204982,
+          0.02974104532817057,
+          0.019669013626352906,
+          0.005773683342821606,
+          0.012912635219682346,
+          0.011461819428389383,
+          0.0003670087137172295,
+          0.39204556658016343
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.375184231179959,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2194,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-omp-global-20261029\\IMP\\R050\\manifest.json",
+      "origin_sha256": "daf6c60670a0ebc887978227e0d161ccdb19ea3231d200baa074cc2eb43761ae",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 50,
+        "vector": [
+          0.00257406181703995,
+          0.014511695680104698,
+          0.018258828615010984,
+          0.014578719829124329,
+          0.0018228645561093387,
+          0.005030523674400311,
+          0.00475234306756187,
+          0.0007935995767969533,
+          0.3168094199802715
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.4815540598952706,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 1665,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-tangent-pilot-20261029\\IMP\\R020\\manifest.json",
+      "origin_sha256": "55d49e89c2d0a960ce19d7fa5d721e2ae59c37fea4f86440a44ec4770e84d4e6",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 20,
+        "vector": [
+          0.0064174576816584915,
+          -1.1882084440462408e-05,
+          -0.007633645439484716,
+          0.004353595903489073,
+          0.0135107921404066,
+          0.015286747202953838,
+          0.008583169375423179,
+          -0.000590330154738121,
+          0.7643814035159184
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.4040147427421164,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2098,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-tangent-pilot-20261029\\IMP\\R050\\manifest.json",
+      "origin_sha256": "6b5192e356b09427d196cc53cce20c616aab1f08f66b0430f756f94bcb39720c",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 50,
+        "vector": [
+          0.0007999998308819482,
+          0.003299999830881948,
+          0.005369934031568338,
+          0.0060666494210763295,
+          0.004180722090229805,
+          0.004112478270624901,
+          0.00042318289771764385,
+          -1.391881441259141e-10,
+          0.4986959624799386
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 2.5303595014967675,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 1554,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-omp-global-20261029\\OMP\\R050\\manifest.json",
+      "origin_sha256": "c7f45ecb136ab765218c1e7c86c24a801bc700951384a5562a0d977af5997234",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 50,
+        "vector": [
+          -4.2814525436769066e-05,
+          -0.00012123620152707423,
+          -0.00039067163386198047,
+          -0.00016350336546335504,
+          -0.007910778030134284,
+          -0.021447783923053743,
+          -0.011319706586498118,
+          -0.0009744098043239129,
+          2.8761382558302312e-05,
+          8.600121686655322e-05,
+          5.64791107183991e-05,
+          -1.2118829457506265e-05,
+          0.009236732672554683,
+          0.044180654060442144,
+          0.04987875198638223,
+          0.028640493369589348
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 3.0038680600292125,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3033,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-omp-global-20261029\\OMP\\R100\\manifest.json",
+      "origin_sha256": "5383011a2bed35afa38464aa019a1125a9ce382325ea15c2b26f9e67b0fd1fac",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 100,
+        "vector": [
+          -4.2814525436769066e-05,
+          -0.0001527129143435913,
+          -0.00039067163386198047,
+          -0.00016350336546335504,
+          -0.007910778030134284,
+          -0.021447783923053743,
+          -0.011319706586498118,
+          -0.0009744098043239129,
+          2.8761382558302312e-05,
+          8.600121686655322e-05,
+          5.64791107183991e-05,
+          -1.2118829457506265e-05,
+          0.009236732672554683,
+          0.044180654060442144,
+          0.04987875198638223,
+          0.028640493369589348
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 3.0038680600292125,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3033,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-tangent-pilot-20261029\\OMP\\R050\\manifest.json",
+      "origin_sha256": "c58877bc14af8838a49ddafde73e49679e4366b7cbad5457b487775b58e45b5b",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 50,
+        "vector": [
+          9.715949480737051e-05,
+          -0.0002877389982024005,
+          -0.0001856372127566331,
+          -0.0001183524401901041,
+          -0.006074165463599998,
+          -0.008892867043440465,
+          0.011256039331750785,
+          -0.006074165463599998,
+          -2.6689816327532787e-05,
+          2.989728822734597e-05,
+          -2.606998404891839e-05,
+          -2.6632466906454074e-05,
+          0.008906327750742675,
+          0.06712530058595041,
+          0.06690266464775839,
+          0.015056050816990752
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 1.9958528550592363,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3640,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\imp-tangent-pilot-20261029\\OMP\\R100\\manifest.json",
+      "origin_sha256": "726b754ee1158fbe634855a18b98ac845d85a42b66d49d6f797f9bf23a5b63b1",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 100,
+        "vector": [
+          0.0,
+          -3.147671281651705e-05,
+          -3.147671281651705e-05,
+          -3.147671281651705e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.009190548923787827,
+          0.04454184143049465,
+          0.0494970351993018,
+          0.028784290134258313
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 3.014483425200404,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2326,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\omp-tangent-curvature-20261029\\R020\\manifest.json",
+      "origin_sha256": "a44f3cce13f43ceb3b13557ad2ccd34b45d41a9bd7eb7965b8b93140282192f9",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 20,
+        "vector": [
+          -0.00046884321980821366,
+          6.348670264437623e-05,
+          -0.0004961771109843095,
+          -0.00016561051532400077,
+          -0.0013256839701156833,
+          -0.020566871721648814,
+          -0.010183804445822564,
+          0.0002370382534909954,
+          -5.760556589880152e-05,
+          0.0001263901344169891,
+          0.00011137181437638402,
+          -5.035269487100516e-05,
+          0.0042667726531686635,
+          0.061777508111416225,
+          0.07309337387998567,
+          -0.020487279678431204
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 1.4464728227753623,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 4321,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\omp-tangent-curvature-20261029\\R050\\manifest.json",
+      "origin_sha256": "2dd54d656388e891f89e11e50b04479cf9bc3cbf494597099991874e7a9bf8e5",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 50,
+        "vector": [
+          9.715949480737051e-05,
+          -0.00022478557256936643,
+          -0.000122683787123599,
+          -0.0001183524401901041,
+          -0.006074165463599998,
+          -0.008892867043440465,
+          0.011256039331750785,
+          -0.006074165463599998,
+          -2.6689816327532787e-05,
+          2.989728822734597e-05,
+          -2.606998404891839e-05,
+          -2.6632466906454074e-05,
+          0.008906327750742675,
+          0.06712530058595041,
+          0.06690266464775839,
+          0.015056050816990752
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 1.9962089316090987,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3640,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\omp-tangent-curvature-20261029\\R100\\manifest.json",
+      "origin_sha256": "2228b28e338e50a27b78a7f0c3297f37318bb31e4ad9133450b5766cc9f1ca16",
+      "candidate": {
+        "source": "OMP",
+        "radius_mm": 100,
+        "vector": [
+          -4.290269895730337e-05,
+          -8.185252279216737e-05,
+          4.276197428093134e-05,
+          -0.00016051932717694916,
+          -0.005537343112187442,
+          0.0033915335200603546,
+          0.001928280240714399,
+          -0.003037082731799999,
+          -1.1071741081510172e-05,
+          -1.1719147231466347e-05,
+          2.9362219023987282e-05,
+          -1.560008060693674e-05,
+          0.004865159055259931,
+          0.04031495300301673,
+          0.0468465911554836,
+          0.02955822637097154
+        ]
+      },
+      "geometry_conversion": null,
+      "historical_peak": 3.1111557950175506,
+      "constraints": true,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 2875,
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "origin": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\results\\regional-20261028\\qualified\\IMP\\manifest.json",
+      "origin_sha256": "4c33a05647dc2afd366d9a78a22224ac52a022f2fa706b22c5929d460d606665",
+      "candidate": {
+        "source": "IMP",
+        "radius_mm": 100,
+        "vector": [
+          0.023921719328075186,
+          0.026768472488490083,
+          0.02137381358228656,
+          0.015751522388608753,
+          0.0038569464813917875,
+          0.017445600761113057,
+          -0.0037699938800562884,
+          -0.005748951347495557,
+          0.5
+        ]
+      },
+      "geometry_conversion": "legacy normal-displacement coefficients mapped to G1 with junction fraction 0.5; unvalidated at every radius",
+      "historical_peak": null,
+      "constraints": false,
+      "screen": {
+        "policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "points": 3255,
+        "passed": true,
+        "errors": []
+      }
+    }
+  ],
+  "preserved_artifacts_verified": 26,
+  "frozen_files_verified": 874
+}

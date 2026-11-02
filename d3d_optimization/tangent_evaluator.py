@@ -50,6 +50,7 @@ class TangentEvaluator(BoundaryEvaluator):
     def describe(self,r):
         row=super().describe(r)
         if 'shape_constraints' in r: row['shape_constraints']=r['shape_constraints']
+        if 'geometry_screen' in r: row['geometry_screen']=r['geometry_screen']
         return row
 
 

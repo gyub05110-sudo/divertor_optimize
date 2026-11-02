@@ -10,17 +10,28 @@ from matplotlib.collections import LineCollection
 from matplotlib.colors import Normalize
 from d3d_optimization.broadening_study import load_json,digest
 from d3d_optimization.campaign_state import public_save as save
+from d3d_optimization.campaign_incumbents import QualifiedStore,context
+
+
+def selection(folder,expected):
+    """Recover the canonical bundle even after a convenience-pointer crash."""
+    folder=Path(folder);record=QualifiedStore(folder,expected).best()
+    if record is not None:return record,folder/record['artifact_bundle']/'selected_refined.npz'
+    path=folder/'manifest.json';m=load_json(path) if path.exists() else {}
+    if m.get('artifact_bundle'):raise ValueError('qualified manifest references a missing bundle')
+    return m,folder/'selected_refined.npz'  # Read-only legacy report support.
 
 
 def run(folder):
-    folder=Path(folder);config=load_json(folder/'campaign.json');rows=[];manifests={};sources={}
+    folder=Path(folder);config=load_json(folder/'campaign.json');rows=[];manifests={};sources={};selected_paths={};evidence_hashes={}
     for source in ['IMP','OMP']:
         path=folder/source/'worker_status.json';sources[source]=load_json(path) if path.exists() else {'status':'not_started'}
         hard_stop=folder/source/'hard_deadline.json'
         if hard_stop.exists():sources[source]=dict(sources[source],status='deadline_stopped',hard_deadline=load_json(hard_stop))
         for mm in [20,50,100]:
             path=folder/source/f'R{mm:03d}'/'manifest.json';progress=folder/source/f'R{mm:03d}'/'progress.json'
-            m=load_json(path) if path.exists() else {};p=load_json(progress) if progress.exists() else {}
+            m,selected_paths[(source,mm)]=selection(path.parent,context(config,source,mm))
+            p=load_json(progress) if progress.exists() else {}
             qualified=m.get('status')=='qualified' and m.get('validation',{}).get('verdict',{}).get('resolution_screen_passed')
             status='qualified' if qualified else m.get('status','searching')
             if not qualified and p.get('best') and sources[source]['status'] in ('searching','validating','starting'):
@@ -35,9 +46,12 @@ def run(folder):
                 restarts=p.get('restart',0),coarse_best_ratio=(p.get('best') or {}).get('objective'),
                 global_optimum_proven=False)
             rows.append(row)
-            if qualified:manifests[(source,mm)]=m
+            if qualified:
+                manifests[(source,mm)]=m
+                evidence=(path.parent/m['artifact_bundle']/'manifest.json') if m.get('artifact_bundle') else path
+                evidence_hashes[evidence.relative_to(folder).as_posix()]=digest(evidence)
     save(folder/'summary.json',dict(rows=rows,worker_status=sources,epoch=time.time(),fingerprint=config['fingerprint'],
-        source_manifest_hashes={f'{s}/R{mm:03d}/manifest.json':digest(folder/s/f'R{mm:03d}'/'manifest.json') for s,mm in manifests},
+        source_manifest_hashes=evidence_hashes,
         author_script_sha256=digest(Path(__file__)),global_optimum_proven=False))
     with (folder/'summary.csv').open('w',newline='',encoding='utf-8') as f:
         writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
@@ -66,7 +80,7 @@ def run(folder):
         for row_index,source in enumerate(['IMP','OMP']):
             for col,mm in enumerate([None,20,50,100]):
                 ax=axes[row_index,col];label=f'{source} baseline' if mm is None else f'{source}, Rmin {mm} mm'
-                path=folder/source/'baseline_refined.npz' if mm is None else folder/source/f'R{mm:03d}'/'selected_refined.npz'
+                path=folder/source/'baseline_refined.npz' if mm is None else selected_paths[(source,mm)]
                 certified=mm is None or (source,mm) in manifests
                 if path.exists() and certified:
                     with np.load(path) as d:

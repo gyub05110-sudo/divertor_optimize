@@ -6,6 +6,9 @@ from shapely.geometry import LineString,Polygon
 from .imp_tangent import imp_evaluator,expand_imp
 from .tangent_evaluator import constrained_evaluator
 
+GEOMETRY_POLICY = 'full-wall-chord-1e-7.v2'
+CHORD_TOLERANCE_M = 1e-7
+
 
 @dataclass(frozen=True)
 class Candidate:
@@ -50,23 +53,38 @@ def assembled_wall(e,c,chord_tolerance=None):
             # Bound chord error by sup|p''| du²/8. d'' is linear per cubic
             # span, so its supremum occurs at span endpoints (knots).
             second=max(abs(q.d2(np.linspace(0,1,6))))
-            count=max(count,int(np.ceil(np.sqrt(second/(8*chord_tolerance))))+1)
+            # Canonical screen mesh must not depend on the thermal mesh.
+            count=max(161,int(np.ceil(np.sqrt(second/(8*chord_tolerance))))+1)
         p=q.point(np.linspace(0,1,count)); p[0]=q.a; p[-1]=q.b
         points.extend(p[1:])
     return np.array(points)
 
 
-def geometry_check(e,c,chord_tolerance=None):
+def geometry_screen(e,c,chord_tolerance=CHORD_TOLERANCE_M):
+    if chord_tolerance is not None and (not np.isfinite(chord_tolerance) or chord_tolerance<=0):
+        raise ValueError('positive finite chord tolerance required')
     wall=assembled_wall(e,c,chord_tolerance)
-    line=LineString(wall)
-    return bool(line.is_simple and Polygon(wall).is_valid and not line.intersects(Polygon(e.lcfs))
-                and (e.vessel_solids is None or not line.intersects(e.vessel_solids)))
+    line=LineString(wall); errors=[]
+    if not line.is_simple:errors.append('wall_self_intersection')
+    if not Polygon(wall).is_valid:errors.append('invalid_wall_polygon')
+    if line.intersects(Polygon(e.lcfs)):errors.append('lcfs_intersection')
+    if e.vessel_solids is not None and line.intersects(e.vessel_solids):errors.append('vessel_intersection')
+    return dict(policy=GEOMETRY_POLICY if chord_tolerance==CHORD_TOLERANCE_M else 'diagnostic-only',
+                chord_tolerance_m=chord_tolerance,points=len(wall),passed=not errors,errors=errors)
+
+
+def geometry_check(e,c,chord_tolerance=CHORD_TOLERANCE_M):
+    return geometry_screen(e,c,chord_tolerance)['passed']
 
 
 def evaluate_candidate(e,candidate):
     c=candidate.bind(e); check=e.constraints(c)
-    if check['passed'] and not geometry_check(e,c):
+    screen=geometry_screen(e,c) if check['passed'] else None
+    if screen is not None and not screen['passed']:
         ratios,error=e.precise_lengths(c)
         return dict(geometry_valid=False,feasible=False,penalty=1000.,errors=['complete_wall_invalid'],
-                    elapsed_seconds=0.,precise_length_ratios=ratios,length_integration_error=error,shape_constraints=check)
-    return e.evaluate(c)
+                    elapsed_seconds=0.,precise_length_ratios=ratios,length_integration_error=error,
+                    shape_constraints=check,geometry_screen=screen)
+    result=dict(e.evaluate(c))  # Do not attach policy metadata to the evaluator's cached object.
+    if screen is not None:result['geometry_screen']=screen
+    return result

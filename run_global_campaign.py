@@ -12,6 +12,7 @@ from d3d_optimization.reference_transport import ReferencePoint
 from d3d_optimization.campaign_state import process_lock,should_stop,keep_awake
 from d3d_optimization.campaign_search import SearchCase
 from d3d_optimization.campaign_validation import Qualifier
+from d3d_optimization.campaign_incumbents import collect_protected,QUALIFICATION_POLICY
 from optimize_boundary_transport import capture
 from optimize_regional_transport import write_arrays
 
@@ -60,10 +61,14 @@ def snapshot(output,settings):
         save(destination,dict(candidates=rows,origins=origins,source_campaign_sha256=digest(warm/'campaign.json'),
                               note='warm geometry only; all constraints and physics are evaluated again'))
         files[destination.name]=digest(destination)
+    protected=frozen/'campaign_protected_candidates.json'
+    save(protected,dict(candidates=collect_protected(ROOT,settings['warm_study']),
+         note='protected geometry candidates; current inputs and policy always require revalidation'))
+    files[protected.name]=digest(protected)
     save(output/'frozen_files.json',files)
     now=time.time();duration=settings['hours']*3600
     reserve=min(settings['validation_reserve_seconds'],duration*.25)
-    config=dict(schema='regional-global-campaign.v1',created_epoch=now,deadline_epoch=now+duration,
+    config=dict(schema='regional-global-campaign.v2',qualification_policy=QUALIFICATION_POLICY,created_epoch=now,deadline_epoch=now+duration,
         search_deadline_epoch=now+duration-reserve,reference=asdict(ReferencePoint()),**settings,
         frozen_root=str(frozen),original_root=str(ROOT),frozen_files_sha256=digest(output/'frozen_files.json'),
         executable=sys.executable,python=platform.python_version(),numpy=np.__version__,
@@ -159,7 +164,7 @@ if __name__=='__main__':
     p.add_argument('--backend',choices=['cpu','gpu'],default='gpu');p.add_argument('--qualify-interval-seconds',type=float,default=7200.)
     p.add_argument('--search-seconds',type=float,default=None,help='optional shorter search budget for end-to-end pilots')
     p.add_argument('--validation-reserve-seconds',type=float,default=3600.)
-    p.add_argument('--warm-study',default=None,help='pilot whose feasible coarse geometries seed this new campaign')
+    p.add_argument('--warm-study',default=None,help='previous study: coarse seeds plus protected qualified geometries for revalidation')
     a=p.parse_args();a.output=a.output.resolve()
     if not 0<a.hours<=72 or not 5<=a.population<=512 or not 1<=a.projected_seeds<=64 or not 1<=a.slice_seconds<=3600:
         p.error('positive duration <=72h, population 5..512, projected seeds 1..64, slice 1..3600s required')

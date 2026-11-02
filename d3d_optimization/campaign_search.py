@@ -8,6 +8,7 @@ from .campaign_geometry import Candidate,evaluator,evaluate_candidate
 from .imp_tangent import project_imp
 from .broadening_study import load_json
 from .campaign_state import public_save as save
+from .campaign_incumbents import protected_candidates
 from run_tangent_curvature_study import project_floor
 
 
@@ -21,6 +22,8 @@ def scales(e):
 
 
 def warm_vectors(root,source,mm):
+    for row in protected_candidates(root,source,mm):
+        yield np.array(row['candidate']['vector'])
     pilot=root/'campaign_warm_candidates.json'
     if pilot.exists():
         for candidate in load_json(pilot)['candidates']:
@@ -171,6 +174,10 @@ class SearchCase:
             s['best_infeasible']=row
         compact={k:row[k] for k in ['identity','candidate','objective','feasible','cached','stage','evaluation_seconds']}
         compact.update(sequence=s['total_proposals'],restart=s['restart'],epoch=time.time(),physics_evaluated=row['physics_evaluated'])
+        if not row['feasible']:
+            compact['errors']=row.get('errors',[])
+            if 'geometry_screen' in row:
+                compact['geometry_errors']=row['geometry_screen']['errors']
         with (self.folder/'evaluations.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(compact,allow_nan=False)+'\n')
         self.checkpoint(force=False)
 
