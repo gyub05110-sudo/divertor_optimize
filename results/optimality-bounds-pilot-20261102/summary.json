@@ -1,0 +1,86 @@
+{
+  "scope": "one-dimensional restricted family; numerical probes are not validated upper bounds",
+  "lower_bound_scope": "exact frozen continuous spline wall; nonnegative heat flux; exact full power deposition; positive R",
+  "observations": 9,
+  "feasible_numerical_count": 1,
+  "selected_numerical": {
+    "candidate": {
+      "source": "IMP",
+      "radius_mm": 20,
+      "vector": [
+        0.006449706190312663,
+        0.031175458340204982,
+        0.02974104532817057,
+        0.019669013626352906,
+        0.005773683342821606,
+        0.012912635219682346,
+        0.011461819428389383,
+        0.0003670087137172295,
+        0.39204556658016343
+      ]
+    },
+    "identity": "f7abd7f35363c79722e1c7a82220ea8917143c49415cbb31374c4a85606be204",
+    "coefficient_m": 0.02974104532817057,
+    "feasible_numerical": true,
+    "geometry_valid": true,
+    "errors": [],
+    "geometry_screen": {
+      "policy": "full-wall-chord-1e-7.v2",
+      "chord_tolerance_m": 1e-07,
+      "points": 2194,
+      "passed": true,
+      "errors": []
+    },
+    "shape_constraints": {
+      "passed": true,
+      "radius_minimum_m": 0.02,
+      "curvature_max_1_m": {
+        "imp_sloped": 49.999999833628905,
+        "imp_vertical": 49.999600638799414
+      },
+      "actual_minimum_radius_m": {
+        "imp_sloped": 0.020000000066548437,
+        "imp_vertical": 0.020000159745756158
+      },
+      "tangent_angle_errors_deg": [
+        0.0,
+        6.065376575363577e-15,
+        0.0
+      ],
+      "junction_fraction": 0.39204556658016343,
+      "junction_angle_bounds_deg": [
+        57.54023657334235,
+        168.47246461504582
+      ],
+      "opposite_coefficients_zero": true
+    },
+    "peak_MW_m2": 2.375044182163868,
+    "ledger": {
+      "prescribed": 1.0,
+      "deposited": 0.9999999999999999,
+      "unhit": 0.0,
+      "unresolved": 0.0,
+      "balance_error": 1.1102230246251565e-16
+    }
+  },
+  "root_lower_bound_MW_m2": 0.01348487643797908,
+  "final_lower_bound_MW_m2": 0.013485726378815779,
+  "global_optimum_proven": false,
+  "elapsed_seconds": 14.561048099771142,
+  "comparison": {
+    "numerical_candidate_peak_MW_m2": 2.375044182163868,
+    "conditional_model_lower_bound_MW_m2": 0.013485726378815779,
+    "uncertified_difference_MW_m2": 2.361558455785052,
+    "certified_upper_bound_MW_m2": null,
+    "certified_gap_MW_m2": null,
+    "global_optimum_proven": false,
+    "missing_obligations": [
+      "rigorous feasibility for the same exact model",
+      "field tracing, interpolation and heat solver error enclosures",
+      "continuous heat-flux peak upper enclosure",
+      "production wall versus exact frozen spline model enclosure"
+    ]
+  },
+  "protected_files_unchanged": 876,
+  "bound_replay_passed": true
+}
