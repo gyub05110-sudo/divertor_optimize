@@ -1,0 +1,117 @@
+[
+  {
+    "case": "IMP_local",
+    "variables": 9,
+    "donors": 16,
+    "seconds": 9.11764429975301,
+    "preparation_seconds": 4.781249400228262,
+    "resolved": true,
+    "resolved_donors": 16,
+    "unresolved": [],
+    "total_area_m2": [
+      "73.8614092110307076147778664024286143121401",
+      "74.0409001930955451811597729134773779035947"
+    ],
+    "frozen_family_peak_bracket": [
+      "0.0135060486486798814740448857691308534275013",
+      "15.0132232960735713512844288260386939970725"
+    ]
+  },
+  {
+    "case": "IMP_wide",
+    "variables": 9,
+    "donors": 16,
+    "seconds": 9.130136999767274,
+    "preparation_seconds": 4.781249400228262,
+    "resolved": true,
+    "resolved_donors": 16,
+    "unresolved": [],
+    "total_area_m2": [
+      "73.8359667551497499935935050658179411675970",
+      "74.0784871341644881853670552361005619988829"
+    ],
+    "frozen_family_peak_bracket": [
+      "0.0134991957677117159831112973280767744451935",
+      "20.6374837911424315209398492999747811797542"
+    ]
+  },
+  {
+    "case": "IMP_full_domain",
+    "resolved": false,
+    "unresolved": [
+      {
+        "stage": "geometry_or_field",
+        "reason": "junction denominator not proven positive; subdivide box"
+      }
+    ]
+  },
+  {
+    "case": "OMP_local",
+    "variables": 16,
+    "donors": 16,
+    "seconds": 15.312117699999362,
+    "preparation_seconds": 4.213364799972624,
+    "resolved": true,
+    "resolved_donors": 16,
+    "unresolved": [],
+    "total_area_m2": [
+      "73.9133032373341225818496050198755987287027",
+      "74.0688540915927202204100388582946313179505"
+    ],
+    "frozen_family_peak_bracket": [
+      "0.0135009514088527837231221347249535649180384",
+      "27.7790248327773050764325222833256140731685"
+    ],
+    "spatial_refinement_status": "image-series budget exceeded; broad Fourier verifier required"
+  },
+  {
+    "case": "OMP_wide",
+    "variables": 16,
+    "donors": 16,
+    "seconds": 17.104406300000846,
+    "preparation_seconds": 4.213364799972624,
+    "resolved": true,
+    "resolved_donors": 16,
+    "unresolved": [],
+    "total_area_m2": [
+      "73.8884771462473102108607746361581274031088",
+      "74.1203184885449687723989530722128943699421"
+    ],
+    "frozen_family_peak_bracket": [
+      "0.0134915772138046930879774494273102893869021",
+      "29.5796624272366281093665983962763764651184"
+    ],
+    "spatial_refinement_status": "image-series budget exceeded; broad Fourier verifier required"
+  },
+  {
+    "case": "OMP_full_domain",
+    "resolved": false,
+    "unresolved": [
+      {
+        "stage": "donor",
+        "index": 0,
+        "reason": "gradient enclosure includes zero"
+      },
+      {
+        "stage": "donor",
+        "index": 1,
+        "reason": "gradient enclosure includes zero"
+      },
+      {
+        "stage": "donor",
+        "index": 2,
+        "reason": "gradient enclosure includes zero"
+      },
+      {
+        "stage": "donor",
+        "index": 3,
+        "reason": "gradient enclosure includes zero"
+      },
+      {
+        "stage": "donor",
+        "index": 4,
+        "reason": "gradient enclosure includes zero"
+      }
+    ]
+  }
+]

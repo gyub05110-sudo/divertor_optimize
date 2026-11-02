@@ -1,0 +1,20 @@
+{
+  "pytest": {
+    "command": "python -m pytest verification/test_geometry_transport_bounds.py verification/test_transport_peak_bounds.py verification/test_optimality_bounds.py verification/test_campaign_incumbents.py verification/test_campaign_consistency.py verification/test_global_campaign.py verification/test_tangent_geometry.py verification/test_global_certificate_geometry.py verification/test_run_provenance.py -q",
+    "passed": 100,
+    "seconds": 4.20,
+    "exit_code": 0
+  },
+  "independent_numeric_falsification": {
+    "shapes": 20,
+    "checks": 2900,
+    "passed": true,
+    "is_inclusion_proof": false
+  },
+  "replay_passed": ["IMP_local", "OMP_local", "IMP_full_domain", "OMP_full_domain"],
+  "protected_original_file_hashes_unchanged": 903,
+  "study_artifact_hashes_verified": 102,
+  "continuous_fieldline_enclosure_proven": false,
+  "geometry_global_optimum_proven": false,
+  "certified_geometry_optimality_gap": null
+}

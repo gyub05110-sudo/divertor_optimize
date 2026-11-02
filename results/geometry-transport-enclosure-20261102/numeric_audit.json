@@ -1,0 +1,38 @@
+[
+  {
+    "samples": 5,
+    "checks": 725,
+    "passed": true,
+    "scope": "independent floating-point falsification only; not the inclusion proof",
+    "comparison_tolerance": "2e-8 * max(1,abs(value)); hit fraction 1e-8",
+    "case": "IMP_local",
+    "certificate_sha256": "684db1c0e718dcbb1121fbe4f08c69878864f7162e84cc6ae89b1cedb3fd740f"
+  },
+  {
+    "samples": 5,
+    "checks": 725,
+    "passed": true,
+    "scope": "independent floating-point falsification only; not the inclusion proof",
+    "comparison_tolerance": "2e-8 * max(1,abs(value)); hit fraction 1e-8",
+    "case": "IMP_wide",
+    "certificate_sha256": "067220463d248370b4297a8d6cd0396693605878eb1c9cd3c09765ccaa3c8ab3"
+  },
+  {
+    "samples": 5,
+    "checks": 725,
+    "passed": true,
+    "scope": "independent floating-point falsification only; not the inclusion proof",
+    "comparison_tolerance": "2e-8 * max(1,abs(value)); hit fraction 1e-8",
+    "case": "OMP_local",
+    "certificate_sha256": "8959ab04e8a8d9204385058c2864bf1d93a7dea5d17ddf80ea5aff550defcd8f"
+  },
+  {
+    "samples": 5,
+    "checks": 725,
+    "passed": true,
+    "scope": "independent floating-point falsification only; not the inclusion proof",
+    "comparison_tolerance": "2e-8 * max(1,abs(value)); hit fraction 1e-8",
+    "case": "OMP_wide",
+    "certificate_sha256": "d6fbdb92f7687ef92d2f06bb69f6c0b88c9a100c7f711e0109ad879caae10c98"
+  }
+]
