@@ -1,0 +1,754 @@
+# Derived reactor: CPD_5
+# Generated: 2026-11-03T11:34:02
+# Base reactor: CPD-5
+
+metadata:
+  reactor_name: CPD_5
+  units: mm
+  coordinate_system: XZ_plane
+  revolution_axis: Z
+  winding: CCW
+  start_node_convention: bottom_left
+  source: parametrization
+  source_excel: null
+  extraction_date: '2026-10-29'
+  tf_extrusion_thickness: 736.0
+  tf_num_coils: 16
+  tf_outboard_thickness: 416.0
+  tf_inboard_thickness: 814.0
+  tf_support_thickness: 300.0
+  tf_thickness: 416.0
+  thermal_shield_thickness: 13.0
+  vv_wall_thickness: 25
+  source_labels:
+    VV.inner: VV_Inside
+    VV.outer: VV_Outer
+  parametrization:
+    base_reactor: CPD-5
+    base_reactor_file: data/Base_Reactors/CPD-5_nodes.yaml
+    generated_date: '2026-11-03T11:34:02'
+    mode: per_parameter
+    parameters:
+      bore: 762.0
+      OH_thick: 254.0
+      OH_TF_gap: 20.0
+      TF_thick: 416.0
+      VV_inboard_thick: 150.0
+      VV_Shield_gap: 0.0
+      Shield_inboard_thick: 328.0
+      Blanket_inboard_thick: 307.0
+      R: 4007.0
+      a: 1272.0
+      Blanket_outboard_thick: 953.0
+      Shield_outboard_thick: 270.0
+      VV_Shield_outboard_gap: 615.0
+      VV_outboard_thick: 250.0
+      TF_inboard_thick: 814.0
+      TF_support_thick: 300.0
+      Thermal_Shield_thick: 13.0
+      Blanket_Shield_gap_inboard: 50.0
+      Blanket_Shield_gap_outboard: 82.0
+      TF_VV_gap_min: 50.0
+    derived:
+      TF_VV_gap: 50.0
+      aspect_ratio: 3.15
+      s_z_plasma: 1.0
+      s_TF: 1.0
+components:
+  OH_Solenoid:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 762.0
+          z: -3994.0
+          operation: moveTo
+        - node_id: 2
+          x: 1016.0
+          z: -3994.0
+          operation: lineTo
+        - node_id: 3
+          x: 1016.0
+          z: 3994.0
+          operation: lineTo
+        - node_id: 4
+          x: 762.0
+          z: 3994.0
+          operation: lineTo
+  PF_1:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 2173.0
+          z: 4574.0
+          operation: moveTo
+        - node_id: 2
+          x: 2523.0
+          z: 4574.0
+          operation: lineTo
+        - node_id: 3
+          x: 2523.0
+          z: 4942.0
+          operation: lineTo
+        - node_id: 4
+          x: 2173.0
+          z: 4942.0
+          operation: lineTo
+  PF_2:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 8083.0
+          z: 2397.0
+          operation: moveTo
+        - node_id: 2
+          x: 8433.0
+          z: 2397.0
+          operation: lineTo
+        - node_id: 3
+          x: 8433.0
+          z: 2715.0
+          operation: lineTo
+        - node_id: 4
+          x: 8083.0
+          z: 2715.0
+          operation: lineTo
+  PF_3:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 8656.0
+          z: 1036.0
+          operation: moveTo
+        - node_id: 2
+          x: 8956.0
+          z: 1036.0
+          operation: lineTo
+        - node_id: 3
+          x: 8956.0
+          z: 1376.0
+          operation: lineTo
+        - node_id: 4
+          x: 8656.0
+          z: 1376.0
+          operation: lineTo
+  PF_4:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 8000.0
+          z: -2882.0
+          operation: moveTo
+        - node_id: 2
+          x: 8300.0
+          z: -2882.0
+          operation: lineTo
+        - node_id: 3
+          x: 8300.0
+          z: -2582.0
+          operation: lineTo
+        - node_id: 4
+          x: 8000.0
+          z: -2582.0
+          operation: lineTo
+  PF_5:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 3975.0
+          z: -5168.0
+          operation: moveTo
+        - node_id: 2
+          x: 4325.0
+          z: -5168.0
+          operation: lineTo
+        - node_id: 3
+          x: 4325.0
+          z: -4908.0
+          operation: lineTo
+        - node_id: 4
+          x: 3975.0
+          z: -4908.0
+          operation: lineTo
+  PF_6:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 1724.0
+          z: -4819.0
+          operation: moveTo
+        - node_id: 2
+          x: 2263.0
+          z: -4819.0
+          operation: lineTo
+        - node_id: 3
+          x: 2263.0
+          z: -4311.0
+          operation: lineTo
+        - node_id: 4
+          x: 1724.0
+          z: -4311.0
+          operation: lineTo
+  TF:
+    contours:
+      inner:
+        nodes:
+        - node_id: 1
+          x: 1850.0
+          z: -2036.0
+          operation: moveTo
+        - node_id: 2
+          x: 2468.0
+          z: -3395.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2012.0
+            z: -2783.0
+        - node_id: 3
+          x: 3654.0
+          z: -3840.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3021.0
+            z: -3726.0
+        - node_id: 4
+          x: 3788.0
+          z: -3840.0
+          operation: lineTo
+        - node_id: 5
+          x: 3788.0
+          z: 3840.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 7628.0
+            z: 0.0
+        - node_id: 6
+          x: 3654.0
+          z: 3840.0
+          operation: lineTo
+        - node_id: 7
+          x: 2468.0
+          z: 3395.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3021.0
+            z: 3726.0
+        - node_id: 8
+          x: 1850.0
+          z: 2036.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2012.0
+            z: 2783.0
+  TF_2:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 1036.0
+          z: -4094.0
+          operation: moveTo
+        - node_id: 2
+          x: 1336.0
+          z: -4094.0
+          operation: lineTo
+        - node_id: 3
+          x: 1336.0
+          z: 4094.0
+          operation: lineTo
+        - node_id: 4
+          x: 1036.0
+          z: 4094.0
+          operation: lineTo
+  VV:
+    contours:
+      inner:
+        nodes:
+        - node_id: 1
+          x: 2050.0
+          z: -2027.0
+          operation: moveTo
+        - node_id: 2
+          x: 3589.0
+          z: -3566.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2501.0
+            z: -3115.0
+        - node_id: 3
+          x: 3735.0
+          z: -3566.0
+          operation: lineTo
+        - node_id: 4
+          x: 7199.0
+          z: -102.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6184.0
+            z: -2551.0
+        - node_id: 5
+          x: 7199.0
+          z: 102.0
+          operation: lineTo
+        - node_id: 6
+          x: 3735.0
+          z: 3566.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6184.0
+            z: 2551.0
+        - node_id: 7
+          x: 3589.0
+          z: 3566.0
+          operation: lineTo
+        - node_id: 8
+          x: 2050.0
+          z: 2027.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2501.0
+            z: 3115.0
+      outer:
+        nodes:
+        - node_id: 1
+          x: 1900.0
+          z: -1986.0
+          operation: moveTo
+        - node_id: 2
+          x: 3631.0
+          z: -3717.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2407.0
+            z: -3210.0
+        - node_id: 3
+          x: 3731.0
+          z: -3717.0
+          operation: lineTo
+        - node_id: 4
+          x: 7447.0
+          z: -102.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6324.0
+            z: -2664.0
+        - node_id: 5
+          x: 7447.0
+          z: 102.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 7449.0
+            z: 0.0
+        - node_id: 6
+          x: 3731.0
+          z: 3717.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6324.0
+            z: 2664.0
+        - node_id: 7
+          x: 3631.0
+          z: 3717.0
+          operation: lineTo
+        - node_id: 8
+          x: 1900.0
+          z: 1986.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2407.0
+            z: 3210.0
+  Shield:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 2050.0
+          z: -1513.0
+          operation: moveTo
+        - node_id: 2
+          x: 2378.0
+          z: -1513.0
+          operation: lineTo
+        - node_id: 3
+          x: 2378.0
+          z: 1996.0
+          operation: lineTo
+        - node_id: 4
+          x: 2722.0
+          z: 2835.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2467.0
+            z: 2450.0
+        - node_id: 5
+          x: 3350.0
+          z: 3192.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3011.0
+            z: 3057.0
+        - node_id: 6
+          x: 4086.0
+          z: 3193.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3718.0
+            z: 3233.0
+        - node_id: 7
+          x: 5726.0
+          z: 2038.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5022.0
+            z: 2781.0
+        - node_id: 8
+          x: 6314.0
+          z: 335.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6125.0
+            z: 1222.0
+        - node_id: 9
+          x: 6072.0
+          z: -1253.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6306.0
+            z: -476.0
+        - node_id: 10
+          x: 5938.0
+          z: -1545.0
+          operation: lineTo
+        - node_id: 11
+          x: 4960.0
+          z: -2668.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5529.0
+            z: -2176.0
+        - node_id: 12
+          x: 5176.0
+          z: -2819.0
+          operation: lineTo
+        - node_id: 13
+          x: 5850.0
+          z: -2168.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5540.0
+            z: -2521.0
+        - node_id: 14
+          x: 6491.0
+          z: -799.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6220.0
+            z: -1507.0
+        - node_id: 15
+          x: 6584.0
+          z: 3.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6563.0
+            z: -404.0
+        - node_id: 16
+          x: 5771.0
+          z: 2387.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6376.0
+            z: 1260.0
+        - node_id: 17
+          x: 4194.0
+          z: 3420.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5070.0
+            z: 3037.0
+        - node_id: 18
+          x: 3242.0
+          z: 3435.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3718.0
+            z: 3483.0
+        - node_id: 19
+          x: 2322.0
+          z: 2819.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2726.0
+            z: 3210.0
+        - node_id: 20
+          x: 2050.0
+          z: 1978.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2120.0
+            z: 2420.0
+  Blanket:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 2428.0
+          z: -1513.0
+          operation: moveTo
+        - node_id: 2
+          x: 2778.0
+          z: -1513.0
+          operation: lineTo
+        - node_id: 3
+          x: 2735.0
+          z: -1194.0
+          operation: lineTo
+        - node_id: 4
+          x: 2735.0
+          z: 1566.0
+          operation: lineTo
+        - node_id: 5
+          x: 2743.0
+          z: 1703.0
+          operation: lineTo
+        - node_id: 6
+          x: 2891.0
+          z: 2379.0
+          operation: lineTo
+        - node_id: 7
+          x: 2981.0
+          z: 2480.0
+          operation: lineTo
+        - node_id: 8
+          x: 3235.0
+          z: 2590.0
+          operation: lineTo
+        - node_id: 9
+          x: 3370.0
+          z: 2603.0
+          operation: lineTo
+        - node_id: 10
+          x: 3636.0
+          z: 2529.0
+          operation: lineTo
+        - node_id: 11
+          x: 4541.0
+          z: 1893.0
+          operation: lineTo
+        - node_id: 12
+          x: 5110.0
+          z: 1110.0
+          operation: lineTo
+        - node_id: 13
+          x: 5279.0
+          z: 440.0
+          operation: lineTo
+        - node_id: 14
+          x: 5279.0
+          z: -217.0
+          operation: lineTo
+        - node_id: 15
+          x: 5197.0
+          z: -660.0
+          operation: lineTo
+        - node_id: 16
+          x: 4756.0
+          z: -1440.0
+          operation: lineTo
+        - node_id: 17
+          x: 4071.0
+          z: -2076.0
+          operation: lineTo
+        - node_id: 18
+          x: 4845.0
+          z: -2615.0
+          operation: lineTo
+        - node_id: 19
+          x: 5841.0
+          z: -1500.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5427.0
+            z: -2132.0
+        - node_id: 20
+          x: 5976.0
+          z: -1208.0
+          operation: lineTo
+        - node_id: 21
+          x: 6232.0
+          z: -85.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6163.0
+            z: -660.0
+        - node_id: 22
+          x: 6014.0
+          z: 1255.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 6181.0
+            z: 595.0
+        - node_id: 23
+          x: 4841.0
+          z: 2821.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 5554.0
+            z: 2133.0
+        - node_id: 24
+          x: 3773.0
+          z: 3182.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 4331.0
+            z: 3073.0
+        - node_id: 25
+          x: 3194.0
+          z: 3101.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3479.0
+            z: 3174.0
+        - node_id: 26
+          x: 2486.0
+          z: 2375.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2758.0
+            z: 2817.0
+        - node_id: 27
+          x: 2428.0
+          z: 2014.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2442.0
+            z: 2197.0
+  Divertor:
+    contours:
+      outer:
+        nodes:
+        - node_id: 1
+          x: 2055.0
+          z: -1533.0
+          operation: moveTo
+        - node_id: 2
+          x: 2055.0
+          z: -2027.0
+          operation: lineTo
+        - node_id: 3
+          x: 3589.0
+          z: -3560.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2504.0
+            z: -3111.0
+        - node_id: 4
+          x: 3735.0
+          z: -3560.0
+          operation: lineTo
+        - node_id: 5
+          x: 4523.0
+          z: -3470.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 4131.0
+            z: -3538.0
+        - node_id: 6
+          x: 4523.0
+          z: -2415.0
+          operation: lineTo
+        - node_id: 7
+          x: 4260.0
+          z: -2232.0
+          operation: lineTo
+        - node_id: 8
+          x: 3955.0
+          z: -2129.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 4116.0
+            z: -2155.0
+        - node_id: 9
+          x: 3454.0
+          z: -2660.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3590.0
+            z: -2286.0
+        - node_id: 10
+          x: 3483.0
+          z: -3161.0
+          operation: lineTo
+        - node_id: 11
+          x: 3301.0
+          z: -2916.0
+          operation: lineTo
+        - node_id: 12
+          x: 3280.0
+          z: -2786.0
+          operation: lineTo
+        - node_id: 13
+          x: 2973.0
+          z: -2525.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 3174.0
+            z: -2599.0
+        - node_id: 14
+          x: 2912.0
+          z: -2531.0
+          operation: lineTo
+        - node_id: 15
+          x: 2864.0
+          z: -2570.0
+          operation: lineTo
+        - node_id: 16
+          x: 2633.0
+          z: -2546.0
+          operation: lineTo
+        - node_id: 17
+          x: 2873.0
+          z: -2260.0
+          operation: lineTo
+        - node_id: 18
+          x: 2784.0
+          z: -1533.0
+          operation: threePointArc
+          arc_midpoint:
+            x: 2987.0
+            z: -1877.0
+generate_u_port: true
+generate_e_port: true
+generate_l_port: true
+ports_config:
+  u_port:
+    h1: 7500.0
+    h2: 6200.0
+    duct_len: 2500.0
+    radial_len: 2800.0
+    l2: 4200.0
+    d1: 1200.0
+    t1: 50.0
+    c: 120.0
+    d2: 1000.0
+    l: 1000.0
+    t2: 50.0
+  e_port:
+    l_len: 9500.0
+    w: 2000.0
+    h: 1500.0
+    t: 50.0
+  l_port:
+    z: 4750.0
+    d: 2800.0
+    alpha: 140.0
+    l_len: 9500.0
+    w: 1000.0
+    h: 2000.0
+    t: 50.0
+    c: 160.0

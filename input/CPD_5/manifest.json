@@ -1,0 +1,24 @@
+{
+  "schema": "cpd-inputs.v1",
+  "branch": "CPD_5",
+  "baseline_commit": "aa22063c1392f56df3ad183bd112492879cfcd3b",
+  "computational_geometry": "axisymmetric node contours, mm converted to metres",
+  "cad_reference": "losslessly compressed original STEP",
+  "files": [
+    {
+      "name": "CPD_5_nodes.yaml",
+      "size_bytes": 17452,
+      "sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55"
+    },
+    {
+      "name": "CPD-5_anchors.yaml",
+      "size_bytes": 13261,
+      "sha256": "525e7f04b49565f412e96f510cbbc6b8db78b9a2830a605e695d23b867ad972f"
+    },
+    {
+      "name": "CPD_5.step",
+      "size_bytes": 70647638,
+      "sha256": "03bb96d454b02f53b8791aed348088600726daf004fe4c1c6cde178dcc2419d4"
+    }
+  ]
+}

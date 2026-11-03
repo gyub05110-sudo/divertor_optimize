@@ -1,0 +1,225 @@
+# Anchor specification for CPD-5 base reactor
+# Topology: CPD-5 -- recognised from its DATA (a Shield with no `inner` contour), not from its name
+#           (resolver._topology_of). CPD-5 is CPD-4 with three components redesigned: the Shield, the
+#           Blanket and the Divertor. Everything else is CPD-4's, and so is every parameter.
+# Template: CPD-4_anchors.yaml. STRUCTURALLY DIFFERENT from it (approval A4), because the data is:
+#
+# CARRIED VERBATIM from CPD-4_anchors.yaml (CPD-5's nodes for them are CPD-4's, the same extraction):
+#   OH_Solenoid, TF, TF_2, VV (the cap corners `vv_outer_cap`, the variable_offset inner contour with
+#   `arc_midpoint_mode: inner_affine`), and the top-level `pf_coils:` block (6 coils, all tf_bounded).
+#   Their comments below are CPD-4's and apply unchanged.
+#
+# ADAPTED:
+#   * Shield -- ONE closed contour, `outer`, 20 nodes (a single band; it does not cover the Divertor). Its
+#     two faces take the roles CPD-4's two contours have: the PLASMA-FACING face (nodes 2-11) carries the
+#     `shield_inner_*` roles, the VV-FACING face (nodes 1 and 12-20) the `shield_outer_*` roles. The
+#     resolver and _extract_base_geometry read the Shield face by face (resolver._shield_faces).
+#   * Blanket -- CPD-5's own 27-node numbering (it is not CPD-4's: one node fewer at the inboard bottom,
+#     and a different outboard bottom). Plasma-facing face = nodes 2-17; Shield-facing face = 18-27 and 1.
+#     The bottom corners reuse the roles CPD-1..CPD-4 give their Blanket/Divertor corners, for their
+#     FORMULAS (x tracks the Shield-side wall or the plasma wall, z scales with the plasma); CPD-5's
+#     Blanket shares no node with its Divertor.
+#
+# CANNOT EXIST on CPD-5:
+#   * shared_boundaries -- the Divertor shares no node with the Blanket or the Shield (an empty list);
+#   * the Divertor's secondaries and `interior_v_shape` (they hang off shared nodes).
+#
+# NEW:
+#   * the Divertor's `displacement_follow` block (D2-D4): the Divertor follows by DISPLACEMENT, so its base
+#     relationship to the Shield, Blanket and VV stays exactly as extracted. Consumed by Step 6l; until
+#     Step 6l exists the block is inert and the Divertor stays at its base position (the validator keeps
+#     a node's base value when no step writes it).
+#
+# PF: 6 coils, all tf_bounded (CPD-4's). Ports: CPD-4's tables.
+
+metadata:
+  base_reactor: CPD-5
+  topology: CPD-5
+  applies_to: CPD-5_nodes.yaml
+
+components:
+  OH_Solenoid:
+    transform: direct_formula
+    contours:
+      outer:
+        anchors:
+          1: { role: bottom_inboard }    # (762,-3994)
+          2: { role: bottom_outboard }   # (1016,-3994)
+          3: { role: top_outboard }      # (1016, 3994)
+          4: { role: top_inboard }       # (762, 3994)
+
+  TF:
+    transform: isotropic_TF
+    contours:
+      inner:
+        # 8 nodes; isotropic_TF makes the role a no-op, so neutral label.
+        # `isotropic_node` is the label CPD-1/CPD-3 use -- NOT CPD-2/ARC's four
+        # unhandled role strings, which only work because the transform
+        # short-circuits dispatch before roles are read.
+        anchors:
+          1: { role: isotropic_node }    # (1850,-2036) moveTo
+          2: { role: isotropic_node }    # (2468,-3395) arc
+          3: { role: isotropic_node }    # (3654,-3840) arc
+          4: { role: isotropic_node }    # (3788,-3840) lineTo
+          5: { role: isotropic_node }    # (3788, 3840) arc -- outboard apex arc
+          6: { role: isotropic_node }    # (3654, 3840) lineTo
+          7: { role: isotropic_node }    # (2468, 3395) arc
+          8: { role: isotropic_node }    # (1850, 2036) arc
+        arc_midpoints:
+          2: { method: isotropic_TF }    # (2012,-2783)
+          3: { method: isotropic_TF }    # (3021,-3726)
+          5: { method: isotropic_TF }    # (7628,    0) outboard extremum
+          7: { method: isotropic_TF }    # (3021, 3726)
+          8: { method: isotropic_TF }    # (2012, 2783)
+
+  TF_2:
+    # NO `transform:` key -- default dispatch, so the two roles below are
+    # actually consulted. See the header note and F9.
+    contours:
+      outer:
+        anchors:
+          1: { role: tf_support_inboard }   # (1036,-4094) moveTo
+          2: { role: tf_support_outboard }  # (1336,-4094)
+          3: { role: tf_support_outboard }  # (1336, 4094)
+          4: { role: tf_support_inboard }   # (1036, 4094)
+
+  VV:
+    contours:
+      outer:
+        anchors:
+          1: { role: vv_outer_inboard_bottom }  # (1900,-1986)
+          2: { role: vv_outer_cap          }  # (3631,-3717) cap corner, base z kept
+          3: { role: vv_outer_cap          }  # (3731,-3717) cap corner, base z kept
+          4: { role: vv_outer_outboard }        # (7447,-102) inserted, Tier 1
+          5: { role: vv_outer_outboard }        # (7447, 102) inserted, Tier 1
+          6: { role: vv_outer_cap          }  # (3731, 3717) cap corner, base z kept
+          7: { role: vv_outer_cap          }  # (3631, 3717) cap corner, base z kept
+          8: { role: vv_outer_inboard_top }     # (1900, 1986)
+      inner:
+        generation: variable_offset
+        reference: outer
+        inboard_param: VV_inboard_thick
+        outboard_param: VV_outboard_thick
+        # Session 26 Bug B/C fix, and load-bearing on CPD-4 (F8): derive each
+        # VV.inner arc midpoint from the arc's OWN moved endpoints rather than
+        # from the outer contour. CPD-4 arrives with Bug C pre-built -- VV.inner
+        # node 4 (x 7199 > R_base 4007) has its midpoint corrected by Step 6c
+        # while its exact mirror node 6 (x 3735) is skipped -- and the
+        # `_reapply_inner_affine_midpoints` mitigation requires BOTH
+        # generation == variable_offset AND this mode. It also keeps
+        # test_offbase_geometry's check_vv_inner_mirror armed, which returns
+        # clean (self-disables) on anything else.
+        arc_midpoint_mode: inner_affine
+
+  Shield:
+    # ONE contour, two faces. Plasma-facing face (nodes 2-11): the `shield_inner_*` roles. VV-facing face
+    # (nodes 1, 12-20): the `shield_outer_*` roles. Each face's nodes are chained to anchors of the SAME
+    # face, so no secondary spans the two.
+    contours:
+      outer:
+        generation: independent_anchors
+        anchors:
+          1:  { role: shield_outer_inboard_bottom }  # (2050,-1513) VV face, inboard bottom
+          20: { role: shield_outer_inboard_top }     # (2050, 1978) VV face, inboard top
+          15: { role: shield_outer_outboard }        # (6584,    3) VV face, outboard extreme
+          12: { role: shield_outer_outboard }        # (5176,-2819) VV face, outboard bottom tip
+          2:  { role: shield_inner_inboard_bottom }  # (2378,-1513) plasma face, inboard bottom
+          3:  { role: shield_inner_inboard_top }     # (2378, 1996) plasma face, inboard top
+          8:  { role: shield_inner_outboard }        # (6314,  335) plasma face, outboard extreme
+          11: { role: shield_inner_outboard }        # (4960,-2668) plasma face, outboard bottom end
+          5:  { role: shield_inner_cap }             # (3350, 3192) plasma-face cap, base z kept
+          6:  { role: shield_inner_cap }             # (4086, 3193) plasma-face cap, base z kept
+          17: { role: shield_outer_cap }             # (4194, 3420) VV-face cap, base z kept
+          18: { role: shield_outer_cap }             # (3242, 3435) VV-face cap, base z kept
+        secondaries:
+          4:  { method: arc_fraction, between: [3, 5] }    # (2722, 2835)
+          7:  { method: arc_fraction, between: [6, 8] }    # (5726, 2038)
+          9:  { method: arc_fraction, between: [8, 11] }   # (6072,-1253)
+          10: { method: arc_fraction, between: [8, 11] }   # (5938,-1545)
+          13: { method: arc_fraction, between: [12, 15] }  # (5850,-2168)
+          14: { method: arc_fraction, between: [12, 15] }  # (6491, -799)
+          16: { method: arc_fraction, between: [15, 17] }  # (5771, 2387)
+          19: { method: arc_fraction, between: [18, 20] }  # (2322, 2819)
+
+  Blanket:
+    # CPD-5's own ids. Plasma-facing face 2-17 (the plasma walls R -/+ a at 3/4 and 13/14 -- with D1b both
+    # pairs are vertical at base); Shield-facing face 18-27 and 1.
+    contours:
+      outer:
+        anchors:
+          1:  { role: shared_divertor_bottom_inboard }   # (2428,-1513) Shield-side inboard bottom: x tracks Shield_inner + gap
+          2:  { role: shared_divertor_top_inboard }      # (2778,-1513) plasma-side inboard bottom: x tracks R - a
+          3:  { role: plasma_inboard_bottom }            # (2735,-1194) R - a
+          4:  { role: plasma_inboard_top }               # (2735, 1566) R - a
+          13: { role: plasma_outboard_top }              # (5279,  440) R + a
+          14: { role: plasma_outboard_bottom }           # (5279, -217) R + a (D1b)
+          17: { role: shared_divertor_outboard_top }     # (4071,-2076) bottom V, plasma side: x tracks R + a
+          18: { role: shared_divertor_outboard_bottom }  # (4845,-2615) bottom V, Shield side: x tracks R + a
+          24: { role: blanket_outer_cap }                # (3773, 3182) outer-face cap, base z kept
+          25: { role: blanket_outer_cap }                # (3194, 3101) outer-face cap, base z kept
+        secondaries:
+          5:  { method: relative_offset, parent: 4 }   # (2743, 1703)
+          6:  { method: relative_offset, parent: 4 }   # (2891, 2379)
+          7:  { method: relative_offset, parent: 4 }   # (2981, 2480)
+          8:  { method: relative_offset, parent: 4 }   # (3235, 2590)
+          9:  { method: relative_offset, parent: 4 }   # (3370, 2603)
+          10: { method: relative_offset, parent: 4 }   # (3636, 2529)
+          11: { method: relative_offset, parent: 13 }  # (4541, 1893)
+          12: { method: relative_offset, parent: 13 }  # (5110, 1110)
+          15: { method: relative_offset, parent: 14 }  # (5197, -660)
+          16: { method: relative_offset, parent: 14 }  # (4756,-1440)
+          19: { method: arc_fraction, between: [18, 24] }  # (5841,-1500)
+          20: { method: arc_fraction, between: [18, 24] }  # (5976,-1208)
+          21: { method: arc_fraction, between: [18, 24] }  # (6232,  -85) outboard extreme
+          22: { method: arc_fraction, between: [18, 24] }  # (6014, 1255)
+          23: { method: arc_fraction, between: [18, 24] }  # (4841, 2821)
+          26: { method: arc_fraction, between: [25, 27] }  # (2486, 2375)
+          27: { method: relative_offset, parent: 1 }       # (2428, 2014)
+
+  Divertor:
+    # D2-D4: the Divertor shares no node with the Blanket. It FOLLOWS BY DISPLACEMENT (Step 6l): each node
+    # moves by the displacement of what it is tied to, P1 = P0 + d, so its base relationship -- 20 mm to the
+    # Shield and Blanket, parallel to the Blanket's line 17->18, about 5 mm to the VV -- stays exactly as
+    # extracted. Every node is in exactly one group; a node's arc midpoint (the arc ending at it) moves with it.
+    contours:
+      outer:
+        generation: displacement_follow
+        groups:
+          top:
+            # D3(a): the top inboard edge and the dome follow the Shield and Blanket inboard bottoms -- the
+            # common dz of the four bottom corners (Step 6l refuses if they differ); node 1's x from the VV
+            # wall (C7); nodes 17, 18 (and the dome arc 17->18) with Blanket node 2.
+            nodes: [1, 17, 18]
+            corners: [[Shield, outer, 1], [Shield, outer, 2], [Blanket, outer, 1], [Blanket, outer, 2]]
+            wall_node: 1
+            dome_reference: [Blanket, outer, 2]
+          slanted:
+            # D3(b): the slanted outboard edge 6->7 and the arc 7->8 follow the Blanket's line 17->18 as a
+            # rigid frame at Blanket node 17 (rotation included, C5), so they stay parallel at the same distance.
+            nodes: [6, 7, 8]
+            frame: [Blanket, outer, 17, 18]
+          bottom:
+            # D3(c), D4: the bottom follows the VV.inner wall. Nodes 2, 3, 4 sit over VV.inner nodes 1, 2, 3:
+            # each keeps its offset from BOTH wall segments meeting there (the exact corner rule -- exact even
+            # when Step 6c turns one of them). Node 5 and the arcs 2->3, 4->5 keep their place along the
+            # nearest wall segment and their signed offset along its normal.
+            nodes: [2, 3, 4, 5]
+            wall: [VV, inner]
+            corner_nodes: {2: 1, 3: 2, 4: 3}
+          interior:
+            # Nodes 9-16 (and the arcs 8->9, 12->13): the affine field through nodes 17, 8 and 4 (C8).
+            nodes: [9, 10, 11, 12, 13, 14, 15, 16]
+            affine_through: [17, 8, 4]
+
+pf_coils:
+  # TOP-LEVEL key -- read by pf_placement.place_pf_coils at propagator Step 7.
+  PF_1: { category: tf_bounded }
+  PF_2: { category: tf_bounded }
+  PF_3: { category: tf_bounded }
+  PF_4: { category: tf_bounded }
+  PF_5: { category: tf_bounded }
+  PF_6: { category: tf_bounded }
+
+shared_boundaries: []
+# None: CPD-5's Divertor shares no node with the Blanket or the Shield (it follows by
+# displacement, Step 6l), and its Shield has no inner contour.
