@@ -1,0 +1,6 @@
+-r requirements-repro.txt
+PyYAML==6.0.3
+h5py==3.16.0
+# Use the exact FreeGS source archive in input/CPD_5/freegs-source.zip.
+# Extract it and add the containing directory to PYTHONPATH; the package version
+# alone omits local solver changes. See input/CPD_5/runtime.json.

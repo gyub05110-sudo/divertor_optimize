@@ -1,0 +1,12 @@
+{
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "shapely": "2.1.2",
+    "matplotlib": "3.10.8",
+    "PyYAML": "6.0.3",
+    "h5py": "3.16.0",
+    "freegs": "0.8.3.dev54+g9fbec2056"
+  }
+}

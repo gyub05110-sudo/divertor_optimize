@@ -1,0 +1,40 @@
+{
+  "status": "validated_for_frozen_transport",
+  "failures": [],
+  "metrics": {
+    "coarse_grid": [
+      65,
+      65
+    ],
+    "fine_grid": [
+      129,
+      129
+    ],
+    "near_separatrix_samples": 7624,
+    "Bp_p95_relative_difference": 0.0031746783622123896,
+    "Bp_max_absolute_difference_T": 0.0004031729650923061,
+    "psiN_max_difference": 0.00030097063441125727,
+    "lcfs_hausdorff_m": 0.0003375819873567685,
+    "lcfs_area_relative_difference": 9.19233609719683e-06,
+    "axis_displacement_m": 7.624980573204365e-05,
+    "xpoint_displacement_m": 0.00023784692732674176,
+    "coil_max_change_relative_to_max_current": 0.006825883205392048
+  },
+  "thresholds": {
+    "Bp_p95_relative_difference": 0.01,
+    "Bp_max_absolute_difference_T": 0.002,
+    "psiN_max_difference": 0.002,
+    "lcfs_hausdorff_m": 0.002,
+    "lcfs_area_relative_difference": 0.01,
+    "axis_displacement_m": 0.002,
+    "xpoint_displacement_m": 0.001,
+    "coil_max_change_relative_to_max_current": 0.05
+  },
+  "coarse_field_sha256": "67f91b170b430cf44b63f5ee72a6eeb166f05f2d5c602fe39af9ad11b2d91f32",
+  "frozen_field_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+  "limitations": [
+    "No winding electrical turn counts or engineering current-density limits supplied; currents are total ampere-turns.",
+    "D3D betaN convention is approximated by the documented vacuum-reference definition.",
+    "Grid comparison supports this prescribed equilibrium and is not a proof of continuum accuracy."
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "status": "validated_for_frozen_transport",
+  "inputs": {
+    "Ip_A": 1388124.0684837103,
+    "Bt_T": 2.0775122210482637,
+    "betaN": 0.6166043877601624,
+    "R0_m": 4.007,
+    "a_reference_m": 1.272,
+    "alpha_m": 1.0,
+    "alpha_n": 2.0,
+    "D3D_time_ms": 1400.0,
+    "D3D_bcoil_kA": 123.78460159301758,
+    "D3D_Raxis_m": 1.715993046760559,
+    "D3D_tf_turns": 144,
+    "betaN_definition": "100 * (2 mu0 volume-average pressure / Bt_reference_T^2) * measured_a_LCFS * Bt_reference_T / Ip_MA; approximate D3D operating match, EFIT convention not fully known"
+  },
+  "target": {
+    "xpoint_m": [
+      3.55,
+      -1.8
+    ],
+    "isoflux_points_m": [
+      [
+        2.9,
+        0.0
+      ],
+      [
+        5.1,
+        0.0
+      ],
+      [
+        3.55,
+        1.6
+      ],
+      [
+        4.7,
+        1.1
+      ]
+    ],
+    "domain_m": [
+      1.65,
+      7.6,
+      -4.1,
+      4.1
+    ],
+    "rationale": "Geometry-derived lower single null; 0.165/0.179m midplane blanket gaps; upper top (3.55,1.60) and shoulder (4.70,1.10) chosen after taller diagnostic targets produced upper-limiting topology; no input Plasma contour used."
+  },
+  "metrics": {
+    "Ip_A": 1388124.0684837103,
+    "Ip_relative_error": 0.0,
+    "betaN": 0.6165853348003117,
+    "betaN_relative_error": 3.0899812308859964e-05,
+    "betaN_FreeGS": 0.5934567242014999,
+    "paxis_Pa": 46500.29070003852,
+    "axis_m": [
+      4.089812245034987,
+      0.08716666875474686
+    ],
+    "xpoints": [
+      [
+        3.5500053325847216,
+        -1.7999974217592971,
+        1.163511314785338
+      ],
+      [
+        3.5152072132647265,
+        2.0542586264477523,
+        1.0990216646353925
+      ],
+      [
+        6.584585428271358,
+        0.3898071850479555,
+        0.07231306001947894
+      ]
+    ],
+    "psi_axis": 2.344357157181951,
+    "psi_lcfs": 1.163511314785338,
+    "lower_single_null": true,
+    "lcfs_valid_polygon": true,
+    "lcfs_bounds": [
+      2.8995155568405853,
+      -1.7943969803712132,
+      5.108247917641962,
+      1.6501440086116512
+    ],
+    "minor_radius_m": 1.1043519105110444,
+    "pressure_average_Pa": 6406.454059342804,
+    "xpoint_target_distance_m": 5.9231566700018246e-06,
+    "material_overlap_area_m2": {
+      "Blanket": 0.0,
+      "Divertor": 0.0,
+      "Shield": 0.0,
+      "VV": 0.0
+    },
+    "material_clearance_m": {
+      "Blanket": 0.1645155568405854,
+      "Divertor": 0.42331698484288866,
+      "Shield": 0.5215155568405851,
+      "VV": 0.8495155568405854
+    },
+    "frozen_field_parity": {
+      "samples": 775,
+      "max_Bp_absolute_error_T": 3.0680785348265957e-07,
+      "p95_Bp_relative_error_away_from_null": 8.39296499998124e-07
+    }
+  },
+  "coils": {
+    "OH_Solenoid": {
+      "outline_m": [
+        [
+          0.762,
+          -3.994
+        ],
+        [
+          1.016,
+          -3.994
+        ],
+        [
+          1.016,
+          3.994
+        ],
+        [
+          0.762,
+          3.994
+        ]
+      ],
+      "model": "101 axial filaments normalized to total ampere-turns at mean OH radius",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": -488612.84813448903
+    },
+    "PF_1": {
+      "outline_m": [
+        [
+          2.173,
+          4.574
+        ],
+        [
+          2.523,
+          4.574
+        ],
+        [
+          2.523,
+          4.942
+        ],
+        [
+          2.173,
+          4.942
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": 4932037.442474341
+    },
+    "PF_2": {
+      "outline_m": [
+        [
+          8.083,
+          2.3970000000000002
+        ],
+        [
+          8.433,
+          2.3970000000000002
+        ],
+        [
+          8.433,
+          2.715
+        ],
+        [
+          8.083,
+          2.715
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": -4661428.2876772415
+    },
+    "PF_3": {
+      "outline_m": [
+        [
+          8.656,
+          1.036
+        ],
+        [
+          8.956,
+          1.036
+        ],
+        [
+          8.956,
+          1.3760000000000001
+        ],
+        [
+          8.656,
+          1.3760000000000001
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": 4573370.2751833685
+    },
+    "PF_4": {
+      "outline_m": [
+        [
+          8.0,
+          -2.882
+        ],
+        [
+          8.3,
+          -2.882
+        ],
+        [
+          8.3,
+          -2.582
+        ],
+        [
+          8.0,
+          -2.582
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": -3000453.972482406
+    },
+    "PF_5": {
+      "outline_m": [
+        [
+          3.975,
+          -5.168
+        ],
+        [
+          4.325,
+          -5.168
+        ],
+        [
+          4.325,
+          -4.908
+        ],
+        [
+          3.975,
+          -4.908
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": 1225127.8325945162
+    },
+    "PF_6": {
+      "outline_m": [
+        [
+          1.724,
+          -4.819
+        ],
+        [
+          2.263,
+          -4.819
+        ],
+        [
+          2.263,
+          -4.311
+        ],
+        [
+          1.724,
+          -4.311
+        ]
+      ],
+      "model": "FreeGS ShapedCoil, six quadrature points per triangle",
+      "effective_turns": 1,
+      "electrical_turns": null,
+      "total_ampere_turns": 5334071.89066028
+    }
+  },
+  "history": [
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 1e-07,
+      "blend": 0.65,
+      "Ip_A": 1388124.0684837098,
+      "iterations": 32,
+      "psi_relative_change": 0.001971779474767876
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 1e-07,
+      "blend": 0.65,
+      "Ip_A": 1388124.0684837103,
+      "iterations": 189,
+      "psi_relative_change": 0.0019910438016416
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 3e-08,
+      "blend": 0.55,
+      "Ip_A": 1388124.0684837103,
+      "iterations": 37,
+      "psi_relative_change": 0.0019860285188448923
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 1e-08,
+      "blend": 0.45,
+      "Ip_A": 1388124.0684837105,
+      "iterations": 15,
+      "psi_relative_change": 0.0017991383494943532
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 3e-09,
+      "blend": 0.35,
+      "Ip_A": 1388124.06848371,
+      "iterations": 2,
+      "psi_relative_change": 0.001361303871733847
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46283.0,
+      "gamma": 1e-09,
+      "blend": 0.25,
+      "Ip_A": 1388124.0684837103,
+      "iterations": 16,
+      "psi_relative_change": 2.605867567784216e-05
+    },
+    {
+      "n": 129,
+      "paxis_Pa": 46500.29070003853,
+      "gamma": 1e-09,
+      "blend": 0.35,
+      "Ip_A": 1388124.0684837103,
+      "iterations": 5,
+      "psi_relative_change": 1.6337545443720256e-05
+    }
+  ],
+  "grid_order": "psi[Z,R]",
+  "field_convention": "Br=-dpsi/dZ/R; Bz=dpsi/dR/R; SOL Bphi=fvac/R",
+  "source_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+  "freegs_source": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs\\freegs\\__init__.py",
+  "frozen_field_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+  "pressure_fit_iteration": 1,
+  "pressure_fit_converged": true,
+  "refinement_validation": {
+    "status": "validated_for_frozen_transport",
+    "failures": [],
+    "metrics": {
+      "coarse_grid": [
+        65,
+        65
+      ],
+      "fine_grid": [
+        129,
+        129
+      ],
+      "near_separatrix_samples": 7624,
+      "Bp_p95_relative_difference": 0.0031746783622123896,
+      "Bp_max_absolute_difference_T": 0.0004031729650923061,
+      "psiN_max_difference": 0.00030097063441125727,
+      "lcfs_hausdorff_m": 0.0003375819873567685,
+      "lcfs_area_relative_difference": 9.19233609719683e-06,
+      "axis_displacement_m": 7.624980573204365e-05,
+      "xpoint_displacement_m": 0.00023784692732674176,
+      "coil_max_change_relative_to_max_current": 0.006825883205392048
+    },
+    "thresholds": {
+      "Bp_p95_relative_difference": 0.01,
+      "Bp_max_absolute_difference_T": 0.002,
+      "psiN_max_difference": 0.002,
+      "lcfs_hausdorff_m": 0.002,
+      "lcfs_area_relative_difference": 0.01,
+      "axis_displacement_m": 0.002,
+      "xpoint_displacement_m": 0.001,
+      "coil_max_change_relative_to_max_current": 0.05
+    },
+    "coarse_field_sha256": "67f91b170b430cf44b63f5ee72a6eeb166f05f2d5c602fe39af9ad11b2d91f32",
+    "frozen_field_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+    "limitations": [
+      "No winding electrical turn counts or engineering current-density limits supplied; currents are total ampere-turns.",
+      "D3D betaN convention is approximated by the documented vacuum-reference definition.",
+      "Grid comparison supports this prescribed equilibrium and is not a proof of continuum accuracy."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "path": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+  "sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+  "source": "DIII-D",
+  "time_ms": 1400.0,
+  "efit_index": 60,
+  "columns": [
+    "source",
+    "magnetics_plasma_current",
+    "magnetics_plasma_current_times",
+    "magnetics_bcoil",
+    "magnetics_time",
+    "efit_times",
+    "efit_beta_n",
+    "efit_r_axis"
+  ],
+  "values": {
+    "Ip_A": 1388124.0684837103,
+    "D3D_bcoil_kA": 123.78460159301758,
+    "betaN": 0.6166043877601624,
+    "D3D_Raxis_m": 1.715993046760559
+  },
+  "values_verified": true,
+  "magnetics_sampling": "Linear interpolation at 1400ms on each signal time base",
+  "EFIT_sampling": "Exact frame index 60 at 1400ms",
+  "units": {
+    "magnetics_plasma_current": "kA",
+    "magnetics_bcoil": "kA",
+    "times": "ms",
+    "efit_r_axis": "m",
+    "efit_beta_n": "dimensionless normalized beta"
+  },
+  "Bt_formula": "2e-7 * 144 * bcoil_kA * 1000 / D3D_Raxis_m; same Bt at CPD reference R0=4.007m",
+  "units_document": {
+    "path": "C:\\Users\\FPL-user\\Desktop\\LAB\\NEW AutoFRD\\freegs_divertor\\input\\D3D\\HOW_TO_VIEW.md",
+    "sha256": "8326e03854f6ac71e29bfa2814d80019f9eaca580bbfeeeb2e7b2ca45ed20230",
+    "verified_unit_statements": [
+      "All time axes in ms",
+      "magnetics_plasma_current in kA",
+      "magnetics_bcoil in kA",
+      "efit_r_axis in m"
+    ]
+  }
+}

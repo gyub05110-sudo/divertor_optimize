@@ -1,0 +1,183 @@
+{
+  "IMP": {
+    "metadata": {
+      "source": "IMP",
+      "source_RZ_m": [
+        2.8998230519989665,
+        0.08716666875474686
+      ],
+      "source_support_m": 0.1,
+      "count": 640,
+      "path_step_m": 0.0005,
+      "wall_step_m": 0.0005,
+      "arc_step_m": 0.0005,
+      "max_path_m": 30.0,
+      "quadrature": 256,
+      "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+      "geometry_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "independent_source": true,
+      "diagnostic_equilibrium": false,
+      "path_cache_reused": false,
+      "preparation_seconds": 42.23110229987651
+    },
+    "result": {
+      "feasible": true,
+      "errors": [],
+      "elapsed_seconds": 13.688863799907267,
+      "peak_MW_m2": 3.4530967923602502,
+      "peak_RZ_m": [
+        2.9243797948929093,
+        -2.186621324495105
+      ],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500626e-16
+      },
+      "area_90_m2": 0.5829996993784287,
+      "effective_area_m2": 0.28959512580488156,
+      "divertor_first_hit_power_fraction": 1.0,
+      "thermal": {
+        "resolved_power_fraction": 1.0,
+        "cold_target_power_fraction": 0.032347573342756404,
+        "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+        "weak_conduction_power_fraction": 0.0,
+        "sigma_above_0p3_lambda_power_fraction": 0.3995600887095282,
+        "Tu_eV": {
+          "min": 0.007040423250880402,
+          "max": 215.7527287961987,
+          "power_weighted_mean": 132.40533395755028
+        },
+        "Tt_eV": {
+          "min": 2.0175185073249106e-18,
+          "max": 196.23231201093046,
+          "power_weighted_mean": 112.72148950273561
+        },
+        "nt_m3": {
+          "min": 5.353708936493431e+18,
+          "max": 1.7448224701084686e+34,
+          "power_weighted_mean": 4.330224704700032e+20
+        },
+        "sigma_m": {
+          "min": 0.0004299009384119394,
+          "max": 193.9624197461162,
+          "power_weighted_mean": 0.0013031037006158174
+        },
+        "length_m": {
+          "min": 30.239266099716502,
+          "max": 197.9218306641895,
+          "power_weighted_mean": 82.88601736777055
+        },
+        "conduction_relative_residual": 4.736672218924904e-15,
+        "sheath_relative_residual": 2.883400368142976e-14
+      },
+      "per_loop_power": {
+        "1": 0.9999999999999996
+      },
+      "diagnostic_equilibrium": false,
+      "divertor_front_power_fraction": 0.9999995288273424,
+      "divertor_rear_and_top_cap_power_fraction": 4.7117265665464503e-07
+    }
+  },
+  "OMP": {
+    "metadata": {
+      "source": "OMP",
+      "source_RZ_m": [
+        5.107008331403053,
+        0.08716666875474686
+      ],
+      "source_support_m": 0.1,
+      "count": 640,
+      "path_step_m": 0.0005,
+      "wall_step_m": 0.0005,
+      "arc_step_m": 0.0005,
+      "max_path_m": 30.0,
+      "quadrature": 256,
+      "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+      "geometry_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "independent_source": true,
+      "diagnostic_equilibrium": false,
+      "path_cache_reused": false,
+      "preparation_seconds": 49.601045900024474
+    },
+    "result": {
+      "feasible": true,
+      "errors": [],
+      "elapsed_seconds": 25.768168699927628,
+      "peak_MW_m2": 2.256565033697946,
+      "peak_RZ_m": [
+        3.7816303590536196,
+        -2.1596898534972695
+      ],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 1.0,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 0.0
+      },
+      "area_90_m2": 0.8668306054260272,
+      "effective_area_m2": 0.44315142044067307,
+      "divertor_first_hit_power_fraction": 0.9999999999992969,
+      "thermal": {
+        "resolved_power_fraction": 1.0,
+        "cold_target_power_fraction": 0.05444550596932665,
+        "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+        "weak_conduction_power_fraction": 0.0,
+        "sigma_above_0p3_lambda_power_fraction": 0.5092885621875385,
+        "Tu_eV": {
+          "min": 0.005368941265192156,
+          "max": 153.56951871177927,
+          "power_weighted_mean": 93.16986196742229
+        },
+        "Tt_eV": {
+          "min": 1.0075339174192935e-18,
+          "max": 121.89017221001343,
+          "power_weighted_mean": 68.65330275705358
+        },
+        "nt_m3": {
+          "min": 5.839563192540057e+18,
+          "max": 2.664397283490074e+34,
+          "power_weighted_mean": 7.011065163442804e+20
+        },
+        "sigma_m": {
+          "min": 0.0005223926465107942,
+          "max": 227.19518879242887,
+          "power_weighted_mean": 0.0013828550061270226
+        },
+        "length_m": {
+          "min": 23.967439304960912,
+          "max": 182.62528647706316,
+          "power_weighted_mean": 67.87382009628135
+        },
+        "conduction_relative_residual": 4.9436911325754986e-15,
+        "sheath_relative_residual": 1.5900050586176034e-14
+      },
+      "per_loop_power": {
+        "1": 0.999999999999297,
+        "2": 7.029692145839788e-13
+      },
+      "diagnostic_equilibrium": false,
+      "divertor_front_power_fraction": 0.9999993114318233,
+      "divertor_rear_and_top_cap_power_fraction": 6.885674729548292e-07
+    }
+  }
+}

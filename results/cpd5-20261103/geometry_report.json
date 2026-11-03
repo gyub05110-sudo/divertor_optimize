@@ -1,0 +1,222 @@
+{
+  "source": "D:\\DivertorOptimization\\repositories\\divertor_optimize\\input\\CPD_5\\CPD_5_nodes.yaml",
+  "source_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+  "units": "m",
+  "arc_max_chord_m": 0.005,
+  "solids": {
+    "Blanket": {
+      "valid": true,
+      "area_m2": 7.963380828605172,
+      "bounds_m": [
+        2.4279779918474222,
+        -2.615,
+        6.232269521331549,
+        3.186709496073904
+      ],
+      "area_change_at_half_chord_m2": 6.495972192155364e-06,
+      "boundary_hausdorff_at_half_chord_m": 2.786040852676959e-06
+    },
+    "Divertor": {
+      "valid": true,
+      "area_m2": 3.048435569022427,
+      "bounds_m": [
+        2.055,
+        -3.5600108159636172,
+        4.523,
+        -1.5330000000000001
+      ],
+      "area_change_at_half_chord_m2": 1.104254339612254e-05,
+      "boundary_hausdorff_at_half_chord_m": 9.970231011934203e-06
+    },
+    "Shield": {
+      "valid": true,
+      "area_m2": 3.7463027053953133,
+      "bounds_m": [
+        2.05,
+        -2.819,
+        6.584277554488402,
+        3.4832425241909712
+      ],
+      "area_change_at_half_chord_m2": 2.7722165940602395e-07,
+      "boundary_hausdorff_at_half_chord_m": 2.6266127875875748e-06
+    },
+    "VV": {
+      "valid": true,
+      "area_m2": 3.482702550776029,
+      "bounds_m": [
+        1.9000000000000001,
+        -3.717,
+        7.449,
+        3.717
+      ],
+      "area_change_at_half_chord_m2": 5.922858647977591e-08,
+      "boundary_hausdorff_at_half_chord_m": 2.0246214278865335e-06
+    }
+  },
+  "divertor_gaps": {
+    "Divertor--Blanket": {
+      "distance_m": 0.019432629712290594,
+      "nearest_points_m": [
+        [
+          4.239940940451189,
+          -2.21732780624205
+        ],
+        [
+          4.251046071442048,
+          -2.201380920552021
+        ]
+      ]
+    },
+    "Divertor--Shield": {
+      "distance_m": 0.020000000000000018,
+      "nearest_points_m": [
+        [
+          2.055,
+          -1.5330000000000001
+        ],
+        [
+          2.055,
+          -1.5130000000000001
+        ]
+      ]
+    },
+    "Divertor--VV": {
+      "distance_m": 0.0047568126838170716,
+      "nearest_points_m": [
+        [
+          4.523,
+          -3.47
+        ],
+        [
+          4.524085124540345,
+          -3.474631389817416
+        ]
+      ]
+    }
+  },
+  "vacuum": {
+    "type": "Polygon",
+    "valid": true,
+    "connected_chamber_contains_4_0": true,
+    "holes": 2
+  },
+  "divertor_faces": [
+    {
+      "face_id": "Divertor.outer:1->2",
+      "operation": "lineTo",
+      "sampled_length_m": 0.494,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:2->3",
+      "operation": "threePointArc",
+      "sampled_length_m": 2.4090375698746387,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:3->4",
+      "operation": "lineTo",
+      "sampled_length_m": 0.1459999999999999,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:4->5",
+      "operation": "threePointArc",
+      "sampled_length_m": 0.7949124364178859,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:5->6",
+      "operation": "lineTo",
+      "sampled_length_m": 1.0550000000000002,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:6->7",
+      "operation": "lineTo",
+      "sampled_length_m": 0.32040287139786977,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:7->8",
+      "operation": "threePointArc",
+      "sampled_length_m": 0.32787278395920594,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:8->9",
+      "operation": "threePointArc",
+      "sampled_length_m": 0.8177802789997638,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:9->10",
+      "operation": "lineTo",
+      "sampled_length_m": 0.5018386194784135,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:10->11",
+      "operation": "lineTo",
+      "sampled_length_m": 0.30520321099228304,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:11->12",
+      "operation": "lineTo",
+      "sampled_length_m": 0.13168523075880592,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:12->13",
+      "operation": "threePointArc",
+      "sampled_length_m": 0.4380873307613846,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:13->14",
+      "operation": "lineTo",
+      "sampled_length_m": 0.06129437168288778,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:14->15",
+      "operation": "lineTo",
+      "sampled_length_m": 0.061846584384264755,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:15->16",
+      "operation": "lineTo",
+      "sampled_length_m": 0.23224340679554267,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:16->17",
+      "operation": "lineTo",
+      "sampled_length_m": 0.373357737297622,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:17->18",
+      "operation": "threePointArc",
+      "sampled_length_m": 0.8220045165835403,
+      "closing_face": false
+    },
+    {
+      "face_id": "Divertor.outer:18->1",
+      "operation": "lineTo",
+      "sampled_length_m": 0.7290000000000001,
+      "closing_face": true
+    }
+  ],
+  "interpretation": [
+    "All contours close only within their source component, using the implicit last-to-first edge.",
+    "Anchors identify slanted Divertor 6->7->8, interior 8->...->17, and dome 17->18 as the likely plasma-facing chain. This is geometric identification, not a strike prediction.",
+    "Divertor 1->2->3->4->5 faces the vessel; 5->6 and 18->1 are material end faces and remain collision surfaces.",
+    "Inboard 20 mm slot and slanted Blanket/Divertor slot remain open; detached backside vacuum communicates with the chamber.",
+    "The supplied VV.inner contour is closed. No physical vacuum closure across Blanket/Divertor endpoints is invented.",
+    "Three-dimensional ports are not represented by the supplied axisymmetric contours.",
+    "Anchor displacement groups define follow-motion, not an independent admissible optimization range; optimizer must enforce anchors and explicit design bounds."
+  ]
+}

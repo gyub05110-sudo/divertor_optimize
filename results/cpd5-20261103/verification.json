@@ -1,0 +1,15 @@
+{
+  "test_command": "python -m pytest verification -q",
+  "passed": 401,
+  "skipped": 1,
+  "elapsed_seconds": 50.50,
+  "existing_tracked_files_modified_from_aa22063": 0,
+  "independent_reviews": ["geometry and disconnected transport", "curved deformation and evaluator", "campaign deadlines, checkpoint consistency and qualification"],
+  "smoke_requested_seconds": 20,
+  "smoke_actual_campaign_seconds": 18.079061100259423,
+  "smoke_status": "time_expired_without_qualification",
+  "smoke_deadline_overrun_seconds": 0,
+  "smoke_interpretation": "Deliberately short runner test; no qualified optimization improvement claimed.",
+  "source_archives_and_frozen_field_hashes_verified": true,
+  "full_campaign_completed": false
+}
