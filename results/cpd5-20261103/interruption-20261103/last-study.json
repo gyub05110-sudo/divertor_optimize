@@ -1,0 +1,643 @@
+{
+  "status": "searching",
+  "campaign_started": true,
+  "created_utc": "2026-11-03T03:19:32.885425+00:00",
+  "requested_seconds": 10800.0,
+  "qualification_reserve_seconds": 900.0,
+  "seed": 20261103,
+  "search_count": 160,
+  "qualification_counts": [
+    320,
+    640
+  ],
+  "numerical_settings": {
+    "160": {
+      "path_step": 0.002,
+      "wall_step": 0.003,
+      "arc_step": 0.003,
+      "quadrature": 64
+    },
+    "320": {
+      "path_step": 0.001,
+      "wall_step": 0.001,
+      "arc_step": 0.001,
+      "quadrature": 128
+    },
+    "640": {
+      "path_step": 0.0005,
+      "wall_step": 0.0005,
+      "arc_step": 0.0005,
+      "quadrature": 256
+    }
+  },
+  "independent_sources": true,
+  "sources": {
+    "IMP": {
+      "metadata": {
+        "source": "IMP",
+        "source_RZ_m": [
+          2.8998230519989665,
+          0.08716666875474686
+        ],
+        "source_support_m": 0.1,
+        "count": 160,
+        "path_step_m": 0.002,
+        "wall_step_m": 0.003,
+        "arc_step_m": 0.003,
+        "max_path_m": 30.0,
+        "quadrature": 64,
+        "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+        "geometry_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+        "reference": {
+          "power_W": 1000000.0,
+          "density_m3": 1e+19,
+          "chi_perp_m2_s": 0.3,
+          "lambda_q_m": 0.003,
+          "gamma": 7.0,
+          "kappa0": 2000.0
+        },
+        "independent_source": true,
+        "diagnostic_equilibrium": false,
+        "path_cache_reused": true,
+        "preparation_seconds": 1.0507653001695871
+      },
+      "baseline": {
+        "feasible": true,
+        "errors": [],
+        "elapsed_seconds": 0.8826516000553966,
+        "peak_MW_m2": 3.4533252023972967,
+        "peak_RZ_m": [
+          2.92438107085803,
+          -2.186617451708332
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 1.0000000000000004,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "area_90_m2": 0.5863946599676523,
+        "effective_area_m2": 0.2895759713871723,
+        "divertor_first_hit_power_fraction": 1.0,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.033446006240782485,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.0,
+          "sigma_above_0p3_lambda_power_fraction": 0.38583858732203796,
+          "Tu_eV": {
+            "min": 0.007364695428150873,
+            "max": 214.2721097871391,
+            "power_weighted_mean": 132.37915196313756
+          },
+          "Tt_eV": {
+            "min": 2.517112008944646e-18,
+            "max": 196.18838878065182,
+            "power_weighted_mean": 112.69452888718516
+          },
+          "nt_m3": {
+            "min": 5.353813537329661e+18,
+            "max": 1.4629256469279416e+34,
+            "power_weighted_mean": 4.3526854782679436e+20
+          },
+          "sigma_m": {
+            "min": 0.00043005655760629973,
+            "max": 183.50823745636947,
+            "power_weighted_mean": 0.0013035961919517583
+          },
+          "length_m": {
+            "min": 30.303641742611152,
+            "max": 164.35519580969736,
+            "power_weighted_mean": 82.86118153327864
+          },
+          "conduction_relative_residual": 4.0657533200843865e-15,
+          "sheath_relative_residual": 2.2297233519228992e-14
+        },
+        "per_loop_power": {
+          "1": 1.0000000000000004
+        },
+        "diagnostic_equilibrium": false,
+        "divertor_front_power_fraction": 0.9999995274967935,
+        "divertor_rear_and_top_cap_power_fraction": 4.725032071144972e-07
+      },
+      "baseline_acceptance_reasons": [],
+      "evaluations": 1845,
+      "accepted_updates": 241,
+      "qualification": {
+        "completed": false,
+        "qualified_improvement": false,
+        "reasons": [
+          "qualification_incomplete"
+        ]
+      },
+      "qualification_rows": {},
+      "baseline_artifact": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h\\baseline-IMP-160.npz",
+      "best_coefficients": [
+        -0.1,
+        -0.1,
+        0.1,
+        -0.1,
+        -0.058285615086585064,
+        0.1,
+        0.06574764962187232,
+        -0.1,
+        -0.009095400850886382,
+        0.040009255839822046,
+        0.01067309996011824,
+        -0.05085984518157457,
+        -0.008432612950651843,
+        0.006755756598808893,
+        0.007407861198856782,
+        -0.008488791362366747,
+        -0.033902778395975275,
+        -0.01401169662712692,
+        -0.04004890690641394,
+        -0.040212188301128535,
+        -0.002,
+        -0.0045000000000000005,
+        0.00025,
+        0.0005,
+        0.0025,
+        -0.00075,
+        0.0,
+        0.0025,
+        -0.00717325052341981,
+        -0.05190001633185818,
+        0.014633443486691076,
+        0.0214940806855011,
+        -0.06917065956876779,
+        -0.07956012729583538,
+        -0.05492267350874634,
+        0.05597204896488607,
+        -0.04350621774496468,
+        -0.1,
+        -0.1,
+        -0.05071445481701651
+      ],
+      "deformation_basis": {
+        "type": "cubic B-spline normal displacement per original face",
+        "knots": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "active_coefficients_per_face": 4,
+        "fixed_coefficients": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "coefficient_bound_m": 0.1,
+        "original_endpoints_and_tangents_fixed": true,
+        "globally_C1": false,
+        "fixed_faces": [
+          "Divertor.outer:1->2",
+          "Divertor.outer:2->3",
+          "Divertor.outer:3->4",
+          "Divertor.outer:4->5",
+          "Divertor.outer:5->6",
+          "Divertor.outer:6->7",
+          "Divertor.outer:7->8",
+          "Divertor.outer:18->1"
+        ],
+        "selected_faces": [
+          "Divertor.outer:8->9",
+          "Divertor.outer:9->10",
+          "Divertor.outer:10->11",
+          "Divertor.outer:11->12",
+          "Divertor.outer:12->13",
+          "Divertor.outer:13->14",
+          "Divertor.outer:14->15",
+          "Divertor.outer:15->16",
+          "Divertor.outer:16->17",
+          "Divertor.outer:17->18"
+        ],
+        "max_length_ratio": 1.2,
+        "dome_policy": "17->18 interior movable; anchor node positions and tangents fixed",
+        "min_curvature_radius_m": 0.02
+      },
+      "best_search": {
+        "feasible": true,
+        "errors": [],
+        "elapsed_seconds": 1.2817943999543786,
+        "peak_MW_m2": 1.858005261450256,
+        "peak_RZ_m": [
+          2.9816970151844515,
+          -2.1505412191500772
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999997,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 3.3306690738754696e-16
+        },
+        "area_90_m2": 1.0427746374134257,
+        "effective_area_m2": 0.5382116083026885,
+        "divertor_first_hit_power_fraction": 1.0,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.033446006240782485,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.0,
+          "sigma_above_0p3_lambda_power_fraction": 0.38583858732203796,
+          "Tu_eV": {
+            "min": 0.007156373063704455,
+            "max": 211.7687106960401,
+            "power_weighted_mean": 130.71488304138927
+          },
+          "Tt_eV": {
+            "min": 2.582661559704647e-18,
+            "max": 193.29916719258304,
+            "power_weighted_mean": 110.79815560662271
+          },
+          "nt_m3": {
+            "min": 5.366059422027577e+18,
+            "max": 1.3854647421404407e+34,
+            "power_weighted_mean": 4.168754856486311e+20
+          },
+          "sigma_m": {
+            "min": 0.00042556935003245755,
+            "max": 177.9650388600565,
+            "power_weighted_mean": 0.0012590219585506864
+          },
+          "length_m": {
+            "min": 27.36056123738329,
+            "max": 163.0324542512923,
+            "power_weighted_mean": 81.27406613669525
+          },
+          "conduction_relative_residual": 3.696809629392832e-15,
+          "sheath_relative_residual": 2.8393041654476223e-14
+        },
+        "per_loop_power": {
+          "1": 0.9999999999999997
+        },
+        "diagnostic_equilibrium": false,
+        "divertor_front_power_fraction": 0.9999992269975404,
+        "divertor_rear_and_top_cap_power_fraction": 7.73002460873433e-07,
+        "length_ratios": {
+          "Divertor.outer:8->9": 1.1562704608837848,
+          "Divertor.outer:9->10": 1.1952382259740737,
+          "Divertor.outer:10->11": 1.0921659277344737,
+          "Divertor.outer:11->12": 1.0288006774079281,
+          "Divertor.outer:12->13": 1.09448764705166,
+          "Divertor.outer:13->14": 1.011297036494777,
+          "Divertor.outer:14->15": 1.0062244925828254,
+          "Divertor.outer:15->16": 1.1201456235450111,
+          "Divertor.outer:16->17": 1.1657339726251679,
+          "Divertor.outer:17->18": 1.139827274826273
+        },
+        "min_curvature_radius_m": 0.0203999999999999
+      },
+      "best_search_artifact": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h\\best-IMP-search-001821.npz",
+      "proposal_face_probabilities": [
+        0.02500000362821733,
+        0.025000006460237707,
+        0.025000009263766748,
+        0.025000006814165924,
+        0.025000059648682817,
+        0.02500001847871793,
+        0.025000024008447096,
+        0.025000187443357906,
+        0.025005199123086408,
+        0.7749944851313203
+      ],
+      "best_found_elapsed_seconds": 5601.491717000026
+    },
+    "OMP": {
+      "metadata": {
+        "source": "OMP",
+        "source_RZ_m": [
+          5.107008331403053,
+          0.08716666875474686
+        ],
+        "source_support_m": 0.1,
+        "count": 160,
+        "path_step_m": 0.002,
+        "wall_step_m": 0.003,
+        "arc_step_m": 0.003,
+        "max_path_m": 30.0,
+        "quadrature": 64,
+        "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+        "geometry_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+        "reference": {
+          "power_W": 1000000.0,
+          "density_m3": 1e+19,
+          "chi_perp_m2_s": 0.3,
+          "lambda_q_m": 0.003,
+          "gamma": 7.0,
+          "kappa0": 2000.0
+        },
+        "independent_source": true,
+        "diagnostic_equilibrium": false,
+        "path_cache_reused": true,
+        "preparation_seconds": 1.1108065000735223
+      },
+      "baseline": {
+        "feasible": true,
+        "errors": [],
+        "elapsed_seconds": 1.0846017999574542,
+        "peak_MW_m2": 2.2561612388132137,
+        "peak_RZ_m": [
+          3.781634440185773,
+          -2.159690435734353
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 1.0000000000000002,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "area_90_m2": 0.8763857552277194,
+        "effective_area_m2": 0.44323073315718353,
+        "divertor_first_hit_power_fraction": 0.99999999999942,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.056143908512943465,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.0,
+          "sigma_above_0p3_lambda_power_fraction": 0.5017509356720167,
+          "Tu_eV": {
+            "min": 0.005616857250045915,
+            "max": 150.34659613790745,
+            "power_weighted_mean": 93.15165711599441
+          },
+          "Tt_eV": {
+            "min": 1.257242052049511e-18,
+            "max": 121.88696808249394,
+            "power_weighted_mean": 68.63716918361665
+          },
+          "nt_m3": {
+            "min": 5.839814010591734e+18,
+            "max": 2.233801057198777e+34,
+            "power_weighted_mean": 7.05187402912729e+20
+          },
+          "sigma_m": {
+            "min": 0.000525699510970314,
+            "max": 214.81180444382278,
+            "power_weighted_mean": 0.0013833079680427504
+          },
+          "length_m": {
+            "min": 24.017352188545342,
+            "max": 149.18542195412056,
+            "power_weighted_mean": 67.84970728433578
+          },
+          "conduction_relative_residual": 3.4481378358475897e-15,
+          "sheath_relative_residual": 1.57411382451767e-14
+        },
+        "per_loop_power": {
+          "1": 0.9999999999994201,
+          "2": 5.800118548665432e-13
+        },
+        "diagnostic_equilibrium": false,
+        "divertor_front_power_fraction": 0.9999993095391384,
+        "divertor_rear_and_top_cap_power_fraction": 6.904602814340157e-07
+      },
+      "baseline_acceptance_reasons": [],
+      "evaluations": 1845,
+      "accepted_updates": 311,
+      "qualification": {
+        "completed": false,
+        "qualified_improvement": false,
+        "reasons": [
+          "qualification_incomplete"
+        ]
+      },
+      "qualification_rows": {},
+      "baseline_artifact": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h\\baseline-OMP-160.npz",
+      "best_coefficients": [
+        -0.1,
+        -0.1,
+        -0.1,
+        -0.1,
+        0.0967635565356136,
+        0.1,
+        0.1,
+        -0.1,
+        0.05909374225816151,
+        -0.031075415356382273,
+        -0.030928734892201253,
+        0.037410156755936265,
+        0.011540057452612227,
+        0.010216731026011845,
+        -0.019528678342438547,
+        -0.011538452717639923,
+        0.01677631922303208,
+        -0.05163521072456008,
+        -0.09717603211592954,
+        -0.0476303068452326,
+        0.002390549767843978,
+        -0.00019270759204972456,
+        -0.004453440342841718,
+        -0.0019099203331576478,
+        -0.0012574531837052144,
+        0.004527114764585263,
+        0.0036431135933678305,
+        -0.001559744834359116,
+        0.028241774344888067,
+        0.021280797411441878,
+        -0.0047610798081388645,
+        0.023045007081085846,
+        -0.041539081563474904,
+        -0.02513506429084622,
+        0.05626530822980603,
+        -0.07952617339417732,
+        -0.09119021125998537,
+        -0.1,
+        -0.1,
+        -0.004997533423683833
+      ],
+      "deformation_basis": {
+        "type": "cubic B-spline normal displacement per original face",
+        "knots": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "active_coefficients_per_face": 4,
+        "fixed_coefficients": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "coefficient_bound_m": 0.1,
+        "original_endpoints_and_tangents_fixed": true,
+        "globally_C1": false,
+        "fixed_faces": [
+          "Divertor.outer:1->2",
+          "Divertor.outer:2->3",
+          "Divertor.outer:3->4",
+          "Divertor.outer:4->5",
+          "Divertor.outer:5->6",
+          "Divertor.outer:6->7",
+          "Divertor.outer:7->8",
+          "Divertor.outer:18->1"
+        ],
+        "selected_faces": [
+          "Divertor.outer:8->9",
+          "Divertor.outer:9->10",
+          "Divertor.outer:10->11",
+          "Divertor.outer:11->12",
+          "Divertor.outer:12->13",
+          "Divertor.outer:13->14",
+          "Divertor.outer:14->15",
+          "Divertor.outer:15->16",
+          "Divertor.outer:16->17",
+          "Divertor.outer:17->18"
+        ],
+        "max_length_ratio": 1.2,
+        "dome_policy": "17->18 interior movable; anchor node positions and tangents fixed",
+        "min_curvature_radius_m": 0.02
+      },
+      "best_search": {
+        "feasible": true,
+        "errors": [],
+        "elapsed_seconds": 1.6396192996762693,
+        "peak_MW_m2": 1.723949595935277,
+        "peak_RZ_m": [
+          3.73485243714052,
+          -2.085445252115769
+        ],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999997,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 3.3306690738754696e-16
+        },
+        "area_90_m2": 1.136570071916532,
+        "effective_area_m2": 0.5800633628487727,
+        "divertor_first_hit_power_fraction": 0.99999999999942,
+        "thermal": {
+          "resolved_power_fraction": 1.0,
+          "cold_target_power_fraction": 0.056143908512943465,
+          "free_streaming_ratio_above_0p1_power_fraction": 0.0,
+          "weak_conduction_power_fraction": 0.0,
+          "sigma_above_0p3_lambda_power_fraction": 0.47192994787488596,
+          "Tu_eV": {
+            "min": 0.005616857250045915,
+            "max": 150.98008977487422,
+            "power_weighted_mean": 93.21885287480046
+          },
+          "Tt_eV": {
+            "min": 1.257242052049511e-18,
+            "max": 123.74219609058548,
+            "power_weighted_mean": 69.98957568171127
+          },
+          "nt_m3": {
+            "min": 5.781862416930367e+18,
+            "max": 2.233801057198777e+34,
+            "power_weighted_mean": 7.041299455460483e+20
+          },
+          "sigma_m": {
+            "min": 0.0005003150546101592,
+            "max": 214.81180444382278,
+            "power_weighted_mean": 0.0013245512861773724
+          },
+          "length_m": {
+            "min": 24.017352188545342,
+            "max": 146.36451397602931,
+            "power_weighted_mean": 65.25779122014069
+          },
+          "conduction_relative_residual": 3.481779134815979e-15,
+          "sheath_relative_residual": 1.57411382451767e-14
+        },
+        "per_loop_power": {
+          "1": 0.9999999999994197,
+          "2": 5.800118548665432e-13
+        },
+        "diagnostic_equilibrium": false,
+        "divertor_front_power_fraction": 0.9999993073661428,
+        "divertor_rear_and_top_cap_power_fraction": 6.926332772080118e-07,
+        "length_ratios": {
+          "Divertor.outer:8->9": 1.1883860238644903,
+          "Divertor.outer:9->10": 1.1997548746345967,
+          "Divertor.outer:10->11": 1.1364510460376493,
+          "Divertor.outer:11->12": 1.0887407478865005,
+          "Divertor.outer:12->13": 1.1972680060352663,
+          "Divertor.outer:13->14": 1.0150599136074243,
+          "Divertor.outer:14->15": 1.0169378675788776,
+          "Divertor.outer:15->16": 1.0470078239923128,
+          "Divertor.outer:16->17": 1.1381263108175672,
+          "Divertor.outer:17->18": 1.1481687519942751
+        },
+        "min_curvature_radius_m": 0.020035717697488156
+      },
+      "best_search_artifact": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h\\best-OMP-search-001842.npz",
+      "proposal_face_probabilities": [
+        0.7749994922241908,
+        0.02500038746094592,
+        0.025000056626932728,
+        0.02500001365660566,
+        0.025000025688219605,
+        0.025000002130503712,
+        0.02500000192904581,
+        0.025000005694762857,
+        0.025000006395406348,
+        0.025000008193386523
+      ],
+      "best_found_elapsed_seconds": 5666.863312700298
+    }
+  },
+  "search_evaluations": 3690,
+  "algorithm": "seeded coordinate and face-pattern search; broad long-face exploration",
+  "objective": "minimum global receiving-surface peak at fixed assigned power",
+  "footprint_guard": "area_90_m2 >= 0.99 of same-resolution immutable baseline",
+  "deadline_policy": "conservative measured-cost guards; no unsafe mid-evaluation termination",
+  "deadline_events": [],
+  "campaign_elapsed_seconds": 5674.955197399948,
+  "campaign_remaining_seconds": 5125.044800099917,
+  "updated_utc": "2026-11-03T04:54:12.450668+00:00",
+  "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+  "geometry_sha256": "232284eed999301db487c176c88db4b36695fd5a0154c718c323f94a28f74d55",
+  "fixed_inputs": {
+    "sources": {
+      "IMP": {
+        "source_RZ_m": [
+          2.8998230519989665,
+          0.08716666875474686
+        ],
+        "source_support_m": 0.1
+      },
+      "OMP": {
+        "source_RZ_m": [
+          5.107008331403053,
+          0.08716666875474686
+        ],
+        "source_support_m": 0.1
+      }
+    },
+    "reference": {
+      "power_W": 1000000.0,
+      "density_m3": 1e+19,
+      "chi_perp_m2_s": 0.3,
+      "lambda_q_m": 0.003,
+      "gamma": 7.0,
+      "kappa0": 2000.0
+    }
+  },
+  "preparation_seconds": 4.545380000025034,
+  "campaign_started_utc": "2026-11-03T03:19:37.503711+00:00"
+}

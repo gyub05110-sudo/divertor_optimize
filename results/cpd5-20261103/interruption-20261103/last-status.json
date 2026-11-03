@@ -1,0 +1,20 @@
+{
+  "status": "searching",
+  "campaign_started": true,
+  "campaign_elapsed_seconds": 5674.955197399948,
+  "campaign_remaining_seconds": 5125.044800099917,
+  "search_evaluations": 3690,
+  "updated_utc": "2026-11-03T04:54:12.450668+00:00",
+  "sources": {
+    "IMP": {
+      "evaluations": 1845,
+      "best_peak_MW_m2": 1.858005261450256,
+      "qualified_improvement": false
+    },
+    "OMP": {
+      "evaluations": 1845,
+      "best_peak_MW_m2": 1.723949595935277,
+      "qualified_improvement": false
+    }
+  }
+}

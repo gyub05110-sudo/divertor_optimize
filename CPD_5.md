@@ -1,5 +1,11 @@
 # CPD_5: fixed FreeGS equilibrium and three-hour divertor search
 
+**Run status (2026-11-03): interrupted before completion.** The process was
+absent at the 14:09 KST check; the last checkpoint records 94 min 35 s and
+3,690 candidate evaluations. Final candidate qualification was not performed.
+Saved candidates are unqualified. See the
+[interruption report](results/cpd5-20261103/interruption-20261103/REPORT.ko.md).
+
 The supplied device geometry replaces D3D geometry. Existing D3D studies and
 source files are preserved. Raw YAML, a losslessly zipped STEP and their hashes
 are in [input/CPD_5](input/CPD_5). The node contours define the axisymmetric
