@@ -1,10 +1,13 @@
 # CPD_5: fixed FreeGS equilibrium and three-hour divertor search
 
-**Run status (2026-11-03): interrupted before completion.** The process was
-absent at the 14:09 KST check; the last checkpoint records 94 min 35 s and
-3,690 candidate evaluations. Final candidate qualification was not performed.
-Saved candidates are unqualified. See the
-[interruption report](results/cpd5-20261103/interruption-20261103/REPORT.ko.md).
+**Run status (2026-11-03): resumed; final qualification pending.** At 15:37 KST,
+the saved 3,690-evaluation checkpoint was resumed with only 5,125.0448 seconds
+remaining from the original 10,800-second budget. The frozen equilibrium and
+physical inputs are unchanged. Recovery and final 320/640-donor qualification
+count against the remaining budget; the last 900 seconds are reserved for
+qualification. Saved candidates remain unqualified until those checks finish.
+See the [resumption record](results/cpd5-20261103/resume-20261103/REPORT.ko.md)
+and preserved [interruption report](results/cpd5-20261103/interruption-20261103/REPORT.ko.md).
 
 The supplied device geometry replaces D3D geometry. Existing D3D studies and
 source files are preserved. Raw YAML, a losslessly zipped STEP and their hashes

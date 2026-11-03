@@ -1,0 +1,10 @@
+{
+  "pid": 28192,
+  "launched_at": "2026-11-03T15:37:42.7032182+09:00",
+  "source_commit": "4a0cd80a332210235652262f30b026635b73921d",
+  "study": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\resume-remaining-v1",
+  "execution_snapshot": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\resume-execution-v2",
+  "parent_study": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h\\study.json",
+  "launcher": "Win32_Process.Create; pythonw without a visible window",
+  "remaining_seconds": 5125.044802600052
+}
