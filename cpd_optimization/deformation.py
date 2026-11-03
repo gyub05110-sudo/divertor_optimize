@@ -124,7 +124,12 @@ class FaceCurve:
             speed_bound += abs(self.sweep)*np.max(abs(c))
         count = max(2, int(math.ceil(speed_bound/max_chord_m)))
         t = np.unique(np.r_[np.linspace(0, 1, count+1), KNOTS, self.mid_t if self.arc else []])
-        return self.evaluate(t, c)[0]
+        points=self.evaluate(t,c)[0]
+        # Distinct floating-point parameters (e.g. a knot and a linspace sample)
+        # can round to the identical R/Z point. Removing only exact adjacent
+        # duplicates changes no curve, length, material boundary or input.
+        keep=np.r_[True,np.any(points[1:]!=points[:-1],axis=1)]
+        return points[keep]
 
 
 class DivertorDeformation:

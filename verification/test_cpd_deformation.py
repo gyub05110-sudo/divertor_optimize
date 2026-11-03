@@ -16,6 +16,16 @@ def module():
     return importlib.import_module('cpd_optimization.deformation')
 
 
+def test_saved_omp_candidate_has_no_roundoff_duplicate_chords_at_qualification():
+    import json
+    checkpoint=SOURCE.parents[2]/'results/cpd5-20261103/interruption-20261103/last-study.json'
+    c=json.loads(checkpoint.read_text())['sources']['OMP']['best_coefficients']
+    family=module().DivertorDeformation(load_geometry(SOURCE,max_chord_m=.001),max_chord_m=.001)
+    result=family.evaluate(c)
+    assert result['feasible']
+    assert np.all(np.linalg.norm(np.diff(result['wall'],axis=0),axis=1)>0)
+
+
 def test_zero_preserves_source_geometry_and_fixed_faces():
     g = load_geometry(SOURCE, max_chord_m=.003)
     family = module().DivertorDeformation(g)
