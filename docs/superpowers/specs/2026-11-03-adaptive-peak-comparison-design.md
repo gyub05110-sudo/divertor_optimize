@@ -8,7 +8,7 @@ Keep production search and existing certificate semantics unchanged. Add an incr
 
 Alternatives: repeating the existing certify call wastes earlier subdivisions; uniformly increasing budgets wastes effort on already separated candidates. Incremental shared scheduling is preferred because it retains all proved cells and gives actual early stopping.
 
-The scheduling score is a heuristic: current interval width times the number of unresolved comparisons using that kernel. It affects runtime only, never correctness. Initial probes and worst-upper-cell subdivisions use the existing arithmetic. Ties are deterministic. Zero budget and overlapping intervals return unresolved. All source/resolution/problem identities must match within each pair; no cross-resolution intersection.
+The scheduling score is a heuristic: current interval width times the number of unresolved comparisons using that kernel. It affects runtime only, never correctness. Initial probes and worst-upper-cell subdivisions use the existing arithmetic. Ties are deterministic. Zero budget performs no refinement: initial universal bounds may already prove separation, while overlapping intervals return unresolved. All source/resolution/problem identities must match within each pair; no cross-resolution intersection.
 
 Generation has a shared wall-time and operation cap; deadline checks occur between atomic operations. Initialization, output creation, independent replay, and budget overrun are separately timed, with end-to-end time reported. Final replay is mandatory even if the generation budget expires. Runtime improvements are not claimed from fewer resolved decisions or looser evidence.
 
