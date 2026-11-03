@@ -14,7 +14,7 @@ import json
 import math
 import os
 from pathlib import Path
-from time import perf_counter
+from time import perf_counter, sleep
 
 import numpy as np
 
@@ -51,7 +51,16 @@ def atomic_json(path, value):
     with temporary.open('w', encoding='utf-8') as stream:
         json.dump(_jsonable(value), stream, indent=2, allow_nan=False)
         stream.flush(); os.fsync(stream.fileno())
-    os.replace(temporary, path)
+    # Windows readers/scanners can briefly hold the destination without delete
+    # sharing. Preserve atomic replacement, retry only this transient condition,
+    # and fail explicitly if it persists. Wall-clock budget includes the delay.
+    for attempt in range(6):
+        try:
+            os.replace(temporary, path)
+            break
+        except PermissionError:
+            if attempt==5:raise
+            sleep(.02*2**attempt)
 
 
 def _finite_number(value):
@@ -334,7 +343,7 @@ class CampaignRunner:
     def _search(self):
         cutoff = self.started+self.seconds-self.reserve
         self.report['status'] = 'searching'; self._checkpoint()
-        turn = 0
+        turn = self.report['search_evaluations']
         while True:
             source = SOURCES[turn % len(SOURCES)]; turn += 1
             if not self._can_start(source, SEARCH_COUNT, 'evaluate', cutoff): break
