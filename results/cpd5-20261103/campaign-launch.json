@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "implementation_commit": "0bf9cc9b9b54fdd68abe30ed65b29112110e214c",
+  "process_id": 51140,
+  "campaign_started_utc": "2026-11-03T03:19:37.503711+00:00",
+  "latest_budget_deadline_utc": "2026-11-03T06:19:37.503711+00:00",
+  "requested_seconds": 10800,
+  "qualification_reserve_seconds": 900,
+  "study_directory": "D:\\DivertorOptimization\\studies\\cpd5-20261103\\campaign-3h",
+  "equilibrium_sha256": "70b1c6caf974a4628afcf0cd6584ac3ac127c7bfd7c67430670199e2c5b3501d",
+  "completion_monitor": "CPD_5 optimization completion heartbeat (15 minutes, quiet during healthy progress)",
+  "optimization_completed": false
+}
