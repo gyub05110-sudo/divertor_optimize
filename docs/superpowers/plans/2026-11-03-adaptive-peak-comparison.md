@@ -23,6 +23,10 @@
 ## Task 3 — Real measurement and delivery
 
 - [x] Add `verification/run_adaptive_peak_comparison.py`: verify recorded input hashes and explicit source-scope audit when needed; load exact prior candidate kernels; snapshot source; execute one shared session; preserve all certificates/timings/manifests in a new D: directory. Keep old runner unchanged.
-- [ ] Run at cubic_320 then cubic_1280 with 136 seconds generation and the same five comparisons; verify every input and result hash. Include all mandatory replay and preparation in end-to-end timing.
-- [ ] Obtain independent specification/correctness review and fix blockers. Run existing 172-test selection plus new tests, and `git diff --check`.
-- [ ] Report whether equal decisions were reached faster, unresolved cases, and limits. Commit and push authorized branch updates after verification; no global optimum or new optimized geometry claim.
+- [x] Run at cubic_320 then cubic_1280 with 136 seconds generation and the same five comparisons; verify every input and result hash. Include all mandatory replay and preparation in end-to-end timing.
+- [x] Obtain independent specification/correctness review and fix blockers. Run existing 172-test selection plus new tests, and `git diff --check`.
+- [x] Report whether equal decisions were reached faster, unresolved cases, and limits. Commit and push authorized branch updates after verification; no global optimum or new optimized geometry claim.
+
+## Measured outcome
+
+209 tests passed. Fresh fixed320 control:335.99s,4/5 resolved; adaptive320:173.65s,5/5 resolved. Adaptive1280 all five pairs:272.54s,0/5 resolved under136s generation budget. Separate unchanged-code shortlist diagnostic (historical OMP50 versus baseline only):125.23s,1/1 resolved at1280. Single-pair result is not a five-pair speed comparison. All1,363 consumed/result files checked; original evidence and production search unchanged. See results/adaptive-peak-comparison-20261103/REPORT.ko.md.

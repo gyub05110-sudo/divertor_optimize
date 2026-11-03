@@ -1,0 +1,400 @@
+[
+  {
+    "level": "cubic_320",
+    "rows": [
+      {
+        "label": "baseline_IMP",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.54917758441056267858113337775839627144261",
+          "3.29383060728697894431072556312160455212736"
+        ],
+        "seconds": 8.137329599820077,
+        "splits": 35,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP20",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.37504397009957519108746729014456884256805",
+          "2.38831689295011153893745403223149544188500"
+        ],
+        "seconds": 30.248647999949753,
+        "splits": 136,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP50",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.48136827336500311778692460077061104691794",
+          "2.51352508189410871242299855470855333807379"
+        ],
+        "seconds": 30.152002499904484,
+        "splits": 121,
+        "stop": "time_budget"
+      },
+      {
+        "label": "baseline_OMP",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.72955767572209628739569559943454307899452",
+          "3.09946663678737662102776289807315099388055"
+        ],
+        "seconds": 8.007257500197738,
+        "splits": 38,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_OMP50",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "3.00390738996429402611458333507965167414557",
+          "3.04539933507998149585017542705017264869112"
+        ],
+        "seconds": 30.162718000356108,
+        "splits": 151,
+        "stop": "time_budget"
+      },
+      {
+        "label": "historical_OMP50",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "1.99620876982382407874186493342480926075311",
+          "2.10795762675909065252640499523222726089282"
+        ],
+        "seconds": 30.107348300050944,
+        "splits": 173,
+        "stop": "time_budget"
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "campaign_IMP20",
+        "b": "baseline_IMP",
+        "status": "a_lower",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "replay_seconds": 37.71889719972387,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_IMP50",
+        "b": "baseline_IMP",
+        "status": "a_lower",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "replay_seconds": 34.6750447996892,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_OMP50",
+        "b": "baseline_OMP",
+        "status": "unresolved",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 33.05259649967775,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "status": "a_lower",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 36.29729219991714,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "campaign_OMP50",
+        "status": "a_lower",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 57.11611119983718,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      }
+    ],
+    "elapsed_seconds": 335.9948758003302,
+    "generation_seconds": 136.8153039002791,
+    "replay_seconds": 198.85994189884514,
+    "replay_count": 10,
+    "study": "D:\\DivertorOptimization\\studies\\fixed-peak-control-320-20261103",
+    "resolved_comparisons": 4
+  },
+  {
+    "level": "cubic_320",
+    "rows": [
+      {
+        "label": "baseline_IMP",
+        "peak": [
+          "2.54956460597389973725361315839365220220404",
+          "2.61682944603521413226512114079991100608182"
+        ],
+        "operations": 116,
+        "splits": 106
+      },
+      {
+        "label": "baseline_OMP",
+        "peak": [
+          "2.73037484787531155430311547894381179986450",
+          "2.99717592328552237760195460292672590518798"
+        ],
+        "operations": 56,
+        "splits": 46
+      },
+      {
+        "label": "campaign_IMP20",
+        "peak": [
+          "2.37491249731811178691373987420443663394038",
+          "2.52831883500900212137547867520613229154735"
+        ],
+        "operations": 71,
+        "splits": 61
+      },
+      {
+        "label": "campaign_IMP50",
+        "peak": [
+          "2.48136827336500311778692460077061104691794",
+          "2.54808373470475256353488392409056025146381"
+        ],
+        "operations": 105,
+        "splits": 95
+      },
+      {
+        "label": "campaign_OMP50",
+        "peak": [
+          "3.00370923159663498261846960073877151299626",
+          "3.28260417887692032397541759699611407724471"
+        ],
+        "operations": 71,
+        "splits": 61
+      },
+      {
+        "label": "historical_OMP50",
+        "peak": [
+          "1.99588748429089291893569327081272700093392",
+          "2.72913426260116058893626331615736360242270"
+        ],
+        "operations": 63,
+        "splits": 53
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "campaign_IMP20",
+        "b": "baseline_IMP",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "status": "a_lower",
+        "provisional_resolved_after_operation": 447,
+        "provisional_resolved_seconds": 77.76916329981759
+      },
+      {
+        "a": "campaign_IMP50",
+        "b": "baseline_IMP",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "status": "a_lower",
+        "provisional_resolved_after_operation": 482,
+        "provisional_resolved_seconds": 84.85179470013827
+      },
+      {
+        "a": "campaign_OMP50",
+        "b": "baseline_OMP",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "status": "b_lower",
+        "provisional_resolved_after_operation": 402,
+        "provisional_resolved_seconds": 68.72218809975311
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "status": "a_lower",
+        "provisional_resolved_after_operation": 312,
+        "provisional_resolved_seconds": 51.52067939983681
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "campaign_OMP50",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "status": "a_lower",
+        "provisional_resolved_after_operation": 236,
+        "provisional_resolved_seconds": 37.18773850006983
+      }
+    ],
+    "elapsed_seconds": 173.64884000038728,
+    "generation_seconds": 84.85179649991915,
+    "replay_seconds": 87.62717380002141,
+    "replay_count": 6,
+    "stop_reason": "all_comparisons_resolved",
+    "completed_operations": 482,
+    "budget_overrun_seconds": 0.0,
+    "end_to_end_seconds": 172.4911917001009,
+    "preparation_seconds": 0.8249540003016591,
+    "study": "D:\\DivertorOptimization\\studies\\adaptive-peak-comparison-cubic_320-20261103",
+    "resolved_comparisons": 5
+  },
+  {
+    "level": "cubic_1280",
+    "rows": [
+      {
+        "label": "baseline_IMP",
+        "peak": [
+          "2.54927051184999790601894505373687908811862",
+          "3.64487933769227205758986592142020841589560"
+        ],
+        "operations": 37,
+        "splits": 27
+      },
+      {
+        "label": "baseline_OMP",
+        "peak": [
+          "2.72548703696572229194346039913759926613680",
+          "3.81674184906740346973020242098737412428851"
+        ],
+        "operations": 33,
+        "splits": 23
+      },
+      {
+        "label": "campaign_IMP20",
+        "peak": [
+          "2.35048617831399226458242360823298377694630",
+          "4.59072102248296515511515778525484395830070"
+        ],
+        "operations": 30,
+        "splits": 20
+      },
+      {
+        "label": "campaign_IMP50",
+        "peak": [
+          "2.46727397857971324572521973396349436297989",
+          "4.73292222139347946467912108192113938465322"
+        ],
+        "operations": 32,
+        "splits": 22
+      },
+      {
+        "label": "campaign_OMP50",
+        "peak": [
+          "2.99248647335434495555939289972031904707661",
+          "4.14233118656838193024343334080918885918061"
+        ],
+        "operations": 37,
+        "splits": 27
+      },
+      {
+        "label": "historical_OMP50",
+        "peak": [
+          "1.99380378724321580737378578211717113022153",
+          "3.16126300633227605158539318047636412180630"
+        ],
+        "operations": 49,
+        "splits": 39
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "campaign_IMP20",
+        "b": "baseline_IMP",
+        "problem_id": "5f0f9d0b196e2fe4f354474f94729b5aec7c70e282f70a94db341ea8daabfcae",
+        "status": "unresolved",
+        "provisional_resolved_after_operation": null,
+        "provisional_resolved_seconds": null
+      },
+      {
+        "a": "campaign_IMP50",
+        "b": "baseline_IMP",
+        "problem_id": "5f0f9d0b196e2fe4f354474f94729b5aec7c70e282f70a94db341ea8daabfcae",
+        "status": "unresolved",
+        "provisional_resolved_after_operation": null,
+        "provisional_resolved_seconds": null
+      },
+      {
+        "a": "campaign_OMP50",
+        "b": "baseline_OMP",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "status": "unresolved",
+        "provisional_resolved_after_operation": null,
+        "provisional_resolved_seconds": null
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "status": "unresolved",
+        "provisional_resolved_after_operation": null,
+        "provisional_resolved_seconds": null
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "campaign_OMP50",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "status": "unresolved",
+        "provisional_resolved_after_operation": null,
+        "provisional_resolved_seconds": null
+      }
+    ],
+    "elapsed_seconds": 272.5391238001175,
+    "generation_seconds": 136.1237315000035,
+    "replay_seconds": 135.20833840034902,
+    "replay_count": 6,
+    "stop_reason": "time_budget",
+    "completed_operations": 218,
+    "budget_overrun_seconds": 0.12373150000348687,
+    "end_to_end_seconds": 271.3786476003006,
+    "preparation_seconds": 0.7240587999112904,
+    "study": "D:\\DivertorOptimization\\studies\\adaptive-peak-comparison-cubic_1280-20261103",
+    "resolved_comparisons": 0
+  },
+  {
+    "level": "cubic_1280",
+    "rows": [
+      {
+        "label": "baseline_OMP",
+        "peak": [
+          "2.72548703696572229194346039913759926613680",
+          "3.45220322105633719994099496361257586455546"
+        ],
+        "splits": 27,
+        "operations": 37
+      },
+      {
+        "label": "historical_OMP50",
+        "peak": [
+          "1.99554903520041491764789005278230353847849",
+          "2.71544676763911525331576846924746509672311"
+        ],
+        "splits": 54,
+        "operations": 64
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "status": "a_lower",
+        "provisional_resolved_after_operation": 101,
+        "provisional_resolved_seconds": 62.23702339967713
+      }
+    ],
+    "elapsed_seconds": 125.23160649975762,
+    "generation_seconds": 62.23702779971063,
+    "replay_seconds": 61.77761820005253,
+    "replay_count": 2,
+    "stop_reason": "all_comparisons_resolved",
+    "completed_operations": 101,
+    "budget_overrun_seconds": 0.0,
+    "end_to_end_seconds": 124.02808379987255,
+    "preparation_seconds": 0.8736539999954402,
+    "study": "D:\\DivertorOptimization\\studies\\adaptive-peak-shortlist-1280-20261103",
+    "resolved_comparisons": 1
+  }
+]

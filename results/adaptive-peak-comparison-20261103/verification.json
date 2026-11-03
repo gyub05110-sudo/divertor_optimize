@@ -1,0 +1,31 @@
+{
+  "tests_passed": 209,
+  "test_seconds": 7.72,
+  "independent_spec_and_code_review": "no blocking findings",
+  "unique_verified_files": 1363,
+  "manifests": {
+    "fixed-peak-control-320-20261103": {
+      "artifact_index_sha256": "e6444cde0f3f2749d7a52698081261ef541bd1f0dabc3fba125d60ba3c02ce85",
+      "verified_artifacts": 8
+    },
+    "adaptive-peak-comparison-cubic_320-20261103": {
+      "artifact_index_sha256": "7c7de11c5e4f30df31e10ec3b884fb8189d540c0248b78f3373aee0f39a3267a",
+      "verified_artifacts": 118
+    },
+    "adaptive-peak-comparison-cubic_1280-20261103": {
+      "artifact_index_sha256": "e2ecfd190852af77f93e5013871d95cc7195bf36ecfdfe5332052b3b4fc2a7b6",
+      "verified_artifacts": 118
+    },
+    "adaptive-peak-shortlist-1280-20261103": {
+      "artifact_index_sha256": "24de5496a1ce90ee2759d322f084c3f8d3f652cb976990e9b178d0088dd23475",
+      "verified_artifacts": 114
+    }
+  },
+  "final_statuses_match_bounds": true,
+  "production_search_unchanged": true,
+  "existing_peak_math_and_replay_unchanged": true,
+  "comparison_scope": "finite frozen numerically qualified kernels only",
+  "continuous_transport_proven": false,
+  "global_optimum_proven": false,
+  "timing_limitations": "single sequential session, not statistically repeated; fixed wrapper excludes pre-audit, adaptive includes it; shortlist is a separate single-pair diagnostic"
+}
