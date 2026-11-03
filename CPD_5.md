@@ -1,13 +1,20 @@
 # CPD_5: fixed FreeGS equilibrium and three-hour divertor search
 
-**Run status (2026-11-03): resumed; final qualification pending.** At 15:37 KST,
-the saved 3,690-evaluation checkpoint was resumed with only 5,125.0448 seconds
-remaining from the original 10,800-second budget. The frozen equilibrium and
-physical inputs are unchanged. Recovery and final 320/640-donor qualification
-count against the remaining budget; the last 900 seconds are reserved for
-qualification. Saved candidates remain unqualified until those checks finish.
-See the [resumption record](results/cpd5-20261103/resume-20261103/REPORT.ko.md)
-and preserved [interruption report](results/cpd5-20261103/interruption-20261103/REPORT.ko.md).
+**Run status (2026-11-03): completed and numerically qualified.** Paired
+320/640-donor checks confirmed peak reductions of **46.18% IMP** and
+**23.59% OMP**, with 90%-power receiving area increases of **78.36%** and
+**30.97%**, respectively. Each source is an independent 1 MW study with its own
+candidate geometry; these are reduced-model improvements, not a global optimum
+or experimental validation. Frozen equilibrium and physical inputs are unchanged.
+
+The original and resumed runs consumed **10,041.529 seconds (2 h 47 min 21.5 s)**
+including recovery and final qualification, within the original three-hour
+budget. Full results, geometry exports, heat-load comparisons, numerical
+uncertainty and limitations are in the
+[Korean final report](results/cpd5-20261103/final-20261103/REPORT.ko.md).
+The [resumption record](results/cpd5-20261103/resume-20261103/REPORT.ko.md)
+and [interruption report](results/cpd5-20261103/interruption-20261103/REPORT.ko.md)
+remain preserved as historical evidence.
 
 The supplied device geometry replaces D3D geometry. Existing D3D studies and
 source files are preserved. Raw YAML, a losslessly zipped STEP and their hashes

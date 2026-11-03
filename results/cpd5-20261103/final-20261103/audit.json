@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "execution_files_verified": 98,
+  "original_checkpoint_unchanged": true,
+  "fixed_inputs_unchanged": true,
+  "original_budget_seconds": 10800,
+  "prior_consumed_seconds": 5674.955197399948,
+  "resumed_seconds": 4366.573876599781,
+  "total_consumed_seconds": 10041.52903450001,
+  "qualification_seconds": 165.81433769967407,
+  "geometry_audit_chord_m": 0.00025,
+  "sources": {
+    "IMP": {
+      "geometry": {
+        "feasible": true,
+        "endpoint_max_error_m": 0.0,
+        "tangent_max_error": 0.0,
+        "max_abs_coefficient_m": 0.1,
+        "max_length_ratio_independent_quadrature": 1.199923893788698,
+        "min_radius_dense_10001_samples_m": 0.02006028149707634,
+        "min_radius_refined_m": 0.020060281468527796,
+        "vessel_clearance_m": 0.004757709220755333,
+        "blanket_clearance_m": 0.019431776187222232,
+        "shield_clearance_m": 0.020000000000000018,
+        "lcfs_clearance_m": 0.33098595681598986
+      },
+      "array_checks": [
+        {
+          "count": 320,
+          "case": "baseline",
+          "peak_MW_m2": 3.4529413704830563,
+          "area_90_m2": 0.5827573405490987,
+          "deposited_W": 1000000.0,
+          "unhit_W": 0.0,
+          "balance_error": 0.0
+        },
+        {
+          "count": 320,
+          "case": "candidate",
+          "peak_MW_m2": 1.8584061007212676,
+          "area_90_m2": 1.04173886066983,
+          "deposited_W": 999999.9999999999,
+          "unhit_W": 0.0,
+          "balance_error": 1.1102230246251565e-16
+        },
+        {
+          "count": 640,
+          "case": "baseline",
+          "peak_MW_m2": 3.4530967923602502,
+          "area_90_m2": 0.5829996993784287,
+          "deposited_W": 999999.9999999995,
+          "unhit_W": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        {
+          "count": 640,
+          "case": "candidate",
+          "peak_MW_m2": 1.8584800641119577,
+          "area_90_m2": 1.039848948763792,
+          "deposited_W": 999999.9999999995,
+          "unhit_W": 0.0,
+          "balance_error": 4.440892098500626e-16
+        }
+      ],
+      "qualification": {
+        "completed": true,
+        "qualified_improvement": true,
+        "reasons": [],
+        "qualified_count": 640,
+        "peak_gain_MW_m2": 1.5946167282482926,
+        "peak_gain_fraction": 0.46179323202763306,
+        "estimated_numerical_uncertainty_MW_m2": 0.00022938526788407465,
+        "estimated_numerical_uncertainty_fraction": 6.642885551067507e-05,
+        "uncertainty_method": "sum of absolute baseline and candidate combined finite-resolution peak differences (320/1mm/128 to 640/0.5mm/256); not a rigorous bound",
+        "area_90_ratio": 1.7836183275436301
+      },
+      "search": {
+        "evaluations": 3262,
+        "feasible_evaluation_seconds_median": 1.1729757499415427,
+        "feasible_evaluation_seconds_p95": 1.9540971998358145,
+        "first_within_0p1_percent_of_final_search_peak_seconds": 668.1207407000475,
+        "candidate_evaluation_errors": 80
+      }
+    },
+    "OMP": {
+      "geometry": {
+        "feasible": true,
+        "endpoint_max_error_m": 0.0,
+        "tangent_max_error": 0.0,
+        "max_abs_coefficient_m": 0.1,
+        "max_length_ratio_independent_quadrature": 1.1997864209712368,
+        "min_radius_dense_10001_samples_m": 0.020006586752495368,
+        "min_radius_refined_m": 0.020006586752495368,
+        "vessel_clearance_m": 0.004757709220755333,
+        "blanket_clearance_m": 0.019431776187222232,
+        "shield_clearance_m": 0.020000000000000018,
+        "lcfs_clearance_m": 0.3281670245590389
+      },
+      "array_checks": [
+        {
+          "count": 320,
+          "case": "baseline",
+          "peak_MW_m2": 2.256484866582942,
+          "area_90_m2": 0.8670453594175141,
+          "deposited_W": 1000000.0,
+          "unhit_W": 0.0,
+          "balance_error": 0.0
+        },
+        {
+          "count": 320,
+          "case": "candidate",
+          "peak_MW_m2": 1.724196745489148,
+          "area_90_m2": 1.1358081994753795,
+          "deposited_W": 1000000.0000000002,
+          "unhit_W": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        {
+          "count": 640,
+          "case": "baseline",
+          "peak_MW_m2": 2.256565033697946,
+          "area_90_m2": 0.8668306054260263,
+          "deposited_W": 999999.9999999998,
+          "unhit_W": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        {
+          "count": 640,
+          "case": "candidate",
+          "peak_MW_m2": 1.7242598274472503,
+          "area_90_m2": 1.1352595041779636,
+          "deposited_W": 1000000.0,
+          "unhit_W": 0.0,
+          "balance_error": 0.0
+        }
+      ],
+      "qualification": {
+        "completed": true,
+        "qualified_improvement": true,
+        "reasons": [],
+        "qualified_count": 640,
+        "peak_gain_MW_m2": 0.5323052062506957,
+        "peak_gain_fraction": 0.23589180825796122,
+        "estimated_numerical_uncertainty_MW_m2": 0.00014324907310636625,
+        "estimated_numerical_uncertainty_fraction": 6.348103022389603e-05,
+        "uncertainty_method": "sum of absolute baseline and candidate combined finite-resolution peak differences (320/1mm/128 to 640/0.5mm/256); not a rigorous bound",
+        "area_90_ratio": 1.3096670757489115
+      },
+      "search": {
+        "evaluations": 3261,
+        "feasible_evaluation_seconds_median": 1.6642823996953666,
+        "feasible_evaluation_seconds_p95": 2.8179152199998496,
+        "first_within_0p1_percent_of_final_search_peak_seconds": 602.2323350999504,
+        "candidate_evaluation_errors": 32
+      }
+    }
+  },
+  "artifacts": {
+    "baseline-IMP-320.npz": "538faf6cf4901c1dec857349b2f15fd6abfe99bf3e46a9833b6c16e1b5070b1f",
+    "candidate-IMP-320.npz": "92f7eef84860526cb93f90bb85f51485841d8ac6cfa88d3153f7b8a2010945d6",
+    "baseline-IMP-640.npz": "206f277b1678d445cb5fda0978f8eda2afa996051b048d0b10ffcecb617a27ce",
+    "candidate-IMP-640.npz": "732ae4178822cb5cf4d43ac3352c8ac9c3a861d657b6a8cd73fd5dd14fe945ad",
+    "baseline-OMP-320.npz": "cf4bbfadf61fb6bd37ea4ea0ce48d0c1ef2b3ffa7bbbc5def791de9dbc6c7f18",
+    "candidate-OMP-320.npz": "9cd78a1e37561c23a1b7080dc344d46609ddb57e2e9a2cd8116eda811037ca8c",
+    "baseline-OMP-640.npz": "149fabf93e7b23b83a53ae7f117ea48a8d70cab96ccb8c74fa222e6bf514101a",
+    "candidate-OMP-640.npz": "c682c4de79cd9b1e2b6eaf6eb34e10950a63323ed526ea95163f54c8a6a749c5"
+  }
+}
