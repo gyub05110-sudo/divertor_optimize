@@ -1,0 +1,258 @@
+[
+  {
+    "level": "cubic_320",
+    "rows": [
+      {
+        "label": "baseline_IMP",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.54917758441056267858113337775839627144261",
+          "3.36583027059338704685519348858953774738316"
+        ],
+        "seconds": 8.011584000196308,
+        "splits": 34,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP20",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.37504397009957519108746729014456884256805",
+          "2.39968119143001568620480168641101499474424"
+        ],
+        "seconds": 30.048819200135767,
+        "splits": 112,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP50",
+        "source": "IMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.48136827336500311778692460077061104691794",
+          "2.53636501141440562760860766689646665079748"
+        ],
+        "seconds": 30.089847799856216,
+        "splits": 104,
+        "stop": "time_budget"
+      },
+      {
+        "label": "baseline_OMP",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "2.72955767572209628739569559943454307899452",
+          "3.34754091233945826773805505248307039411549"
+        ],
+        "seconds": 8.130820699967444,
+        "splits": 31,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_OMP50",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "3.00390738996429402611458333507965167414557",
+          "3.04432043143643304683721977488760349269440"
+        ],
+        "seconds": 30.09253010014072,
+        "splits": 152,
+        "stop": "time_budget"
+      },
+      {
+        "label": "historical_OMP50",
+        "source": "OMP",
+        "level": "cubic_320",
+        "peak": [
+          "1.99620876982382407874186493342480926075311",
+          "2.11470250541923771051211976919972818280033"
+        ],
+        "seconds": 30.105607999954373,
+        "splits": 170,
+        "stop": "time_budget"
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "campaign_IMP20",
+        "b": "baseline_IMP",
+        "status": "a_lower",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "replay_seconds": 35.803680500015616,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_IMP50",
+        "b": "baseline_IMP",
+        "status": "a_lower",
+        "problem_id": "e500bb7cb1f111e37c3e941c51e5661672eee1a9a0326e62cdce21e63dc0c89f",
+        "replay_seconds": 48.771014200057834,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_OMP50",
+        "b": "baseline_OMP",
+        "status": "unresolved",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 41.008274000138044,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "status": "a_lower",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 45.76154120033607,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "campaign_OMP50",
+        "status": "a_lower",
+        "problem_id": "c8b3675d6009c41a42bfd59bc38f8baffd4d8e7bf6b0d91cc6e5dc75296feb0a",
+        "replay_seconds": 72.71687200013548,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      }
+    ],
+    "elapsed_seconds": 380.89419150026515,
+    "scope": "frozen donor locations, widths and powers from numerically qualified candidates",
+    "continuous_transport_enclosure": false,
+    "geometry_global_optimum_proven": false
+  },
+  {
+    "level": "cubic_1280",
+    "rows": [
+      {
+        "label": "baseline_IMP",
+        "source": "IMP",
+        "level": "cubic_1280",
+        "peak": [
+          "2.16439397820445268046331277005994476919018",
+          "27.2714772500082983736379386256484791078335"
+        ],
+        "seconds": 8.590181400068104,
+        "splits": 5,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP20",
+        "source": "IMP",
+        "level": "cubic_1280",
+        "peak": [
+          "2.35048617831399226458242360823298377694630",
+          "3.75384271428167218104784915237221885289978"
+        ],
+        "seconds": 30.36837980011478,
+        "splits": 25,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_IMP50",
+        "source": "IMP",
+        "level": "cubic_1280",
+        "peak": [
+          "2.46727397857971324572521973396349436297989",
+          "4.12651182500629682529606296959018553621805"
+        ],
+        "seconds": 31.046909399796277,
+        "splits": 25,
+        "stop": "time_budget"
+      },
+      {
+        "label": "baseline_OMP",
+        "source": "OMP",
+        "level": "cubic_1280",
+        "peak": [
+          "2.40587242635990364935491247522216509470570",
+          "9.96451053129039320745456168330779085584872"
+        ],
+        "seconds": 8.59675330016762,
+        "splits": 9,
+        "stop": "time_budget"
+      },
+      {
+        "label": "campaign_OMP50",
+        "source": "OMP",
+        "level": "cubic_1280",
+        "peak": [
+          "3.00366210080430077826249688979975546232617",
+          "3.77233800297529662687431009796890100058227"
+        ],
+        "seconds": 30.20365050015971,
+        "splits": 39,
+        "stop": "time_budget"
+      },
+      {
+        "label": "historical_OMP50",
+        "source": "OMP",
+        "level": "cubic_1280",
+        "peak": [
+          "1.99380378724321580737378578211717113022153",
+          "3.48015332656200038486751531924063368705586"
+        ],
+        "seconds": 30.503307399805635,
+        "splits": 33,
+        "stop": "time_budget"
+      }
+    ],
+    "comparisons": [
+      {
+        "a": "campaign_IMP20",
+        "b": "baseline_IMP",
+        "status": "unresolved",
+        "problem_id": "5f0f9d0b196e2fe4f354474f94729b5aec7c70e282f70a94db341ea8daabfcae",
+        "replay_seconds": 41.384535000193864,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_IMP50",
+        "b": "baseline_IMP",
+        "status": "unresolved",
+        "problem_id": "5f0f9d0b196e2fe4f354474f94729b5aec7c70e282f70a94db341ea8daabfcae",
+        "replay_seconds": 38.43752619996667,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "campaign_OMP50",
+        "b": "baseline_OMP",
+        "status": "unresolved",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "replay_seconds": 42.393486799672246,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "baseline_OMP",
+        "status": "unresolved",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "replay_seconds": 34.61200190009549,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      },
+      {
+        "a": "historical_OMP50",
+        "b": "campaign_OMP50",
+        "status": "unresolved",
+        "problem_id": "c57151d3b6e34cce3d6e1a0e791fd9c2826a236b93dad7a20c7a23572908a88d",
+        "replay_seconds": 55.14794979989529,
+        "scope": "peak ranking only; feasibility is separate",
+        "geometry_global_optimum_proven": false
+      }
+    ],
+    "elapsed_seconds": 351.6519778002985,
+    "scope": "frozen donor locations, widths and powers from numerically qualified candidates",
+    "continuous_transport_enclosure": false,
+    "geometry_global_optimum_proven": false
+  }
+]

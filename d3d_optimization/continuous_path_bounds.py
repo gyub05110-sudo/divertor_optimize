@@ -70,6 +70,13 @@ def chart_step(field,start,target,axis,direction,psi0,b0,grad_sep):
         radius=UP.multiply(radius,D(2))
     if accepted is None:raise ValueError('Picard tube inclusion not established')
     tube,f,metric,integrand,mapping=accepted
+    if getattr(field,'tight_tubes',False):
+        # Picard already proved the entire trajectory lies in image. Intersect
+        # that enclosure, then reevaluate; no guide/nominal state substitution.
+        for _ in range(3):
+            tube[other]=intersect(tube[other],start[other]+time*f)
+            if tube[other] is None:raise ArithmeticError('proved tube disappeared')
+            f,metric,integrand,mapping=field.chart(tube,axis,sign,direction,b0,grad_sep)
     endpoint=[None,None];endpoint[axis]=target
     endpoint[other]=intersect(start[other]+H*f,tube[other])
     if endpoint[other] is None:raise ArithmeticError('Picard endpoint disappeared')
@@ -87,12 +94,17 @@ def chart_step(field,start,target,axis,direction,psi0,b0,grad_sep):
             'mapping':record(mapping),'picard_inclusion_proven':True}
 
 
-def trace(field_model,guide,grad_sep,max_cells=2048,max_depth=10):
+def trace(field_model,guide,grad_sep,max_cells=2048,max_depth=10,field_enclosure='legacy'):
     if not isinstance(max_cells,int) or not 1<=max_cells<=100000:raise ValueError('positive bounded cell budget required')
     if not isinstance(max_depth,int) or not 0<=max_depth<=20:raise ValueError('subdivision depth 0..20 required')
     p=[list(map(interval,point)) for point in guide]
     if len(p)<2 or any(len(q)!=2 or any(x.lo!=x.hi for x in q) for q in p):raise ValueError('exact 2D guide vertices required')
-    field=ContinuousField(field_model);grad_sep=interval(grad_sep)
+    if field_enclosure not in ('legacy','centered-v1'):raise ValueError('unknown field enclosure')
+    if field_enclosure=='centered-v1':
+        from .selective_transport import TightContinuousField
+        field=TightContinuousField(field_model)
+    else:field=ContinuousField(field_model)
+    grad_sep=interval(grad_sep)
     if grad_sep.lo<=0:raise ValueError('positive source gradient required')
     start=p[0];g=field.gradient(start);bpol=[-g[1],g[0]]
     orientation=dot(bpol,[b-a for a,b in zip(p[0],p[1])])
@@ -102,6 +114,7 @@ def trace(field_model,guide,grad_sep,max_cells=2048,max_depth=10):
     _,b0=field.quantities(start);psi0=field.value(start)
     inputs={'field':copy.deepcopy(field_model),'guide':copy.deepcopy(guide),'grad_sep':record(grad_sep),
             'max_cells':max_cells,'max_depth':max_depth}
+    if field_enclosure!='legacy':inputs['field_enclosure']=field_enclosure
     out={'schema':'continuous-fieldline-path.v1','inputs':inputs,'input_sha256':digest(inputs),
          'cells':[],'complete':False,'continuous_prefix_proven':False,'unresolved':[],
          'direction':direction,'b0':record(b0),'psi0':record(psi0)}
@@ -130,6 +143,6 @@ def trace(field_model,guide,grad_sep,max_cells=2048,max_depth=10):
 
 def replay(recorded):
     i=recorded['inputs']
-    expected=trace(i['field'],i['guide'],i['grad_sep'],i['max_cells'],i['max_depth'])
+    expected=trace(i['field'],i['guide'],i['grad_sep'],i['max_cells'],i['max_depth'],i.get('field_enclosure','legacy'))
     if expected!=recorded:raise ValueError('continuous path replay mismatch')
     return True

@@ -47,6 +47,17 @@ class ValidatedPaths:
         if cache_key(model)!=self._key or [digest(p) for p in self._paths]!=self._hashes:
             raise ValueError('continuous cache/model mismatch')
 
+    def replacing(self,model,index,path):
+        """Validate one changed path; reuse privately owned, hash-checked peers."""
+        self.check(model)
+        if not isinstance(index,int) or not 0<=index<len(self._paths):raise ValueError('invalid donor index')
+        single=copy.deepcopy(model);single['donors']=[single['donors'][index]]
+        checked=ValidatedPaths(single,[path])  # Full input/branch check and replay.
+        result=object.__new__(ValidatedPaths)
+        result._paths=copy.deepcopy(self._paths);result._paths[index]=checked._paths[0]
+        result._key=self._key;result._hashes=[digest(p) for p in result._paths]
+        return result
+
 
 def first_hits(path,surfaces):
     possible=[];guarantees=[]
@@ -98,23 +109,29 @@ def mapping_average(cells,J,state,panels):
     return intersect(total,hull(interval(c['mapping']) for c in cells))
 
 
-def certify_box(model,domain,cache,area_panels=8,thermal_panels=64):
+def certify_box(model,domain,cache,area_panels=8,thermal_panels=64,field_enclosure='legacy'):
     if not isinstance(cache,ValidatedPaths):raise ValueError('replayed continuous cache required')
     if not isinstance(thermal_panels,int) or not 1<=thermal_panels<=512:raise ValueError('thermal panels 1..512 required')
     cache.check(model);box=list(map(interval,domain));_validate(model,box)
+    if field_enclosure not in ('legacy','centered-v1'):raise ValueError('unknown field enclosure')
     out={'schema':'continuous-geometry-transport.v1','model':copy.deepcopy(model),'box':list(map(record,box)),
          'path_sha256':list(cache._hashes),'area_panels':area_panels,'thermal_panels':thermal_panels,
          'transport_parameter_enclosure_proven':False,'continuous_fieldline_enclosure_proven':False,
          'geometry_feasibility_proven':False,'geometry_global_optimum_proven':False,
          'continuous_source_enclosure_proven':False,'field_reconstruction_error_enclosed':False,
          'certified_geometry_optimality_gap':None,'donors':[],'kernel':None,'unresolved':[]}
+    if field_enclosure!='legacy':out['field_enclosure']=field_enclosure
     try:surfaces=[Surface(s,box,area_panels) for s in model['surfaces']]
     except ValueError as exc:
         out['unresolved'].append({'stage':'geometry','reason':str(exc)});return out
     areas=[I(0)]
     for s in surfaces:areas.append(areas[-1]+s.total_area)
     total=areas[-1];out['total_area_m2']=record(total)
-    field=ContinuousField(model['field']);grad_sep=interval(model['grad_sep']);kernel=[]
+    if field_enclosure=='centered-v1':
+        from .selective_transport import TightContinuousField
+        field=TightContinuousField(model['field'])
+    else:field=ContinuousField(model['field'])
+    grad_sep=interval(model['grad_sep']);kernel=[]
     for index,(donor,path) in enumerate(zip(model['donors'],cache._paths)):
         w=interval(donor['weight_MW']);row={'index':index,'weight_MW':record(w)};out['donors'].append(row)
         if w.hi==0:row['status']='zero_input_power';continue
@@ -152,7 +169,7 @@ def certify_box(model,domain,cache,area_panels=8,thermal_panels=64):
 
 
 def replay(recorded,cache):
-    expected=certify_box(recorded['model'],recorded['box'],cache,recorded['area_panels'],recorded['thermal_panels'])
+    expected=certify_box(recorded['model'],recorded['box'],cache,recorded['area_panels'],recorded['thermal_panels'],recorded.get('field_enclosure','legacy'))
     if expected!=recorded:raise ValueError('continuous transport replay mismatch')
     return True
 

@@ -1,0 +1,41 @@
+{
+  "tests_passed": 172,
+  "test_seconds": 6.14,
+  "historical_and_artifact_files_verified": 1844,
+  "evidence": {
+    "candidate-requalification-20261103": {
+      "artifact_index_sha256": "466eb844de155e7f9953a1928a68b8d13bb4e158f0262a42dc3ad545e050ba85",
+      "verified_artifacts": 165
+    },
+    "selective-transport-20261103": {
+      "artifact_index_sha256": "da6f2d290600ac450c52fe2753e7ba9a598eaa41924c6944bcc0271e11a50044",
+      "verified_artifacts": 171
+    },
+    "selective-cell-refinement-20261103": {
+      "artifact_index_sha256": "b7ca8049731ffd464696a38e43fe7ab3c8eb95a3d3173ef1d9258d1ded73c529",
+      "verified_artifacts": 285
+    },
+    "selective-peak-comparison-320-20261103": {
+      "artifact_index_sha256": "0542e8fe49e8bb506576ca13d263fcceeac3baa91e973c0618961013d51da1e3",
+      "verified_artifacts": 8
+    },
+    "selective-peak-comparison-1280-20261103": {
+      "artifact_index_sha256": "ce94d127462e5785a29bf41a3a8c7dc5d9b612c5a0c97da03cd79cf5689b05da",
+      "verified_artifacts": 8
+    }
+  },
+  "unchanged_production_files": [
+    "run_global_campaign.py",
+    "d3d_optimization/campaign_validation.py",
+    "d3d_optimization/campaign_geometry.py",
+    "d3d_optimization/boundary_evaluator.py",
+    "d3d_optimization/transport_evaluator.py"
+  ],
+  "original_code_guard_passed": false,
+  "explicit_unused_code_audit_accepted": true,
+  "continuous_source_enclosure_proven": false,
+  "geometry_global_optimum_proven": false,
+  "note": "All completed study manifests and consumed input hashes verified. Original failed broad code guard remains preserved; explicit unused-code audit accepted.",
+  "test_environment_note": "An intermediate orchestration unit test hit Windows WinError 5 during repeated atomic temporary-file replacement; its unrelated save I/O was isolated with a mock. Numerical study outputs were unaffected; final full suite passed.",
+  "git_diff_check_passed": true
+}
