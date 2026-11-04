@@ -1,0 +1,23 @@
+{
+  "project_id": "appgprj_6aeac85acb148191b7bf2dab44799a01",
+  "url": "https://d3d-divertor-shape-explorer.sorainpublic.chatgpt.site",
+  "access_mode": "public",
+  "version": 1,
+  "version_id": "appgprj_6aeac85acb148191b7bf2dab44799a01~appgver_1ae65612ea14819186f3ba60538995f7",
+  "deployment_id": "appgdep_6aeac8bc3f908191bfd51ad86dabd0ea",
+  "status": "succeeded",
+  "commit_sha": "ae2f3f02cce1ac7a5a93799d22ea794adee6ab98",
+  "source_directory": "D:/DivertorOptimization/exports/d3d-progression-public-20261104",
+  "original_directory": "D:/DivertorOptimization/viewers/d3d-progression-20261104/dist",
+  "file_count": 277,
+  "all_source_assets_identical": true,
+  "browser_verification": {
+    "public_origin_loaded": true,
+    "OMP50_peak": "1.7869",
+    "OMP50_status": "v3 수치 기준 통과",
+    "finest_1280_profile_loaded": true,
+    "displayed_error": null
+  },
+  "anonymous_python_http_probe": "Cloudflare 403 error 1010 for urllib; not used as browser availability verdict",
+  "notes": "Hosted snapshot; independent of local computer. Future local changes require redeployment."
+}

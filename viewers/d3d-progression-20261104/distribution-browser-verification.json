@@ -1,0 +1,57 @@
+{
+  "observations": [
+    {
+      "case": "OMP / RMIN 20 MM",
+      "error": null,
+      "peak": "1.4442",
+      "stage": "4",
+      "status": "이전 기준 통과 · v3 미통과",
+      "title": "이전 최종 형상 · v3 미통과"
+    },
+    {
+      "case": "OMP / RMIN 20 MM",
+      "hidden": false,
+      "position": "R 1.27810 m · Z -1.41934 m",
+      "q": "q = 1.4419 MW/m²",
+      "surface": "RZ",
+      "recomputed_q": 1.4419146325399008,
+      "coordinate_distance_m": 0.0000027450780077315313
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "error": null,
+      "peak": "1.7869",
+      "stage": "34",
+      "status": "분포 수렴 v3 통과",
+      "title": "분포 수렴 v3 최종 결과"
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "hidden": false,
+      "position": "R 1.26868 m · Z -1.41653 m",
+      "q": "q = 1.7774 MW/m²",
+      "surface": "RZ",
+      "recomputed_q": 1.7773925174557041,
+      "coordinate_distance_m": 0.0000013804231270226466
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "heat": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "peak": "1.7874",
+      "title": "개선 단계 34"
+    },
+    {
+      "case": "OMP / RMIN 100 MM",
+      "finalDisabled": true,
+      "title": "D3D 기준 형상"
+    },
+    {
+      "case": "IMP / RMIN 20 MM",
+      "peak": "2.3752",
+      "status": "최종 검증 통과",
+      "title": "최종 수치검증 결과"
+    }
+  ],
+  "console": [],
+  "passed": true
+}

@@ -1,0 +1,55 @@
+{
+  "checks": "passed",
+  "observations": [
+    {
+      "view": "R-Z",
+      "point": [
+        1.24403,
+        -1.39994
+      ],
+      "displayed_q": "1.9891",
+      "saved_cell_q": 1.9890754610570627,
+      "distance_from_rounded_UI_coordinate_m": 1.6568267962594243E-06
+    },
+    {
+      "view": "3D",
+      "point": [
+        1.2661,
+        -1.41473
+      ],
+      "displayed_q": "1.8311",
+      "saved_cell_q": 1.8310684160761195,
+      "distance_from_rounded_UI_coordinate_m": 2.070058331437863E-06
+    }
+  ],
+  "profile_files": 8,
+  "display_cells": 35800,
+  "profile_sha256": {
+    "baseline-IMP.json": "2a816c4b6ec6cb3c71d0642b44dba2e491130d06116891e119dcaaee14e2a159",
+    "baseline-OMP.json": "f77c2bd97fe35ad406d7b34eecb1f55a7bffe197c0794aa0aa95335a1cc865f7",
+    "campaign-IMP-20.json": "1f491e65301d095b40c74bfa0ec4665f858631c8b8a4f4b5ecca49bfe82b863c",
+    "campaign-IMP-50.json": "bf63e5a92154e1ec3bb2e88b0be3f3e8428feb99f7bd461a5e35d257101ed05b",
+    "pilot-IMP-20.json": "ac60e8567d2c6dde69603fa257327a8c4e33efc0e819021c5b25befc616fd036",
+    "pilot-IMP-50.json": "234ff1359eb474d55c605b03491dfd9af7a8a656f6ac9e26d5c91aff1c4c1e14",
+    "tangent-OMP-20.json": "f5b17e89fb1f798b229fd13cf3d3ed3149caa74830923b6a69d1d0ef7b054ae0",
+    "tangent-OMP-50.json": "8e09e3a6ca47f65134d294db84644fa47f983ee9b95d0c7116b58de73daac71c"
+  },
+  "javascript_tests_passed": 14,
+  "new_thermal_solves": 0,
+  "new_optimizations": 0,
+  "browser_checks": [
+    "3D and R-Z numeric q readout",
+    "shared numeric color scale",
+    "color hidden with q still available",
+    "baseline uses its saved refined profile",
+    "unsaved stage reports missing, not zero",
+    "stage change clears stale tooltip",
+    "right-edge tooltip width 268 px, right 1145 px within viewport 1153 px"
+  ],
+  "screenshots": [
+    "screenshots/q-probe-rz.jpg",
+    "screenshots/q-probe-3d.jpg"
+  ],
+  "final_screenshot": "screenshots/q-probe-final.jpg",
+  "browser_console_errors_or_warnings": []
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "routed_stage_occurrences": 237,
+  "midpoint_probes": 11613,
+  "three_ray_probes": 237,
+  "all_sources_radii_runs": true
+}

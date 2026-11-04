@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "probe_count": 867,
+  "original_stages_preserved": true,
+  "non_omp_finals_preserved": true,
+  "finals": [
+    {
+      "radius": 20,
+      "identity": "6d10d9b8fcedfdde1897fae497f15505b0f2892540d34c7f8ece72f715814a7b",
+      "validation": "historical",
+      "v3": false,
+      "peak": 1.444160059834858
+    },
+    {
+      "radius": 50,
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "validation": "current",
+      "v3": true,
+      "peak": 1.7869404891484175
+    },
+    {
+      "radius": 100,
+      "identity": null,
+      "validation": null,
+      "v3": null,
+      "peak": null
+    }
+  ]
+}

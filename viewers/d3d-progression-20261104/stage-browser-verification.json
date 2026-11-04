@@ -1,0 +1,194 @@
+{
+  "cases": [
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "IMP / RMIN 20 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "pilot",
+      "source": "IMP / RMIN 20 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "IMP / RMIN 50 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "pilot",
+      "source": "IMP / RMIN 50 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "기준 형상 · 1280 경로 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "IMP / RMIN 100 MM",
+      "status": "고정 기준",
+      "title": "D3D 기준 형상"
+    },
+    {
+      "error": null,
+      "note": "기준 형상 · 1280 경로 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "pilot",
+      "source": "IMP / RMIN 100 MM",
+      "status": "고정 기준",
+      "title": "D3D 기준 형상"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "OMP / RMIN 20 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "tangent",
+      "source": "OMP / RMIN 20 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "OMP / RMIN 50 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "선택 형상 · 320 경로 · 해당 단계 재평가 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "tangent",
+      "source": "OMP / RMIN 50 MM",
+      "status": "탐색 기록 · 현재 형상 통과",
+      "title": "개선 단계 01"
+    },
+    {
+      "error": null,
+      "note": "기준 형상 · 1280 경로 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "campaign",
+      "source": "OMP / RMIN 100 MM",
+      "status": "고정 기준",
+      "title": "D3D 기준 형상"
+    },
+    {
+      "error": null,
+      "note": "기준 형상 · 1280 경로 · 표시 셀 평균 · ◇: peak 위치",
+      "run": "tangent",
+      "source": "OMP / RMIN 100 MM",
+      "status": "고정 기준",
+      "title": "D3D 기준 형상"
+    }
+  ],
+  "observations": [
+    {
+      "series": "campaign-IMP-20",
+      "stage": 1,
+      "view": "rz",
+      "rz": [
+        1.086,
+        -1.28342
+      ],
+      "q": "2.4004",
+      "recomputed_q": 2.4004181355986236,
+      "coordinate_to_cell_distance_m": 0.0000027027337643283088
+    },
+    {
+      "series": "campaign-IMP-20",
+      "stage": 1,
+      "view": "3d",
+      "rz": [
+        1.02119,
+        -1.22053
+      ],
+      "q": "0.5024",
+      "recomputed_q": 0.5023610650727394,
+      "coordinate_to_cell_distance_m": 0.000004404561451582621
+    },
+    {
+      "series": "campaign-OMP-50",
+      "stage": 34,
+      "view": "rz",
+      "rz": [
+        1.26582,
+        -1.41489
+      ],
+      "q": "1.7719",
+      "recomputed_q": 1.7719135723074375,
+      "coordinate_to_cell_distance_m": 0.000001370830845323778
+    },
+    {
+      "series": "campaign-OMP-50",
+      "stage": 34,
+      "view": "3d",
+      "rz": [
+        1.26617,
+        -1.4151
+      ],
+      "q": "1.7719",
+      "recomputed_q": 1.7719135723074375,
+      "coordinate_to_cell_distance_m": 9.102611167929259e-7
+    },
+    {
+      "series": "campaign-OMP-50",
+      "stage": 34,
+      "view": "3d-small-nonzero",
+      "rz": [
+        1.20241,
+        -1.37563
+      ],
+      "q": "7.740e-8",
+      "recomputed_q": 7.740112800647487e-8,
+      "coordinate_to_cell_distance_m": 0.0000026851121995803377
+    },
+    {
+      "series": "tangent-OMP-50",
+      "final": true,
+      "view": "rz-color-off",
+      "rz": [
+        1.24628,
+        -1.40157
+      ],
+      "q": "1.9584",
+      "recomputed_q": 1.9584098350207162,
+      "coordinate_to_cell_distance_m": 4.497351565629897e-9
+    },
+    {
+      "series": "tangent-OMP-50",
+      "stage": 2,
+      "view": "3d-full-wall",
+      "rz": [
+        1.01834,
+        0.57279
+      ],
+      "q": "6.185e-10",
+      "recomputed_q": 6.185413069491428e-10,
+      "coordinate_to_cell_distance_m": 0.0000031552389340789162
+    }
+  ],
+  "console": [],
+  "rapid_switch": {
+    "last_stage": 2,
+    "donors": 320,
+    "tooltip_cleared": true
+  },
+  "review_issue_fixed": "missing index/hash now fails closed",
+  "numeric_observations_passed": true
+}

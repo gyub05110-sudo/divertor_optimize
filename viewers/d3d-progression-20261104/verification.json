@@ -1,0 +1,1 @@
+{"data_checks":"passed","series":12,"stages":237,"finals":6,"exact_source_records_checked":237,"http_mime":{"app.mjs":"text/javascript","vendor/three.module.js":"text/javascript","data.json":"application/json"},"baseline_preserved":true,"new_thermal_solves":0,"new_optimizations":0}

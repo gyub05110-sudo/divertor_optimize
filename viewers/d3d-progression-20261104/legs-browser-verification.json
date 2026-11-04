@@ -1,0 +1,39 @@
+{
+  "completed_local": "2026-11-04T10:57:31.4283336+09:00",
+  "url": "http://127.0.0.1:8780/",
+  "unit_tests": {
+    "python": 7,
+    "javascript": 7,
+    "passed": true
+  },
+  "data_checks": {
+    "series": 12,
+    "stages": 237,
+    "refined": 6,
+    "walls": 239,
+    "leg_paths": 478,
+    "passed": true
+  },
+  "browser_checks": [
+    "IMP20 current refined with heat and legs",
+    "OMP50 current refined with lowered outer strike",
+    "leg off hides legend and overlay",
+    "baseline-only restores baseline strike",
+    "empty R100 uses original D3D",
+    "historical OMP20 explicitly labelled historical",
+    "baseline stage and first improvement stage switching",
+    "final OMP50 restored; leg overlay on"
+  ],
+  "application_console_errors": [],
+  "application_console_warnings": [],
+  "screenshot": "screenshots/leg-omp50-final.jpg",
+  "current_qualified_candidates": [
+    "campaign IMP20",
+    "campaign IMP50",
+    "tangent OMP50"
+  ],
+  "code_preservation_exception": "Unused two-module changes; accepted by separate code_scope_audit; original warning preserved",
+  "github_push": false,
+  "new_optimizations": 0,
+  "new_thermal_solves": 0
+}

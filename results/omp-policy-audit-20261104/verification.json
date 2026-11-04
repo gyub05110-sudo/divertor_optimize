@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "protected_files": 1397,
+  "protected_unchanged": true,
+  "sealed_final_artifacts": 81,
+  "existing_viewer_indices_and_assets_match_sealed_study": true,
+  "modified_presentation_files": {
+    "dist/app.mjs": {
+      "before": "b9b06a266465d74479770403165b91471306d9de653883ae4270c1c4f81dfa2a",
+      "after": "04ddd3eb6a021378996747c9e627073dfe84bed0bf67bcfec0290cf313319967"
+    },
+    "dist/index.html": {
+      "before": "4d620fc7c5550a2c44ce8c61b128fed220425778d318a543b016ef8465c1f43e",
+      "after": "cbad77c092024d1b313cb7dda4da9c3164977291a519a7fb07e40e7c23869d89"
+    },
+    "README.md": {
+      "before": "bfc37b0a3d2af5eacb3ce1724d99bf178919bde5eec7cb1043438261ca947ba1",
+      "after": "08510f5cc3eecbaa0bbf667c77de91e5e370837861f2978923a1ddd63c0a3aab"
+    }
+  },
+  "python": {
+    "command": "python -m unittest discover -p 'test_*.py' -q",
+    "passed": 35,
+    "failed": 0
+  },
+  "javascript": {
+    "command": "node --test test_math.mjs test_heat_probe.mjs test_stage_profiles.mjs test_qualified_finals.mjs test_distribution_checks.mjs",
+    "passed": 22,
+    "failed": 0
+  },
+  "browser": {
+    "method": "actual IAB UI inspection",
+    "OMP20": "old stage4 retained; provisional v3 nonpass, peak1.4442",
+    "OMP50": "v3 numerical pass, peak1.7869",
+    "OMP100": "no archived final, baseline shown",
+    "IMP20": "prior qualified result unchanged, peak2.3752",
+    "OMP20_stage18": "own 320 donor profile, peak1.4398; not promoted",
+    "console_errors": [],
+    "audit_page_visible": true,
+    "screenshot": "audit-screen.png"
+  },
+  "independent_review": {
+    "completed": true,
+    "findings": [
+      "Separate objective improvement from provisional screen",
+      "Report baseline-relative A2",
+      "Do not infer resolved superiority from near-tied stored peaks"
+    ],
+    "current_result_arithmetic_bug_found": false
+  },
+  "scope": "Presentation correction and read-only numerical reassessment; no thresholds, numerical code, pass flags, or final geometry changed"
+}

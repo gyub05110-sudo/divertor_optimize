@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-04",
+  "browser": "Codex in-app browser",
+  "url": "http://127.0.0.1:8780/",
+  "all_12_source_radius_run_combinations": "passed; expected stage counts and empty states, no visible error",
+  "stage_counts": {
+    "campaign-IMP-20": 92, "campaign-IMP-50": 61, "campaign-IMP-100": 0,
+    "pilot-IMP-20": 1, "pilot-IMP-50": 3, "pilot-IMP-100": 0,
+    "campaign-OMP-20": 19, "campaign-OMP-50": 34, "campaign-OMP-100": 0,
+    "tangent-OMP-20": 16, "tangent-OMP-50": 11, "tangent-OMP-100": 0
+  },
+  "previous_next_and_selection": "passed",
+  "playback": "observed baseline to step 11 and automatic stop at final search step",
+  "refined_results": "OMP20 historical and OMP50 current status, peak and heat inspected",
+  "geometry_schema_regression": "OMP50 stage 1 shows 51.91 mm and 1.02e-14 degrees without throwing",
+  "display": "3D surface, R-Z overlay, junction zoom, heat on/off, whole wall, LCFS and 360-degree camera view inspected",
+  "mobile": {"viewport_width": 390, "document_scroll_width": 375, "horizontal_overflow": false, "screenshot": "screenshots/mobile.jpg"},
+  "export": {
+    "png_generation_and_preview": "passed; decoded and saved screenshots/export-test.png",
+    "png_dimensions": [501,230],
+    "native_download_event": "not verified; IAB download event and downloadMedia timed out",
+    "fallback": "PNG preview has a visible download link and image context-menu saving; ordinary browser can open the same localhost URL"
+  },
+  "final_browser_errors": [],
+  "screenshots": ["screenshots/viewer-overview.jpg", "screenshots/omp50-refined.jpg", "screenshots/mobile.jpg"],
+  "review_fixes": ["OMP scalar tangent error", "straight-surface null radius", "JavaScript MIME on Windows", "matching sRGB heat colors in 2D and 3D"],
+  "github_push": false,
+  "external_hosting": false
+}

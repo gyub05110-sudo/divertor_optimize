@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "all_core_hashes_verified": true,
+  "protected_inputs_unchanged": true,
+  "case_count": 20,
+  "results": {
+    "20": {
+      "status": "no_archived_candidate_passed_v3",
+      "best": null
+    },
+    "50": {
+      "status": "qualified_improvement",
+      "best": {
+        "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+        "series": "campaign-OMP-50",
+        "stage": 34,
+        "radius_mm": 50,
+        "peak": 1.7869404891484175,
+        "previous_pass": true,
+        "passed": true,
+        "max_linf_relative": 0.004042259713061847,
+        "max_l1_relative": 0.0020297512188400305,
+        "max_a2_relative": 0.00011252570738373774,
+        "max_location_change_m": 2.2902015008688308e-05,
+        "failures": []
+      }
+    }
+  }
+}

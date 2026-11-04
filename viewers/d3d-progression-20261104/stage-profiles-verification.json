@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "stage_occurrences": 237,
+  "unique_stage_profiles": 236,
+  "saved_profiles": 8,
+  "checked_display_cells": 720584,
+  "max_recorded_peak_relative_error": 2.220446049250313e-16,
+  "max_power_fraction_error": 1.0658141036401503e-13,
+  "max_geometry_distance_m": 1.89777854471068e-05,
+  "cpu_gpu_parity": {
+    "IMP": {
+      "identity": "8d67660df081e31bbcd1193ed686c27f8ce3f281244bd8227e4242c3a89b9c94",
+      "passed": true,
+      "max_absolute_q": 1.3322676295501878e-15
+    },
+    "OMP": {
+      "identity": "f101693b2f7a62080fa0c4df07b2ac0d5d3496cbe9e0354be4e83671dc098d37",
+      "passed": true,
+      "max_absolute_q": 8.881784197001252e-16
+    }
+  },
+  "original_files_unchanged": true,
+  "final_qualifications_unchanged": true,
+  "data_sha256": "f429b02fd48fd920c12ede7f4c79f67dfd98a85fe42c9a37bc1e6f4ea8df60d3",
+  "stage_index_sha256": "d1f228fbf591c581a9ca388d5d41c2055164c527960847dfeff2b680e671c3d0",
+  "full_saved_index_sha256": "554fa027b45d1e0e83f5ee888ba2787cc8966e114d66ef3db49b245bf0112d08",
+  "seconds": 14.760894699953496
+}

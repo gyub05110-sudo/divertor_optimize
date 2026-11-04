@@ -1,0 +1,30 @@
+✔ v3 distribution rejects hidden failure, missing pair and relaxed thresholds (2.8771ms)
+✔ failed reassessment preserves old final but marks it as old-policy only (0.3753ms)
+✔ nearest segment projects to the segment, not the closest endpoint (1.5505ms)
+✔ zero is a stored value and uncovered positions stay missing (0.1504ms)
+✔ profile selection follows visible geometry without fabricating a stage profile (0.1649ms)
+✔ faceted toroidal triangles carry exact poloidal R/Z for picking (0.1599ms)
+✔ small nonzero q is not rounded to a misleading zero (0.1583ms)
+✔ a real ray intersection recovers R despite the toroidal chord radius bias (2.2705ms)
+✔ all saved heat profiles return their own cell q at each segment midpoint (5427.9706ms)
+✔ revolution keeps R and Z and closes after 2 pi (0.9871ms)
+✔ cut geometry never creates a bridge between nonadjacent points (0.7655ms)
+✔ empty, final and baseline selections cannot borrow a previous series record (0.9319ms)
+✔ color scale clamps instead of changing with each candidate (0.2899ms)
+✔ IMP array and OMP scalar tangent errors are both supported (0.176ms)
+✔ straight surfaces represented by null do not imply a zero radius (0.2002ms)
+✔ leg layers follow the displayed wall and never borrow an unknown candidate strike (0.2902ms)
+✔ adds separately qualified final without mutating original stages or saved indices (2.3704ms)
+✔ rejects non-improvement, missing independent audit, wrong wall, identity and hash (2.1167ms)
+✔ loaded finest profile must belong to the same committed qualification (0.2859ms)
+✔ stage q is looked up by exact identity and source; refined q wins (1.0092ms)
+✔ incomplete, wrong-source and stale stage indexes fail closed (0.562ms)
+✔ full-wall saved index must cover every baseline and final with matching identity and hash (0.4279ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5630.3547

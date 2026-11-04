@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "python-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-p",
+        "test_*.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 1.756
+    },
+    {
+      "name": "javascript-tests",
+      "command": [
+        "node",
+        "--test",
+        "test_math.mjs",
+        "test_heat_probe.mjs",
+        "test_stage_profiles.mjs",
+        "test_qualified_finals.mjs",
+        "test_distribution_checks.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 5.724
+    },
+    {
+      "name": "distribution-integrity",
+      "command": [
+        "node",
+        "verify_distribution_v3.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 1.614
+    },
+    {
+      "name": "javascript-syntax",
+      "command": [
+        "node",
+        "--check",
+        "dist/app.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.079
+    }
+  ],
+  "viewer_import_files": 345,
+  "viewer_semantically_identical": true,
+  "byte_differences_after_verification": [],
+  "audit_artifact_hashes_verified": true,
+  "scope": "Copied viewer/policy tests and distribution integrity; solver unchanged",
+  "whitespace_review": {
+    "command": "git -c core.whitespace=cr-at-eol diff --cached --check",
+    "findings_preserved_from_byte_identical_import": [
+      "HEAT_PROBE_PLAN.md:17 blank line at EOF",
+      "LEG_PLAN.md:16 blank line at EOF",
+      "dist/vendor/three.core.js:48480 vendor indentation"
+    ],
+    "reason": "Preserve archived hashes and unmodified third-party vendor source; no new implementation whitespace defects"
+  }
+}

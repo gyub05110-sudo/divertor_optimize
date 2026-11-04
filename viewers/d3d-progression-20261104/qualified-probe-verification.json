@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "new_finals": 2,
+  "midpoint_q_probes": 122,
+  "three_ray_probes": 2,
+  "old_stages_and_finals_preserved": true,
+  "profile_and_leg_identity_bound": true
+}

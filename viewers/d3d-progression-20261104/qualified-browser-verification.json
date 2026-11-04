@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8780/",
+  "checked": [
+    {
+      "case": "OMP / RMIN 50 MM",
+      "peak": "1.7869",
+      "position": "R 1.26779 m · Z -1.41603 m",
+      "probeHidden": false,
+      "q": "q = 1.7765 MW/m²",
+      "resolution": "1280 경로 · 동일 해상도 기준 비교",
+      "stage": "34",
+      "title": "추가 정밀검증 결과",
+      "surface": "RZ",
+      "mode": "final",
+      "recomputed_q": 1.7765381640559714,
+      "coordinate_to_cell_distance_m": 0.000009942870245637085,
+      "profile": "qualified-profiles/1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2.json",
+      "profile_sha256": "1ce6ea782f673b300c5962e2df21eb5b1412491e4a34f3fb03090dd538be1d19"
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "peak": "1.7874",
+      "position": "R 1.26834 m · Z -1.41635 m",
+      "probeHidden": false,
+      "q": "q = 1.7759 MW/m²",
+      "resolution": "320 경로 · 동일 해상도 기준 비교",
+      "stage": "34",
+      "title": "개선 단계 34",
+      "surface": "RZ",
+      "mode": "stage",
+      "recomputed_q": 1.7758804551105474,
+      "coordinate_to_cell_distance_m": 0.0000034514390560151703,
+      "profile": "stage-profiles/1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2.json",
+      "profile_sha256": "1dcda0bc008ae1e9a9a0ee5a88d3a07fed7e16e3bede9c3704c8038039d2e1d1"
+    },
+    {
+      "case": "OMP / RMIN 20 MM",
+      "peak": "1.4442",
+      "position": "R 1.27775 m · Z -1.41916 m",
+      "probeHidden": false,
+      "q": "q = 1.4399 MW/m²",
+      "resolution": "1280 경로 · 동일 해상도 기준 비교",
+      "stage": "4",
+      "title": "추가 정밀검증 결과",
+      "surface": "RZ",
+      "mode": "final",
+      "recomputed_q": 1.439902023157312,
+      "coordinate_to_cell_distance_m": 0.000010264785934413421,
+      "profile": "qualified-profiles/6d10d9b8fcedfdde1897fae497f15505b0f2892540d34c7f8ece72f715814a7b.json",
+      "profile_sha256": "1d3be5e9c1acbc04b63c8493579f48f62aaa81522ec358bf0c17dd5254142198"
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "peak": "1.7869",
+      "position": "R 1.25728 m · Z -1.40916 m",
+      "probeHidden": false,
+      "q": "q = 1.7378 MW/m²",
+      "resolution": "1280 경로 · 동일 해상도 기준 비교",
+      "stage": "34",
+      "title": "추가 정밀검증 결과",
+      "surface": "3D",
+      "mode": "final",
+      "recomputed_q": 1.7378272730536912,
+      "coordinate_to_cell_distance_m": 3.10425745318979e-7,
+      "profile": "qualified-profiles/1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2.json",
+      "profile_sha256": "1ce6ea782f673b300c5962e2df21eb5b1412491e4a34f3fb03090dd538be1d19"
+    }
+  ],
+  "regressions": [
+    {
+      "case": "OMP / RMIN 100 MM",
+      "finalDisabled": true,
+      "peak": "2.7308",
+      "status": "고정 기준",
+      "title": "D3D 기준 형상"
+    },
+    {
+      "case": "IMP / RMIN 20 MM",
+      "finalDisabled": false,
+      "peak": "2.3752",
+      "status": "현재 정밀검증 통과",
+      "title": "최종 수치검증 결과"
+    },
+    {
+      "case": "OMP / RMIN 50 MM",
+      "display": "baseline",
+      "heat": "기준 형상 · 1280 경로 · 표시 셀 평균 · ◇: peak 위치"
+    }
+  ],
+  "console_errors": 0
+}

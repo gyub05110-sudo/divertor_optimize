@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D3D · Divertor Shape Explorer</title>
+  <meta name="description" content="D3D IMP·OMP 최적화의 기록 갱신 형상을 3D와 단면으로 비교합니다.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23087980' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brandmark" aria-hidden="true">◉</span><span><strong>D3D</strong><span class="brand-sub">DIVERTOR SHAPE EXPLORER</span></span></div>
+  <div class="top-meta"><span class="live-dot"></span> 저장된 연구 기록 <span class="divider">/</span> 독립 열원 1 MW</div>
+  <button id="export" class="quiet">3D 이미지 저장 ↗</button>
+</header>
+<main class="shell">
+<aside class="sidebar">
+  <div class="eyebrow">EXPERIMENT</div><h1>개선 형상 탐색</h1>
+  <p class="intro">기준 형상에서 시작해,<br>peak를 낮춘 과정을 살펴보세요.</p>
+  <fieldset><legend>01 <span>열원</span></legend><div class="segmented" id="sources"><button data-source="IMP" aria-pressed="true">IMP <small>내측</small></button><button data-source="OMP" aria-pressed="false">OMP <small>외측</small></button></div></fieldset>
+  <fieldset><legend>02 <span>최소 곡률반경 Rmin</span></legend><div class="segmented" id="radii"><button data-radius="20" aria-pressed="true">20 <small>mm</small></button><button data-radius="50" aria-pressed="false">50 <small>mm</small></button><button data-radius="100" aria-pressed="false">100 <small>mm</small></button></div></fieldset>
+  <label class="fieldlabel" for="runs">03 <span>탐색 실행 기록</span></label><select id="runs" aria-label="탐색 실행 기록"></select>
+  <div class="run-summary" id="run-summary">기록을 불러오고 있습니다…</div>
+  <button id="final" class="final-button" disabled><span>정밀 결과 보기</span><span>↗</span></button>
+  <div class="sidebar-rule"></div>
+  <div class="eyebrow">VIEW</div>
+  <label class="fieldlabel" for="display">형상 표시</label><select id="display"><option value="overlay">기준 + 선택 형상 겹쳐보기</option><option value="candidate">선택 형상만</option><option value="baseline">기준 형상만</option></select>
+  <div class="switch-row"><label for="context">장치 전체 벽 표시</label><input id="context" type="checkbox"></div>
+  <div class="switch-row"><label for="plasma">LCFS 표시</label><input id="plasma" type="checkbox"></div>
+  <div class="switch-row"><label for="legs">Divertor leg 표시</label><input id="legs" type="checkbox" checked></div>
+  <div class="switch-row"><label for="heat">q 크기에 따라 색상 표시</label><input id="heat" type="checkbox" checked></div>
+  <label class="range-label" for="angle">회전 범위 <output id="angle-value">240°</output></label><input id="angle" type="range" min="30" max="360" step="10" value="240">
+  <p class="small muted">R–Z 단면을 회전한 축대칭 3D입니다.</p>
+  <div class="reference"><span>고정 입력</span><strong>λq 3 mm · χ⊥ 0.3 m²/s</strong><span>nₑ 10¹⁹ m⁻³ · 원래 D3D 기준 형상</span></div>
+</aside>
+<section class="workspace" aria-label="형상 비교 작업 공간">
+  <div class="workspace-head"><div><div class="eyebrow" id="case-label">IMP / RMIN 20 MM</div><h2 id="stage-title">불러오는 중</h2></div><span id="status" class="badge">준비 중</span></div>
+  <div class="metrics" aria-live="polite">
+    <div class="metric"><span>기준 peak</span><strong id="base-peak">—</strong><small>MW/m²</small></div>
+    <div class="metric"><span>선택 형상 peak</span><strong id="peak">—</strong><small>MW/m²</small></div>
+    <div class="metric reduction"><span>기준 대비 감소율</span><strong id="reduction">—</strong><small id="resolution">동일 격자끼리 비교</small></div>
+  </div>
+  <p class="leg-note" id="audit-note">peak 감소·열분산 개선과 국소 q의 수치 신뢰도는 별도 판단합니다. OMP의 v3는 잠정 수치 기준이며, 미통과가 개선 없음을 뜻하지 않습니다. <a href="policy-audit.html" target="_blank" rel="noopener">판정 재검수와 열분산 비교 ↗</a></p>
+  <div class="visuals">
+    <section class="panel three-panel"><div class="panel-heading"><span><b>01</b> 3D 형상</span><div class="camera-controls"><button id="focus" aria-label="디버터 확대">디버터</button><button id="overview">전체</button><button id="top">위에서</button></div></div>
+      <div id="scene" role="img" aria-label="선택한 D3D 형상의 회전 가능한 3D 보기"><div id="webgl-fallback" hidden>3D 가속을 사용할 수 없습니다. 오른쪽 단면에서 형상을 확인할 수 있습니다.</div></div>
+      <div class="scene-label"><span class="legend-line baseline"></span>기준 <span class="legend-line candidate"></span>선택 형상</div>
+      <div class="scene-hint">드래그 회전 · 휠 확대 · 오른쪽 드래그 이동</div>
+    </section>
+    <section class="panel section-panel"><div class="panel-heading"><span><b>02</b> R–Z 단면</span><button id="section-zoom" class="quiet">접합부 확대</button></div><canvas id="section" role="img" aria-label="동일 축척으로 비교한 기준과 선택 형상의 R–Z 단면"></canvas><div class="section-caption" id="section-caption">동일 축척 · 실제 형상 크기</div></section>
+  </div>
+  <div class="leg-strip" id="leg-legend"><span class="leg-key inner"></span><span>Inner leg</span><span class="leg-key outer"></span><span>Outer leg</span><span>× X-point · ● 도착점 · ◯ 기준 도착점</span></div>
+  <p class="leg-note" id="leg-note" aria-live="polite">X-point에서 각 벽의 첫 교점까지 · 축대칭 분리면 표시</p>
+  <div class="heat-strip"><span class="heat-key" aria-hidden="true"></span><span id="heat-note">해당 형상의 열분포를 불러오고 있습니다…</span><span id="heat-scale"></span></div>
+  <div class="q-colorbar" id="q-colorbar" hidden><div id="q-gradient"></div><div id="q-ticks"></div><div class="q-scale-note">q [MW/m²] · 같은 열원에서는 기준·후보에 동일한 색상 척도 사용</div></div>
+  <div class="probe-hint">3D 표면 또는 R–Z 벽 위에 마우스를 올리면 q와 좌표가 표시됩니다. 터치 화면에서는 눌러 확인하세요.</div>
+  <section class="panel timeline-panel">
+    <div class="timeline-heading"><span><b>03</b> 최고 기록 갱신 과정</span><span id="stage-counter" class="muted">—</span></div>
+    <div class="timeline-controls"><button id="prev" aria-label="이전 개선 단계">←</button><button id="play" aria-label="개선 단계 자동 재생">▶</button><button id="next" aria-label="다음 개선 단계">→</button><input id="timeline" aria-label="개선 단계" type="range" min="0" max="0" value="0"><select id="stage-select" aria-label="개선 단계 선택"></select></div>
+    <div id="empty" hidden class="empty"></div>
+    <svg id="chart" viewBox="0 0 900 106" role="img" aria-label="최고 기록 갱신 단계별 peak 감소율"></svg>
+    <div class="timeline-foot"><span>기준 → 저장된 기록 갱신 단계</span><span>정밀 결과는 별도 격자로 평가되어 시계열에서 분리됩니다.</span></div>
+  </section>
+  <details class="evidence"><summary>선택 형상의 검증·출처 보기 <span id="identity-short"></span></summary><div id="evidence-body"></div><p>각 실행의 실제 최고 기록 갱신 후보를 추출한 뒤 현재 형상 검사를 적용했습니다. 표시할 기록이 없다는 사실은 개선 형상의 부재나 전역 최적성을 뜻하지 않습니다.</p><p>검증 상태는 위의 선택 후보를 기준으로 표시합니다. 이전 추가 정밀 결과와 분포 수렴 v3 결과를 구분합니다. v3는 최대점 위치를 탈락 조건으로 쓰지 않고 같은 물리적 위치의 q 분포·전력·확산 면적 수렴을 검사합니다. 이전 기준을 통과했어도 v3 미통과이면 최신 합격 형상으로 표시하지 않습니다. 과거 정밀 결과는 당시 검증 기록입니다. 판정은 설정된 수치 허용오차를 포함하며, 전역 최적성 증명은 아닙니다.</p><p>추가 정밀검증 결과는 GPU 평가, 해당 후보의 CPU/GPU 열분포 비교, 입력·사용 코드 해시 보존을 확인해 등록합니다. 별도의 2026-11-03 CPU 재검증(캠페인 IMP 20/50 mm, 접선·곡률 비교 OMP 50 mm)은 당시 미사용 모듈 2개 변경 경고가 있었고, 사용 코드 보존은 별도 범위 감사에서 승인됐습니다.</p></details>
+  <div id="error" role="alert" hidden></div>
+</section>
+</main>
+<footer>D3D RESEARCH ARCHIVE <span>저장 형상 + 단계별 동일 입력 q 재평가 · IMP / OMP 독립 실험</span><span>LOCAL VIEWER / 2026.11</span></footer>
+<dialog id="image-dialog"><div class="image-head"><strong>현재 3D 보기</strong><form method="dialog"><button aria-label="이미지 미리보기 닫기">닫기 ×</button></form></div><img id="image-preview" alt="현재 선택한 형상의 PNG 미리보기"><div class="image-actions"><a id="image-download" download>PNG 저장 ↓</a><span>그림을 오른쪽 클릭해 저장할 수도 있습니다.</span></div></dialog>
+<div id="q-tooltip" class="q-tooltip" role="status" hidden><div id="probe-title"></div><strong><span id="probe-swatch"></span><span id="probe-value"></span></strong><div id="probe-position"></div><small id="probe-detail"></small></div>
+</body></html>
