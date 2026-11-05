@@ -1,0 +1,30 @@
+{
+  "seeds": [
+    5161,
+    7753,
+    9923
+  ],
+  "sources": [
+    "OMP",
+    "IMP"
+  ],
+  "size": 12,
+  "budget_s": 200,
+  "batch": 4,
+  "radius_mm": 20,
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "python": "3.13.12",
+  "driver_sha256": "7940f20406c755b14ca3c52cc159348d9599b2a18f3536eedd727db7e1b01c28",
+  "inputs": {
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  }
+}

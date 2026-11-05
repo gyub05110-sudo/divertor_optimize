@@ -1,0 +1,63 @@
+{
+  "panel_sha256": "dad4e238295fd486ca87753714df304165ba755e0853997cfca3bebf857566d1",
+  "policies": {
+    "screen": {
+      "policy": "screen",
+      "budget_s": 200,
+      "peak": 2.6450205692673223,
+      "A2": 0.6603794981346375,
+      "selected": 1,
+      "first_5pct_s": null,
+      "fine_ids": [
+        1,
+        4
+      ],
+      "seen_coarse": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "eligible_fine": 2,
+      "elapsed_last_completed_s": 197.2690237001516,
+      "best_eligible_new": {
+        "i": 1,
+        "peak": 2.6450205692673223,
+        "A2": 0.6603794981346375
+      }
+    },
+    "direct": {
+      "policy": "direct",
+      "budget_s": 200,
+      "peak": 2.6450205692673223,
+      "A2": 0.6603794981346375,
+      "selected": 1,
+      "first_5pct_s": null,
+      "fine_ids": [
+        0,
+        1,
+        2
+      ],
+      "seen_coarse": [],
+      "eligible_fine": 3,
+      "elapsed_last_completed_s": 188.8926986004226,
+      "best_eligible_new": {
+        "i": 1,
+        "peak": 2.6450205692673223,
+        "A2": 0.6603794981346375
+      }
+    }
+  },
+  "finite_best_including_baseline": 2.4376280344774863,
+  "best_new": 10,
+  "fine_eligible": 12,
+  "candidates": 12
+}

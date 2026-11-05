@@ -1,0 +1,17 @@
+{
+  "high_s": 134.73455129982904,
+  "low_s": 9.482936599757522,
+  "baseline": {
+    "eligible": true,
+    "errors": [],
+    "ledger": {
+      "prescribed": 1.0,
+      "deposited": 0.9999999999999984,
+      "unhit": 0.0,
+      "unresolved": 0.0,
+      "balance_error": 1.5543122344752192e-15
+    },
+    "peak": 2.730756117101662,
+    "A2": 0.6099679014498633
+  }
+}

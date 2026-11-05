@@ -1,0 +1,63 @@
+{
+  "panel_sha256": "e6ad1f6be5da659dd470bd8f85b4d6a7a10e388325d71cd6bad19fc92e737f44",
+  "policies": {
+    "screen": {
+      "policy": "screen",
+      "budget_s": 200,
+      "peak": 2.3067715658620815,
+      "A2": 0.7329806526698182,
+      "selected": 0,
+      "first_5pct_s": 166.19746149890125,
+      "fine_ids": [
+        0,
+        7
+      ],
+      "seen_coarse": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "eligible_fine": 2,
+      "elapsed_last_completed_s": 191.95106579968706,
+      "best_eligible_new": {
+        "i": 0,
+        "peak": 2.3067715658620815,
+        "A2": 0.7329806526698182
+      }
+    },
+    "direct": {
+      "policy": "direct",
+      "budget_s": 200,
+      "peak": 2.3067715658620815,
+      "A2": 0.7329806526698182,
+      "selected": 0,
+      "first_5pct_s": 151.45410799980164,
+      "fine_ids": [
+        0,
+        1,
+        2
+      ],
+      "seen_coarse": [],
+      "eligible_fine": 3,
+      "elapsed_last_completed_s": 185.83155349968,
+      "best_eligible_new": {
+        "i": 0,
+        "peak": 2.3067715658620815,
+        "A2": 0.7329806526698182
+      }
+    }
+  },
+  "finite_best_including_baseline": 2.174120995082601,
+  "best_new": 11,
+  "fine_eligible": 12,
+  "candidates": 12
+}
