@@ -1,0 +1,102 @@
+{
+  "shared_prefix": {
+    "length": 5,
+    "equal": true
+  },
+  "arms": {
+    "direct": {
+      "stop": "deadline",
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999984,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.5543122344752192e-15
+        },
+        "peak": 2.730756117101662,
+        "A2": 0.6099679014498633
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 0,
+        "id": "863de8b28202a68241a9eb53113726529ecb258c566b2bd2935f8b225d7d8983",
+        "peak": 2.676162218451905,
+        "A2": 0.6478341068060833
+      },
+      "best_eligible_new": {
+        "i": 0,
+        "id": "863de8b28202a68241a9eb53113726529ecb258c566b2bd2935f8b225d7d8983",
+        "peak": 2.676162218451905,
+        "A2": 0.6478341068060833
+      },
+      "first_5pct_s": null,
+      "coarse_ids": [],
+      "fine_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "eligible_fine": 4,
+      "completed_draws": 5,
+      "rejected": {},
+      "elapsed_s": 201.7698055
+    },
+    "screen": {
+      "stop": "candidate_limit",
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999984,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.5543122344752192e-15
+        },
+        "peak": 2.730756117101662,
+        "A2": 0.6099679014498633
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 6,
+        "id": "7b838deba10b4ede1da768fdf817ab037e7e0b288beba070affd4c411ce3a7d5",
+        "peak": 2.673383876967725,
+        "A2": 0.6552155404366365
+      },
+      "best_eligible_new": {
+        "i": 6,
+        "id": "7b838deba10b4ede1da768fdf817ab037e7e0b288beba070affd4c411ce3a7d5",
+        "peak": 2.673383876967725,
+        "A2": 0.6552155404366365
+      },
+      "first_5pct_s": null,
+      "coarse_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fine_ids": [
+        0,
+        6,
+        10
+      ],
+      "eligible_fine": 3,
+      "completed_draws": 12,
+      "rejected": {},
+      "elapsed_s": 196.5569689
+    }
+  }
+}
