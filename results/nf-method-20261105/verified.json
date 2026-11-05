@@ -36,7 +36,15 @@
             "linf_relative"
           ]
         }
-      }
+      },
+      "interior_chosen": 8,
+      "interior_barycentric": [
+        4,
+        1,
+        1
+      ],
+      "interior_peak": 1.536497792478092,
+      "interior_finite_best": 8
     },
     {
       "label": "OMP_chi0.6",
@@ -74,7 +82,15 @@
             "linf_relative"
           ]
         }
-      }
+      },
+      "interior_chosen": 8,
+      "interior_barycentric": [
+        4,
+        1,
+        1
+      ],
+      "interior_peak": 1.5229532859104347,
+      "interior_finite_best": 8
     },
     {
       "label": "IMP_chi0.3",
@@ -110,7 +126,15 @@
           "Linf": 0.00897393347371981,
           "failures": []
         }
-      }
+      },
+      "interior_chosen": 8,
+      "interior_barycentric": [
+        4,
+        1,
+        1
+      ],
+      "interior_peak": 2.3979946896137068,
+      "interior_finite_best": 8
     },
     {
       "label": "IMP_chi0.6",
@@ -146,7 +170,15 @@
           "Linf": 0.006775555013065002,
           "failures": []
         }
-      }
+      },
+      "interior_chosen": 8,
+      "interior_barycentric": [
+        4,
+        1,
+        1
+      ],
+      "interior_peak": 2.3091679389756403,
+      "interior_finite_best": 8
     }
   ],
   "eligible_outputs_verified": true,
