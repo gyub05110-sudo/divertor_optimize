@@ -120,7 +120,8 @@ class BoundaryEvaluator:
 def export_boundary(path,e,r):
     if 'deposition' not in r:return
     d=r['deposition']
-    np.savez_compressed(path,wall=r['wall'],points=d['points'],q_MW_m2=d['q']*e.reference.power_W/1e6,
+    np.savez_compressed(path,assigned_power_W=e.reference.power_W,
+        wall=r['wall'],points=d['points'],q_MW_m2=d['q']*e.reference.power_W/1e6,
         cell_parent=d['cell_parent'],cell_power=d['cell_power'],receiving_wall=d['wall'],area_edges=d['area_edges'],
         sigma_physical_m=d['sigma_physical_m'],sigma_area_m2=d['sigma_area_m2'],target_gradient=d['target_gradient'],
         donor_area_m2=d['donor_area_m2'],donor_region_power=d['donor_region_power'],

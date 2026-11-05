@@ -18,6 +18,18 @@ from optimize_regional_transport import write_arrays
 
 ROOT=Path(__file__).resolve().parent
 
+REFERENCE_OPTIONS = ('power_mw', 'density', 'chi', 'lambda_q_mm', 'gamma', 'kappa0')
+
+
+def campaign_reference(options):
+    defaults = ReferencePoint()
+    return asdict(ReferencePoint(
+        power_W=options.get('power_mw', defaults.power_W/1e6)*1e6,
+        density_m3=options.get('density', defaults.density_m3),
+        chi_perp_m2_s=options.get('chi', defaults.chi_perp_m2_s),
+        lambda_q_m=options.get('lambda_q_mm', defaults.lambda_q_m*1000)/1000,
+        gamma=options.get('gamma', defaults.gamma), kappa0=options.get('kappa0', defaults.kappa0)))
+
 
 def runtime_identity(backend):
     identity=dict(executable=str(Path(sys.executable).resolve()),python=platform.python_version(),
@@ -32,6 +44,8 @@ def runtime_identity(backend):
 
 
 def snapshot(output,settings):
+    reference = campaign_reference(settings)
+    settings = {k:v for k,v in settings.items() if k not in REFERENCE_OPTIONS}
     if output.exists():raise FileExistsError('new campaign requires a new output folder')
     extra=[str(p.relative_to(ROOT)).replace('\\','/') for pattern in ['*.py','d3d_optimization/*.py','verification/*.py'] for p in ROOT.glob(pattern)]
     extra+=['AGENTS.md','docs/superpowers/plans/2026-10-29-imp-global-search.md']
@@ -69,7 +83,7 @@ def snapshot(output,settings):
     now=time.time();duration=settings['hours']*3600
     reserve=min(settings['validation_reserve_seconds'],duration*.25)
     config=dict(schema='regional-global-campaign.v2',qualification_policy=QUALIFICATION_POLICY,created_epoch=now,deadline_epoch=now+duration,
-        search_deadline_epoch=now+duration-reserve,reference=asdict(ReferencePoint()),**settings,
+        search_deadline_epoch=now+duration-reserve,reference=reference,**settings,
         frozen_root=str(frozen),original_root=str(ROOT),frozen_files_sha256=digest(output/'frozen_files.json'),
         executable=sys.executable,python=platform.python_version(),numpy=np.__version__,
         objective='minimum global wall peak at fixed independent source power',global_optimum_proven=False)
@@ -165,6 +179,9 @@ if __name__=='__main__':
     p.add_argument('--search-seconds',type=float,default=None,help='optional shorter search budget for end-to-end pilots')
     p.add_argument('--validation-reserve-seconds',type=float,default=3600.)
     p.add_argument('--warm-study',default=None,help='previous study: coarse seeds plus protected qualified geometries for revalidation')
+    for option in REFERENCE_OPTIONS:
+        p.add_argument('--'+option.replace('_','-'),type=float,default=argparse.SUPPRESS,
+                       help='fixed operating input for a new campaign')
     a=p.parse_args();a.output=a.output.resolve()
     if not 0<a.hours<=72 or not 5<=a.population<=512 or not 1<=a.projected_seeds<=64 or not 1<=a.slice_seconds<=3600:
         p.error('positive duration <=72h, population 5..512, projected seeds 1..64, slice 1..3600s required')
@@ -172,8 +189,13 @@ if __name__=='__main__':
         not np.isfinite(a.qualify_interval_seconds) or a.qualify_interval_seconds<=0 or
         (a.search_seconds is not None and (not np.isfinite(a.search_seconds) or a.search_seconds<=0)) or
         not 0<=a.seed<2**32):p.error('positive finite timing settings and a 32-bit nonnegative seed required')
+    sources=('IMP','OMP') if a.source=='both' else (a.source,)
+    if a.mode!='create' and any(k in vars(a) for k in REFERENCE_OPTIONS):
+        p.error('operating inputs are frozen at creation; use a new output folder for a different scenario')
     if a.mode=='create':
-        snapshot(a.output,{k:v for k,v in vars(a).items() if k not in ('output','source','mode')});launch(a.output)
+        try:campaign_reference(vars(a))
+        except ValueError as error:p.error(str(error))
+        snapshot(a.output,{k:v for k,v in vars(a).items() if k not in ('output','source','mode')});launch(a.output,sources)
     elif a.mode=='launch':launch(a.output,('IMP','OMP') if a.source=='both' else (a.source,))
     else:
         if a.source=='both':p.error('one worker source required')

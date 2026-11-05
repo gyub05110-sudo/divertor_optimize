@@ -72,7 +72,8 @@ def run(folder):
         ax.axhline(1,color='#333333',linestyle='--',linewidth=1,label='Baseline')
         ax.set(title=source,xlabel='Elapsed wall time [h]',ylabel='Best search peak / baseline (320 tubes)')
         ax.grid(alpha=.15);ax.legend()
-    fig.suptitle('Independent 1 MW sources — search progress (final qualification is separate)')
+    power_mw=config['reference']['power_W']/1e6
+    fig.suptitle(f'Independent {power_mw:g} MW sources — search progress (final qualification is separate)')
     fig.savefig(folder/'search_progress.png',dpi=170);plt.close(fig)
     if manifests:
         maximum=max(max(m['baseline']['peak_MW_m2'],m['selected']['peak_MW_m2']) for m in manifests.values())
@@ -103,7 +104,7 @@ def run(folder):
         fig.savefig(folder/'qualified_geometry.png',dpi=170);plt.close(fig)
     deadline=datetime.fromtimestamp(config['deadline_epoch'],timezone.utc).astimezone().isoformat(timespec='seconds')
     lines=['# IMP·OMP 접선·곡률 제약 전역 탐색', '',
-        f'- 종료 시한: {deadline}', '- IMP·OMP는 각각 독립적인 1 MW 열원 실험입니다.',
+        f'- 종료 시한: {deadline}', f'- 열원별로 {power_mw:g} MW를 부여한 독립 실험입니다.',
         '- 기준 D3D, 입력 전력과 수송 조건은 고정했습니다. 표의 최종 peak는 상류 flux tube 1280개 결과입니다.',
         '- 전역 최적성 증명은 아닙니다. 정해진 곡선 계열과 계수 범위에서 찾은 최선 후보입니다.',
         '- IMP 공통 접선은 두 구간에 대해 정규화 내적 ≥0.2인 방향 범위에서 탐색합니다.',
