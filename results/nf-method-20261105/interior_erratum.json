@@ -1,0 +1,24 @@
+{
+  "original_study": "D:\\DivertorOptimization\\studies\\nf-method-20261105",
+  "original_sha256": {
+    "REPORT.ko.md": "66e04b7ddb05bb0c26eebb25ddc5a558fe93fe250843f253455f90ffb01bc063",
+    "verified.json": "8b39390efba1de9c0a5405b7752eb60917388196a0eefcc6c569996db2d36a35",
+    "verify_evidence.py": "7c65bf189aea3fa29b16db6944221f71f090adce5f59a314d7c580813e329169",
+    "write_method_report.py": "38b856a0adf6d47fb0c99156bad0746335c1402534b601a5a98d421795bfb29c",
+    "evidence_sha256.json": "a2bdb2b95dc19deee15de886d8f1d9ee18d935f4e07b6eb5c7f24743533e800e"
+  },
+  "raw_grid_sha256": {
+    "grid/IMP_chi0.3/result.json": "42732fd94132a12cd54899d0a3809e562fe890f72650616ebaf4380c9865924e",
+    "grid/IMP_chi0.6/result.json": "1f209a7a1347094fb716cba39d6d8fbf8e46457495e6d578f1ece83ce67c2945",
+    "grid/OMP_chi0.3/result.json": "a11e94905eb56d961f862b8b3bdf2ea3437067feda5cf5e0407352f20574c725",
+    "grid/OMP_chi0.6/result.json": "07ca1a9f3de889c7e061d88afaa1a91cf5c9e4d514f1d6b59e4841e78f71c18a"
+  },
+  "publication_copy_sha256": {
+    "REPORT.ko.md": "fbb334b02fa0d9160595bc68abf96d199783ff89c0a653c355fb74218f7cf979",
+    "verified.json": "ea0e7ef2885a26d24b5a64707d89240abd53005cffa22eb92f74cdaba9caecc3",
+    "nf_grid_interior.py": "b12bdcb1baf549b8da79384f2012f9b38f497306ef045749745bdbe1d895f6b5"
+  },
+  "correction": "The interior-only report table had displayed the full-grid winner weights. Within the ten positive-weight points the recomputed winner for all four cases is index 8 with weights [4,1,1]. Global and interior excesses are independently zero.",
+  "scope": "The publication copy includes the current repository report and its historical-baseline provenance note. The original study, original report generator, original verifier, scores and checksum manifest are preserved in the sibling source tree.",
+  "verify_in_this_directory": "python nf_grid_interior.py --grid ../nf-method-20261105/grid --publication ."
+}
