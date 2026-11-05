@@ -1,0 +1,260 @@
+{
+  "method": "quintic",
+  "count": 640,
+  "step": 0.00025,
+  "nodes": 321,
+  "wall_step": 0.0005,
+  "backend": "gpu",
+  "initial_prep_s": 36.03557909978554,
+  "fixture_sha256": "b585ddc327d2e49453101b322dcefdc6e3d1e7e4be06873a8ff149c1a026630b",
+  "input_sha256": {
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  },
+  "driver_sha256": "304536536f5cfc83ca67a0e6cb67374f4a04a870ca1be29db26b0e2137b371a6",
+  "cases": {
+    "chi0.3_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 7.771561172376094e-16
+      },
+      "peak": 2.7297441430048384,
+      "A2": 0.6102242715381582,
+      "profile": "chi0.3_baseline.npz",
+      "sha256": "e7c04102910bcd31fb7b30cee33e0be3d3268e3f14179564b712c52cc8f39aec",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999997,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125782e-16
+      },
+      "peak": 1.4432824154676813,
+      "A2": 0.935088497703928,
+      "profile": "chi0.3_R20_stage18.npz",
+      "sha256": "ea61f83ebfef9a106dd5db46de0145546022bcb688f3a7d39de9ac9cf5658ca1",
+      "cpu_peak_relative_difference": 0.0,
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999997,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125782e-16
+      },
+      "peak": 1.443386312253475,
+      "A2": 0.9357968970475432,
+      "profile": "chi0.3_R20_stage19.npz",
+      "sha256": "86df4943849fbb6750f3640b0fa8f269fd45acb7cc57a1cb844006cd6562d411",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999997,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125782e-16
+      },
+      "peak": 1.7822543577677887,
+      "A2": 0.6804389644741391,
+      "profile": "chi0.3_R50_stage34.npz",
+      "sha256": "23235d8e172bea81807dc21dac1d56da9644cfc789c8073f249a25bb45f33c1b",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 6.661338147750938e-16
+      },
+      "peak": 1.7822615427637007,
+      "A2": 0.6804358315121388,
+      "profile": "chi0.3_R50_stage33.npz",
+      "sha256": "3f07c4a4532e7674ed8f196e315761e9797d8dfaf8c99108059412148a029108",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999992,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 9.992007221626407e-16
+      },
+      "peak": 2.668785961849594,
+      "A2": 0.6187297271525756,
+      "profile": "chi0.6_baseline.npz",
+      "sha256": "3206bee240b90e5641589089446500e9bab2f3beca08557931282b244d65095f",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999997,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125782e-16
+      },
+      "peak": 1.4507420482030036,
+      "A2": 0.9406336913831044,
+      "profile": "chi0.6_R20_stage18.npz",
+      "sha256": "6cbdf0bbe2018d87dd20285cf684f27e8402ddc0dd7dac7959b3d8cfaa96ab9b",
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 6.661338147750938e-16
+      },
+      "peak": 1.4506699898270077,
+      "A2": 0.9413624001417842,
+      "profile": "chi0.6_R20_stage19.npz",
+      "sha256": "ddc1539b1294b8104b29d3cae50c81c54510e6ebcc5c46217902ae90023222ee",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 6.661338147750938e-16
+      },
+      "peak": 1.7840511172490259,
+      "A2": 0.683188293344606,
+      "profile": "chi0.6_R50_stage34.npz",
+      "sha256": "66d4df08ddf8bd3cace977de189687070ad4d7bd194a6e3325a5d6ed2ca8101c",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999998,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500625e-16
+      },
+      "peak": 1.784063133544888,
+      "A2": 0.683184901753587,
+      "profile": "chi0.6_R50_stage33.npz",
+      "sha256": "77a3b27a2f240372cfd53a9c89186caa827942ed1baeb6711fedf2d3a9f09d93",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    }
+  },
+  "total_s": 82.46393959969282
+}

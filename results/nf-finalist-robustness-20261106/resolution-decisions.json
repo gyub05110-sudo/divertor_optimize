@@ -1,0 +1,1386 @@
+{
+  "fixture_sha256": "b585ddc327d2e49453101b322dcefdc6e3d1e7e4be06873a8ff149c1a026630b",
+  "inputs": {
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  },
+  "index_sha256": {
+    "cubic_640": "9474d12ed7283f4f71d1033bafb13b9c2cb93271c78733b610c88ca356b6dd67",
+    "quintic_640": "0d8b2c659766e78fa7651d8ed74c866f00dc7cd78a6b94fa53236c43615687ee",
+    "cubic_1280": "1e9f294ea9705cbc3dd3e2572fd8a66779c31d0d47725d6b683d165349e8b14f",
+    "quintic_1280": "6bf0ce6f4b44b66528e80fd52d9e0845b80d82ebc365460572d8b60c766195e7"
+  },
+  "operating": {
+    "0.3": {
+      "geometry": {
+        "baseline": {
+          "identity": null,
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 2.730737138036002,
+            "quintic_640": 2.7297441430048384,
+            "cubic_1280": 2.730756117101662,
+            "quintic_1280": 2.7297602186663847
+          },
+          "A2": {
+            "cubic_640": 0.6100594269905942,
+            "quintic_640": 0.6102242715381582,
+            "cubic_1280": 0.6099679014498633,
+            "quintic_1280": 0.6101328688308132
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.007081566883316472,
+              "l1_relative": 0.001146621652075777,
+              "a2_relative": 0.00027055127531887144,
+              "power_relative": 1.4643196260669295e-07,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.007077281653512094,
+              "l1_relative": 0.0011467808230675345,
+              "a2_relative": 0.00027056731555026646,
+              "power_relative": 1.455412938583785e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0009067200248129812,
+              "l1_relative": 0.0011876030420911994,
+              "a2_relative": 8.177145215681061e-05,
+              "power_relative": 1.01753804436236e-06,
+              "wall_distance_m": 4.666478027478639e-13,
+              "wall_length_difference_m": 8.881784197001252e-16
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.000906567202065426,
+              "l1_relative": 0.001187490447310481,
+              "a2_relative": 8.175540889587998e-05,
+              "power_relative": 1.149415745089822e-06,
+              "wall_distance_m": 4.666478027478639e-13,
+              "wall_length_difference_m": 8.881784197001252e-16
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.908075071248679,
+                "RZ_m": [
+                  1.225234508666587,
+                  -1.35868155528227
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.908097973263688,
+                "RZ_m": [
+                  1.2252116068589272,
+                  -1.3586816527367707
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.908075541407793,
+                "RZ_m": [
+                  1.225234038511742,
+                  -1.3586815572829287
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.908098441861778,
+                "RZ_m": [
+                  1.2252111382650919,
+                  -1.358681654730787
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.906880165944068,
+                4.908905090954243
+              ]
+            ]
+          }
+        },
+        "R20_stage18": {
+          "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.440223404987941,
+            "quintic_640": 1.4432824154676813,
+            "cubic_1280": 1.440295123480825,
+            "quintic_1280": 1.4432897881300057
+          },
+          "A2": {
+            "cubic_640": 0.9347935261700401,
+            "quintic_640": 0.935088497703928,
+            "cubic_1280": 0.9346308001205667,
+            "quintic_1280": 0.934924853143872
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.026930241050856698,
+              "l1_relative": 0.0027292393851273255,
+              "a2_relative": 0.0003152693613149115,
+              "power_relative": 5.6652188972391086e-09,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.02691364251380645,
+              "l1_relative": 0.002729705386254627,
+              "a2_relative": 0.0003145245543276728,
+              "power_relative": 4.790528062488238e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0020772787251094526,
+              "l1_relative": 0.0012817517460357443,
+              "a2_relative": 0.00014852334219300946,
+              "power_relative": 3.930582890989315e-07,
+              "wall_distance_m": 4.820362332784218e-06,
+              "wall_length_difference_m": 2.6972693047966345e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.002072522637971454,
+              "l1_relative": 0.001281093676226544,
+              "a2_relative": 0.00014926889618997402,
+              "power_relative": 3.5129755972049026e-07,
+              "wall_distance_m": 4.820362332784218e-06,
+              "wall_length_difference_m": 2.6972693047966345e-06
+            }
+          },
+          "all_four_profile_pairs_pass": false,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.873611826152037,
+                "RZ_m": [
+                  1.278733317548262,
+                  -1.4195897955623487
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.944879740918424,
+                "RZ_m": [
+                  1.2281750284176398,
+                  -1.3699506961704728
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.873610893337087,
+                "RZ_m": [
+                  1.278733913772442,
+                  -1.419592494416446
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.944883618605513,
+                "RZ_m": [
+                  1.2281738904006125,
+                  -1.3699476441232108
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.870653021818528,
+                4.8766575639216745
+              ],
+              [
+                4.944015241693805,
+                4.945487693661102
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.4725880477738781,
+              -0.4712755702155478
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.4725880477738781,
+              "quintic_640": -0.4712755702155478,
+              "cubic_1280": -0.47256545011075224,
+              "quintic_1280": -0.47127598304765383
+            },
+            "first_peak": [
+              1.440223404987941,
+              1.4432897881300057
+            ],
+            "second_peak": [
+              2.7297441430048384,
+              2.730756117101662
+            ]
+          },
+          "A2_gain_fraction": [
+            0.5322622680619682,
+            0.5323685754860303
+          ]
+        },
+        "R20_stage19": {
+          "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.4402275320238416,
+            "quintic_640": 1.443386312253475,
+            "cubic_1280": 1.4402989285985726,
+            "quintic_1280": 1.443358549489474
+          },
+          "A2": {
+            "cubic_640": 0.935509656550924,
+            "quintic_640": 0.9357968970475432,
+            "cubic_1280": 0.9353456474171873,
+            "quintic_1280": 0.935632495760678
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.02684352731012999,
+              "l1_relative": 0.0027274371621786417,
+              "a2_relative": 0.000306741423067025,
+              "power_relative": 2.821601828877982e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.026835022842766777,
+              "l1_relative": 0.002726573105846992,
+              "a2_relative": 0.00030660080870600383,
+              "power_relative": 4.5100634411960255e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.002079111116030748,
+              "l1_relative": 0.0012813720853245031,
+              "a2_relative": 0.00014989580712487961,
+              "power_relative": 5.696350248555758e-07,
+              "wall_distance_m": 4.83076637684066e-06,
+              "wall_length_difference_m": 2.7319377702283987e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0020742681491631373,
+              "l1_relative": 0.0012811657031311448,
+              "a2_relative": 0.00015003706505283557,
+              "power_relative": 5.532334361658894e-07,
+              "wall_distance_m": 4.83076637684066e-06,
+              "wall_length_difference_m": 2.7319377702283987e-06
+            }
+          },
+          "all_four_profile_pairs_pass": false,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.873870249363694,
+                "RZ_m": [
+                  1.2787156785079647,
+                  -1.4195699666767747
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.945211380086599,
+                "RZ_m": [
+                  1.2281311278769973,
+                  -1.369854745358219
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.873869582316396,
+                "RZ_m": [
+                  1.2787160133384776,
+                  -1.4195726630319925
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.945215769888787,
+                "RZ_m": [
+                  1.2281294686132846,
+                  -1.3698515622524758
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.870916814124747,
+                4.876908477800116
+              ],
+              [
+                4.944349869749829,
+                4.945819369325031
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.47258653644719517,
+              -0.471237509217758
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.47258653644719517,
+              "quintic_640": -0.471237509217758,
+              "cubic_1280": -0.47256405668066026,
+              "quintic_1280": -0.4712507935240473
+            },
+            "first_peak": [
+              1.4402275320238416,
+              1.443386312253475
+            ],
+            "second_peak": [
+              2.7297441430048384,
+              2.730756117101662
+            ]
+          },
+          "A2_gain_fraction": [
+            0.5334342105443863,
+            0.5335294590769593
+          ]
+        },
+        "R50_stage34": {
+          "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.78701829017915,
+            "quintic_640": 1.7822543577677887,
+            "cubic_1280": 1.7869404891484175,
+            "quintic_1280": 1.7821702995463293
+          },
+          "A2": {
+            "cubic_640": 0.6804367519111636,
+            "quintic_640": 0.6804389644741391,
+            "cubic_1280": 0.6803402348025863,
+            "quintic_1280": 0.6803427011530041
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.004042259713061847,
+              "l1_relative": 0.0008711459233135735,
+              "a2_relative": 3.3729099463851148e-06,
+              "power_relative": 8.653056040613746e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.004037763950791109,
+              "l1_relative": 0.0008719019154430505,
+              "a2_relative": 3.713094518942751e-06,
+              "power_relative": 2.73376736888107e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0016645593328804226,
+              "l1_relative": 0.0012180415824341237,
+              "a2_relative": 0.00010915335915870595,
+              "power_relative": 5.512844857566803e-07,
+              "wall_distance_m": 2.7303870221971036e-06,
+              "wall_length_difference_m": 1.1836884024063465e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0016686458220602986,
+              "l1_relative": 0.0012180225716225336,
+              "a2_relative": 0.00010881327830245236,
+              "power_relative": 6.104360655572856e-07,
+              "wall_distance_m": 2.7303870221971036e-06,
+              "wall_length_difference_m": 1.1836884024063465e-06
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.918568755062295,
+                "RZ_m": [
+                  1.2417613275353114,
+                  -1.3969741554872792
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.918574140056694,
+                "RZ_m": [
+                  1.2417571239796026,
+                  -1.3969707897356414
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.91857053210911,
+                "RZ_m": [
+                  1.2417605955532935,
+                  -1.3969734409917178
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.91857598295979,
+                "RZ_m": [
+                  1.241756341810308,
+                  -1.3969700325545766
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.880984046518473,
+                4.8914864795531985
+              ],
+              [
+                4.916152822600086,
+                4.919449559857893
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.3471330238606075,
+              -0.3455912452033346
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.3455912452033346,
+              "quintic_640": -0.3470983856362725,
+              "cubic_1280": -0.3456242840737387,
+              "quintic_1280": -0.3471330238606075
+            },
+            "first_peak": [
+              1.7821702995463293,
+              1.78701829017915
+            ],
+            "second_peak": [
+              2.7297441430048384,
+              2.730756117101662
+            ]
+          },
+          "A2_gain_fraction": [
+            0.11506374985543388,
+            0.1153705517707595
+          ]
+        },
+        "R50_stage33": {
+          "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.7870255460073348,
+            "quintic_640": 1.7822615427637007,
+            "cubic_1280": 1.786947731401799,
+            "quintic_1280": 1.7821774660328515
+          },
+          "A2": {
+            "cubic_640": 0.6804335932839519,
+            "quintic_640": 0.6804358315121388,
+            "cubic_1280": 0.6803370764522051,
+            "quintic_1280": 0.680339568197111
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0040425394190203535,
+              "l1_relative": 0.000871068705352528,
+              "a2_relative": 3.33271760593166e-06,
+              "power_relative": 4.088313994384037e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.004037955387916632,
+              "l1_relative": 0.0008718903800284,
+              "a2_relative": 3.754344889241844e-06,
+              "power_relative": 3.3124201127863654e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0016647923054587549,
+              "l1_relative": 0.0012181127342930495,
+              "a2_relative": 0.00010905987598302554,
+              "power_relative": 4.954173152540041e-07,
+              "wall_distance_m": 2.7270102686082e-06,
+              "wall_length_difference_m": 1.1113054458888882e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0016688768331660812,
+              "l1_relative": 0.0012181451920824406,
+              "a2_relative": 0.00010863836157328628,
+              "power_relative": 5.031351580458627e-07,
+              "wall_distance_m": 2.7270102686082e-06,
+              "wall_length_difference_m": 1.1113054458888882e-06
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.917667035442581,
+                "RZ_m": [
+                  1.2417612462432823,
+                  -1.3969739735449047
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.917672422591798,
+                "RZ_m": [
+                  1.2417570409983565,
+                  -1.3969706064553908
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.917668741399956,
+                "RZ_m": [
+                  1.2417605132678868,
+                  -1.3969732582177457
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.917674194076507,
+                "RZ_m": [
+                  1.2417562580926949,
+                  -1.3969698486480284
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.880081833833438,
+                4.890586101368887
+              ],
+              [
+                4.915251012372846,
+                4.918547774707416
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.34713039854338257,
+              -0.3455885881082654
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.3455885881082654,
+              "quintic_640": -0.3470957535229551,
+              "cubic_1280": -0.34562163196821527,
+              "quintic_1280": -0.34713039854338257
+            },
+            "first_peak": [
+              1.7821774660328515,
+              1.7870255460073348
+            ],
+            "second_peak": [
+              2.7297441430048384,
+              2.730756117101662
+            ]
+          },
+          "A2_gain_fraction": [
+            0.11505861573975462,
+            0.11536537387471979
+          ]
+        }
+      },
+      "nearest_neighbors": {
+        "20": {
+          "first": "R20_stage18",
+          "second": "R20_stage19",
+          "status": "compared",
+          "paired_order": "first_lower",
+          "interval_order": "overlap",
+          "paired_delta_fraction": [
+            -7.198127411323085e-05,
+            -2.641894451205218e-06
+          ],
+          "paired_by_configuration": {
+            "cubic_640": -2.865544373231721e-06,
+            "quintic_640": -7.198127411323085e-05,
+            "cubic_1280": -2.641894451205218e-06,
+            "quintic_1280": -4.763983245370529e-05
+          },
+          "first_peak": [
+            1.440223404987941,
+            1.4432897881300057
+          ],
+          "second_peak": [
+            1.4402275320238416,
+            1.443386312253475
+          ]
+        },
+        "50": {
+          "first": "R50_stage34",
+          "second": "R50_stage33",
+          "status": "compared",
+          "paired_order": "first_lower",
+          "interval_order": "overlap",
+          "paired_delta_fraction": [
+            -4.060282294715556e-06,
+            -4.0211969115633295e-06
+          ],
+          "paired_by_configuration": {
+            "cubic_640": -4.060282294715556e-06,
+            "quintic_640": -4.031392553560664e-06,
+            "cubic_1280": -4.052862461634277e-06,
+            "quintic_1280": -4.0211969115633295e-06
+          },
+          "first_peak": [
+            1.7821702995463293,
+            1.78701829017915
+          ],
+          "second_peak": [
+            1.7821774660328515,
+            1.7870255460073348
+          ]
+        }
+      }
+    },
+    "0.6": {
+      "geometry": {
+        "baseline": {
+          "identity": null,
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 2.669777183507684,
+            "quintic_640": 2.668785961849594,
+            "cubic_1280": 2.6697949913855314,
+            "quintic_1280": 2.6688023372179144
+          },
+          "A2": {
+            "cubic_640": 0.6185525719657123,
+            "quintic_640": 0.6187297271525756,
+            "cubic_1280": 0.6184574268409077,
+            "quintic_1280": 0.6186346664372611
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.005044030974623905,
+              "l1_relative": 0.0011104553919671712,
+              "a2_relative": 0.0002864181956548823,
+              "power_relative": 5.126846086142214e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.005038471888988806,
+              "l1_relative": 0.0011105540932126394,
+              "a2_relative": 0.0002865023981015243,
+              "power_relative": 2.6258866586281098e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0006561736554272958,
+              "l1_relative": 0.0011834834843266013,
+              "a2_relative": 0.00010570794413251023,
+              "power_relative": 8.369616947619723e-07,
+              "wall_distance_m": 4.666478027478639e-13,
+              "wall_length_difference_m": 8.881784197001252e-16
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0006560651323625361,
+              "l1_relative": 0.0011834386126945045,
+              "a2_relative": 0.00010562372645814645,
+              "power_relative": 9.144889557539789e-07,
+              "wall_distance_m": 4.666478027478639e-13,
+              "wall_length_difference_m": 8.881784197001252e-16
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.906837955796165,
+                "RZ_m": [
+                  1.2264716129185687,
+                  -1.3586762910088572
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.906859096840254,
+                "RZ_m": [
+                  1.2264504720658858,
+                  -1.3586763809699323
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.906838436173746,
+                "RZ_m": [
+                  1.2264711325453521,
+                  -1.3586762930529985
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.906859572016369,
+                "RZ_m": [
+                  1.226449996894087,
+                  -1.35867638299194
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.9054702952833384,
+                4.907868213293276
+              ]
+            ]
+          }
+        },
+        "R20_stage18": {
+          "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.4499401826025489,
+            "quintic_640": 1.4507420482030036,
+            "cubic_1280": 1.450026389684646,
+            "quintic_1280": 1.4508279200186567
+          },
+          "A2": {
+            "cubic_640": 0.940292403599721,
+            "quintic_640": 0.9406336913831044,
+            "cubic_1280": 0.9400845721818162,
+            "quintic_1280": 0.940424658264434
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.01891611255473219,
+              "l1_relative": 0.002706985248028598,
+              "a2_relative": 0.0003626175728439135,
+              "power_relative": 5.086549455336592e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.018904614768585005,
+              "l1_relative": 0.0027080505243521655,
+              "a2_relative": 0.00036153547373686973,
+              "power_relative": 2.363514067075219e-09,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0014599594024823027,
+              "l1_relative": 0.00127676598748021,
+              "a2_relative": 0.0002018068534318204,
+              "power_relative": 2.9393665416873975e-07,
+              "wall_distance_m": 4.820362332784218e-06,
+              "wall_length_difference_m": 2.6972693047966345e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0014589673738398434,
+              "l1_relative": 0.0012766876191915653,
+              "a2_relative": 0.0002028897961745928,
+              "power_relative": 3.476461822974573e-07,
+              "wall_distance_m": 4.820362332784218e-06,
+              "wall_length_difference_m": 2.6972693047966345e-06
+            }
+          },
+          "all_four_profile_pairs_pass": false,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.873370736618664,
+                "RZ_m": [
+                  1.2789518593832951,
+                  -1.4196915974751096
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.873406357191032,
+                "RZ_m": [
+                  1.2789195701953686,
+                  -1.4196765564140152
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.873369976397523,
+                "RZ_m": [
+                  1.2789528681709617,
+                  -1.4196929928897577
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.873406055328115,
+                "RZ_m": [
+                  1.2789200782784738,
+                  -1.419677942568059
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.87039587984561,
+                4.876486472079504
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.4569059202545336,
+              -0.4563749065316436
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.4569059202545336,
+              "quintic_640": -0.45640374726882504,
+              "cubic_1280": -0.45687725298633053,
+              "quintic_1280": -0.4563749065316436
+            },
+            "first_peak": [
+              1.4499401826025489,
+              1.4508279200186567
+            ],
+            "second_peak": [
+              2.668785961849594,
+              2.6697949913855314
+            ]
+          },
+          "A2_gain_fraction": [
+            0.5200473490694195,
+            0.5202658771737809
+          ]
+        },
+        "R20_stage19": {
+          "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.4498656505205008,
+            "quintic_640": 1.4506699898270077,
+            "cubic_1280": 1.4499518829126057,
+            "quintic_1280": 1.4507554396796645
+          },
+          "A2": {
+            "cubic_640": 0.9410283204750154,
+            "quintic_640": 0.9413624001417842,
+            "cubic_1280": 0.9408189528907337,
+            "quintic_1280": 0.9411524175207387
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.01886252557408962,
+              "l1_relative": 0.0027058803889231276,
+              "a2_relative": 0.00035472583563384935,
+              "power_relative": 6.079789540184943e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": false,
+              "failures": [
+                "linf_relative"
+              ],
+              "linf_relative": 0.018857405353497104,
+              "l1_relative": 0.0027050915164251016,
+              "a2_relative": 0.0003541929538599664,
+              "power_relative": 4.734780123670821e-09,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0014613750228245328,
+              "l1_relative": 0.0012768016854680761,
+              "a2_relative": 0.0002034049762221524,
+              "power_relative": 3.5806013406759294e-07,
+              "wall_distance_m": 4.83076637684066e-06,
+              "wall_length_difference_m": 2.7319377702283987e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.001460252581337376,
+              "l1_relative": 0.0012759749736233332,
+              "a2_relative": 0.00020393860783282655,
+              "power_relative": 4.2407696275868557e-07,
+              "wall_distance_m": 4.83076637684066e-06,
+              "wall_length_difference_m": 2.7319377702283987e-06
+            }
+          },
+          "all_four_profile_pairs_pass": false,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.873632842321575,
+                "RZ_m": [
+                  1.278930906594684,
+                  -1.4196701613589429
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.873668206206456,
+                "RZ_m": [
+                  1.278898846461952,
+                  -1.419655236472241
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.873632383490348,
+                "RZ_m": [
+                  1.2789316121622443,
+                  -1.419671559089898
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.873668298473896,
+                "RZ_m": [
+                  1.278898967699632,
+                  -1.4196565849420415
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.870662088105353,
+                4.876741277318166
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.45693383722172787,
+              -0.4564020649082613
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.45693383722172787,
+              "quintic_640": -0.45643074770161585,
+              "cubic_1280": -0.4569051602871834,
+              "quintic_1280": -0.4564020649082613
+            },
+            "first_peak": [
+              1.4498656505205008,
+              1.4507554396796645
+            ],
+            "second_peak": [
+              2.668785961849594,
+              2.6697949913855314
+            ]
+          },
+          "A2_gain_fraction": [
+            0.5212347884582045,
+            0.5214436268869445
+          ]
+        },
+        "R50_stage34": {
+          "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.7827748307210989,
+            "quintic_640": 1.7840511172490259,
+            "cubic_1280": 1.7827515935058378,
+            "quintic_1280": 1.7840264668539831
+          },
+          "A2": {
+            "cubic_640": 0.6832074155892072,
+            "quintic_640": 0.683188293344606,
+            "cubic_1280": 0.683089379129446,
+            "quintic_1280": 0.6830704691234831
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0024866804297799736,
+              "l1_relative": 0.0008240257961772034,
+              "a2_relative": 2.786562434017604e-05,
+              "power_relative": 1.687326311031489e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0024840439803012083,
+              "l1_relative": 0.0008245116105679376,
+              "a2_relative": 2.7613725023189785e-05,
+              "power_relative": 4.957217916989418e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0011793568925126824,
+              "l1_relative": 0.0012157858111029225,
+              "a2_relative": 0.00014877542555807142,
+              "power_relative": 5.13810099373397e-07,
+              "wall_distance_m": 2.7303870221971036e-06,
+              "wall_length_difference_m": 1.1836884024063465e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0011782614532459212,
+              "l1_relative": 0.0012157299617558599,
+              "a2_relative": 0.00014852361849128655,
+              "power_relative": 4.4732447878914386e-07,
+              "wall_distance_m": 2.7303870221971036e-06,
+              "wall_length_difference_m": 1.1836884024063465e-06
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.884999072236957,
+                "RZ_m": [
+                  1.2689011644817265,
+                  -1.4166492922224345
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.8850719317354105,
+                "RZ_m": [
+                  1.2688370134601734,
+                  -1.4166147501763373
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.884984645868363,
+                "RZ_m": [
+                  1.2689139340704378,
+                  -1.4166575003602722
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.885057313069747,
+                "RZ_m": [
+                  1.268849830553717,
+                  -1.4166232766652482
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.880520990428028,
+                4.892010947376413
+              ],
+              [
+                4.915561186999557,
+                4.9182113889339
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.332251502734054,
+              -0.3315121022247154
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.33223834493229054,
+              "quintic_640": -0.3315121022247154,
+              "cubic_1280": -0.332251502734054,
+              "quintic_1280": -0.33152544046640164
+            },
+            "first_peak": [
+              1.7827515935058378,
+              1.7840511172490259
+            ],
+            "second_peak": [
+              2.668785961849594,
+              2.6697949913855314
+            ]
+          },
+          "A2_gain_fraction": [
+            0.10415808583329178,
+            0.10452602826955637
+          ]
+        },
+        "R50_stage33": {
+          "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+          "eligible_all": true,
+          "failed_settings": {},
+          "peak": {
+            "cubic_640": 1.7827870484421062,
+            "quintic_640": 1.784063133544888,
+            "cubic_1280": 1.7827637316948588,
+            "quintic_1280": 1.7840385572445676
+          },
+          "A2": {
+            "cubic_640": 0.6832039981382609,
+            "quintic_640": 0.683184901753587,
+            "cubic_1280": 0.6830859591049974,
+            "quintic_1280": 0.683067074701629
+          },
+          "profile_comparisons": {
+            "cubic_640_vs_quintic_640": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.002486877248905684,
+              "l1_relative": 0.000823993372873147,
+              "a2_relative": 2.7839160448441363e-05,
+              "power_relative": 1.6644875962898354e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_1280_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.002484247533840274,
+              "l1_relative": 0.0008244872294847316,
+              "a2_relative": 2.758081391666933e-05,
+              "power_relative": 4.3042381672560904e-08,
+              "wall_distance_m": 0.0,
+              "wall_length_difference_m": 0.0
+            },
+            "cubic_640_vs_cubic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0011795542209580713,
+              "l1_relative": 0.0012157926241553089,
+              "a2_relative": 0.0001488429061746478,
+              "power_relative": 5.270046943538443e-07,
+              "wall_distance_m": 2.7270102686082e-06,
+              "wall_length_difference_m": 1.1113054458888882e-06
+            },
+            "quintic_640_vs_quintic_1280": {
+              "passed": true,
+              "failures": [],
+              "linf_relative": 0.0011784579271639348,
+              "l1_relative": 0.0012157345669118855,
+              "a2_relative": 0.00014858465330461418,
+              "power_relative": 4.67277463837299e-07,
+              "wall_distance_m": 2.7270102686082e-06,
+              "wall_length_difference_m": 1.1113054458888882e-06
+            }
+          },
+          "all_four_profile_pairs_pass": true,
+          "near_peak_region": {
+            "peak_by_configuration": {
+              "cubic_640": {
+                "s_m": 4.884097508637534,
+                "RZ_m": [
+                  1.2689010389228388,
+                  -1.4166489010875145
+                ]
+              },
+              "quintic_640": {
+                "s_m": 4.884170353457448,
+                "RZ_m": [
+                  1.2688369004804656,
+                  -1.4166143666409685
+                ]
+              },
+              "cubic_1280": {
+                "s_m": 4.884083002513702,
+                "RZ_m": [
+                  1.2689138148413068,
+                  -1.4166571130363477
+                ]
+              },
+              "quintic_1280": {
+                "s_m": 4.884155667416969,
+                "RZ_m": [
+                  1.268849713006112,
+                  -1.4166228910713026
+                ]
+              }
+            },
+            "fraction": 0.99,
+            "canonical": "cubic_1280",
+            "units": "metres from wall origin, union across the four numerical cases",
+            "s_intervals_m": [
+              [
+                4.879619357228074,
+                4.891109260787596
+              ],
+              [
+                4.914660020015208,
+                4.917309447107602
+              ]
+            ]
+          },
+          "vs_baseline": {
+            "paired_order": "first_lower",
+            "interval_order": "first_lower",
+            "paired_delta_fraction": [
+              -0.3322469562467544,
+              -0.33150759969209054
+            ],
+            "paired_by_configuration": {
+              "cubic_640": -0.33223376862491827,
+              "quintic_640": -0.33150759969209054,
+              "cubic_1280": -0.3322469562467544,
+              "quintic_1280": -0.3315209101981177
+            },
+            "first_peak": [
+              1.7827637316948588,
+              1.784063133544888
+            ],
+            "second_peak": [
+              2.668785961849594,
+              2.6697949913855314
+            ]
+          },
+          "A2_gain_fraction": [
+            0.10415259887622597,
+            0.10452050335364604
+          ]
+        }
+      },
+      "nearest_neighbors": {
+        "20": {
+          "first": "R20_stage18",
+          "second": "R20_stage19",
+          "status": "compared",
+          "paired_order": "second_lower",
+          "interval_order": "overlap",
+          "paired_delta_fraction": [
+            4.9672479958351445e-05,
+            5.140619892696208e-05
+          ],
+          "paired_by_configuration": {
+            "cubic_640": 5.140619892696208e-05,
+            "quintic_640": 4.9672479958351445e-05,
+            "cubic_1280": 5.138568591012138e-05,
+            "quintic_1280": 4.996041166549503e-05
+          },
+          "first_peak": [
+            1.4499401826025489,
+            1.4508279200186567
+          ],
+          "second_peak": [
+            1.4498656505205008,
+            1.4507554396796645
+          ]
+        },
+        "50": {
+          "first": "R50_stage34",
+          "second": "R50_stage33",
+          "status": "compared",
+          "paired_order": "first_lower",
+          "interval_order": "overlap",
+          "paired_delta_fraction": [
+            -6.853157822783729e-06,
+            -6.7353534951575256e-06
+          ],
+          "paired_by_configuration": {
+            "cubic_640": -6.853157822783729e-06,
+            "quintic_640": -6.7353534951575256e-06,
+            "cubic_1280": -6.808635830579668e-06,
+            "quintic_1280": -6.776978297540204e-06
+          },
+          "first_peak": [
+            1.7827515935058378,
+            1.7840511172490259
+          ],
+          "second_peak": [
+            1.7827637316948588,
+            1.784063133544888
+          ]
+        }
+      }
+    }
+  }
+}

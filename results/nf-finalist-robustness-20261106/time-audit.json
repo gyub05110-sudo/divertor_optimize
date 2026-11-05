@@ -1,0 +1,325 @@
+{
+  "archived_shot_sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+  "public_geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+  "panel_sha256": "dad4e238295fd486ca87753714df304165ba755e0853997cfca3bebf857566d1",
+  "script_sha256": "eb52040136ae6c58a777fcecfd005112ab1cfc8c559517584f877f1b53704ba5",
+  "protocol_sha256": "f09639ae8ea0ebd8dd4543394de47c4f1982cbed3e9c9fcad6eeb543e217c6d6",
+  "source": "single OMP",
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "production_levels": [
+    [
+      "cubic",
+      320,
+      0.0005,
+      161,
+      0.001
+    ],
+    [
+      "cubic",
+      1280,
+      0.000125,
+      641,
+      0.00025
+    ]
+  ],
+  "active_original_segments": [
+    58,
+    59,
+    60,
+    68
+  ],
+  "fixed_OMP_exclusions": [
+    53,
+    54,
+    55
+  ],
+  "time_slices": {
+    "1200": {
+      "exact_parquet_index": 50,
+      "X_RZ_m": [
+        1.2010097429899398,
+        -1.2171798265680343
+      ],
+      "X_shift_from_1400_m": 0.04285577359811322,
+      "LCFS_OMP_R_m": 2.2531970952020974,
+      "LCFS_OMP_R_shift_from_1400_m": 0.0018859859872062401,
+      "separatrix_psi_Wb_rad": -0.04187497731744317,
+      "grid_rms_delta_psi_minus_sepx_vs_1400_Wb_rad": 0.0156573110509262,
+      "independent_first_hits": {
+        "inner": {
+          "RZ_m": [
+            1.0660252033946223,
+            -1.2638548800668892
+          ],
+          "segment": 69,
+          "label_error_Wb_rad": 2.734965032225034e-12,
+          "vs_preregistered_trace_m": 5.2938531040738526e-09,
+          "displacement_from_1400_m": 0.030905092870657028
+        },
+        "outer": {
+          "RZ_m": [
+            1.2568630871916053,
+            -1.3585469655864186
+          ],
+          "segment": 68,
+          "label_error_Wb_rad": 4.2814085610132224e-12,
+          "vs_preregistered_trace_m": 1.9766678501136319e-10,
+          "displacement_from_1400_m": 0.03549499171452704
+        }
+      },
+      "max_active_candidate_RZ_change_from_1400_m": 2.220446049250313e-16,
+      "material_wall_identical_to_original": true,
+      "shape_constraints": {
+        "max_G1_error_deg": 3.952683832191055e-15,
+        "min_radius_m": 0.02009995794634244,
+        "max_length_ratio": 1.110533274003324,
+        "min_lip_gap_m": 0.03335512009571008,
+        "required_min_gap_m": 0.033354336313396855,
+        "geometry_ok_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "note": "1,001-vertex/surface sampled complete-wall check; production used its adaptive canonical screen"
+      },
+      "staged_inputs": {
+        "baseline_review/baseline_review.json": "054feb476a77a831038437ad5c8ad4e63bb75ad51083b0fdc63df5f03114a202",
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "ef209a53fc98c32bc2e72fddf61314acbd8c80781db819edff91dec9de8e388c"
+      },
+      "decision": {
+        "coarse": {
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "exclusions": {},
+          "max_power_closure_error": 7.771561172376096e-16,
+          "baseline_peak_MW_m2": 4.291659146824757,
+          "baseline_A2_m2": 0.4126424046013465
+        },
+        "fine": {
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "exclusions": {},
+          "max_power_closure_error": 1.887379141862766e-15,
+          "baseline_peak_MW_m2": 4.291835988689852,
+          "baseline_A2_m2": 0.4122185859315607
+        },
+        "shortlisted": [
+          3,
+          4,
+          9
+        ],
+        "selected": {
+          "i": 3,
+          "peak_MW_m2": 3.6480539442930833,
+          "A2_m2": 0.49229726911729954,
+          "peak_reduction_pct": 15.000154854316616
+        },
+        "oracle": {
+          "i": 3,
+          "peak_MW_m2": 3.6480539442930833,
+          "A2_m2": 0.49229726911729954,
+          "peak_reduction_pct": 15.000154854316616
+        },
+        "regret_pct": 0.0,
+        "result_sha256": "7c6c732bcfc7a3b4425b655923db435c8adba8d6261548730e4ca680bd655a4f",
+        "shortlist_sha256": "31f558b82eb9f614153da291a97c3038af6c5cfa933f01d3a90fadf106fd3de3"
+      },
+      "posthoc_1400_best_at_new_time": {
+        "i": 10,
+        "eligible": true,
+        "peak_MW_m2": 4.356315727246687,
+        "A2_m2": 0.3832330078911458,
+        "reduction_pct": -1.502381235600736,
+        "excess_vs_own_time_best_pct": 19.41478371123293
+      }
+    },
+    "1600": {
+      "exact_parquet_index": 70,
+      "X_RZ_m": [
+        1.141482619261294,
+        -1.2672958929173443
+      ],
+      "X_shift_from_1400_m": 0.03813899164173346,
+      "LCFS_OMP_R_m": 2.251474355877785,
+      "LCFS_OMP_R_shift_from_1400_m": 0.0001632466628938012,
+      "separatrix_psi_Wb_rad": 0.03757878038162995,
+      "grid_rms_delta_psi_minus_sepx_vs_1400_Wb_rad": 0.01734405839015594,
+      "independent_first_hits": {
+        "inner": {
+          "RZ_m": [
+            1.0874006574527213,
+            -1.2844945531893828
+          ],
+          "segment": 69,
+          "label_error_Wb_rad": 4.158423605460371e-12,
+          "vs_preregistered_trace_m": 1.3342061683003246e-08,
+          "displacement_from_1400_m": 0.0011913562696624067
+        },
+        "outer": {
+          "RZ_m": [
+            1.1798024818717918,
+            -1.3588748830558648
+          ],
+          "segment": 68,
+          "label_error_Wb_rad": 2.587700886902411e-12,
+          "vs_preregistered_trace_m": 2.411453331348003e-09,
+          "displacement_from_1400_m": 0.04156631129887158
+        }
+      },
+      "max_active_candidate_RZ_change_from_1400_m": 2.220446049250313e-16,
+      "material_wall_identical_to_original": true,
+      "shape_constraints": {
+        "max_G1_error_deg": 1.0097096149843449e-14,
+        "min_radius_m": 0.02009995794634244,
+        "max_length_ratio": 1.110533274003324,
+        "min_lip_gap_m": 0.03335512009571008,
+        "required_min_gap_m": 0.033354336313396855,
+        "geometry_ok_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "note": "1,001-vertex/surface sampled complete-wall check; production used its adaptive canonical screen"
+      },
+      "staged_inputs": {
+        "baseline_review/baseline_review.json": "5a7533b8871cb60904037c36a652b2258d1de562160fefd6dfad3cae2116807e",
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "aec2bcfa5ac041f8bbc9c8e1877ab00bec4411f679aded5175f6dded56f04113"
+      },
+      "decision": {
+        "coarse": {
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "exclusions": {},
+          "max_power_closure_error": 4.440892098500626e-16,
+          "baseline_peak_MW_m2": 1.9043120407732441,
+          "baseline_A2_m2": 0.8165435619736989
+        },
+        "fine": {
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "exclusions": {},
+          "max_power_closure_error": 1.7763568394002505e-15,
+          "baseline_peak_MW_m2": 1.9043535750614056,
+          "baseline_A2_m2": 0.8164050721621029
+        },
+        "shortlisted": [
+          2,
+          6,
+          11
+        ],
+        "selected": {
+          "i": 6,
+          "peak_MW_m2": 1.7031871186176213,
+          "A2_m2": 0.7920834783144102,
+          "peak_reduction_pct": 10.563503494213133
+        },
+        "oracle": {
+          "i": 6,
+          "peak_MW_m2": 1.7031871186176213,
+          "A2_m2": 0.7920834783144102,
+          "peak_reduction_pct": 10.563503494213133
+        },
+        "regret_pct": 0.0,
+        "result_sha256": "2d4e87ad1c88c98d14670842c7ccd6a161a7c3c253db36e4ea08e3a9c25d1b48",
+        "shortlist_sha256": "ef6a9fc047a862013dc8a93528e18abfcc206f1c030dc3dc320db6d127afef34"
+      },
+      "posthoc_1400_best_at_new_time": {
+        "i": 10,
+        "eligible": true,
+        "peak_MW_m2": 2.157269382265709,
+        "A2_m2": 0.7965318242631501,
+        "reduction_pct": -13.280926951611294,
+        "excess_vs_own_time_best_pct": 26.660738487538605
+      }
+    }
+  },
+  "limitations": [
+    "Two neighboring time slices from the same discharge; one 12-candidate seed panel.",
+    "Scores and ledger checks use emitted summaries; no independent heat recalculation or speed comparison.",
+    "Both shortlisted and full-panel choices use the stored cubic-1280 values. No separate blind evaluator rerun."
+  ],
+  "archived_1400_control": {
+    "baseline_peak_MW_m2": 2.730756117101662,
+    "baseline_A2_m2": 0.6099679014498633,
+    "best_i": 10,
+    "best_peak_MW_m2": 2.4376280344774863,
+    "best_A2_m2": 0.6934569123036964
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "shape_cut_profiles": 6,
+  "scenarios": 9,
+  "binary_vertices_independently_rechecked": 14368,
+  "mixture_csv_rows": 52,
+  "max_power_closure_or_direct_mass_error_MW": 1.1102230246251565e-16,
+  "max_archived_outboard_ring_delta_MW": 3.469446951953614e-18,
+  "max_fine_hit_label_residual_m": 2.389293635770423e-09,
+  "cpu_seconds_per_shape_by_clock": {
+    "baseline": 38.89982649963349,
+    "OMP20": 39.956360099837184,
+    "OMP50": 50.77560460008681
+  },
+  "sha256": {
+    "nf_private_leg_sensitivity.py": "c25ea6e5e7b86184921f84a6c307b0761e021885c64f7af5663202662dd60163",
+    "leg-baseline-z-1.285.npz": "63925a4df06e9a7e1e7dc712948df1bd44040a191ecf2c9d0eb9cb43fc4508be",
+    "leg-baseline-z-1.305.npz": "d8355b9096b6e1e0532bc6ca9d94bbd9a6e7fc2fdca54238981f29429495cc07",
+    "leg-design.md": "703c6af84568d0c41f5d1a38c9f6a9af80c814b861ecdabaed20c33c1e55f5c5",
+    "leg-mixtures.csv": "a7b0c544904cb631dfba1f13431d5f4e42e753e7e8f6d6018c788307d40d4082",
+    "leg-OMP20-z-1.285.npz": "82cf8fc417b40f4fcf1b9b9d0f6e275945f6c4287d69c9e958081186ab0ce8d7",
+    "leg-OMP20-z-1.305.npz": "607f6182390e13be3641841cec87e71cca6dddedc925a7f73f6d9828c3bd1fea",
+    "leg-OMP50-z-1.285.npz": "5277e49238a78a82c376ab7da9e091fc016218925e60e589c1109b5e537ca4cd",
+    "leg-OMP50-z-1.305.npz": "3a808c59722804475b6e9f63a74cbd45c8fdbf7b732bfb587d43638dbd280ccc",
+    "leg-report.ko.md": "0019d7846ad756189508d44d2564af358288ff6d244e41d723fbad5d35274530",
+    "leg-results.json": "1a0da21b52f88458be23a7d4d2dcc84ba4ff918ad10f0e89e454415008ba1a7b"
+  }
+}

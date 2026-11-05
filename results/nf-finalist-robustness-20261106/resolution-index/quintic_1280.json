@@ -1,0 +1,260 @@
+{
+  "method": "quintic",
+  "count": 1280,
+  "step": 0.000125,
+  "nodes": 641,
+  "wall_step": 0.00025,
+  "backend": "gpu",
+  "initial_prep_s": 182.64631900005043,
+  "fixture_sha256": "b585ddc327d2e49453101b322dcefdc6e3d1e7e4be06873a8ff149c1a026630b",
+  "input_sha256": {
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  },
+  "driver_sha256": "304536536f5cfc83ca67a0e6cb67374f4a04a870ca1be29db26b0e2137b371a6",
+  "cases": {
+    "chi0.3_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999989,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.3322676295501877e-15
+      },
+      "peak": 2.7297602186663847,
+      "A2": 0.6101328688308132,
+      "profile": "chi0.3_baseline.npz",
+      "sha256": "0db4f2c19ccb75260654f0e6298d7a8f320aecd061d696f382e6879a2ff5674f",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999991,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.1102230246251563e-15
+      },
+      "peak": 1.4432897881300057,
+      "A2": 0.934924853143872,
+      "profile": "chi0.3_R20_stage18.npz",
+      "sha256": "300d265b39d5d8c3e41eeb6e500b32124ba9bc7ea9e8158307bec90be36a3ace",
+      "cpu_peak_relative_difference": 0.0,
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.999999999999999,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.221245327087672e-15
+      },
+      "peak": 1.443358549489474,
+      "A2": 0.935632495760678,
+      "profile": "chi0.3_R20_stage19.npz",
+      "sha256": "6b9bec9646855a0288c3daf22458c8f906fd022b589227df66f18ea34e656717",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.999999999999999,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.221245327087672e-15
+      },
+      "peak": 1.7821702995463293,
+      "A2": 0.6803427011530041,
+      "profile": "chi0.3_R50_stage34.npz",
+      "sha256": "588640afb3a3a4cf8b31d12fe7df863a4bd5f6b082af15072d730b3050d99242",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999991,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.1102230246251563e-15
+      },
+      "peak": 1.7821774660328515,
+      "A2": 0.680339568197111,
+      "profile": "chi0.3_R50_stage33.npz",
+      "sha256": "39ec3c415189b04e2290f5b84d6f24ae16c2294126968d601668903ca41fa1ba",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999988,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.4432899320127031e-15
+      },
+      "peak": 2.6688023372179144,
+      "A2": 0.6186346664372611,
+      "profile": "chi0.6_baseline.npz",
+      "sha256": "597008152e457c96753735e8c3609fcdfb30d43e4dfbf408463390c85e078756",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999991,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.1102230246251563e-15
+      },
+      "peak": 1.4508279200186567,
+      "A2": 0.940424658264434,
+      "profile": "chi0.6_R20_stage18.npz",
+      "sha256": "a85c5d7b391936c7286646010ca91e2cefa875eb7deb4b9248da93afea2b5269",
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999991,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.1102230246251563e-15
+      },
+      "peak": 1.4507554396796645,
+      "A2": 0.9411524175207387,
+      "profile": "chi0.6_R20_stage19.npz",
+      "sha256": "e60cfe4403704dc331ee58b9360d76975240efbb578047adf9471dd2d2116370",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999991,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.1102230246251563e-15
+      },
+      "peak": 1.7840264668539831,
+      "A2": 0.6830704691234831,
+      "profile": "chi0.6_R50_stage34.npz",
+      "sha256": "9100027e64d274f591364db82588863f3f545bae8843a59634b5ff56589a2364",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0000000000000002,
+        "deposited": 0.9999999999999989,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 1.3322676295501877e-15
+      },
+      "peak": 1.7840385572445676,
+      "A2": 0.683067074701629,
+      "profile": "chi0.6_R50_stage33.npz",
+      "sha256": "dd0727b321bbb66c18f044eea7b1c5a1e8a7e64aba7049e5ca6e4177d5f496a6",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    }
+  },
+  "total_s": 444.71400739997625
+}

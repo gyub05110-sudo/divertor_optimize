@@ -1,0 +1,1382 @@
+{
+  "evidence_sha256": {
+    "shot": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "grid_design": "6afdf098a0f113edffa6a72b11674c8c41aff1448f089a703a6a6e30a6051893",
+    "driver": "df9ab6cd34d01c00a26c7785327c1f2acefdf6a29760a7411236a8381c4cc961",
+    "v3_policy": "3a9bf60b77505984a558e887c0f3b457637b09a12179f9332f7512afe314c565"
+  },
+  "interpolation_sources": {
+    "cubic": {
+      "separatrix_R_m": 2.251311109214891,
+      "Xpoint_RZ_m": [
+        1.1765919407581311,
+        -1.2523989728504332
+      ],
+      "psi_sep": -0.0024048686880576917
+    },
+    "quintic": {
+      "separatrix_R_m": 2.2513111373904042,
+      "Xpoint_RZ_m": [
+        1.1764633636315052,
+        -1.2524731488298322
+      ],
+      "psi_sep": -0.0024047037476393578
+    }
+  },
+  "cases": {
+    "OMP_chi0.3_candidate": {
+      "files": {
+        "cubic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.3_cubic_candidate.npz",
+          "sha256": "a5da5a78669695962e24024af0a8fab14883747bb33e4a13a77cf3fc48472bf1"
+        },
+        "quintic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.3_quintic_candidate.npz",
+          "sha256": "6a97fff8abd7427cd6601522219e96ee837d8b92b7e70d06d56d1f0001e9f2d7"
+        }
+      },
+      "policy": {
+        "passed": false,
+        "failures": [
+          "linf_relative"
+        ],
+        "linf_relative": 0.026930241050842928,
+        "l1_relative": 0.002729239385127422,
+        "a2_relative": 0.00031526936131550314,
+        "power_relative": 5.665219119283482e-09,
+        "wall_distance_m": 0.0,
+        "wall_length_difference_m": 0.0,
+        "limits": {
+          "linf_relative": 0.01,
+          "l1_relative": 0.005,
+          "a2_relative": 0.005,
+          "power_relative": 0.005,
+          "wall_distance_m": 5e-05,
+          "wall_length_difference_m": 5e-05
+        },
+        "reconstructed_A2_m2": [
+          0.9347618292700776,
+          0.9350566239747119
+        ],
+        "reconstructed_power_MW": [
+          1.0000010245749433,
+          1.0000010302401683
+        ],
+        "reconstruction_power_relative": [
+          1.0245749204606845e-06,
+          1.0302401451944594e-06
+        ],
+        "native_cell_diagnostic": {
+          "passed": false,
+          "failures": [
+            "linf_relative"
+          ],
+          "linf_relative": 0.026762796338397926,
+          "l1_relative": 0.0027291985846436624,
+          "a2_relative": 0.0003154477192390316,
+          "power_relative": 2.2204460492502618e-16,
+          "wall_distance_m": 0.0,
+          "wall_length_difference_m": 0.0,
+          "a2_m2": [
+            0.9347935261700389,
+            0.9350884977039262
+          ],
+          "power_MW": [
+            1.0000000000000229,
+            1.000000000000023
+          ],
+          "limits": {
+            "linf_relative": 0.01,
+            "l1_relative": 0.005,
+            "a2_relative": 0.005,
+            "power_relative": 0.005,
+            "wall_distance_m": 5e-05,
+            "wall_length_difference_m": 5e-05
+          },
+          "comparison_cells": 16251,
+          "scope": "saved cell averages on fixed corresponding wall; subcell convergence not proven"
+        },
+        "sample_comparison": {
+          "passed": false,
+          "linf_relative": 0.026930241050842928,
+          "limit": 0.01,
+          "samples": 73290,
+          "scope": "piecewise linear reconstruction of saved continuous samples; not a continuum bound"
+        },
+        "scope": "same physical support, saved-sample piecewise-linear q; not a continuum certificate"
+      },
+      "replay": {
+        "cubic": {
+          "cells": 16251,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 5.204170427930421e-18,
+          "source_weight_sum": 1.0,
+          "total_cell_power_fraction": 0.9999999999999996
+        },
+        "quintic": {
+          "cells": 16251,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 4.336808689942018e-18,
+          "source_weight_sum": 1.0000000000000002,
+          "total_cell_power_fraction": 0.9999999999999997
+        }
+      },
+      "peaks": {
+        "cubic": {
+          "s_m": 4.873611826172114,
+          "RZ_m": [
+            1.278733317530062,
+            -1.4195897955538708
+          ],
+          "area_m2": 56.7629467859279,
+          "cell": 10524,
+          "q_MW_m2": 1.440223404987941,
+          "A2_cell_m2": 0.9347935261700389
+        },
+        "quintic": {
+          "s_m": 4.944879740918311,
+          "RZ_m": [
+            1.2281750284177264,
+            -1.3699506961705459
+          ],
+          "area_m2": 57.32385970327164,
+          "cell": 10700,
+          "q_MW_m2": 1.4432824154676813,
+          "A2_cell_m2": 0.9350884977039262
+        }
+      },
+      "local_peak_neighborhoods": [
+        {
+          "center_m": 4.873611826172114,
+          "radius_mm": 2.0,
+          "maxima": {
+            "cubic": {
+              "s_m": 4.873611826172114,
+              "q_MW_m2": 1.440223404987941
+            },
+            "quintic": {
+              "s_m": 4.873674744100321,
+              "q_MW_m2": 1.4410506134960392
+            }
+          }
+        },
+        {
+          "center_m": 4.944879740918311,
+          "radius_mm": 2.0,
+          "maxima": {
+            "cubic": {
+              "s_m": 4.944782824235044,
+              "q_MW_m2": 1.4395706314977184
+            },
+            "quintic": {
+              "s_m": 4.944879740918311,
+              "q_MW_m2": 1.4432824154676813
+            }
+          }
+        }
+      ],
+      "near_separatrix_floor_flux_root": [
+        {
+          "s_m": 4.947966944840614,
+          "RZ_m": [
+            1.2257593418082828,
+            -1.3680291285912232
+          ],
+          "policy_location_minus_flux_limit_mm": 0.07343781668200933
+        },
+        {
+          "s_m": 4.948056462786141,
+          "RZ_m": [
+            1.225687816521922,
+            -1.3679752992685221
+          ],
+          "policy_location_minus_flux_limit_mm": -0.016080128845352704
+        }
+      ],
+      "peak_shift_mm": 71.26791474619677,
+      "peak_change_relative": 0.002123983313384592,
+      "A2_change_relative": 0.00031554725790194915,
+      "location": {
+        "s_m": 4.948040382657296,
+        "RZ_m": [
+          1.2257006646251767,
+          -1.36798496864185
+        ],
+        "area_m2": 57.34822552558958,
+        "cell": 10709
+      },
+      "policy_point_q_MW_m2": [
+        0.7524531462613316,
+        0.7913210896143191
+      ],
+      "exact_kernel_minus_saved_interpolation_MW_m2": [
+        4.9379899280665995e-08,
+        1.1102230246251565e-16
+      ],
+      "max_native_difference": {
+        "cell": 10709,
+        "parent": 1274,
+        "arc_edges_m": [
+          4.947723638097892,
+          4.948067881864026
+        ],
+        "q_MW_m2": [
+          0.8112583479684107,
+          0.8498584728564749
+        ]
+      },
+      "policy_location_ring": {
+        "cell": 10709,
+        "parent": 1274,
+        "arc_edges_m": [
+          4.947723638097892,
+          4.948067881864026
+        ],
+        "q_MW_m2": [
+          0.8112583479684107,
+          0.8498584728564749
+        ]
+      },
+      "factorial_q_MW_m2": {
+        "000": {
+          "point": 0.7524531956412309,
+          "ring": 0.8112583479684092
+        },
+        "001": {
+          "point": 0.7524642598265029,
+          "ring": 0.8112702740407901
+        },
+        "010": {
+          "point": 0.7524247922628956,
+          "ring": 0.8111434067228687
+        },
+        "011": {
+          "point": 0.7524358559587452,
+          "ring": 0.8111553310285187
+        },
+        "100": {
+          "point": 0.7913922455702671,
+          "ring": 0.8500144119993744
+        },
+        "101": {
+          "point": 0.7914038805466124,
+          "ring": 0.8500269057964354
+        },
+        "110": {
+          "point": 0.7913094559307389,
+          "ring": 0.8498459816157203
+        },
+        "111": {
+          "point": 0.7913210896143192,
+          "ring": 0.849858472856475
+        }
+      },
+      "shapley_MW_m2": {
+        "center": {
+          "point": 0.03891214192619619,
+          "ring": 0.03872960306105598
+        },
+        "physical_width": {
+          "point": -5.559702142384775e-05,
+          "ring": -0.00014168696115446537
+        },
+        "weight": {
+          "point": 1.1349068316654276e-05,
+          "ring": 1.220878816370467e-05
+        }
+      },
+      "top10_point_donors_by_absolute_delta": [
+        16,
+        17,
+        15,
+        18,
+        14,
+        19,
+        13,
+        20,
+        12,
+        21
+      ],
+      "top10_point_signed_delta_MW_m2": 0.028187944447717043,
+      "donors_8_to_25_point_signed_delta_MW_m2": 0.0370751047624563,
+      "top_donor": {
+        "case": "OMP_chi0.3_candidate",
+        "donor": 16,
+        "point_delta": 0.003402165344659626,
+        "ring_delta": 0.003474136938011102,
+        "hit_shift_um": 96.56219343412431,
+        "cubic_segment": 1272,
+        "cubic_hit_s_m": 4.946186644843149,
+        "cubic_R_m": 1.227165807044882,
+        "cubic_Z_m": -1.3691204162318136,
+        "cubic_source_x_mm": 0.06571390240401852,
+        "cubic_width_mm": 1.4954777645361987,
+        "cubic_target_gradient": 0.07382876429541207,
+        "cubic_Lparallel_m": 45.79366776703534,
+        "cubic_weight_fraction": 0.002597093685690213,
+        "quintic_segment": 1272,
+        "quintic_hit_s_m": 4.946283207036583,
+        "quintic_R_m": 1.227090925912038,
+        "quintic_Z_m": -1.369059448427648,
+        "quintic_source_x_mm": 0.06571388365932296,
+        "quintic_width_mm": 1.497497249550762,
+        "quintic_target_gradient": 0.07373204777944851,
+        "quintic_Lparallel_m": 45.79124397477468,
+        "quintic_weight_fraction": 0.0025971317673143942,
+        "point_center": 0.0033750527106196646,
+        "ring_center": 0.003458842373331474,
+        "point_physical_width": 2.6476019997561287e-05,
+        "ring_physical_width": 1.4582413198242076e-05,
+        "point_weight": 6.36614042399721e-07,
+        "ring_weight": 7.121514813863973e-07
+      },
+      "top_donor_local_flux_test": {
+        "donor": 16,
+        "psi_derivative_along_wall": [
+          -0.03198310461496684,
+          -0.03198199582883607
+        ],
+        "cubic_hit_vs_flux_root_um": -0.017384214956450705,
+        "quintic_hit_vs_flux_root_um": -0.02319730185718072,
+        "predicted_hit_shift_um": 96.56800652102504,
+        "interpolant_at_fixed_launch_um": 97.35736805982498,
+        "launch_RZ_shift_um": -0.7893615387999375
+      },
+      "donor16_local_flux_test": {
+        "donor": 16,
+        "psi_derivative_along_wall": [
+          -0.03198310461496684,
+          -0.03198199582883607
+        ],
+        "cubic_hit_vs_flux_root_um": -0.017384214956450705,
+        "quintic_hit_vs_flux_root_um": -0.02319730185718072,
+        "predicted_hit_shift_um": 96.56800652102504,
+        "interpolant_at_fixed_launch_um": 97.35736805982498,
+        "launch_RZ_shift_um": -0.7893615387999375
+      },
+      "median_abs_hit_shift_um": 2.651086768112876,
+      "max_abs_hit_shift_um": 141.34489720785126,
+      "donor_with_max_abs_hit_shift": 496,
+      "segment_changed_ids": [
+        20,
+        34,
+        42,
+        56,
+        95,
+        204
+      ],
+      "max_abs_segment_increment": 1,
+      "monotone_arc_crossings_when_measured_on_each_field": {
+        "cubic": 0,
+        "quintic": 0
+      },
+      "max_source_x_offset_difference_nm": 28.131523194252495,
+      "max_source_weight_difference": 9.291014595787933e-08,
+      "nearest_hit_edge_offset_mm": [
+        0.07667153272272742,
+        -0.012848903271134304
+      ]
+    },
+    "OMP_chi0.3_baseline": {
+      "files": {
+        "cubic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.3_cubic_baseline.npz",
+          "sha256": "b5c832870f07789391b567511f09b77fc71d3bb586d49022586014193ce3af74"
+        },
+        "quintic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.3_quintic_baseline.npz",
+          "sha256": "e7c04102910bcd31fb7b30cee33e0be3d3268e3f14179564b712c52cc8f39aec"
+        }
+      },
+      "policy": {
+        "passed": true,
+        "failures": [],
+        "linf_relative": 0.007081566883316472,
+        "l1_relative": 0.001146621652075777,
+        "a2_relative": 0.00027055127531887144,
+        "power_relative": 1.4643196260669295e-07,
+        "wall_distance_m": 0.0,
+        "wall_length_difference_m": 0.0,
+        "limits": {
+          "linf_relative": 0.01,
+          "l1_relative": 0.005,
+          "a2_relative": 0.005,
+          "power_relative": 0.005,
+          "wall_distance_m": 5e-05,
+          "wall_length_difference_m": 5e-05
+        },
+        "reconstructed_A2_m2": [
+          0.6100039404874833,
+          0.6101690224946793
+        ],
+        "reconstructed_power_MW": [
+          1.0000013892979225,
+          1.00000153573011
+        ],
+        "reconstruction_power_relative": [
+          1.3892979580099545e-06,
+          1.5357301454966268e-06
+        ],
+        "native_cell_diagnostic": {
+          "passed": true,
+          "failures": [],
+          "linf_relative": 0.007046411915356163,
+          "l1_relative": 0.0011458583824129564,
+          "a2_relative": 0.00027013764488328235,
+          "power_relative": 0.0,
+          "wall_distance_m": 0.0,
+          "wall_length_difference_m": 0.0,
+          "a2_m2": [
+            0.6100594269905991,
+            0.610224271538163
+          ],
+          "power_MW": [
+            0.9999999999999645,
+            0.9999999999999645
+          ],
+          "limits": {
+            "linf_relative": 0.01,
+            "l1_relative": 0.005,
+            "a2_relative": 0.005,
+            "power_relative": 0.005,
+            "wall_distance_m": 5e-05,
+            "wall_length_difference_m": 5e-05
+          },
+          "comparison_cells": 16164,
+          "scope": "saved cell averages on fixed corresponding wall; subcell convergence not proven"
+        },
+        "sample_comparison": {
+          "passed": true,
+          "linf_relative": 0.007081566883316472,
+          "limit": 0.01,
+          "samples": 72835,
+          "scope": "piecewise linear reconstruction of saved continuous samples; not a continuum bound"
+        },
+        "scope": "same physical support, saved-sample piecewise-linear q; not a continuum certificate"
+      },
+      "replay": {
+        "cubic": {
+          "cells": 16164,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 5.204170427930421e-18,
+          "source_weight_sum": 1.0,
+          "total_cell_power_fraction": 0.9999999999999994
+        },
+        "quintic": {
+          "cells": 16164,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 3.469446951953614e-18,
+          "source_weight_sum": 1.0000000000000002,
+          "total_cell_power_fraction": 0.9999999999999994
+        }
+      },
+      "peaks": {
+        "cubic": {
+          "s_m": 4.908075071248679,
+          "RZ_m": [
+            1.225234508666587,
+            -1.35868155528227
+          ],
+          "area_m2": 57.019319765917636,
+          "cell": 10631,
+          "q_MW_m2": 2.730737138036002,
+          "A2_cell_m2": 0.6100594269905991
+        },
+        "quintic": {
+          "s_m": 4.908097973263688,
+          "RZ_m": [
+            1.2252116068589272,
+            -1.3586816527367707
+          ],
+          "area_m2": 57.01949607258027,
+          "cell": 10631,
+          "q_MW_m2": 2.7297441430048384,
+          "A2_cell_m2": 0.610224271538163
+        }
+      },
+      "local_peak_neighborhoods": [],
+      "near_separatrix_floor_flux_root": [
+        {
+          "s_m": 4.911941198046567,
+          "RZ_m": [
+            1.221368416871597,
+            -1.3586980067367167
+          ],
+          "policy_location_minus_flux_limit_mm": 0.25810413349081074
+        },
+        {
+          "s_m": 4.911969677074378,
+          "RZ_m": [
+            1.2213399381016283,
+            -1.3586981279229717
+          ],
+          "policy_location_minus_flux_limit_mm": 0.22962510568014238
+        }
+      ],
+      "peak_shift_mm": 0.022902015008874343,
+      "peak_change_relative": -0.000363636256794031,
+      "A2_change_relative": 0.00027021063894894226,
+      "location": {
+        "s_m": 4.912199302180058,
+        "RZ_m": [
+          1.2211103150749583,
+          -1.3586991050422343
+        ],
+        "area_m2": 57.05101620837452,
+        "cell": 10641
+      },
+      "policy_point_q_MW_m2": [
+        1.2718809345107591,
+        1.2912188321945173
+      ],
+      "exact_kernel_minus_saved_interpolation_MW_m2": [
+        0.0,
+        -2.511125693382965e-05
+      ],
+      "max_native_difference": {
+        "cell": 10641,
+        "parent": 1280,
+        "arc_edges_m": [
+          4.912057115967698,
+          4.912468369691085
+        ],
+        "q_MW_m2": [
+          1.2288620592665358,
+          1.2480993956658892
+        ]
+      },
+      "policy_location_ring": {
+        "cell": 10641,
+        "parent": 1280,
+        "arc_edges_m": [
+          4.912057115967698,
+          4.912468369691085
+        ],
+        "q_MW_m2": [
+          1.2288620592665358,
+          1.2480993956658892
+        ]
+      },
+      "factorial_q_MW_m2": {
+        "000": {
+          "point": 1.2718809345107591,
+          "ring": 1.2288620592665347
+        },
+        "001": {
+          "point": 1.271899539479532,
+          "ring": 1.2288800376167117
+        },
+        "010": {
+          "point": 1.2720597718590023,
+          "ring": 1.2291039952514666
+        },
+        "011": {
+          "point": 1.2720783791430579,
+          "ring": 1.2291219768521557
+        },
+        "100": {
+          "point": 1.291025645311933,
+          "ring": 1.2478681708338837
+        },
+        "101": {
+          "point": 1.291044528877664,
+          "ring": 1.2478864258773537
+        },
+        "110": {
+          "point": 1.2911748354951906,
+          "ring": 1.2480811378007102
+        },
+        "111": {
+          "point": 1.2911937209375834,
+          "ring": 1.2480993956658881
+        }
+      },
+      "shapley_MW_m2": {
+        "center": {
+          "point": 0.0191300263709539,
+          "ring": 0.018991765262007694
+        },
+        "physical_width": {
+          "point": 0.00016401477718477596,
+          "ring": 0.00022745295820130194
+        },
+        "weight": {
+          "point": 1.874527868690383e-05,
+          "ring": 1.811817914488363e-05
+        }
+      },
+      "top10_point_donors_by_absolute_delta": [
+        22,
+        23,
+        21,
+        24,
+        20,
+        25,
+        19,
+        26,
+        18,
+        27
+      ],
+      "top10_point_signed_delta_MW_m2": 0.010029093541479971,
+      "donors_8_to_25_point_signed_delta_MW_m2": 0.01289884818711632,
+      "top_donor": {
+        "case": "OMP_chi0.3_baseline",
+        "donor": 22,
+        "point_delta": 0.0010820609632451947,
+        "ring_delta": 0.0010645750693817832,
+        "hit_shift_um": 27.7839118840717,
+        "cubic_segment": 1277,
+        "cubic_hit_s_m": 4.910131362876881,
+        "cubic_R_m": 1.2231782356554928,
+        "cubic_Z_m": -1.3586903053801893,
+        "cubic_source_x_mm": 0.12214345529407478,
+        "cubic_width_mm": 1.662254387429395,
+        "cubic_target_gradient": 0.0666991161706948,
+        "cubic_Lparallel_m": 41.21506236822431,
+        "cubic_weight_fraction": 0.0034754579096449903,
+        "quintic_segment": 1277,
+        "quintic_hit_s_m": 4.910159146788765,
+        "quintic_R_m": 1.2231504519951575,
+        "quintic_Z_m": -1.3586904236085313,
+        "quintic_source_x_mm": 0.1221434204530168,
+        "quintic_width_mm": 1.6646359014435843,
+        "quintic_target_gradient": 0.06661108814260419,
+        "quintic_Lparallel_m": 41.22218794139854,
+        "quintic_weight_fraction": 0.003475508515539708,
+        "point_center": 0.0010434538718625957,
+        "ring_center": 0.0010218841781220803,
+        "point_physical_width": 3.786935617595619e-05,
+        "ring_physical_width": 4.198641051705171e-05,
+        "point_weight": 7.377352066427478e-07,
+        "ring_weight": 7.044807426512256e-07
+      },
+      "top_donor_local_flux_test": {
+        "donor": 22,
+        "psi_derivative_along_wall": [
+          -0.06101749023757549,
+          -0.06099907648730123
+        ],
+        "cubic_hit_vs_flux_root_um": -0.0030419533558756484,
+        "quintic_hit_vs_flux_root_um": -0.010791517013331031,
+        "predicted_hit_shift_um": 27.791661447729155,
+        "interpolant_at_fixed_launch_um": 28.20521776358831,
+        "launch_RZ_shift_um": -0.41355631585915376
+      },
+      "donor16_local_flux_test": {
+        "donor": 16,
+        "psi_derivative_along_wall": [
+          -0.06055019402828711,
+          -0.060531169261768596
+        ],
+        "cubic_hit_vs_flux_root_um": -0.007874775498351028,
+        "quintic_hit_vs_flux_root_um": -0.002648404162641782,
+        "predicted_hit_shift_um": 28.10169445321975,
+        "interpolant_at_fixed_launch_um": 28.51869984032973,
+        "launch_RZ_shift_um": -0.41700538710998103
+      },
+      "median_abs_hit_shift_um": 1.8470016001082001,
+      "max_abs_hit_shift_um": 141.34489720785126,
+      "donor_with_max_abs_hit_shift": 496,
+      "segment_changed_ids": [
+        90,
+        108,
+        135,
+        172,
+        207,
+        363
+      ],
+      "max_abs_segment_increment": 1,
+      "monotone_arc_crossings_when_measured_on_each_field": {
+        "cubic": 0,
+        "quintic": 0
+      },
+      "max_source_x_offset_difference_nm": 28.131523194252495,
+      "max_source_weight_difference": 9.291014595787933e-08,
+      "nearest_hit_edge_offset_mm": [
+        0.25991185309681697,
+        0.23143402564951288
+      ]
+    },
+    "OMP_chi0.6_candidate": {
+      "files": {
+        "cubic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.6_cubic_candidate.npz",
+          "sha256": "00a8bb24f60fef566f2aebe11fd5912d1daa8f72dcd98a60b1c86a0043c528ee"
+        },
+        "quintic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.6_quintic_candidate.npz",
+          "sha256": "73e4a1fe612e79ad91e99bc9b71fd6943028aecb0e7cf5493905c638ff8cd947"
+        }
+      },
+      "policy": {
+        "passed": false,
+        "failures": [
+          "linf_relative"
+        ],
+        "linf_relative": 0.018916112554732044,
+        "l1_relative": 0.002706985248030375,
+        "a2_relative": 0.0003626175728440289,
+        "power_relative": 5.086549699585423e-08,
+        "wall_distance_m": 0.0,
+        "wall_length_difference_m": 0.0,
+        "limits": {
+          "linf_relative": 0.01,
+          "l1_relative": 0.005,
+          "a2_relative": 0.005,
+          "power_relative": 0.005,
+          "wall_distance_m": 5e-05,
+          "wall_length_difference_m": 5e-05
+        },
+        "reconstructed_A2_m2": [
+          0.9402683930840448,
+          0.9406094746087215
+        ],
+        "reconstructed_power_MW": [
+          1.0000008950289252,
+          1.0000009458944703
+        ],
+        "reconstruction_power_relative": [
+          8.950289036579824e-07,
+          9.458944481010935e-07
+        ],
+        "native_cell_diagnostic": {
+          "passed": false,
+          "failures": [
+            "linf_relative"
+          ],
+          "linf_relative": 0.018841297725836453,
+          "l1_relative": 0.002706907908327231,
+          "a2_relative": 0.0003628275135268986,
+          "power_relative": 6.661338147750791e-16,
+          "wall_distance_m": 0.0,
+          "wall_length_difference_m": 0.0,
+          "a2_m2": [
+            0.9402924035997172,
+            0.9406336913831014
+          ],
+          "power_MW": [
+            1.0000000000000215,
+            1.0000000000000222
+          ],
+          "limits": {
+            "linf_relative": 0.01,
+            "l1_relative": 0.005,
+            "a2_relative": 0.005,
+            "power_relative": 0.005,
+            "wall_distance_m": 5e-05,
+            "wall_length_difference_m": 5e-05
+          },
+          "comparison_cells": 16251,
+          "scope": "saved cell averages on fixed corresponding wall; subcell convergence not proven"
+        },
+        "sample_comparison": {
+          "passed": false,
+          "linf_relative": 0.018916112554732044,
+          "limit": 0.01,
+          "samples": 73204,
+          "scope": "piecewise linear reconstruction of saved continuous samples; not a continuum bound"
+        },
+        "scope": "same physical support, saved-sample piecewise-linear q; not a continuum certificate"
+      },
+      "replay": {
+        "cubic": {
+          "cells": 16251,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 5.204170427930421e-18,
+          "source_weight_sum": 1.0,
+          "total_cell_power_fraction": 0.9999999999999996
+        },
+        "quintic": {
+          "cells": 16251,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 4.336808689942018e-18,
+          "source_weight_sum": 1.0000000000000002,
+          "total_cell_power_fraction": 0.9999999999999998
+        }
+      },
+      "peaks": {
+        "cubic": {
+          "s_m": 4.873370736833585,
+          "RZ_m": [
+            1.2789518591884752,
+            -1.419691597384358
+          ],
+          "area_m2": 56.76100958367881,
+          "cell": 10524,
+          "q_MW_m2": 1.449940182602548,
+          "A2_cell_m2": 0.9402924035997172
+        },
+        "quintic": {
+          "s_m": 4.873406357181848,
+          "RZ_m": [
+            1.2789195702036944,
+            -1.4196765564178937
+          ],
+          "area_m2": 56.76129582132044,
+          "cell": 10524,
+          "q_MW_m2": 1.450742048203003,
+          "A2_cell_m2": 0.9406336913831014
+        }
+      },
+      "local_peak_neighborhoods": [],
+      "near_separatrix_floor_flux_root": [
+        {
+          "s_m": 4.947966944840614,
+          "RZ_m": [
+            1.2257593418082828,
+            -1.3680291285912232
+          ],
+          "policy_location_minus_flux_limit_mm": 0.10093702341240629
+        },
+        {
+          "s_m": 4.948056462786141,
+          "RZ_m": [
+            1.225687816521922,
+            -1.3679752992685221
+          ],
+          "policy_location_minus_flux_limit_mm": 0.01141907788504426
+        }
+      ],
+      "peak_shift_mm": 0.03562034826298799,
+      "peak_change_relative": 0.0005530335734371672,
+      "A2_change_relative": 0.00036295920511286717,
+      "location": {
+        "s_m": 4.948067881864026,
+        "RZ_m": [
+          1.2256786926214123,
+          -1.3679684326985324
+        ],
+        "area_m2": 57.348437303453366,
+        "cell": 10710
+      },
+      "policy_point_q_MW_m2": [
+        0.7420714779273657,
+        0.7695138777990562
+      ],
+      "exact_kernel_minus_saved_interpolation_MW_m2": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "max_native_difference": {
+        "cell": 10710,
+        "parent": 1274,
+        "arc_edges_m": [
+          4.948067881864026,
+          4.948412125630161
+        ],
+        "q_MW_m2": [
+          0.6936101188021108,
+          0.7209434151656604
+        ]
+      },
+      "policy_location_ring": {
+        "cell": 10710,
+        "parent": 1274,
+        "arc_edges_m": [
+          4.948067881864026,
+          4.948412125630161
+        ],
+        "q_MW_m2": [
+          0.6936101188021108,
+          0.7209434151656604
+        ]
+      },
+      "factorial_q_MW_m2": {
+        "000": {
+          "point": 0.7420714779273657,
+          "ring": 0.693610118802111
+        },
+        "001": {
+          "point": 0.7420823673714675,
+          "ring": 0.6936202995729472
+        },
+        "010": {
+          "point": 0.7420125989014676,
+          "ring": 0.6936238341205411
+        },
+        "011": {
+          "point": 0.7420234873860468,
+          "ring": 0.6936340150034762
+        },
+        "100": {
+          "point": 0.7696002528910486,
+          "ring": 0.7209572674628226
+        },
+        "101": {
+          "point": 0.7696115445357873,
+          "ring": 0.7209678480541148
+        },
+        "110": {
+          "point": 0.7695025876864284,
+          "ring": 0.7209328350258578
+        },
+        "111": {
+          "point": 0.7695138777990564,
+          "ring": 0.7209434151656595
+        }
+      },
+      "shapley_MW_m2": {
+        "center": {
+          "point": 0.027509582783777783,
+          "ring": 0.027328274505378634
+        },
+        "physical_width": {
+          "point": -7.827278588320534e-05,
+          "ring": -5.358691080388257e-06
+        },
+        "weight": {
+          "point": 1.108987379644633e-05,
+          "ring": 1.0380549251020557e-05
+        }
+      },
+      "top10_point_donors_by_absolute_delta": [
+        20,
+        19,
+        21,
+        18,
+        17,
+        22,
+        16,
+        23,
+        15,
+        24
+      ],
+      "top10_point_signed_delta_MW_m2": 0.017776138156577616,
+      "donors_8_to_25_point_signed_delta_MW_m2": 0.024221789336015605,
+      "top_donor": {
+        "case": "OMP_chi0.6_candidate",
+        "donor": 20,
+        "point_delta": 0.0020279703537471397,
+        "ring_delta": 0.0019279991022860335,
+        "hit_shift_um": 99.10148730885027,
+        "cubic_segment": 1271,
+        "cubic_hit_s_m": 4.9451906827651495,
+        "cubic_R_m": 1.2279373152862536,
+        "cubic_Z_m": -1.3697502534128152,
+        "cubic_source_x_mm": 0.10140438884730195,
+        "cubic_width_mm": 2.1154942362267466,
+        "cubic_target_gradient": 0.07447680133000915,
+        "cubic_Lparallel_m": 43.02953341153343,
+        "cubic_weight_fraction": 0.0031885083262473235,
+        "quintic_segment": 1272,
+        "quintic_hit_s_m": 4.945289784252458,
+        "quintic_R_m": 1.2278612959794826,
+        "quintic_Z_m": -1.3696866794753517,
+        "quintic_source_x_mm": 0.10140435992200109,
+        "quintic_width_mm": 2.118210041063798,
+        "quintic_target_gradient": 0.07438202635097926,
+        "quintic_Lparallel_m": 43.03167925998255,
+        "quintic_weight_fraction": 0.0031885548750944354,
+        "point_center": 0.0019955193202859716,
+        "ring_center": 0.0018909931004827754,
+        "point_physical_width": 3.1984252056399425e-05,
+        "ring_physical_width": 3.6588026841795004e-05,
+        "point_weight": 4.6678140476890767e-07,
+        "ring_weight": 4.1797496146307733e-07
+      },
+      "top_donor_local_flux_test": {
+        "donor": 20,
+        "psi_derivative_along_wall": [
+          -0.0312924770550156,
+          -0.032443587615478796
+        ],
+        "cubic_hit_vs_flux_root_um": -0.02075885241481501,
+        "quintic_hit_vs_flux_root_um": -0.01011817651885849,
+        "predicted_hit_shift_um": 99.09084663295431,
+        "interpolant_at_fixed_launch_um": 99.8829962166603,
+        "launch_RZ_shift_um": -0.7921495837059922
+      },
+      "donor16_local_flux_test": {
+        "donor": 16,
+        "psi_derivative_along_wall": [
+          -0.03198310461496684,
+          -0.03198199582883607
+        ],
+        "cubic_hit_vs_flux_root_um": -0.017384214956450705,
+        "quintic_hit_vs_flux_root_um": -0.02319730185718072,
+        "predicted_hit_shift_um": 96.56800652102504,
+        "interpolant_at_fixed_launch_um": 97.35736805982498,
+        "launch_RZ_shift_um": -0.7893615387999375
+      },
+      "median_abs_hit_shift_um": 2.651086768112876,
+      "max_abs_hit_shift_um": 141.34489720785126,
+      "donor_with_max_abs_hit_shift": 496,
+      "segment_changed_ids": [
+        20,
+        34,
+        42,
+        56,
+        95,
+        204
+      ],
+      "max_abs_segment_increment": 1,
+      "monotone_arc_crossings_when_measured_on_each_field": {
+        "cubic": 0,
+        "quintic": 0
+      },
+      "max_source_x_offset_difference_nm": 28.131523194252495,
+      "max_source_weight_difference": 9.291014595787933e-08,
+      "nearest_hit_edge_offset_mm": [
+        0.10417073945312438,
+        0.014650303459262659
+      ]
+    },
+    "OMP_chi0.6_baseline": {
+      "files": {
+        "cubic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.6_cubic_baseline.npz",
+          "sha256": "20af31d179aa721aed181febd504ee8976e0460342d16cc71c07c7e4e2cc1015"
+        },
+        "quintic": {
+          "path": "D:\\DivertorOptimization\\studies\\nf-method-20261105\\sensitivity\\OMP_chi0.6_quintic_baseline.npz",
+          "sha256": "3206bee240b90e5641589089446500e9bab2f3beca08557931282b244d65095f"
+        }
+      },
+      "policy": {
+        "passed": true,
+        "failures": [],
+        "linf_relative": 0.005044030974623905,
+        "l1_relative": 0.0011104553919671712,
+        "a2_relative": 0.0002864181956548823,
+        "power_relative": 5.126846086142214e-08,
+        "wall_distance_m": 0.0,
+        "wall_length_difference_m": 0.0,
+        "limits": {
+          "linf_relative": 0.01,
+          "l1_relative": 0.005,
+          "a2_relative": 0.005,
+          "power_relative": 0.005,
+          "wall_distance_m": 5e-05,
+          "wall_length_difference_m": 5e-05
+        },
+        "reconstructed_A2_m2": [
+          0.6185129032415915,
+          0.618690107345807
+        ],
+        "reconstructed_power_MW": [
+          1.0000011517523402,
+          1.0000012030208627
+        ],
+        "reconstruction_power_relative": [
+          1.1517523758053783e-06,
+          1.2030208983438301e-06
+        ],
+        "native_cell_diagnostic": {
+          "passed": true,
+          "failures": [],
+          "linf_relative": 0.00501928912048125,
+          "l1_relative": 0.0011102422675949811,
+          "a2_relative": 0.0002863207941834417,
+          "power_relative": 0.0,
+          "wall_distance_m": 0.0,
+          "wall_length_difference_m": 0.0,
+          "a2_m2": [
+            0.618552571965719,
+            0.6187297271525822
+          ],
+          "power_MW": [
+            0.9999999999999644,
+            0.9999999999999644
+          ],
+          "limits": {
+            "linf_relative": 0.01,
+            "l1_relative": 0.005,
+            "a2_relative": 0.005,
+            "power_relative": 0.005,
+            "wall_distance_m": 5e-05,
+            "wall_length_difference_m": 5e-05
+          },
+          "comparison_cells": 16164,
+          "scope": "saved cell averages on fixed corresponding wall; subcell convergence not proven"
+        },
+        "sample_comparison": {
+          "passed": true,
+          "linf_relative": 0.005044030974623905,
+          "limit": 0.01,
+          "samples": 72734,
+          "scope": "piecewise linear reconstruction of saved continuous samples; not a continuum bound"
+        },
+        "scope": "same physical support, saved-sample piecewise-linear q; not a continuum certificate"
+      },
+      "replay": {
+        "cubic": {
+          "cells": 16164,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 5.204170427930421e-18,
+          "source_weight_sum": 1.0,
+          "total_cell_power_fraction": 0.9999999999999992
+        },
+        "quintic": {
+          "cells": 16164,
+          "max_cell_power_error_fraction": 0.0,
+          "max_cell_q_error_MW_m2": 0.0,
+          "max_weight_error": 5.204170427930421e-18,
+          "source_weight_sum": 1.0000000000000002,
+          "total_cell_power_fraction": 0.9999999999999992
+        }
+      },
+      "peaks": {
+        "cubic": {
+          "s_m": 4.906837955796165,
+          "RZ_m": [
+            1.2264716129185687,
+            -1.3586762910088572
+          ],
+          "area_m2": 57.00979117865195,
+          "cell": 10628,
+          "q_MW_m2": 2.669777183507684,
+          "A2_cell_m2": 0.618552571965719
+        },
+        "quintic": {
+          "s_m": 4.906859096840254,
+          "RZ_m": [
+            1.2264504720658858,
+            -1.3586763809699323
+          ],
+          "area_m2": 57.009954093271304,
+          "cell": 10628,
+          "q_MW_m2": 2.668785961849594,
+          "A2_cell_m2": 0.6187297271525822
+        }
+      },
+      "local_peak_neighborhoods": [],
+      "near_separatrix_floor_flux_root": [
+        {
+          "s_m": 4.911941198046567,
+          "RZ_m": [
+            1.221368416871597,
+            -1.3586980067367167
+          ],
+          "policy_location_minus_flux_limit_mm": 0.5059712191020083
+        },
+        {
+          "s_m": 4.911969677074378,
+          "RZ_m": [
+            1.2213399381016283,
+            -1.3586981279229717
+          ],
+          "policy_location_minus_flux_limit_mm": 0.4774921912913399
+        }
+      ],
+      "peak_shift_mm": 0.02114104408867945,
+      "peak_change_relative": -0.00037127505029754815,
+      "A2_change_relative": 0.00028640279725977713,
+      "location": {
+        "s_m": 4.912447169265669,
+        "RZ_m": [
+          1.220862450233473,
+          -1.3587001597862407
+        ],
+        "area_m2": 57.052917766254915,
+        "cell": 10641
+      },
+      "policy_point_q_MW_m2": [
+        1.205778092845517,
+        1.219244531654474
+      ],
+      "exact_kernel_minus_saved_interpolation_MW_m2": [
+        0.0,
+        -2.027734770204681e-05
+      ],
+      "max_native_difference": {
+        "cell": 10641,
+        "parent": 1280,
+        "arc_edges_m": [
+          4.912057115967698,
+          4.912468369691085
+        ],
+        "q_MW_m2": [
+          1.2945582344469424,
+          1.3079564481023838
+        ]
+      },
+      "policy_location_ring": {
+        "cell": 10641,
+        "parent": 1280,
+        "arc_edges_m": [
+          4.912057115967698,
+          4.912468369691085
+        ],
+        "q_MW_m2": [
+          1.2945582344469424,
+          1.3079564481023838
+        ]
+      },
+      "factorial_q_MW_m2": {
+        "000": {
+          "point": 1.205778092845517,
+          "ring": 1.294558234446945
+        },
+        "001": {
+          "point": 1.2057956537149237,
+          "ring": 1.2945770777497279
+        },
+        "010": {
+          "point": 1.206025476917643,
+          "ring": 1.2946704430301836
+        },
+        "011": {
+          "point": 1.2060430409757836,
+          "ring": 1.2946892875191742
+        },
+        "100": {
+          "point": 1.2189795642203718,
+          "ring": 1.307846174352112
+        },
+        "101": {
+          "point": 1.2189973160167575,
+          "ring": 1.3078652095569934
+        },
+        "110": {
+          "point": 1.2192064996245644,
+          "ring": 1.307937412021486
+        },
+        "111": {
+          "point": 1.219224254306772,
+          "ring": 1.3079564481023853
+        }
+      },
+      "shapley_MW_m2": {
+        "center": {
+          "point": 0.013191342403405592,
+          "ring": 0.013277550295887612
+        },
+        "physical_width": {
+          "point": 0.00023716123155445928,
+          "ring": 0.00010172361601371207
+        },
+        "weight": {
+          "point": 1.765782629294806e-05,
+          "ring": 1.8939743539538248e-05
+        }
+      },
+      "top10_point_donors_by_absolute_delta": [
+        26,
+        27,
+        25,
+        28,
+        24,
+        29,
+        23,
+        30,
+        22,
+        31
+      ],
+      "top10_point_signed_delta_MW_m2": 0.005845700190564917,
+      "donors_8_to_25_point_signed_delta_MW_m2": 0.00619087234086229,
+      "top_donor": {
+        "case": "OMP_chi0.6_baseline",
+        "donor": 26,
+        "point_delta": 0.0006149928554760251,
+        "ring_delta": 0.0006242010542026957,
+        "hit_shift_um": 27.531907007549705,
+        "cubic_segment": 1276,
+        "cubic_hit_s_m": 4.909439092683286,
+        "cubic_R_m": 1.2238704995814484,
+        "cubic_Z_m": -1.3586873595762492,
+        "cubic_source_x_mm": 0.1694092346378826,
+        "cubic_width_mm": 2.369218094836333,
+        "cubic_target_gradient": 0.06695747964425493,
+        "cubic_Lparallel_m": 39.109598333478736,
+        "cubic_weight_fraction": 0.004029291122483317,
+        "quintic_segment": 1276,
+        "quintic_hit_s_m": 4.909466624590293,
+        "quintic_R_m": 1.2238429679237077,
+        "quintic_Z_m": -1.3586874767322397,
+        "quintic_source_x_mm": 0.16940918631440138,
+        "quintic_width_mm": 2.3724472427844248,
+        "quintic_target_gradient": 0.0668708679558796,
+        "quintic_Lparallel_m": 39.11916105909873,
+        "quintic_weight_fraction": 0.004029349435960848,
+        "point_center": 0.0005823774623592455,
+        "ring_center": 0.0005999036667128308,
+        "point_physical_width": 3.2039498742484726e-05,
+        "ring_physical_width": 2.3663854911958514e-05,
+        "point_weight": 5.758943742948756e-07,
+        "ring_weight": 6.335325779064278e-07
+      },
+      "top_donor_local_flux_test": {
+        "donor": 26,
+        "psi_derivative_along_wall": [
+          -0.061407109691004845,
+          -0.06138919969106054
+        ],
+        "cubic_hit_vs_flux_root_um": -0.0018265264856154317,
+        "quintic_hit_vs_flux_root_um": -0.011558025647673276,
+        "predicted_hit_shift_um": 27.541638506711763,
+        "interpolant_at_fixed_launch_um": 27.952358290228574,
+        "launch_RZ_shift_um": -0.4107197835168108
+      },
+      "donor16_local_flux_test": {
+        "donor": 16,
+        "psi_derivative_along_wall": [
+          -0.06055019402828711,
+          -0.060531169261768596
+        ],
+        "cubic_hit_vs_flux_root_um": -0.007874775498351028,
+        "quintic_hit_vs_flux_root_um": -0.002648404162641782,
+        "predicted_hit_shift_um": 28.10169445321975,
+        "interpolant_at_fixed_launch_um": 28.51869984032973,
+        "launch_RZ_shift_um": -0.41700538710998103
+      },
+      "median_abs_hit_shift_um": 1.8470016001082001,
+      "max_abs_hit_shift_um": 141.34489720785126,
+      "donor_with_max_abs_hit_shift": 496,
+      "segment_changed_ids": [
+        90,
+        108,
+        135,
+        172,
+        207,
+        363
+      ],
+      "max_abs_segment_increment": 1,
+      "monotone_arc_crossings_when_measured_on_each_field": {
+        "cubic": 0,
+        "quintic": 0
+      },
+      "max_source_x_offset_difference_nm": 28.131523194252495,
+      "max_source_weight_difference": 9.291014595787933e-08,
+      "nearest_hit_edge_offset_mm": [
+        0.5077789387080145,
+        0.4793011112607104
+      ]
+    }
+  },
+  "historical_identity": {
+    "finite_grid_id": "437d6200d8268099c64678f8b6efeefd2ef3d52e0342513b78fed40bbabb37fb",
+    "historical_stage18_id": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+    "vector_max_abs_difference": 6.938893903907228e-18,
+    "reference": {
+      "power_W": 1000000.0,
+      "density_m3": 1e+19,
+      "chi_perp_m2_s": 0.3,
+      "lambda_q_m": 0.003,
+      "gamma": 7.0,
+      "kappa0": 2000.0
+    },
+    "comparisons": {
+      "cubic": {
+        "archive": "D:\\DivertorOptimization\\studies\\omp-stage-qualification-20261104\\R020\\validation\\0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1\\cubic_640.npz",
+        "sha256": "990e7a1e4ec877aac41a767a4e345214f727c2d22cd99ab62230e29bbb613b02",
+        "max_wall_vertex_distance_m": 2.220446049250313e-16,
+        "max_cell_power_diff_fraction": 9.913944665207453e-16,
+        "max_saved_q_diff_MW_m2": 3.765876499528531e-13
+      },
+      "quintic": {
+        "archive": "D:\\DivertorOptimization\\studies\\omp-stage-qualification-20261104\\R020\\validation\\0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1\\quintic_640.npz",
+        "sha256": "849d053907438348d73b3e70e53bd9c1bca9f92affe9452bb445ae166dd8d3f2",
+        "max_wall_vertex_distance_m": 2.220446049250313e-16,
+        "max_cell_power_diff_fraction": 9.944302326037047e-16,
+        "max_saved_q_diff_MW_m2": 3.773648060700907e-13
+      }
+    }
+  }
+}

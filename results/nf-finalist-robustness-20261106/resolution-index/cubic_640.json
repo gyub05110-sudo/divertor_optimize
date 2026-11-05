@@ -1,0 +1,260 @@
+{
+  "method": "cubic",
+  "count": 640,
+  "step": 0.00025,
+  "nodes": 321,
+  "wall_step": 0.0005,
+  "backend": "gpu",
+  "initial_prep_s": 30.78724360000342,
+  "fixture_sha256": "b585ddc327d2e49453101b322dcefdc6e3d1e7e4be06873a8ff149c1a026630b",
+  "input_sha256": {
+    "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review/baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  },
+  "driver_sha256": "304536536f5cfc83ca67a0e6cb67374f4a04a870ca1be29db26b0e2137b371a6",
+  "cases": {
+    "chi0.3_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125783e-16
+      },
+      "peak": 2.730737138036002,
+      "A2": 0.6100594269905942,
+      "profile": "chi0.3_baseline.npz",
+      "sha256": "b5c832870f07789391b567511f09b77fc71d3bb586d49022586014193ce3af74",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500626e-16
+      },
+      "peak": 1.440223404987941,
+      "A2": 0.9347935261700401,
+      "profile": "chi0.3_R20_stage18.npz",
+      "sha256": "a2777322484141c5abe8dfd630b7e181e91d5a78da69c576a03f70a201cb0b0b",
+      "cpu_peak_relative_difference": 0.0,
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999993,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 6.661338147750939e-16
+      },
+      "peak": 1.4402275320238416,
+      "A2": 0.935509656550924,
+      "profile": "chi0.3_R20_stage19.npz",
+      "sha256": "959ba96e130fda58ef32381bc2d2b0ed04064abf4c33068ab3e7b8b8b03270de",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500626e-16
+      },
+      "peak": 1.78701829017915,
+      "A2": 0.6804367519111636,
+      "profile": "chi0.3_R50_stage34.npz",
+      "sha256": "e00c98ab0074a379d9a15b40d574d9be21afe1a0e22fd66a1dfa3c79032a6826",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.3_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125783e-16
+      },
+      "peak": 1.7870255460073348,
+      "A2": 0.6804335932839519,
+      "profile": "chi0.3_R50_stage33.npz",
+      "sha256": "86e08bb0a5b168465dc83b668b8890c2f1154ad1e221dbb3fe14ef2ada33b9ef",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999992,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 7.771561172376096e-16
+      },
+      "peak": 2.669777183507684,
+      "A2": 0.6185525719657123,
+      "profile": "chi0.6_baseline.npz",
+      "sha256": "20af31d179aa721aed181febd504ee8976e0460342d16cc71c07c7e4e2cc1015",
+      "identity": null,
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage18": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500626e-16
+      },
+      "peak": 1.4499401826025489,
+      "A2": 0.940292403599721,
+      "profile": "chi0.6_R20_stage18.npz",
+      "sha256": "a4a2e5f0444788f0e0063add44e96c7c78030d325ce6ca142c4953a5ac14209d",
+      "identity": "0eb363d2b21c1d391948f380244813840964a06edab792fffca167be74755cc1",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R20_stage19": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125783e-16
+      },
+      "peak": 1.4498656505205008,
+      "A2": 0.9410283204750154,
+      "profile": "chi0.6_R20_stage19.npz",
+      "sha256": "12c9d7b144444591e6899cf129ad548d01bb10db3de6021262ef1d9929b3e290",
+      "identity": "72f5f27761fe57f36ade3f0fccdd7851df5fb0fd2e93d1dc6527c3a677c75663",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage34": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125783e-16
+      },
+      "peak": 1.7827748307210989,
+      "A2": 0.6832074155892072,
+      "profile": "chi0.6_R50_stage34.npz",
+      "sha256": "45162270289b18e7774873534efd61edcc95b81dce9b5b94a51a74d0cbcf07e7",
+      "identity": "1671a94f59f43040277dc1d80b7e86ef3425d8d6b6726f5e373090ff7517b2d2",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    },
+    "chi0.6_R50_stage33": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999994,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 5.551115123125783e-16
+      },
+      "peak": 1.7827870484421062,
+      "A2": 0.6832039981382609,
+      "profile": "chi0.6_R50_stage33.npz",
+      "sha256": "c6de693df1f08a5b3718051f6f113262690f8f2157169d430e4ea443503cbd64",
+      "identity": "f3f4438f09432a2e03596bfa46b65fb0744ef0334f54910fd4cd730a89ab69e8",
+      "reference": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.6,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      }
+    }
+  },
+  "total_s": 75.73433650005609
+}

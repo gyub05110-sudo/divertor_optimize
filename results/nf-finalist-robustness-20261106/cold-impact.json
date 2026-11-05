@@ -1,0 +1,381 @@
+{
+  "evidence_sha256": "9486c261082aea2b86609a9432d16fd433d72e51fdebe115f8cf6d6fe0bf2edc",
+  "original_source_csv_sha256": "b67d58b3c9160ac061227e9a9a7bd4e212b2a3a13e32f2331ea39ec0aab2c42d",
+  "cases": {
+    "baseline": {
+      "npz_sha256": "49d066791a8edb9eb84d9a5c6614f856190b6b2fc474b68159482584bdcfa2f0",
+      "archived_original_ring_sha256": {
+        "2": "96b554280dd46093abb8bfd28914eac2cbf6e5b55098849954a776eedd06ccf6",
+        "1": "e9aaa960200aa1762cf2b9cdf1b014d45f250a3d1877d4445a0591f681301ee3",
+        "4": "639bedf3c4cf1059f5f21ce586ea433c2a6c00a4b77eb36a8f65ca5a54752124"
+      },
+      "donors": 1280,
+      "tagged_donors": 830,
+      "min_Tt_eV": 6.534349657037367e-18,
+      "max_nt_m3": 3.0716574940825645e+33,
+      "max_source_weight_abs_error": 3.903127820947816e-18,
+      "original_prescribed_MW": 1.0,
+      "withheld_at_all_off_MW": 0.01702038174781491,
+      "withheld_at_all_on_MW": 0.0,
+      "native_max_cell_power_error_MW": 1.9949319973733282e-17,
+      "native_max_q_error_MW_m2": 1.2595654894081973e-14,
+      "saved_continuous_peak": {
+        "full_MW_m2": 2.730756117101662,
+        "tagged_at_peak_MW_m2": 1.1007028530604791e-07,
+        "tagged_at_peak_pct": 4.030762198671664e-06,
+        "RZ_m": [
+          1.2252340385117417,
+          -1.3586815572829287
+        ]
+      },
+      "grids": {
+        "2": {
+          "rings": 3753,
+          "all_retained": {
+            "deposited_MW": 0.9999999999999997,
+            "peak_MW_m2": 2.70672971400715,
+            "hottest_ring": 2453,
+            "A2_m2": 0.6112926073289964
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521848,
+            "peak_MW_m2": 2.7067296031795505,
+            "hottest_ring": 2453,
+            "A2_m2": 0.5909882719560138
+          },
+          "tagged_at_full_peak_MW_m2": 1.108275996670742e-07,
+          "tagged_at_full_peak_pct": 4.0945203761405725e-06,
+          "max_tagged_any_ring_MW_m2": 0.03269097776436263,
+          "tagged_only_hottest_ring": 2248,
+          "peak_change_pct": -4.094520367203813e-06,
+          "A2_change_pct": -3.321541129329386,
+          "peak_bounds_MW_m2": [
+            2.7067296031795505,
+            2.70672971400715
+          ],
+          "conservative_A2_bounds_m2": [
+            0.5906608276869417,
+            0.6116314892246858
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.84297022087776e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0006462172338041833,
+          "exact_vs_saved_rebin_peak_relative": 2.5446777662585518e-05
+        },
+        "1": {
+          "rings": 7506,
+          "all_retained": {
+            "deposited_MW": 0.9999999999999997,
+            "peak_MW_m2": 2.722638589896888,
+            "hottest_ring": 4907,
+            "A2_m2": 0.610294379467226
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521847,
+            "peak_MW_m2": 2.7226384794393814,
+            "hottest_ring": 4907,
+            "A2_m2": 0.5900226827555471
+          },
+          "tagged_at_full_peak_MW_m2": 1.1045750688218614e-07,
+          "tagged_at_full_peak_pct": 4.057002177669471e-06,
+          "max_tagged_any_ring_MW_m2": 0.03273227398458406,
+          "tagged_only_hottest_ring": 4496,
+          "peak_change_pct": -4.057002167545676e-06,
+          "A2_change_pct": -3.321625987998711,
+          "peak_bounds_MW_m2": [
+            2.7226384794393814,
+            2.722638589896888
+          ],
+          "conservative_A2_bounds_m2": [
+            0.5896962910837105,
+            0.6106321719984641
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.865174681370263e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0011960816120325823,
+          "exact_vs_saved_rebin_peak_relative": 5.75835386820156e-05
+        },
+        "4": {
+          "rings": 1877,
+          "all_retained": {
+            "deposited_MW": 1.0,
+            "peak_MW_m2": 2.6267644565060757,
+            "hottest_ring": 1227,
+            "A2_m2": 0.6153646417082373
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521848,
+            "peak_MW_m2": 2.62676434691649,
+            "hottest_ring": 1227,
+            "A2_m2": 0.5949271824695936
+          },
+          "tagged_at_full_peak_MW_m2": 1.0958958565846525e-07,
+          "tagged_at_full_peak_pct": 4.17203702399084e-06,
+          "max_tagged_any_ring_MW_m2": 0.03266322915425013,
+          "tagged_only_hottest_ring": 1124,
+          "peak_change_pct": -4.172037026961561e-06,
+          "A2_change_pct": -3.3211949230475435,
+          "peak_bounds_MW_m2": [
+            2.62676434691649,
+            2.6267644565060757
+          ],
+          "conservative_A2_bounds_m2": [
+            0.5945954265483957,
+            0.6157079858620389
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.7985612998927536e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0006623536660518642,
+          "exact_vs_saved_rebin_peak_relative": 0.0002522193121643479
+        }
+      }
+    },
+    "stage18": {
+      "npz_sha256": "8f222608b535c58f07486fa859f3f4d0b3cfb4bfe2d6affc2fee94a98a22d731",
+      "archived_original_ring_sha256": {
+        "2": "399b22fbf94f09a123178322697270e6c7d6eb190752c7ab4e23cbc222b52689",
+        "1": "fe635d60576c9968bd26362f6bbb0ad95547675a6c75b357f1f3368dcd73a830",
+        "4": "56a0dad1ed045c79c0e60f2f3703f76651f3e34aced377ea2e72da134744f443"
+      },
+      "donors": 1280,
+      "tagged_donors": 830,
+      "min_Tt_eV": 6.534349657037367e-18,
+      "max_nt_m3": 3.0716574940825645e+33,
+      "max_source_weight_abs_error": 2.6020852139652106e-18,
+      "original_prescribed_MW": 1.0,
+      "withheld_at_all_off_MW": 0.01702038174781491,
+      "withheld_at_all_on_MW": 0.0,
+      "native_max_cell_power_error_MW": 8.673617379884035e-18,
+      "native_max_q_error_MW_m2": 4.982245349880981e-15,
+      "saved_continuous_peak": {
+        "full_MW_m2": 1.440295123480825,
+        "tagged_at_peak_MW_m2": 1.279513350315777e-07,
+        "tagged_at_peak_pct": 8.883688693075075e-06,
+        "RZ_m": [
+          1.278733913772442,
+          -1.419592494416446
+        ]
+      },
+      "grids": {
+        "2": {
+          "rings": 3775,
+          "all_retained": {
+            "deposited_MW": 1.0,
+            "peak_MW_m2": 1.439498124237913,
+            "hottest_ring": 2436,
+            "A2_m2": 0.9356932227865681
+          },
+          "all_withheld": {
+            "deposited_MW": 0.982979618252185,
+            "peak_MW_m2": 1.4394979959238687,
+            "hottest_ring": 2436,
+            "A2_m2": 0.9048680778734317
+          },
+          "tagged_at_full_peak_MW_m2": 1.2831404438853853e-07,
+          "tagged_at_full_peak_pct": 8.91380420912111e-06,
+          "max_tagged_any_ring_MW_m2": 0.03243134804712356,
+          "tagged_only_hottest_ring": 2248,
+          "peak_change_pct": -8.913804205867848e-06,
+          "A2_change_pct": -3.294364452201193,
+          "peak_bounds_MW_m2": [
+            1.4394979959238687,
+            1.439498124237913
+          ],
+          "conservative_A2_bounds_m2": [
+            0.9041125752314658,
+            0.9364751151318922
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.021405182655144e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0003449185851783747,
+          "exact_vs_saved_rebin_peak_relative": 1.4154201573468583e-05
+        },
+        "1": {
+          "rings": 7550,
+          "all_retained": {
+            "deposited_MW": 1.0,
+            "peak_MW_m2": 1.4401437840886349,
+            "hottest_ring": 4873,
+            "A2_m2": 0.9348961152520441
+          },
+          "all_withheld": {
+            "deposited_MW": 0.982979618252185,
+            "peak_MW_m2": 1.4401436562314969,
+            "hottest_ring": 4873,
+            "A2_m2": 0.9040966194141861
+          },
+          "tagged_at_full_peak_MW_m2": 1.278571377599235e-07,
+          "tagged_at_full_peak_pct": 8.878081423018136e-06,
+          "max_tagged_any_ring_MW_m2": 0.03243770804520728,
+          "tagged_only_hottest_ring": 4496,
+          "peak_change_pct": -8.878081436680674e-06,
+          "A2_change_pct": -3.2944297591347427,
+          "peak_bounds_MW_m2": [
+            1.4401436562314969,
+            1.4401437840886349
+          ],
+          "conservative_A2_bounds_m2": [
+            0.9033423709292174,
+            0.9356767096326736
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.021405182655144e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0005348627279289872,
+          "exact_vs_saved_rebin_peak_relative": 9.154416449108638e-06
+        },
+        "4": {
+          "rings": 1888,
+          "all_retained": {
+            "deposited_MW": 0.9999999999999998,
+            "peak_MW_m2": 1.4373457012900062,
+            "hottest_ring": 1218,
+            "A2_m2": 0.9388057483973655
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521849,
+            "peak_MW_m2": 1.4373455727047713,
+            "hottest_ring": 1218,
+            "A2_m2": 0.907880454710199
+          },
+          "tagged_at_full_peak_MW_m2": 1.2858523488152793e-07,
+          "tagged_at_full_peak_pct": 8.946020067832235e-06,
+          "max_tagged_any_ring_MW_m2": 0.0323914903302146,
+          "tagged_only_hottest_ring": 1124,
+          "peak_change_pct": -8.946020069178218e-06,
+          "A2_change_pct": -3.2941099625730996,
+          "peak_bounds_MW_m2": [
+            1.4373455727047713,
+            1.4373457012900062
+          ],
+          "conservative_A2_bounds_m2": [
+            0.907120049772183,
+            0.9395927142759154
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 1.3433698597964394e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.00023333962718028272,
+          "exact_vs_saved_rebin_peak_relative": 1.2510373947449693e-05
+        }
+      }
+    },
+    "stage34": {
+      "npz_sha256": "a5900c034904642b4aba38866352e74c39e79e6fd488f5dc84c612acad60bc8c",
+      "archived_original_ring_sha256": {
+        "2": "6934ff6c6e1d0f792d3cfd489aa34a3aa319b8a02914c9eb5891af3ed71d2c7e",
+        "1": "c30e4e7c6266866252e04da2b2f324a837834b7557617546509f44141dfe9182",
+        "4": "b6c4322ed8adfa1402bd09306e9ede1ba8230b066f253ce321b56b096f08ca54"
+      },
+      "donors": 1280,
+      "tagged_donors": 830,
+      "min_Tt_eV": 6.534349657037367e-18,
+      "max_nt_m3": 3.0716574940825645e+33,
+      "max_source_weight_abs_error": 2.6020852139652106e-18,
+      "original_prescribed_MW": 1.0,
+      "withheld_at_all_off_MW": 0.01702038174781491,
+      "withheld_at_all_on_MW": 0.0,
+      "native_max_cell_power_error_MW": 1.1709383462843448e-17,
+      "native_max_q_error_MW_m2": 7.581709885600347e-15,
+      "saved_continuous_peak": {
+        "full_MW_m2": 1.7869404891484175,
+        "tagged_at_peak_MW_m2": 1.0326740823161878e-07,
+        "tagged_at_peak_pct": 5.7790065678590005e-06,
+        "RZ_m": [
+          1.2417605955532935,
+          -1.3969734409917176
+        ]
+      },
+      "grids": {
+        "2": {
+          "rings": 3772,
+          "all_retained": {
+            "deposited_MW": 0.9999999999999999,
+            "peak_MW_m2": 1.7826881819608889,
+            "hottest_ring": 2459,
+            "A2_m2": 0.6812917117320669
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521849,
+            "peak_MW_m2": 1.7826880786347925,
+            "hottest_ring": 2459,
+            "A2_m2": 0.6587027022245258
+          },
+          "tagged_at_full_peak_MW_m2": 1.0332609626399619e-07,
+          "tagged_at_full_peak_pct": 5.796083538868892e-06,
+          "max_tagged_any_ring_MW_m2": 0.0327917998932329,
+          "tagged_only_hottest_ring": 2248,
+          "peak_change_pct": -5.796083546449893e-06,
+          "A2_change_pct": -3.3156149001302926,
+          "peak_bounds_MW_m2": [
+            1.7826880786347925,
+            1.7826881819608889
+          ],
+          "conservative_A2_bounds_m2": [
+            0.6582973874103117,
+            0.6817111841906355
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 2.4868995751603507e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.0005773324891268069,
+          "exact_vs_saved_rebin_peak_relative": 4.814170115419181e-05
+        },
+        "1": {
+          "rings": 7543,
+          "all_retained": {
+            "deposited_MW": 0.9999999999999999,
+            "peak_MW_m2": 1.7856076912060377,
+            "hottest_ring": 4918,
+            "A2_m2": 0.6805803768627608
+          },
+          "all_withheld": {
+            "deposited_MW": 0.9829796182521849,
+            "peak_MW_m2": 1.7856075879893125,
+            "hottest_ring": 4918,
+            "A2_m2": 0.6580145468081545
+          },
+          "tagged_at_full_peak_MW_m2": 1.0321672513034065e-07,
+          "tagged_at_full_peak_pct": 5.780481661155136e-06,
+          "max_tagged_any_ring_MW_m2": 0.03283129195594459,
+          "tagged_only_hottest_ring": 4497,
+          "peak_change_pct": -5.780481660000447e-06,
+          "A2_change_pct": -3.3156745069005567,
+          "peak_bounds_MW_m2": [
+            1.7856075879893125,
+            1.7856076912060377
+          ],
+          "conservative_A2_bounds_m2": [
+            0.6576100608540447,
+            0.6809989915091461
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 2.5091040356528538e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.000990241271274339,
+          "exact_vs_saved_rebin_peak_relative": 3.635106881505479e-05
+        },
+        "4": {
+          "rings": 1886,
+          "all_retained": {
+            "deposited_MW": 1.0,
+            "peak_MW_m2": 1.7769562078417303,
+            "hottest_ring": 1229,
+            "A2_m2": 0.6847334800917694
+          },
+          "all_withheld": {
+            "deposited_MW": 0.982979618252185,
+            "peak_MW_m2": 1.7769561037948485,
+            "hottest_ring": 1229,
+            "A2_m2": 0.6620323431193054
+          },
+          "tagged_at_full_peak_MW_m2": 1.0404688185514264e-07,
+          "tagged_at_full_peak_pct": 5.855343052123762e-06,
+          "max_tagged_any_ring_MW_m2": 0.03278087055715502,
+          "tagged_only_hottest_ring": 1124,
+          "peak_change_pct": -5.85534304375912e-06,
+          "A2_change_pct": -3.3153245215089444,
+          "peak_bounds_MW_m2": [
+            1.7769561037948485,
+            1.7769562078417303
+          ],
+          "conservative_A2_bounds_m2": [
+            0.6616229924048351,
+            0.6851571294245691
+          ],
+          "native_rebin_vs_saved_max_abs_MW": 2.475797344914099e-14,
+          "exact_vs_saved_rebin_max_abs_MW_m2": 0.000247451396291811,
+          "exact_vs_saved_rebin_peak_relative": 2.1189463627502292e-05
+        }
+      }
+    }
+  }
+}

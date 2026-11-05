@@ -1,0 +1,411 @@
+{
+  "time_ms": 1600,
+  "preflight_sha256": "f8679707b9f0e55e70ddecdd9fcda767156a5f7ab9f2d3149c72cb3e55c755ae",
+  "status": "measured",
+  "reason": null,
+  "coarse": {
+    "baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 1.0,
+        "deposited": 0.9999999999999996,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 4.440892098500626e-16
+      },
+      "peak": 1.9043120407732441,
+      "A2": 0.8165435619736989
+    },
+    "prep_s": 13.621098699979484,
+    "rows": [
+      {
+        "i": 0,
+        "id": "27f796f84dae76192d6907a68b789ae467279a5b336fb12925f2f6dec3999bea",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 2.166760375534937,
+        "A2": 0.7818493615675252
+      },
+      {
+        "i": 1,
+        "id": "2021fd2fb478c638f37a694d34ca8124bfc6d8e5f6ac42edefeb11adaa32e266",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999998,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "peak": 2.1674054356003887,
+        "A2": 0.8210107636559276
+      },
+      {
+        "i": 2,
+        "id": "1edb98126a442f3b1314f9acab1290f15503fec6d9d47f3b9e817d2999e87bb3",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999998,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "peak": 2.0527776535697644,
+        "A2": 0.7712249669408134
+      },
+      {
+        "i": 3,
+        "id": "a4b6299626deb727069184238de90fec504fab70a73c97386223e05c416c4b05",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999997,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 3.3306690738754696e-16
+        },
+        "peak": 2.166504147769669,
+        "A2": 0.8149595152733378
+      },
+      {
+        "i": 4,
+        "id": "13db32daf477c4278c4d53baa53f8fb393180327b862365640459c6e91b96879",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 2.1647306794658476,
+        "A2": 0.8077297738257646
+      },
+      {
+        "i": 5,
+        "id": "646c31247165987ded170679a9ff8bea359f7962e3fa46402aeb8229c5db77d4",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 1.8324233698012382,
+        "A2": 0.7714495504175325
+      },
+      {
+        "i": 6,
+        "id": "c7ff5875ac4f3edb02763a477f6e68f2617691afcb3b73546f9caf51e37383d2",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999997,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 3.3306690738754696e-16
+        },
+        "peak": 1.703142031246054,
+        "A2": 0.7922233697621452
+      },
+      {
+        "i": 7,
+        "id": "c4cc2af5ae4d3bd80342e8f0ce046261031af2274c49013c513f60fac0ca77c4",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 1.8920426122439773,
+        "A2": 0.7631536223946189
+      },
+      {
+        "i": 8,
+        "id": "cbffd7a8c9815a30bba68a84f7e0682533097ef2821b3b54bafcb5179e4d4328",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 2.1172408102444207,
+        "A2": 0.7568854149935362
+      },
+      {
+        "i": 9,
+        "id": "aef7a7773822ed40716c714e18d926f8894cf0f01453f9f349df62113bafd475",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999998,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "peak": 2.1216803368434793,
+        "A2": 0.7886241580161276
+      },
+      {
+        "i": 10,
+        "id": "410f121ef9914017705942e247224f53b619279757d2dcf67edb969614b5dab8",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999998,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.220446049250313e-16
+        },
+        "peak": 2.1568427213607055,
+        "A2": 0.7967382760782346
+      },
+      {
+        "i": 11,
+        "id": "1bb9d36bfb73f917d5f73954ed1a594b3b2af3af100f32f5352ad0da94135508",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 4.440892098500626e-16
+        },
+        "peak": 2.051066369648907,
+        "A2": 0.748381026660032
+      }
+    ]
+  },
+  "fine": {
+    "baseline": {
+      "eligible": true,
+      "errors": [],
+      "ledger": {
+        "prescribed": 0.9999999999999998,
+        "deposited": 0.9999999999999988,
+        "unhit": 0.0,
+        "unresolved": 0.0,
+        "balance_error": 9.99200722162641e-16
+      },
+      "peak": 1.9043535750614056,
+      "A2": 0.8164050721621029
+    },
+    "prep_s": 167.39165659993887,
+    "rows": [
+      {
+        "i": 0,
+        "id": "27f796f84dae76192d6907a68b789ae467279a5b336fb12925f2f6dec3999bea",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251567e-15
+        },
+        "peak": 2.1672476787974038,
+        "A2": 0.7816377149309258
+      },
+      {
+        "i": 1,
+        "id": "2021fd2fb478c638f37a694d34ca8124bfc6d8e5f6ac42edefeb11adaa32e266",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999986,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.2212453270876724e-15
+        },
+        "peak": 2.1679048869495974,
+        "A2": 0.8207778987459458
+      },
+      {
+        "i": 2,
+        "id": "1edb98126a442f3b1314f9acab1290f15503fec6d9d47f3b9e817d2999e87bb3",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999986,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.2212453270876724e-15
+        },
+        "peak": 2.0530500514781806,
+        "A2": 0.7710234724567038
+      },
+      {
+        "i": 3,
+        "id": "a4b6299626deb727069184238de90fec504fab70a73c97386223e05c416c4b05",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999988,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 9.99200722162641e-16
+        },
+        "peak": 2.1669959338688427,
+        "A2": 0.8147326657966801
+      },
+      {
+        "i": 4,
+        "id": "13db32daf477c4278c4d53baa53f8fb393180327b862365640459c6e91b96879",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999984,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.3322676295501882e-15
+        },
+        "peak": 2.1652070919932065,
+        "A2": 0.8075083229021272
+      },
+      {
+        "i": 5,
+        "id": "646c31247165987ded170679a9ff8bea359f7962e3fa46402aeb8229c5db77d4",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999982,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.5543122344752196e-15
+        },
+        "peak": 1.8326437663350816,
+        "A2": 0.7712798330549289
+      },
+      {
+        "i": 6,
+        "id": "c7ff5875ac4f3edb02763a477f6e68f2617691afcb3b73546f9caf51e37383d2",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999983,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.4432899320127039e-15
+        },
+        "peak": 1.7031871186176213,
+        "A2": 0.7920834783144102
+      },
+      {
+        "i": 7,
+        "id": "c4cc2af5ae4d3bd80342e8f0ce046261031af2274c49013c513f60fac0ca77c4",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251567e-15
+        },
+        "peak": 1.8921784163435262,
+        "A2": 0.7629789710342888
+      },
+      {
+        "i": 8,
+        "id": "cbffd7a8c9815a30bba68a84f7e0682533097ef2821b3b54bafcb5179e4d4328",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999989,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 8.881784197001254e-16
+        },
+        "peak": 2.1176793739493434,
+        "A2": 0.756677435239218
+      },
+      {
+        "i": 9,
+        "id": "aef7a7773822ed40716c714e18d926f8894cf0f01453f9f349df62113bafd475",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251567e-15
+        },
+        "peak": 2.122032244431176,
+        "A2": 0.7883928442447761
+      },
+      {
+        "i": 10,
+        "id": "410f121ef9914017705942e247224f53b619279757d2dcf67edb969614b5dab8",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.1102230246251567e-15
+        },
+        "peak": 2.157269382265709,
+        "A2": 0.7965318242631501
+      },
+      {
+        "i": 11,
+        "id": "1bb9d36bfb73f917d5f73954ed1a594b3b2af3af100f32f5352ad0da94135508",
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999984,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.3322676295501882e-15
+        },
+        "peak": 2.05142708827369,
+        "A2": 0.7481836805205562
+      }
+    ]
+  },
+  "best": 1.7031871186176213,
+  "selected_peak": 1.7031871186176213,
+  "baseline_peak": 1.9043535750614056,
+  "selected_excess_fraction": 0.0,
+  "shortlisted": [
+    2,
+    6,
+    11
+  ]
+}
