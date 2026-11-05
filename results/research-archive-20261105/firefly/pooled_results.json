@@ -1,0 +1,163 @@
+{
+  "OMP": {
+    "n_seeds": 6,
+    "histories": 6144,
+    "same_bin_reference_peak": 2.7207675443997656,
+    "pooled_peak": 1.7128948642759418,
+    "single_seed_peaks": [
+      1.7868622036719652,
+      1.8559067026044478,
+      1.8336312940187285,
+      1.7410551750451946,
+      1.9748183625255935,
+      1.9433654539227823
+    ],
+    "pooled_rel_peak_change": -0.37043689461760787,
+    "half_abs_profile_diff_MW": 0.18823863935379798,
+    "component": "68",
+    "reference_component_MW": 0.9642769946838695,
+    "pooled_component_MW": 0.8417429841844567,
+    "single_seed_component_MW": [
+      0.8309055946187532,
+      0.8404209056223084,
+      0.8439558286311236,
+      0.8520352446568954,
+      0.8469652947891484,
+      0.8361750367885117
+    ],
+    "other_divertor_segments": [
+      "69",
+      "70"
+    ],
+    "pooled_other_divertor_MW": 0.10672103276262791,
+    "reference_A2": 0.6113212979275189,
+    "pooled_A2": 0.9161303381603858,
+    "uncapped_fine_component_MW": 0.47975472563532195,
+    "capped_fine_component_MW": 0.8431169861480868,
+    "chi_zero_component_MW": 0.9638671875,
+    "chi_zero_unaccounted_MW": 1.1102230246251565e-16,
+    "cases": {
+      "fine": {
+        "peak": 2.0200570359670373,
+        "component_MW": 0.8431169861480868,
+        "wall_MW": 0.9999999999999998,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "finer": {
+        "peak": 1.7868622036719652,
+        "component_MW": 0.8309055946187532,
+        "wall_MW": 0.9999999999999994,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "halfstep": {
+        "peak": 1.874285583138211,
+        "component_MW": 0.848648335827175,
+        "wall_MW": 0.9999999999999998,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "temperature": {
+        "peak": 1.8924862112355225,
+        "component_MW": 0.8607339127544799,
+        "wall_MW": 1.0000000000000007,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "zero_chi": {
+        "peak": 2.8036026342439717,
+        "component_MW": 0.9638671875,
+        "wall_MW": 0.9999999999999999,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      }
+    },
+    "wall_MW_range": [
+      0.999999999999999,
+      1.0000000000000002
+    ],
+    "max_above_cut_MW": 0.0,
+    "max_cap_MW": 0.0
+  },
+  "IMP": {
+    "n_seeds": 6,
+    "histories": 6144,
+    "same_bin_reference_peak": 2.5344210671198044,
+    "pooled_peak": 1.447757802581526,
+    "single_seed_peaks": [
+      1.5878714623640329,
+      1.719646040723585,
+      1.648484319362488,
+      1.4915591349284485,
+      1.7815735410551035,
+      1.6327377816257698
+    ],
+    "pooled_rel_peak_change": -0.4287619285666673,
+    "half_abs_profile_diff_MW": 0.2046073229675878,
+    "component": "69",
+    "reference_component_MW": 0.8796524969423273,
+    "pooled_component_MW": 0.7060211513933522,
+    "single_seed_component_MW": [
+      0.697402153158009,
+      0.7171272213916464,
+      0.707188969922275,
+      0.7063171226180274,
+      0.7021071957255994,
+      0.7059842455445562
+    ],
+    "other_divertor_segments": [
+      "68"
+    ],
+    "pooled_other_divertor_MW": 0.142173809225216,
+    "reference_A2": 0.6866396092329888,
+    "pooled_A2": 1.122333647847657,
+    "uncapped_fine_component_MW": 0.44464972037299416,
+    "capped_fine_component_MW": 0.6953735020681927,
+    "chi_zero_component_MW": 0.8798828125,
+    "chi_zero_unaccounted_MW": 0.0009765625,
+    "cases": {
+      "fine": {
+        "peak": 1.5604685770532647,
+        "component_MW": 0.6953735020681927,
+        "wall_MW": 1.0000000000000002,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "finer": {
+        "peak": 1.5878714623640329,
+        "component_MW": 0.697402153158009,
+        "wall_MW": 0.9999999999999998,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "halfstep": {
+        "peak": 1.8685161172434077,
+        "component_MW": 0.7196377116387201,
+        "wall_MW": 1.0000000000000007,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "temperature": {
+        "peak": 1.8591413235723897,
+        "component_MW": 0.7397932332448426,
+        "wall_MW": 0.9999999999999991,
+        "censored_fraction": 0.0,
+        "domain_loss_fraction": 0.0
+      },
+      "zero_chi": {
+        "peak": 2.6398221080049584,
+        "component_MW": 0.8798828125,
+        "wall_MW": 0.9990234375,
+        "censored_fraction": 0.0009765625,
+        "domain_loss_fraction": 0.0
+      }
+    },
+    "wall_MW_range": [
+      0.9999999999999993,
+      0.9999999999999998
+    ],
+    "max_above_cut_MW": 0.0,
+    "max_cap_MW": 0.0
+  }
+}

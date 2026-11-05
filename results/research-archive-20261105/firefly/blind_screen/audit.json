@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "native_runs": 246,
+  "histories": 251904,
+  "selections": 80,
+  "candidate_replays": 80,
+  "max_replay_ratio_abs_error": 0.0,
+  "max_coarse_vs_export_distance_m": 1.907930249828551e-05,
+  "max_native_wall_distance_m": 4.440892098500626e-16,
+  "max_independent_peak_error": 7.882583474838611e-13,
+  "max_independent_A2_error": 1.170175067954915e-13,
+  "max_power_balance_error": 3.3306690738754696e-16,
+  "parent_inputs": {
+    "IMP.source": "31808228c00ec6009dc4701073ecc964a53ace5e77040554f20c4eb556bfa3a8",
+    "IMP.csv": "29c77854c3c1639ed0806d4f803f71ebe879ff53ac045bf14528b61cc0551142",
+    "OMP.source": "6478fd127d12169e5c4bc5c53871bbd8d205b15b53df38590cdcc7e6fb556478",
+    "OMP.csv": "b67d58b3c9160ac061227e9a9a7bd4e212b2a3a13e32f2331ea39ec0aab2c42d",
+    "common_rank/metrics.py": "406833a9b8310b76964e125e7d1eecfd52bbd36a940f271bef4d9130c1f4a670",
+    "firefly-midplane.patch": "0f27371417befd100bb021f2f0d261957122817031f2a0da5ec99e616efa473f"
+  },
+  "manifest_sha256": "f2c5246f6a848a7f5fa12993df687824feb9ef0011e0572d134e6d1be34ff3bc"
+}

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-05T06:48:50.208981+00:00",
+  "hashes": {
+    "PROTOCOL.md": "3d87e06820b90d95ef8e6a120b1de0d08b39223fa2d466a471b1c5185305081c",
+    "frame.py": "c8648fda12b9f63f124f29af9b1814e240e85e0c4f00ddeebdd94c046a4a59d9",
+    "select_panel.py": "20a65d49d3ad9633ff166fe0724c74bb4974fa36b0d314c298430a15bd5784f0",
+    "panels.json": "3140ddc35f6d448d0990b4de24c8a1e7fd78c7775c23fc2ef637e3c93e142313",
+    "candidates.json": "e7c1efc9b936e090769d687310e5ffaabba0f71f9cb538cec5d07174c1e3130a",
+    "jobs.txt": "3ae765ff6aa52bb671e110d75939e18bff55a57895248a8c3d73c3c2e4db206f",
+    "meshpath.txt": "a900b99ad713f1189918386a2959cf6ce8ac67c64dbd31d502776b9bc24a0332",
+    "walls/ref.wall": "2d4e72952cc115549ebbd410d1abaa72be5998b4e9bf193371704164a94dbdbf"
+  },
+  "n": 80,
+  "jobs": 246,
+  "minimum_casing_clearance_m": 0.011520106756306731,
+  "reused_mesh": false,
+  "seeds": [
+    32027,
+    51749,
+    83077
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "channel": "TS_core_r+1_11",
+    "chord_RZ_m": [
+      1.9399999380111694,
+      0.7175999879837036
+    ],
+    "x_OMP_mm": 2.1973242374282442,
+    "TS_Te_eV": 15.042284965515137,
+    "TS_ne_m3": 4.4845618584134615e+18,
+    "original_Tu_eV": 131.33893216506655,
+    "mapped_original_Tu_range_at_adjacent_EFIT_eV": [
+      131.33893216506655,
+      166.42200159042923
+    ],
+    "nominal_background_eV": 100.0
+  },
+  {
+    "channel": "TS_core_r+1_10",
+    "chord_RZ_m": [
+      1.9399999380111694,
+      0.723099946975708
+    ],
+    "x_OMP_mm": 4.548554044395914,
+    "TS_Te_eV": 22.199138641357422,
+    "TS_ne_m3": 4.5116266120090747e+18,
+    "original_Tu_eV": 78.16989524528137,
+    "mapped_original_Tu_range_at_adjacent_EFIT_eV": [
+      78.16989524528137,
+      98.37374870020267
+    ],
+    "nominal_background_eV": 100.0
+  },
+  {
+    "channel": "TS_core_r+1_9",
+    "chord_RZ_m": [
+      1.9399999380111694,
+      0.7317999601364136
+    ],
+    "x_OMP_mm": 8.239997413448386,
+    "TS_Te_eV": 58.81743621826172,
+    "TS_ne_m3": 3.768851256987091e+18,
+    "original_Tu_eV": 37.781289344521106,
+    "mapped_original_Tu_range_at_adjacent_EFIT_eV": [
+      37.781289344521106,
+      45.56948709799313
+    ],
+    "nominal_background_eV": 100.0
+  }
+]

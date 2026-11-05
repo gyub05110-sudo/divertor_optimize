@@ -1,0 +1,11 @@
+{
+  "completed_heat_cases": 86,
+  "total_heat_histories": 88064,
+  "primary_history_count": 36864,
+  "direct_mesh_traces": 6,
+  "prior_hashes_rechecked": 161,
+  "checksums": 187,
+  "checksums_sha256": "a4bc6bc9cd01e5f6fa04d8f3d3d760bc212df0e9ec7862572ffd45e5fd1c0cf9",
+  "independent_rebin_and_conservation": true,
+  "passed": true
+}
