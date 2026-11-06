@@ -1,0 +1,194 @@
+{
+  "case_id": "deb842cf1e",
+  "seed": 20611,
+  "status": "completed",
+  "arm_order": [
+    "direct",
+    "screen"
+  ],
+  "shared_prefix": {
+    "length": 5,
+    "equal": true,
+    "informative": true
+  },
+  "baseline_equal": true,
+  "arms": {
+    "direct": {
+      "stop": "deadline",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.2204460492503136e-16
+        },
+        "peak": 10.34052750061192,
+        "A2": 0.17945553775132683
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 5.9971679310897255,
+        "A2": 0.29909150591883804
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 5.9971679310897255,
+        "A2": 0.29909150591883804
+      },
+      "first_5pct_s": 145.6387254,
+      "coarse_ids": [],
+      "fine_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "eligible_fine": 4,
+      "completed_draws": 5,
+      "rejected": {},
+      "startup_s": 1.0408994,
+      "elapsed_s": 203.5718747
+    },
+    "screen": {
+      "stop": "candidate_limit",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.2204460492503136e-16
+        },
+        "peak": 10.34052750061192,
+        "A2": 0.17945553775132683
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 5.9971679310897255,
+        "A2": 0.29909150591883804
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 5.9971679310897255,
+        "A2": 0.29909150591883804
+      },
+      "first_5pct_s": 160.090374,
+      "coarse_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fine_ids": [
+        1,
+        4,
+        9
+      ],
+      "eligible_fine": 3,
+      "completed_draws": 12,
+      "rejected": {},
+      "startup_s": 1.0492162,
+      "elapsed_s": 197.990691
+    }
+  },
+  "audits": {
+    "direct": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 129.38236640000002,
+        "measure_original": 0.00011280000001079316,
+        "build_fine": 0.0017314999999769043,
+        "draw": 0.160989700000016,
+        "fine": 72.9855464
+      },
+      "late_events": [
+        {
+          "stage": "fine",
+          "start_s": 188.9387024,
+          "i": 4,
+          "id": "d9d83309df1a269c7eca5a1fe74715c5fde97cf2f899da339f526aafcae7f943",
+          "end_s": 203.571864,
+          "status": "late_discarded"
+        }
+      ],
+      "eligible_fine": 4
+    },
+    "screen": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 128.7140646,
+        "measure_original": 0.00011910000000625587,
+        "build_fine": 0.0017761999999947875,
+        "prepare_coarse": 10.844365600000003,
+        "build_coarse": 0.0015755000000012842,
+        "draw": 0.4020069000000319,
+        "coarse": 13.588297299999994,
+        "fine": 43.3888724
+      },
+      "late_events": [],
+      "eligible_fine": 3
+    }
+  },
+  "errors": {},
+  "processes": {
+    "direct": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2793833350137300,
+      "exit_observed_ns": 2794037393983100,
+      "elapsed_s": 204.0438458,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "screen": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2794037415555900,
+      "exit_observed_ns": 2794235876023100,
+      "elapsed_s": 198.4604672,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}

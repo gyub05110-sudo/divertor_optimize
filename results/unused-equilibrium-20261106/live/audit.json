@@ -1,0 +1,2086 @@
+{
+  "schema": "unused-equilibrium-live-audit.v1",
+  "pairs": [
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20611,
+      "status": "completed",
+      "arm_order": [
+        "direct",
+        "screen"
+      ],
+      "shared_prefix": {
+        "length": 5,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 5.9971679310897255,
+            "A2": 0.29909150591883804
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 5.9971679310897255,
+            "A2": 0.29909150591883804
+          },
+          "first_5pct_s": 145.6387254,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "eligible_fine": 4,
+          "completed_draws": 5,
+          "rejected": {},
+          "startup_s": 1.0408994,
+          "elapsed_s": 203.5718747
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 5.9971679310897255,
+            "A2": 0.29909150591883804
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 5.9971679310897255,
+            "A2": 0.29909150591883804
+          },
+          "first_5pct_s": 160.090374,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            1,
+            4,
+            9
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0492162,
+          "elapsed_s": 197.990691
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 129.38236640000002,
+            "measure_original": 0.00011280000001079316,
+            "build_fine": 0.0017314999999769043,
+            "draw": 0.160989700000016,
+            "fine": 72.9855464
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 188.9387024,
+              "i": 4,
+              "id": "d9d83309df1a269c7eca5a1fe74715c5fde97cf2f899da339f526aafcae7f943",
+              "end_s": 203.571864,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 4
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 128.7140646,
+            "measure_original": 0.00011910000000625587,
+            "build_fine": 0.0017761999999947875,
+            "prepare_coarse": 10.844365600000003,
+            "build_coarse": 0.0015755000000012842,
+            "draw": 0.4020069000000319,
+            "coarse": 13.588297299999994,
+            "fine": 43.3888724
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2793833350137300,
+          "exit_observed_ns": 2794037393983100,
+          "elapsed_s": 204.0438458,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\direct-cache-8shmrw0v\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2794037415555900,
+          "exit_observed_ns": 2794235876023100,
+          "elapsed_s": 198.4604672,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20611\\screen-cache-7lip4cvk\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20627,
+      "status": "completed",
+      "arm_order": [
+        "screen",
+        "direct"
+      ],
+      "shared_prefix": {
+        "length": 5,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "original_wall",
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "best_eligible_new": {
+            "i": 2,
+            "id": "48dcfbcd7f39726d020921ca5aa3afa1bd5ee6f27fdeaca4307fd20051db15e3",
+            "peak": 10.433066617532054,
+            "A2": 0.1763453511407873
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "eligible_fine": 4,
+          "completed_draws": 5,
+          "rejected": {},
+          "startup_s": 1.0311434,
+          "elapsed_s": 201.5013502
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 10,
+            "id": "499edd3e9bf09eead90eb019a07b916ef39d138031f6ac084239358f38208123",
+            "peak": 5.052140740075835,
+            "A2": 0.3453035583231053
+          },
+          "best_eligible_new": {
+            "i": 10,
+            "id": "499edd3e9bf09eead90eb019a07b916ef39d138031f6ac084239358f38208123",
+            "peak": 5.052140740075835,
+            "A2": 0.3453035583231053
+          },
+          "first_5pct_s": 177.6973786,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            2,
+            4,
+            10
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0386942,
+          "elapsed_s": 196.7053033
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 128.00694800000002,
+            "measure_original": 0.00010980000001836743,
+            "build_fine": 0.002068299999990586,
+            "draw": 0.16116949999997132,
+            "fine": 72.29957679999998
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 187.2535206,
+              "i": 4,
+              "id": "b412a6b81e6f48defa9952aa09a1cd8df60314ea65d9603ef3e75343963aad26",
+              "end_s": 201.5013405,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 4
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 127.6958876,
+            "measure_original": 0.00011289999997643463,
+            "build_fine": 0.0017195000000072014,
+            "prepare_coarse": 11.009108400000002,
+            "build_coarse": 0.001575199999990673,
+            "draw": 0.385672699999958,
+            "coarse": 13.414595399999968,
+            "fine": 43.157560399999994
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2794433158435300,
+          "exit_observed_ns": 2794635077224700,
+          "elapsed_s": 201.9187894,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\direct-cache-50978wcd\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2794235991170800,
+          "exit_observed_ns": 2794433137762900,
+          "elapsed_s": 197.1465921,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20627\\screen-cache-gtam56nx\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20639,
+      "status": "completed",
+      "arm_order": [
+        "direct",
+        "screen"
+      ],
+      "shared_prefix": {
+        "length": 5,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "original_wall",
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "best_eligible_new": {
+            "i": 0,
+            "id": "a3d6d7b4816e2134639d2660b22f6f46f5aa7a0bbe60db42739d0119254fd971",
+            "peak": 10.37479796733649,
+            "A2": 0.1790152300504788
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "eligible_fine": 4,
+          "completed_draws": 5,
+          "rejected": {},
+          "startup_s": 1.0141275,
+          "elapsed_s": 204.8194069
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 0.9999999999999998,
+              "deposited": 0.9999999999999996,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 2.2204460492503136e-16
+            },
+            "peak": 10.34052750061192,
+            "A2": 0.17945553775132683
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 5,
+            "id": "789e45c335bcab3f86b1a2036470139f39a24a088c429f27f642eb851f8eeda1",
+            "peak": 8.789562976246213,
+            "A2": 0.20985072814671382
+          },
+          "best_eligible_new": {
+            "i": 5,
+            "id": "789e45c335bcab3f86b1a2036470139f39a24a088c429f27f642eb851f8eeda1",
+            "peak": 8.789562976246213,
+            "A2": 0.20985072814671382
+          },
+          "first_5pct_s": 177.3551942,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            0,
+            5,
+            11
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0314691,
+          "elapsed_s": 196.4348944
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 128.605592,
+            "measure_original": 0.00015259999997851992,
+            "build_fine": 0.0017281999999738673,
+            "draw": 0.15918329999999514,
+            "fine": 75.03839150000007
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 189.9153864,
+              "i": 4,
+              "id": "861a1e874d7184b4fc11ff214cc2c6dfb00224a6e9f700ea1132fefb852f065f",
+              "end_s": 204.8193974,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 4
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 127.73097,
+            "measure_original": 0.00014849999999455576,
+            "build_fine": 0.001724200000012388,
+            "prepare_coarse": 10.726382699999988,
+            "build_coarse": 0.0019785000000069886,
+            "draw": 0.39248839999999063,
+            "coarse": 13.327690699999977,
+            "fine": 43.22168350000001
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2794635175252400,
+          "exit_observed_ns": 2794840447296100,
+          "elapsed_s": 205.2720437,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2794840467568300,
+          "exit_observed_ns": 2795037360643400,
+          "elapsed_s": 196.8930751,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20611,
+      "status": "completed",
+      "arm_order": [
+        "screen",
+        "direct"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "original_wall",
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 4.9804431497908,
+            "A2": 0.3491519968508928
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0038247,
+          "elapsed_s": 212.0419606
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "original_wall",
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+            "peak": 4.9804431497908,
+            "A2": 0.3491519968508928
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            1,
+            6,
+            8
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0809406,
+          "elapsed_s": 190.5194865
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 122.4076664,
+            "measure_original": 0.00016000000000815362,
+            "build_fine": 0.0023145999999911737,
+            "draw": 0.19740820000001236,
+            "fine": 88.43035129999997
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 197.500976,
+              "i": 5,
+              "id": "e72d2142ddbd2f5de2df0ef07e0d6e68038fa9f9c5f29fc7c1d96dfe941b6a9a",
+              "end_s": 212.0419505,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 121.9950094,
+            "measure_original": 0.00011779999999816937,
+            "build_fine": 0.0017644999999930633,
+            "prepare_coarse": 10.004352199999985,
+            "build_coarse": 0.0019900000000063756,
+            "draw": 0.39970919999996113,
+            "coarse": 12.928983200000005,
+            "fine": 44.106219399999986
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2795228466858600,
+          "exit_observed_ns": 2795441003322500,
+          "elapsed_s": 212.5364639,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2795037467451500,
+          "exit_observed_ns": 2795228446287400,
+          "elapsed_s": 190.9788359,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20627,
+      "status": "completed",
+      "arm_order": [
+        "direct",
+        "screen"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "original_wall",
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "best_eligible_new": {
+            "i": 4,
+            "id": "b412a6b81e6f48defa9952aa09a1cd8df60314ea65d9603ef3e75343963aad26",
+            "peak": 5.04058881184481,
+            "A2": 0.3410268945561968
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0073982,
+          "elapsed_s": 211.637726
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 5,
+            "id": "fe98f6e4ae2a77b2255c5cbe53b10849b170b2b06ee4971fc37368db85df41a8",
+            "peak": 4.387536086327656,
+            "A2": 0.3785410077651538
+          },
+          "best_eligible_new": {
+            "i": 5,
+            "id": "fe98f6e4ae2a77b2255c5cbe53b10849b170b2b06ee4971fc37368db85df41a8",
+            "peak": 4.387536086327656,
+            "A2": 0.3785410077651538
+          },
+          "first_5pct_s": 171.0971173,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            1,
+            5,
+            8
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0371147,
+          "elapsed_s": 189.6633028
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 122.24985020000001,
+            "measure_original": 0.0001371000000034428,
+            "build_fine": 0.001770200000009936,
+            "draw": 0.1981364999999613,
+            "fine": 88.18019610000005
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 196.9915079,
+              "i": 5,
+              "id": "fe98f6e4ae2a77b2255c5cbe53b10849b170b2b06ee4971fc37368db85df41a8",
+              "end_s": 211.6377174,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 121.9780459,
+            "measure_original": 0.00011050000000523141,
+            "build_fine": 0.0017322000000064008,
+            "prepare_coarse": 10.171357700000016,
+            "build_coarse": 0.0016391000000055556,
+            "draw": 0.390119999999996,
+            "coarse": 12.935580599999952,
+            "fine": 43.14719899999997
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2795441104976700,
+          "exit_observed_ns": 2795653181213600,
+          "elapsed_s": 212.0762369,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\direct-cache-2w7s1f5n\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2795653206187000,
+          "exit_observed_ns": 2795843332464200,
+          "elapsed_s": 190.1262772,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20627\\screen-cache-qbr395f0\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20639,
+      "status": "completed",
+      "arm_order": [
+        "screen",
+        "direct"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 4,
+            "id": "861a1e874d7184b4fc11ff214cc2c6dfb00224a6e9f700ea1132fefb852f065f",
+            "peak": 4.725521655980906,
+            "A2": 0.35247054805384365
+          },
+          "best_eligible_new": {
+            "i": 4,
+            "id": "861a1e874d7184b4fc11ff214cc2c6dfb00224a6e9f700ea1132fefb852f065f",
+            "peak": 4.725521655980906,
+            "A2": 0.35247054805384365
+          },
+          "first_5pct_s": null,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0512581,
+          "elapsed_s": 211.4042701
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999986,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.4432899320127035e-15
+            },
+            "peak": 4.848363719473449,
+            "A2": 0.37609927335872745
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 7,
+            "id": "79c8aecd7b7e17f735418d5f37406b689df126e7e0166905b880f80a3b63b9eb",
+            "peak": 4.370111246296852,
+            "A2": 0.3763859227269389
+          },
+          "best_eligible_new": {
+            "i": 7,
+            "id": "79c8aecd7b7e17f735418d5f37406b689df126e7e0166905b880f80a3b63b9eb",
+            "peak": 4.370111246296852,
+            "A2": 0.3763859227269389
+          },
+          "first_5pct_s": 175.2212745,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            2,
+            7,
+            11
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0275717,
+          "elapsed_s": 194.2352025
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 121.9896427,
+            "measure_original": 0.00011390000000233158,
+            "build_fine": 0.0017112000000025773,
+            "draw": 0.19232360000002302,
+            "fine": 88.16899150000003
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 196.8854164,
+              "i": 5,
+              "id": "7b4c0e06387a7524b71da2729d0a36470d6a4f099b1569924ef3172f03b970c8",
+              "end_s": 211.4042607,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 126.0585479,
+            "measure_original": 0.00011739999999349493,
+            "build_fine": 0.0018014999999991232,
+            "prepare_coarse": 10.299493900000002,
+            "build_coarse": 0.0016239999999925203,
+            "draw": 0.39603040000008605,
+            "coarse": 12.972148300000015,
+            "fine": 43.477480300000025
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2796038166471100,
+          "exit_observed_ns": 2796249995512800,
+          "elapsed_s": 211.8290417,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\direct-cache-9jy6hff7\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2795843447729100,
+          "exit_observed_ns": 2796038146776200,
+          "elapsed_s": 194.6990471,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20639\\screen-cache-43l4wcxk\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20611,
+      "status": "completed",
+      "arm_order": [
+        "direct",
+        "screen"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 2,
+            "id": "3f738cb254f24336f074526d1b577cb808ad3050e76c35d1e68e690dad6ff32e",
+            "peak": 2.3075789520676824,
+            "A2": 0.5953228235510086
+          },
+          "best_eligible_new": {
+            "i": 2,
+            "id": "3f738cb254f24336f074526d1b577cb808ad3050e76c35d1e68e690dad6ff32e",
+            "peak": 2.3075789520676824,
+            "A2": 0.5953228235510086
+          },
+          "first_5pct_s": 164.8153365,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0079271,
+          "elapsed_s": 210.5861097
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 2,
+            "id": "3f738cb254f24336f074526d1b577cb808ad3050e76c35d1e68e690dad6ff32e",
+            "peak": 2.3075789520676824,
+            "A2": 0.5953228235510086
+          },
+          "best_eligible_new": {
+            "i": 2,
+            "id": "3f738cb254f24336f074526d1b577cb808ad3050e76c35d1e68e690dad6ff32e",
+            "peak": 2.3075789520676824,
+            "A2": 0.5953228235510086
+          },
+          "first_5pct_s": 149.8164163,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            2,
+            4,
+            8
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0457752,
+          "elapsed_s": 191.7232464
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 117.1949153,
+            "measure_original": 0.0001316999999971813,
+            "build_fine": 0.0022941000000002987,
+            "draw": 0.19665540000001158,
+            "fine": 92.18395489999997
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 196.3121527,
+              "i": 5,
+              "id": "e72d2142ddbd2f5de2df0ef07e0d6e68038fa9f9c5f29fc7c1d96dfe941b6a9a",
+              "end_s": 210.5861012,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 117.742856,
+            "measure_original": 0.00011229999999784468,
+            "build_fine": 0.0017227000000019643,
+            "prepare_coarse": 9.747712399999998,
+            "build_coarse": 0.0018844999999885204,
+            "draw": 0.422807999999975,
+            "coarse": 13.799200899999988,
+            "fine": 48.960758699999985
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2796250111002800,
+          "exit_observed_ns": 2796461139098400,
+          "elapsed_s": 211.0280956,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\direct-cache-og2hjvmh\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2796461170996800,
+          "exit_observed_ns": 2796653442682900,
+          "elapsed_s": 192.2716861,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20611\\screen-cache-bh0zzwvj\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20627,
+      "status": "completed",
+      "arm_order": [
+        "screen",
+        "direct"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 0,
+            "id": "1b5eea21de6b92d055c669802f514014c2d7bf5cd635e1da93e65331159d8692",
+            "peak": 2.5230753046022936,
+            "A2": 0.6205878351066713
+          },
+          "best_eligible_new": {
+            "i": 0,
+            "id": "1b5eea21de6b92d055c669802f514014c2d7bf5cd635e1da93e65331159d8692",
+            "peak": 2.5230753046022936,
+            "A2": 0.6205878351066713
+          },
+          "first_5pct_s": 136.0702414,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0459731,
+          "elapsed_s": 211.8189258
+        },
+        "screen": {
+          "stop": "candidate_limit",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 0,
+            "id": "1b5eea21de6b92d055c669802f514014c2d7bf5cd635e1da93e65331159d8692",
+            "peak": 2.5230753046022936,
+            "A2": 0.6205878351066713
+          },
+          "best_eligible_new": {
+            "i": 0,
+            "id": "1b5eea21de6b92d055c669802f514014c2d7bf5cd635e1da93e65331159d8692",
+            "peak": 2.5230753046022936,
+            "A2": 0.6205878351066713
+          },
+          "first_5pct_s": 153.0406243,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            0,
+            7,
+            10
+          ],
+          "eligible_fine": 3,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0448299,
+          "elapsed_s": 190.653684
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 117.2192752,
+            "measure_original": 0.00011299999999891952,
+            "build_fine": 0.0017355000000094378,
+            "draw": 0.2024035999999967,
+            "fine": 93.34918590000001
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 197.3638249,
+              "i": 5,
+              "id": "fe98f6e4ae2a77b2255c5cbe53b10849b170b2b06ee4971fc37368db85df41a8",
+              "end_s": 211.8189106,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 120.427966,
+            "measure_original": 0.00011120000000630625,
+            "build_fine": 0.002269900000001712,
+            "prepare_coarse": 9.958333900000014,
+            "build_coarse": 0.0015666000000180702,
+            "draw": 0.3881614000000013,
+            "coarse": 13.367924399999936,
+            "fine": 45.4621588
+          },
+          "late_events": [],
+          "eligible_fine": 3
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2796844696175600,
+          "exit_observed_ns": 2797056947095400,
+          "elapsed_s": 212.2509198,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\direct-cache-d1qn4lud\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2796653565707400,
+          "exit_observed_ns": 2796844666800900,
+          "elapsed_s": 191.1010935,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20627\\screen-cache-e0ehy6r7\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20639,
+      "status": "completed",
+      "arm_order": [
+        "direct",
+        "screen"
+      ],
+      "shared_prefix": {
+        "length": 6,
+        "equal": true,
+        "informative": true
+      },
+      "baseline_equal": true,
+      "arms": {
+        "direct": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 1,
+            "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+            "peak": 1.9562135975675188,
+            "A2": 0.6699700889552664
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+            "peak": 1.9562135975675188,
+            "A2": 0.6699700889552664
+          },
+          "first_5pct_s": 151.3888602,
+          "coarse_ids": [],
+          "fine_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible_fine": 5,
+          "completed_draws": 6,
+          "rejected": {},
+          "startup_s": 1.0313935,
+          "elapsed_s": 214.6681179
+        },
+        "screen": {
+          "stop": "deadline",
+          "error": null,
+          "baseline": {
+            "eligible": true,
+            "errors": [],
+            "ledger": {
+              "prescribed": 1.0,
+              "deposited": 0.9999999999999987,
+              "unhit": 0.0,
+              "unresolved": 0.0,
+              "balance_error": 1.3322676295501878e-15
+            },
+            "peak": 2.9113894964542717,
+            "A2": 0.5861867627218716
+          },
+          "incumbent": {
+            "kind": "new_design",
+            "i": 1,
+            "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+            "peak": 1.9562135975675188,
+            "A2": 0.6699700889552664
+          },
+          "best_eligible_new": {
+            "i": 1,
+            "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+            "peak": 1.9562135975675188,
+            "A2": 0.6699700889552664
+          },
+          "first_5pct_s": 165.4848187,
+          "coarse_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "fine_ids": [
+            1,
+            6
+          ],
+          "eligible_fine": 2,
+          "completed_draws": 12,
+          "rejected": {},
+          "startup_s": 1.0551926,
+          "elapsed_s": 212.3747951
+        }
+      },
+      "audits": {
+        "direct": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 118.271819,
+            "measure_original": 0.00011069999999335778,
+            "build_fine": 0.0020161999999999125,
+            "draw": 0.19643990000001565,
+            "fine": 95.16611299999998
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 197.100237,
+              "i": 5,
+              "id": "5db510bba76f1c7bcc1fde1b52ea2f3a61c48b2fd2d9b229ec622626aef794b2",
+              "end_s": 214.6681088,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 5
+        },
+        "screen": {
+          "valid": true,
+          "phase_seconds": {
+            "prepare_fine": 129.7006234,
+            "measure_original": 0.00020659999998429157,
+            "build_fine": 0.0027106000000003405,
+            "prepare_coarse": 10.765023899999989,
+            "build_coarse": 0.0025886999999897853,
+            "draw": 0.4489882999999395,
+            "coarse": 16.026395899999983,
+            "fine": 54.37265599999998
+          },
+          "late_events": [
+            {
+              "stage": "fine",
+              "start_s": 194.4609681,
+              "i": 10,
+              "id": "ff3ef4af61ce5081b4c0693085286350c3c4182781614bd21cd66b586c6f10a2",
+              "end_s": 212.3747857,
+              "status": "late_discarded"
+            }
+          ],
+          "eligible_fine": 2
+        }
+      },
+      "errors": {},
+      "processes": {
+        "direct": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2797057087303300,
+          "exit_observed_ns": 2797272227759600,
+          "elapsed_s": 215.1404563,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "screen": {
+          "returncode": 0,
+          "error": null,
+          "launch_ns": 2797272260619200,
+          "exit_observed_ns": 2797485137036800,
+          "elapsed_s": 212.8764176,
+          "environment": {
+            "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\cupy",
+            "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\cuda",
+            "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\tmp",
+            "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\tmp",
+            "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\matplotlib",
+            "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\huggingface",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        }
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "case_id": "34329f105e",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_34329f105e.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_34329f105e.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_34329f105e.parquet",
+        "bytes": 16666108,
+        "sha256": "a7a6804290aeda430d5214ffd9ab647891cc2442e96b3260250ff453442a98a0"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\34329f105e\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 45,
+      "axis_RZ_m": [
+        1.7043788433074951,
+        0.009459622204303741
+      ],
+      "X_RZ_m": [
+        1.2753886515165005,
+        -1.117136758975336
+      ],
+      "omp_sep_R_m": 2.245987779486657,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174931001039451,
+            -1.175048631986162
+          ],
+          "refinement_m": 2.2096081263792266e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3482634782856646,
+            -1.358158027751976
+          ],
+          "refinement_m": 5.312143746722302e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    },
+    {
+      "case_id": "c97c0671ff",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_c97c0671ff.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_c97c0671ff.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c97c0671ff.parquet",
+        "bytes": 6311345,
+        "sha256": "7f74bef2315f23bc5415c7d41741c976c4d97122242a537121346fc2958a1566"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c97c0671ff\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "axis_RZ_m": [
+        1.7496001720428467,
+        -0.04875265061855316
+      ],
+      "X_RZ_m": [
+        1.3057295651966416,
+        -1.1471519534842833
+      ],
+      "omp_sep_R_m": 2.2913572348366382,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174903252034837,
+            -1.1581772371802066
+          ],
+          "refinement_m": 4.29419794425694e-09
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3345905440218393,
+            -1.358216210450971
+          ],
+          "refinement_m": 1.1768024292915845e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    },
+    {
+      "case_id": "33857d31de",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_33857d31de.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_33857d31de.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_33857d31de.parquet",
+        "bytes": 16791186,
+        "sha256": "fa37f0cce373f3670dd8af09de992d1b7af95cff25a303a42bb5095b30996c83"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\33857d31de\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "reason": "ValueError: lower X-point cannot be validated near LCFS"
+    },
+    {
+      "case_id": "b38ac41e32",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_b38ac41e32.parquet",
+        "bytes": 10924852,
+        "sha256": "3048e38b8c4b57f5048252daebc906798bd8708a563f722d21aff9a3366a7104"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\b38ac41e32\\input-root",
+      "reason": "ValueError: nearest stored EFIT time is at least 100 ms from 1400 ms"
+    },
+    {
+      "case_id": "31b5a12f4d",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_31b5a12f4d.parquet",
+        "bytes": 17351197,
+        "sha256": "43ef0335cbc321ac21bab3b8cb2772fc6f74666eeb1b5d277577d0197f731875"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\31b5a12f4d\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "axis_RZ_m": [
+        1.7292274236679077,
+        -0.033170152455568314
+      ],
+      "X_RZ_m": [
+        1.4857898284458924,
+        -1.1544576074447879
+      ],
+      "omp_sep_R_m": 2.26919293268199,
+      "legs": {
+        "inner": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.1921796186116456,
+            -1.3588222143888866
+          ],
+          "refinement_m": 9.006897283944594e-09
+        },
+        "outer": {
+          "segment": 59,
+          "strike_RZ_m": [
+            1.5613847939702092,
+            -1.2447896961185883
+          ],
+          "refinement_m": 1.6378726498929517e-08
+        }
+      },
+      "reason": "ValueError: inner strike on 68, current engineering rule requires 69"
+    },
+    {
+      "case_id": "bb4a894875",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_bb4a894875.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_bb4a894875.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_bb4a894875.parquet",
+        "bytes": 8354805,
+        "sha256": "efa159e6543dd5ee28f3ec92c7d9a51ab061fab77b88c007fcb464bdf88e5d5e"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\bb4a894875\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 61,
+      "reason": "ValueError: sampling outside EFIT grid is forbidden"
+    },
+    {
+      "case_id": "747fca45a9",
+      "status": "reserve_geometry_passed",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_747fca45a9.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_747fca45a9.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_747fca45a9.parquet",
+        "bytes": 7791686,
+        "sha256": "7d7721862cb289d9ba551f0605539442dcda2b67398eaba021e7002219f0487b"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\747fca45a9\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 48,
+      "axis_RZ_m": [
+        1.727672815322876,
+        0.03936922177672386
+      ],
+      "X_RZ_m": [
+        1.374336540378617,
+        -1.099908627966256
+      ],
+      "omp_sep_R_m": 2.265958170025225,
+      "legs": {
+        "inner": {
+          "segment": 69,
+          "strike_RZ_m": [
+            1.0669518940574716,
+            -1.2647496723980785
+          ],
+          "refinement_m": 1.007548173209296e-08
+        },
+        "outer": {
+          "segment": 59,
+          "strike_RZ_m": [
+            1.4574627619248655,
+            -1.2447769203903525
+          ],
+          "refinement_m": 1.3443333214877542e-09
+        }
+      },
+      "active_OMP_endpoints_RZ_m": {
+        "omp_entry": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "shelf": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "omp_connector": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "floor": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ]
+      },
+      "tf_current_kA": -125.17653103235364,
+      "grid_shape": [
+        65,
+        65
+      ],
+      "lower_X_flux": -0.06844578510141476,
+      "lcfs_normalized_flux_quantiles": [
+        0.9989592710839856,
+        0.9996760556905556,
+        1.0000551700901903,
+        1.0004165994938639,
+        1.000815915457427
+      ],
+      "geometry_passed": true,
+      "inputs": {
+        "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "7d7721862cb289d9ba551f0605539442dcda2b67398eaba021e7002219f0487b",
+        "baseline_review\\baseline_review.json": "9a78200a7c16d1661efe5c34bfbb2a20acf63240ca59a9069c34877c3724ea4c",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "3c4751974a3595780b5404d315ceeb503b535fbbc61a18ad4402e019c64bf390"
+      }
+    },
+    {
+      "case_id": "c016937bba",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_c016937bba.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_c016937bba.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c016937bba.parquet",
+        "bytes": 18147757,
+        "sha256": "73b558ae14f236d505baca810f1a6a4d643e0735f38b74b31875d77d213adb95"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c016937bba\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 55,
+      "reason": "ValueError: lower X-point cannot be validated near LCFS"
+    },
+    {
+      "case_id": "8f514caf36",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_8f514caf36.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_8f514caf36.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_8f514caf36.parquet",
+        "bytes": 7402979,
+        "sha256": "87971c8e081283de577035e0520919502296bb1e2c2d91d4b54d3d097db7a42d"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\8f514caf36\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 56,
+      "axis_RZ_m": [
+        1.7152152061462402,
+        -0.00884610041975975
+      ],
+      "X_RZ_m": [
+        1.2764375935444945,
+        -1.1513224557958845
+      ],
+      "omp_sep_R_m": 2.2720200570183713,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174943551070397,
+            -1.1826790508004916
+          ],
+          "refinement_m": 3.6094572042050424e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3222191959836758,
+            -1.358268854485176
+          ],
+          "refinement_m": 5.007231999514231e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    }
+  ]
+}

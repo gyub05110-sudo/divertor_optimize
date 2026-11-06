@@ -1,0 +1,203 @@
+{
+  "case_id": "4d14a35fcb",
+  "seed": 20639,
+  "status": "completed",
+  "arm_order": [
+    "direct",
+    "screen"
+  ],
+  "shared_prefix": {
+    "length": 6,
+    "equal": true,
+    "informative": true
+  },
+  "baseline_equal": true,
+  "arms": {
+    "direct": {
+      "stop": "deadline",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.3322676295501878e-15
+        },
+        "peak": 2.9113894964542717,
+        "A2": 0.5861867627218716
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 1,
+        "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+        "peak": 1.9562135975675188,
+        "A2": 0.6699700889552664
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+        "peak": 1.9562135975675188,
+        "A2": 0.6699700889552664
+      },
+      "first_5pct_s": 151.3888602,
+      "coarse_ids": [],
+      "fine_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "eligible_fine": 5,
+      "completed_draws": 6,
+      "rejected": {},
+      "startup_s": 1.0313935,
+      "elapsed_s": 214.6681179
+    },
+    "screen": {
+      "stop": "deadline",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999987,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.3322676295501878e-15
+        },
+        "peak": 2.9113894964542717,
+        "A2": 0.5861867627218716
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 1,
+        "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+        "peak": 1.9562135975675188,
+        "A2": 0.6699700889552664
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "5de21abcdfc19f27a47d6c6a8f6dd24773ea20047b37b56250aa90037ecbc442",
+        "peak": 1.9562135975675188,
+        "A2": 0.6699700889552664
+      },
+      "first_5pct_s": 165.4848187,
+      "coarse_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fine_ids": [
+        1,
+        6
+      ],
+      "eligible_fine": 2,
+      "completed_draws": 12,
+      "rejected": {},
+      "startup_s": 1.0551926,
+      "elapsed_s": 212.3747951
+    }
+  },
+  "audits": {
+    "direct": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 118.271819,
+        "measure_original": 0.00011069999999335778,
+        "build_fine": 0.0020161999999999125,
+        "draw": 0.19643990000001565,
+        "fine": 95.16611299999998
+      },
+      "late_events": [
+        {
+          "stage": "fine",
+          "start_s": 197.100237,
+          "i": 5,
+          "id": "5db510bba76f1c7bcc1fde1b52ea2f3a61c48b2fd2d9b229ec622626aef794b2",
+          "end_s": 214.6681088,
+          "status": "late_discarded"
+        }
+      ],
+      "eligible_fine": 5
+    },
+    "screen": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 129.7006234,
+        "measure_original": 0.00020659999998429157,
+        "build_fine": 0.0027106000000003405,
+        "prepare_coarse": 10.765023899999989,
+        "build_coarse": 0.0025886999999897853,
+        "draw": 0.4489882999999395,
+        "coarse": 16.026395899999983,
+        "fine": 54.37265599999998
+      },
+      "late_events": [
+        {
+          "stage": "fine",
+          "start_s": 194.4609681,
+          "i": 10,
+          "id": "ff3ef4af61ce5081b4c0693085286350c3c4182781614bd21cd66b586c6f10a2",
+          "end_s": 212.3747857,
+          "status": "late_discarded"
+        }
+      ],
+      "eligible_fine": 2
+    }
+  },
+  "errors": {},
+  "processes": {
+    "direct": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2797057087303300,
+      "exit_observed_ns": 2797272227759600,
+      "elapsed_s": 215.1404563,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "screen": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2797272260619200,
+      "exit_observed_ns": 2797485137036800,
+      "elapsed_s": 212.8764176,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\screen-cache-3ge2v7ry\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}

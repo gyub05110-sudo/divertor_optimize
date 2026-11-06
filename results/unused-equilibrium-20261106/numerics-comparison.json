@@ -1,0 +1,180 @@
+{
+  "rows": [
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20611,
+      "direct": {
+        "peak_reduction_pct": 41.93714496736581,
+        "A2_change_pct": 66.40254403806054,
+        "peak_MW_m2": 6.001922435614816,
+        "peak_reduction_delta_pp": -0.06612391098849457,
+        "A2_change_delta_pp": -0.2635336247485327
+      },
+      "screen": {
+        "peak_reduction_pct": 41.93714496736581,
+        "A2_change_pct": 66.40254403806054,
+        "peak_MW_m2": 6.001922435614816,
+        "peak_reduction_delta_pp": -0.06612391098849457,
+        "A2_change_delta_pp": -0.2635336247485327
+      },
+      "screen_vs_direct_peak_pct": 0.0
+    },
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20627,
+      "direct": {
+        "peak_reduction_pct": 0.0,
+        "A2_change_pct": 0.0,
+        "peak_MW_m2": 10.336939911482892,
+        "peak_reduction_delta_pp": 0.0,
+        "A2_change_delta_pp": 0.0
+      },
+      "screen": {
+        "peak_reduction_pct": 51.06537736514688,
+        "A2_change_pct": 91.95985855850776,
+        "peak_MW_m2": 5.058342537675673,
+        "peak_reduction_delta_pp": -0.07695323861715053,
+        "A2_change_delta_pp": -0.45747369545452443
+      },
+      "screen_vs_direct_peak_pct": -51.06537736514688
+    },
+    {
+      "case_id": "deb842cf1e",
+      "seed": 20639,
+      "direct": {
+        "peak_reduction_pct": 0.0,
+        "A2_change_pct": 0.0,
+        "peak_MW_m2": 10.336939911482892,
+        "peak_reduction_delta_pp": 0.0,
+        "A2_change_delta_pp": 0.0
+      },
+      "screen": {
+        "peak_reduction_pct": 14.96521807034592,
+        "A2_change_pct": 16.875423446968774,
+        "peak_MW_m2": 8.789994311928854,
+        "peak_reduction_delta_pp": -0.03367366195619148,
+        "A2_change_delta_pp": -0.062025670653831355
+      },
+      "screen_vs_direct_peak_pct": -14.96521807034592
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20611,
+      "direct": {
+        "peak_reduction_pct": 0.0,
+        "A2_change_pct": 0.0,
+        "peak_MW_m2": 4.851591240830706,
+        "peak_reduction_delta_pp": 0.0,
+        "A2_change_delta_pp": 0.0
+      },
+      "screen": {
+        "peak_reduction_pct": 0.0,
+        "A2_change_pct": 0.0,
+        "peak_MW_m2": 4.851591240830706,
+        "peak_reduction_delta_pp": 0.0,
+        "A2_change_delta_pp": 0.0
+      },
+      "screen_vs_direct_peak_pct": 0.0
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20627,
+      "direct": {
+        "peak_reduction_pct": 0.0,
+        "A2_change_pct": 0.0,
+        "peak_MW_m2": 4.851591240830706,
+        "peak_reduction_delta_pp": 0.0,
+        "A2_change_delta_pp": 0.0
+      },
+      "screen": {
+        "peak_reduction_pct": 9.526644855903522,
+        "A2_change_pct": 0.6672081340374669,
+        "peak_MW_m2": 4.389397373456641,
+        "peak_reduction_delta_pp": 0.02183746501246553,
+        "A2_change_delta_pp": 0.017982097352886584
+      },
+      "screen_vs_direct_peak_pct": -9.526644855903522
+    },
+    {
+      "case_id": "fad1624516",
+      "seed": 20639,
+      "direct": {
+        "peak_reduction_pct": 2.551267086278186,
+        "A2_change_pct": -6.272238939806874,
+        "peak_MW_m2": 4.727814190342636,
+        "peak_reduction_delta_pp": 0.017586228153865235,
+        "A2_change_delta_pp": 0.01033775699691386
+      },
+      "screen": {
+        "peak_reduction_pct": 9.885292153255776,
+        "A2_change_pct": 0.09183764605411593,
+        "peak_MW_m2": 4.371997272592823,
+        "peak_reduction_delta_pp": 0.021088457982331832,
+        "A2_change_delta_pp": 0.015621234984886101
+      },
+      "screen_vs_direct_peak_pct": -7.526034303053397
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20611,
+      "direct": {
+        "peak_reduction_pct": 20.80639461503534,
+        "A2_change_pct": 1.6172733217234558,
+        "peak_MW_m2": 2.3046680399710104,
+        "peak_reduction_delta_pp": 0.06679432720167,
+        "A2_change_delta_pp": 0.05871529719301272
+      },
+      "screen": {
+        "peak_reduction_pct": 20.80639461503534,
+        "A2_change_pct": 1.6172733217234558,
+        "peak_MW_m2": 2.3046680399710104,
+        "peak_reduction_delta_pp": 0.06679432720167,
+        "A2_change_delta_pp": 0.05871529719301272
+      },
+      "screen_vs_direct_peak_pct": 0.0
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20627,
+      "direct": {
+        "peak_reduction_pct": 13.301195559875412,
+        "A2_change_pct": 5.869484507055445,
+        "peak_MW_m2": 2.523082043374013,
+        "peak_reduction_delta_pp": -0.036566093963719126,
+        "A2_change_delta_pp": 0.00086471341436134
+      },
+      "screen": {
+        "peak_reduction_pct": 13.301195559875412,
+        "A2_change_pct": 5.869484507055445,
+        "peak_MW_m2": 2.523082043374013,
+        "peak_reduction_delta_pp": -0.036566093963719126,
+        "A2_change_delta_pp": 0.00086471341436134
+      },
+      "screen_vs_direct_peak_pct": 0.0
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "seed": 20639,
+      "direct": {
+        "peak_reduction_pct": 32.77825104730102,
+        "A2_change_pct": 14.349588638781885,
+        "peak_MW_m2": 1.95626674210811,
+        "peak_reduction_delta_pp": -0.029997386996221564,
+        "A2_change_delta_pp": 0.056647965000845346
+      },
+      "screen": {
+        "peak_reduction_pct": 32.77825104730102,
+        "A2_change_pct": 14.349588638781885,
+        "peak_MW_m2": 1.95626674210811,
+        "peak_reduction_delta_pp": -0.029997386996221564,
+        "A2_change_delta_pp": 0.056647965000845346
+      },
+      "screen_vs_direct_peak_pct": 0.0
+    }
+  ],
+  "all_nine_paired_orders_retained": true,
+  "max_CPU_GPU_relative_difference": 0.0,
+  "max_peak_reduction_change_pp": 0.07695323861715053,
+  "max_A2_change_pp": 0.45747369545452443,
+  "total_check_seconds": 199.00756940012798
+}

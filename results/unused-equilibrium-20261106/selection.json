@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-06T01:29:02.619087+00:00",
+  "revision": "1e280905b85f2a6fdde7e06fca8cf3a1edf447cb",
+  "license": "cc-by-4.0",
+  "population": 7040,
+  "selected": [
+    "data/diii_d_train/d3d_shot_34329f105e.parquet",
+    "data/diii_d_train/d3d_shot_deb842cf1e.parquet",
+    "data/diii_d_train/d3d_shot_c97c0671ff.parquet",
+    "data/diii_d_train/d3d_shot_33857d31de.parquet",
+    "data/diii_d_train/d3d_shot_fad1624516.parquet",
+    "data/diii_d_train/d3d_shot_4d14a35fcb.parquet",
+    "data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+    "data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+    "data/diii_d_train/d3d_shot_bb4a894875.parquet",
+    "data/diii_d_train/d3d_shot_747fca45a9.parquet",
+    "data/diii_d_train/d3d_shot_c016937bba.parquet",
+    "data/diii_d_train/d3d_shot_8f514caf36.parquet"
+  ],
+  "seeds": [
+    20611,
+    20627,
+    20639
+  ],
+  "budget_s": 200,
+  "protocol_sha256": "1125d0718fc56d486951cede41c1191644293f1d6986134b9efb2bb60eda583b"
+}

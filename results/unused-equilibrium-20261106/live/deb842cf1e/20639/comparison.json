@@ -1,0 +1,192 @@
+{
+  "case_id": "deb842cf1e",
+  "seed": 20639,
+  "status": "completed",
+  "arm_order": [
+    "direct",
+    "screen"
+  ],
+  "shared_prefix": {
+    "length": 5,
+    "equal": true,
+    "informative": true
+  },
+  "baseline_equal": true,
+  "arms": {
+    "direct": {
+      "stop": "deadline",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.2204460492503136e-16
+        },
+        "peak": 10.34052750061192,
+        "A2": 0.17945553775132683
+      },
+      "incumbent": {
+        "kind": "original_wall",
+        "peak": 10.34052750061192,
+        "A2": 0.17945553775132683
+      },
+      "best_eligible_new": {
+        "i": 0,
+        "id": "a3d6d7b4816e2134639d2660b22f6f46f5aa7a0bbe60db42739d0119254fd971",
+        "peak": 10.37479796733649,
+        "A2": 0.1790152300504788
+      },
+      "first_5pct_s": null,
+      "coarse_ids": [],
+      "fine_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "eligible_fine": 4,
+      "completed_draws": 5,
+      "rejected": {},
+      "startup_s": 1.0141275,
+      "elapsed_s": 204.8194069
+    },
+    "screen": {
+      "stop": "candidate_limit",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 0.9999999999999998,
+          "deposited": 0.9999999999999996,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 2.2204460492503136e-16
+        },
+        "peak": 10.34052750061192,
+        "A2": 0.17945553775132683
+      },
+      "incumbent": {
+        "kind": "new_design",
+        "i": 5,
+        "id": "789e45c335bcab3f86b1a2036470139f39a24a088c429f27f642eb851f8eeda1",
+        "peak": 8.789562976246213,
+        "A2": 0.20985072814671382
+      },
+      "best_eligible_new": {
+        "i": 5,
+        "id": "789e45c335bcab3f86b1a2036470139f39a24a088c429f27f642eb851f8eeda1",
+        "peak": 8.789562976246213,
+        "A2": 0.20985072814671382
+      },
+      "first_5pct_s": 177.3551942,
+      "coarse_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fine_ids": [
+        0,
+        5,
+        11
+      ],
+      "eligible_fine": 3,
+      "completed_draws": 12,
+      "rejected": {},
+      "startup_s": 1.0314691,
+      "elapsed_s": 196.4348944
+    }
+  },
+  "audits": {
+    "direct": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 128.605592,
+        "measure_original": 0.00015259999997851992,
+        "build_fine": 0.0017281999999738673,
+        "draw": 0.15918329999999514,
+        "fine": 75.03839150000007
+      },
+      "late_events": [
+        {
+          "stage": "fine",
+          "start_s": 189.9153864,
+          "i": 4,
+          "id": "861a1e874d7184b4fc11ff214cc2c6dfb00224a6e9f700ea1132fefb852f065f",
+          "end_s": 204.8193974,
+          "status": "late_discarded"
+        }
+      ],
+      "eligible_fine": 4
+    },
+    "screen": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 127.73097,
+        "measure_original": 0.00014849999999455576,
+        "build_fine": 0.001724200000012388,
+        "prepare_coarse": 10.726382699999988,
+        "build_coarse": 0.0019785000000069886,
+        "draw": 0.39248839999999063,
+        "coarse": 13.327690699999977,
+        "fine": 43.22168350000001
+      },
+      "late_events": [],
+      "eligible_fine": 3
+    }
+  },
+  "errors": {},
+  "processes": {
+    "direct": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2794635175252400,
+      "exit_observed_ns": 2794840447296100,
+      "elapsed_s": 205.2720437,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\direct-cache-305sepo5\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "screen": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2794840467568300,
+      "exit_observed_ns": 2795037360643400,
+      "elapsed_s": 196.8930751,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\deb842cf1e\\20639\\screen-cache-eou3wah8\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}

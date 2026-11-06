@@ -1,0 +1,19 @@
+{
+  "returncode": 0,
+  "error": null,
+  "launch_ns": 2797057087303300,
+  "exit_observed_ns": 2797272227759600,
+  "elapsed_s": 215.1404563,
+  "environment": {
+    "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cupy",
+    "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\cuda",
+    "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+    "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\tmp",
+    "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\matplotlib",
+    "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\4d14a35fcb\\20639\\direct-cache-igvab1jy\\huggingface",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

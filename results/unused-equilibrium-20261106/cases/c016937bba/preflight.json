@@ -1,0 +1,15 @@
+{
+  "case_id": "c016937bba",
+  "status": "excluded",
+  "source": {
+    "path": "data/diii_d_train/d3d_shot_c016937bba.parquet",
+    "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_c016937bba.parquet",
+    "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c016937bba.parquet",
+    "bytes": 18147757,
+    "sha256": "73b558ae14f236d505baca810f1a6a4d643e0735f38b74b31875d77d213adb95"
+  },
+  "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c016937bba\\input-root",
+  "time_ms": 1400.0,
+  "frame_index": 55,
+  "reason": "ValueError: lower X-point cannot be validated near LCFS"
+}

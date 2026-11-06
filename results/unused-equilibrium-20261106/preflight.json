@@ -1,0 +1,654 @@
+{
+  "created_utc": "2026-11-06T01:31:36.110707+00:00",
+  "protocol_sha256": "1125d0718fc56d486951cede41c1191644293f1d6986134b9efb2bb60eda583b",
+  "selection_sha256": "9ceffedce5633cbf7d39b2ab928a6f8bb2f53d4cf9b18295e5e4f318c19df3ee",
+  "downloads_sha256": "d2db95748ae57a2e49953d0c77a4f03d5435da6291d8541ce3f64273bad4d562",
+  "original_sha256": {
+    "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_review\\baseline_review.json": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "7730239af9c061fa6572beb525e4a491a202d938d36a4bacae7aa3aa6c822739"
+  },
+  "driver_sha256": "c78df426015ecaa3b5c72b19116d3088f8f95168794f96c4ca036dd7b5e8c5cc",
+  "geometry_driver_sha256": "67b68ceed7aa01c49e2429057e6cbc6113c500e8336f3a5813958b59f06c9376",
+  "cases": [
+    {
+      "case_id": "34329f105e",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_34329f105e.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_34329f105e.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_34329f105e.parquet",
+        "bytes": 16666108,
+        "sha256": "a7a6804290aeda430d5214ffd9ab647891cc2442e96b3260250ff453442a98a0"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\34329f105e\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 45,
+      "axis_RZ_m": [
+        1.7043788433074951,
+        0.009459622204303741
+      ],
+      "X_RZ_m": [
+        1.2753886515165005,
+        -1.117136758975336
+      ],
+      "omp_sep_R_m": 2.245987779486657,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174931001039451,
+            -1.175048631986162
+          ],
+          "refinement_m": 2.2096081263792266e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3482634782856646,
+            -1.358158027751976
+          ],
+          "refinement_m": 5.312143746722302e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    },
+    {
+      "case_id": "deb842cf1e",
+      "status": "passed",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_deb842cf1e.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_deb842cf1e.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_deb842cf1e.parquet",
+        "bytes": 6898095,
+        "sha256": "24000d2a2fea8838e5226f63d7914e2403c95af5ac4c1d3c9cafd2570b29952d"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\deb842cf1e\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 56,
+      "axis_RZ_m": [
+        1.6961894035339355,
+        -0.02934309095144272
+      ],
+      "X_RZ_m": [
+        1.2472981544301103,
+        -1.131286152016525
+      ],
+      "omp_sep_R_m": 2.295996042323488,
+      "legs": {
+        "inner": {
+          "segment": 69,
+          "strike_RZ_m": [
+            1.0372094047769902,
+            -1.2360309722043945
+          ],
+          "refinement_m": 2.285724334622188e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3442983308881435,
+            -1.3581749007196249
+          ],
+          "refinement_m": 8.72607004438267e-09
+        }
+      },
+      "active_OMP_endpoints_RZ_m": {
+        "omp_entry": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "shelf": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "omp_connector": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "floor": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ]
+      },
+      "tf_current_kA": 106.21249863253534,
+      "grid_shape": [
+        65,
+        65
+      ],
+      "lower_X_flux": -0.03991015538937106,
+      "lcfs_normalized_flux_quantiles": [
+        0.9990717515970701,
+        0.9993528692504482,
+        0.9996561477569532,
+        1.000106233836775,
+        1.0001704860591265
+      ],
+      "geometry_passed": true,
+      "inputs": {
+        "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "24000d2a2fea8838e5226f63d7914e2403c95af5ac4c1d3c9cafd2570b29952d",
+        "baseline_review\\baseline_review.json": "debc116c1ae241fa28ec32ce9f60c22589dd3951847027142464fcee60c767ec",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "2b5cdf5969bee5ad46569fbd7ab090b18c44c89d34a543726d9db05010b046c9"
+      }
+    },
+    {
+      "case_id": "c97c0671ff",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_c97c0671ff.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_c97c0671ff.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c97c0671ff.parquet",
+        "bytes": 6311345,
+        "sha256": "7f74bef2315f23bc5415c7d41741c976c4d97122242a537121346fc2958a1566"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c97c0671ff\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "axis_RZ_m": [
+        1.7496001720428467,
+        -0.04875265061855316
+      ],
+      "X_RZ_m": [
+        1.3057295651966416,
+        -1.1471519534842833
+      ],
+      "omp_sep_R_m": 2.2913572348366382,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174903252034837,
+            -1.1581772371802066
+          ],
+          "refinement_m": 4.29419794425694e-09
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3345905440218393,
+            -1.358216210450971
+          ],
+          "refinement_m": 1.1768024292915845e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    },
+    {
+      "case_id": "33857d31de",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_33857d31de.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_33857d31de.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_33857d31de.parquet",
+        "bytes": 16791186,
+        "sha256": "fa37f0cce373f3670dd8af09de992d1b7af95cff25a303a42bb5095b30996c83"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\33857d31de\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "reason": "ValueError: lower X-point cannot be validated near LCFS"
+    },
+    {
+      "case_id": "fad1624516",
+      "status": "passed",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_fad1624516.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_fad1624516.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_fad1624516.parquet",
+        "bytes": 7134726,
+        "sha256": "42725efdd7f426e212e47bc95b021666651866594b7e557209b3e177920514e6"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\fad1624516\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 53,
+      "axis_RZ_m": [
+        1.7664071321487427,
+        -0.022679660469293594
+      ],
+      "X_RZ_m": [
+        1.1413587077485052,
+        -1.1891475444842514
+      ],
+      "omp_sep_R_m": 2.2551160324402684,
+      "legs": {
+        "inner": {
+          "segment": 69,
+          "strike_RZ_m": [
+            1.0179898507566496,
+            -1.2174729892272032
+          ],
+          "refinement_m": 4.748890153412323e-10
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.1950201641298213,
+            -1.3588101269611497
+          ],
+          "refinement_m": 3.2920675595819766e-10
+        }
+      },
+      "active_OMP_endpoints_RZ_m": {
+        "omp_entry": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "shelf": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "omp_connector": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "floor": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ]
+      },
+      "tf_current_kA": 107.06974165118113,
+      "grid_shape": [
+        65,
+        65
+      ],
+      "lower_X_flux": -0.20025315777354352,
+      "lcfs_normalized_flux_quantiles": [
+        0.9984699222797364,
+        0.999461473959179,
+        0.9998665398501193,
+        1.0002872937173715,
+        1.0003267082962335
+      ],
+      "geometry_passed": true,
+      "inputs": {
+        "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "42725efdd7f426e212e47bc95b021666651866594b7e557209b3e177920514e6",
+        "baseline_review\\baseline_review.json": "0f4ab5d2516fb778fb8d8b33513f5d97d61de12ed529044f6c3799b71d43ba39",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "41d4d31025300aed93904bb8314b6d32215f45b3574ca99dbdb0b5b02099df1a"
+      }
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "status": "passed",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_4d14a35fcb.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_4d14a35fcb.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_4d14a35fcb.parquet",
+        "bytes": 17627110,
+        "sha256": "7d9a12aef9d23115fae9b367f128f0a1b7a20b934cee45fe5a94d453373c8b69"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\4d14a35fcb\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 60,
+      "axis_RZ_m": [
+        1.7358319759368896,
+        -0.059379205107688904
+      ],
+      "X_RZ_m": [
+        1.190434674019868,
+        -1.240927950543804
+      ],
+      "omp_sep_R_m": 2.254744964553212,
+      "legs": {
+        "inner": {
+          "segment": 69,
+          "strike_RZ_m": [
+            1.081746539172333,
+            -1.2790350596606868
+          ],
+          "refinement_m": 1.5968962479011144e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.2368255811536812,
+            -1.358632231569559
+          ],
+          "refinement_m": 5.427061752657228e-09
+        }
+      },
+      "active_OMP_endpoints_RZ_m": {
+        "omp_entry": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "shelf": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "omp_connector": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "floor": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ]
+      },
+      "tf_current_kA": 94.39642031350171,
+      "grid_shape": [
+        65,
+        65
+      ],
+      "lower_X_flux": -0.0007573362842111249,
+      "lcfs_normalized_flux_quantiles": [
+        0.9989048079854068,
+        0.9997071694853216,
+        0.9999801130194758,
+        1.0004767232967178,
+        1.0005816659505662
+      ],
+      "geometry_passed": true,
+      "inputs": {
+        "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "7d9a12aef9d23115fae9b367f128f0a1b7a20b934cee45fe5a94d453373c8b69",
+        "baseline_review\\baseline_review.json": "83f1fe04bf6a0c588aae3f9077ecf003aebbfad4c8c7cc6297e7064afe67b2df",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "1fd92417de0c7f8a8b7b550896b4c4e4d51d5086267263e8ee5296da08929e7c"
+      }
+    },
+    {
+      "case_id": "b38ac41e32",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_b38ac41e32.parquet",
+        "bytes": 10924852,
+        "sha256": "3048e38b8c4b57f5048252daebc906798bd8708a563f722d21aff9a3366a7104"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\b38ac41e32\\input-root",
+      "reason": "ValueError: nearest stored EFIT time is at least 100 ms from 1400 ms"
+    },
+    {
+      "case_id": "31b5a12f4d",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_31b5a12f4d.parquet",
+        "bytes": 17351197,
+        "sha256": "43ef0335cbc321ac21bab3b8cb2772fc6f74666eeb1b5d277577d0197f731875"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\31b5a12f4d\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 54,
+      "axis_RZ_m": [
+        1.7292274236679077,
+        -0.033170152455568314
+      ],
+      "X_RZ_m": [
+        1.4857898284458924,
+        -1.1544576074447879
+      ],
+      "omp_sep_R_m": 2.26919293268199,
+      "legs": {
+        "inner": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.1921796186116456,
+            -1.3588222143888866
+          ],
+          "refinement_m": 9.006897283944594e-09
+        },
+        "outer": {
+          "segment": 59,
+          "strike_RZ_m": [
+            1.5613847939702092,
+            -1.2447896961185883
+          ],
+          "refinement_m": 1.6378726498929517e-08
+        }
+      },
+      "reason": "ValueError: inner strike on 68, current engineering rule requires 69"
+    },
+    {
+      "case_id": "bb4a894875",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_bb4a894875.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_bb4a894875.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_bb4a894875.parquet",
+        "bytes": 8354805,
+        "sha256": "efa159e6543dd5ee28f3ec92c7d9a51ab061fab77b88c007fcb464bdf88e5d5e"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\bb4a894875\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 61,
+      "reason": "ValueError: sampling outside EFIT grid is forbidden"
+    },
+    {
+      "case_id": "747fca45a9",
+      "status": "reserve_geometry_passed",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_747fca45a9.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_747fca45a9.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_747fca45a9.parquet",
+        "bytes": 7791686,
+        "sha256": "7d7721862cb289d9ba551f0605539442dcda2b67398eaba021e7002219f0487b"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\747fca45a9\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 48,
+      "axis_RZ_m": [
+        1.727672815322876,
+        0.03936922177672386
+      ],
+      "X_RZ_m": [
+        1.374336540378617,
+        -1.099908627966256
+      ],
+      "omp_sep_R_m": 2.265958170025225,
+      "legs": {
+        "inner": {
+          "segment": 69,
+          "strike_RZ_m": [
+            1.0669518940574716,
+            -1.2647496723980785
+          ],
+          "refinement_m": 1.007548173209296e-08
+        },
+        "outer": {
+          "segment": 59,
+          "strike_RZ_m": [
+            1.4574627619248655,
+            -1.2447769203903525
+          ],
+          "refinement_m": 1.3443333214877542e-09
+        }
+      },
+      "active_OMP_endpoints_RZ_m": {
+        "omp_entry": [
+          [
+            1.6807174746675833,
+            -1.2429636567829063
+          ],
+          [
+            1.6452814505546696,
+            -1.2447957888004426
+          ]
+        ],
+        "shelf": [
+          [
+            1.6452,
+            -1.2448
+          ],
+          [
+            1.40117,
+            -1.24477
+          ]
+        ],
+        "omp_connector": [
+          [
+            1.4002046434423296,
+            -1.2449831467624124
+          ],
+          [
+            1.3858170977951636,
+            -1.2481598577397073
+          ]
+        ],
+        "floor": [
+          [
+            1.4277,
+            -1.35782
+          ],
+          [
+            1.1645,
+            -1.35894
+          ]
+        ]
+      },
+      "tf_current_kA": -125.17653103235364,
+      "grid_shape": [
+        65,
+        65
+      ],
+      "lower_X_flux": -0.06844578510141476,
+      "lcfs_normalized_flux_quantiles": [
+        0.9989592710839856,
+        0.9996760556905556,
+        1.0000551700901903,
+        1.0004165994938639,
+        1.000815915457427
+      ],
+      "geometry_passed": true,
+      "inputs": {
+        "input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet": "7d7721862cb289d9ba551f0605539442dcda2b67398eaba021e7002219f0487b",
+        "baseline_review\\baseline_review.json": "9a78200a7c16d1661efe5c34bfbb2a20acf63240ca59a9069c34877c3724ea4c",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input\\D3D\\optimized\\d3d-divertor-floor-shelf\\manifest.json": "3c4751974a3595780b5404d315ceeb503b535fbbc61a18ad4402e019c64bf390"
+      }
+    },
+    {
+      "case_id": "c016937bba",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_c016937bba.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_c016937bba.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c016937bba.parquet",
+        "bytes": 18147757,
+        "sha256": "73b558ae14f236d505baca810f1a6a4d643e0735f38b74b31875d77d213adb95"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c016937bba\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 55,
+      "reason": "ValueError: lower X-point cannot be validated near LCFS"
+    },
+    {
+      "case_id": "8f514caf36",
+      "status": "excluded",
+      "source": {
+        "path": "data/diii_d_train/d3d_shot_8f514caf36.parquet",
+        "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_8f514caf36.parquet",
+        "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_8f514caf36.parquet",
+        "bytes": 7402979,
+        "sha256": "87971c8e081283de577035e0520919502296bb1e2c2d91d4b54d3d097db7a42d"
+      },
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\8f514caf36\\input-root",
+      "time_ms": 1400.0,
+      "frame_index": 56,
+      "axis_RZ_m": [
+        1.7152152061462402,
+        -0.00884610041975975
+      ],
+      "X_RZ_m": [
+        1.2764375935444945,
+        -1.1513224557958845
+      ],
+      "omp_sep_R_m": 2.2720200570183713,
+      "legs": {
+        "inner": {
+          "segment": 70,
+          "strike_RZ_m": [
+            1.0174943551070397,
+            -1.1826790508004916
+          ],
+          "refinement_m": 3.6094572042050424e-08
+        },
+        "outer": {
+          "segment": 68,
+          "strike_RZ_m": [
+            1.3222191959836758,
+            -1.358268854485176
+          ],
+          "refinement_m": 5.007231999514231e-09
+        }
+      },
+      "reason": "ValueError: inner strike on 70, current engineering rule requires 69"
+    }
+  ]
+}

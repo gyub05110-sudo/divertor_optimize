@@ -1,0 +1,32 @@
+{
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+  "logical_cpus": 16,
+  "packages": {
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "shapely": "2.1.2",
+    "pyarrow": "25.0.1",
+    "cupy-cuda12x": null,
+    "numba": null,
+    "matplotlib": "3.10.8",
+    "pytest": "9.1.1"
+  },
+  "env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONPATH": "D:/DivertorOptimization/worktrees/d3d-report-correction-20261104/.local_dependencies/d3d-fixed-equilibrium",
+    "TEMP": "D:/DivertorOptimization/tmp",
+    "TMP": "D:/DivertorOptimization/tmp",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "gpu_runtime_packages": {
+    "cuda-pathfinder": "1.8.4",
+    "cupy-cuda12x": "14.2.0",
+    "fastrlock": "0.8.4",
+    "nvidia-cuda-nvrtc-cu12": "12.9.86",
+    "nvidia-cuda-runtime-cu12": "12.9.79"
+  }
+}

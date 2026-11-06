@@ -1,0 +1,30 @@
+{
+  "case": {
+    "case_id": "fad1624516",
+    "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\fad1624516\\input-root",
+    "time_ms": 1400.0,
+    "hashes": {
+      "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "42725efdd7f426e212e47bc95b021666651866594b7e557209b3e177920514e6",
+      "baseline_review/baseline_review.json": "0f4ab5d2516fb778fb8d8b33513f5d97d61de12ed529044f6c3799b71d43ba39",
+      "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+      "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "41d4d31025300aed93904bb8314b6d32215f45b3574ca99dbdb0b5b02099df1a"
+    },
+    "supplied_wall_equal": true,
+    "supplied_geometry_equal": true,
+    "omp_endpoints_equal": true
+  },
+  "seed": 20639,
+  "arm_order": [
+    "screen",
+    "direct"
+  ],
+  "budget_s": 200,
+  "campaign_protocol_sha256": "8592beb9f6ff0a667ba5413e8e4e45ab0c4b1a4da96d109fbce69f4a9321aa32",
+  "gpu_inventory": {
+    "returncode": 0,
+    "rows": [
+      "0, NVIDIA GeForce RTX 3090, 610.88"
+    ]
+  },
+  "created_utc": "2026-11-06T02:12:23.606213+00:00"
+}

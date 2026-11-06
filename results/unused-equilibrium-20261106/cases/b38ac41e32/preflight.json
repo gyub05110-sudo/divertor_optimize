@@ -1,0 +1,13 @@
+{
+  "case_id": "b38ac41e32",
+  "status": "excluded",
+  "source": {
+    "path": "data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+    "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_b38ac41e32.parquet",
+    "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_b38ac41e32.parquet",
+    "bytes": 10924852,
+    "sha256": "3048e38b8c4b57f5048252daebc906798bd8708a563f722d21aff9a3366a7104"
+  },
+  "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\b38ac41e32\\input-root",
+  "reason": "ValueError: nearest stored EFIT time is at least 100 ms from 1400 ms"
+}

@@ -1,0 +1,42 @@
+{
+  "case_id": "31b5a12f4d",
+  "status": "excluded",
+  "source": {
+    "path": "data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+    "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_31b5a12f4d.parquet",
+    "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_31b5a12f4d.parquet",
+    "bytes": 17351197,
+    "sha256": "43ef0335cbc321ac21bab3b8cb2772fc6f74666eeb1b5d277577d0197f731875"
+  },
+  "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\31b5a12f4d\\input-root",
+  "time_ms": 1400.0,
+  "frame_index": 54,
+  "axis_RZ_m": [
+    1.7292274236679077,
+    -0.033170152455568314
+  ],
+  "X_RZ_m": [
+    1.4857898284458924,
+    -1.1544576074447879
+  ],
+  "omp_sep_R_m": 2.26919293268199,
+  "legs": {
+    "inner": {
+      "segment": 68,
+      "strike_RZ_m": [
+        1.1921796186116456,
+        -1.3588222143888866
+      ],
+      "refinement_m": 9.006897283944594e-09
+    },
+    "outer": {
+      "segment": 59,
+      "strike_RZ_m": [
+        1.5613847939702092,
+        -1.2447896961185883
+      ],
+      "refinement_m": 1.6378726498929517e-08
+    }
+  },
+  "reason": "ValueError: inner strike on 68, current engineering rule requires 69"
+}

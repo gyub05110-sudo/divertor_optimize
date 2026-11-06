@@ -1,0 +1,15 @@
+{
+  "case_id": "bb4a894875",
+  "status": "excluded",
+  "source": {
+    "path": "data/diii_d_train/d3d_shot_bb4a894875.parquet",
+    "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_bb4a894875.parquet",
+    "local": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_bb4a894875.parquet",
+    "bytes": 8354805,
+    "sha256": "efa159e6543dd5ee28f3ec92c7d9a51ab061fab77b88c007fcb464bdf88e5d5e"
+  },
+  "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\bb4a894875\\input-root",
+  "time_ms": 1400.0,
+  "frame_index": 61,
+  "reason": "ValueError: sampling outside EFIT grid is forbidden"
+}

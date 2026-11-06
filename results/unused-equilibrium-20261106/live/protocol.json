@@ -1,0 +1,160 @@
+{
+  "schema": "unused-equilibrium-live.v1",
+  "seeds": [
+    20611,
+    20627,
+    20639
+  ],
+  "budget_s": 200,
+  "source": "OMP",
+  "radius_mm": 20,
+  "size": 12,
+  "batch": 4,
+  "max_draws": 600,
+  "backend": "gpu",
+  "levels": {
+    "coarse": [
+      "cubic",
+      320,
+      0.0005,
+      161,
+      0.001
+    ],
+    "fine": [
+      "cubic",
+      1280,
+      0.000125,
+      641,
+      0.00025
+    ]
+  },
+  "reference": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "cases": [
+    {
+      "case_id": "deb842cf1e",
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\deb842cf1e\\input-root",
+      "time_ms": 1400.0,
+      "hashes": {
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "24000d2a2fea8838e5226f63d7914e2403c95af5ac4c1d3c9cafd2570b29952d",
+        "baseline_review/baseline_review.json": "debc116c1ae241fa28ec32ce9f60c22589dd3951847027142464fcee60c767ec",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "2b5cdf5969bee5ad46569fbd7ab090b18c44c89d34a543726d9db05010b046c9"
+      },
+      "supplied_wall_equal": true,
+      "supplied_geometry_equal": true,
+      "omp_endpoints_equal": true
+    },
+    {
+      "case_id": "fad1624516",
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\fad1624516\\input-root",
+      "time_ms": 1400.0,
+      "hashes": {
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "42725efdd7f426e212e47bc95b021666651866594b7e557209b3e177920514e6",
+        "baseline_review/baseline_review.json": "0f4ab5d2516fb778fb8d8b33513f5d97d61de12ed529044f6c3799b71d43ba39",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "41d4d31025300aed93904bb8314b6d32215f45b3574ca99dbdb0b5b02099df1a"
+      },
+      "supplied_wall_equal": true,
+      "supplied_geometry_equal": true,
+      "omp_endpoints_equal": true
+    },
+    {
+      "case_id": "4d14a35fcb",
+      "root": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\4d14a35fcb\\input-root",
+      "time_ms": 1400.0,
+      "hashes": {
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "7d9a12aef9d23115fae9b367f128f0a1b7a20b934cee45fe5a94d453373c8b69",
+        "baseline_review/baseline_review.json": "83f1fe04bf6a0c588aae3f9077ecf003aebbfad4c8c7cc6297e7064afe67b2df",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "1fd92417de0c7f8a8b7b550896b4c4e4d51d5086267263e8ee5296da08929e7c"
+      },
+      "supplied_wall_equal": true,
+      "supplied_geometry_equal": true,
+      "omp_endpoints_equal": true
+    }
+  ],
+  "source_hashes": {
+    "d3d_optimization/__init__.py": "897e2557bc2434d17ee1e2cc5efa428038891f438cd9603a09cba876e70dbde4",
+    "d3d_optimization/accelerated_transport.py": "6b3cd88e90ea55ea26bad2b677ea99aed3d0b4c76825d1d9ac7a72676e2d0470",
+    "d3d_optimization/adaptive_peak.py": "6156b5f214aad05d1661dcbbf7ebf9a36a3ec74f1541e532923b6da819392d81",
+    "d3d_optimization/boundary_evaluator.py": "33ae04f9a95245cd74525c719aa35b2ee6f96f45cd6811a63b62973c8dc6ced0",
+    "d3d_optimization/boundary_transport.py": "16c9299be4803dfe1d965f8e8f8065f8dbf806cd491361833514ce3eda7e6f79",
+    "d3d_optimization/broadened_evaluator.py": "98664db9607ded23858a398385b7bf24bf8c0ad140f1fd4a9ce2cb671cc12594",
+    "d3d_optimization/broadening.py": "225a30d1b30107b9f4d530c091790275f4829a596c15dc95ea332e73ee4a7e60",
+    "d3d_optimization/broadening_study.py": "dd93d46416fa564ded86e20807355459fe0ce7905ca64e917c0a287b7e5dbde1",
+    "d3d_optimization/campaign_geometry.py": "d82b4f4f857b48bd2b4de3135228aa1e3382459bf2b45f76632805ae473b60d7",
+    "d3d_optimization/campaign_incumbents.py": "fec7039dc601792323eebe281c8cf0c421c625ab707978d462989dac58163182",
+    "d3d_optimization/campaign_search.py": "33567cce9e02774d3e4a0bdc0b18e01db12f6577826a316904b7543882199bc5",
+    "d3d_optimization/campaign_state.py": "faafec929d15bf8cf31912c2b5a28ac2b7774d41666675ae490d09e44c0ce69e",
+    "d3d_optimization/campaign_validation.py": "8e8943fe84e1d573bb6359249463be6b811fe4fd0a4d246cd16df2c4386a01b9",
+    "d3d_optimization/case.py": "584d026f9aa46ac35a9fbcbf589153e50e479503f39a5b6bc71b7ac60c572dac",
+    "d3d_optimization/continuous_boundary.py": "67f5d5a43033e3cd4fe5634d7b6a45b04f34d8304638eef3865f6c203631c92d",
+    "d3d_optimization/continuous_path_bounds.py": "17c02d8acb99ee0d0a0d08d28e2f0f886fa752369d597eb25c4b4e0cf1e374fe",
+    "d3d_optimization/continuous_transport_certificate.py": "9bce5dbe9629054a588fd36e30ce80841f2258081e77c826d97a5698d19501cb",
+    "d3d_optimization/enclosure_math.py": "b5906fe405a210b392a1fff7ed94b61cf4acf5ae29ab29c0159e38d483b4f3d6",
+    "d3d_optimization/expanded_search.py": "4c4459f7fe49a56dfe14570b8e2e5375ab99f5661ae14e198a99e93fe54692f6",
+    "d3d_optimization/final_refinement.py": "644f0de404fd961ddd2937de252b837858f4be5d47531ca1bd0c550a2ab912bd",
+    "d3d_optimization/flux_footprint.py": "2f84907b8689893061fbf6533f8806befa402c7aaa047f46383e9dd2222ff85e",
+    "d3d_optimization/frozen_field.py": "e0b6e03baf0064eb4d63a14e2eb1f778970ea3796131ad3eb85e2f3d685071de",
+    "d3d_optimization/frozen_mapping.py": "5020df98680f3f179092f38e888e747e20c501ed2d11e3f0d2d28f130f08d528",
+    "d3d_optimization/geometry_transport_bounds.py": "9e185fead157673980dcb698c91b170380c92df58211e1fb71c712112271deaf",
+    "d3d_optimization/geometry_transport_certificate.py": "f4edcf8ca4544c463678bf442d06a58533a771a98687fbaeec803c05ba315c2d",
+    "d3d_optimization/gpu_footprint.py": "e43ab2870bacdec3e2493b7ff200952ef7ade1717d9d3f454b8b3060eba6c239",
+    "d3d_optimization/imp_tangent.py": "4fa2d974ca41eb49ba18aeb56ed71a0d1f6ad962679347bdd55befb8636f47c7",
+    "d3d_optimization/independent_sources.py": "28af23f44bdc9059d2da264e6fe02dd8c6df328655c2eb7c13ab2c28af775a5d",
+    "d3d_optimization/multisurface.py": "654244e36aa085ea8a27c996fa142b04d44b863e3ff99a058e2f1a395bd08f18",
+    "d3d_optimization/multisurface_search.py": "e91d2bd8e08106b33825004a40a2229fb6a69cc575b5ab235e0abf90d0d817be",
+    "d3d_optimization/multisurface_validate.py": "b7b39b42b8209685abbf9624d58188700cdaecd162c92c0e30fd5fcc72f032bd",
+    "d3d_optimization/operating_sweep.py": "114665cf81662d826168446e399a22180bae96dec6c2b1fed523cdfee2d2f6d8",
+    "d3d_optimization/optimality_bounds.py": "6e93c855795fea613423f862dc7b66e11f52f4f2a7ea4b78a822bb42c4ecf869",
+    "d3d_optimization/physical_profile.py": "93f09adb6abcdfcdfcaadbb92ef3533da8d460e8f9897bbb451b42e2b6f9b541",
+    "d3d_optimization/reference_study.py": "9999e60e2d3c23d602a47710a745e1ab12e3e673f957f9f23d3691256fab2feb",
+    "d3d_optimization/reference_transport.py": "a59ba6966e9a5fe87a87f495aed871e747442a7bbabc1749165f792d5ae9c84d",
+    "d3d_optimization/regional_transport.py": "34d57c4a305387a76241d935514baf68ae50a5a168971b46a70266bc4d75174e",
+    "d3d_optimization/run_provenance.py": "4873d17dd566407b4521825e6eacf350d858b42fab0e7e9f4c98df6ce5349fa7",
+    "d3d_optimization/selective_peak.py": "7e43e353fc44fd6b5a45e602a913730903e753d0051b374211c26b6b7935eb11",
+    "d3d_optimization/selective_transport.py": "f9bbe96c7db334846cbee127bfb3dce81c08676082d022c43018c7e46f937e70",
+    "d3d_optimization/shape.py": "7e1e3d31e4b722d5a3212c5099f6965f672f15be3fc493655570e0e25c870562",
+    "d3d_optimization/tangent_direct.py": "1f1e1daedce999e8c896f87f3cb6108bcc9024ce6a31bf5565addd34b9bdbc42",
+    "d3d_optimization/tangent_evaluator.py": "b061834aee3f739eeefde6f2a297a4cdea300f376d628eb1bfac00b1a8019622",
+    "d3d_optimization/tangent_geometry.py": "0de07e94c6deb1f281b64f0c775a5a1599cba5a9d4ecc9f1f895434bde871f98",
+    "d3d_optimization/thermal_box_bounds.py": "26d72762b5fcf2a2af5f40e8034e2a0d16bc62c5fa71e892224469c59cc3651a",
+    "d3d_optimization/transport_deposition.py": "aeaa589fe0870641f46ba19aabf5fa3994140f52fb8eb745ca598f3b34f37884",
+    "d3d_optimization/transport_evaluator.py": "fbec7a20dff533026ded51d5244e7dcaf25381497ea6c376e135815a19b523f7",
+    "d3d_optimization/transport_peak_bounds.py": "8c73209cd2f5870f3e7f64ebc6ab4db514e31888ec94d105c0d4cc6826ba2be4",
+    "d3d_optimization/validate_expanded.py": "39cf51548d11fdbf90fd8b67cee6153697b228d32c9c7b10ac820f0960cce206",
+    "optimize_boundary_transport.py": "8912143b8e08b8cd69105587d83c8835b6ed75b3c844b2d433a1c6ffae41a6a7",
+    "run_tangent_curvature_study.py": "e4e00b6e11aab7efd2fa7cfd02e4c5e3fbff2532825c1050b76e8639ef663f90",
+    "verification/nf_base_budget.py": "7940f20406c755b14ca3c52cc159348d9599b2a18f3536eedd727db7e1b01c28",
+    "verification/nf_base_live.py": "338a15c653aa30aed4b8a68a43fbb57c8b3da147876d9b6c03e1284382ee6878",
+    "verification/nf_search_benchmark.py": "ba101dfd48612d04f39dc8d43112216887a01362052d969528d3de71ae8333d7",
+    "verification/nf_unused_live.py": "61dc65d0e3ad39432f8a248948abdae80f82496e4d108358e4833d3e019d1bcd",
+    "verification/validate_boundary_transport.py": "497a4ee2d2fa5f438d591b8175e2a1a410673648a09f4147c6e0382aebaab269",
+    "verification/validate_reference_transport.py": "6814d563fda5c7c7f8659b5f68b65145325d1ea7083038ec5690a86655ed31a4"
+  },
+  "study_hashes": {
+    "protocol.ko.md": "1125d0718fc56d486951cede41c1191644293f1d6986134b9efb2bb60eda583b",
+    "selection.json": "9ceffedce5633cbf7d39b2ab928a6f8bb2f53d4cf9b18295e5e4f318c19df3ee",
+    "downloads.json": "d2db95748ae57a2e49953d0c77a4f03d5435da6291d8541ce3f64273bad4d562",
+    "preflight.json": "3c7e9777f9d47efc434afc0ac24d837d13f23ce943edb16fb3e5fe0393b5856e"
+  },
+  "python_version": "3.13.12",
+  "arm_order_rule": "alternate parity of selected case index * 3 + seed index",
+  "budget_exclusions": [
+    "source acquisition and staging",
+    "geometry admission preflight",
+    "parent hashing and GPU inventory",
+    "empty cache directory creation",
+    "result serialization and cache cleanup"
+  ],
+  "cache_policy": "independent empty CUDA and CuPy disk caches for every fresh worker",
+  "startup_policy": "parent monotonic timestamp immediately before subprocess launch",
+  "created_utc": "2026-11-06T01:38:53.420548+00:00"
+}

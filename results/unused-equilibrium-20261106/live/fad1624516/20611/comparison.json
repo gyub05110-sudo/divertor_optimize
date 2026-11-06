@@ -1,0 +1,191 @@
+{
+  "case_id": "fad1624516",
+  "seed": 20611,
+  "status": "completed",
+  "arm_order": [
+    "screen",
+    "direct"
+  ],
+  "shared_prefix": {
+    "length": 6,
+    "equal": true,
+    "informative": true
+  },
+  "baseline_equal": true,
+  "arms": {
+    "direct": {
+      "stop": "deadline",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999986,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.4432899320127035e-15
+        },
+        "peak": 4.848363719473449,
+        "A2": 0.37609927335872745
+      },
+      "incumbent": {
+        "kind": "original_wall",
+        "peak": 4.848363719473449,
+        "A2": 0.37609927335872745
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 4.9804431497908,
+        "A2": 0.3491519968508928
+      },
+      "first_5pct_s": null,
+      "coarse_ids": [],
+      "fine_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "eligible_fine": 5,
+      "completed_draws": 6,
+      "rejected": {},
+      "startup_s": 1.0038247,
+      "elapsed_s": 212.0419606
+    },
+    "screen": {
+      "stop": "candidate_limit",
+      "error": null,
+      "baseline": {
+        "eligible": true,
+        "errors": [],
+        "ledger": {
+          "prescribed": 1.0,
+          "deposited": 0.9999999999999986,
+          "unhit": 0.0,
+          "unresolved": 0.0,
+          "balance_error": 1.4432899320127035e-15
+        },
+        "peak": 4.848363719473449,
+        "A2": 0.37609927335872745
+      },
+      "incumbent": {
+        "kind": "original_wall",
+        "peak": 4.848363719473449,
+        "A2": 0.37609927335872745
+      },
+      "best_eligible_new": {
+        "i": 1,
+        "id": "1161f64c2c2b7d2498731b17211249aa65e515675554bd6354d3711a3b277811",
+        "peak": 4.9804431497908,
+        "A2": 0.3491519968508928
+      },
+      "first_5pct_s": null,
+      "coarse_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fine_ids": [
+        1,
+        6,
+        8
+      ],
+      "eligible_fine": 3,
+      "completed_draws": 12,
+      "rejected": {},
+      "startup_s": 1.0809406,
+      "elapsed_s": 190.5194865
+    }
+  },
+  "audits": {
+    "direct": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 122.4076664,
+        "measure_original": 0.00016000000000815362,
+        "build_fine": 0.0023145999999911737,
+        "draw": 0.19740820000001236,
+        "fine": 88.43035129999997
+      },
+      "late_events": [
+        {
+          "stage": "fine",
+          "start_s": 197.500976,
+          "i": 5,
+          "id": "e72d2142ddbd2f5de2df0ef07e0d6e68038fa9f9c5f29fc7c1d96dfe941b6a9a",
+          "end_s": 212.0419505,
+          "status": "late_discarded"
+        }
+      ],
+      "eligible_fine": 5
+    },
+    "screen": {
+      "valid": true,
+      "phase_seconds": {
+        "prepare_fine": 121.9950094,
+        "measure_original": 0.00011779999999816937,
+        "build_fine": 0.0017644999999930633,
+        "prepare_coarse": 10.004352199999985,
+        "build_coarse": 0.0019900000000063756,
+        "draw": 0.39970919999996113,
+        "coarse": 12.928983200000005,
+        "fine": 44.106219399999986
+      },
+      "late_events": [],
+      "eligible_fine": 3
+    }
+  },
+  "errors": {},
+  "processes": {
+    "direct": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2795228466858600,
+      "exit_observed_ns": 2795441003322500,
+      "elapsed_s": 212.5364639,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\direct-cache-o6tlzez6\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "screen": {
+      "returncode": 0,
+      "error": null,
+      "launch_ns": 2795037467451500,
+      "exit_observed_ns": 2795228446287400,
+      "elapsed_s": 190.9788359,
+      "environment": {
+        "CUPY_CACHE_DIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\cupy",
+        "CUDA_CACHE_PATH": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\cuda",
+        "TEMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\tmp",
+        "TMP": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\tmp",
+        "MPLCONFIGDIR": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\matplotlib",
+        "HF_HOME": "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\live\\fad1624516\\20611\\screen-cache-bux0c06t\\huggingface",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}
