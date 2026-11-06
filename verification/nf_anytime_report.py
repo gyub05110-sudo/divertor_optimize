@@ -790,6 +790,117 @@ def load_uncertainty(study, frozen, hashes):
                 range_scope="finite numerical settings within the same transport model; not confidence intervals or continuum error bounds")
 
 
+def rejection_case_metrics(selected, scores):
+    """Independently classify native outcomes; a failed score is unknown, not negative."""
+    from verification.nf_anytime_reference import finite_positive, validate_measurement
+    identities = [row["id"] for row in selected["candidates"]]
+    require(len(set(identities)) == len(identities) and set(scores) == set(identities) and BASELINE_ID in scores,
+            "rejection native score identities differ from selection")
+    for scored in scores.values():
+        validate_measurement(scored["measurement"])
+        require(scored["status"] in ("completed", "failed", "not_evaluated_preparation_failed"),
+                "rejection native score status is unknown")
+
+    def compare(scored, reference, available):
+        state = scored["measurement"]
+        peak_known = bool(available and finite_positive(state.get("peak")) and finite_positive(reference.get("peak")))
+        area_known = bool(available and finite_positive(state.get("A2")) and finite_positive(reference.get("A2")))
+        eligible = bool(available and reference.get("eligible", True) and scored["status"] == "completed" and state["eligible"])
+        return dict(reference=reference, reference_available=available,
+                    peak_ratio=state["peak"]/reference["peak"] if peak_known else None,
+                    peak_reduction_pct=100*(1-state["peak"]/reference["peak"]) if peak_known else None,
+                    A2_change_pct=100*(state["A2"]/reference["A2"]-1) if area_known else None,
+                    strictly_lower_observed_peak=state["peak"] < reference["peak"] if peak_known else None,
+                    eligible_peak_improvement=bool(eligible and peak_known and state["peak"] < reference["peak"]),
+                    diagnostic_only=True)
+
+    baseline, rows = scores[BASELINE_ID], []
+    for candidate in selected["candidates"]:
+        if candidate["id"] == BASELINE_ID:
+            continue
+        scored = scores[candidate["id"]]
+        eligibility = scored["measurement"]["eligible"] if scored["status"] == "completed" else None
+        comparisons, seen = [], set()
+        for observation in candidate["qualifying_observations"]:
+            key = observation["seed"], observation["policy"]
+            if key not in seen:
+                incumbent = observation["incumbent_600"]
+                comparisons.append(dict(seed=key[0], policy=key[1], **compare(scored, incumbent, incumbent["available"])))
+                seen.add(key)
+        rows.append(dict(candidate, fine=scored, fine_eligible=eligibility,
+                         coarse_eligibility_false_negative=eligibility,
+                         diagnostic_status="fine_evaluation_failed" if eligibility is None else
+                                           "fine_eligible_false_negative" if eligibility else "fine_ineligible",
+                         vs_baseline=compare(scored, baseline["measurement"],
+                                             baseline["status"] == "completed" and baseline["measurement"]["eligible"]),
+                         vs_live_coarse_incumbents=comparisons))
+    return dict(case_id=selected["case_id"], baseline=baseline, rows=rows,
+                false_negative_count=sum(row["coarse_eligibility_false_negative"] is True for row in rows),
+                fine_ineligible_count=sum(row["coarse_eligibility_false_negative"] is False for row in rows),
+                fine_evaluation_failed_count=sum(row["coarse_eligibility_false_negative"] is None for row in rows),
+                post_hoc=True, primary_winners_changed=False)
+
+
+def load_rejections(study, frozen, arms, hashes):
+    kind = "screen-rejections"
+    summary = _post_context(study, kind, hashes)
+    if summary is None:
+        return dict(available=False, reason="관측된 coarse 열결과 탈락의 별도 사후 native 진단이 완료되지 않았거나 실행되지 않았습니다.")
+    from verification.nf_anytime_rejections import protocol_details, select_rejections, source_paths
+    protocol = _sealed(study, kind, "protocol.json", hashes)
+    selection = _sealed(study, kind, "selection.json", hashes)
+    live_hashes = _sealed(study, kind, "live-evidence.json", hashes)
+    require(protocol["details"] == protocol_details() and
+            set(protocol["source_hashes"]) == {p.relative_to(CODE_ROOT).as_posix() for p in source_paths()} and
+            protocol["reference"] == frozen["reference"] and protocol["source"] == "OMP" and
+            protocol["radius_mm"] == 20 and protocol["backend"] == "gpu", "rejection native protocol differs")
+    metadata = dict(protocol_sha256=hashes[kind+"/protocol.json"], selection_sha256=hashes[kind+"/selection.json"])
+    require(all(summary[key] == value for key, value in metadata.items()) and
+            selection["protocol_sha256"] == metadata["protocol_sha256"], "rejection selection or protocol hash differs")
+    require(selection["live_evidence_hashes"] == live_hashes and
+            all(hashes.get(name) == expected for name, expected in live_hashes.items()), "rejection raw evidence differs from audited main records")
+    canonical = select_rejections(arms, live_hashes)
+    require(all(selection[key] == value for key, value in canonical.items()), "rejection locked selection differs from audited raw events")
+    require(summary["post_hoc"] is True and summary["primary_winners_changed"] is False,
+            "rejection summary changed the primary comparison scope")
+    selected_ids = {case["case_id"] for case in canonical["cases"]}
+    require(selected_ids <= {case["case_id"] for case in frozen["cases"]} and
+            len(summary["cases"]) == len(selected_ids) and {case["case_id"] for case in summary["cases"]} == selected_ids,
+            "rejection result cases differ from selection")
+    cases = []
+    count_keys = ("false_negative_count", "fine_ineligible_count", "fine_evaluation_failed_count")
+    for selected in canonical["cases"]:
+        case = selected["case_id"]
+        result = _sealed(study, kind, case+"/result.json", hashes)
+        claimed = next(row for row in summary["cases"] if row["case_id"] == case)
+        require(claimed["result_sha256"] == hashes[kind+"/"+case+"/result.json"] and
+                all(result[key] == value for key, value in metadata.items()), "rejection result hash or selection provenance differs")
+        expected = {case+"/scores/"+row["id"]+".cubic1280.json": row for row in selected["candidates"]}
+        require(set(result["score_hashes"]) == set(expected), "rejection native score set differs")
+        scores = {}
+        for name, candidate in expected.items():
+            scored = _sealed(study, kind, name, hashes)
+            require(result["score_hashes"][name] == hashes[kind+"/"+name], "rejection native score hash differs")
+            identity = dict(id=candidate["id"], candidate=candidate["candidate"], case_id=case,
+                            setting="cubic1280", setting_tuple=["cubic", 1280, .000125, 641, .00025], **metadata)
+            require(all(scored[key] == value for key, value in identity.items()), "rejection native score provenance differs")
+            scores[candidate["id"]] = scored
+        calculated = rejection_case_metrics(selected, scores)
+        require(all(result[key] == value for key, value in calculated.items()) and
+                all(claimed[key] == calculated[key] for key in count_keys), "rejection independently reconstructed outcomes differ")
+        cases.append(dict(calculated, result_sha256=claimed["result_sha256"], score_hashes=result["score_hashes"]))
+    totals = {key: sum(case[key] for case in cases) for key in count_keys}
+    require(all(summary[key] == value for key, value in totals.items()) and
+            all(summary[key] == canonical[key] for key in ("selected_candidate_count", "qualifying_observation_count", "complete_live_coverage")),
+            "rejection aggregate counts differ from observed native statuses")
+    return dict(available=True, cases=cases, costs=summary["costs"], post_hoc=True, primary_winners_changed=False,
+                selected_candidate_count=canonical["selected_candidate_count"],
+                qualifying_observation_count=canonical["qualifying_observation_count"],
+                complete_live_coverage=canonical["complete_live_coverage"], uncertified_arms=canonical["uncertified_arms"],
+                examined_case_ids=canonical["examined_case_ids"], examined_arm_count=canonical["examined_arm_count"],
+                native_setting="cubic1280", scope=canonical["scope"], **totals)
+
+
 def make_summary(study):
     frozen, arms, hashes = load_live(study)
     amendment = read_json(study/"amendment.json")
@@ -803,12 +914,14 @@ def make_summary(study):
             digest(prior/"interruption.json") == amendment["interruption_sha256"], "aborted-run amendment evidence changed")
     reference = load_reference(study, frozen, hashes)
     uncertainty = load_uncertainty(study, frozen, hashes)
+    rejections = load_rejections(study, frozen, arms, hashes)
     return dict(schema="nf-anytime-report.v1", generated_utc=datetime.now(timezone.utc).isoformat(),
                 study=str(study), source_sha256=digest(__file__), input_hashes=hashes,
                 frozen_case_ids=[row["case_id"] for row in frozen["cases"]],
                 seeds=list(SEEDS), policies=list(POLICIES), checkpoints_s=list(CHECKPOINTS),
                 reference_inputs=frozen["reference"], amendment=amendment,
                 live=summarize_live(arms), finite_panel=reference, numerical_settings=uncertainty,
+                screen_rejections=rejections,
                 interpretation=dict(original_wall="supplied DIII-D original material wall", source="OMP",
                                     already_studied_equilibria=True, holdout_claim=False,
                                     global_optimum_claim=False, independent_seed_discharge_claim=False,
@@ -924,6 +1037,66 @@ def late_result_text(live):
     return text
 
 
+def numerical_lead(numerical):
+    if not numerical["available"]:
+        return ""
+    descriptions = []
+    for other in ("fine_adaptive", "random_fine"):
+        pairs = [row for case in numerical["cases"] for row in case["method_checkpoint_pairs"]
+                 if row["cutoff_s"] == 600 and row["first_policy"] == "coarse_adaptive" and row["second_policy"] == other]
+        relations = Counter(row.get("range_relation", "incomplete_or_ineligible") for row in pairs)
+        paired_lower = sum(row.get("paired_ordering") == "first_lower_all_settings" for row in pairs)
+        verified_lower = sum(row.get("range_relation") == "first_below_second" and
+                             row.get("native_replay_verified_for_pair", False) for row in pairs)
+        descriptions.append(f"저비용 / {LABELS[other]}: 저비용 쪽으로 범위 분리 {relations['first_below_second']}/{len(pairs)}, "
+                            f"중첩·접촉 {relations['overlap_or_touch']}, 반대 분리 {relations['second_below_first']}, "
+                            f"미확인·부적격 {relations['incomplete_or_ineligible']}; "
+                            f"같은 설정마다 저비용 피크가 낮음 {paired_lower}/{len(pairs)}. "
+                            f"저비용 쪽 분리 중 이전 native 관측 재현까지 확인된 쌍은 {verified_lower}개다.")
+    return ("600초 선택의 네 수치 설정 범위를 교차 비교하면 "+" ".join(descriptions)+
+            " 같은 설정별 방향 일치와 설정 전체 범위의 분리는 별도 기준이다. "
+            "원값의 작은 승패만으로 미세 우열을 확정하지 않으며, 이 범위는 신뢰구간·연속체 오차 상한이 아니다.")
+
+
+def rejections_text(rejections):
+    if not rejections["available"]:
+        return rejections["reason"]
+    cases, details = [], []
+    labels = {True: "fine 적격/false negative", False: "fine 부적격", None: "알 수 없음"}
+    for case in rejections["cases"]:
+        cases.append((case["case_id"], len(case["rows"]), case["false_negative_count"],
+                      case["fine_ineligible_count"], case["fine_evaluation_failed_count"]))
+        for row in case["rows"]:
+            observations = row["qualifying_observations"]
+            coarse_values = [o["event"]["measurement"] for o in observations]
+            coarse_errors = sorted({error for state in coarse_values for error in state.get("errors", [])})
+            fine = row["fine"]["measurement"]
+            fine_errors = list(fine.get("errors", []))
+            if row["fine"].get("error"):
+                fine_errors.append(row["fine"]["error"])
+            comparisons = "; ".join(str(r["seed"])+": "+_fmt(r["peak_reduction_pct"])+"%"
+                                    for r in row["vs_live_coarse_incumbents"])
+            details.append((case["case_id"], row["id"][:12], labels[row["coarse_eligibility_false_negative"]],
+                            "; ".join(_fmt(s.get("peak"))+" / "+_fmt(s.get("A2")) for s in coarse_values),
+                            _fmt(fine.get("peak"))+" / "+_fmt(fine.get("A2")),
+                            _fmt(row["vs_baseline"]["peak_reduction_pct"]), comparisons,
+                            "; ".join(coarse_errors) or "없음", "; ".join(fine_errors) or "없음"))
+    return (f"인증된 main event 중 시간 내 완료·비캐시·침적 결과 반환·전체 부적격인 coarse 관측 "
+            f"{rejections['qualifying_observation_count']}건에서 평형별 중복을 제거한 "
+            f"{rejections['selected_candidate_count']}개 후보를 추가로 확인했다. "
+            "열유속 값·오류 종류·이전 fine 결과로 대상을 좁히지 않았고, 목록은 추가 계산 전에 고정했다. "
+            "native cubic1280만의 조건부 사후 진단이며 전역 false-negative 비율, 사전 등록 endpoint, 동일 시간 성능 비교가 아니다. "
+            "fine 적격이면 기준벽 개선 여부와 관계없이 coarse 적격성 false negative로 세며, 계산 실패는 알 수 없음으로 남긴다. "
+            "주요 600초 승자·곡선·개선 시각은 바뀌지 않는다.\n\n"+
+            _table(["평형", "선택 후보", "확인된 false negative", "fine 부적격", "알 수 없음"], cases)+
+            "\n\n피크/A2의 단위는 각각 MW/m²와 m²다. 비율은 관측값의 진단용 비교이며 부적격·실패 점수를 채택하지 않는다. "
+            "600초 비교는 해당 coarse 탈락을 관측한 시드의 고정 coarse-adaptive 승자를 기준으로 한다.\n\n"+
+            _table(["평형", "ID 앞 12자", "상태", "coarse 피크/A2", "native fine 피크/A2", "기준벽 대비 피크 감소 %",
+                    "시드별 600초 대비", "coarse 오류", "fine 오류"], details)+
+            "\n\n전체 coarse 관측·원시 해시·native score 상태·오류와 A2 변화, 기준벽 및 시드별 600초 원값 비교는 "
+            "summary.json의 screen_rejections에 보존한다. 추가 native 계산 비용도 이 항목의 costs에 따로 기록하며 600초 예산에 섞지 않는다.")
+
+
 def korean_report(summary):
     live = summary["live"]
     final = [r for r in live["checkpoint_metrics"] if r["cutoff_s"] == 600]
@@ -940,6 +1113,7 @@ def korean_report(summary):
              "600초의 같은 평형·시드별 비교에서 "+" ".join(lead_pairs)+
              " 각 비교는 세 평형 안의 세 시드, 총 아홉 쌍이며 독립 방전 아홉 개가 아니다. "
              "작은 native 차이도 사전 고정한 엄격한 < 규칙의 명목 승패에 남기고, 수치 설정에서의 분리 여부는 별도로 판정한다.", "",
+             numerical_lead(summary["numerical_settings"]), "",
              _table(["방법", "600초 사용 가능", "기준 대비 q 감소", "q↓·A2↑"],
                     [(LABELS[policy], sum(r["available"] for r in final if r["policy"] == policy),
                       sum(r["q_down"] for r in final if r["policy"] == policy),
@@ -1094,7 +1268,9 @@ def korean_report(summary):
                   "600초 선택 형상의 같은 설정 기준벽 대비 변화는 다음과 같다. 범위는 실제 확인한 설정의 최솟값–최댓값이며 "
                   "전체 설정 적격 여부를 별도로 표시한다.", "",
                   _table(["평형", "시드", "방법", "피크 감소 % 범위", "A2 변화 % 범위", "전 설정 적격", "A2 감소 있음", "기준 범위와 분리"], selected_rows)]
-    lines += ["", "## 설정 정정과 남은 범위", "",
+    lines += ["", "## 관측된 coarse 적격성 탈락의 별도 사후 진단", "",
+              rejections_text(summary.get("screen_rejections", dict(available=False, reason="추가 사후 진단 자료 없음"))), "",
+              "## 설정 정정과 남은 범위", "",
               "처음 population=12/projected_seeds=12 부분 실행에서는 성공한 바닥 투영 12개가 초기 집단을 모두 채워 "
               "DE 집단의 0–11번 계수가 고정됐다. 첫 방법 간 비교가 완료되기 전에 중단했으며 원래 생산 기본값 64/12로 정정했다. "
               "열유속 비교 결과로 조정하지 않았고 이전 부분 실행·스냅샷은 별도 보존하며 이번 27개 결과에 섞지 않았다. "
@@ -1143,7 +1319,7 @@ def render_curves(summary, out):
             if col == 0:
                 ax.set_ylabel("Fine peak / original-wall peak")
     handles = [Line2D([0], [0], color=COLORS[p], linestyle=STYLES[p], linewidth=1.8, label=p) for p in POLICIES]
-    fig.legend(handles=handles, loc="outside upper center", ncol=3, frameon=False)
+    fig.legend(handles=handles, loc="outside lower center", ncol=3, frameon=False)
     fig.suptitle("Best completed eligible fine result, including the original wall", fontsize=13)
     for suffix in ("png", "pdf"):
         fig.savefig(out/("anytime_curves."+suffix), dpi=200)

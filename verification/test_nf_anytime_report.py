@@ -293,6 +293,139 @@ def test_native_replay_coverage_separates_unobserved_and_eligibility_only_candid
     assert "고정 후보 전체의 열결과 일치" not in text
 
 
+def test_numerical_lead_keeps_range_separation_distinct_from_paired_setting_consistency():
+    pairs = []
+    for other in ("fine_adaptive", "random_fine"):
+        for relation, ordering in (("first_below_second", "first_lower_all_settings"),
+                                   ("overlap_or_touch", "first_lower_all_settings"),
+                                   ("overlap_or_touch", "exact_tie_all_settings")):
+            pairs.append(dict(cutoff_s=600, first_policy="coarse_adaptive", second_policy=other,
+                              range_relation=relation, paired_ordering=ordering, available=True,
+                              native_replay_verified_for_pair=True))
+    text = report.numerical_lead(dict(available=True, cases=[dict(method_checkpoint_pairs=pairs)]))
+    assert text.count("범위 분리 1/3") == 2
+    assert text.count("같은 설정마다 저비용 피크가 낮음 2/3") == 2
+    assert "미세 우열" in text and "신뢰구간" in text
+    assert report.numerical_lead(dict(available=False)) == ""
+
+
+def rejection_fixture(tmp_path, *, corrupt=None):
+    from verification import nf_anytime_rejections as audit
+
+    def seal(name, value):
+        path = tmp_path/name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(value, sort_keys=True), encoding="utf-8")
+        checksum = report.digest(path)
+        path.with_name(path.name+".sha256").write_text(checksum, encoding="ascii")
+        return checksum
+
+    frozen = dict(cases=[dict(case_id="case_a")], reference={})
+    seal("frozen.json", frozen)
+    coarse = score(1, 20., 11., stage="coarse", eligible=False)
+    coarse["measurement"]["errors"] = ["receiving_angle_constraint_failed"]
+    live = arm([baseline(), coarse], "coarse_adaptive")
+    live["checkpoints"] = {"600": report.reconstruct(live, 600.)}
+    prefix = "live/case_a/20611/coarse_adaptive/"
+    live_hashes = {"frozen.json": report.digest(tmp_path/"frozen.json"),
+                   prefix+"result.json": seal(prefix+"result.json", live),
+                   prefix+"events.jsonl": seal(prefix+"events.jsonl", live["events"])}
+    kind = "screen-rejections/"
+    sources = {}
+    for path in audit.source_paths():
+        name = path.relative_to(report.CODE_ROOT).as_posix()
+        target = tmp_path/kind/"code-snapshot"/name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(path.read_bytes())
+        sources[name] = report.digest(path)
+        target.with_name(target.name+".sha256").write_text(sources[name], encoding="ascii")
+    protocol = dict(campaign_sha256=live_hashes["frozen.json"], source_hashes=sources,
+                    details=audit.protocol_details(), reference={}, source="OMP", radius_mm=20, backend="gpu")
+    protocol_sha = seal(kind+"protocol.json", protocol)
+    seal(kind+"live-evidence.json", live_hashes)
+    selected = dict(protocol_sha256=protocol_sha, live_evidence_hashes=live_hashes,
+                    **audit.select_rejections([live], live_hashes))
+    if corrupt == "selection":
+        selected["cases"][0]["candidates"][1]["qualifying_observations"][0]["incumbent_600"]["peak"] = 99.
+    selection_sha = seal(kind+"selection.json", selected)
+    chosen = selected["cases"][0]
+    scores, score_hashes = {}, {}
+    for row in chosen["candidates"]:
+        record = dict(id=row["id"], candidate=row["candidate"], case_id="case_a", setting="cubic1280",
+                      setting_tuple=["cubic", 1280, .000125, 641, .00025],
+                      protocol_sha256=protocol_sha, selection_sha256=selection_sha,
+                      status="completed", error=None, seconds=.01,
+                      measurement=measurement(10. if row["id"] == report.BASELINE_ID else 12.))
+        if corrupt == "score_protocol" and row["id"] != report.BASELINE_ID:
+            record["protocol_sha256"] = "wrong"
+        if corrupt == "score_setting" and row["id"] != report.BASELINE_ID:
+            record["setting_tuple"][1] = 640
+        scores[row["id"]] = record
+        name = "case_a/scores/"+row["id"]+".cubic1280.json"
+        score_hashes[name] = seal(kind+name, record)
+    result = dict(protocol_sha256=protocol_sha, selection_sha256=selection_sha,
+                  score_hashes=score_hashes, **audit.assess_rejections(chosen, scores))
+    result_sha = seal(kind+"case_a/result.json", result)
+    counts = {key: result[key] for key in ("false_negative_count", "fine_ineligible_count", "fine_evaluation_failed_count")}
+    summary = dict(protocol_sha256=protocol_sha, selection_sha256=selection_sha,
+                   selected_candidate_count=1, qualifying_observation_count=1, complete_live_coverage=True,
+                   post_hoc=True, primary_winners_changed=False, scope=audit.SCOPE, costs={"seconds": .02},
+                   cases=[dict(case_id="case_a", result_sha256=result_sha, **counts)], **counts)
+    if corrupt == "summary_count":
+        summary["false_negative_count"] = 0
+    seal(kind+"summary.json", summary)
+    return frozen, [live], live_hashes, chosen, scores
+
+
+def test_rejection_metrics_distinguish_false_negative_from_gain_ineligibility_and_failure(tmp_path):
+    _, _, _, selected, scores = rejection_fixture(tmp_path)
+    identity = selected["candidates"][1]["id"]
+    result = report.rejection_case_metrics(selected, scores)
+    row = result["rows"][0]
+    assert result["false_negative_count"] == 1 and row["fine_eligible"]
+    assert not row["vs_baseline"]["eligible_peak_improvement"]  # Eligible even though peak worsens.
+    assert row["vs_live_coarse_incumbents"][0]["reference"]["peak"] == 10.
+    scores[identity]["measurement"] = measurement(8., eligible=False)
+    scores[identity]["measurement"]["errors"] = ["still_ineligible"]
+    result = report.rejection_case_metrics(selected, scores)
+    assert result["fine_ineligible_count"] == 1 and result["false_negative_count"] == 0
+    assert result["rows"][0]["vs_baseline"]["strictly_lower_observed_peak"]
+    assert not result["rows"][0]["vs_baseline"]["eligible_peak_improvement"]
+    scores[identity].update(status="failed", error="synthetic solver failure")
+    failed = report.rejection_case_metrics(selected, scores)
+    assert failed["fine_evaluation_failed_count"] == 1
+    assert failed["rows"][0]["coarse_eligibility_false_negative"] is None
+    assert failed["rows"][0]["fine"]["error"] == "synthetic solver failure"
+
+
+def test_rejection_loader_reconstructs_locked_selection_and_keeps_separate_costs(tmp_path):
+    frozen, arms, hashes, _, _ = rejection_fixture(tmp_path)
+    loaded = report.load_rejections(tmp_path, frozen, arms, dict(hashes))
+    assert loaded["available"] and loaded["false_negative_count"] == 1
+    assert loaded["selected_candidate_count"] == loaded["qualifying_observation_count"] == 1
+    assert not loaded["primary_winners_changed"] and loaded["costs"] == {"seconds": .02}
+    text = report.rejections_text(loaded)
+    assert "전역 false-negative 비율" in text and "cubic1280" in text
+    assert "receiving_angle_constraint_failed" in text
+    assert "알 수 없음" in text
+    score_path = next((tmp_path/"screen-rejections/case_a/scores").glob("*.json"))
+    score_path.write_bytes(score_path.read_bytes()+b" ")
+    with pytest.raises(ValueError, match="byte seal"):
+        report.load_rejections(tmp_path, frozen, arms, dict(hashes))
+
+
+@pytest.mark.parametrize("corrupt", ["selection", "score_protocol", "score_setting", "summary_count"])
+def test_rejection_loader_rejects_sealed_but_inconsistent_provenance_and_counts(tmp_path, corrupt):
+    frozen, arms, hashes, _, _ = rejection_fixture(tmp_path, corrupt=corrupt)
+    with pytest.raises(ValueError, match="rejection"):
+        report.load_rejections(tmp_path, frozen, arms, dict(hashes))
+
+
+def test_rejection_loader_allows_a_missing_postphase_without_inventing_zero_results(tmp_path):
+    result = report.load_rejections(tmp_path, dict(cases=[]), [], {})
+    assert not result["available"] and "false_negative_count" not in result
+
+
 def test_duration_breakdown_retains_charged_gaps_and_does_not_double_count_parity():
     a = arm([baseline(5.), score(1, 12., 9.)])
     a.update(startup_s=1., elapsed_s=20., parity=dict(fine=dict(cpu_seconds=.4, gpu_seconds=.5)),
