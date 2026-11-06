@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 from time import perf_counter_ns
+import numpy as np
 
 from d3d_optimization.broadening_study import digest, load_json as read, save
 from d3d_optimization.campaign_state import keep_awake, process_lock
@@ -21,6 +22,7 @@ from d3d_optimization.campaign_geometry import Candidate
 from d3d_optimization.reference_transport import ReferencePoint
 from verification.nf_unused_live import load_cases, input_record, INPUTS
 from verification.validate_boundary_transport import LEVELS
+from verification.nf_anytime_search import POPULATION, PROJECTED_SEEDS
 
 CODE_ROOT = Path(__file__).resolve().parents[1]
 SEEDS = (20611, 20627, 20639)
@@ -100,7 +102,7 @@ def freeze(study, source):
     study, source = Path(study).resolve(), Path(source).resolve()
     protocol = dict(schema="nf-anytime-campaign.v1", code_root=str(CODE_ROOT), source_study=str(source),
         seeds=list(SEEDS), policies=list(POLICIES), checkpoints_s=list(CHECKPOINTS), budget_s=max(CHECKPOINTS),
-        source="OMP", radius_mm=20, population=12, projected_seeds=12,
+        source="OMP", radius_mm=20, population=POPULATION, projected_seeds=PROJECTED_SEEDS,
         reference=asdict(ReferencePoint()), levels=dict(coarse=list(LEVELS[0]), fine=list(LEVELS[2])),
         hardware=hardware(),
         cases=load_cases(source), method_order="Latin rotation of case index plus seed index",
@@ -284,6 +286,43 @@ def validate_decisions(record):
     return True
 
 
+def validate_initialization(record):
+    config = record["adaptive_config"]
+    require(config["population"] == POPULATION and config["projected_seeds"] == PROJECTED_SEEDS,
+            "population settings differ from frozen native defaults")
+    initialized = None
+    for event in record["events"]:
+        if event["stage"] == "initialize":
+            require(record["policy"] != "random_fine", "random policy initialized an adaptive population")
+            evidence = event.get("initial_population")
+            if evidence is None:
+                require(event["status"] != "completed", "completed initialization lacks population evidence")
+                continue
+            x = np.asarray(evidence["vectors"], float)
+            require(x.ndim == 2 and x.shape[1] == 16 and len(x) > 0 and np.isfinite(x).all(),
+                    "invalid population vectors")
+            span = np.ptp(x, axis=0)
+            singular = np.linalg.svd((x-x.mean(axis=0)) / .2, compute_uv=False)
+            rank = int(np.count_nonzero(singular > 1e-12))
+            full = bool(np.all(span > 1e-12) and rank == 16)
+            require(evidence["count"] == len(x) and evidence["dimension"] == 16 and evidence["rank"] == rank and
+                    evidence["full_space_passed"] == full and np.allclose(evidence["axis_span"], span, rtol=0, atol=1e-15) and
+                    np.allclose(evidence["scale"], .2, rtol=0, atol=1e-15) and
+                    np.allclose(evidence["singular_values"], singular, rtol=1e-12, atol=1e-15),
+                    "population diversity evidence differs from recorded vectors")
+            if event["restart"] == 0:
+                require(evidence["startup"] and evidence["full_space_required"] and
+                        evidence["archive_count"] == 0 and evidence["inherited_count"] == 0,
+                        "cold initial population contains inherited designs")
+                if event["status"] == "completed":
+                    require(full and len(x) == POPULATION, "initial population failed full-space gate")
+                    initialized = event["end_s"]
+        if event["stage"] in ("fine", "coarse") and record["policy"] != "random_fine":
+            require(initialized is not None and initialized <= event["start_s"],
+                    "adaptive score precedes passed initialization gate")
+    return True
+
+
 def check_inputs(case):
     require(input_record(case["root"]) == {k: v for k, v in case.items() if k != "case_id"},
             "staged equilibrium, original material wall or constraints changed")
@@ -367,6 +406,7 @@ def audit(study):
                     raw = [json.loads(line) for line in (out / "events.jsonl").read_text(encoding="utf8").splitlines()]
                     validate_record(record, raw)
                     validate_decisions(record)
+                    validate_initialization(record)
                     require((process["returncode"] == 1) == (record["stop"] == "failed"), "return code and stop disagree")
                     require(record["elapsed_s"] <= process["elapsed_s"], "worker duration exceeds observed process")
                     row.update(status="arm_failed" if record["stop"] == "failed" else "completed",

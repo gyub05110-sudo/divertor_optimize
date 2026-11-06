@@ -201,3 +201,19 @@ def test_coarse_policy_cannot_bypass_promotions_by_relabelling_a_fine_event():
     r["final"] = r["checkpoints"]["600"]
     with pytest.raises(ValueError, match="policy|promotion"):
         d.validate_decisions(r)
+
+
+def test_initialization_gate_is_recomputed_from_vectors():
+    import numpy as np
+    from verification.nf_anytime_search import _population_evidence
+    d = driver()
+    vectors = np.vstack([np.zeros((1,16)), .01*np.eye(16), np.zeros((47,16))])
+    evidence = _population_evidence(vectors, True, 0, 0)
+    r = valid_record()
+    r.update(policy="fine_adaptive", adaptive_config={"population":64,"projected_seeds":12})
+    r["events"].insert(1, dict(stage="initialize", start_s=101., end_s=102., status="completed",
+                                level="fine", restart=0, initial_population=evidence))
+    assert d.validate_initialization(r)
+    r["events"][1]["initial_population"]["vectors"] = np.zeros((64,16)).tolist()
+    with pytest.raises(ValueError, match="population|diversity"):
+        d.validate_initialization(r)

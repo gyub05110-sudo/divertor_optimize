@@ -99,7 +99,8 @@ def experiment(monkeypatch, tmp_path):
     options = dict(score_s={0: 2., 2: 5.}, prep_s={0: 2., 2: 3.},
                    peak=lambda level, i: 9.-.1*i, repeat=False, fail=None,
                    housekeeping_s=0., eligible=lambda level, i: True,
-                   draw_rejection=None, restart_after_first=False)
+                   draw_rejection=None, restart_after_first=False,
+                   search_stage="differential_evolution")
     calls, feedback, initializations = [], [], []
 
     class Geometry:
@@ -145,7 +146,10 @@ def experiment(monkeypatch, tmp_path):
     def initialize(self, inherited=()):
         initializations.append((self.config.copy(), tuple(inherited)))
         clock.add(2.)
-        self.state["optimizer"] = dict(generation=0)
+        population = np.random.default_rng(self.config["seed"]).uniform(
+            -.08, .08, (self.config["population"], 16))
+        self.state["optimizer"] = dict(generation=0, population=population.tolist(),
+                                       index=0, energies=[None]*len(population))
 
     def score(self, x, stage):
         c = Candidate(self.source, self.mm, tuple(map(float, x)))
@@ -164,7 +168,7 @@ def experiment(monkeypatch, tmp_path):
         clock.add(1.)
         n = self.state["total_proposals"]
         i = n//2 if options["repeat"] else n
-        row = self.score(candidate(i).vector, "differential_evolution")
+        row = self.score(candidate(i).vector, options["search_stage"])
         feedback.append(row["identity"])
         self.state["total_proposals"] += 1
         if options["restart_after_first"] and n == 0:
@@ -299,10 +303,11 @@ def test_random_rejections_are_preserved_and_charged(experiment):
     assert not r["candidates"] and not experiment.calls
 
 
-def test_adaptive_initialization_preserves_twelve_projected_population(experiment):
+def test_adaptive_initialization_uses_native_sixty_four_with_twelve_projected_seeds(experiment):
     experiment.run("fine_adaptive", 8.)
     config, inherited = experiment.initializations[0]
-    assert config["population"] == config["projected_seeds"] == 12
+    assert config["population"] == 64
+    assert config["projected_seeds"] == 12
     assert config["seed"] == 20611
     assert inherited == ()
 
@@ -430,3 +435,137 @@ def test_event_write_crossing_deadline_keeps_completed_score(experiment, monkeyp
     assert experiment.live.snapshot(r, 15.)["incumbent"]["peak"] == 9.
     assert r["events"][-1]["end_s"] == 12.
     assert r["elapsed_s"] == 32.
+
+
+def test_actual_native_seeds_reproduce_old_flat_axes_and_current_population_spans_all_axes(experiment, monkeypatch):
+    from d3d_optimization import campaign_search as search
+    populations = {}
+
+    def initialize(self, inherited=()):
+        actual_seed = self.config["seed"] + self.mm + 10000
+        old_config = dict(self.config, population=12)
+        populations["old"] = search.seed_population(self.e, self.root, old_config, actual_seed)
+        self.state["optimizer"] = search.seed_population(self.e, self.root, self.config, actual_seed)
+        populations["current"] = self.state["optimizer"]
+
+    # Every native projected seed succeeds, exactly the triggering condition.
+    monkeypatch.setattr(search, "project_floor", lambda e, target: np.asarray(target))
+    monkeypatch.setattr(experiment.live.SearchCase, "initialize", initialize)
+    r = experiment.run("fine_adaptive", 8.)
+    old = np.asarray(populations["old"]["population"])
+    current = np.asarray(populations["current"]["population"])
+    assert old.shape == (12, 16)
+    assert np.all(np.ptp(old, axis=0)[:12] == 0.)
+    assert np.linalg.matrix_rank(old-old[0], tol=1e-12) <= 4
+    assert np.all(np.ptp(current, axis=0) > 1e-12), "current initialization still freezes search axes"
+    assert current.shape == (64, 16)
+    assert np.linalg.matrix_rank(current-current[0], tol=1e-12) == 16
+    event = next(e for e in r["events"] if e["stage"] == "initialize")
+    evidence = event["initial_population"]
+    assert evidence["vectors"] == current.tolist()
+    assert evidence["axis_min"] == current.min(axis=0).tolist()
+    assert evidence["axis_max"] == current.max(axis=0).tolist()
+    assert evidence["axis_span"] == np.ptp(current, axis=0).tolist()
+    assert evidence["scale"] == [.2]*16
+    assert evidence["rank_method"] == "centered_and_fixed_bound_width_scaled"
+    expected_singular = np.linalg.svd((current-current.mean(axis=0))/.2, compute_uv=False)
+    np.testing.assert_allclose(evidence["singular_values"], expected_singular, rtol=1e-14, atol=0.)
+    assert evidence["rank"] == evidence["dimension"] == 16
+    assert evidence["count"] == 64 and evidence["full_space_passed"]
+    assert evidence["archive_origin"] == "none"
+    assert evidence["archive_count"] == evidence["inherited_count"] == 0
+    assert evidence["full_space_required"]
+
+
+@pytest.mark.parametrize("failure", ["flat_axes", "rank_deficient", "wrong_count"])
+def test_degenerate_startup_population_fails_before_any_candidate_thermal_score(experiment, monkeypatch, failure):
+    def initialize(self, inherited=()):
+        population = np.random.default_rng(17).uniform(-.05, .05, (64, 16))
+        if failure == "flat_axes":
+            population[:, :12] = 0.
+        elif failure == "wrong_count":
+            population = population[:32]
+        else:
+            population[:] = np.linspace(-.05, .05, 64)[:, None]
+        self.state["optimizer"] = dict(generation=0, population=population.tolist())
+
+    monkeypatch.setattr(experiment.live.SearchCase, "initialize", initialize)
+    r = experiment.run("fine_adaptive", 40.)
+    assert r["stop"] == "failed" and "initial population" in r["error"]
+    assert not experiment.calls
+    event = next(e for e in r["events"] if e["stage"] == "initialize")
+    assert event["status"] == "failed"
+    if failure == "wrong_count":
+        assert event["initial_population"]["count"] == 32
+    else:
+        assert not event["initial_population"]["full_space_passed"]
+        assert event["initial_population"]["rank"] < 16
+    path = experiment.out/"fine_adaptive/events.jsonl"
+    assert [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()] == r["events"]
+
+
+def test_startup_rejects_a_preexisting_archive_before_seeding(experiment, monkeypatch):
+    original = experiment.live.SearchCase.__init__
+
+    def initialize_case(self, *args, **kwargs):
+        original(self, *args, **kwargs)
+        self.state["archive"] = [dict(candidate=candidate(0).record())]
+
+    monkeypatch.setattr(experiment.live.SearchCase, "__init__", initialize_case)
+    r = experiment.run("fine_adaptive", 40.)
+    assert r["stop"] == "failed" and "cold initialization" in r["error"]
+    assert not experiment.calls and not experiment.initializations
+
+
+def test_restart_population_diagnostic_does_not_override_native_restart_policy(experiment, monkeypatch):
+    original = experiment.live.SearchCase.initialize
+
+    def initialize(self, inherited=()):
+        original(self, inherited)
+        if self.state["restart"]:
+            self.state["optimizer"]["population"] = np.zeros((64, 16)).tolist()
+
+    monkeypatch.setattr(experiment.live.SearchCase, "initialize", initialize)
+    experiment.options["restart_after_first"] = True
+    r = experiment.run("fine_adaptive", 20.)
+    assert r["stop"] == "deadline", r["error"]
+    events = [e for e in r["events"] if e["stage"] == "initialize"]
+    assert len(events) == 2
+    assert events[0]["initial_population"]["full_space_required"]
+    assert events[0]["initial_population"]["full_space_passed"]
+    assert not events[1]["initial_population"]["full_space_required"]
+    assert not events[1]["initial_population"]["full_space_passed"]
+
+
+@pytest.mark.parametrize("policy,kind", [("fine_adaptive", "population_initialization"),
+                                         ("random_fine", "projected_random"),
+                                         ("coarse_adaptive", "external_validation")])
+def test_score_events_identify_population_initialization_and_external_scores(experiment, policy, kind):
+    r = experiment.run(policy, 40.)
+    event = next(e for e in r["events"] if e["stage"] == "fine")
+    assert event["proposal_kind"] == kind
+    if policy == "fine_adaptive":
+        assert event["generation"] == event["index"] == 0
+        proposal = next(e for e in r["events"] if e["stage"] == "proposal")
+        assert proposal["proposal_kind"] == kind
+        assert proposal["generation"] == proposal["index"] == 0
+    else:
+        assert event["generation"] is event["index"] is None
+
+
+@pytest.mark.parametrize("stage,kind", [("differential_evolution", "de_trial"),
+                                        ("coordinate_polish", "coordinate_polish")])
+def test_score_event_classifies_actual_native_trial_before_accept(experiment, monkeypatch, stage, kind):
+    original = experiment.live.SearchCase.initialize
+
+    def initialize(self, inherited=()):
+        original(self, inherited)
+        opt = self.state["optimizer"]
+        opt.update(generation=1, index=2, energies=[1.]*len(opt["population"]))
+
+    monkeypatch.setattr(experiment.live.SearchCase, "initialize", initialize)
+    experiment.options["search_stage"] = stage
+    r = experiment.run("fine_adaptive", 12.)
+    event = next(e for e in r["events"] if e["stage"] == "fine")
+    assert event["proposal_kind"] == kind
+    assert event["generation"] == 1 and event["index"] == 2

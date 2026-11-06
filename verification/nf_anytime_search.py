@@ -26,6 +26,9 @@ CHECKPOINTS = (200, 400, 600)
 SOURCE = "OMP"
 RADIUS = 20
 BATCH = 4
+POPULATION = 64
+PROJECTED_SEEDS = 12
+POPULATION_TOLERANCE = 1e-12
 NS_PER_S = 1_000_000_000
 
 
@@ -144,6 +147,31 @@ class _MeasuredEvaluator:
         return dict(self.wrapped.describe(result), measurement=self.last_measurement)
 
 
+def _population_evidence(population, startup, archive_count, inherited_count):
+    """Record affine diversity without changing native seed or restart rules."""
+    vectors = np.asarray(population, dtype=float)
+    if vectors.ndim != 2 or not len(vectors) or not np.isfinite(vectors).all():
+        raise ValueError("initial population must be a finite nonempty matrix")
+    axis_min, axis_max = vectors.min(axis=0), vectors.max(axis=0)
+    span = axis_max-axis_min
+    center = vectors.mean(axis=0)
+    # OMP's native coefficient bounds are fixed at [-0.1, 0.1] m.
+    # Use their widths, never this sample's observed span, as the rank scale.
+    scale = np.full(vectors.shape[1], .2)
+    singular_values = np.linalg.svd((vectors-center)/scale, compute_uv=False)
+    rank = int(np.count_nonzero(singular_values > POPULATION_TOLERANCE))
+    full_space = vectors.shape[1] == 16 and bool(np.all(span > POPULATION_TOLERANCE)) and rank == 16
+    return dict(vectors=vectors.tolist(), count=len(vectors), dimension=vectors.shape[1],
+                axis_min=axis_min.tolist(), axis_max=axis_max.tolist(), axis_span=span.tolist(),
+                center=center.tolist(), scale=scale.tolist(), rank=rank,
+                singular_values=singular_values.tolist(),
+                rank_method="centered_and_fixed_bound_width_scaled", rank_tolerance=POPULATION_TOLERANCE,
+                axis_span_tolerance=POPULATION_TOLERANCE, full_space_passed=full_space,
+                full_space_required=startup, startup=startup,
+                archive_count=archive_count, inherited_count=inherited_count,
+                archive_origin="current_run" if archive_count or inherited_count else "none")
+
+
 class _TimedSearchCase(SearchCase):
     """Instrument the existing optimizer, including its run_slice restarts."""
     def __init__(self, *args, arm, level, **kwargs):
@@ -154,8 +182,34 @@ class _TimedSearchCase(SearchCase):
         self.cpu = _MeasuredEvaluator(self.cpu, arm.guard)
 
     def initialize(self, inherited=()):
-        self.arm.timed("initialize", lambda: super(_TimedSearchCase, self).initialize(inherited),
-                       level=self.level, restart=self.state["restart"])
+        event = self.arm.begin("initialize", level=self.level, restart=self.state["restart"])
+        previous_optimizer = self.state.get("optimizer")
+        startup = self.state["restart"] == 0
+        try:
+            inherited = tuple(inherited)
+            archive_count, inherited_count = len(self.state["archive"]), len(inherited)
+            event.update(archive_count=archive_count, inherited_count=inherited_count,
+                         full_space_required=startup)
+            if startup and (archive_count or inherited_count or previous_optimizer is not None):
+                raise ValueError("cold initialization requires no prior optimizer, archive or inherited shapes")
+            try:
+                super().initialize(inherited)
+            finally:
+                optimizer = self.state.get("optimizer")
+                if optimizer is not None and optimizer is not previous_optimizer:
+                    event["initial_population"] = _population_evidence(
+                        optimizer["population"], startup, archive_count, inherited_count)
+            evidence = event["initial_population"]
+            if startup and (not evidence["full_space_passed"] or evidence["count"] != POPULATION):
+                raise ValueError("initial population requires 64 members, all 16 axis spans > 1e-12, "
+                                 "and centered fixed-bound-scaled affine rank 16")
+            # Later restarts can inherit current-run archive members. Keep the
+            # native policy, record its diversity, and enforce the gate only at
+            # cold startup. This does not assert later evaluated coverage.
+        except BaseException as exc:
+            self.arm.fail(event, exc)
+            raise
+        self.arm.finish(event)
 
     def checkpoint(self, force=True):
         self.arm.guard()
@@ -164,12 +218,23 @@ class _TimedSearchCase(SearchCase):
     def score(self, x, stage):
         candidate = Candidate(self.source, self.mm, tuple(map(float, x)))
         row = self.arm.register(candidate)
+        optimizer = self.state.get("optimizer")
+        context = dict(search_stage=stage, generation=None, index=None)
+        if stage == "differential_evolution":
+            index = optimizer["index"]
+            context.update(generation=optimizer["generation"], index=index,
+                           proposal_kind="population_initialization" if optimizer["energies"][index] is None else "de_trial")
+        elif stage == "coordinate_polish":
+            context.update(generation=optimizer["generation"], index=optimizer["index"],
+                           proposal_kind="coordinate_polish")
+        else:
+            context["proposal_kind"] = "external_validation" if stage == "coarse_promotion" else stage
         if self.proposal_event is not None:
-            self.proposal_event.update(id=row["id"], candidate=row["candidate"], search_stage=stage)
+            self.proposal_event.update(id=row["id"], candidate=row["candidate"], **context)
             self.arm.finish(self.proposal_event)
             self.proposal_event = None
         self.e.last_measurement = None
-        event = self.arm.begin(self.level, id=row["id"], candidate=row["candidate"], search_stage=stage)
+        event = self.arm.begin(self.level, id=row["id"], candidate=row["candidate"], **context)
         try:
             scored = super().score(x, stage)
             measured = scored.get("measurement") or self.e.last_measurement or _measurement(scored)
@@ -325,6 +390,8 @@ def run_arm(policy, input_root, seed, out, started_ns, budget_s=600, clock_ns=pe
                   events=[], candidates=[], rejected=Counter(), completed_draws=0,
                   promotions=[], baseline=None, baseline_ready_s=None, checkpoints={},
                   error=None, source=SOURCE, radius_mm=RADIUS,
+                  adaptive_config=dict(population=POPULATION, projected_seeds=PROJECTED_SEEDS,
+                                       initial_population_gate="startup_only_full_affine_dimension"),
                   levels=dict(coarse=LEVELS[0], fine=LEVELS[2]))
     arm = _Arm(record, out, started_ns, clock_ns)
     try:
@@ -337,7 +404,7 @@ def run_arm(policy, input_root, seed, out, started_ns, budget_s=600, clock_ns=pe
             observe=lambda value, event: event.update(measurement=value))
         record.update(baseline=baseline, baseline_ready_s=baseline_event["end_s"])
         remaining = max(0., (arm.deadline-clock_ns())/NS_PER_S)
-        config = _DeadlineConfig(arm, seed=int(seed), population=12, projected_seeds=12, backend="gpu",
+        config = _DeadlineConfig(arm, seed=int(seed), population=POPULATION, projected_seeds=PROJECTED_SEEDS, backend="gpu",
                                  fingerprint=f"nf-anytime-search.v1:{root.resolve()}:{policy}:{seed}",
                                  search_deadline_epoch=time()+remaining, deadline_epoch=time()+remaining)
 
