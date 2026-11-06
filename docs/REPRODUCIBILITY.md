@@ -1,6 +1,18 @@
 # Runtime and archived evidence
 
-The publication keeps the project source and input files byte-for-byte, except the root README, whose original is at `docs/README_LEGACY.md`. `.gitattributes` disables newline normalization because historical SHA256 checks include source bytes.
+The 2026-10-29 publication inventory describes historical source and input bytes. Most remain at their original relative paths. Three explicitly relocated historical files are checked at the locations below; the current working files retain their intended updates. `.gitattributes` disables newline normalization because historical SHA256 checks include source bytes.
+
+| Recorded file | Exact historical copy | Reason for the current version |
+| --- | --- | --- |
+| `README.md` | `docs/README_LEGACY.md` | Current project entry point |
+| `AGENTS.md` | `docs/publication/legacy-20261029/AGENTS.md` | Research-objective instruction added in `7a889e8` |
+| `d3d_optimization/boundary_evaluator.py` | `docs/publication/legacy-20261029/d3d_optimization/boundary_evaluator.py` | Exported `assigned_power_W` metadata added in `7a889e8` |
+
+The last two copies were recovered directly from Git commit `df239e3`, without text/newline conversion. Their SHA-256 values are respectively `7d76769a11ebe52acc2da743dd5290d2139634640f0c1f22cc3f0cbab2cb2067` and `1207eb10590fe3a38942bfc90e0864c3f05a4153fd0186d0eeb6aee685d4144d`, exactly matching the existing inventory. The original source-copy, preservation and study-provenance manifests remain unchanged. These historical copies are read as evidence, not imported as active evaluator code or applied as current project instructions.
+
+`python tools/verify_publication.py` requires each explicitly relocated name's recorded expected hash to equal its pinned historical hash, then checks the complete archived bytes. Replacing a historical manifest entry with a current-file hash is rejected. For the two `7a889e8` updates it separately checks that the current file has either the original hash or that known revision's hash, so a further unregistered current change still fails. Other files must match their recorded hash at their original path; an arbitrary archive cannot mask a changed production file. The README retains its separate historical mapping.
+
+The publication tool validates each saved study's `boundary-study-provenance.v1` schema, all required evaluator/input/preservation keys, and every recorded hash, including extra recorded inputs. This is a publication-specific historical check: it neither invokes nor patches `optimize_boundary_transport.verify`, which deliberately compares live files against a run's captured provenance. Passing the publication check establishes archived fingerprints and saved verdicts, not identity of the current model with the historical model or a fresh numerical validation.
 
 ## CPU environment
 
@@ -26,6 +38,6 @@ Use `--backend gpu` only with a compatible GPU/driver and verified installation.
 
 `results/regional-20261028/` retains original search histories, both rejected lowest-peak candidates, qualified candidates, validation JSON, CSV/NPZ geometry and transport arrays, figures, source fingerprints and qualification evidence. The original `IMP/snapshot` and `OMP/snapshot` folders duplicate repository inputs/code and are excluded. The geometry ZIP is also omitted because its extracted `final_geometry` content is included. Full original study copies remain at D:/DivertorOptimization/studies/regional-20261028 on the authoring host.
 
-Historical manifests, analysis scripts and publication inventories retain original absolute paths as evidence; they are not silently rewritten. Consequently an archived helper such as `verify_delivery.py`, `analyze.py`, or plotting a qualified historical manifest may refer to the original D/C paths. Static reports, CSVs, NPZs and images can be read directly anywhere. For a new computation, run the root CLIs from this clone with a new output directory. To re-run an archived helper elsewhere, make an explicitly separate path-adapted copy. The published provenance verifier resolves code/input fingerprints against this clone without editing original manifests.
+Historical manifests, analysis scripts and publication inventories retain original absolute paths as evidence; they are not silently rewritten. Consequently an archived helper such as `verify_delivery.py`, `analyze.py`, or plotting a qualified historical manifest may refer to the original D/C paths. Static reports, CSVs, NPZs and images can be read directly anywhere. For a new computation, run the root CLIs from this clone with a new output directory. To re-run an archived helper elsewhere, make an explicitly separate path-adapted copy. The published provenance verifier resolves code/input fingerprints against this clone's recorded paths or the explicit hash-matched historical copies above, without editing original manifests.
 
 Geometry and operating conditions are preserved, but platform/library changes can affect numerical results. Final candidate selection still requires the documented grid/interpolation checks; matching source hashes alone does not establish numerical convergence.
