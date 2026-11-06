@@ -1,0 +1,35 @@
+{
+  "schema": "nf-anytime-completion-checks.v1",
+  "created_utc": "2026-11-06T15:06:59.164133+00:00",
+  "phase_completed": true,
+  "scope": "registered600-second study plus finite-panel, numerical-setting and observed-rejection audits; not FIREFLY, IMP, new holdout,1800-second or continuum/experimental certification",
+  "validation_source_commit": "5e9be5fb586dc68ac8077d04b7fa87fbd50c1ad2",
+  "before_bundle_validation_sha256": "e26d046a9bc10a45fdbc7af7dbfd807626eb44c6a9be3bfb0772c79cd9873cf6",
+  "regression_suites": [
+    {
+      "exit_code": 0,
+      "passed": 227,
+      "subtests_passed": 12
+    },
+    {
+      "exit_code": 0,
+      "passed": 13
+    }
+  ],
+  "independent_main_audit_checks": 90320,
+  "all_report_inputs_and_artifacts_rechecked": true,
+  "scientific_and_publication_code_reviews": "passed",
+  "archive": {
+    "name": "evidence.zip",
+    "sha256": "e562bdc01055d5a7537b04f237f32bbbbe97b8165d582c7a9e9d4e4b3fab1d40",
+    "bytes": 39326497,
+    "source_member_count": 2386,
+    "uncompressed_source_bytes": 87048093,
+    "every_archived_member_roundtrip_sha256_verified": true,
+    "manifest_sha256": "59b44766ccee93d667c7b054883f7fd2d85b7ed010b74948ce3a9462db2a8e80",
+    "external_inputs_excluded_as_documented": true
+  },
+  "final_plot_visual_review": "passed; title, nine panels, axes and external legend inspected",
+  "local_markdown_links_valid": true,
+  "storage": "Study, results, temp/cache and Git common directory are on D; no new remote push in this phase."
+}

@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-06T07:17:59.139905+00:00",
+  "prior_study": "D:\\DivertorOptimization\\studies\\nf-anytime-20261106",
+  "prior_protocol_sha256": "1ea4efd6bdd1b3ca5d88c29db8be4ecadac08aa743bd3e87d413ecc6991aacb3",
+  "interruption_sha256": "f9be658bb7252a7fc968af45bce5db3dc318af1a5b473f7c66ef5bfa4f69f953",
+  "reason": "native DE initialization was degenerate in twelve coordinates",
+  "production_default_source": "run_global_campaign.py:176",
+  "old_population": 12,
+  "new_population": 64,
+  "projected_seeds": 12,
+  "comparison_outcomes_used": false
+}

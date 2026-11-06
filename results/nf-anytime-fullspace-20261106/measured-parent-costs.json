@@ -1,0 +1,70 @@
+{
+  "schema": "nf-anytime-measured-parent-costs.v1",
+  "scope": "parent process launch through exit; main and post-trial costs separate; excludes acquisition, authoring/review, selection-only locking and inter-phase waiting",
+  "main": {
+    "process_count": 27,
+    "nominal_budget_seconds": 600,
+    "sum_elapsed_seconds": 16402.2785885,
+    "minimum_elapsed_seconds": 600.5381765,
+    "maximum_elapsed_seconds": 614.2979994
+  },
+  "posttrial": {
+    "reference": {
+      "phase": "reference",
+      "start": "2026-11-06T21:00:32.9098234+09:00",
+      "end": "2026-11-06T22:06:49.4878024+09:00",
+      "elapsed_seconds": 3976.5816444,
+      "exit_code": 0,
+      "scope": "parent process wall time including Python imports and final serialization"
+    },
+    "uncertainty": {
+      "phase": "uncertainty",
+      "start": "2026-11-06T22:06:59.3125169+09:00",
+      "end": "2026-11-06T23:42:19.2399138+09:00",
+      "elapsed_seconds": 5719.9331055,
+      "exit_code": 0,
+      "scope": "parent process wall time including Python imports and final serialization"
+    },
+    "screen-rejections": {
+      "phase": "screen-rejections",
+      "start": "2026-11-06T23:42:53.8278085+09:00",
+      "end": "2026-11-06T23:47:50.9123041+09:00",
+      "elapsed_seconds": 297.0834407,
+      "exit_code": 0,
+      "scope": "parent process wall time including Python imports and final serialization; selection locking was performed separately"
+    }
+  },
+  "input_hashes": {
+    "live/4d14a35fcb/20611/coarse_adaptive/process.json": "c2ad28e16987e41b9494f716b4c52da6f1b10851098fc7f9b4dc346fcbae86a6",
+    "live/4d14a35fcb/20611/fine_adaptive/process.json": "0e81b532ab73135e57742fae70f624e4a45d95e3dd65227effb60976ed2a74fe",
+    "live/4d14a35fcb/20611/random_fine/process.json": "6cfe588b2f96fdba34682b3e101c0bd1c4313d6a552653406dca8bfd433f52e3",
+    "live/4d14a35fcb/20627/coarse_adaptive/process.json": "21e33d4fef10453b763384c925008e763091ea5c8d6c930f8d8a9e3c8024fe12",
+    "live/4d14a35fcb/20627/fine_adaptive/process.json": "cedf8f5bb68e50b203631ffd3248a7f504dba1ef0332c2408e0055ea3ecb7d38",
+    "live/4d14a35fcb/20627/random_fine/process.json": "e4ab23d130694b46ffb5c9af999843fbd89885b9e184d3a67682e0502a7532c6",
+    "live/4d14a35fcb/20639/coarse_adaptive/process.json": "6f000046207c40074639a7ca94e60adc0f09ce0c63cd02311d68b09d27d92b9a",
+    "live/4d14a35fcb/20639/fine_adaptive/process.json": "df13dd9a7bfa1e00b11693d1bf04a439380f820191959b8113977a0b78624552",
+    "live/4d14a35fcb/20639/random_fine/process.json": "a80f2c5aaff493a13cf5b88c0367b3291a8be883cb26721fc6507534209a2ff0",
+    "live/deb842cf1e/20611/coarse_adaptive/process.json": "1f7b9583a3a4b9bb5635ef6586d07fd91f7333ccae156022ac57d2d8f584246b",
+    "live/deb842cf1e/20611/fine_adaptive/process.json": "ae2fb6b3f4f6d76d012681153bc9be69d12cc38c790d81a8fca35b6ec194147f",
+    "live/deb842cf1e/20611/random_fine/process.json": "b8c82b9e78a1ee14313d175db451e4169eaa65e957ae3713081914470ae57293",
+    "live/deb842cf1e/20627/coarse_adaptive/process.json": "994ec6b3b8065af6c40b0a129e70abf78d8df22b1687eaf682d40a314be19a57",
+    "live/deb842cf1e/20627/fine_adaptive/process.json": "ad6f2b0808c3d31da808c3f7410ca48b0cbdfb92a787669d56f397f8b390f10c",
+    "live/deb842cf1e/20627/random_fine/process.json": "0e70a38f2930da247a9a73c65fe555d5231991758d125961450afaff22d5c683",
+    "live/deb842cf1e/20639/coarse_adaptive/process.json": "bbaf2cffff9432d7df900e354ba1b8449f06e0ac62390b26aeab21519c5128f8",
+    "live/deb842cf1e/20639/fine_adaptive/process.json": "41aa5a6ca2bab6f3fd56a17db881c0ccc5b457a49b200e2207bd8944a353e921",
+    "live/deb842cf1e/20639/random_fine/process.json": "0c562e0f0a3215335d6d363447a666d71da7d5e9831b5f6d21647e971a379455",
+    "live/fad1624516/20611/coarse_adaptive/process.json": "d88b9c98b8745167017230d71cf74e70591cdff020a57468a6d65aae99eb5071",
+    "live/fad1624516/20611/fine_adaptive/process.json": "688eb15cb76e50c5bcedad429950b50c741b2e3cfda66bf68f894c6e4270a1b6",
+    "live/fad1624516/20611/random_fine/process.json": "0186e57c85f1cdf63b6dede0aa9573ec66f95d1a4ef46c64cc6b1c5c0869b8e4",
+    "live/fad1624516/20627/coarse_adaptive/process.json": "84db878cd44c50f9ba4384602ddcd257693864bc44f0f678e6bf44359c25d71a",
+    "live/fad1624516/20627/fine_adaptive/process.json": "a9111fb25009e1e0c6b94a61d6e785f2be7d9fc6012265579222d7b13f3e442a",
+    "live/fad1624516/20627/random_fine/process.json": "b321011392f618c64a61fbd54aa86913268adf180ff662dfacbb019dca0d2eb8",
+    "live/fad1624516/20639/coarse_adaptive/process.json": "a3c81c06fb168c8a38251231f7d2baf4bdb0e292e2bf27bd085d44756d4af2ab",
+    "live/fad1624516/20639/fine_adaptive/process.json": "984b77b1eaf7dff3e108a018895e00453a35bb1acff3a9840e9c6ebf6648b1f1",
+    "live/fad1624516/20639/random_fine/process.json": "2cacc106ccbb7afc96d45438f59e2b85400ec3de8691208f670d4dbf1db92cbc",
+    "reference-process-0000.json": "f9983bc83df8d03a7b0e3be8f4c9a53fa9077fbe7b83e30a7b8c099e9c2eec29",
+    "uncertainty-process-0000.json": "dc6fb954a5a20398aaf580afc0a66e722dd38bed0703a8c034e1e65e1bf9a79d",
+    "screen-rejections-process-0000.json": "73e86f1d719620147b4a069409958d27badd9fa2e7b866f4c5e633e01c6d6404"
+  },
+  "sum_measured_process_seconds": 26395.8767791
+}

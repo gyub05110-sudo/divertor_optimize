@@ -1,0 +1,90 @@
+{
+  "schema": "nf-anytime-prebundle-validation.v1",
+  "created_utc": "2026-11-06T15:04:56.977714+00:00",
+  "source_commit": "5e9be5fb586dc68ac8077d04b7fa87fbd50c1ad2",
+  "scope": "record integrity, scientific claim review and software regression; finite-setting numerical verification only",
+  "main": {
+    "completed_arms": 27,
+    "independent_audit_passed": true,
+    "individual_checks": 90320,
+    "audit_sha256": "d85633ae669b70e833ff9e1137820d5bd49fde175ace36e65ca2cd9b100e7292"
+  },
+  "reference": {
+    "completed_panels": 9,
+    "independent_holdout": false
+  },
+  "numerical": {
+    "completed_scores": 468,
+    "native_replay_coverage": {
+      "compared_observable_count": 332,
+      "compared_observation_count": 166,
+      "eligibility_only_observation_count": 0,
+      "locked_candidate_count": 117,
+      "previously_scored_candidate_count": 114,
+      "unobserved_candidate_count": 3
+    },
+    "all_available_native_observations_matched": true
+  },
+  "coarse_rejection_audit": {
+    "tested_candidates": 3,
+    "fine_ineligible": 3,
+    "false_negatives_observed": 0,
+    "evaluation_failures": 0,
+    "population_false_negative_rate_claim": false
+  },
+  "regression_tests": {
+    "exit_code": 0,
+    "passed": 227,
+    "subtests_passed": 12
+  },
+  "publication_tests": {
+    "exit_code": 0,
+    "passed": 13
+  },
+  "publication_verification": {
+    "copied_project_files_verified": 657,
+    "preserved_python_files_verified": 180,
+    "study_provenance_verified": 4,
+    "saved_qualified_verdicts_passed": 2,
+    "historical_resolutions": {
+      "AGENTS.md": {
+        "path": "docs/publication/legacy-20261029/AGENTS.md",
+        "sha256": "7d76769a11ebe52acc2da743dd5290d2139634640f0c1f22cc3f0cbab2cb2067"
+      },
+      "README.md": {
+        "path": "docs/README_LEGACY.md",
+        "sha256": "f0a57aba864a3156de9fa5d18ea43a53776a88bfe60bb380bd28caae6aa8b40b"
+      },
+      "d3d_optimization/boundary_evaluator.py": {
+        "path": "docs/publication/legacy-20261029/d3d_optimization/boundary_evaluator.py",
+        "sha256": "1207eb10590fe3a38942bfc90e0864c3f05a4153fd0186d0eeb6aee685d4144d"
+      }
+    },
+    "scope": "historical fingerprints and saved verdicts; not current-model identity or a fresh numerical refinement"
+  },
+  "historical_publication_repair": {
+    "initial_failure_preserved": "validation-publication-output.txt",
+    "cause": "Two intentional changes in7a889e8 were compared to original publication bytes; old copies now verified separately, original manifests unchanged. Independent review also required rejecting replacement of historical recorded hashes with known current hashes.",
+    "production_code_changed_in_this_repair": false
+  },
+  "independent_scientific_document_review": "passed; final values, reuse limitations, finite ranges, FIREFLY scope and30 cost hashes checked",
+  "final_plot_visual_review": "passed; title, nine panels, axes and external legend inspected",
+  "log_sha256": {
+    "validation-test-output.txt": "d17da169174d3fd6b4590b90b26ddd62ed8496248066354e07db20f86c86e3dd",
+    "validation-independent-audit-output.txt": "4eda46024c9673f1a16abe24ea61914fab4c5d2e90b057e8c56af492695e1a7d",
+    "validation-publication-output.txt": "8692b6427dd536c7a9141c2da7d70542811d6326702d9fed7d4e28d606cff70d",
+    "validation-publication-final-v2-tests-output.txt": "707b7452f99f9d01fec2a536a50d93808113d80bfa164ea5dfa481e579a3200c",
+    "validation-publication-final-v2-output.txt": "5891ab1815dd12d5a2ef44fe8e536245ef9cc82544340c0473c9bddc63ba6226"
+  },
+  "artifact_sha256": {
+    "REPORT.ko.md": "d0d2d54954053b7f8c611d5ddee4ac1dafcbca725b303bfa69ac6524163e7901",
+    "NF_REVIEW.ko.md": "ab6b78111dd76d847205a2b327a3d30f3687432c6081722c2461bcf57a24837c",
+    "summary.json": "64a183eaf7de2c72e1e25d212730f051d5fe6e9c6d528634d51f146e93d1756a",
+    "anytime_curves.png": "4f0d25068918cfaa90f0c3d75102df18e114698f3b84f92cdc8fb3454943d2d2",
+    "anytime_curves.pdf": "a5e7200c5b7668bca6db768bb06288601a6969b032901b6b43925f6e2b82d002",
+    "reproduce.ko.md": "fff4adfdd9326a85d6007f70d3a533c0b6b984e0fedeab6be808549b59986e18",
+    "measured-parent-costs.json": "902703784c43e9f3e86cbf39fbf3d54977d27aece9ef265231cad7d7f0994eab",
+    "observable-decomposition.json": "8242d6006c1384257a586b010b1aedadfd994ba0e8eab5d37d9b4b82b41d5515"
+  },
+  "report_input_hashes_rechecked": 1023
+}
