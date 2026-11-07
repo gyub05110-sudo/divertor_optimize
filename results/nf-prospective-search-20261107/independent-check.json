@@ -1,0 +1,15 @@
+{
+  "arm_cutoffs_checked": 60,
+  "paired_cutoffs_checked": 30,
+  "comparable_paired_cutoffs": 10,
+  "registered_posttrial_pairs": 12,
+  "eligible_paired_setting_checks": 16,
+  "after_final_deadline_score_events_preserved": 6,
+  "arm_stop_counts": {
+    "failed": 12,
+    "deadline": 6
+  },
+  "frozen_sha256": "015868994d052e68b703368ce48bca5b00bdefe358efb2dd92b971da0c220b52",
+  "report_sha256": "ba51d4768e41d08fb6b95abb1832b75ce46f3307d2655acef93198fcd78e8cd2",
+  "status": "verified"
+}

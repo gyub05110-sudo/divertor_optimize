@@ -47,7 +47,30 @@ $repeatStudy = 'D:/DivertorOptimization/studies/nf-prospective-search-repeat'
 & $py -B -m verification.nf_prospective_campaign --study $repeatStudy --action audit
 & $py -B -m verification.nf_prospective_numerics --study $repeatStudy --lock-only
 & $py -B -m verification.nf_prospective_numerics --study $repeatStudy --score
-& $py -B -m verification.nf_prospective_report --study $repeatStudy --output "$repeatStudy/report"
+& $py -B -m verification.nf_prospective_report --study $repeatStudy --output 'D:/DivertorOptimization/studies/nf-prospective-search-repeat-report'
 ```
 
 개발 단계의 두 설정이 사전 조건에 미달하면 `freeze-holdout`에서 멈춘다. 고정 시드라도 시간 제한이 있는 탐색에서는 하드웨어 부하, JIT 컴파일과 디스크 시간에 따라 시한 안에 마친 후보가 달라질 수 있다. 원기록을 읽어 얻은 선택의 재현과 새 벽시계 실행의 재현을 구분한다.
+
+## 원벽 실패 및 고정 선반 끝점
+
+입사각 입력 진단은 후보나 표적 열유속 없이 실행할 수 있다. 실제 세 입력의 실행 순서는 아래와 같다. `below_floor_if_powered`는 고정 끝점 근방까지 전력이 도달할 때 1.5° 하한을 위반한다는 뜻이다. 표적의 차폐와 최초 도달면이 바뀔 수 있으므로 이 표시는 전체 형상 공간의 적격성 판정으로 사용하지 않는다.
+
+```powershell
+& $py -B -m verification.nf_shelf_preflight --input-root "$inputs/cases/332a6d97fc/input-root" "$inputs/cases/e806f47778/input-root" "$inputs/cases/51d83022ca/input-root"
+```
+
+캠페인 감사를 마친 뒤 두 실패 평형의 실제 원벽 생성자를 같은 인자로 재실행했다. `register`는 18회 전체의 작업·종료·원 이벤트 해시에서 서로 다른 두 실패 대상을 고정하고, `replay`는 기존 예외를 보존하면서 폭별 직접 매핑·각도·도달한 단계를 기록한다. `nf_shelf_corner_check`는 실제 선반 기저 벡터와 cubic/quintic 자기장을 대조한다. 사후 진단의 결과는 600초 및 1800초 선택에 편입하지 않는다.
+
+```powershell
+& $py -B -m verification.nf_prospective_baseline_diagnostic --study $study --action register
+& $py -B -m verification.nf_prospective_baseline_diagnostic --study $study --action replay
+& $py -B -m verification.nf_shelf_corner_check --study $study
+& $py -B "$study/paper_checks.py" --study $study --summary "$repo/results/nf-prospective-search-20261107/summary.json"
+```
+
+## 비용 및 증거 보관
+
+부모 프로세스에서 잰 시간은 개발 3,651.64초, 전향 시험 6,884.14초, 네 설정 재계산 1,081.16초, 실패 진단 재현 139.61초였다. 전향 시험의 명목 예산 합계는 18,000초다. 12회가 원벽 준비에서 일찍 끝난 시간이 실측 합계에 반영됐다. `*-parent-0000.json`에 종료 시각·실측 시간·로그 SHA-256을 보관했다. 사후 수치 점수 44건 중 8건의 원벽 계산 실패를 알리는 점수기 종료 코드는 2였고, 완료된 보고서 상태는 `closed_with_exceptions`다.
+
+`evidence.zip`은 종료한 개발·전향 작업의 원 이벤트·반환값·실패·사후 점수·진단과 기준 코드 스냅샷, 입력 원장과 채택한 입력 파일 트리를 담고 있다. 해제 경로는 `D:/DivertorOptimization` 기준이다. 공개 원본 다섯 개는 `evidence-manifest.json`의 `public_raw_files`에 고정 URL·길이·SHA-256을 기록했다. 로컬 D 원본은 입력 연구의 `raw` 폴더에 보존했다. 캐시·잠금 파일은 보관 대상에서 제외했다. 이전 개발 입력과 그 출처는 [이전 입력 연구](../unused-equilibrium-20261106/reproduce.ko.md) 및 [이전 600초 연구](../nf-anytime-fullspace-20261106/reproduce.ko.md)에 있다. 각 ZIP 멤버의 SHA-256을 압축 해제한 바이트로 다시 검사했다. [압축 파일](evidence.zip) · [멤버와 공개 원자료 목록](evidence-manifest.json) · [압축 파일 SHA-256](evidence.zip.sha256)

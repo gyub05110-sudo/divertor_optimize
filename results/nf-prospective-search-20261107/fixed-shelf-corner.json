@@ -1,0 +1,185 @@
+{
+  "cases": [
+    {
+      "angle_floor_deg": 1.5,
+      "basis": {
+        "basis_count": 4,
+        "linear_in_four_shelf_coefficients": true,
+        "max_position_difference_m": 0.0,
+        "max_tangent_difference": 0.0,
+        "test_amplitude_m": 0.1
+      },
+      "case_id": "332a6d97fc",
+      "comparison": {
+        "cubic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 2.4954320436108985,
+          "end_59_deg": 2.7660343981172484,
+          "end_60_deg": 1.481471046721286,
+          "incidence_at_native_minimum_RZ_deg": 1.4839547069494974,
+          "margin_60_deg": -0.018528953278714066
+        },
+        "quintic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 2.48624975195627,
+          "end_59_deg": 2.76605573054128,
+          "end_60_deg": 1.4815743028059671,
+          "incidence_at_native_minimum_RZ_deg": 1.4840531094683695,
+          "margin_60_deg": -0.018425697194032864
+        }
+      },
+      "diagnostic_sha256": "68ee3f2a0fa5cff1ebc8e3b48af76e49ea94f38ff0cb9c722faa09b9521ba7cf",
+      "fixed_end_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "input_hashes": {
+        "baseline_review/baseline_review.json": "ac011818d6ac748705c74513dd0acdaab69bd1236be6c85167a9a4821f54898f",
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "ef117c75eaa8c7f4891b1d116ee0e7b1ae069a17255ae8546cd874ab24523b7f",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "23dabfa71d7640a5cc65394eb41b897c8be2fe54b8d7168f793f731c34db739b"
+      },
+      "original_shelf_length_m": 0.24403000184403553,
+      "original_wall_shelf_3mm": {
+        "angle_floor_deg": 1.5,
+        "angle_passed": false,
+        "angle_status": "target_angle_violation",
+        "minimum_angle_deg": 1.4839547069500463,
+        "minimum_hit": {
+          "chord_midpoint_matching_residual_m": 0.0,
+          "donor": 421,
+          "incidence_deg": 1.4839547069500463,
+          "nearest_corner": {
+            "distance_m": 0.00033408357761410595,
+            "index": 60,
+            "point_RZ_m": [
+              1.40117,
+              -1.24477
+            ]
+          },
+          "original_segment": 59,
+          "point_RZ_m": [
+            1.4015040835750896,
+            -1.2447700410707998
+          ],
+          "source_x_m": 0.010194794635672324,
+          "split_segment": 61,
+          "surface": "shelf",
+          "wall_segment": 1339
+        },
+        "power": 0.03361383996029057,
+        "powered_hit_count": 480
+      }
+    },
+    {
+      "angle_floor_deg": 1.5,
+      "basis": {
+        "basis_count": 4,
+        "linear_in_four_shelf_coefficients": true,
+        "max_position_difference_m": 0.0,
+        "max_tangent_difference": 0.0,
+        "test_amplitude_m": 0.1
+      },
+      "case_id": "e806f47778",
+      "comparison": {
+        "cubic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 0.0,
+          "end_59_deg": 3.834535964958017,
+          "end_60_deg": 1.7644545619321206,
+          "margin_60_deg": 0.2644545619321206
+        },
+        "quintic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 0.0,
+          "end_59_deg": 3.8345758183599385,
+          "end_60_deg": 1.7644705960597433,
+          "margin_60_deg": 0.2644705960597433
+        }
+      },
+      "diagnostic_sha256": null,
+      "fixed_end_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "input_hashes": {
+        "baseline_review/baseline_review.json": "9e7156c1ac6de0dd6a458b71c93d937c8bc96cd084d952454530ad56dc331c99",
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "dc0eba5720dc0a8b9894ae6fdaf5f346b4d5b2a06ca4d40cd83be8def591f0a5",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "3c69627ba8b5cdbe02db2d8ade69eee00b6a952c6d02e0cb42f836103341f58e"
+      },
+      "original_shelf_length_m": 0.24403000184403553,
+      "original_wall_shelf_3mm": null
+    },
+    {
+      "angle_floor_deg": 1.5,
+      "basis": {
+        "basis_count": 4,
+        "linear_in_four_shelf_coefficients": true,
+        "max_position_difference_m": 0.0,
+        "max_tangent_difference": 0.0,
+        "test_amplitude_m": 0.1
+      },
+      "case_id": "51d83022ca",
+      "comparison": {
+        "cubic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 63.98860469622192,
+          "end_59_deg": 2.4626770630557386,
+          "end_60_deg": 1.0924392354148453,
+          "incidence_at_native_minimum_RZ_deg": 1.093681459196502,
+          "margin_60_deg": -0.40756076458515467
+        },
+        "quintic": {
+          "baseline_distance_to_first_passing_angle_from_60_mm": 63.99162055595338,
+          "end_59_deg": 2.4625493950392934,
+          "end_60_deg": 1.0920827336049774,
+          "incidence_at_native_minimum_RZ_deg": 1.0933215940329608,
+          "margin_60_deg": -0.40791726639502257
+        }
+      },
+      "diagnostic_sha256": "86a60b2c38541d563830480e59a5e45442331e60c4a6fe0b8fff81611f08697d",
+      "fixed_end_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "input_hashes": {
+        "baseline_review/baseline_review.json": "f6965d6ab97b4b86fd7aa28b5492f22599ed45ceed1a4cfc2d72385994cd0c86",
+        "input/D3D/d3d/d3d_shot_1a3155370c.parquet": "ced6ee925b8554f11f8e343b26befcfe598c3f07c63292958ef77c1a0ee0bade",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/DIIID_geom.json": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "input/D3D/optimized/d3d-divertor-floor-shelf/manifest.json": "820538812c3958775b279066c7f13a97adfbc008883a9dbb902f0a76c8bfe501"
+      },
+      "original_shelf_length_m": 0.24403000184403553,
+      "original_wall_shelf_3mm": {
+        "angle_floor_deg": 1.5,
+        "angle_passed": false,
+        "angle_status": "target_angle_violation",
+        "minimum_angle_deg": 1.0936814591966724,
+        "minimum_hit": {
+          "chord_midpoint_matching_residual_m": 0.0,
+          "donor": 444,
+          "incidence_deg": 1.0936814591966724,
+          "nearest_corner": {
+            "distance_m": 0.00019150043127427591,
+            "index": 60,
+            "point_RZ_m": [
+              1.40117,
+              -1.24477
+            ]
+          },
+          "original_segment": 59,
+          "point_RZ_m": [
+            1.4013615004298272,
+            -1.2447700235422403
+          ],
+          "source_x_m": 0.00937633379628456,
+          "split_segment": 61,
+          "surface": "shelf",
+          "wall_segment": 1339
+        },
+        "power": 0.043887126592345976,
+        "powered_hit_count": 680
+      }
+    }
+  ],
+  "clipped_or_changed_constraints": false,
+  "diagnostic_sha256": "61d7f95e70399f736a3deeb69c712c8a8f19685483a4b6ae53974d4cd1f10afd",
+  "frozen_sha256": "015868994d052e68b703368ce48bca5b00bdefe358efb2dd92b971da0c220b52",
+  "scope": "fixed-point incidence conditional on that shelf neighbourhood remaining powered; the distance is measured on the original straight shelf",
+  "source_sha256": "8bb712965ced6f8e3a262d55b5251b14ce9ab0effa8aa8ae1b499f8bc74863db"
+}

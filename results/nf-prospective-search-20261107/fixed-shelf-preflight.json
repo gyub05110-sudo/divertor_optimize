@@ -1,0 +1,65 @@
+{
+  "parent_elapsed_s": 2.2389027001336217,
+  "cases": [
+    {
+      "input_root": "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\332a6d97fc\\input-root",
+      "shot_sha256": "ef117c75eaa8c7f4891b1d116ee0e7b1ae069a17255ae8546cd874ab24523b7f",
+      "time_ms": 1400.0,
+      "shelf_corner_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "minimum_angle_deg": 1.5,
+      "incidence_deg": {
+        "cubic": 1.481471046721286,
+        "quintic": 1.4815743028059671
+      },
+      "interpolants_below_floor": [
+        "cubic",
+        "quintic"
+      ],
+      "corner_status": "below_floor_if_powered",
+      "geometry_or_candidate_feasibility": "requires first-hit and receiving-power checks",
+      "heat_evaluations": 0
+    },
+    {
+      "input_root": "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\e806f47778\\input-root",
+      "shot_sha256": "dc0eba5720dc0a8b9894ae6fdaf5f346b4d5b2a06ca4d40cd83be8def591f0a5",
+      "time_ms": 1400.0,
+      "shelf_corner_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "minimum_angle_deg": 1.5,
+      "incidence_deg": {
+        "cubic": 1.7644545619321206,
+        "quintic": 1.7644705960597433
+      },
+      "interpolants_below_floor": [],
+      "corner_status": "at_or_above_floor",
+      "geometry_or_candidate_feasibility": "requires first-hit and receiving-power checks",
+      "heat_evaluations": 0
+    },
+    {
+      "input_root": "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\51d83022ca\\input-root",
+      "shot_sha256": "ced6ee925b8554f11f8e343b26befcfe598c3f07c63292958ef77c1a0ee0bade",
+      "time_ms": 1400.0,
+      "shelf_corner_RZ_m": [
+        1.40117,
+        -1.24477
+      ],
+      "minimum_angle_deg": 1.5,
+      "incidence_deg": {
+        "cubic": 1.0924392354148453,
+        "quintic": 1.0920827336049774
+      },
+      "interpolants_below_floor": [
+        "cubic",
+        "quintic"
+      ],
+      "corner_status": "below_floor_if_powered",
+      "geometry_or_candidate_feasibility": "requires first-hit and receiving-power checks",
+      "heat_evaluations": 0
+    }
+  ]
+}

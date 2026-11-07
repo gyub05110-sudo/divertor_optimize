@@ -1,0 +1,106 @@
+{
+  "all_registered_diagnoses_reproduced": true,
+  "completed_arms": 6,
+  "cpu_seconds": 137.046875,
+  "diagnostic_registration_sha256": "d158ba5f9cdcba7863f858991271237f92667929e410e1d1da217e144b4f8cbc",
+  "failed_arms": 12,
+  "original_wall_replay_count": 2,
+  "other_failed_arms": [],
+  "primary_denominator_unchanged": true,
+  "primary_source_inputs_and_evidence_unchanged": true,
+  "registered_arms": 18,
+  "results": [
+    {
+      "case_id": "332a6d97fc",
+      "cpu_seconds": 67.359375,
+      "failure_basis": {
+        "failed_predicates": [
+          "powered_surface_angles"
+        ],
+        "guard_direct_width_failures": {
+          "balance": [],
+          "illuminated": [],
+          "powered_angles": [
+            1.0,
+            2.0,
+            3.0,
+            5.0,
+            10.0
+          ],
+          "unmapped_power": []
+        },
+        "guard_widths_mm": [
+          1.0,
+          2.0,
+          3.0,
+          5.0,
+          10.0
+        ],
+        "native_raise_site": {
+          "file": "d3d_optimization/continuous_boundary.py",
+          "function": "__init__",
+          "line": 129,
+          "numeric_locals": {}
+        },
+        "prescribed_direct_with_witness_passed": false,
+        "stage": "continuous_boundary_constructor",
+        "thermal_boundary_measurement_observed": false
+      },
+      "file": "results/332a6d97fc/prepare_fine.json",
+      "native_error": "ValueError: continuous-boundary baseline is infeasible",
+      "observer_errors": [],
+      "primary_failures": 6,
+      "reproduced": true,
+      "sha256": "68ee3f2a0fa5cff1ebc8e3b48af76e49ea94f38ff0cb9c722faa09b9521ba7cf",
+      "stage": "prepare_fine",
+      "wall_seconds": 67.55145100038499
+    },
+    {
+      "case_id": "51d83022ca",
+      "cpu_seconds": 69.6875,
+      "failure_basis": {
+        "failed_predicates": [
+          "powered_surface_angles"
+        ],
+        "guard_direct_width_failures": {
+          "balance": [],
+          "illuminated": [],
+          "powered_angles": [
+            1.0,
+            2.0,
+            3.0,
+            5.0,
+            10.0
+          ],
+          "unmapped_power": []
+        },
+        "guard_widths_mm": [
+          1.0,
+          2.0,
+          3.0,
+          5.0,
+          10.0
+        ],
+        "native_raise_site": {
+          "file": "d3d_optimization/continuous_boundary.py",
+          "function": "__init__",
+          "line": 129,
+          "numeric_locals": {}
+        },
+        "prescribed_direct_with_witness_passed": false,
+        "stage": "continuous_boundary_constructor",
+        "thermal_boundary_measurement_observed": false
+      },
+      "file": "results/51d83022ca/prepare_fine.json",
+      "native_error": "ValueError: continuous-boundary baseline is infeasible",
+      "observer_errors": [],
+      "primary_failures": 6,
+      "reproduced": true,
+      "sha256": "86a60b2c38541d563830480e59a5e45442331e60c4a6fe0b8fff81611f08697d",
+      "stage": "prepare_fine",
+      "wall_seconds": 69.8046764000319
+    }
+  ],
+  "schema": "nf-prospective-baseline-diagnostic-summary.v1",
+  "wall_seconds": 137.35612740041688
+}
