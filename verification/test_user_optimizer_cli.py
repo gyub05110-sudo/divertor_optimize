@@ -43,6 +43,33 @@ def test_invalid_operating_point_is_rejected_before_run(tmp_path):
     assert not out.exists()
 
 
+def test_completed_reference_survives_coarse_preparation_failure(tmp_path, monkeypatch):
+    import optimize_divertor as cli
+    from d3d_optimization import campaign_geometry, user_input, user_output, user_physics
+    from types import SimpleNamespace
+    from time import perf_counter
+
+    path = tmp_path / "named.parquet"
+    path.touch()
+    user = SimpleNamespace(provenance={}, review={k: {} for k in ("axis_RZ_m", "xpoint_RZ_m", "legs")})
+    monkeypatch.setattr(user_input, "load_user_input", lambda *a: user)
+    monkeypatch.setattr(user_physics, "shelf_limits", lambda *a: {"admissible": True})
+    original = SimpleNamespace(baseline={"physics_measurable": True, "deposition": {}})
+    def prepare(_user, _reference, level):
+        if level == cli.COARSE:
+            raise ValueError("coarse trace unresolved")
+        return original
+    monkeypatch.setattr(user_physics, "prepare_user", prepare)
+    monkeypatch.setattr(campaign_geometry, "evaluator", lambda *a: original)
+    monkeypatch.setattr(user_output, "export_measurement", lambda *a: {"physics_measurable": True})
+    out = tmp_path / "failure"
+    assert cli.main(["--equilibrium", str(path), "--output", str(out), "--time-ms", "1400"],
+                    started=perf_counter()) == 1
+    row = json.loads((out / "result.json").read_text())
+    assert row["baseline"]["physics_measurable"] and row["selected"] is None
+    assert row["status"] == "calculation_error" and "coarse trace" in row["reason"]
+
+
 def test_reference_corner_is_assessed_on_original_straight_floor():
     from d3d_optimization.user_output import reference_junction
     wall = np.array([[-1., 0.], [0., 0.], [1., 0.], [1., 1.]])

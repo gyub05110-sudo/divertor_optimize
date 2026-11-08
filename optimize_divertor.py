@@ -163,26 +163,30 @@ def run(args, started, report, observe):
         report.update(status="constraint_excluded",
                       reason="fixed shelf tangent or local magnetic pitch violates receiving-angle floor under positive kernel support")
     else:
-        with stage("prepare_fine_design"):
-            fine = evaluator(original, args.radius_mm, args.backend)
-        coarse = None
-        if perf_counter() < deadline:
-            with stage("prepare_coarse_search"):
-                coarse = evaluator(prepare_user(user, reference, COARSE), args.radius_mm, args.backend)
-        report["timings"]["search_ready_s"] = perf_counter()-started
-        if coarse is not None and perf_counter() < deadline:
-            found = search_peak(coarse, fine, radius_mm=args.radius_mm, seed=args.seed,
-                                started=started, deadline=deadline, baseline=base,
-                                family=args.family, observe=observe)
-            selected = found["selected"]
-            owner = fine
-            candidate = found["winner"]
-            report["search"] = {k: v for k, v in found.items() if k not in ("selected", "winner")}
-            report.update(status=found["status"], reason=found.get("reason", found["status"]),
-                          candidate=dict(id=candidate.identity, **candidate.record()) if candidate else None)
-            if found.get("termination") == "failed":
-                report.update(status="partial_result" if selected is not None else "calculation_error",
-                              reason="search stopped on a calculation failure; see search.errors and events.jsonl")
+        try:
+            with stage("prepare_fine_design"):
+                fine = evaluator(original, args.radius_mm, args.backend)
+            coarse = None
+            if perf_counter() < deadline:
+                with stage("prepare_coarse_search"):
+                    coarse = evaluator(prepare_user(user, reference, COARSE), args.radius_mm, args.backend)
+            report["timings"]["search_ready_s"] = perf_counter()-started
+            if coarse is not None and perf_counter() < deadline:
+                found = search_peak(coarse, fine, radius_mm=args.radius_mm, seed=args.seed,
+                                    started=started, deadline=deadline, baseline=base,
+                                    family=args.family, observe=observe)
+                selected = found["selected"]
+                owner = fine
+                candidate = found["winner"]
+                report["search"] = {k: v for k, v in found.items() if k not in ("selected", "winner")}
+                report.update(status=found["status"], reason=found.get("reason", found["status"]),
+                              candidate=dict(id=candidate.identity, **candidate.record()) if candidate else None)
+                if found.get("termination") == "failed":
+                    report.update(status="partial_result" if selected is not None else "calculation_error",
+                                  reason="search stopped on a calculation failure; see search.errors and events.jsonl")
+        except Exception as exc:
+            report.update(status="calculation_error", reason=f"{type(exc).__name__}: {exc}")
+            observe(dict(stage="search_failure", elapsed_s=perf_counter()-started, reason=report["reason"]))
     report["timings"]["search_finished_s"] = perf_counter()-started
     if "deposition" in base:
         report["baseline"] = dict(export_measurement(args.output / "baseline", original, base),
