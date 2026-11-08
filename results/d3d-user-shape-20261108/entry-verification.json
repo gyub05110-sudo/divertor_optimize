@@ -1,0 +1,78 @@
+{
+  "entry-demo": {
+    "status": "qualified",
+    "sha256": "dc0eba5720dc0a8b9894ae6fdaf5f346b4d5b2a06ca4d40cd83be8def591f0a5",
+    "baseline_MW_m2": 5.225409659840457,
+    "A2_m2": 0.35055082957689654,
+    "baseline_ready_s": 168.54434869997203,
+    "fixed_actual_deg": 1.7644545619321206,
+    "pitch_max_deg": 1.9954501764599402,
+    "floor_deg": 1.5,
+    "unhit_W": 0.0,
+    "direct_subfloor_W": 0.0,
+    "received_subfloor_midpoint_W": 0.0,
+    "peak_MW_m2": 3.347389984896983,
+    "id": "f82745f0e34a891e36e6652dce7840aeee87d56c2057bc915ec2546814911409",
+    "first_feasible_s": 202.16878949990496,
+    "fine": {
+      "id": "f82745f0e34a891e36e6652dce7840aeee87d56c2057bc915ec2546814911409",
+      "unrounded_peak_q": 3.347389984896983,
+      "completed_s": 229.21682179998606,
+      "eligible_fine": 2,
+      "fine_attempts": 3,
+      "budget_s": 240.0
+    },
+    "budget_s": 240.0
+  },
+  "entry-release": {
+    "status": "qualified",
+    "sha256": "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c",
+    "baseline_MW_m2": 2.730756117101662,
+    "A2_m2": 0.609967901449863,
+    "baseline_ready_s": 138.83486430021003,
+    "fixed_actual_deg": 1.564276210476429,
+    "pitch_max_deg": 2.4501063335912625,
+    "floor_deg": 1.5,
+    "unhit_W": 0.0,
+    "direct_subfloor_W": 0.0,
+    "received_subfloor_midpoint_W": 0.0,
+    "peak_MW_m2": 1.9442225761521048,
+    "id": "b8ceaec52a141bd6c618a2f72a2aa1ac71d35004a4ff8821ac4d38da2909a9f8",
+    "first_feasible_s": 170.62214939994738,
+    "fine": {
+      "id": "b8ceaec52a141bd6c618a2f72a2aa1ac71d35004a4ff8821ac4d38da2909a9f8",
+      "unrounded_peak_q": 1.9442225761521048,
+      "completed_s": 241.38231510017067,
+      "eligible_fine": 4,
+      "fine_attempts": 5,
+      "budget_s": 255.0
+    },
+    "budget_s": 255.0
+  },
+  "entry-332a6d97fc": {
+    "status": "constraint_excluded",
+    "sha256": "ef117c75eaa8c7f4891b1d116ee0e7b1ae069a17255ae8546cd874ab24523b7f",
+    "baseline_MW_m2": 4.528984331763882,
+    "A2_m2": 0.39997315697838404,
+    "baseline_ready_s": 150.64912609988824,
+    "fixed_actual_deg": 1.481471046721286,
+    "pitch_max_deg": 2.499633009232207,
+    "floor_deg": 1.5,
+    "unhit_W": 0.0,
+    "direct_subfloor_W": 2618.2459448325085,
+    "received_subfloor_midpoint_W": 2265.9883618538133
+  },
+  "entry-51d83022ca": {
+    "status": "constraint_excluded",
+    "sha256": "ced6ee925b8554f11f8e343b26befcfe598c3f07c63292958ef77c1a0ee0bade",
+    "baseline_MW_m2": 5.381169972121958,
+    "A2_m2": 0.3383391733575868,
+    "baseline_ready_s": 157.60575049975887,
+    "fixed_actual_deg": 1.0924392354148453,
+    "pitch_max_deg": 1.2585194083443576,
+    "floor_deg": 1.5,
+    "unhit_W": 0.0,
+    "direct_subfloor_W": 41921.029136196084,
+    "received_subfloor_midpoint_W": 38816.45864886657
+  }
+}

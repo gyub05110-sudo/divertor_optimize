@@ -1,0 +1,140 @@
+{
+  "points_per_curve": 262145,
+  "normal": "finite-difference derivative of R,Z; second-order endpoint formula",
+  "results": {
+    "e806f47778": {
+      "cubic": {
+        "original": {
+          "minimum_deg": 1.7644545619153034,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ]
+        },
+        "full": {
+          "minimum_deg": 1.764454561915249,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "e25f8aa24feec0f6d67f5ccae906742c7d900ab5d92c4d1470dc340c1ac419e1"
+        },
+        "floor-only": {
+          "minimum_deg": 1.7644545619153034,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "a20aa1f2469a862771b382f2998dd2ddd7a492eb6e44c1e4c8d5fd3e983d068f"
+        },
+        "entry-demo": {
+          "minimum_deg": 1.7644545619153034,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "f82745f0e34a891e36e6652dce7840aeee87d56c2057bc915ec2546814911409"
+        }
+      },
+      "quintic": {
+        "original": {
+          "minimum_deg": 1.7644705960429026,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ]
+        },
+        "full": {
+          "minimum_deg": 1.7644705960428477,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "e25f8aa24feec0f6d67f5ccae906742c7d900ab5d92c4d1470dc340c1ac419e1"
+        },
+        "floor-only": {
+          "minimum_deg": 1.7644705960429026,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "a20aa1f2469a862771b382f2998dd2ddd7a492eb6e44c1e4c8d5fd3e983d068f"
+        },
+        "entry-demo": {
+          "minimum_deg": 1.7644705960429026,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "f82745f0e34a891e36e6652dce7840aeee87d56c2057bc915ec2546814911409"
+        }
+      }
+    },
+    "1a3155370c": {
+      "cubic": {
+        "original": {
+          "minimum_deg": 1.5642762104424055,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ]
+        },
+        "full": {
+          "minimum_deg": 1.5642762104424055,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "7fd77eeeec37b9ca29a09943155ca44395341c850a5361d27e4935b443242f17"
+        },
+        "floor-only": {
+          "minimum_deg": 1.5642762104424055,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "668bb90b8534fe063d8e6268417f9ac36c438c1fb053be400bde1ed47ef92410"
+        }
+      },
+      "quintic": {
+        "original": {
+          "minimum_deg": 1.5643249197907403,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ]
+        },
+        "full": {
+          "minimum_deg": 1.5643249197907403,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "7fd77eeeec37b9ca29a09943155ca44395341c850a5361d27e4935b443242f17"
+        },
+        "floor-only": {
+          "minimum_deg": 1.5643249197907403,
+          "u": 1.0,
+          "RZ_m": [
+            1.40117,
+            -1.24477
+          ],
+          "candidate_id": "668bb90b8534fe063d8e6268417f9ac36c438c1fb053be400bde1ed47ef92410"
+        }
+      }
+    }
+  }
+}

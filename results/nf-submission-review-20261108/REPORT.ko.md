@@ -94,6 +94,8 @@ $$
 
 ## 투고까지 권하는 실행 순서
 
+아래는 진입점 개발 전의 검토 기록이다. 이후 완료한 파일 입력 진입점, 원벽·제약 실패 진단, 두 평형의 단순 형상 실험과 고정 형상 대조는 [11월 8일 후속 결과](../d3d-user-shape-20261108/REPORT.ko.md)에 있다.
+
 ### 1. 평형을 넣으면 어떤 상태와 결과를 돌려주는지 완성한다
 
 현재 생산용 고속 경로는 익명 parquet의 사전 지정 경로·시각 manifest, DIII-D 벽과 segment 58/59/60/68 등, 하부 X점과 편집 구간을 전제한다. 전향 시험은 새 평형 바이트를 기존 파일명으로 배치해 성공적으로 읽었다. 공개 벽은 OpenFUSIONToolkit의 DIII-D 예제 기하이며, 배포본에는 각 익명 샷의 당시 타일 형상과 일치한다는 정보가 없다. 따라서 현재 입출력 범위는 **같은 DIII-D 기준벽과 정의된 하부 영역에서 파일별로 재탐색**하는 것이다. 다른 장치까지 확장하는 일은 첫 논문 범위를 정한 뒤 선택할 수 있다. [로더와 구간 정의](../../d3d_optimization/independent_sources.py) · [벽 출처](../../d3d_optimization/data/geometry_provenance.json) · [공개 평형 자료](https://fusion-equilibrium-challenge.sophelio.io/data/)

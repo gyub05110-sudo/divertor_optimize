@@ -1,0 +1,504 @@
+{
+  "schema": "user-shape-comparison.v1",
+  "source_search": {
+    "full": {
+      "result": "D:\\DivertorOptimization\\studies\\d3d-input-shape-20261108\\e806f47778\\full\\result.json",
+      "result_sha256": "532f1699ca6c98a37e32129681dfe96a7011e711935b5f61e04e6b8ef3ecf641",
+      "events_sha256": "246e1d67caff065a09bbf89c5c15dc5ce8099521db092b3a83f3c61911dca22b",
+      "baseline": {
+        "peak_MW_m2": 5.225409659840457,
+        "A2_m2": 0.3505508295768964
+      },
+      "selected": {
+        "peak_MW_m2": 2.0368114137118893,
+        "A2_m2": 0.7628780552745147
+      }
+    },
+    "floor": {
+      "result": "D:\\DivertorOptimization\\studies\\d3d-input-shape-20261108\\e806f47778\\floor-only\\result.json",
+      "result_sha256": "9fe4c1c50bc85ce0412e1d13fc3fa37e667ced8b9a53d1a69f3a8dabf4a73bd4",
+      "events_sha256": "b4d1c20712a482680eb6005afdb63ad5bcf1ec1c6805679ccac1519f7ef4ae3b",
+      "baseline": {
+        "peak_MW_m2": 5.225409659840457,
+        "A2_m2": 0.3505508295768964
+      },
+      "selected": {
+        "peak_MW_m2": 2.0368114295405344,
+        "A2_m2": 0.7629024150327074
+      }
+    }
+  },
+  "source_replay": "D:\\DivertorOptimization\\studies\\d3d-input-shape-20261108\\e806f47778\\replay",
+  "protocol_sha256": "96fcc0d96c2b928d5c5e0740fc5e27dae8f7a07470227d43dff018ae3458bfb9",
+  "replay_report_sha256": "658c8bfa4e6ddfdbee33b68adea2269d1c31f9da010064c1548babc49e31e8cb",
+  "verifier_sha256": "3bca3d8486f86a6eebcb0a2ed776ee7769f4cf27de975cb7eaa76320b9778a2c",
+  "inputs": {
+    "baseline_lower_strike_legs": {
+      "outer": {
+        "segment": 68,
+        "strike_RZ_m": [
+          1.3152345922409225,
+          -1.3582985762032302
+        ],
+        "refinement_m": 1.4119895420243788e-09
+      },
+      "inner": {
+        "segment": 69,
+        "strike_RZ_m": [
+          1.0501348125092898,
+          -1.248511464541283
+        ],
+        "refinement_m": 3.29213728310508e-09
+      }
+    },
+    "baseline_outer_strike_design": {
+      "location": "adjustable_interior",
+      "surfaces": [
+        "floor"
+      ]
+    },
+    "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_e806f47778.parquet",
+    "equilibrium_sha256": "dc0eba5720dc0a8b9894ae6fdaf5f346b4d5b2a06ca4d40cd83be8def591f0a5",
+    "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+    "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+    "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+    "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+    "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+    "omp_endpoints_RZ_m": {
+      "omp_entry": [
+        [
+          1.6807174746675833,
+          -1.2429636567829063
+        ],
+        [
+          1.6452814505546696,
+          -1.2447957888004426
+        ]
+      ],
+      "shelf": [
+        [
+          1.6452,
+          -1.2448
+        ],
+        [
+          1.40117,
+          -1.24477
+        ]
+      ],
+      "omp_connector": [
+        [
+          1.4002046434423296,
+          -1.2449831467624124
+        ],
+        [
+          1.3858170977951636,
+          -1.2481598577397073
+        ]
+      ],
+      "floor": [
+        [
+          1.4277,
+          -1.35782
+        ],
+        [
+          1.1645,
+          -1.35894
+        ]
+      ]
+    },
+    "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+    "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+    "time_ms": 1400.0,
+    "length_unit": "m",
+    "poloidal_flux_unit": "Wb/rad",
+    "magnetic_field_unit": "T",
+    "format": "DIII-D EFIT parquet",
+    "frame_index": 57,
+    "time_source": "exact efit_times match",
+    "tf_current_kA": -119.0663970132935,
+    "tf_interpolation_times_ms": [
+      1399.996826171875,
+      1400.0467529296875
+    ],
+    "tf_interpolation_currents_kA": [
+      -119.00201471328735,
+      -120.01479781723023
+    ],
+    "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+  },
+  "matched_search": {
+    "seed": 20711,
+    "budget_seconds": 360.0,
+    "radius_mm": 20,
+    "backend": "gpu"
+  },
+  "reference_SI": {
+    "power_W": 1000000.0,
+    "density_m3": 1e+19,
+    "chi_perp_m2_s": 0.3,
+    "lambda_q_m": 0.003,
+    "gamma": 7.0,
+    "kappa0": 2000.0
+  },
+  "fine_selection": {
+    "floor": {
+      "id": "a20aa1f2469a862771b382f2998dd2ddd7a492eb6e44c1e4c8d5fd3e983d068f",
+      "unrounded_peak_q": 2.0368114295405344,
+      "completed_s": 333.39147870009765,
+      "eligible_fine": 9,
+      "fine_attempts": 10,
+      "budget_s": 360.0
+    },
+    "full": {
+      "id": "e25f8aa24feec0f6d67f5ccae906742c7d900ab5d92c4d1470dc340c1ac419e1",
+      "unrounded_peak_q": 2.0368114137118893,
+      "completed_s": 354.24452240020037,
+      "eligible_fine": 8,
+      "fine_attempts": 9,
+      "budget_s": 360.0
+    }
+  },
+  "search_metrics": {
+    "baseline": {
+      "peak_MW_m2": 5.225409659840457,
+      "A2_m2": 0.35055082957689654,
+      "assigned_W": 1000000.0,
+      "deposited_W": 999999.9999999999,
+      "unhit_W": 0.0,
+      "closure_residual_W": 1.1641532182693481e-10,
+      "peak_RZ_m": [
+        1.3170798086757307,
+        -1.3582907242184012
+      ],
+      "peak_region": "floor",
+      "regions": {
+        "fixed": {
+          "first_hit_W": 20619.128911206575,
+          "deposited_W": 24638.21983586044,
+          "net_spreading_W": 4019.090924653865,
+          "hit_weighted_physical_width_m": 0.009894670472838192,
+          "hit_weighted_parallel_length_m": 13.142872036011083
+        },
+        "floor": {
+          "first_hit_W": 931226.7367346692,
+          "deposited_W": 931227.7489533572,
+          "net_spreading_W": 1.0122186880325899,
+          "hit_weighted_physical_width_m": 0.0017506862207570203,
+          "hit_weighted_parallel_length_m": 23.545092760126575
+        },
+        "imp_sloped": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.015104704321370236,
+          "net_spreading_W": 0.015104704321370236,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "imp_vertical": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.017591456048858235,
+          "net_spreading_W": 0.017591456048858235,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "omp_connector": {
+          "first_hit_W": 19894.81956110202,
+          "deposited_W": 16294.758852557146,
+          "net_spreading_W": -3600.0607085448737,
+          "hit_weighted_physical_width_m": 0.012035035174861227,
+          "hit_weighted_parallel_length_m": 12.488989373111568
+        },
+        "omp_entry": {
+          "first_hit_W": 0.0015926065595265263,
+          "deposited_W": 6.244904832815335,
+          "net_spreading_W": 6.243312226255808,
+          "hit_weighted_physical_width_m": 4.293591085631762,
+          "hit_weighted_parallel_length_m": 8.167380794458564
+        },
+        "shelf": {
+          "first_hit_W": 28259.313200415596,
+          "deposited_W": 27832.9947572317,
+          "net_spreading_W": -426.3184431838963,
+          "hit_weighted_physical_width_m": 0.020166202407236936,
+          "hit_weighted_parallel_length_m": 11.558268707555406
+        }
+      }
+    },
+    "floor": {
+      "peak_MW_m2": 2.0368114295405344,
+      "A2_m2": 0.7629024150327073,
+      "assigned_W": 1000000.0,
+      "deposited_W": 999999.9999999999,
+      "unhit_W": 0.0,
+      "closure_residual_W": 1.1641532182693481e-10,
+      "peak_RZ_m": [
+        1.2994642121347948,
+        -1.3109888678322617
+      ],
+      "peak_region": "floor",
+      "regions": {
+        "fixed": {
+          "first_hit_W": 20619.128911206575,
+          "deposited_W": 24638.182144607305,
+          "net_spreading_W": 4019.0532334007294,
+          "hit_weighted_physical_width_m": 0.009894670472838192,
+          "hit_weighted_parallel_length_m": 13.142872036011083
+        },
+        "floor": {
+          "first_hit_W": 931226.7367346692,
+          "deposited_W": 931227.7938703924,
+          "net_spreading_W": 1.0571357231820002,
+          "hit_weighted_physical_width_m": 0.001940125006691237,
+          "hit_weighted_parallel_length_m": 22.77323269619796
+        },
+        "imp_sloped": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.011674571163047914,
+          "net_spreading_W": 0.011674571163047914,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "imp_vertical": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.01379636402159572,
+          "net_spreading_W": 0.01379636402159572,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "omp_connector": {
+          "first_hit_W": 19894.81956110202,
+          "deposited_W": 16294.758852530857,
+          "net_spreading_W": -3600.0607085711636,
+          "hit_weighted_physical_width_m": 0.012035035174861227,
+          "hit_weighted_parallel_length_m": 12.488989373111568
+        },
+        "omp_entry": {
+          "first_hit_W": 0.0015926065595265263,
+          "deposited_W": 6.24490476032008,
+          "net_spreading_W": 6.243312153760553,
+          "hit_weighted_physical_width_m": 4.293591085631762,
+          "hit_weighted_parallel_length_m": 8.167380794458564
+        },
+        "shelf": {
+          "first_hit_W": 28259.313200415596,
+          "deposited_W": 27832.994756773856,
+          "net_spreading_W": -426.3184436417396,
+          "hit_weighted_physical_width_m": 0.020166202407236936,
+          "hit_weighted_parallel_length_m": 11.558268707555406
+        }
+      }
+    },
+    "full": {
+      "peak_MW_m2": 2.0368114137118893,
+      "A2_m2": 0.7628780552745148,
+      "assigned_W": 1000000.0,
+      "deposited_W": 999999.9999999998,
+      "unhit_W": 0.0,
+      "closure_residual_W": 2.3283064365386963e-10,
+      "peak_RZ_m": [
+        1.299464212137978,
+        -1.310988867835073
+      ],
+      "peak_region": "floor",
+      "regions": {
+        "fixed": {
+          "first_hit_W": 20619.128911206575,
+          "deposited_W": 24686.257348993255,
+          "net_spreading_W": 4067.1284377866796,
+          "hit_weighted_physical_width_m": 0.009894670472838192,
+          "hit_weighted_parallel_length_m": 13.142872036011083
+        },
+        "floor": {
+          "first_hit_W": 931226.7367346692,
+          "deposited_W": 931227.7336029033,
+          "net_spreading_W": 0.9968682341277599,
+          "hit_weighted_physical_width_m": 0.001940125006691237,
+          "hit_weighted_parallel_length_m": 22.77323269619796
+        },
+        "imp_sloped": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.01127741068385333,
+          "net_spreading_W": 0.01127741068385333,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "imp_vertical": {
+          "first_hit_W": 0.0,
+          "deposited_W": 0.013358269774174003,
+          "net_spreading_W": 0.013358269774174003,
+          "hit_weighted_physical_width_m": null,
+          "hit_weighted_parallel_length_m": null
+        },
+        "omp_connector": {
+          "first_hit_W": 19894.81956110202,
+          "deposited_W": 16368.839803802912,
+          "net_spreading_W": -3525.9797572991083,
+          "hit_weighted_physical_width_m": 0.012035145844680555,
+          "hit_weighted_parallel_length_m": 12.489569558628473
+        },
+        "omp_entry": {
+          "first_hit_W": 0.0015926065595265263,
+          "deposited_W": 6.1964850470243,
+          "net_spreading_W": 6.194892440464773,
+          "hit_weighted_physical_width_m": 4.2934829100444825,
+          "hit_weighted_parallel_length_m": 8.167380607348477
+        },
+        "shelf": {
+          "first_hit_W": 28259.313200415596,
+          "deposited_W": 27710.948123572794,
+          "net_spreading_W": -548.3650768428015,
+          "hit_weighted_physical_width_m": 0.020189400978586756,
+          "hit_weighted_parallel_length_m": 11.58696647559545
+        }
+      }
+    }
+  },
+  "search_pair": {
+    "reference_peak_MW_m2": 5.225409659840457,
+    "floor_peak_MW_m2": 2.0368114295405344,
+    "full_peak_MW_m2": 2.0368114137118893,
+    "floor_eligible": true,
+    "full_eligible": true,
+    "floor_reduction_vs_reference_pct": 61.02101917110318,
+    "full_reduction_vs_reference_pct": 61.02101947402,
+    "floor_over_full_ratio": 1.0000000077712865,
+    "signed_floor_minus_full_pct": 7.771286503199804e-07
+  },
+  "preregistered_decision": {
+    "status": "within_1pct",
+    "required_levels": [
+      "cubic1280",
+      "quintic1280",
+      "cubic640"
+    ],
+    "operational_margin_pct": 1.0,
+    "requires_both_eligible_and_improved_on_each_level": true,
+    "statistic": "100*(q_floor/q_full-1); positive means lower full-family peak"
+  },
+  "replay_levels": {
+    "cubic1280": {
+      "reference_peak_MW_m2": 5.225409659840457,
+      "floor_peak_MW_m2": 2.0368114295405344,
+      "full_peak_MW_m2": 2.0368114137118893,
+      "floor_eligible": true,
+      "full_eligible": true,
+      "floor_reduction_vs_reference_pct": 61.02101917110318,
+      "full_reduction_vs_reference_pct": 61.02101947402,
+      "floor_over_full_ratio": 1.0000000077712865,
+      "signed_floor_minus_full_pct": 7.771286503199804e-07
+    },
+    "quintic1280": {
+      "reference_peak_MW_m2": 5.225428170480646,
+      "floor_peak_MW_m2": 2.0339724307505427,
+      "full_peak_MW_m2": 2.033972414934706,
+      "floor_eligible": true,
+      "full_eligible": true,
+      "floor_reduction_vs_reference_pct": 61.07548770374823,
+      "full_reduction_vs_reference_pct": 61.075488006418865,
+      "floor_over_full_ratio": 1.0000000077758364,
+      "signed_floor_minus_full_pct": 7.775836419199322e-07
+    },
+    "cubic640": {
+      "reference_peak_MW_m2": 5.225371055722221,
+      "floor_peak_MW_m2": 2.0368745589622836,
+      "full_peak_MW_m2": 2.0368745431326323,
+      "floor_eligible": true,
+      "full_eligible": true,
+      "floor_reduction_vs_reference_pct": 61.019523068476936,
+      "full_reduction_vs_reference_pct": 61.019523371415254,
+      "floor_over_full_ratio": 1.0000000077715396,
+      "signed_floor_minus_full_pct": 7.771539634049418e-07
+    }
+  },
+  "canonical_reproduction": {
+    "passed": true,
+    "tolerance_relative": 1e-09,
+    "comparisons": {
+      "full_baseline": {
+        "peak_MW_m2_relative_difference": 0.0,
+        "A2_m2_relative_difference": 0.0,
+        "passed": true
+      },
+      "full_selected": {
+        "peak_MW_m2_relative_difference": 0.0,
+        "A2_m2_relative_difference": 0.0,
+        "passed": true
+      },
+      "floor_baseline": {
+        "peak_MW_m2_relative_difference": 0.0,
+        "A2_m2_relative_difference": 0.0,
+        "passed": true
+      },
+      "floor_selected": {
+        "peak_MW_m2_relative_difference": 0.0,
+        "A2_m2_relative_difference": 0.0,
+        "passed": true
+      }
+    }
+  },
+  "full_vs_floor_max_point_separation_mm": {
+    "omp_entry": 0.21919088386124178,
+    "shelf": 5.856188470334768,
+    "omp_connector": 0.060773080153293316,
+    "floor": 0.0
+  },
+  "roles": {
+    "full_winner": {
+      "id": "e25f8aa24feec0f6d67f5ccae906742c7d900ab5d92c4d1470dc340c1ac419e1",
+      "selection": "Minimum completed eligible full-arm fine peak"
+    },
+    "floor_winner": {
+      "id": "a20aa1f2469a862771b382f2998dd2ddd7a492eb6e44c1e4c8d5fd3e983d068f",
+      "selection": "Minimum completed eligible floor-only fine peak"
+    },
+    "full_winner_floor_ablation": {
+      "id": "a20aa1f2469a862771b382f2998dd2ddd7a492eb6e44c1e4c8d5fd3e983d068f",
+      "selection": "Full winner with the first twelve coefficients zeroed"
+    },
+    "projected_origin": {
+      "id": "4a45b6b8ef78a48bb94d4d62bb4b0b3617d5b07a48d5a6f14969f5d88e97d3f9",
+      "selection": "Common projected cold origin from both proposal journals"
+    },
+    "restart_control": {
+      "id": "1289599fd0e77d780f0711888f6b8bf84a3f3ab16e89010ce45803681a3fdf21",
+      "selection": "First admitted eligible independent projected restart in the full arm"
+    },
+    "g1_zero": {
+      "id": "1addb5d7046dab1ca78532a64065afd1d765787224e1264c9929ad0832ee6c11",
+      "selection": "All free coefficients zero with mandatory G1 floor endpoint tangent"
+    },
+    "one_amplitude_-40mm": {
+      "id": "4e9c874613947448f017f7c97224b9d8ba7529c3f628fd013f58d6eb737d8db2",
+      "selection": "Four equal floor coefficients of -40 mm with all constraints active"
+    },
+    "one_amplitude_-20mm": {
+      "id": "7b184e6e315526f9d596f01a7fe8c849d7a044f321bf20e584ec40b734dc1d49",
+      "selection": "Four equal floor coefficients of -20 mm with all constraints active"
+    },
+    "one_amplitude_+0mm": {
+      "id": "1addb5d7046dab1ca78532a64065afd1d765787224e1264c9929ad0832ee6c11",
+      "selection": "Four equal floor coefficients of 0 mm with all constraints active"
+    },
+    "one_amplitude_+20mm": {
+      "id": "6c67c6cdbf01e0284169009bf12e78d7bf4104f6dde84d320a432853dc0024e9",
+      "selection": "Four equal floor coefficients of 20 mm with all constraints active"
+    },
+    "one_amplitude_+40mm": {
+      "id": "472d224cc796b60e7f670c66f1785d0015eb5eb033a217c7a94620791ab0cd6b",
+      "selection": "Four equal floor coefficients of 40 mm with all constraints active"
+    }
+  },
+  "profile_coordinate": "Baseline parent vertex arclength plus local fraction on the corresponding material chord. Curves show receiving-cell means; reported peaks use refined point samples.",
+  "attribution_plot_roles": {
+    "with_nonfloor": "full_winner",
+    "matched_floor_ablation": "full_winner_floor_ablation",
+    "level": "cubic1280"
+  },
+  "analysis_sha256": {
+    "attribution-geometry.png": "43e8e0e121ab71a78e267060b6d015e2e16b7d26a8a767d354a1fad5096414ff",
+    "attribution-profiles.png": "02b6ae53454a86b721a4c2c594a908f775d9b7860b8e9e89bea0aa91e8afde6a",
+    "geometry.png": "ed86fdbae5007cb304a8a26bbce429c7a24f0421ae0c5ed4391ccc1e8be039c3",
+    "profiles.png": "3f86cf2d59e3d42ccbe26c74564d6e73f891a84c7b90173805e9b053cd6c384a",
+    "regional-power.csv": "3df7e3d07a811422eb88aeb86ea0c0e3dd2e622d0d6da7494784d3c5f88f9a7d",
+    "replay.csv": "70f7ab1677f759e30d03c017e2af995861723924ab9f62a3c5532cdb5c2bd5f5"
+  }
+}
