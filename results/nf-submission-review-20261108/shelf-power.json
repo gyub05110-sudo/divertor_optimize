@@ -1,0 +1,71 @@
+{
+  "source_commit": "524dcc5",
+  "source": "OMP",
+  "power_MW": 1,
+  "lambda_q_mm": 3,
+  "angle_floor_deg": 1.5,
+  "wall": "unmodified supplied DIII-D reference",
+  "observable": "direct first-hit assigned power, before boundary redistribution",
+  "rows": [
+    {
+      "case": "332a6d97fc",
+      "level": "cubic320",
+      "donors": 320,
+      "shelf_hits": 120,
+      "below_hits": 2,
+      "shelf_kW_at_1MW": 34.159517446800336,
+      "below_kW_at_1MW": 4.161258854002307,
+      "min_shelf_deg": 1.48565937862733
+    },
+    {
+      "case": "332a6d97fc",
+      "level": "cubic640",
+      "donors": 640,
+      "shelf_hits": 240,
+      "below_hits": 3,
+      "shelf_kW_at_1MW": 34.15951744675372,
+      "below_kW_at_1MW": 3.163929649383012,
+      "min_shelf_deg": 1.4822691338516665
+    },
+    {
+      "case": "332a6d97fc",
+      "level": "cubic1280",
+      "donors": 1280,
+      "shelf_hits": 480,
+      "below_hits": 5,
+      "shelf_kW_at_1MW": 33.61383996029057,
+      "below_kW_at_1MW": 2.6182459448325086,
+      "min_shelf_deg": 1.4839547069500463
+    },
+    {
+      "case": "51d83022ca",
+      "level": "cubic320",
+      "donors": 320,
+      "shelf_hits": 170,
+      "below_hits": 46,
+      "shelf_kW_at_1MW": 43.88712659217542,
+      "below_kW_at_1MW": 41.95972513590172,
+      "min_shelf_deg": 1.0970690409036385
+    },
+    {
+      "case": "51d83022ca",
+      "level": "cubic640",
+      "donors": 640,
+      "shelf_hits": 340,
+      "below_hits": 91,
+      "shelf_kW_at_1MW": 43.88712659234854,
+      "below_kW_at_1MW": 41.8816195789182,
+      "min_shelf_deg": 1.0948093724553645
+    },
+    {
+      "case": "51d83022ca",
+      "level": "cubic1280",
+      "donors": 1280,
+      "shelf_hits": 680,
+      "below_hits": 183,
+      "shelf_kW_at_1MW": 43.88712659234597,
+      "below_kW_at_1MW": 41.92102913619609,
+      "min_shelf_deg": 1.0936814591966724
+    }
+  ]
+}
