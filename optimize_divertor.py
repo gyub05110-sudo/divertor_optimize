@@ -46,7 +46,11 @@ def arguments(argv):
     parser.add_argument("--seed", type=int, default=91001)
     parser.add_argument("--backend", choices=("gpu", "cpu"), default="cpu")
     parser.add_argument("--family", choices=("full", "floor-only"), default="full")
+    parser.add_argument("--method", choices=("screened", "direct"), default="screened",
+                        help="coarse-screened search or full-space direct fine differential evolution")
     args = parser.parse_args(argv)
+    if args.method == "direct" and args.family != "full":
+        parser.error("direct differential evolution requires --family full")
     if not math.isfinite(args.time_ms) or args.seed < 0:
         parser.error("expected finite time and nonnegative seed")
     return args
@@ -167,14 +171,18 @@ def run(args, started, report, observe):
             with stage("prepare_fine_design"):
                 fine = evaluator(original, args.radius_mm, args.backend)
             coarse = None
-            if perf_counter() < deadline:
+            if args.method == "screened" and perf_counter() < deadline:
                 with stage("prepare_coarse_search"):
                     coarse = evaluator(prepare_user(user, reference, COARSE), args.radius_mm, args.backend)
             report["timings"]["search_ready_s"] = perf_counter()-started
-            if coarse is not None and perf_counter() < deadline:
-                found = search_peak(coarse, fine, radius_mm=args.radius_mm, seed=args.seed,
-                                    started=started, deadline=deadline, baseline=base,
-                                    family=args.family, observe=observe)
+            if perf_counter() < deadline:
+                search_args = dict(radius_mm=args.radius_mm, seed=args.seed, started=started,
+                                   deadline=deadline, baseline=base, observe=observe)
+                if args.method == "direct":
+                    from d3d_optimization.user_direct_search import search_direct
+                    found = search_direct(fine, **search_args)
+                else:
+                    found = search_peak(coarse, fine, family=args.family, **search_args)
                 selected = found["selected"]
                 owner = fine
                 candidate = found["winner"]
@@ -206,7 +214,8 @@ def main(argv=None, started=None):
         print(exc, file=sys.stderr)
         return 2
     report = dict(schema_version=1, objective="minimum eligible fine whole-wall peak_MW_m2",
-                  arguments=vars(args), levels=dict(coarse=COARSE, fine=FINE), timings={},
+                  arguments=vars(args), levels=dict(coarse=COARSE, fine=FINE) if args.method == "screened"
+                  else dict(fine=FINE), timings={},
                   baseline=None, selected=None, candidate=None)
     with (args.output / "events.jsonl").open("x", encoding="utf-8") as stream:
         def observe(event):

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-08T13:10:42.462514+00:00",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\FPL-user\\miniforge3\\python.exe",
+  "executable_sha256": "b80d87439b8983f3dbcc27c29118c2b83684593ed1018228e89f0e581bb70262",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+  "logical_processors": 16,
+  "gpu_name_driver_memory_compute": "NVIDIA GeForce RTX 3090, 610.88, 24576 MiB, 8.6",
+  "gpu_runtime": "D:\\DivertorOptimization\\runtime\\cupy",
+  "packages": {
+    "numpy": {
+      "version": "2.4.3",
+      "path": "C:\\Users\\FPL-user\\miniforge3\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.17.1",
+      "path": "C:\\Users\\FPL-user\\miniforge3\\Lib\\site-packages\\scipy\\__init__.py"
+    },
+    "shapely": {
+      "version": "2.1.2",
+      "path": "C:\\Users\\FPL-user\\miniforge3\\Lib\\site-packages\\shapely\\__init__.py"
+    },
+    "pyarrow": {
+      "version": "25.0.1",
+      "path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\.local_dependencies\\d3d-fixed-equilibrium\\pyarrow\\__init__.py"
+    }
+  },
+  "gpu_distributions": {
+    "cuda-pathfinder": "1.8.4",
+    "cupy-cuda12x": "14.2.0",
+    "fastrlock": "0.8.4",
+    "nvidia-cuda-nvrtc-cu12": "12.9.86",
+    "nvidia-cuda-runtime-cu12": "12.9.79"
+  },
+  "start": "first timestamp inside the public Python CLI; outer process observation is separate",
+  "omp_num_threads": 1,
+  "openblas_num_threads": 1,
+  "mkl_num_threads": 1,
+  "study": "D:\\DivertorOptimization\\studies\\nf-stage3-20261108",
+  "runtime_cache": "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\runtime",
+  "cache_policy": "fresh process per measured search; no shared solver state; OS and compilation caches shared"
+}
