@@ -1,0 +1,550 @@
+{
+  "schema": "stage3-input-domain-diagnostic.v1",
+  "expected_sha256": "ddd916dee9ac5cfe82f166752266b756bfe3e2cc8c3c3f8c335e5103e0f7c700",
+  "diagnostic_sha256": "c305083c997b509b7f37b446f023a0dbac325d8a0a36e274b91a169b5adffddf",
+  "terminal_slots": 108,
+  "scheduled_slots": 108,
+  "all_slots_terminal": true,
+  "cases": [
+    {
+      "case_id": "8d1575d8c4",
+      "rank": 1,
+      "input_sha256": "413278ec73ea872d034eaf36a2b7e90696a0965e935eb38072734e54874ea270",
+      "time_ms": 1400.0,
+      "registration_status": "ready",
+      "observed_reasons": [
+        "sampling outside EFIT grid is forbidden"
+      ],
+      "diagnosis": {
+        "reproduced_reason": "sampling outside EFIT grid is forbidden",
+        "failure_type": "ValueError",
+        "call_path": [
+          {
+            "file": "user_input.py",
+            "function": "load_user_input",
+            "line": 202
+          },
+          {
+            "file": "case.py",
+            "function": "separatrix",
+            "line": 126
+          },
+          {
+            "file": "case.py",
+            "function": "<lambda>",
+            "line": 126
+          },
+          {
+            "file": "frozen_field.py",
+            "function": "gradient",
+            "line": 42
+          },
+          {
+            "file": "frozen_field.py",
+            "function": "checked",
+            "line": 32
+          }
+        ],
+        "stage": "checked",
+        "classification": "lower_X_root_trial_outside_grid",
+        "grid": {
+          "min_RZ_m": [
+            0.8399999737739563,
+            -1.600000023841858
+          ],
+          "max_RZ_m": [
+            2.5399999618530273,
+            1.600000023841858
+          ],
+          "points_RZ": [
+            65,
+            65
+          ]
+        },
+        "magnetic_axis_RZ_m": [
+          1.7945479154586792,
+          0.0026145942974835634
+        ],
+        "LCFS": {
+          "count": 82,
+          "min_RZ_m": [
+            1.1650171279907227,
+            -0.9140761494636536
+          ],
+          "max_RZ_m": [
+            2.245344400405884,
+            1.1291868686676025
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "wall": {
+          "count": 74,
+          "min_RZ_m": [
+            1.0173,
+            -1.35894
+          ],
+          "max_RZ_m": [
+            2.3511,
+            1.34811
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "polygon_valid": true,
+        "LCFS_contains_axis": true,
+        "lower_X_search": {
+          "LCFS_lowest_RZ_m": [
+            1.504062533378601,
+            -0.9140761494636536
+          ],
+          "distance_limit_m": 0.15,
+          "gradient_limit": 1e-07
+        },
+        "rejected_field_query": {
+          "count": 1,
+          "min_RZ_m": [
+            0.8985632091288188,
+            -1.658119937457887
+          ],
+          "max_RZ_m": [
+            0.8985632091288188,
+            -1.658119937457887
+          ],
+          "outside_count": 1,
+          "max_excess_RZ_m": [
+            0.0,
+            0.058119913616029084
+          ],
+          "outside_examples": [
+            {
+              "index": 0,
+              "RZ_m": [
+                0.8985632091288188,
+                -1.658119937457887
+              ]
+            }
+          ]
+        }
+      },
+      "loader_reason_matches": true,
+      "source_receipts": [
+        {
+          "seed": 20711,
+          "arm": "floor-screened",
+          "receipt_sha256": "21bdaba0c30a874945c62124bc23b4a83e869c143b3f524bd6ecc63d76fe64d8"
+        },
+        {
+          "seed": 20711,
+          "arm": "full-screened",
+          "receipt_sha256": "7f09e3e9dcaae26bb9f92fcab30671e69a9455dac299d999830afe635557cf73"
+        },
+        {
+          "seed": 20711,
+          "arm": "full-direct",
+          "receipt_sha256": "e2fda4ed49501dc77a1bdd52c8e3177774e60ccc4fa723b7580ebcc694974a0e"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-screened",
+          "receipt_sha256": "622520dba91a704172c95faec0243be7a956e119a817b42059bafdd2eb605630"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-direct",
+          "receipt_sha256": "a095d04e7ddaee4b67b063e64dbd020c5130982b16612b4a462a8e8f40315526"
+        },
+        {
+          "seed": 20729,
+          "arm": "floor-screened",
+          "receipt_sha256": "6edcb3770e18f0fa4a651abb14b4086b92a02ceb605458a38775eb458482d76c"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-direct",
+          "receipt_sha256": "fc39a55b4878c6f8130f1f0903dd0a7e97023961e44506d14edf2f316f5990dc"
+        },
+        {
+          "seed": 20747,
+          "arm": "floor-screened",
+          "receipt_sha256": "ea531318ef84f0de5f4dc4d30cc447675a5501214c5e0e46e3f2f60492967cec"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-screened",
+          "receipt_sha256": "d9ef1d6c9221942ca5a4d3336fbd4e45a674bbbdea8d91c8d6b54386bf7fe2d6"
+        }
+      ]
+    },
+    {
+      "case_id": "a7e51f17f7",
+      "rank": 2,
+      "input_sha256": "aececd9e07cd5c0d28a23b973b098456dd291a732b35a7a4de9d233eb911674f",
+      "time_ms": 1400.0,
+      "registration_status": "ready",
+      "observed_reasons": [
+        "lower X-point cannot be validated near LCFS"
+      ],
+      "diagnosis": {
+        "reproduced_reason": "lower X-point cannot be validated near LCFS",
+        "failure_type": "ValueError",
+        "call_path": [
+          {
+            "file": "user_input.py",
+            "function": "load_user_input",
+            "line": 202
+          },
+          {
+            "file": "case.py",
+            "function": "separatrix",
+            "line": 130
+          }
+        ],
+        "stage": "separatrix",
+        "classification": "lower_X_root_rejected",
+        "grid": {
+          "min_RZ_m": [
+            0.8399999737739563,
+            -1.600000023841858
+          ],
+          "max_RZ_m": [
+            2.5399999618530273,
+            1.600000023841858
+          ],
+          "points_RZ": [
+            65,
+            65
+          ]
+        },
+        "magnetic_axis_RZ_m": [
+          1.7406572103500366,
+          -0.028204312548041344
+        ],
+        "LCFS": {
+          "count": 84,
+          "min_RZ_m": [
+            1.1718721389770508,
+            -0.9488381743431091
+          ],
+          "max_RZ_m": [
+            2.2857394218444824,
+            1.1016074419021606
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "wall": {
+          "count": 74,
+          "min_RZ_m": [
+            1.0173,
+            -1.35894
+          ],
+          "max_RZ_m": [
+            2.3511,
+            1.34811
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "polygon_valid": true,
+        "LCFS_contains_axis": true,
+        "lower_X_search": {
+          "LCFS_lowest_RZ_m": [
+            1.5306249856948853,
+            -0.9488381743431091
+          ],
+          "distance_limit_m": 0.15,
+          "gradient_limit": 1e-07,
+          "root_RZ_m": [
+            1.2293629551263978,
+            -1.1920330248596855
+          ],
+          "root_solver_success": true,
+          "root_solver_message": "The solution converged.",
+          "root_evaluations": 14,
+          "root_distance_from_guess_m": 0.38717250209696996,
+          "root_gradient_norm": 4.6968701816621975e-12,
+          "distance_passed": false,
+          "gradient_passed": true
+        }
+      },
+      "loader_reason_matches": true,
+      "source_receipts": [
+        {
+          "seed": 20711,
+          "arm": "full-screened",
+          "receipt_sha256": "e86c2ae7c7ac7d92ebb1955340ca4153503630bb93c6dcf47482bd7cd2e661ec"
+        },
+        {
+          "seed": 20711,
+          "arm": "floor-screened",
+          "receipt_sha256": "c3fbc54bffc3b2bb8136cf685c3cf025778f71c76eb8eeaa44de327b9f3b229e"
+        },
+        {
+          "seed": 20711,
+          "arm": "full-direct",
+          "receipt_sha256": "307031192e71df0732f702d422d1b1ff99bc6e9dd58045d48dc4e4529281c0c1"
+        },
+        {
+          "seed": 20729,
+          "arm": "floor-screened",
+          "receipt_sha256": "0876617969b8e2daf640e422f17570b13d252506044f65d32532ee13bd365c95"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-direct",
+          "receipt_sha256": "91d57c23ac0d006e7d3b18a2ee6b91a16c17797c5762c6e37beb9f183a6bec62"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-screened",
+          "receipt_sha256": "6411e730025f97d982d022b7fa56a841a42e08961b729b12796ba5b536f0b8b1"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-direct",
+          "receipt_sha256": "d6182986318834b44d10067a5e89c0105f44bb2c542fd90f4fc9150785c5dd8d"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-screened",
+          "receipt_sha256": "01f09caaf5ee07c3f4f289d993187f700918488cf517915ab4b2d3953a7987b5"
+        },
+        {
+          "seed": 20747,
+          "arm": "floor-screened",
+          "receipt_sha256": "1fcd7b3eb8814ee643ed85c90bc20adf4495d1f5a2d552146071e8f482ca9709"
+        }
+      ]
+    },
+    {
+      "case_id": "8bb901c2a1",
+      "rank": 3,
+      "input_sha256": "9b16c36177b6a959c539a923d7ad1bcdafec44ec9f4a8cfd244e13c7818114b9",
+      "time_ms": 1400.0,
+      "registration_status": "ready",
+      "observed_reasons": [
+        "lower X-point cannot be validated near LCFS"
+      ],
+      "diagnosis": {
+        "reproduced_reason": "lower X-point cannot be validated near LCFS",
+        "failure_type": "ValueError",
+        "call_path": [
+          {
+            "file": "user_input.py",
+            "function": "load_user_input",
+            "line": 202
+          },
+          {
+            "file": "case.py",
+            "function": "separatrix",
+            "line": 130
+          }
+        ],
+        "stage": "separatrix",
+        "classification": "lower_X_root_rejected",
+        "grid": {
+          "min_RZ_m": [
+            0.8399999737739563,
+            -1.600000023841858
+          ],
+          "max_RZ_m": [
+            2.5399999618530273,
+            1.600000023841858
+          ],
+          "points_RZ": [
+            65,
+            65
+          ]
+        },
+        "magnetic_axis_RZ_m": [
+          1.7650201320648193,
+          -0.02998596988618374
+        ],
+        "LCFS": {
+          "count": 91,
+          "min_RZ_m": [
+            1.097204327583313,
+            -1.0617589950561523
+          ],
+          "max_RZ_m": [
+            2.3115179538726807,
+            1.1677513122558594
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "wall": {
+          "count": 74,
+          "min_RZ_m": [
+            1.0173,
+            -1.35894
+          ],
+          "max_RZ_m": [
+            2.3511,
+            1.34811
+          ],
+          "outside_count": 0,
+          "max_excess_RZ_m": [
+            0.0,
+            0.0
+          ],
+          "outside_examples": []
+        },
+        "polygon_valid": true,
+        "LCFS_contains_axis": true,
+        "lower_X_search": {
+          "LCFS_lowest_RZ_m": [
+            1.3978124856948853,
+            -1.0617589950561523
+          ],
+          "distance_limit_m": 0.15,
+          "gradient_limit": 1e-07,
+          "root_RZ_m": [
+            1.218967594287479,
+            -1.1922750005212261
+          ],
+          "root_solver_success": true,
+          "root_solver_message": "The solution converged.",
+          "root_evaluations": 13,
+          "root_distance_from_guess_m": 0.22140443280360522,
+          "root_gradient_norm": 6.486561484866079e-12,
+          "distance_passed": false,
+          "gradient_passed": true
+        }
+      },
+      "loader_reason_matches": true,
+      "source_receipts": [
+        {
+          "seed": 20711,
+          "arm": "full-direct",
+          "receipt_sha256": "83010a1896b515f6da50fd1debdea66b7cda392ebf2270de60812629c302ffae"
+        },
+        {
+          "seed": 20711,
+          "arm": "floor-screened",
+          "receipt_sha256": "97d6d85b636982cbfcc36e27739dfd969c200c1fef33766393d53012fce8e52e"
+        },
+        {
+          "seed": 20711,
+          "arm": "full-screened",
+          "receipt_sha256": "9290622e1388afe462d2bd329f21e55e4f3c7acf7540d855ce626ffa912741e3"
+        },
+        {
+          "seed": 20729,
+          "arm": "floor-screened",
+          "receipt_sha256": "1462326ef07a9b2a0a46815f73daf998f1bbd5ccb4b2512d924135835d54d6e5"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-screened",
+          "receipt_sha256": "49d1129887a7c0411ccc01c47288c42b360f11cdb42d11e02fb8745371a32fd0"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-direct",
+          "receipt_sha256": "0095556239230e285a23b19009ae51be4e691bbdccd378b976138c4c4f36c63c"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-screened",
+          "receipt_sha256": "764baad326dcd41ab49799980e383fa36439d6a210e2f5ae75a3e559e13dc3e3"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-direct",
+          "receipt_sha256": "b0c5b6b95661792bdfeb76a8a76adca6af09a7970ae29a2aa3aa0c563976eb6e"
+        },
+        {
+          "seed": 20747,
+          "arm": "floor-screened",
+          "receipt_sha256": "0d8dca213d6ff74216b378c790058a89fc5a7a7226b24e97b2c6efcd6d43d9ba"
+        }
+      ]
+    },
+    {
+      "case_id": "37db1a57bb",
+      "rank": 4,
+      "input_sha256": "7f146e540c1d0a2c08e124f53be077e2450c5b1f51848bb2ec3255a751a6b3f6",
+      "time_ms": 1400.0,
+      "registration_status": "missing_time",
+      "observed_reasons": [
+        "found 0 exact frames at 1400 ms"
+      ],
+      "diagnosis": {
+        "classification": "registration_missing_time",
+        "exact_frame_count": 0,
+        "reproduced_reason": null
+      },
+      "loader_reason_matches": null,
+      "source_receipts": [
+        {
+          "seed": 20711,
+          "arm": "full-direct",
+          "receipt_sha256": "e3555386f59eed8fcc4e8da808ed117f8dc6e1ae1e5c8ef2ebbe6829418fd094"
+        },
+        {
+          "seed": 20711,
+          "arm": "full-screened",
+          "receipt_sha256": "0c571793d8ab933009f347e41ba4aa0984bb5678d0575264e037f3b40da31efc"
+        },
+        {
+          "seed": 20711,
+          "arm": "floor-screened",
+          "receipt_sha256": "5e62cc816c2476e7de5ce8dfa2b3ce967b5b7d3fa32a5854b9957196cfb5e8dd"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-screened",
+          "receipt_sha256": "8034bec1bd50d810d837b9d4fc3d0fb574a9f4e41acc242607e66d16703df2e7"
+        },
+        {
+          "seed": 20729,
+          "arm": "floor-screened",
+          "receipt_sha256": "63a97ab62834e6015c2b1e401edfd85b4fb59eccacac83b19cad7292f010ab25"
+        },
+        {
+          "seed": 20729,
+          "arm": "full-direct",
+          "receipt_sha256": "ddde3f44299927122d04f27941a775a2f0393837528145a2b3dcdf740561d8ac"
+        },
+        {
+          "seed": 20747,
+          "arm": "floor-screened",
+          "receipt_sha256": "18cc2b8001915bc54ca85f9c9510f08698616c6837fd4408d2c5d3599501c21f"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-direct",
+          "receipt_sha256": "723a0990c357d9e9396688116e6aa71a8f864940517bc88eba9bf11123539f49"
+        },
+        {
+          "seed": 20747,
+          "arm": "full-screened",
+          "receipt_sha256": "565ab6da3a21eb78a96b20cc6ce058e735112cee67e12fb34f63d48c53bab4cf"
+        }
+      ]
+    }
+  ],
+  "scope": "Post-run CPU diagnosis of completed input_error and registration-exclusion records only. One input replay per distinct input-error file. Registration exclusions use sealed metadata only. The checks establish support by this loader and fixed lower-divertor model; physical infeasibility of alternative geometries or equilibrium topologies is untested."
+}

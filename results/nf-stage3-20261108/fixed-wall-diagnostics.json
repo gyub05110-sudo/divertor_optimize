@@ -1,0 +1,308 @@
+{
+  "schema": "nf-stage3-fixed-wall-domain.v1",
+  "expected_sha256": "ddd916dee9ac5cfe82f166752266b756bfe3e2cc8c3c3f8c335e5103e0f7c700",
+  "script_sha256": "1cf4cb2cdd6a6afe43cb7811960addcb005c7e6daf65c9aa724c06bc178e5b3a",
+  "index_convention": "Zero-based original and split wall segment IDs, plus segment rows in baseline geometry.csv",
+  "predicate": "LineString(assembled_candidate_wall).intersects(Polygon(supplied_LCFS))",
+  "implication": "The material wall outside the four OMP portions and both ends of every adjustable portion are fixed for every permitted candidate. Any point shared by these invariants and the closed LCFS polygon forces the complete-wall intersection predicate to reject every permitted candidate at this registered frame. This proof assumes the supplied wall, LCFS polygon, fixed regions and closed-geometry rule; a negative witness check leaves feasibility undecided.",
+  "depth": "Distance from a reported interior sample to the LCFS boundary, in metres; no maximum-depth claim.",
+  "cases": [
+    {
+      "case_id": "b5e07dde39",
+      "time_ms": 1400.0,
+      "raw_sha256": "a783f1ae24d01a159ad1123e24dd51f99ba6f60dd3f7577851b28d1229b0b749",
+      "baseline_geometry_csv_sha256": "8d331d5ca60fb79338136575daa5464515d9c890eb320eabdd58d0b3ff87f982",
+      "original_wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+      "LCFS_RZ_little_endian_float64_sha256": "95467b2fb7456aa082c7c8c0d896d6f6c0384df2282de0c7bc0115332ada0ff9",
+      "LCFS_vertices": 94,
+      "engineering_region_basis": "supplied_fixed_regions",
+      "split_segments": 81,
+      "fixed_segments_tested": 77,
+      "adjustable_endpoints_tested": 8,
+      "fixed_segment_intersections": [
+        {
+          "original_material_segment": 4,
+          "split_segment": 4,
+          "exported_material_segment_first": 4,
+          "exported_material_segment_last": 4,
+          "region": "fixed",
+          "segment_RZ_m": [
+            [
+              1.09895,
+              1.1659
+            ],
+            [
+              1.13814,
+              1.16824
+            ]
+          ],
+          "intersection": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                1.123262407969205,
+                1.1673516722288322
+              ],
+              [
+                1.13814,
+                1.16824
+              ]
+            ]
+          },
+          "overlap_length_m": 0.014904089065212898,
+          "witness_RZ_m": [
+            1.1307012039846025,
+            1.167795836114416
+          ],
+          "witness_strictly_interior": true,
+          "witness_distance_to_LCFS_boundary_m": 0.0022387976243994703
+        },
+        {
+          "original_material_segment": 5,
+          "split_segment": 5,
+          "exported_material_segment_first": 5,
+          "exported_material_segment_last": 5,
+          "region": "fixed",
+          "segment_RZ_m": [
+            [
+              1.13814,
+              1.16824
+            ],
+            [
+              1.16192,
+              1.17446
+            ]
+          ],
+          "intersection": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                1.13814,
+                1.16824
+              ],
+              [
+                1.1399649887996393,
+                1.1687173519904859
+              ]
+            ]
+          },
+          "overlap_length_m": 0.0018863851784908271,
+          "witness_RZ_m": [
+            1.13814,
+            1.16824
+          ],
+          "witness_strictly_interior": true,
+          "witness_distance_to_LCFS_boundary_m": 0.0007338101344565454
+        }
+      ],
+      "fixed_adjustable_endpoint_intersections": [],
+      "all_registered_candidate_geometries_rejected_by_lcfs": true,
+      "terminal_no_design_runs": [
+        {
+          "seed": 20711,
+          "arm": "full-screened",
+          "receipt_sha256": "a0d1430c925ab92fbda25e446ffeb168438177571d9bb28c80428d6e74843e40",
+          "result_sha256": "71fc689c16b196df87f8eaac207f0a84c468f754cb9c7c7211e3ace0e531863d",
+          "journal_sha256_from_sealed_receipt": "760bfb78ce1ff03af834f085592fa28a154b1f98c3304dc94c31d847d9a5027a",
+          "search_counts": {
+            "proposals": 12264,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12264,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12264
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20711,
+          "arm": "full-direct",
+          "receipt_sha256": "1659a268be107835580f6bcc276094cd11ce9dd149c5bf89873adb84a651804d",
+          "result_sha256": "22e9d543e4dfe4301566cf458beda7078845a931ab724fa813feb65f40a4ee28",
+          "journal_sha256_from_sealed_receipt": "b1442fe70563ee7ab166d3a2c2a044a66088e481a6ead992cbcb6487b458e914",
+          "search_counts": {
+            "proposals": 21980,
+            "projection_rejected": 0,
+            "duplicates": 450,
+            "coarse": 0,
+            "fine": 21530,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 5388,
+            "continuous_shape_constraint_failed": 16142,
+            "duplicate_candidate": 450
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20711,
+          "arm": "floor-screened",
+          "receipt_sha256": "73cc6d1f317d634cbed3fd214b921556f2013ba17696e15d39bbf3465d1db6a3",
+          "result_sha256": "4eccb84215ebef6b6a9f2fa97ccab3b40b21e3f126714a3cb5b7af9cf381c210",
+          "journal_sha256_from_sealed_receipt": "fac3f2517060326b700b1ba43614e8e665725006d923a5b7b0a78d2db4a16845",
+          "search_counts": {
+            "proposals": 12281,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12281,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12281
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20729,
+          "arm": "full-direct",
+          "receipt_sha256": "c439219c4fdbb8defa7fe891bb911ddf552d84f5e01713d37c71bfc6da2ac422",
+          "result_sha256": "28a01847f274ca914afd6ae098cbdd362e55d150cb046ef11b243693a33b4a17",
+          "journal_sha256_from_sealed_receipt": "ad786ea2d43410882b31ddd78733fcc7de58fc2801125a63b856eefa994bd128",
+          "search_counts": {
+            "proposals": 21985,
+            "projection_rejected": 0,
+            "duplicates": 438,
+            "coarse": 0,
+            "fine": 21547,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 5205,
+            "continuous_shape_constraint_failed": 16342,
+            "duplicate_candidate": 438
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20729,
+          "arm": "floor-screened",
+          "receipt_sha256": "703fce59f1a2524fe198f05a234e4cf9243bd61ecb5937a0cc1a3de1810ef294",
+          "result_sha256": "14a4e0c6205c2dd108bde4f93df091598c815d4cc272abddb60230a825447c01",
+          "journal_sha256_from_sealed_receipt": "7aa316f10d5d95ab4323e324c3e58e54551a00fe06a8719f501aaafd9531c5f3",
+          "search_counts": {
+            "proposals": 12267,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12266,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12266
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20729,
+          "arm": "full-screened",
+          "receipt_sha256": "0fb7f05f30f3f1027c3fa344bbc7a47a81525e7bea0d1e44e0beaf3debf98021",
+          "result_sha256": "8f3c26e35bbabe47dd7bf70f8d6c02f193c748b37449d2844383717480e14ab5",
+          "journal_sha256_from_sealed_receipt": "23d22b6774512f175053fa9cabc224c9031d3643dfce41ce6f40c39a881aa283",
+          "search_counts": {
+            "proposals": 12222,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12222,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12222
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20747,
+          "arm": "floor-screened",
+          "receipt_sha256": "f27e3e739814befd1fb5c034b9db1a5b89c7c39a32ec3f59aaee28cdfa24eb8a",
+          "result_sha256": "214c92959fd7a78bd9afbb9ee10397790bec8c2732b06f972d9ca01dee191e38",
+          "journal_sha256_from_sealed_receipt": "eb667c2842e45efe67f45bc7bfdbd0e65c325b5774a6568b14871e332852b924",
+          "search_counts": {
+            "proposals": 12170,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12170,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12170
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20747,
+          "arm": "full-screened",
+          "receipt_sha256": "808d944f6a8d96e5910e7bba91b7c12ce93d8e14d4393b8540f93f495dfab65e",
+          "result_sha256": "f22bdebc78bd961343744d924e87f5cb1a91e2f53ca17aeaa7321f49f1c0f937",
+          "journal_sha256_from_sealed_receipt": "0f602e031514c9f8bc00f5105d50647ee78f18bac1793e34b683a6eaf020d453",
+          "search_counts": {
+            "proposals": 12277,
+            "projection_rejected": 0,
+            "duplicates": 0,
+            "coarse": 12277,
+            "fine": 0,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 12277
+          },
+          "baseline_measurable": true
+        },
+        {
+          "seed": 20747,
+          "arm": "full-direct",
+          "receipt_sha256": "d77ca5edf6bb61604e8c2d3b8ec21f3c4b1e61b6b0bb550b473788294afa59bc",
+          "result_sha256": "fb75d5c57cb15fb72924859011874e41eb9ed6053ea9f1cf12fb81f256d805f5",
+          "journal_sha256_from_sealed_receipt": "cd4cc1cd8aa57866213153592fb89398261b36ad43e295b88a885c99eb13460f",
+          "search_counts": {
+            "proposals": 21960,
+            "projection_rejected": 0,
+            "duplicates": 411,
+            "coarse": 0,
+            "fine": 21549,
+            "eligible_coarse": 0,
+            "eligible_fine": 0,
+            "failed": 0,
+            "late": 1
+          },
+          "search_errors": {
+            "complete_wall_invalid": 5053,
+            "continuous_shape_constraint_failed": 16496,
+            "duplicate_candidate": 411
+          },
+          "baseline_measurable": true
+        }
+      ]
+    }
+  ]
+}
