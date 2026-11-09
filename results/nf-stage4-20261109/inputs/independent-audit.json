@@ -1,0 +1,178 @@
+{
+  "registration_sha256": "629906a4c416b43c80fc77a97d56ee166c66a439a8f63c61bfab99817e271e36",
+  "selection_sha256": "c17bd8a2c037f32a47c997242a92ecac76bb130ac5444ac90fd5bdb7341fa416",
+  "seal_sha256": "b57a20d41b68799e30a8dcd57804eaeef769a1cc49690a17c40ddb99017c226b",
+  "historical_sources": 36,
+  "historical_copies": 88,
+  "historical_frames": 8097,
+  "per_file_counts": [
+    {
+      "rank": 1,
+      "id": "180828b27d",
+      "file_frame_count": 152,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 2,
+      "id": "18543f448c",
+      "file_frame_count": 133,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 3,
+      "id": "3264fdd71f",
+      "file_frame_count": 242,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 4,
+      "id": "4a6f5e4a94",
+      "file_frame_count": 243,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 5,
+      "id": "a2ae4f3c2b",
+      "file_frame_count": 283,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 6,
+      "id": "ec506ffd29",
+      "file_frame_count": 209,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 7,
+      "id": "7ce879f1b3",
+      "file_frame_count": 240,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 8,
+      "id": "70481becc0",
+      "file_frame_count": 76,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 9,
+      "id": "e310d360a8",
+      "file_frame_count": 273,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 10,
+      "id": "b4de2f7427",
+      "file_frame_count": 202,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 11,
+      "id": "5d7f95a730",
+      "file_frame_count": 285,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 12,
+      "id": "79351cc24e",
+      "file_frame_count": 216,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 13,
+      "id": "3b74c53220",
+      "file_frame_count": 292,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 14,
+      "id": "515cd2d507",
+      "file_frame_count": 284,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 15,
+      "id": "1255ab8051",
+      "file_frame_count": 243,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 16,
+      "id": "0af2e6f616",
+      "file_frame_count": 228,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 17,
+      "id": "d880609264",
+      "file_frame_count": 247,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 18,
+      "id": "0dc1392ee1",
+      "file_frame_count": 237,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 19,
+      "id": "249a1dcd12",
+      "file_frame_count": 288,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 20,
+      "id": "8d228881e6",
+      "file_frame_count": 246,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 21,
+      "id": "fe773b166f",
+      "file_frame_count": 93,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 22,
+      "id": "83814d2061",
+      "file_frame_count": 296,
+      "exact_frame_count": 1,
+      "status": "ready"
+    },
+    {
+      "rank": 23,
+      "id": "19b18793d2",
+      "file_frame_count": 277,
+      "exact_frame_count": 0,
+      "status": "missing_time"
+    },
+    {
+      "rank": 24,
+      "id": "f317e77cf7",
+      "file_frame_count": 245,
+      "exact_frame_count": 1,
+      "status": "ready"
+    }
+  ]
+}

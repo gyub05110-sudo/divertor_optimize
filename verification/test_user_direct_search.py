@@ -119,7 +119,7 @@ def test_original_reference_ineligible_late_fine_cannot_win(monkeypatch):
 
 def test_full_direct_cli_skips_coarse_preparation_and_uses_same_fine_reference(tmp_path, monkeypatch):
     module = direct()
-    from d3d_optimization import campaign_geometry, user_input, user_physics, user_output
+    from d3d_optimization import campaign_geometry, user_input, user_physics, user_output, user_precheck
     path, out = tmp_path / "shot.parquet", tmp_path / "out"
     path.touch()
     user = SimpleNamespace(provenance={}, review={k: {} for k in ("axis_RZ_m", "xpoint_RZ_m", "legs")})
@@ -135,6 +135,7 @@ def test_full_direct_cli_skips_coarse_preparation_and_uses_same_fine_reference(t
         assert owner is fine and kwargs["baseline"] is base and kwargs["seed"] == 20711
         return dict(selected=None, winner=None, status="no_design", termination="deadline")
     monkeypatch.setattr(user_input, "load_user_input", lambda *a: user)
+    monkeypatch.setattr(user_precheck, "fixed_wall_precheck", lambda _: {"excluded": False})
     monkeypatch.setattr(user_physics, "shelf_limits", lambda *a: {"admissible": True})
     monkeypatch.setattr(user_physics, "prepare_user", prepare)
     monkeypatch.setattr(campaign_geometry, "evaluator", lambda *a: fine)
@@ -144,6 +145,7 @@ def test_full_direct_cli_skips_coarse_preparation_and_uses_same_fine_reference(t
                      "--method", "direct", "--seed", "20711"]) == 0
     report = json.loads((out/"result.json").read_text())
     assert report["status"] == "no_design" and report["arguments"]["method"] == "direct"
+    assert report["fixed_wall"] == {"excluded": False} and report["surface_policy"] is None
     assert report["levels"] == {"fine": list(cli.FINE)} and levels == [cli.FINE]
     assert "prepare_coarse_search" not in [e["stage"] for e in report["timings"]["preparation"]]
 

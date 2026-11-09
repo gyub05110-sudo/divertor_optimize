@@ -199,7 +199,19 @@ def load_user_input(equilibrium, time_ms, geometry=None, design_policy=None):
         raise ValueError("a finite, simple LCFS enclosing the magnetic axis is required")
     field.checked(lcfs)
     field.checked(wall)
-    rsep, xp, psi_sep = separatrix(field, lcfs, axis)
+    try:
+        rsep, xp, psi_sep = separatrix(field, lcfs, axis)
+    except ValueError as error:
+        if str(error) not in ("sampling outside EFIT grid is forbidden", "lower X-point cannot be validated near LCFS",
+                              "stationary point is not a magnetic saddle"):
+            raise
+        from .user_topology import LowerDivertorInputError, upper_saddle_evidence
+        try:
+            evidence = upper_saddle_evidence(field, lcfs, axis)
+        except (ValueError, np.linalg.LinAlgError, FloatingPointError, OverflowError):
+            # A secondary numerical diagnosis must preserve the actual reason for rejection.
+            evidence = None
+        raise LowerDivertorInputError(error, evidence) from error
     # The archived review supplies material segment limits only. No older field,
     # launch point, strike location, transport result or optimized design is used.
     portions = [{k: row[k] for k in ("source", "segment", "points")}

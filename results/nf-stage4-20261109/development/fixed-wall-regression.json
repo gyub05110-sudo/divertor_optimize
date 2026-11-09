@@ -1,0 +1,94 @@
+{
+  "case_id": "b5e07dde39",
+  "equilibrium_sha256": "a783f1ae24d01a159ad1123e24dd51f99ba6f60dd3f7577851b28d1229b0b749",
+  "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+  "time_ms": 1400.0,
+  "fixed_wall": {
+    "excluded": true,
+    "classification": "fixed_wall_lcfs_intersection",
+    "geometry_policy": "full-wall-chord-1e-7.v2",
+    "chord_tolerance_m": 1e-07,
+    "predicate": "LineString(assembled_candidate_wall).intersects(Polygon(supplied_LCFS))",
+    "scope": "Any immutable contact excludes every OMP candidate. A clear check leaves feasibility undecided.",
+    "index_convention": "Zero-based original and split material segment IDs and endpoint indices",
+    "engineering_region_basis": "supplied_fixed_regions",
+    "split_segments": 81,
+    "fixed_segments_tested": 77,
+    "adjustable_endpoints_tested": 8,
+    "LCFS_vertices": 94,
+    "LCFS_RZ_little_endian_float64_sha256": "95467b2fb7456aa082c7c8c0d896d6f6c0384df2282de0c7bc0115332ada0ff9",
+    "fixed_segment_intersections": [
+      {
+        "original_material_segment": 4,
+        "split_segment": 4,
+        "region": "fixed",
+        "segment_RZ_m": [
+          [
+            1.09895,
+            1.1659
+          ],
+          [
+            1.13814,
+            1.16824
+          ]
+        ],
+        "intersection": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              1.123262407969205,
+              1.1673516722288322
+            ],
+            [
+              1.13814,
+              1.16824
+            ]
+          ]
+        },
+        "overlap_length_m": 0.014904089065212898,
+        "witness_RZ_m": [
+          1.1307012039846025,
+          1.167795836114416
+        ],
+        "witness_strictly_interior": true,
+        "witness_distance_to_LCFS_boundary_m": 0.0022387976243994703
+      },
+      {
+        "original_material_segment": 5,
+        "split_segment": 5,
+        "region": "fixed",
+        "segment_RZ_m": [
+          [
+            1.13814,
+            1.16824
+          ],
+          [
+            1.16192,
+            1.17446
+          ]
+        ],
+        "intersection": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              1.13814,
+              1.16824
+            ],
+            [
+              1.1399649887996393,
+              1.1687173519904859
+            ]
+          ]
+        },
+        "overlap_length_m": 0.0018863851784908271,
+        "witness_RZ_m": [
+          1.13814,
+          1.16824
+        ],
+        "witness_strictly_interior": true,
+        "witness_distance_to_LCFS_boundary_m": 0.0007338101344565454
+      }
+    ],
+    "fixed_adjustable_endpoint_intersections": []
+  }
+}

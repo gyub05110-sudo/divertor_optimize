@@ -200,7 +200,8 @@ def audit_run(data, events):
                 and close(selected["peak_MW_m2"],best["peak_q"]*power/1e6), "selected export contradicts fine score")
         require(status in ("qualified","partial_result"), "winner in failed result")
     horizon = min(duration, budget)
-    censorable = base_q is not None and data.get("fixed_shelf",{}).get("admissible") is True
+    shelf_admissible = (data.get("fixed_shelf") or {}).get("admissible")
+    censorable = base_q is not None and shelf_admissible is True
     reason = ("deadline_without_5pct" if censorable and horizon==budget else
               "early_stop_without_5pct" if censorable else status if status!="qualified" else "reference_unavailable")
     cuts = {str(t):checkpoint(admitted,t,base_q,power) for t in CUTOFFS}
@@ -208,7 +209,7 @@ def audit_run(data, events):
         snap=cuts[str(t)]
         if snap["id"]:
             state="eligible_fine"
-        elif duration<=t and status in ("constraint_excluded","calculation_error","input_error","partial_result"):
+        elif duration<=t and status in ("constraint_excluded","geometry_excluded","calculation_error","input_error","partial_result"):
             state=status
         elif ready is not None and ready>t:
             state="reference_pending"
@@ -227,7 +228,7 @@ def audit_run(data, events):
                 baseline_ready_s=ready, baseline_A2_m2=base.get("A2_m2"), selected_A2_m2=(selected or {}).get("A2_m2"),
                 baseline_ledger=base.get("ledger"), selected_ledger=(selected or {}).get("ledger"),
                 search_finished_s=duration, elapsed_before_result_write_s=write_s, deadline_overrun_s=timing["deadline_overrun_s"],
-                fixed_shelf_admissible=data.get("fixed_shelf",{}).get("admissible"),
+                fixed_shelf_admissible=shelf_admissible,
                 checkpoints=cuts, first_5pct=time_to_threshold(admitted,600,base_q,censorable,horizon,reason),
                 late_evaluations=counts["late_evaluations"], journal_counts=dict(counts), fine_phases=phases,
                 evaluation_errors=errors)
@@ -340,10 +341,11 @@ def check_exports(folder, data, row):
         row["nonfloor_max_displacement_m"]=max(offsets.values())
 
 
-def verify_source(result, task, case, plan):
+def verify_source(result, task, case, plan, configurations=None):
+    configurations = CONFIG if configurations is None else configurations
     args=result["arguments"]
     require(all(args[k]==v for k,v in plan["settings"].items()), "CLI settings differ from prospective seal")
-    require((args["family"],args["method"])==CONFIG[task["arm"]] and
+    require((args["family"],args["method"])==configurations[task["arm"]] and
             all(args[k]==task[k] for k in ("family","method","seed","budget_seconds","time_ms")),
             "CLI arguments differ from scheduled task")
     require(Path(args["equilibrium"]).resolve()==Path(case["path"]).resolve(), "different equilibrium path")

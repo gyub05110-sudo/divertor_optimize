@@ -16,6 +16,8 @@ import platform
 import subprocess
 import sys
 
+from d3d_optimization.user_surface_policy import REQUESTED_FAMILIES, choose_surface_policy
+
 ROOT = Path(__file__).resolve().parent
 COARSE = ("cubic", 320, .0005, 161, .001)
 FINE = ("cubic", 1280, .000125, 641, .00025)
@@ -45,7 +47,8 @@ def arguments(argv):
     parser.add_argument("--radius-mm", type=int, choices=(20, 50, 100), default=20)
     parser.add_argument("--seed", type=int, default=91001)
     parser.add_argument("--backend", choices=("gpu", "cpu"), default="cpu")
-    parser.add_argument("--family", choices=("full", "floor-only"), default="full")
+    parser.add_argument("--family", choices=REQUESTED_FAMILIES, default="full",
+                        help="screened shape family; hotspot selects from the original fine wall's regional peaks")
     parser.add_argument("--method", choices=("screened", "direct"), default="screened",
                         help="coarse-screened search or full-space direct fine differential evolution")
     args = parser.parse_args(argv)
@@ -125,11 +128,12 @@ def run(args, started, report, observe):
         return
 
     from d3d_optimization.user_input import load_user_input
+    from d3d_optimization.user_precheck import fixed_wall_precheck
     from d3d_optimization.user_physics import prepare_user, shelf_limits
     from d3d_optimization.user_search import search_peak
     from d3d_optimization.reference_transport import ReferencePoint
     from d3d_optimization.campaign_geometry import evaluator
-    from d3d_optimization.user_output import export_measurement
+    from d3d_optimization.user_output import export_measurement, surface_metrics
 
     if perf_counter() >= deadline:
         return
@@ -141,9 +145,21 @@ def run(args, started, report, observe):
                                    gamma=args.gamma, kappa0=args.kappa0)
     except (ValueError, OSError) as exc:
         report.update(status="input_error", reason=str(exc))
+        if getattr(exc, "evidence", None) is not None:
+            report["equilibrium_topology_diagnostic"] = exc.evidence
         return
     report.update(inputs=user.provenance, reference_SI=asdict(reference),
                   equilibrium_topology={k: user.review[k] for k in ("axis_RZ_m", "xpoint_RZ_m", "legs")})
+    if perf_counter() >= deadline:
+        return
+    with stage("fixed_wall_precheck"):
+        fixed = fixed_wall_precheck(user)
+    if not report["timings"]["preparation"][-1]["within_budget"]:
+        return
+    report["fixed_wall"] = fixed
+    if fixed["excluded"]:
+        report.update(status="geometry_excluded", reason=fixed["classification"])
+        return
     if perf_counter() >= deadline:
         return
     with stage("shelf_limits"):
@@ -158,40 +174,53 @@ def run(args, started, report, observe):
     report["timings"]["baseline_ready_s"] = ready - started
     selected = None
     owner = None
-    if not base.get("physics_measurable", False):
+    if ready > deadline:
+        report["reason"] = "reference calculation completed after the search deadline"
+    elif not base.get("physics_measurable", False):
         report.update(status="calculation_error", reason="reference heat calculation failed",
                       baseline=dict(physics_measurable=False, errors=base.get("errors")))
-    elif ready > deadline:
-        report["reason"] = "reference calculation completed after the search deadline"
-    elif not limits["admissible"]:
-        report.update(status="constraint_excluded",
-                      reason="fixed shelf tangent or local magnetic pitch violates receiving-angle floor under positive kernel support")
     else:
         try:
-            with stage("prepare_fine_design"):
-                fine = evaluator(original, args.radius_mm, args.backend)
-            coarse = None
             if args.method == "screened" and perf_counter() < deadline:
-                with stage("prepare_coarse_search"):
-                    coarse = evaluator(prepare_user(user, reference, COARSE), args.radius_mm, args.backend)
-            report["timings"]["search_ready_s"] = perf_counter()-started
-            if perf_counter() < deadline:
-                search_args = dict(radius_mm=args.radius_mm, seed=args.seed, started=started,
-                                   deadline=deadline, baseline=base, observe=observe)
-                if args.method == "direct":
-                    from d3d_optimization.user_direct_search import search_direct
-                    found = search_direct(fine, **search_args)
-                else:
-                    found = search_peak(coarse, fine, family=args.family, **search_args)
-                selected = found["selected"]
-                owner = fine
-                candidate = found["winner"]
-                report["search"] = {k: v for k, v in found.items() if k not in ("selected", "winner")}
-                report.update(status=found["status"], reason=found.get("reason", found["status"]),
-                              candidate=dict(id=candidate.identity, **candidate.record()) if candidate else None)
-                if found.get("termination") == "failed":
-                    report.update(status="partial_result" if selected is not None else "calculation_error",
-                                  reason="search stopped on a calculation failure; see search.errors and events.jsonl")
+                with stage("surface_policy"):
+                    rows = surface_metrics(base, original.source.weights, original.reference.power_W)
+                    policy = choose_surface_policy(rows, args.family)
+                completed = report["timings"]["preparation"][-1]
+                if completed["within_budget"]:
+                    report["surface_policy"] = policy
+                    observe(dict(stage="surface_policy_decision", status="recorded",
+                                 elapsed_s=completed["end_s"], policy=policy))
+            if not limits["admissible"]:
+                report.update(status="constraint_excluded",
+                              reason="fixed shelf tangent or local magnetic pitch violates receiving-angle floor under positive kernel support")
+            elif perf_counter() < deadline:
+                with stage("prepare_fine_design"):
+                    fine = evaluator(original, args.radius_mm, args.backend)
+                coarse = None
+                if args.method == "screened" and perf_counter() < deadline:
+                    with stage("prepare_coarse_search"):
+                        coarse = prepare_user(user, reference, COARSE)
+                        if perf_counter() < deadline:
+                            coarse = evaluator(coarse, args.radius_mm, args.backend)
+                report["timings"]["search_ready_s"] = perf_counter()-started
+                if perf_counter() < deadline:
+                    search_args = dict(radius_mm=args.radius_mm, seed=args.seed, started=started,
+                                       deadline=deadline, baseline=base, observe=observe)
+                    if args.method == "direct":
+                        from d3d_optimization.user_direct_search import search_direct
+                        found = search_direct(fine, **search_args)
+                    else:
+                        found = search_peak(coarse, fine, family=report["surface_policy"]["selected_family"],
+                                            **search_args)
+                    selected = found["selected"]
+                    owner = fine
+                    candidate = found["winner"]
+                    report["search"] = {k: v for k, v in found.items() if k not in ("selected", "winner")}
+                    report.update(status=found["status"], reason=found.get("reason", found["status"]),
+                                  candidate=dict(id=candidate.identity, **candidate.record()) if candidate else None)
+                    if found.get("termination") == "failed":
+                        report.update(status="partial_result" if selected is not None else "calculation_error",
+                                      reason="search stopped on a calculation failure; see search.errors and events.jsonl")
         except Exception as exc:
             report.update(status="calculation_error", reason=f"{type(exc).__name__}: {exc}")
             observe(dict(stage="search_failure", elapsed_s=perf_counter()-started, reason=report["reason"]))
@@ -216,7 +245,7 @@ def main(argv=None, started=None):
     report = dict(schema_version=1, objective="minimum eligible fine whole-wall peak_MW_m2",
                   arguments=vars(args), levels=dict(coarse=COARSE, fine=FINE) if args.method == "screened"
                   else dict(fine=FINE), timings={},
-                  baseline=None, selected=None, candidate=None)
+                  fixed_wall=None, surface_policy=None, baseline=None, selected=None, candidate=None)
     with (args.output / "events.jsonl").open("x", encoding="utf-8") as stream:
         def observe(event):
             stream.write(json.dumps(serial(event), allow_nan=False) + "\n")

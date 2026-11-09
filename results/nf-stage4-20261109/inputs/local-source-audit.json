@@ -1,0 +1,168 @@
+{
+  "roots": [
+    "D:\\DivertorOptimization",
+    "C:\\Users\\FPL-user\\Documents\\Divertor Optimization"
+  ],
+  "verified_copies": {
+    "1272a1fafa0d9a6634a0338688740998e35b2c654b4759b9c911e1a6ab5b0a3d": [
+      "D:\\DivertorOptimization\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203704.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203704.parquet"
+    ],
+    "1d101f35692eb572cb7a62addfd040c1228ab1e8807ffaec81b2f55791ca64de": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_ad1bebc00a.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_ad1bebc00a.parquet"
+    ],
+    "20640dc71d9539c28a52a851851772c8e660b26355ee56895eb70e1a2d1a313f": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_1b9349fec8.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_1b9349fec8.parquet"
+    ],
+    "24000d2a2fea8838e5226f63d7914e2403c95af5ac4c1d3c9cafd2570b29952d": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\deb842cf1e\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_deb842cf1e.parquet"
+    ],
+    "3048e38b8c4b57f5048252daebc906798bd8708a563f722d21aff9a3366a7104": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_b38ac41e32.parquet"
+    ],
+    "36bd1407c07a99d06cf151f7040d2e00af63b79bd7ad4c751cb348c1855f48e6": [
+      "D:\\DivertorOptimization\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\182344.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\182344.parquet"
+    ],
+    "3781c1092509e33f0b338c7a691908f0b3d9a46bd0cab1caadb841402a285c5e": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_6193b526d8.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_6193b526d8.parquet"
+    ],
+    "413278ec73ea872d034eaf36a2b7e90696a0965e935eb38072734e54874ea270": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_8d1575d8c4.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_8d1575d8c4.parquet"
+    ],
+    "42725efdd7f426e212e47bc95b021666651866594b7e557209b3e177920514e6": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\fad1624516\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_fad1624516.parquet"
+    ],
+    "43ef0335cbc321ac21bab3b8cb2772fc6f74666eeb1b5d277577d0197f731875": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\31b5a12f4d\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_31b5a12f4d.parquet"
+    ],
+    "642e1a818b028cb973cf8e44c111cd7be3a0b1cd27a4b6cfdc036c1e178ee745": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_64058989a5.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_64058989a5.parquet"
+    ],
+    "73b558ae14f236d505baca810f1a6a4d643e0735f38b74b31875d77d213adb95": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c016937bba\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c016937bba.parquet"
+    ],
+    "7563ad8a23f907c7acecb91ec1475527084029d88ae08a96e81d21ebcbc08d69": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_b7c57663a1.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_b7c57663a1.parquet"
+    ],
+    "7d7721862cb289d9ba551f0605539442dcda2b67398eaba021e7002219f0487b": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\747fca45a9\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_747fca45a9.parquet"
+    ],
+    "7d9a12aef9d23115fae9b367f128f0a1b7a20b934cee45fe5a94d453373c8b69": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\4d14a35fcb\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_4d14a35fcb.parquet"
+    ],
+    "7f146e540c1d0a2c08e124f53be077e2450c5b1f51848bb2ec3255a751a6b3f6": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_37db1a57bb.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_37db1a57bb.parquet"
+    ],
+    "7f74bef2315f23bc5415c7d41741c976c4d97122242a537121346fc2958a1566": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\c97c0671ff\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_c97c0671ff.parquet"
+    ],
+    "87971c8e081283de577035e0520919502296bb1e2c2d91d4b54d3d097db7a42d": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\8f514caf36\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_8f514caf36.parquet"
+    ],
+    "8981a7d189f6e2d66d5efbb89d75400ceb7f78dcd477fd73b467ac1c8a86c320": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\audit-temp\\remote-original-d3d_shot_1a3155370c.parquet"
+    ],
+    "9b16c36177b6a959c539a923d7ad1bcdafec44ec9f4a8cfd244e13c7818114b9": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_8bb901c2a1.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_8bb901c2a1.parquet"
+    ],
+    "a783f1ae24d01a159ad1123e24dd51f99ba6f60dd3f7577851b28d1229b0b749": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_b5e07dde39.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_b5e07dde39.parquet"
+    ],
+    "a7a6804290aeda430d5214ffd9ab647891cc2442e96b3260250ff453442a98a0": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\34329f105e\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_34329f105e.parquet"
+    ],
+    "aececd9e07cd5c0d28a23b973b098456dd291a732b35a7a4de9d233eb911674f": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_a7e51f17f7.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_a7e51f17f7.parquet"
+    ],
+    "bbc1124cc5aa0d235d107986c86d241916d587b7d85a4a3bc3cde5f2478f1ead": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_06f0e74636.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_06f0e74636.parquet"
+    ],
+    "bc02cff08cc024290fee5c8b8ac1b98cf4d3bd4137a4f8bfc4de9fc6e19fd48d": [
+      "D:\\DivertorOptimization\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203702.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203702.parquet"
+    ],
+    "c050ffc12cc0160655899ba06794bf6bec52d4b322c8ef1ba63fffd65d3cb19a": [
+      "D:\\DivertorOptimization\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203703.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\203703.parquet"
+    ],
+    "c5348af6be10e7da7939a2f16a8f8c65066fec444c906c12f4483ff14b976fdb": [
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_13ced9c7c1.parquet"
+    ],
+    "c6430b2907b8645e22d321322dd5981c42c48ee1c3d27b3ac3460167fe4fcdc0": [
+      "D:\\DivertorOptimization\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\182348.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\firefly-baseline-20261105\\common_rank\\public_examples\\182348.parquet"
+    ],
+    "cae74032203593dfc1e8d9b7571785a3b3ad558f6e4265e938a33f16e422022c": [
+      "C:\\Users\\FPL-user\\Documents\\Divertor Optimization\\d3d-connected-transport-20261005-v1\\input\\reference\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\repositories\\divertor_optimize\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v2\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029-v3\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\imp-global-pilot-20261029\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\imp-omp-global-20261029\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-anytime-20261106\\code-snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-anytime-fullspace-20261106\\code-snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-anytime-smoke-20261106\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-finalist-robustness-20261106\\times\\1200\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-finalist-robustness-20261106\\times\\1600\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-method-20261105\\campaign-2MW\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-prospective-search-20261107\\code-snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\omp-tangent-curvature-20261029-v2\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\omp-tangent-curvature-20261029\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\regional-20261028\\IMP\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\regional-20261028\\OMP\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\regional-preflight-20261028\\IMP\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\regional-preflight-20261028\\OMP\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\imp-omp-global-20261029\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\tmp\\github-research-archive-20261105\\verified-tree\\studies\\nf-method-20261105\\campaign-2MW\\snapshot\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet"
+    ],
+    "ced6ee925b8554f11f8e343b26befcfe598c3f07c63292958ef77c1a0ee0bade": [
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\51d83022ca\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_51d83022ca.parquet"
+    ],
+    "dc0eba5720dc0a8b9894ae6fdaf5f346b4d5b2a06ca4d40cd83be8def591f0a5": [
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\e806f47778\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_e806f47778.parquet"
+    ],
+    "e34e35c1f27b6fa302e8a80cc6d3393ac317fef10478b1b9768b63ed7b1897d5": [
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_b7684df369.parquet"
+    ],
+    "ef117c75eaa8c7f4891b1d116ee0e7b1ae069a17255ae8546cd874ab24523b7f": [
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\cases\\332a6d97fc\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\nf-prospective-inputs-20261107\\raw\\d3d_shot_332a6d97fc.parquet"
+    ],
+    "efa159e6543dd5ee28f3ec92c7d9a51ab061fab77b88c007fcb464bdf88e5d5e": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\bb4a894875\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_bb4a894875.parquet"
+    ],
+    "f92350a8aa539411afa8c41957c0ce3388dc8a2fcbf7eedca2988ddf496ebe80": [
+      "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_3696718bf8.parquet",
+      "D:\\DivertorOptimization\\tmp\\stage3-roundtrip-baa845e1\\inputs\\raw\\d3d_shot_3696718bf8.parquet"
+    ],
+    "fa37f0cce373f3670dd8af09de992d1b7af95cff25a303a42bb5095b30996c83": [
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\cases\\33857d31de\\input-root\\input\\D3D\\d3d\\d3d_shot_1a3155370c.parquet",
+      "D:\\DivertorOptimization\\studies\\unused-equilibrium-20261106\\raw\\d3d_shot_33857d31de.parquet"
+    ]
+  }
+}

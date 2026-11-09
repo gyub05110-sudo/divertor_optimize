@@ -37,7 +37,8 @@ HISTORICAL_COPIES = {
     "d3d_optimization/boundary_evaluator.py": {
         "expected": "1207eb10590fe3a38942bfc90e0864c3f05a4153fd0186d0eeb6aee685d4144d",
         "path": "docs/publication/legacy-20261029/d3d_optimization/boundary_evaluator.py",
-        "known_current": "33ae04f9a95245cd74525c719aa35b2ee6f96f45cd6811a63b62973c8dc6ced0",
+        # The Stage 4 exporter also stores refined sample-to-material segment IDs.
+        "known_current": "bd20f0642da1aa5fe2b65e0ba854f3d4216ea8cce80e4b1b5daa62108c94f285",
     },
 }
 

@@ -1,0 +1,25 @@
+{
+  "input_sha256": "f92350a8aa539411afa8c41957c0ce3388dc8a2fcbf7eedca2988ddf496ebe80",
+  "result_sha256": "c0c58662ce9ee5a24bdbb6fabf57fb9d44b6e264b21f254e57aeb79ce66b68f4",
+  "events_sha256": "1eb62b585c832f76bc9984aca8041270758af754731c94a752c1a492470ad409",
+  "export_sha256": {
+    "boundary.npz": "299cbb84d9081bfc2d97bdc31b55af50d9d5108b1f8c716195d2126ec3e62ff5",
+    "donors.csv.gz": "8f5e4fb230ecdc3cd3b0cfe9c65af9238f7fff2bc4a15a48645f686f5a61a614",
+    "geometry.csv": "8d331d5ca60fb79338136575daa5464515d9c890eb320eabdd58d0b3ff87f982",
+    "profile.csv.gz": "3d809d6fc2ffaed6543dfec461918dddbca344133abd5b297667e568b2fd6326"
+  },
+  "source": "bd20f0642da1aa5fe2b65e0ba854f3d4216ea8cce80e4b1b5daa62108c94f285",
+  "status": "budget_exhausted",
+  "measured_within_budget": false,
+  "regional_peaks": {
+    "fixed": 4.242458473164042,
+    "omp_entry": 4.072734643132562e-05,
+    "shelf": 4.007246192117742,
+    "omp_connector": 5.5639957052338405,
+    "floor": 8.357773742982551e-07,
+    "imp_sloped": 4.582969731177079e-08,
+    "imp_vertical": 2.8054640525589512e-08
+  },
+  "peak_MW_m2": 5.5639957052338405,
+  "purpose": "Development input only; raw sample coordinates, parent segment and every regional peak checked."
+}

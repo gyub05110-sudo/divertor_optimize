@@ -156,18 +156,21 @@ def check_plan(study, plan, root=ROOT):
         require(sha(root/name) == expected, f"source digest mismatch: {name}")
 
 
-def seal(study):
+def seal(study, *, plan_factory=None, plan_checker=None):
+    build = plan_factory or make_plan
+    check = plan_checker or check_plan
     path = study/"expected.json"
     fingerprint = study/"expected.sha256"
     with resource_lock(study/"schedule.lock"):
         if fingerprint.exists():
-            return load_seal(study)
+            return load_seal(study, plan_checker=check)
         require(not any((study/n).exists() for n in ("attempts", "runs", "observations")),
                 "a missing plan seal cannot be repaired after run activity")
-        plan = read(path) if path.is_file() else make_plan(study)
-        check_plan(study, plan)
-        for task in plan["tasks"][::9]:
-            require(sha(task["equilibrium"]) == task["sha256"], "input bytes changed before seal")
+        plan = read(path) if path.is_file() else build(study)
+        check(study, plan)
+        for source, expected_sha in {(t["equilibrium"], t["sha256"]) for t in plan["tasks"]
+                                     if t.get("registration_status") != "acquisition_failed"}:
+            require(sha(source) == expected_sha, "input bytes changed before seal")
         for name, expected in plan["files"].items():
             target = study/"source-code"/name
             if not target.exists():
@@ -179,11 +182,11 @@ def seal(study):
     return plan
 
 
-def load_seal(study):
+def load_seal(study, *, plan_checker=None):
     path = study/"expected.json"
     require((study/"expected.sha256").read_text().strip() == sha(path), "run plan checksum mismatch")
     plan = read(path)
-    check_plan(study, plan)
+    (plan_checker or check_plan)(study, plan)
     for name, expected in plan["files"].items():
         require(sha(study/"source-code"/name) == expected, f"source snapshot changed: {name}")
     return plan
@@ -359,11 +362,11 @@ def execute_cli(attempt, task, plan):
     public_save(attempt/"completion.json", dict(returncode=rc, elapsed_s=elapsed, ended_utc=ended, error=error))
 
 
-def worker(study, index):
+def worker(study, index, *, plan_loader=None):
     # A detached coordinator may restart while the old worker is still writing its
     # receipt. Serialize workers as well as coordinators to avoid overlapping GPU use.
     with resource_lock(study/"worker.lock"):
-        plan = load_seal(study)
+        plan = (plan_loader or load_seal)(study)
         task = plan["tasks"][index]
         dest = study/task["relative_output"]
         if dest.exists():
@@ -396,16 +399,16 @@ def worker(study, index):
         return receipt
 
 
-def run(study):
+def run(study, *, plan_loader=None, worker_module="verification.stage3_campaign"):
     from d3d_optimization.campaign_state import keep_awake, process_lock
     with process_lock(study/"campaign.lock"), keep_awake():
-        plan = load_seal(study)
+        plan = (plan_loader or load_seal)(study)
         counts = {}
         for index, task in enumerate(plan["tasks"]):
             dest = study/task["relative_output"]
             if not dest.exists():
                 print(f"START {index+1}/{len(plan['tasks'])} {task['relative_output']} {utc()}", flush=True)
-                child = [sys.executable, "-B", "-u", "-m", "verification.stage3_campaign", "worker",
+                child = [sys.executable, "-B", "-u", "-m", worker_module, "worker",
                          "--study", str(study), "--index", str(index)]
                 # An orphaned *science worker* keeps the OS lock after coordinator loss.
                 # Wait before starting the watchdog so an earlier live run owns its full budget.

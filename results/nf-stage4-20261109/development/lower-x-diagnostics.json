@@ -1,0 +1,1496 @@
+{
+  "schema": "nf-stage4-development-lower-x.v1",
+  "stage3_expected_sha256": "ddd916dee9ac5cfe82f166752266b756bfe3e2cc8c3c3f8c335e5103e0f7c700",
+  "command": "python -B -m verification.stage4_xpoint_diagnostics --stage3 STUDY --output OUTPUT",
+  "diagnostic_source_sha256": "df9a19da83daacdb2d77c187647697e084d9e5b85f403484bcc494f7dcc41fb3",
+  "scope": "Three Stage 3 failures only. All physical cubic knot rectangles are screened by the Bernstein coefficient ranges of both gradient components, padded for floating point. Remaining boxes are quartered 12 times, checked again with a nonsingular preconditioned gradient on well-conditioned boxes, and polished by in-grid least squares. These are finite-precision enclosures and root counts, not exact arithmetic multiplicity proofs. Upper LCFS evidence is descriptive. The lower-divertor acceptance criteria are unchanged.",
+  "cases": [
+    {
+      "case_id": "8d1575d8c4",
+      "equilibrium_sha256": "413278ec73ea872d034eaf36a2b7e90696a0965e935eb38072734e54874ea270",
+      "time_ms": 1400.0,
+      "grid_bounds_RZ_m": [
+        [
+          0.8399999737739563,
+          -1.600000023841858
+        ],
+        [
+          2.5399999618530273,
+          1.600000023841858
+        ]
+      ],
+      "grid_shape_RZ": [
+        65,
+        65
+      ],
+      "axis_RZ_m": [
+        1.7945479154586792,
+        0.0026145942974835634
+      ],
+      "vertex_flux_median_Wb_per_rad": -0.26065621253953575,
+      "lcfs_vertex_flux_span_Wb_per_rad": 0.00020820899327977926,
+      "lcfs_lowest_RZ_m": [
+        1.504062533378601,
+        -0.9140761494636536
+      ],
+      "lower_search_radius_m": 0.15,
+      "census": {
+        "knot_rectangles": 3844,
+        "subdivisions": 12,
+        "terminal_boxes": 18,
+        "max_terminal_box_diagonal_m": 2.5260680779955567e-05,
+        "matched_root_distance_limit": "one terminal box diagonal",
+        "unmatched_terminal_boxes": 0,
+        "distinct_polished_stationary_points": 18,
+        "terminal_boxes_Rmin_Zmin_Rmax_Zmax_m": [
+          [
+            1.7350317146629095,
+            -1.5793945501791313,
+            1.7350381996366195,
+            -1.5793701361108106
+          ],
+          [
+            0.8498571559321135,
+            0.3976806694699917,
+            0.8498701259086374,
+            0.3976928765041521
+          ],
+          [
+            0.8487157979980111,
+            0.3746459960093489,
+            0.848728767974535,
+            0.3746582030435093
+          ],
+          [
+            2.4205205678008497,
+            -1.1093872219207697,
+            2.4205270527745597,
+            -1.1093750149011612
+          ],
+          [
+            1.0353925721137784,
+            -1.5339599690341856,
+            1.0353990571165923,
+            -1.5339355549658649
+          ],
+          [
+            2.4021421523066238,
+            1.1125610470189713,
+            2.402148637280334,
+            1.1125732540385798
+          ],
+          [
+            0.8478078996413387,
+            -0.3952270556037547,
+            0.8478208696178626,
+            -0.3952148485695943
+          ],
+          [
+            1.1093473057844676,
+            1.5621826320129912,
+            1.1093537907872815,
+            1.562207046081312
+          ],
+          [
+            1.0384210684278514,
+            1.5346679770154878,
+            1.0384275534306653,
+            1.5346923910838086
+          ],
+          [
+            1.7945444299548399,
+            0.0026123047264263732,
+            1.7945509149576537,
+            0.002624511757858272
+          ],
+          [
+            1.7632997150649317,
+            1.583300801110454,
+            1.7633062000386417,
+            1.5833252151787747
+          ],
+          [
+            1.8528444704716094,
+            -1.5791992376325652,
+            1.8528509554453194,
+            -1.5791748235642444
+          ],
+          [
+            0.8448637149704155,
+            -0.3630371065228246,
+            0.8448766849469393,
+            -0.36302489948866423
+          ],
+          [
+            0.8504926847817842,
+            0.1635864309319004,
+            0.8505056547583081,
+            0.1635986379624228
+          ],
+          [
+            1.1518824392405804,
+            -1.125549315882381,
+            1.1518889242433943,
+            -1.1255371088627726
+          ],
+          [
+            1.7966066608496476,
+            1.5830322463589255,
+            1.7966131458524615,
+            1.5830566604272462
+          ],
+          [
+            1.1057740692340303,
+            -1.5631103666091803,
+            1.1057805542368442,
+            -1.5630859525408596
+          ],
+          [
+            1.2319459554855712,
+            1.1291870077257045,
+            1.2319524404592812,
+            1.129199214745313
+          ]
+        ],
+        "possible_stationary_boxes_within_lower_search_radius": 0
+      },
+      "stationary_points": [
+        {
+          "RZ_m": [
+            1.735037821832788,
+            -1.5793780458262312
+          ],
+          "hessian_eigenvalues": [
+            -6.9861180850963125,
+            -4.081898553521553
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7042557753970761,
+          "distance_from_lcfs_boundary_m": 0.6943106348492618,
+          "gradient_norm": 4.941922278137544e-16,
+          "flux_Wb_per_rad": -0.1325698047441614,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.12808640779537434
+        },
+        {
+          "RZ_m": [
+            1.8528492453205905,
+            -1.579179824812403
+          ],
+          "hessian_eigenvalues": [
+            -1.355161397090629,
+            1.384220560377952
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7510093670452579,
+          "distance_from_lcfs_boundary_m": 0.726009604850568,
+          "gradient_norm": 1.401635477090965e-16,
+          "flux_Wb_per_rad": -0.14153400702944915,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.11912220551008659
+        },
+        {
+          "RZ_m": [
+            1.1057803925646028,
+            -1.5630973642608565
+          ],
+          "hessian_eigenvalues": [
+            -2.1093371123195936,
+            1.816150030943747
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7614835526445851,
+          "distance_from_lcfs_boundary_m": 0.723585448168044,
+          "gradient_norm": 9.885503531337653e-17,
+          "flux_Wb_per_rad": -0.2600410419292497,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.0006151706102860421
+        },
+        {
+          "RZ_m": [
+            1.0353970195970956,
+            -1.5339430981399622
+          ],
+          "hessian_eigenvalues": [
+            0.6171197536340447,
+            3.7153316981860405
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7770987053581803,
+          "distance_from_lcfs_boundary_m": 0.7267370662958489,
+          "gradient_norm": 3.068542907528366e-16,
+          "flux_Wb_per_rad": -0.26212605263227623,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.001469840092740482
+        },
+        {
+          "RZ_m": [
+            1.151888313450564,
+            -1.1255379793014093
+          ],
+          "hessian_eigenvalues": [
+            -0.26117367376270784,
+            0.26061181449699106
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.41078313823750534,
+          "distance_from_lcfs_boundary_m": 0.31713221016944,
+          "gradient_norm": 1.8667827670319454e-17,
+          "flux_Wb_per_rad": -0.2431155785740247,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.01754063396551106
+        },
+        {
+          "RZ_m": [
+            2.4205247301349395,
+            -1.1093852697598896
+          ],
+          "hessian_eigenvalues": [
+            -7.40027394002138,
+            -5.035542830790077
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.9370424806562098,
+          "distance_from_lcfs_boundary_m": 0.6318896305135425,
+          "gradient_norm": 7.410015183228755e-16,
+          "flux_Wb_per_rad": 0.00018417247408053083,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.2608403850136163
+        },
+        {
+          "RZ_m": [
+            0.8478181965337729,
+            -0.3952197188705539
+          ],
+          "hessian_eigenvalues": [
+            -7.338633232498498,
+            -0.9455030019474009
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.8365815113954649,
+          "distance_from_lcfs_boundary_m": 0.32620495221513657,
+          "gradient_norm": 2.3467956509328046e-16,
+          "flux_Wb_per_rad": -0.19812489669411143,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.06253131584542432
+        },
+        {
+          "RZ_m": [
+            0.844869883187945,
+            -0.3630358677041848
+          ],
+          "hessian_eigenvalues": [
+            -5.564260019035417,
+            0.874056980930418
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.8591742210907725,
+          "distance_from_lcfs_boundary_m": 0.3268869861094672,
+          "gradient_norm": 2.9247508991933317e-16,
+          "flux_Wb_per_rad": -0.19828445558269284,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.06237175695684291
+        },
+        {
+          "RZ_m": [
+            1.7945479041895076,
+            0.002613971623489456
+          ],
+          "hessian_eigenvalues": [
+            0.43950299761119693,
+            1.0318334790331958
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.961614542711325,
+          "distance_from_lcfs_boundary_m": 0.4496839447449396,
+          "gradient_norm": 5.1329392239236685e-18,
+          "flux_Wb_per_rad": -0.3826088498452449,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.12195263730570916
+        },
+        {
+          "RZ_m": [
+            0.8505021257676167,
+            0.1635893293054239
+          ],
+          "hessian_eigenvalues": [
+            -9.632416724282885,
+            -0.5800044566874931
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.260358715020141,
+          "distance_from_lcfs_boundary_m": 0.32130156045119473,
+          "gradient_norm": 3.279066811266238e-16,
+          "flux_Wb_per_rad": -0.18558591536052513,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.07507029717901062
+        },
+        {
+          "RZ_m": [
+            0.8487253913759601,
+            0.37465240237566366
+          ],
+          "hessian_eigenvalues": [
+            -6.653417294243183,
+            0.5648947027049132
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.4457828502282262,
+          "distance_from_lcfs_boundary_m": 0.33393506038859444,
+          "gradient_norm": 1.5560164498315178e-16,
+          "flux_Wb_per_rad": -0.1899576443248104,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.07069856821472534
+        },
+        {
+          "RZ_m": [
+            0.8498608947378524,
+            0.3976813321223546
+          ],
+          "hessian_eigenvalues": [
+            -7.550962577837483,
+            -0.5769527909432668
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.4658401940515575,
+          "distance_from_lcfs_boundary_m": 0.3343063504644088,
+          "gradient_norm": 1.9129994874187475e-15,
+          "flux_Wb_per_rad": -0.18990701154022,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.07074920099931575
+        },
+        {
+          "RZ_m": [
+            2.4021478262024725,
+            1.112563964192432
+          ],
+          "hessian_eigenvalues": [
+            -10.063013100375626,
+            -7.376183329622673
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.2167154403455784,
+          "distance_from_lcfs_boundary_m": 0.6313302485127117,
+          "gradient_norm": 8.97802965597951e-16,
+          "flux_Wb_per_rad": 0.058948163632240695,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.31960437617177645
+        },
+        {
+          "RZ_m": [
+            1.2319468195205159,
+            1.129187076082413
+          ],
+          "hessian_eigenvalues": [
+            -0.5274074176315499,
+            0.6550448182734927
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.061303366949516,
+          "distance_from_lcfs_boundary_m": 4.1902426452251854e-07,
+          "gradient_norm": 3.626758077249271e-17,
+          "flux_Wb_per_rad": -0.2606217670009857,
+          "flux_minus_lcfs_median_Wb_per_rad": 3.444553855003196e-05
+        },
+        {
+          "RZ_m": [
+            1.0384217675558745,
+            1.534691414683575
+          ],
+          "hessian_eigenvalues": [
+            0.9808360114920576,
+            5.647627833898688
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.492645964836468,
+          "distance_from_lcfs_boundary_m": 0.4493172859997251,
+          "gradient_norm": 5.865675833014185e-15,
+          "flux_Wb_per_rad": -0.29404960779257566,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.033393395253039915
+        },
+        {
+          "RZ_m": [
+            1.109349599032085,
+            1.5621971590703119
+          ],
+          "hessian_eigenvalues": [
+            -2.971265068203455,
+            2.615970708240694
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.50753420696472,
+          "distance_from_lcfs_boundary_m": 0.4500311981837866,
+          "gradient_norm": 2.345430948592773e-16,
+          "flux_Wb_per_rad": -0.29076096494089043,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.030104752401354684
+        },
+        {
+          "RZ_m": [
+            1.7966117815278764,
+            1.5830417277224071
+          ],
+          "hessian_eigenvalues": [
+            -2.190308258381955,
+            3.36417831903593
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.5141962443601984,
+          "distance_from_lcfs_boundary_m": 0.6446428416789267,
+          "gradient_norm": 3.579560344428742e-16,
+          "flux_Wb_per_rad": -0.15897100328239488,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.10168520925714086
+        },
+        {
+          "RZ_m": [
+            1.7633034955756846,
+            1.583312785162699
+          ],
+          "hessian_eigenvalues": [
+            -4.326524321229388,
+            -2.48902116619404
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.5108081104048985,
+          "distance_from_lcfs_boundary_m": 0.6302766396702136,
+          "gradient_norm": 2.156856114193529e-16,
+          "flux_Wb_per_rad": -0.15836373757227615,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.1022924749672596
+        }
+      ],
+      "nearest_lower_saddle": {
+        "RZ_m": [
+          1.151888313450564,
+          -1.1255379793014093
+        ],
+        "hessian_eigenvalues": [
+          -0.26117367376270784,
+          0.26061181449699106
+        ],
+        "saddle": true,
+        "below_axis": true,
+        "distance_from_lcfs_lowest_m": 0.41078313823750534,
+        "distance_from_lcfs_boundary_m": 0.31713221016944,
+        "gradient_norm": 1.8667827670319454e-17,
+        "flux_Wb_per_rad": -0.2431155785740247,
+        "flux_minus_lcfs_median_Wb_per_rad": 0.01754063396551106
+      },
+      "upper_lcfs_evidence": {
+        "classification": "upper_lcfs_saddle",
+        "saddle_RZ_m": [
+          1.2319468195205159,
+          1.129187076082413
+        ],
+        "lcfs_top_RZ_m": [
+          1.2319471836090088,
+          1.1291868686676025
+        ],
+        "saddle_distance_to_lcfs_top_m": 4.1902426452251854e-07,
+        "position_limit_m": 1e-05,
+        "saddle_gradient_norm": 3.626758077249271e-17,
+        "saddle_hessian_determinant": -0.34547549603855066,
+        "saddle_flux_Wb_per_rad": -0.2606217670009857,
+        "lcfs_vertex_flux_range_Wb_per_rad": [
+          -0.2608053494791122,
+          -0.26059714048583243
+        ],
+        "axis_RZ_m": [
+          1.7945479154586792,
+          0.0026145942974835634
+        ],
+        "elliptic_root_RZ_m": [
+          1.7945479041895076,
+          0.0026139716234894576
+        ],
+        "elliptic_root_flux_Wb_per_rad": -0.38260884984524485,
+        "axis_hessian_determinant": 0.45349390707067966,
+        "neighbours_RZ_m": [
+          [
+            1.228637456893921,
+            1.0499999523162842
+          ],
+          [
+            1.291562557220459,
+            1.1055465936660767
+          ]
+        ],
+        "downward_rays_RZ": [
+          [
+            0.9632063578044442,
+            -0.2687629295217199
+          ],
+          [
+            -0.16322122102534123,
+            -0.986589495690582
+          ]
+        ],
+        "neighbour_branch_indices": [
+          1,
+          0
+        ],
+        "neighbour_branch_angles_deg": [
+          7.000823051558073,
+          6.040019349627572
+        ],
+        "angular_assignment_limit_deg": 41.90162496630569
+      }
+    },
+    {
+      "case_id": "a7e51f17f7",
+      "equilibrium_sha256": "aececd9e07cd5c0d28a23b973b098456dd291a732b35a7a4de9d233eb911674f",
+      "time_ms": 1400.0,
+      "grid_bounds_RZ_m": [
+        [
+          0.8399999737739563,
+          -1.600000023841858
+        ],
+        [
+          2.5399999618530273,
+          1.600000023841858
+        ]
+      ],
+      "grid_shape_RZ": [
+        65,
+        65
+      ],
+      "axis_RZ_m": [
+        1.7406572103500366,
+        -0.028204312548041344
+      ],
+      "vertex_flux_median_Wb_per_rad": -0.062203181263037394,
+      "lcfs_vertex_flux_span_Wb_per_rad": 0.0003179696107999605,
+      "lcfs_lowest_RZ_m": [
+        1.5306249856948853,
+        -0.9488381743431091
+      ],
+      "lower_search_radius_m": 0.15,
+      "census": {
+        "knot_rectangles": 3844,
+        "subdivisions": 12,
+        "terminal_boxes": 16,
+        "max_terminal_box_diagonal_m": 2.526067330834273e-05,
+        "matched_root_distance_limit": "one terminal box diagonal",
+        "unmatched_terminal_boxes": 0,
+        "distinct_polished_stationary_points": 16,
+        "terminal_boxes_Rmin_Zmin_Rmax_Zmax_m": [
+          [
+            1.229358450975269,
+            -1.1920410519232973,
+            1.229364935948979,
+            -1.192028844874585
+          ],
+          [
+            0.9229299963917583,
+            1.3228516122326255,
+            0.9229364813654684,
+            1.322863819252234
+          ],
+          [
+            1.052889107959345,
+            -1.544873057573568,
+            1.052895592933055,
+            -1.5448486435052473
+          ],
+          [
+            0.8511282136314549,
+            0.13291016068251338,
+            0.8511411836079787,
+            0.13292236771485477
+          ],
+          [
+            1.7290655388496816,
+            -1.5833740433154162,
+            1.7290720238233916,
+            -1.5833496292470954
+          ],
+          [
+            0.8509725739131682,
+            0.07581787222352432,
+            0.850985543889692,
+            0.07583007925495622
+          ],
+          [
+            1.2910307869897224,
+            1.1015991434105672,
+            1.2910372719925363,
+            1.1016113504301757
+          ],
+          [
+            2.418062762764748,
+            -1.1197509815683588,
+            2.418069247738458,
+            -1.1197387745487504
+          ],
+          [
+            1.0910920880851336,
+            -1.5556640757713467,
+            1.0910985730588436,
+            -1.555639661703026
+          ],
+          [
+            1.0208726735436358,
+            1.5140136752161197,
+            1.0208791585173458,
+            1.5140380892844405
+          ],
+          [
+            0.8511930635140743,
+            -0.08166504027940391,
+            0.8512060334905982,
+            -0.08165283324797201
+          ],
+          [
+            2.3994638581643812,
+            1.117199714470189,
+            2.3994703431380913,
+            1.1172119214897975
+          ],
+          [
+            0.8509077240305487,
+            0.10189209150303213,
+            0.8509206940070726,
+            0.10190429853537353
+          ],
+          [
+            0.8762769981112797,
+            1.2751831414934713,
+            0.8762899680878036,
+            1.2751953485421836
+          ],
+          [
+            1.7406541868695058,
+            -0.02821044963911845,
+            1.7406606718432158,
+            -0.028198242607686552
+          ],
+          [
+            0.8477689897117671,
+            -0.0015502929918511654,
+            0.847781959688291,
+            -0.0015380859604192665
+          ]
+        ],
+        "possible_stationary_boxes_within_lower_search_radius": 0
+      },
+      "stationary_points": [
+        {
+          "RZ_m": [
+            1.7290718230386724,
+            -1.583353684837985
+          ],
+          "hessian_eigenvalues": [
+            -8.762071710072874,
+            -4.751191794445849
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.6648240972695894,
+          "distance_from_lcfs_boundary_m": 0.649608473489357,
+          "gradient_norm": 6.739122804100717e-16,
+          "flux_Wb_per_rad": 0.08150475569797369,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.14370793696101108
+        },
+        {
+          "RZ_m": [
+            1.0910937694779368,
+            -1.5556525909125252
+          ],
+          "hessian_eigenvalues": [
+            -2.406257627165422,
+            2.587953069612137
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7492739326745798,
+          "distance_from_lcfs_boundary_m": 0.7106357720034586,
+          "gradient_norm": 1.9092501568997997e-16,
+          "flux_Wb_per_rad": -0.06014445674451265,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.002058724518524742
+        },
+        {
+          "RZ_m": [
+            1.0528910199663852,
+            -1.5448508549376565
+          ],
+          "hessian_eigenvalues": [
+            1.8892457831444167,
+            5.220007093966107
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7638460953884477,
+          "distance_from_lcfs_boundary_m": 0.7197073430320803,
+          "gradient_norm": 2.4525919746687416e-16,
+          "flux_Wb_per_rad": -0.06098794046026434,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.0012152408027730557
+        },
+        {
+          "RZ_m": [
+            1.2293629551237788,
+            -1.1920330248707627
+          ],
+          "hessian_eigenvalues": [
+            -0.41264843000702656,
+            0.4124890900095397
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.38717250210596577,
+          "distance_from_lcfs_boundary_m": 0.32565300983232365,
+          "gradient_norm": 5.788638243635671e-17,
+          "flux_Wb_per_rad": -0.036768034177530856,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.025435147085506538
+        },
+        {
+          "RZ_m": [
+            2.418065526772091,
+            -1.1197480155939865
+          ],
+          "hessian_eigenvalues": [
+            -6.590636043235557,
+            -4.208670246912126
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.9037482435854601,
+          "distance_from_lcfs_boundary_m": 0.5725350176728312,
+          "gradient_norm": 1.182718435160975e-15,
+          "flux_Wb_per_rad": 0.18772629550277503,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.24992947676581242
+        },
+        {
+          "RZ_m": [
+            0.8512059010035472,
+            -0.08165945795188392
+          ],
+          "hessian_eigenvalues": [
+            -19.254670429740692,
+            -1.2910425848045248
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 1.101639332451755,
+          "distance_from_lcfs_boundary_m": 0.32078898465776984,
+          "gradient_norm": 6.357552970421638e-16,
+          "flux_Wb_per_rad": 0.08812808843735775,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.15033126970039515
+        },
+        {
+          "RZ_m": [
+            1.740656927585628,
+            -0.028204184628153287
+          ],
+          "hessian_eigenvalues": [
+            1.1496943380301032,
+            2.2769294872129464
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 0.9442882820584367,
+          "distance_from_lcfs_boundary_m": 0.5437052494964989,
+          "gradient_norm": 2.4427546543023613e-16,
+          "flux_Wb_per_rad": -0.3069048757617408,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.2447016944987034
+        },
+        {
+          "RZ_m": [
+            0.847781881400612,
+            -0.001544655854234056
+          ],
+          "hessian_eigenvalues": [
+            -12.202769893990514,
+            4.270711700786403
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.1677498513180264,
+          "distance_from_lcfs_boundary_m": 0.32547913930274325,
+          "gradient_norm": 3.9963750972313795e-16,
+          "flux_Wb_per_rad": 0.08473311449234036,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.14693629575537775
+        },
+        {
+          "RZ_m": [
+            0.8509754682898493,
+            0.07582841647850602
+          ],
+          "hessian_eigenvalues": [
+            -17.800717900956776,
+            -0.9815690359403556
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.2295792324429073,
+          "distance_from_lcfs_boundary_m": 0.3243924577852605,
+          "gradient_norm": 8.631953773921239e-16,
+          "flux_Wb_per_rad": 0.08825343169559935,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.15045661295863674
+        },
+        {
+          "RZ_m": [
+            0.850915447764563,
+            0.10189368429341006
+          ],
+          "hessian_eigenvalues": [
+            -17.449422873724373,
+            0.7612964894239725
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.2514161956388474,
+          "distance_from_lcfs_boundary_m": 0.3256153179842544,
+          "gradient_norm": 1.865833924790181e-16,
+          "flux_Wb_per_rad": 0.08814413987021744,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.15034732113325483
+        },
+        {
+          "RZ_m": [
+            0.8511357264667736,
+            0.13291122118392365
+          ],
+          "hessian_eigenvalues": [
+            -18.759150538548482,
+            -0.7625582893876158
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.277453485700935,
+          "distance_from_lcfs_boundary_m": 0.32677910307374947,
+          "gradient_norm": 1.3849172598739125e-16,
+          "flux_Wb_per_rad": 0.08826628324662884,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.15046946450966625
+        },
+        {
+          "RZ_m": [
+            1.29103404250953,
+            1.1016073441986263
+          ],
+          "hessian_eigenvalues": [
+            -0.42557023237994984,
+            0.621224626365832
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.064395951498727,
+          "distance_from_lcfs_boundary_m": 7.130490533760408e-08,
+          "gradient_norm": 3.7279964373104835e-17,
+          "flux_Wb_per_rad": -0.06221031047214595,
+          "flux_minus_lcfs_median_Wb_per_rad": -7.12920910855841e-06
+        },
+        {
+          "RZ_m": [
+            2.3994696288285975,
+            1.117204845540267
+          ],
+          "hessian_eigenvalues": [
+            -10.34327805913896,
+            -7.883989212917889
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.241299795634437,
+          "distance_from_lcfs_boundary_m": 0.6040214770251853,
+          "gradient_norm": 1.5081118008710999e-15,
+          "flux_Wb_per_rad": 0.27790286045668533,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.3401060417197227
+        },
+        {
+          "RZ_m": [
+            0.8762879241073582,
+            1.2751913824174264
+          ],
+          "hessian_eigenvalues": [
+            1.7196624551621666,
+            6.713058619398986
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.3182891233647847,
+          "distance_from_lcfs_boundary_m": 0.44960613648287684,
+          "gradient_norm": 2.9658606193721216e-16,
+          "flux_Wb_per_rad": -0.08321442109612728,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.02101123983308989
+        },
+        {
+          "RZ_m": [
+            0.9229355486579699,
+            1.322855594517781
+          ],
+          "hessian_eigenvalues": [
+            -1.9867651873968064,
+            1.4796081631895035
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.3515694825727853,
+          "distance_from_lcfs_boundary_m": 0.4294731686271436,
+          "gradient_norm": 8.225147891724117e-17,
+          "flux_Wb_per_rad": -0.08112930664503525,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.018926125381997852
+        },
+        {
+          "RZ_m": [
+            1.0208747802005091,
+            1.5140279284135618
+          ],
+          "hessian_eigenvalues": [
+            3.472711911036158,
+            9.298605847210244
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.515065548272925,
+          "distance_from_lcfs_boundary_m": 0.4930280445128347,
+          "gradient_norm": 1.1414266372043778e-15,
+          "flux_Wb_per_rad": -0.10613901345759959,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.043935832194562194
+        }
+      ],
+      "nearest_lower_saddle": {
+        "RZ_m": [
+          1.2293629551237788,
+          -1.1920330248707627
+        ],
+        "hessian_eigenvalues": [
+          -0.41264843000702656,
+          0.4124890900095397
+        ],
+        "saddle": true,
+        "below_axis": true,
+        "distance_from_lcfs_lowest_m": 0.38717250210596577,
+        "distance_from_lcfs_boundary_m": 0.32565300983232365,
+        "gradient_norm": 5.788638243635671e-17,
+        "flux_Wb_per_rad": -0.036768034177530856,
+        "flux_minus_lcfs_median_Wb_per_rad": 0.025435147085506538
+      },
+      "upper_lcfs_evidence": {
+        "classification": "upper_lcfs_saddle",
+        "saddle_RZ_m": [
+          1.29103404250953,
+          1.1016073441986263
+        ],
+        "lcfs_top_RZ_m": [
+          1.2910339832305908,
+          1.1016074419021606
+        ],
+        "saddle_distance_to_lcfs_top_m": 1.1428023997575543e-07,
+        "position_limit_m": 1e-05,
+        "saddle_gradient_norm": 3.7279964373104835e-17,
+        "saddle_hessian_determinant": -0.2643747086026546,
+        "saddle_flux_Wb_per_rad": -0.06221031047214595,
+        "lcfs_vertex_flux_range_Wb_per_rad": [
+          -0.06235889712051108,
+          -0.062040927509711116
+        ],
+        "axis_RZ_m": [
+          1.7406572103500366,
+          -0.028204312548041344
+        ],
+        "elliptic_root_RZ_m": [
+          1.740656927585628,
+          -0.02820418462815329
+        ],
+        "elliptic_root_flux_Wb_per_rad": -0.3069048757617408,
+        "axis_hessian_determinant": 2.6177729395425087,
+        "neighbours_RZ_m": [
+          [
+            1.2844728231430054,
+            1.050803780555725
+          ],
+          [
+            1.3446874618530273,
+            1.0893853902816772
+          ]
+        ],
+        "downward_rays_RZ": [
+          [
+            0.9450546116702386,
+            -0.3269124974068971
+          ],
+          [
+            -0.14451313086973705,
+            -0.9895028827680222
+          ]
+        ],
+        "neighbour_branch_indices": [
+          1,
+          0
+        ],
+        "neighbour_branch_angles_deg": [
+          0.9501393326005895,
+          6.248793418612853
+        ],
+        "angular_assignment_limit_deg": 39.613801650331595
+      }
+    },
+    {
+      "case_id": "8bb901c2a1",
+      "equilibrium_sha256": "9b16c36177b6a959c539a923d7ad1bcdafec44ec9f4a8cfd244e13c7818114b9",
+      "time_ms": 1400.0,
+      "grid_bounds_RZ_m": [
+        [
+          0.8399999737739563,
+          -1.600000023841858
+        ],
+        [
+          2.5399999618530273,
+          1.600000023841858
+        ]
+      ],
+      "grid_shape_RZ": [
+        65,
+        65
+      ],
+      "axis_RZ_m": [
+        1.7650201320648193,
+        -0.02998596988618374
+      ],
+      "vertex_flux_median_Wb_per_rad": -0.03057356268515388,
+      "lcfs_vertex_flux_span_Wb_per_rad": 0.00028727104244845314,
+      "lcfs_lowest_RZ_m": [
+        1.3978124856948853,
+        -1.0617589950561523
+      ],
+      "lower_search_radius_m": 0.15,
+      "census": {
+        "knot_rectangles": 3844,
+        "subdivisions": 12,
+        "terminal_boxes": 15,
+        "max_terminal_box_diagonal_m": 2.5260680779955567e-05,
+        "matched_root_distance_limit": "one terminal box diagonal",
+        "unmatched_terminal_boxes": 0,
+        "distinct_polished_stationary_points": 15,
+        "terminal_boxes_Rmin_Zmin_Rmax_Zmax_m": [
+          [
+            1.7280020031612366,
+            1.586621114402078,
+            1.7280084881349467,
+            1.5866455284703989
+          ],
+          [
+            1.723177182720974,
+            -1.5823242383776233,
+            1.7231836676946841,
+            -1.5822998243093025
+          ],
+          [
+            0.8418676503933966,
+            -0.4165283302136231,
+            0.8418806203699205,
+            -0.41651612317946274
+          ],
+          [
+            2.4083028773311526,
+            -1.1254638667451218,
+            2.4083093623048626,
+            -1.1254516597255133
+          ],
+          [
+            1.0399839541059919,
+            1.5367675868910737,
+            1.0399904391088057,
+            1.5367920009593945
+          ],
+          [
+            1.2108762759016827,
+            1.1677490249858238,
+            1.2108827608753927,
+            1.167761232034536
+          ],
+          [
+            1.0363393825246021,
+            -1.5355224694067147,
+            1.036345867527416,
+            -1.535498055338394
+          ],
+          [
+            1.7650182330980897,
+            -0.029992676228175696,
+            1.7650247180717997,
+            -0.029980469196743798
+          ],
+          [
+            0.8445135256042704,
+            0.44906007625104394,
+            0.8445264955807943,
+            0.4490722832852043
+          ],
+          [
+            1.9799437086330727,
+            -1.5780029482848477,
+            1.9799501936067827,
+            -1.577978534216527
+          ],
+          [
+            1.1118570018734317,
+            1.563769546453841,
+            1.1118634868762456,
+            1.5637939605221618
+          ],
+          [
+            1.2189630381180905,
+            -1.1922851928975433,
+            1.2189695230918005,
+            -1.192272985848831
+          ],
+          [
+            1.114126752858283,
+            -1.5648925935965963,
+            1.1141332378610969,
+            -1.5648681795282755
+          ],
+          [
+            1.93873170070583,
+            1.5784424015146215,
+            1.93873818567954,
+            1.5784668155829422
+          ],
+          [
+            2.3950151661993004,
+            1.1238891612156294,
+            2.3950216511730105,
+            1.123901368235238
+          ]
+        ],
+        "possible_stationary_boxes_within_lower_search_radius": 0
+      },
+      "stationary_points": [
+        {
+          "RZ_m": [
+            1.723177767972591,
+            -1.5823157690774015
+          ],
+          "hessian_eigenvalues": [
+            -16.538106455132358,
+            -8.345952819307746
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.6138745164046647,
+          "distance_from_lcfs_boundary_m": 0.5774823383746162,
+          "gradient_norm": 1.902965401247884e-15,
+          "flux_Wb_per_rad": 0.19070232237035403,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.2212758850555079
+        },
+        {
+          "RZ_m": [
+            1.9799468804572107,
+            -1.5779877430640925
+          ],
+          "hessian_eigenvalues": [
+            -0.8809484857941614,
+            0.8561163916218018
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.7780569219762422,
+          "distance_from_lcfs_boundary_m": 0.6684361237294723,
+          "gradient_norm": 7.38840277942995e-17,
+          "flux_Wb_per_rad": 0.14437566666948032,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.1749492293546342
+        },
+        {
+          "RZ_m": [
+            1.1141276524351,
+            -1.5648895958587483
+          ],
+          "hessian_eigenvalues": [
+            -4.6525805232328885,
+            4.7378039509749215
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.5775963002700185,
+          "distance_from_lcfs_boundary_m": 0.5573064393129055,
+          "gradient_norm": 3.8113044249431134e-16,
+          "flux_Wb_per_rad": -0.06255336682143266,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.03197980413627878
+        },
+        {
+          "RZ_m": [
+            1.0363422353078884,
+            -1.5355044021169635
+          ],
+          "hessian_eigenvalues": [
+            2.0452973809151596,
+            11.456980489430553
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.5958988610712826,
+          "distance_from_lcfs_boundary_m": 0.5645888484203784,
+          "gradient_norm": 5.73772586584655e-16,
+          "flux_Wb_per_rad": -0.07033820739318057,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.039764644708026695
+        },
+        {
+          "RZ_m": [
+            1.2189675942833542,
+            -1.1922750005137337
+          ],
+          "hessian_eigenvalues": [
+            -0.7589015119530121,
+            0.7581626743328094
+          ],
+          "saddle": true,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.2214044328025203,
+          "distance_from_lcfs_boundary_m": 0.17649766775749495,
+          "gradient_norm": 2.9280679791541995e-17,
+          "flux_Wb_per_rad": -0.018257899856586043,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.012315662828567837
+        },
+        {
+          "RZ_m": [
+            2.408304112887338,
+            -1.125461277431052
+          ],
+          "hessian_eigenvalues": [
+            -10.108586397016921,
+            -7.265170677923579
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 1.0124975601974664,
+          "distance_from_lcfs_boundary_m": 0.5593218509938598,
+          "gradient_norm": 1.0284242928843408e-15,
+          "flux_Wb_per_rad": 0.3138071270647227,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.34438068974987657
+        },
+        {
+          "RZ_m": [
+            0.8418794166003859,
+            -0.4165168394361373
+          ],
+          "hessian_eigenvalues": [
+            -12.597375627221936,
+            -1.0091547852642588
+          ],
+          "saddle": false,
+          "below_axis": true,
+          "distance_from_lcfs_lowest_m": 0.8517035967412566,
+          "distance_from_lcfs_boundary_m": 0.27585911937744556,
+          "gradient_norm": 4.609411456109819e-16,
+          "flux_Wb_per_rad": 0.06489685174590669,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.09547041443106057
+        },
+        {
+          "RZ_m": [
+            1.7650203123430632,
+            -0.029985352219032133
+          ],
+          "hessian_eigenvalues": [
+            0.5211418849987206,
+            1.181801744480652
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.0951705063619361,
+          "distance_from_lcfs_boundary_m": 0.544117748305501,
+          "gradient_norm": 1.107555504348983e-16,
+          "flux_Wb_per_rad": -0.2236620952716021,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.19308853258644823
+        },
+        {
+          "RZ_m": [
+            0.8445139052915834,
+            0.44906367210862824
+          ],
+          "hessian_eigenvalues": [
+            -13.437583972457652,
+            -0.7527302780353416
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 1.6089513512518676,
+          "distance_from_lcfs_boundary_m": 0.280675862235413,
+          "gradient_norm": 6.125645362592434e-16,
+          "flux_Wb_per_rad": 0.06847666837520898,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.09905023106036286
+        },
+        {
+          "RZ_m": [
+            2.395019920955483,
+            1.1238925690016297
+          ],
+          "hessian_eigenvalues": [
+            -11.801645138391628,
+            -9.119532329266747
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.4023936872226517,
+          "distance_from_lcfs_boundary_m": 0.6002217992947205,
+          "gradient_norm": 1.0134420481401237e-15,
+          "flux_Wb_per_rad": 0.3718871393631924,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.4024607020483463
+        },
+        {
+          "RZ_m": [
+            1.2108762949983845,
+            1.167751273380358
+          ],
+          "hessian_eigenvalues": [
+            -0.7587318553210585,
+            1.1671870530521196
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.237333496923505,
+          "distance_from_lcfs_boundary_m": 4.3754474612664815e-08,
+          "gradient_norm": 5.412588878569506e-17,
+          "flux_Wb_per_rad": -0.03050840315130992,
+          "flux_minus_lcfs_median_Wb_per_rad": 6.515953384396075e-05
+        },
+        {
+          "RZ_m": [
+            1.0399883450079428,
+            1.5367699408077198
+          ],
+          "hessian_eigenvalues": [
+            2.250877720783876,
+            12.328420424912895
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.623049893955541,
+          "distance_from_lcfs_boundary_m": 0.40666627223858215,
+          "gradient_norm": 5.299229305724271e-16,
+          "flux_Wb_per_rad": -0.09103685790817455,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.06046329522302067
+        },
+        {
+          "RZ_m": [
+            1.1118607256147601,
+            1.5637888850176627
+          ],
+          "hessian_eigenvalues": [
+            -5.767351791424066,
+            5.353160979277491
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.641073660398934,
+          "distance_from_lcfs_boundary_m": 0.4082276963251591,
+          "gradient_norm": 8.834193352809575e-16,
+          "flux_Wb_per_rad": -0.08358520015691422,
+          "flux_minus_lcfs_median_Wb_per_rad": -0.05301163747176034
+        },
+        {
+          "RZ_m": [
+            1.9387335854869123,
+            1.5784615286517736
+          ],
+          "hessian_eigenvalues": [
+            -1.1570979564215682,
+            1.1146507899489657
+          ],
+          "saddle": true,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.695062160694772,
+          "distance_from_lcfs_boundary_m": 0.6860831966599871,
+          "gradient_norm": 3.070770361880636e-16,
+          "flux_Wb_per_rad": 0.15563881495499451,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.1862123776401484
+        },
+        {
+          "RZ_m": [
+            1.7280083892895506,
+            1.5866355916782842
+          ],
+          "hessian_eigenvalues": [
+            -17.871405902269082,
+            -8.834343507642396
+          ],
+          "saddle": false,
+          "below_axis": false,
+          "distance_from_lcfs_lowest_m": 2.6688992528372,
+          "distance_from_lcfs_boundary_m": 0.5981484183039486,
+          "gradient_norm": 9.561771418773091e-16,
+          "flux_Wb_per_rad": 0.19299141621084576,
+          "flux_minus_lcfs_median_Wb_per_rad": 0.22356497889599963
+        }
+      ],
+      "nearest_lower_saddle": {
+        "RZ_m": [
+          1.2189675942833542,
+          -1.1922750005137337
+        ],
+        "hessian_eigenvalues": [
+          -0.7589015119530121,
+          0.7581626743328094
+        ],
+        "saddle": true,
+        "below_axis": true,
+        "distance_from_lcfs_lowest_m": 0.2214044328025203,
+        "distance_from_lcfs_boundary_m": 0.17649766775749495,
+        "gradient_norm": 2.9280679791541995e-17,
+        "flux_Wb_per_rad": -0.018257899856586043,
+        "flux_minus_lcfs_median_Wb_per_rad": 0.012315662828567837
+      },
+      "upper_lcfs_evidence": {
+        "classification": "upper_lcfs_saddle",
+        "saddle_RZ_m": [
+          1.2108762949983845,
+          1.167751273380358
+        ],
+        "lcfs_top_RZ_m": [
+          1.2108763456344604,
+          1.1677513122558594
+        ],
+        "saddle_distance_to_lcfs_top_m": 6.383820805946945e-08,
+        "position_limit_m": 1e-05,
+        "saddle_gradient_norm": 5.412588878569506e-17,
+        "saddle_hessian_determinant": -0.8855819982689533,
+        "saddle_flux_Wb_per_rad": -0.03050840315130992,
+        "lcfs_vertex_flux_range_Wb_per_rad": [
+          -0.030763906588001627,
+          -0.030476635545553174
+        ],
+        "axis_RZ_m": [
+          1.7650201320648193,
+          -0.02998596988618374
+        ],
+        "elliptic_root_RZ_m": [
+          1.7650203123430632,
+          -0.02998535221903214
+        ],
+        "elliptic_root_flux_Wb_per_rad": -0.22366209527160208,
+        "axis_hessian_determinant": 0.6158863888134234,
+        "neighbours_RZ_m": [
+          [
+            1.191766381263733,
+            1.0499999523162842
+          ],
+          [
+            1.2649999856948853,
+            1.1384100914001465
+          ]
+        ],
+        "downward_rays_RZ": [
+          [
+            0.9043636272303575,
+            -0.4267627323733308
+          ],
+          [
+            -0.22525415775944838,
+            -0.9743000381874577
+          ]
+        ],
+        "neighbour_branch_indices": [
+          1,
+          0
+        ],
+        "neighbour_branch_angles_deg": [
+          3.7996361321685588,
+          3.200428066888642
+        ],
+        "angular_assignment_limit_deg": 38.877767132679544
+      }
+    }
+  ]
+}

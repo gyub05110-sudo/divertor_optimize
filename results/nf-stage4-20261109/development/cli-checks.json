@@ -1,0 +1,472 @@
+{
+  "scope": "Two historical Stage 3 developer inputs, evaluated before freeze; solver digests at invocation are preserved.",
+  "runs": [
+    {
+      "path": "D:/DivertorOptimization/studies/nf-stage4-20261109/development/intersection-cli",
+      "result_sha256": "c6d2f3fdfd3d4881c0d852aca3a168f66407ad3d269ed9be0f8231bb1711eca1",
+      "events_sha256": "7228c4750c25cbee67257627cea029aedc745b1d769a1cc0b426dd37d4017abe",
+      "input_sha256": "a783f1ae24d01a159ad1123e24dd51f99ba6f60dd3f7577851b28d1229b0b749",
+      "arguments": {
+        "equilibrium": "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_b5e07dde39.parquet",
+        "time_ms": 1400.0,
+        "geometry": null,
+        "design_policy": null,
+        "output": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\development\\intersection-cli",
+        "budget_seconds": 600.0,
+        "power_mw": 1.0,
+        "density_m3": 1e+19,
+        "chi_m2_s": 0.3,
+        "lambda_q_mm": 3.0,
+        "gamma": 7.0,
+        "kappa0": 2000.0,
+        "radius_mm": 20,
+        "seed": 30713,
+        "backend": "gpu",
+        "family": "hotspot",
+        "method": "screened"
+      },
+      "revision": {
+        "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "git_head": "cb9358fb52e38b83e3915708f766a32472aa26b1",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "shapely": "2.1.2",
+          "pyarrow": "25.0.1"
+        },
+        "code_sha256": {
+          "__init__.py": "897e2557bc2434d17ee1e2cc5efa428038891f438cd9603a09cba876e70dbde4",
+          "accelerated_transport.py": "6b3cd88e90ea55ea26bad2b677ea99aed3d0b4c76825d1d9ac7a72676e2d0470",
+          "adaptive_peak.py": "6156b5f214aad05d1661dcbbf7ebf9a36a3ec74f1541e532923b6da819392d81",
+          "boundary_evaluator.py": "33ae04f9a95245cd74525c719aa35b2ee6f96f45cd6811a63b62973c8dc6ced0",
+          "boundary_transport.py": "16c9299be4803dfe1d965f8e8f8065f8dbf806cd491361833514ce3eda7e6f79",
+          "broadened_evaluator.py": "98664db9607ded23858a398385b7bf24bf8c0ad140f1fd4a9ce2cb671cc12594",
+          "broadening.py": "225a30d1b30107b9f4d530c091790275f4829a596c15dc95ea332e73ee4a7e60",
+          "broadening_study.py": "dd93d46416fa564ded86e20807355459fe0ce7905ca64e917c0a287b7e5dbde1",
+          "campaign_geometry.py": "d82b4f4f857b48bd2b4de3135228aa1e3382459bf2b45f76632805ae473b60d7",
+          "campaign_incumbents.py": "fec7039dc601792323eebe281c8cf0c421c625ab707978d462989dac58163182",
+          "campaign_search.py": "33567cce9e02774d3e4a0bdc0b18e01db12f6577826a316904b7543882199bc5",
+          "campaign_state.py": "faafec929d15bf8cf31912c2b5a28ac2b7774d41666675ae490d09e44c0ce69e",
+          "campaign_validation.py": "8e8943fe84e1d573bb6359249463be6b811fe4fd0a4d246cd16df2c4386a01b9",
+          "case.py": "584d026f9aa46ac35a9fbcbf589153e50e479503f39a5b6bc71b7ac60c572dac",
+          "continuous_boundary.py": "67f5d5a43033e3cd4fe5634d7b6a45b04f34d8304638eef3865f6c203631c92d",
+          "continuous_path_bounds.py": "17c02d8acb99ee0d0a0d08d28e2f0f886fa752369d597eb25c4b4e0cf1e374fe",
+          "continuous_transport_certificate.py": "9bce5dbe9629054a588fd36e30ce80841f2258081e77c826d97a5698d19501cb",
+          "enclosure_math.py": "b5906fe405a210b392a1fff7ed94b61cf4acf5ae29ab29c0159e38d483b4f3d6",
+          "expanded_search.py": "4c4459f7fe49a56dfe14570b8e2e5375ab99f5661ae14e198a99e93fe54692f6",
+          "final_refinement.py": "644f0de404fd961ddd2937de252b837858f4be5d47531ca1bd0c550a2ab912bd",
+          "flux_footprint.py": "2f84907b8689893061fbf6533f8806befa402c7aaa047f46383e9dd2222ff85e",
+          "frozen_field.py": "e0b6e03baf0064eb4d63a14e2eb1f778970ea3796131ad3eb85e2f3d685071de",
+          "frozen_mapping.py": "5020df98680f3f179092f38e888e747e20c501ed2d11e3f0d2d28f130f08d528",
+          "geometry_transport_bounds.py": "9e185fead157673980dcb698c91b170380c92df58211e1fb71c712112271deaf",
+          "geometry_transport_certificate.py": "f4edcf8ca4544c463678bf442d06a58533a771a98687fbaeec803c05ba315c2d",
+          "gpu_footprint.py": "e43ab2870bacdec3e2493b7ff200952ef7ade1717d9d3f454b8b3060eba6c239",
+          "imp_tangent.py": "4fa2d974ca41eb49ba18aeb56ed71a0d1f6ad962679347bdd55befb8636f47c7",
+          "independent_sources.py": "28af23f44bdc9059d2da264e6fe02dd8c6df328655c2eb7c13ab2c28af775a5d",
+          "multisurface.py": "654244e36aa085ea8a27c996fa142b04d44b863e3ff99a058e2f1a395bd08f18",
+          "multisurface_search.py": "e91d2bd8e08106b33825004a40a2229fb6a69cc575b5ab235e0abf90d0d817be",
+          "multisurface_validate.py": "b7b39b42b8209685abbf9624d58188700cdaecd162c92c0e30fd5fcc72f032bd",
+          "operating_sweep.py": "114665cf81662d826168446e399a22180bae96dec6c2b1fed523cdfee2d2f6d8",
+          "optimality_bounds.py": "6e93c855795fea613423f862dc7b66e11f52f4f2a7ea4b78a822bb42c4ecf869",
+          "physical_profile.py": "93f09adb6abcdfcdfcaadbb92ef3533da8d460e8f9897bbb451b42e2b6f9b541",
+          "reference_study.py": "9999e60e2d3c23d602a47710a745e1ab12e3e673f957f9f23d3691256fab2feb",
+          "reference_transport.py": "a59ba6966e9a5fe87a87f495aed871e747442a7bbabc1749165f792d5ae9c84d",
+          "regional_transport.py": "34d57c4a305387a76241d935514baf68ae50a5a168971b46a70266bc4d75174e",
+          "run_provenance.py": "4873d17dd566407b4521825e6eacf350d858b42fab0e7e9f4c98df6ce5349fa7",
+          "selective_peak.py": "7e43e353fc44fd6b5a45e602a913730903e753d0051b374211c26b6b7935eb11",
+          "selective_transport.py": "f9bbe96c7db334846cbee127bfb3dce81c08676082d022c43018c7e46f937e70",
+          "shape.py": "7e1e3d31e4b722d5a3212c5099f6965f672f15be3fc493655570e0e25c870562",
+          "tangent_direct.py": "1f1e1daedce999e8c896f87f3cb6108bcc9024ce6a31bf5565addd34b9bdbc42",
+          "tangent_evaluator.py": "b061834aee3f739eeefde6f2a297a4cdea300f376d628eb1bfac00b1a8019622",
+          "tangent_geometry.py": "0de07e94c6deb1f281b64f0c775a5a1599cba5a9d4ecc9f1f895434bde871f98",
+          "thermal_box_bounds.py": "26d72762b5fcf2a2af5f40e8034e2a0d16bc62c5fa71e892224469c59cc3651a",
+          "transport_deposition.py": "aeaa589fe0870641f46ba19aabf5fa3994140f52fb8eb745ca598f3b34f37884",
+          "transport_evaluator.py": "fbec7a20dff533026ded51d5244e7dcaf25381497ea6c376e135815a19b523f7",
+          "transport_peak_bounds.py": "8c73209cd2f5870f3e7f64ebc6ab4db514e31888ec94d105c0d4cc6826ba2be4",
+          "user_direct_search.py": "514eff0dad27b491892af0588225ca446ed5ec8c5b0793ca10dbc1fd485a66f1",
+          "user_input.py": "1d513394c3278757de88d5a3c176c3cfc75fbead16c886ee062760f7b343a1e5",
+          "user_output.py": "3a1019b67085052f639d61c716e4baa091a9cc63a1cacde32019f1c4c511304f",
+          "user_physics.py": "6ff376713e0d18e2bdb16f73e0e1427008b121cb7755a6131e08330078d03c27",
+          "user_precheck.py": "a19c9a6843f67c9e180a434a8d7bda7b9fdf4a27290c3be71ef37f32ac4d47f3",
+          "user_search.py": "de3ed30712acad1cd461e93a4d1b9b8238850af2f5cf787ef008fd97811399ce",
+          "user_surface_policy.py": "816f56989ff138b743147e623bea10702e31334a15c874e9c60dcacb2862aee3",
+          "user_topology.py": "d6002f2ed25095e655fc58ae617618c9e670d9cc693e31956a02d7188e50d6a1",
+          "validate_expanded.py": "39cf51548d11fdbf90fd8b67cee6153697b228d32c9c7b10ac820f0960cce206",
+          "optimize_divertor.py": "3f330c1f824e8fe6b4885925928693049063e23e2f02a24725be1db3ac0bee7a",
+          "run_tangent_curvature_study.py": "e4e00b6e11aab7efd2fa7cfd02e4c5e3fbff2532825c1050b76e8639ef663f90"
+        },
+        "gpu": null
+      },
+      "status": "geometry_excluded",
+      "reason": "fixed_wall_lcfs_intersection",
+      "fixed_wall": {
+        "excluded": true,
+        "classification": "fixed_wall_lcfs_intersection",
+        "geometry_policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "predicate": "LineString(assembled_candidate_wall).intersects(Polygon(supplied_LCFS))",
+        "scope": "Any immutable contact excludes every OMP candidate. A clear check leaves feasibility undecided.",
+        "index_convention": "Zero-based original and split material segment IDs and endpoint indices",
+        "engineering_region_basis": "supplied_fixed_regions",
+        "split_segments": 81,
+        "fixed_segments_tested": 77,
+        "adjustable_endpoints_tested": 8,
+        "LCFS_vertices": 94,
+        "LCFS_RZ_little_endian_float64_sha256": "95467b2fb7456aa082c7c8c0d896d6f6c0384df2282de0c7bc0115332ada0ff9",
+        "fixed_segment_intersections": [
+          {
+            "original_material_segment": 4,
+            "split_segment": 4,
+            "region": "fixed",
+            "segment_RZ_m": [
+              [
+                1.09895,
+                1.1659
+              ],
+              [
+                1.13814,
+                1.16824
+              ]
+            ],
+            "intersection": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  1.123262407969205,
+                  1.1673516722288322
+                ],
+                [
+                  1.13814,
+                  1.16824
+                ]
+              ]
+            },
+            "overlap_length_m": 0.014904089065212898,
+            "witness_RZ_m": [
+              1.1307012039846025,
+              1.167795836114416
+            ],
+            "witness_strictly_interior": true,
+            "witness_distance_to_LCFS_boundary_m": 0.0022387976243994703
+          },
+          {
+            "original_material_segment": 5,
+            "split_segment": 5,
+            "region": "fixed",
+            "segment_RZ_m": [
+              [
+                1.13814,
+                1.16824
+              ],
+              [
+                1.16192,
+                1.17446
+              ]
+            ],
+            "intersection": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  1.13814,
+                  1.16824
+                ],
+                [
+                  1.1399649887996393,
+                  1.1687173519904859
+                ]
+              ]
+            },
+            "overlap_length_m": 0.0018863851784908271,
+            "witness_RZ_m": [
+              1.13814,
+              1.16824
+            ],
+            "witness_strictly_interior": true,
+            "witness_distance_to_LCFS_boundary_m": 0.0007338101344565454
+          }
+        ],
+        "fixed_adjustable_endpoint_intersections": []
+      },
+      "policy": null,
+      "original_peak_MW_m2": null,
+      "selected_peak_MW_m2": null,
+      "decision_s": null,
+      "timings": {
+        "preparation": [
+          {
+            "stage": "load_input",
+            "start_s": 1.2574264998547733,
+            "end_s": 5.574121400248259,
+            "duration_s": 4.316694900393486,
+            "within_budget": true
+          },
+          {
+            "stage": "fixed_wall_precheck",
+            "start_s": 5.574431499931961,
+            "end_s": 5.5783583000302315,
+            "duration_s": 0.003926800098270178,
+            "within_budget": true
+          }
+        ],
+        "search_finished_s": 5.578644799999893,
+        "deadline_overrun_s": 0.0,
+        "elapsed_before_result_write_s": 5.578648800030351
+      },
+      "journal_counts": {
+        "eligible_fine": 0,
+        "eligible_coarse": 0
+      },
+      "winner_id": null,
+      "displacement": {
+        "nonfloor_max_displacement_m": null
+      }
+    },
+    {
+      "path": "D:/DivertorOptimization/studies/nf-stage4-20261109/development/connector-cli",
+      "result_sha256": "118923121c732a8eda4485c89087709db3a7d505dc7dc701d24cc2c97ccef6c6",
+      "events_sha256": "0b10f1bb016be3648a4b34be9646a102f3cea847bf180ff815e4c04f8838eba6",
+      "input_sha256": "f92350a8aa539411afa8c41957c0ce3388dc8a2fcbf7eedca2988ddf496ebe80",
+      "arguments": {
+        "equilibrium": "D:\\DivertorOptimization\\studies\\nf-stage3-20261108\\inputs\\raw\\d3d_shot_3696718bf8.parquet",
+        "time_ms": 1400.0,
+        "geometry": null,
+        "design_policy": null,
+        "output": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\development\\connector-cli",
+        "budget_seconds": 240.0,
+        "power_mw": 1.0,
+        "density_m3": 1e+19,
+        "chi_m2_s": 0.3,
+        "lambda_q_mm": 3.0,
+        "gamma": 7.0,
+        "kappa0": 2000.0,
+        "radius_mm": 20,
+        "seed": 30713,
+        "backend": "gpu",
+        "family": "hotspot",
+        "method": "screened"
+      },
+      "revision": {
+        "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "git_head": "cb9358fb52e38b83e3915708f766a32472aa26b1",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "shapely": "2.1.2",
+          "pyarrow": "25.0.1"
+        },
+        "code_sha256": {
+          "__init__.py": "897e2557bc2434d17ee1e2cc5efa428038891f438cd9603a09cba876e70dbde4",
+          "accelerated_transport.py": "6b3cd88e90ea55ea26bad2b677ea99aed3d0b4c76825d1d9ac7a72676e2d0470",
+          "adaptive_peak.py": "6156b5f214aad05d1661dcbbf7ebf9a36a3ec74f1541e532923b6da819392d81",
+          "boundary_evaluator.py": "33ae04f9a95245cd74525c719aa35b2ee6f96f45cd6811a63b62973c8dc6ced0",
+          "boundary_transport.py": "16c9299be4803dfe1d965f8e8f8065f8dbf806cd491361833514ce3eda7e6f79",
+          "broadened_evaluator.py": "98664db9607ded23858a398385b7bf24bf8c0ad140f1fd4a9ce2cb671cc12594",
+          "broadening.py": "225a30d1b30107b9f4d530c091790275f4829a596c15dc95ea332e73ee4a7e60",
+          "broadening_study.py": "dd93d46416fa564ded86e20807355459fe0ce7905ca64e917c0a287b7e5dbde1",
+          "campaign_geometry.py": "d82b4f4f857b48bd2b4de3135228aa1e3382459bf2b45f76632805ae473b60d7",
+          "campaign_incumbents.py": "fec7039dc601792323eebe281c8cf0c421c625ab707978d462989dac58163182",
+          "campaign_search.py": "33567cce9e02774d3e4a0bdc0b18e01db12f6577826a316904b7543882199bc5",
+          "campaign_state.py": "faafec929d15bf8cf31912c2b5a28ac2b7774d41666675ae490d09e44c0ce69e",
+          "campaign_validation.py": "8e8943fe84e1d573bb6359249463be6b811fe4fd0a4d246cd16df2c4386a01b9",
+          "case.py": "584d026f9aa46ac35a9fbcbf589153e50e479503f39a5b6bc71b7ac60c572dac",
+          "continuous_boundary.py": "67f5d5a43033e3cd4fe5634d7b6a45b04f34d8304638eef3865f6c203631c92d",
+          "continuous_path_bounds.py": "17c02d8acb99ee0d0a0d08d28e2f0f886fa752369d597eb25c4b4e0cf1e374fe",
+          "continuous_transport_certificate.py": "9bce5dbe9629054a588fd36e30ce80841f2258081e77c826d97a5698d19501cb",
+          "enclosure_math.py": "b5906fe405a210b392a1fff7ed94b61cf4acf5ae29ab29c0159e38d483b4f3d6",
+          "expanded_search.py": "4c4459f7fe49a56dfe14570b8e2e5375ab99f5661ae14e198a99e93fe54692f6",
+          "final_refinement.py": "644f0de404fd961ddd2937de252b837858f4be5d47531ca1bd0c550a2ab912bd",
+          "flux_footprint.py": "2f84907b8689893061fbf6533f8806befa402c7aaa047f46383e9dd2222ff85e",
+          "frozen_field.py": "e0b6e03baf0064eb4d63a14e2eb1f778970ea3796131ad3eb85e2f3d685071de",
+          "frozen_mapping.py": "5020df98680f3f179092f38e888e747e20c501ed2d11e3f0d2d28f130f08d528",
+          "geometry_transport_bounds.py": "9e185fead157673980dcb698c91b170380c92df58211e1fb71c712112271deaf",
+          "geometry_transport_certificate.py": "f4edcf8ca4544c463678bf442d06a58533a771a98687fbaeec803c05ba315c2d",
+          "gpu_footprint.py": "e43ab2870bacdec3e2493b7ff200952ef7ade1717d9d3f454b8b3060eba6c239",
+          "imp_tangent.py": "4fa2d974ca41eb49ba18aeb56ed71a0d1f6ad962679347bdd55befb8636f47c7",
+          "independent_sources.py": "28af23f44bdc9059d2da264e6fe02dd8c6df328655c2eb7c13ab2c28af775a5d",
+          "multisurface.py": "654244e36aa085ea8a27c996fa142b04d44b863e3ff99a058e2f1a395bd08f18",
+          "multisurface_search.py": "e91d2bd8e08106b33825004a40a2229fb6a69cc575b5ab235e0abf90d0d817be",
+          "multisurface_validate.py": "b7b39b42b8209685abbf9624d58188700cdaecd162c92c0e30fd5fcc72f032bd",
+          "operating_sweep.py": "114665cf81662d826168446e399a22180bae96dec6c2b1fed523cdfee2d2f6d8",
+          "optimality_bounds.py": "6e93c855795fea613423f862dc7b66e11f52f4f2a7ea4b78a822bb42c4ecf869",
+          "physical_profile.py": "93f09adb6abcdfcdfcaadbb92ef3533da8d460e8f9897bbb451b42e2b6f9b541",
+          "reference_study.py": "9999e60e2d3c23d602a47710a745e1ab12e3e673f957f9f23d3691256fab2feb",
+          "reference_transport.py": "a59ba6966e9a5fe87a87f495aed871e747442a7bbabc1749165f792d5ae9c84d",
+          "regional_transport.py": "34d57c4a305387a76241d935514baf68ae50a5a168971b46a70266bc4d75174e",
+          "run_provenance.py": "4873d17dd566407b4521825e6eacf350d858b42fab0e7e9f4c98df6ce5349fa7",
+          "selective_peak.py": "7e43e353fc44fd6b5a45e602a913730903e753d0051b374211c26b6b7935eb11",
+          "selective_transport.py": "f9bbe96c7db334846cbee127bfb3dce81c08676082d022c43018c7e46f937e70",
+          "shape.py": "7e1e3d31e4b722d5a3212c5099f6965f672f15be3fc493655570e0e25c870562",
+          "tangent_direct.py": "1f1e1daedce999e8c896f87f3cb6108bcc9024ce6a31bf5565addd34b9bdbc42",
+          "tangent_evaluator.py": "b061834aee3f739eeefde6f2a297a4cdea300f376d628eb1bfac00b1a8019622",
+          "tangent_geometry.py": "0de07e94c6deb1f281b64f0c775a5a1599cba5a9d4ecc9f1f895434bde871f98",
+          "thermal_box_bounds.py": "26d72762b5fcf2a2af5f40e8034e2a0d16bc62c5fa71e892224469c59cc3651a",
+          "transport_deposition.py": "aeaa589fe0870641f46ba19aabf5fa3994140f52fb8eb745ca598f3b34f37884",
+          "transport_evaluator.py": "fbec7a20dff533026ded51d5244e7dcaf25381497ea6c376e135815a19b523f7",
+          "transport_peak_bounds.py": "8c73209cd2f5870f3e7f64ebc6ab4db514e31888ec94d105c0d4cc6826ba2be4",
+          "user_direct_search.py": "514eff0dad27b491892af0588225ca446ed5ec8c5b0793ca10dbc1fd485a66f1",
+          "user_input.py": "768413878641f9115a0b4257bcc4ca182eebcb73f644ff6e19dcee714c7b0984",
+          "user_output.py": "3a1019b67085052f639d61c716e4baa091a9cc63a1cacde32019f1c4c511304f",
+          "user_physics.py": "6ff376713e0d18e2bdb16f73e0e1427008b121cb7755a6131e08330078d03c27",
+          "user_precheck.py": "a19c9a6843f67c9e180a434a8d7bda7b9fdf4a27290c3be71ef37f32ac4d47f3",
+          "user_search.py": "de3ed30712acad1cd461e93a4d1b9b8238850af2f5cf787ef008fd97811399ce",
+          "user_surface_policy.py": "816f56989ff138b743147e623bea10702e31334a15c874e9c60dcacb2862aee3",
+          "validate_expanded.py": "39cf51548d11fdbf90fd8b67cee6153697b228d32c9c7b10ac820f0960cce206",
+          "optimize_divertor.py": "3f330c1f824e8fe6b4885925928693049063e23e2f02a24725be1db3ac0bee7a",
+          "run_tangent_curvature_study.py": "e4e00b6e11aab7efd2fa7cfd02e4c5e3fbff2532825c1050b76e8639ef663f90"
+        },
+        "gpu": {
+          "cupy": "14.2.0",
+          "device": "NVIDIA GeForce RTX 3090",
+          "cuda_driver": 13030,
+          "cuda_runtime": 12090
+        }
+      },
+      "status": "qualified",
+      "reason": "qualified",
+      "fixed_wall": {
+        "excluded": false,
+        "classification": "no_fixed_wall_lcfs_intersection",
+        "geometry_policy": "full-wall-chord-1e-7.v2",
+        "chord_tolerance_m": 1e-07,
+        "predicate": "LineString(assembled_candidate_wall).intersects(Polygon(supplied_LCFS))",
+        "scope": "Any immutable contact excludes every OMP candidate. A clear check leaves feasibility undecided.",
+        "index_convention": "Zero-based original and split material segment IDs and endpoint indices",
+        "engineering_region_basis": "supplied_fixed_regions",
+        "split_segments": 81,
+        "fixed_segments_tested": 77,
+        "adjustable_endpoints_tested": 8,
+        "LCFS_vertices": 89,
+        "LCFS_RZ_little_endian_float64_sha256": "7a7c1ec1086151196eb972ce74bcfbf8f93f2a97e1b0f653d258720a41e35449",
+        "fixed_segment_intersections": [],
+        "fixed_adjustable_endpoint_intersections": []
+      },
+      "policy": {
+        "policy_version": "regional-hotspot-v1",
+        "source": "original_native_fine_baseline.surface_metrics",
+        "global_peak_MW_m2": 5.5639957052338405,
+        "tie_tolerance_MW_m2": 5.563995705233841e-10,
+        "regional_metrics": {
+          "fixed": {
+            "peak_MW_m2": 4.242458473164042,
+            "deposited_W": 35898.00259278294
+          },
+          "omp_entry": {
+            "peak_MW_m2": 4.072734643132562e-05,
+            "deposited_W": 9.95313110271509
+          },
+          "shelf": {
+            "peak_MW_m2": 4.007246192117742,
+            "deposited_W": 650459.8944369191
+          },
+          "omp_connector": {
+            "peak_MW_m2": 5.5639957052338405,
+            "deposited_W": 313631.4801544169
+          },
+          "floor": {
+            "peak_MW_m2": 8.357773742982551e-07,
+            "deposited_W": 0.6359399415888427
+          },
+          "imp_sloped": {
+            "peak_MW_m2": 4.582969731177079e-08,
+            "deposited_W": 0.023502428095087964
+          },
+          "imp_vertical": {
+            "peak_MW_m2": 2.8054640525589512e-08,
+            "deposited_W": 0.010242408466671597
+          }
+        },
+        "tied_regions": [
+          "omp_connector"
+        ],
+        "predicted_region": "omp_connector",
+        "predicted_family": "floor-connector",
+        "predicted_floor_sufficient": false,
+        "fallback_reason": null,
+        "requested_family": "hotspot",
+        "selected_family": "floor-connector"
+      },
+      "original_peak_MW_m2": 5.5639957052338405,
+      "selected_peak_MW_m2": 5.562050932694591,
+      "decision_s": 136.5555312000215,
+      "timings": {
+        "preparation": [
+          {
+            "stage": "load_input",
+            "start_s": 1.1723842998035252,
+            "end_s": 6.4723649001680315,
+            "duration_s": 5.299980600364506,
+            "within_budget": true
+          },
+          {
+            "stage": "fixed_wall_precheck",
+            "start_s": 6.472796599846333,
+            "end_s": 6.475837599951774,
+            "duration_s": 0.0030410001054406166,
+            "within_budget": true
+          },
+          {
+            "stage": "shelf_limits",
+            "start_s": 6.475888799875975,
+            "end_s": 6.4769275998696685,
+            "duration_s": 0.0010387999936938286,
+            "within_budget": true
+          },
+          {
+            "stage": "prepare_fine_reference",
+            "start_s": 6.477923600003123,
+            "end_s": 136.55081189982593,
+            "duration_s": 130.0728882998228,
+            "within_budget": true
+          },
+          {
+            "stage": "surface_policy",
+            "start_s": 136.5509055997245,
+            "end_s": 136.5555312000215,
+            "duration_s": 0.0046256002970039845,
+            "within_budget": true
+          },
+          {
+            "stage": "prepare_fine_design",
+            "start_s": 136.55564269982278,
+            "end_s": 136.55738169979304,
+            "duration_s": 0.0017389999702572823,
+            "within_budget": true
+          },
+          {
+            "stage": "prepare_coarse_search",
+            "start_s": 136.55743969976902,
+            "end_s": 149.1803926001303,
+            "duration_s": 12.62295290036127,
+            "within_budget": true
+          }
+        ],
+        "baseline_ready_s": 136.55089600011706,
+        "search_ready_s": 149.18050199979916,
+        "search_finished_s": 254.72455599997193,
+        "deadline_overrun_s": 14.724555999971926,
+        "elapsed_before_result_write_s": 256.9417329998687
+      },
+      "journal_counts": {
+        "late": 1,
+        "failed": 0,
+        "proposals": 13,
+        "coarse": 13,
+        "eligible_coarse": 11,
+        "fine": 6,
+        "eligible_fine": 5,
+        "late_evaluations": 1
+      },
+      "winner_id": "980b642e00986f897fbfba175749244cada6258602b27c1b357724c74993761a",
+      "displacement": {
+        "nonfloor_max_displacement_m": 5.5890507446012844e-05,
+        "nonfloor_displacements_m": {
+          "omp_entry": 3.1401849173675503e-16,
+          "shelf": 2.220446049250313e-16,
+          "omp_connector": 5.5890507446012844e-05
+        }
+      }
+    }
+  ]
+}

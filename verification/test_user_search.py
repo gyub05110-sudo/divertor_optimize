@@ -146,6 +146,45 @@ def test_cold_family_origin_and_matched_seed_with_real_proposals(run):
     assert any(e["proposal_kind"].startswith("local") for e in full.events if e["stage"] == "coarse")
 
 
+@pytest.mark.parametrize("family, expected", [
+    ("full", "1469b4ea8dd25bccd71cbb8102051acae77283c52242dab07b5492a105025a82"),
+    ("floor-only", "9a88ce582c79d842245f892c4fb3a1bf884307246b8536c4e3b466ac0f50e8ac"),
+])
+def test_historical_seeded_proposal_stream(run, family, expected):
+    from hashlib import sha256
+
+    sim = run(family=family, budget=90.)
+    identities = [e["id"] for e in sim.events if e["stage"] == "proposal"]
+    assert len(identities) == 53
+    assert sha256("\n".join(identities).encode()).hexdigest() == expected
+
+
+@pytest.mark.parametrize("family,face", [
+    ("floor-entry", "omp_entry"), ("floor-shelf", "shelf"), ("floor-connector", "omp_connector"),
+])
+def test_focused_proposals_move_only_named_face_and_projected_floor(run, family, face):
+    from d3d_optimization.independent_sources import split_design_wall
+    from d3d_optimization.user_input import REFERENCE
+
+    # Candidate.bind appends eight zero IMP coefficients. Use the actual
+    # engineering order consumed by TangentEvaluator.curves for the rest.
+    _, surfaces, _ = split_design_wall(json.loads(REFERENCE.read_text()))
+    names = [s["name"] for s in surfaces]
+    sim = run(family=family, budget=90., project=lambda i, target: (0., target * .9))
+    proposals = [e for e in sim.events if e["stage"] == "proposal"]
+    assert {e["proposal_kind"] for e in proposals} == {
+        "projected_origin", "projected_restart", "local_projected"}
+    vectors = np.array([e["candidate"]["vector"] for e in proposals])
+    for j, name in enumerate(names[:4]):
+        block = vectors[:, 4*j:4*j+4]
+        if name in (face, "floor"):
+            assert np.all(np.ptp(block, axis=0) > 0.)
+        else:
+            np.testing.assert_array_equal(block, 0.)
+    floor_start = 4 * names.index("floor")
+    np.testing.assert_array_equal(vectors[:, floor_start:floor_start+4], .9*np.array(sim.targets))
+
+
 def test_next_fine_confirmation_uses_best_pending_coarse_peak(run):
     peaks = [20., 15., 13., 14., 12., 10., 8.]
     sim = run(coarse=lambda i,c: (1., result(peaks[i % len(peaks)], A2=1000.+i)))

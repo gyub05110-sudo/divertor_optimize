@@ -8,6 +8,8 @@ import numpy as np
 
 from .campaign_geometry import Candidate
 from .campaign_search import scales
+from .tangent_evaluator import ACTIVE
+from .user_surface_policy import REGION_FAMILIES, SEARCH_FAMILIES
 from run_tangent_curvature_study import project_floor
 
 
@@ -33,14 +35,15 @@ class _Proposals:
         self.geometry = geometry
         self.radius_mm = radius_mm
         self.rng = np.random.default_rng(seed)
-        self.family = family
+        self.frozen = np.repeat([family != "full" and name != "floor" and REGION_FAMILIES[name] != family
+                                 for name in ACTIVE], 4)
         self.scale = scales(geometry)
 
     def draw(self, index, coarse_elite, fine_elite):
         rng, bound = self.rng, self.geometry.bound
         parent = None
         if index < 4 or index % 5 == 0 or not coarse_elite:
-            # Both families consume the same random draws and share their origin.
+            # All families consume the same random draws and share their origin.
             # The first projected tangent floor is distinct from the original wall.
             target = np.zeros(4) if index == 0 else rng.uniform(-.85*bound, .85*bound, 4)
             x = np.zeros(16)
@@ -59,13 +62,12 @@ class _Proposals:
                 # Carry forward successful directions in the projected family.
                 x += rng.uniform(.3, .8) * (x - np.array(coarse_elite[-1][2].vector))
             if index % 3 == 1:
-                # Deliberately give both families some pure floor moves.
+                # Deliberately give all families some pure floor moves.
                 step[:12] = 0.
             x += step
             target = x[12:]
             kind = "local_projected"
-        if self.family == "floor-only":
-            x[:12] = 0.
+        x[self.frozen] = 0.
         floor = project_floor(self.geometry, np.clip(target, -bound, bound))
         if floor is None:
             return None, kind, parent
@@ -90,8 +92,8 @@ def search_peak(coarse_evaluator, fine_evaluator, *, radius_mm, seed, deadline, 
     retained only for the selected design. Counts for coarse/fine include attempts,
     while eligible_coarse/eligible_fine count only on-time eligible scores.
     """
-    if family not in ("full", "floor-only"):
-        raise ValueError("family must be full or floor-only")
+    if family not in SEARCH_FAMILIES:
+        raise ValueError(f"expected resolved screened search family, got {family}")
     if not isfinite(started) or not isfinite(deadline) or deadline < started:
         raise ValueError("expected finite process start and deadline in perf_counter seconds")
     counts = dict.fromkeys(("proposals", "projection_rejected", "duplicates", "coarse", "fine",

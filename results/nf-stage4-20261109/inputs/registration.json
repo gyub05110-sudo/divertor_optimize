@@ -1,0 +1,808 @@
+{
+  "schema": "nf-stage4-input-registration.v1",
+  "protocol_sha256": "506285e6e9d7c36aead7f5a38a096bea23aeda836d43444de76f0e975fdcf47d",
+  "selection_sha256": "c17bd8a2c037f32a47c997242a92ecac76bb130ac5444ac90fd5bdb7341fa416",
+  "selection_seal_sha256": "b57a20d41b68799e30a8dcd57804eaeef769a1cc49690a17c40ddb99017c226b",
+  "dataset": "Sophelio/fusion-equilibrium-challenge",
+  "revision": "1e280905b85f2a6fdde7e06fca8cf3a1edf447cb",
+  "license": "cc-by-4.0",
+  "files_sha256": {
+    "protocol.ko.md": "506285e6e9d7c36aead7f5a38a096bea23aeda836d43444de76f0e975fdcf47d",
+    "hub-inventory.json": "d868f9da1c59d0ca54050c8ba180c10cf8351422dc9f7e82c39395de51757eca",
+    "dataset-README.md": "a54d197b1ed20f77843a42222ae1ce2ba17ab34cc22a12f5e1f65d4c11b639d7",
+    "source-code/verification/stage4_inputs.py": "1ed0b2662c323393b9dc007b4f7e22acf4e213171c3b42cb70c15f26afbe1005",
+    "source-code/verification/stage3_inputs.py": "a32a67867f0b3ceb0116ab7b7bc9a114827b398abd10bc6c5cef77f6bee96f0c",
+    "source-code/verification/nf_prospective_inputs.py": "7562f0b02f2f53cc2275fe76ddf8c29702b573cb36084cf671ee23d358fefe92",
+    "source-code/d3d_optimization/broadening_study.py": "dd93d46416fa564ded86e20807355459fe0ce7905ca64e917c0a287b7e5dbde1",
+    "local-source-audit.json": "e1705ce17b6da07ad83d27177eded48851ecdde1eeea900849c121699fff6280",
+    "prior-frame-index.json": "9d17d56727667d8b50a840fe9a67f4b77f1dff4fb0dd04ccdf772c2a160c79e5"
+  },
+  "historical_source_objects": 36,
+  "historical_frames": 8097,
+  "valid_historical_frames": 8097,
+  "cases": [
+    {
+      "rank": 1,
+      "id": "180828b27d",
+      "dataset_path": "data/diii_d_train/d3d_shot_180828b27d.parquet",
+      "order_sha256": "0004aac73d6bf4fa9bc7d20b966815166365191a43e7cfac2c216ef77ee5d5ef",
+      "sha256": "ac1760ed1b90fbaf1dd7c2d3e2054c298170e8798c942b20bc05dfdeacb11fa7",
+      "bytes": 13755238,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_180828b27d.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "8dc25ce541ade19cec416e80d8d1989530d2ccb0f11e460a018682eb1196d5cc",
+          "finished_sha256": "3b7200c2f8f43999e5940d0184f046e6b29cbe492e5d57f5edabfac36b828128",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_180828b27d.parquet",
+      "receipt_sha256": "ec7f2bb18741d75594c44f376a60b5cfc195a7b1388b9589b363e0f080838f1d",
+      "frame_index": 61,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "1e55912fca658dfb90cef11c820edeea326efebdf4e56a7d79716f114ca2bf8f",
+        "normalized_sha256": "d9cdd21e215611e0bb505faf0fc20ba5845e2d9436e8c787daac6df111f4d310"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 152,
+      "valid_file_frames": 152
+    },
+    {
+      "rank": 2,
+      "id": "18543f448c",
+      "dataset_path": "data/diii_d_train/d3d_shot_18543f448c.parquet",
+      "order_sha256": "0013c57ba68d271ddb87dd13650a7806dcfa51d7471363c4959a768de05c5106",
+      "sha256": "f4394004e4ea40a612e28a6e1c24848e2216141352259b15d4b588f476c4f9c4",
+      "bytes": 13234473,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_18543f448c.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "392a898de9111fd46967d7157402de887d0cd4536bc21243de9e0c6b649110cc",
+          "finished_sha256": "b4439c33a04e86c5e6be7195c365a7c55de937f71468b607d82be20f8e9d3b05",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_18543f448c.parquet",
+      "receipt_sha256": "df862e28e3e92c5e8af876285770274c09165de8d095195981294f7568878b3e",
+      "frame_index": 57,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "f4e1a1838798c42aeb8ef79c88b8e63a7c2e6375554a563abc22a5baa76fa6ad",
+        "normalized_sha256": "bc3b567dd29c2479a6108ca029e7bcdc638698275d7b2b25493effbf619354a8"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 133,
+      "valid_file_frames": 133
+    },
+    {
+      "rank": 3,
+      "id": "3264fdd71f",
+      "dataset_path": "data/diii_d_train/d3d_shot_3264fdd71f.parquet",
+      "order_sha256": "001da035c2fa507a9a24e11e34d374147d158d954e5c2cc8ee8b210e2da8ae11",
+      "sha256": "08c63a2158a04b2d139dcef8d853d3685769772dc8b77afff27488536e026a78",
+      "bytes": 16594039,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_3264fdd71f.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "16ebf912bc3f87b6a7dae8ad9728c996d83851be74685dec654c22e384d83427",
+          "finished_sha256": "14cadf60ca1ab3f450944e300c269bee4975e10c5e64a4dc1e47f88284a4f6d9",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_3264fdd71f.parquet",
+      "receipt_sha256": "559c3b3dc3f0c45a399793b06f2b31316be1d4346df5314c139306301c50e814",
+      "frame_index": 50,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "3ccb6ba036c887d74e80f15e4a5e6b3e1a20391ee2f81ad54cda432acedd57cb",
+        "normalized_sha256": "5584521af1b29a8cfd6e2111534019ab41d71f4e44cc9a3dc6200d235737861d"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 242,
+      "valid_file_frames": 242
+    },
+    {
+      "rank": 4,
+      "id": "4a6f5e4a94",
+      "dataset_path": "data/diii_d_train/d3d_shot_4a6f5e4a94.parquet",
+      "order_sha256": "0023f8d91de760cc80d9c6cfdb694debd929a4539b2a07b420ee87a3e7003145",
+      "sha256": "aae1e4f53bbe01b87a3be2cad83f7d70f533055e61be658e7a966adf6f4ea4c0",
+      "bytes": 8018530,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_4a6f5e4a94.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "cc13edb0672d70c7fea88c035af47994f7c4c3e41adaf35b77921a1b20893af6",
+          "finished_sha256": "406f783a1357f7689b6e5424c687b641b750b3a2035f029f64e1e32e84759aab",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_4a6f5e4a94.parquet",
+      "receipt_sha256": "05bce93f22ac6a3ebf5cc611d37bb9adb8224369f9963447c4a3ef704b037525",
+      "frame_index": 58,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "2ae1e835fb4ff88dca845271d905276d2009cd182580f1aa863ffad106f0338e",
+        "normalized_sha256": "da8823e99333eea9dc5e749f1dda36ef008b9e02ec627907243ec7f83e5a70c0"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 243,
+      "valid_file_frames": 243
+    },
+    {
+      "rank": 5,
+      "id": "a2ae4f3c2b",
+      "dataset_path": "data/diii_d_train/d3d_shot_a2ae4f3c2b.parquet",
+      "order_sha256": "0028e1cbdfbab86977075ca34dbcee2521a70d7dfc73771f0f6911cb6a65ea98",
+      "sha256": "589eae312781b41daea7d3e497880a898e584cd697b253a44b87f4346cefd502",
+      "bytes": 8973671,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_a2ae4f3c2b.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "e3a45d8f631eedf5b771bf788b512e591ed0c5e691199e355420c271940bf010",
+          "finished_sha256": "2297a1b19e2b7a9f183158b5cb5f258c0443743e1b8b2d6b2730f7a5e228b92f",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_a2ae4f3c2b.parquet",
+      "receipt_sha256": "e30451eecee2e49ecfb167db2e6b302bd87e1f23cb532ebafa2e68c4d1cf162e",
+      "frame_index": 55,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "f1b5ee53ad46fe7358f31ee9680302da0ea0ef8256bc70b53eb8ad6691560e8e",
+        "normalized_sha256": "230b346808f0442c394452d8b7c1b043a2e810e399d004043c3a227b106cc050"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 283,
+      "valid_file_frames": 283
+    },
+    {
+      "rank": 6,
+      "id": "ec506ffd29",
+      "dataset_path": "data/diii_d_train/d3d_shot_ec506ffd29.parquet",
+      "order_sha256": "003964998501bc401abd189bf78f670677e70b9dac4a75915a0fbde4d5be4dd0",
+      "sha256": "fa60e6829dc0027b1373fa72dd9aa7d004fecd571bdc22e952dc2a3400f6b93f",
+      "bytes": 15031883,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_ec506ffd29.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "eff42d9b58eb66e2bac84298dee817e53240e65e6b4743139f80acd4b5bafbc9",
+          "finished_sha256": "7121ab40b2d5961087fafb083ce36033e46de803195fd791859172eda30258b0",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_ec506ffd29.parquet",
+      "receipt_sha256": "44c22fcead78228fef5b1c20a1e76d05e31feac87dfa61abdf4335bbc2a36a4a",
+      "frame_index": 45,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "110ff18fe61d230f4b837430a38101c5ae826e1cfd9c3ac81cec27d682e7bdcc",
+        "normalized_sha256": "ff7179f0393d3b197695449b57db5fc4c3f0ae1be904db43565536534277d8c6"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 209,
+      "valid_file_frames": 209
+    },
+    {
+      "rank": 7,
+      "id": "7ce879f1b3",
+      "dataset_path": "data/diii_d_train/d3d_shot_7ce879f1b3.parquet",
+      "order_sha256": "004feb17b25054860896440b751e736e00de2d42fd33c1e0b437f3590fb0eecc",
+      "sha256": "eb85ef99506dcfc26c5039ada6a21d0a4a72c686ef3b4c66804a37b05afbeb90",
+      "bytes": 16460783,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_7ce879f1b3.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "e1545e8e418ff0cf877913fd5f23b89759c653e45209b367b76524f796722ff9",
+          "finished_sha256": "71a05770d6ea31db04bee9c5772c76cf88fc9cecb37b7874863ca40cd376e8c2",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_7ce879f1b3.parquet",
+      "receipt_sha256": "b6bcd75bd4825506526095af248932cbc361af2fe4a708aa7369eba2ad3795b1",
+      "frame_index": 52,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "31b4ab2a9adf9c5e0738db573ec698b622536968288c910e33ae2eb3b93e9d9f",
+        "normalized_sha256": "c4911e9e21649d49e52b99338827dce899dddda59d4f3a510a0d5d9257075a9a"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 240,
+      "valid_file_frames": 240
+    },
+    {
+      "rank": 8,
+      "id": "70481becc0",
+      "dataset_path": "data/diii_d_train/d3d_shot_70481becc0.parquet",
+      "order_sha256": "005bdc8c16d32887601faa7f4acee5bdb1f8373db055fb341466ad45422543f4",
+      "sha256": "59ebaeada61a0d161f01b99f61865cf279f88d00809c4fbdcffee293f42a5531",
+      "bytes": 11925422,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_70481becc0.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "790d1b98fb5e13226ee42c968935ff0f50bf7514944278315cc27d6a3e5ca317",
+          "finished_sha256": "e8bf16919da3431a6a654b2200b123ced48ad795044369ba6f8408f803e2abfb",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_70481becc0.parquet",
+      "receipt_sha256": "d68ca6ade31203ec860ef34a84e609a528eb796e46b3372a149bb6fdd9df1ee9",
+      "frame_index": 60,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "1d9697dc5431b874396cea5b80198d42015316dfe23a771370584d4707467d48",
+        "normalized_sha256": "42c657b5cd1e7f31c9a21f5bcdcd67f10cee260e159aac574d0a16a0c3162f6e"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 76,
+      "valid_file_frames": 76
+    },
+    {
+      "rank": 9,
+      "id": "e310d360a8",
+      "dataset_path": "data/diii_d_train/d3d_shot_e310d360a8.parquet",
+      "order_sha256": "0069e86bf69271ff1900d52ada59f84b3ffa1befd8c1549c3c024d79d97cece4",
+      "sha256": "1509c2f2a3b7cc1d69903b0de8e7722375908e1f9e87f6e361e8b3f3fd5d17e0",
+      "bytes": 16859492,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_e310d360a8.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "2a8e1220134ad0fb2773bc5879a2fc524785103fb104b570d00f25f71cd48f65",
+          "finished_sha256": "e720c4e1b9d144c86c8a6e35293df3c114513e67afecc2ebd3dd9db712fb4ee3",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_e310d360a8.parquet",
+      "receipt_sha256": "96ef6e112d9ddbf9d955063216c2f74a33ee25357f36131d6a1c7d48bb0fa6eb",
+      "frame_index": 58,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "979bcdcca77ef48a445080cd9feaa835b5e54863977ac8ff2329adc865fc0491",
+        "normalized_sha256": "feeb6a209af29d7a15aca77a2e0010115d659faa45765d85b6b7c3b13ed8707c"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 273,
+      "valid_file_frames": 273
+    },
+    {
+      "rank": 10,
+      "id": "b4de2f7427",
+      "dataset_path": "data/diii_d_train/d3d_shot_b4de2f7427.parquet",
+      "order_sha256": "0073a51af706fb454852c03529bee803a85c39d4a8c7e6771396f9a224e38e22",
+      "sha256": "c6ac63749d6b91a59a73106df9d2204d3adcf884dd4f16801f97a0ac183ff873",
+      "bytes": 15147248,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_b4de2f7427.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "b6397709abdebc8356c8d39491460aed3d79bb95339878afcbe19fd32f9ba261",
+          "finished_sha256": "01ca5aa4ae65410fc46a674b39c81166ad98b0fec61837c563b01798dd7c0dd9",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_b4de2f7427.parquet",
+      "receipt_sha256": "2045786099a2ae72258c99e4dfb7c7e72af3811adbd56ac578d3502e4f49f7fe",
+      "frame_index": 58,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "f0145b2b6a1cba0a1cd74e071ba231a3103cb88941df2861f6a1fe737baddbfc",
+        "normalized_sha256": "0dffb722056af78b6782a2576452b0f9e94ba8b013a8ccad3c270d874e48a098"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 202,
+      "valid_file_frames": 202
+    },
+    {
+      "rank": 11,
+      "id": "5d7f95a730",
+      "dataset_path": "data/diii_d_train/d3d_shot_5d7f95a730.parquet",
+      "order_sha256": "007c8ff0a28dc9efa572f3aa4b1d4fa746fcdd5fe27f3ba210de369c0e650ad7",
+      "sha256": "c82127337c93cb0a020b08e82f6ed12f2bf51d189b6d5e1c1494ab6f2761a3c9",
+      "bytes": 17486450,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_5d7f95a730.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "3690bcefc995409f985cda296fbd4faf1f1b2c6aebceeea746d84968c8ec08cb",
+          "finished_sha256": "5e4eed7a3b1ad98a12e8d47d03c47a2e14fd58a08148d37c195957968755933f",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_5d7f95a730.parquet",
+      "receipt_sha256": "fa10985ce1dc02907f312864684a9d4b1ebf674fb125a9dc6647d22865520c75",
+      "frame_index": 55,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "fc2ddbc2a34b7b0ebdbe989b01ec111f27874c7e70f24bf6bddef85c885d5d18",
+        "normalized_sha256": "9b166af17fc9ec419a3aad19e3fbae23dbb0255cac55492d4ca498a6bcc42f85"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 285,
+      "valid_file_frames": 285
+    },
+    {
+      "rank": 12,
+      "id": "79351cc24e",
+      "dataset_path": "data/diii_d_train/d3d_shot_79351cc24e.parquet",
+      "order_sha256": "008893afac7fa58c77636c353058df162d8bc6099da512befbe1f90eaba1c433",
+      "sha256": "88622a5dfb93d0f222c62d962527821a89437eaa4cce305998175606b2bf86de",
+      "bytes": 16386983,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_79351cc24e.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "3c32980e41a76b164c9a7f80956d2cd962f6d30b2d7b0b9b475314a480689140",
+          "finished_sha256": "d44fad5b19b8d958671326c69d5388d8bf430ca15a4a1e0d8dea45530d212a1f",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_79351cc24e.parquet",
+      "receipt_sha256": "3a87d75f9994260d710caf7567dbbf27cdb755dd05f4a5c60d139d827e871409",
+      "frame_index": 49,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "7f1e534c38b5bc942172bcbc413ee562a5913645439c36ec673f8c1d1705c5cd",
+        "normalized_sha256": "c5435e24fd026c011770041588982ca44a07380f6b070e73975ba36b65d7e232"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 216,
+      "valid_file_frames": 216
+    },
+    {
+      "rank": 13,
+      "id": "3b74c53220",
+      "dataset_path": "data/diii_d_train/d3d_shot_3b74c53220.parquet",
+      "order_sha256": "00910063105831fc993de8dd02e7d89bbc9e5a174158b62986c0f5360d301be9",
+      "sha256": "7f2a27647810f2ff22439ab81994ed33ee52c758c9e40e149476b3ec7d035003",
+      "bytes": 8744740,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_3b74c53220.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "97e378d9de496ff26d0b2bad9233ab94f00bb373fd7c8a91fee4720f8ca624b5",
+          "finished_sha256": "ea672b43e26e4d47244991f1e0deb484c7a2a9b6c1020fb2cfa2791661395a91",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_3b74c53220.parquet",
+      "receipt_sha256": "a97063224cb0854d3510fc1112dd7c71e6d998f1c08a381da46861d0abce7120",
+      "frame_index": 56,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "38b714598a6cbcc60478a306b3821250b86a567537c34eeaafb326dda8b26e33",
+        "normalized_sha256": "7ca1330fe26ce9b99a06e1eaf9447113db4dca3aaca95e528f2ea15a42e94c85"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 292,
+      "valid_file_frames": 292
+    },
+    {
+      "rank": 14,
+      "id": "515cd2d507",
+      "dataset_path": "data/diii_d_train/d3d_shot_515cd2d507.parquet",
+      "order_sha256": "00a1837b2439ff4f1eb101ba8e286123cd2d57fc052dd0b4de72686aa1d43934",
+      "sha256": "3b21cad025a8fe2cf3f1937e479456459cad3417146568c08d891143653fa17a",
+      "bytes": 8653724,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_515cd2d507.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "1e6302b8dc880099cbcce14148930776e49b48314e8eabf434df0679def42fb0",
+          "finished_sha256": "d95c2cf7c7e4555f6f4f81020e566dd1b33cee8c2a9509dc814964a405bf8b71",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_515cd2d507.parquet",
+      "receipt_sha256": "1c40427888568d0ad298d3c8436b063a5e9a08d94b102329098815688c8ce375",
+      "frame_index": 55,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "9bcef4176976540a008d81792fb9133eef16f689b99824507d989d91ddfa51b4",
+        "normalized_sha256": "74d89801649532539d067ae3a6c44f3b3dc1cd6b137cc7d5bab15165b3ea32ac"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 284,
+      "valid_file_frames": 284
+    },
+    {
+      "rank": 15,
+      "id": "1255ab8051",
+      "dataset_path": "data/diii_d_train/d3d_shot_1255ab8051.parquet",
+      "order_sha256": "00a3db79f0e1b097c2e6bf30fdfcf6f8826c3ccf259a8554c9582a160f4d4816",
+      "sha256": "1e0df0a63d32e732fc8e9b98739b5b028154d463171c9b83d84864d528a4d9b0",
+      "bytes": 16501916,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_1255ab8051.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "dc8904b8d1cecd6a4d54fa39860f0f943d074d95d5c31d83df1982accdbf8e32",
+          "finished_sha256": "a746c6e889419c46fbf39dff7a3b60e1243232f6773de5905dd1979dcc53f142",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_1255ab8051.parquet",
+      "receipt_sha256": "7a676186cd32b59c581b648e6697b8c349bce7932c7081433714f62726d8f2e2",
+      "frame_index": 52,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "69a92ebc6a50006f15582a42bc55891c209150a6c57b2b25cef230aff103cd88",
+        "normalized_sha256": "c6664a653fdf6a5710cf9d0e47c8ad447a1517efe2b50ab1ed47e8fd6d616c96"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 243,
+      "valid_file_frames": 243
+    },
+    {
+      "rank": 16,
+      "id": "0af2e6f616",
+      "dataset_path": "data/diii_d_train/d3d_shot_0af2e6f616.parquet",
+      "order_sha256": "00a998132dee58e9a8726e54534e3759372e2d8116705b23f68c637a734fba92",
+      "sha256": "c03b6f6d68c68880eb9d8cdfbee0ec42e4851ba91b20f6fc669541b04f887d1b",
+      "bytes": 16452818,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_0af2e6f616.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "055cabdc08008b0e70367709d801effb0115ba05cfd2ae228574938ffd298de3",
+          "finished_sha256": "96bada7e28d9d54dee3bc914436b4d4e6f5bca94b98cdef9fcd1b3793b163ce0",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_0af2e6f616.parquet",
+      "receipt_sha256": "3ea0f4537ab221015176fecffef9f5fcedccb41480a4b5255a9864346db9b21e",
+      "frame_index": 49,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "acfeda98d87470be09d60d80bd797defaf294692979ef19d594dcc23026f6a45",
+        "normalized_sha256": "c42ac930c4181367999074a855927232a07d5cdefe40706cf73bfe41f914ce72"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 228,
+      "valid_file_frames": 228
+    },
+    {
+      "rank": 17,
+      "id": "d880609264",
+      "dataset_path": "data/diii_d_train/d3d_shot_d880609264.parquet",
+      "order_sha256": "00c96783b5ebbcd22361c856ac3c4078fb448386d3826055d2c0c89a65368316",
+      "sha256": "ddde3c7dfbd4034ef61e2142b787a2e4c435e4f33d119851626277224e601cd3",
+      "bytes": 16574482,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_d880609264.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "eca6200bcb0f2af0bd00ebde609d959323ff01d671365485afc0a024199a568c",
+          "finished_sha256": "4aceff03045ce20237eacf42544a1073b1a8f7d5b3f095447eea600b05e4fa19",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_d880609264.parquet",
+      "receipt_sha256": "7992e330263a67dc8cbd2b10b9cf3606c991514f4f510c67fa3e50ae7f97a797",
+      "frame_index": 62,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "a8f80928bd1d4dba173942b0d8266012c9e56003b23684d5fb52c3e9f836377b",
+        "normalized_sha256": "915b17397a9ce3afbf5456c01a1cd294d4c5432edd1ddea1bf50955cf1136b8b"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 247,
+      "valid_file_frames": 247
+    },
+    {
+      "rank": 18,
+      "id": "0dc1392ee1",
+      "dataset_path": "data/diii_d_train/d3d_shot_0dc1392ee1.parquet",
+      "order_sha256": "00cb1950100cdcc74a95383a2a53db88e5306993877299ae8f960990d48ab20e",
+      "sha256": "1e20df99c6c5ca2fef88392a053681b568447037462eb5f6af74efdb0f76eb48",
+      "bytes": 16621193,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_0dc1392ee1.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "0ae8b0509c8bd9f5772bb535deb0804e8d167bf7e9c9e7eef4329e522027d382",
+          "finished_sha256": "208de42a342108deb6e5a61a6a1786a5a626b66bf4960254cf4b7bacfa0dadd0",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_0dc1392ee1.parquet",
+      "receipt_sha256": "df50f8efbe0bb0476642310a281104fa5b99c6993ec510a7d30997707efe67e0",
+      "frame_index": 54,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "0ad9cc5fb9bff60bfcffae534f179e58e9b305686b2ed3cf48ac104560f5f78f",
+        "normalized_sha256": "7910ec289f44ce3bb20d91fc70e16582bc77691dd3c0fee1abd6ff8c78d268a4"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 237,
+      "valid_file_frames": 237
+    },
+    {
+      "rank": 19,
+      "id": "249a1dcd12",
+      "dataset_path": "data/diii_d_train/d3d_shot_249a1dcd12.parquet",
+      "order_sha256": "00d1341bfb1f3da080515108e10eef072aa785c37237e6e57ef0b07ff671211c",
+      "sha256": "b843851592fe7831f0732e0d8420f017005f499514a12da5730f162126afe6f3",
+      "bytes": 17136953,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_249a1dcd12.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "0e2e4d58b4403ccf670f171af7f43b08a7fd21dfda20ed91165251c1eb5c486c",
+          "finished_sha256": "10a7e07be1000682cf331903f32c0ee61b473559c4a930c270948c9aaa592b00",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_249a1dcd12.parquet",
+      "receipt_sha256": "c3264462fd4391e57ac4e68ecaf47fe13a2a00652f2e854247882395f282ae6a",
+      "frame_index": 58,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "28374ad6d7c366cf9cc9b7b57788a76c74f3043937826c5e1d3d5fa399123bd6",
+        "normalized_sha256": "0cb535be798c021a2515edd74f966242d3883bc172efe880d1784f14a26ddc46"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 288,
+      "valid_file_frames": 288
+    },
+    {
+      "rank": 20,
+      "id": "8d228881e6",
+      "dataset_path": "data/diii_d_train/d3d_shot_8d228881e6.parquet",
+      "order_sha256": "00d2da42c63287df456bc98da05b7ba424a5d7f03308df6f81b00133c8000e16",
+      "sha256": "5e80cfcf2b5c5ac7d4d3c0021feabf1c9ca6664ff1e5019465d83df2f3409887",
+      "bytes": 16108450,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_8d228881e6.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "474d6c95aaae4fd66ecad7f4a113ed35346de6c139de14ad839f2fadd2d0cf7a",
+          "finished_sha256": "66b6c176514747d3a7a27a0f78b4560484cf5d2ea5763587b90d4ec4c7aba29a",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_8d228881e6.parquet",
+      "receipt_sha256": "63adc5f3682561487b85a688909c11b2cbbbf9d6d552a21b24ffcf1ce97ced84",
+      "frame_index": 61,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "97d1791935fb29e09cdbe62e81a3aca4c3ec0976ca57aeadf67f1fe3624faf7f",
+        "normalized_sha256": "70d696ea4796ac69f9ddc1c5ba57e29b45c3c5268c4bbbcf1639dbdb8ec9c92d"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 246,
+      "valid_file_frames": 246
+    },
+    {
+      "rank": 21,
+      "id": "fe773b166f",
+      "dataset_path": "data/diii_d_train/d3d_shot_fe773b166f.parquet",
+      "order_sha256": "0105cbaa06fa9244686feb42c9e65a80cea8bbec97f9f6c10fc2ba22d6eb5ece",
+      "sha256": "a5b09a0d4f64e92e118658ab7572812a59e32c70c7f5b9eb928495f5ed0d3bb9",
+      "bytes": 12606684,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_fe773b166f.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "974db242a7d751584e974e366446d7b1126e025494bdea1823c033e4b7dbf3e6",
+          "finished_sha256": "8e8e10faddaba0d3b4f9aea84078a52355e585e36ee49e4d34e108d258e5600d",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_fe773b166f.parquet",
+      "receipt_sha256": "5d5fe4879bc43e7963f20552115b5998186b386d999d35dc2d9cbc5c75d29b97",
+      "frame_index": 60,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "1a5bbc4ab42b4b25b6c9b650e138b71d86059e7f91ef3dc06cb6504efe91b2c6",
+        "normalized_sha256": "a4decdc134adebbb36d62ced9c4f0888a357aff640c1003507085b72f4825ca6"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 93,
+      "valid_file_frames": 93
+    },
+    {
+      "rank": 22,
+      "id": "83814d2061",
+      "dataset_path": "data/diii_d_train/d3d_shot_83814d2061.parquet",
+      "order_sha256": "012d27af55b14398a50fb91d33c85817acd309a9d2620c2ca2751b718fa88944",
+      "sha256": "8bb842d76ed8431ebe8fae9dfafe322ece57a14b4a61bb825ab77919f808bd3c",
+      "bytes": 8637068,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_83814d2061.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "e1a2181506a64a172992fda0bed208d64ebe8bc2eddf169c8515cd7eda052cf5",
+          "finished_sha256": "b0081086cf763fbff6916cf9dd93d2ba69a9a4e82de68a3b2ac3b5f2eed835f5",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_83814d2061.parquet",
+      "receipt_sha256": "62c439eae29d5159f92591cd02fb65d53805ae4e723ea82302a9279156e5916e",
+      "frame_index": 60,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "49d80c39741252b3e2ba22f23df214e70474665cf0f11d14e4a13afdf49c5a66",
+        "normalized_sha256": "c6b4f0050dba01636741c0ea051e75db17a73a307e1878612f7b72e778cfe931"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 296,
+      "valid_file_frames": 296
+    },
+    {
+      "rank": 23,
+      "id": "19b18793d2",
+      "dataset_path": "data/diii_d_train/d3d_shot_19b18793d2.parquet",
+      "order_sha256": "013308daaea43b8397400b80155f7fead7be4ce8f713e33f432023ddf4a06649",
+      "sha256": "ae8d5c73a730098266fe72abcdc7f244f644851bdddd1a60148a74c7d5b9d39f",
+      "bytes": 17051806,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_19b18793d2.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "2002407a5f88ceae5fd0cd69722381df086c608116c213192c4ae6995ff314c6",
+          "finished_sha256": "7ba6b2a7f92a976fcc4b3c6998c0c58998e3a8b09d8e072ed3e60f4b849a9d25",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_19b18793d2.parquet",
+      "receipt_sha256": "be8fcf50bf76bd8585cf46dc3db07121fb1bed9b8887befbcce7cd3d9be32df8",
+      "status": "missing_time",
+      "reason": "found 0 exact frames at 1400 ms",
+      "exact_frame_count": 0,
+      "file_frame_count": 277,
+      "valid_file_frames": 277
+    },
+    {
+      "rank": 24,
+      "id": "f317e77cf7",
+      "dataset_path": "data/diii_d_train/d3d_shot_f317e77cf7.parquet",
+      "order_sha256": "013b807e61738f50c2d01c2aa1d5389074dcc54825641fc60db3cae88704b399",
+      "sha256": "d38a1eea3ccd7b60ec1f36c990cee96607423c38ade506ffe58ae406500f2695",
+      "bytes": 17314976,
+      "url": "https://huggingface.co/datasets/Sophelio/fusion-equilibrium-challenge/resolve/1e280905b85f2a6fdde7e06fca8cf3a1edf447cb/data/diii_d_train/d3d_shot_f317e77cf7.parquet",
+      "time_ms": 1400.0,
+      "attempts": [
+        {
+          "started_sha256": "86d9d60fbea23d15f50e937005417fc890b267ee885f7cd458213fa3c151bc2a",
+          "finished_sha256": "18cd2b26fa0194d2707d246df037da0ca754d381d3c4a68d69c1923aa494f940",
+          "error": null
+        }
+      ],
+      "path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_f317e77cf7.parquet",
+      "receipt_sha256": "80148cafc4d78e8025864cafb6e94142a824d2dc263059c40e538d4e9783612a",
+      "frame_index": 60,
+      "fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "f3f265a51f88a3bdbb9354c7ebd54f84ad0ee90e63182343826b16a8b68134cd",
+        "normalized_sha256": "50ea53b9fc6f8edeb22f2fa4845c1ceab56c0aca63753993616af864f03e9eaf"
+      },
+      "duplicate_matches": {},
+      "status": "ready",
+      "exact_frame_count": 1,
+      "file_frame_count": 245,
+      "valid_file_frames": 245
+    }
+  ]
+}
