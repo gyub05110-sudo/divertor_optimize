@@ -1,0 +1,167 @@
+{
+  "schema": "nf-stage4-independent-archive-verification.v1",
+  "source_study": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109",
+  "source_read": "All source files were re-hashed, excluding only runtime/. Both archive manifests matched those paths, sizes and SHA-256 values. An independent Python standard-library decoder checked each split ZIP volume, member block and reconstructed logical file. The copied verify CLIs also passed under python -I -B -S outside the repository with pinned manifest hashes.",
+  "inventory_sha256": "3c3f62b52a12e3b2255256ffe586a209c77c2d3cc594a550abd23ee0548232c0",
+  "source_files": 3879,
+  "unique_source_sha256": 3273,
+  "source_logical_bytes": 1970456502,
+  "external_in_compact": {
+    "boundary.npz": 277,
+    "donors.csv.gz": 277,
+    "geometry.csv": 277,
+    "profile.csv.gz": 277,
+    ".parquet": 24
+  },
+  "bundles": {
+    "compact": {
+      "path": "evidence-compact",
+      "manifest_sha256": "6854f3ad49e1ac130828cd985eef09f950ff5e33c5d3b2be80037bb82829bf8f",
+      "payload_manifest_sha256": "ec5c0a6f681b3b3c799cb25c850db640c960f227826c284758f0ea77543bb209",
+      "stored_files": 2747,
+      "stored_unique_sha256": 2482,
+      "stored_logical_bytes": 39057989,
+      "unique_blocks": 2481,
+      "bundle_bytes": 10507912,
+      "volume_count": 1,
+      "volume_bytes": 8479099,
+      "volumes": {
+        "evidence-0001.zip": {
+          "bytes": 8479099,
+          "sha256": "546b8a43aaf11eb16b1e76e5579a6eba0f3d7ad8d91282faf25ffd973dea28f0"
+        }
+      }
+    },
+    "full": {
+      "path": "D:\\DivertorOptimization\\exports\\nf-stage4-20261109-full",
+      "manifest_sha256": "2bd0c3f5177a8207253555db1800251023d68b44d44f1a5cea862ad34afd9e1f",
+      "payload_manifest_sha256": "6a6b8a14d139df72065f348d1a2f6c99deb26d72e8de87b473a496f080237e2b",
+      "stored_files": 3879,
+      "stored_unique_sha256": 3273,
+      "stored_logical_bytes": 1970456502,
+      "unique_blocks": 3342,
+      "bundle_bytes": 1276036943,
+      "volume_count": 29,
+      "volume_bytes": 1273467358,
+      "volumes": {
+        "evidence-0001.zip": {
+          "bytes": 43575252,
+          "sha256": "8189ccbd3cedbdb25fb01a66fd055e137c46d0a0b8397b95183fe835ad0d6e03"
+        },
+        "evidence-0002.zip": {
+          "bytes": 45709965,
+          "sha256": "7d4d94a92f7c5db0035cbe086d6e5b3beb1ef6332350451810abe639bd7cd10b"
+        },
+        "evidence-0003.zip": {
+          "bytes": 46262780,
+          "sha256": "6c95af8467afe4bd383a4ef3a8f434aebf157569a7843eb7a79520e3660c4922"
+        },
+        "evidence-0004.zip": {
+          "bytes": 45068021,
+          "sha256": "653a0dd4c7cd2e28bdad96a175eedab8fde82f02bccfd127ee25443efb5e0704"
+        },
+        "evidence-0005.zip": {
+          "bytes": 44762721,
+          "sha256": "12ca561a5deaa97b4464c6d5990288cf3657e83f838418d778868f67ed52ef40"
+        },
+        "evidence-0006.zip": {
+          "bytes": 44946799,
+          "sha256": "6ae688f5e9cb3bcac8fe628e9837a7f3c9ecac812f41541e1cdee13489db7777"
+        },
+        "evidence-0007.zip": {
+          "bytes": 43296307,
+          "sha256": "f71003aacb1f965ef91fb71611cb05276b783832abd3ebc3932cd82792dcbeb9"
+        },
+        "evidence-0008.zip": {
+          "bytes": 45923172,
+          "sha256": "cfe9b9dbfdf8f39856966bebc25b16174bc63a19fe6b799b0e56af6eae540fa6"
+        },
+        "evidence-0009.zip": {
+          "bytes": 43588648,
+          "sha256": "5db8858276e3466e3bcc8a88424a6d85377caecf8153ff04c7aeb24b4b4c45aa"
+        },
+        "evidence-0010.zip": {
+          "bytes": 43552257,
+          "sha256": "7f9b339d011040ec5cb66966e3049c2d6bb5f05f5e8ea14d878b98891b4c911d"
+        },
+        "evidence-0011.zip": {
+          "bytes": 43509180,
+          "sha256": "735a16d59e4e6c09c0de1fa9ba6acf2261ce54479eb93e81fc908ac726b34079"
+        },
+        "evidence-0012.zip": {
+          "bytes": 43350971,
+          "sha256": "be41b91acdde00e61d315a8fb79ac4535f837788c5159e9b58413f5de9c5f511"
+        },
+        "evidence-0013.zip": {
+          "bytes": 43463780,
+          "sha256": "512178732c076151219b771a3e2f242b462f2c286c08395d1d9e60133814db5c"
+        },
+        "evidence-0014.zip": {
+          "bytes": 45422273,
+          "sha256": "3b728a223e164623c5baf77472cb2851b18bf62442f1b214d30781e58d9fa4cb"
+        },
+        "evidence-0015.zip": {
+          "bytes": 45836877,
+          "sha256": "7f0213f9f9c09bd258ceda09364318bb0f1147344a654a9df76494683d56206d"
+        },
+        "evidence-0016.zip": {
+          "bytes": 46130084,
+          "sha256": "a45f18d4c0d2e251244f93b25ee8492221c4d22995b7870c2f4c0f5b010a0baa"
+        },
+        "evidence-0017.zip": {
+          "bytes": 47035063,
+          "sha256": "0de5a9f99cd53453887357be0f76d77a41cd3cf07a46f01a4e9572f49970419c"
+        },
+        "evidence-0018.zip": {
+          "bytes": 46194803,
+          "sha256": "5f45dc58de7f7df900e53276bc0d408ee7b7ed98a523d6db752f6f2c7ee455e6"
+        },
+        "evidence-0019.zip": {
+          "bytes": 47150408,
+          "sha256": "f4c03ba760d89f2bdf0229ed0073471c309a9bc78199b50fdc21559a9511a1ca"
+        },
+        "evidence-0020.zip": {
+          "bytes": 44393271,
+          "sha256": "4bd349d9753a142e71440e3f6afb3d9dc3bd8f47e0c4524720717bc289206616"
+        },
+        "evidence-0021.zip": {
+          "bytes": 46847130,
+          "sha256": "ea6cd440d0e9ca8030229d138450b750d5c6e8f83c4e2c72fb55d41c16c9f915"
+        },
+        "evidence-0022.zip": {
+          "bytes": 45935965,
+          "sha256": "aab84f91918655f86ff9bae4c1ac330a0d77ed539a5c52ca9434e19ce4a76019"
+        },
+        "evidence-0023.zip": {
+          "bytes": 45455311,
+          "sha256": "64969dddec938ee206676cbdc1171aaf4928b36ddc093106cbd53759bafe1fab"
+        },
+        "evidence-0024.zip": {
+          "bytes": 46109789,
+          "sha256": "86474bc355c8e4e0215870138aec27b9cc115a4a285a36a1d6551d120f9df4bf"
+        },
+        "evidence-0025.zip": {
+          "bytes": 46352616,
+          "sha256": "7482c90e4bc07657dca91d04b0674c05ea8f776eec2e45ce55a64f0c96292546"
+        },
+        "evidence-0026.zip": {
+          "bytes": 45902159,
+          "sha256": "e9a73e42e1fd442f51890c47fd13ce876104b41c6a0c7a46492cbd7b3719649c"
+        },
+        "evidence-0027.zip": {
+          "bytes": 45578574,
+          "sha256": "3e309cc08fd4da9d4f8b45fcc20c34e801a5329ffcfe78b60bd6d4463912280c"
+        },
+        "evidence-0028.zip": {
+          "bytes": 45797561,
+          "sha256": "df4aaab3265daea0f8d03fc57108a125720fcf556cd43b72bfb81a8baf894b24"
+        },
+        "evidence-0029.zip": {
+          "bytes": 6315621,
+          "sha256": "c3e8aa43b1cf6ad67bfc3614388b5525f5177d89166f2f640c9280aebd4a874d"
+        }
+      }
+    }
+  },
+  "verified_utc": "2026-11-09T19:32:28.346827+00:00"
+}

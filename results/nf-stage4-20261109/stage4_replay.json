@@ -1,0 +1,1905 @@
+{
+  "schema": "nf-stage4-replay-summary.v1",
+  "complete": true,
+  "search_report_sha256": "ea51d468e649f5e1cdef8015167c47c923564b0d958da37b1aca5df3e3520b29",
+  "cases": [
+    {
+      "case_id": "180828b27d",
+      "report_sha256": "9b7bc7a3c6fa5344f4650cbf4917890de8ded23fb2e0cd222359ace75bb2b10b",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "18543f448c",
+      "report_sha256": "d6a8b53753d75bde033beaed679b408f7dab5bcf6d682d07de38a50ac840b90c",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "3264fdd71f",
+      "report_sha256": "8ed7cdb8f08c667af2679b79712d1ce4b03675c3a9fa4534318cf126aa276377",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -12.574726624786644,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "1b8b3a756eaaae113f5ccebcd96aaf749e540db1ecbeb67a00c74a7602e706dd",
+              "q": 3.6885153186390807,
+              "A2_m2": 0.4049687582675933,
+              "baseline_q": 6.301715976189746,
+              "baseline_A2_m2": 0.29205651341266686,
+              "result_sha256": "d9711acd9fed2fc085c719f5421a0f6d24daf331263ee9b91888790fc8ca75f7"
+            },
+            "full": {
+              "id": "86b7c199599eba3dc92af28a7c5654362d5c400b41583261a4cd3aff989c8b21",
+              "q": 4.219049224826149,
+              "A2_m2": 0.373537523489034,
+              "baseline_q": 6.301715976189746,
+              "baseline_A2_m2": 0.29205651341266686,
+              "result_sha256": "90d4086f06d1baf5595ec1170f6584287c2e2763e2b77637bbcbf04069ec8830"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.301715976189746,
+              "baseline_A2_m2": 0.29205651341266686,
+              "candidates": {
+                "hotspot": {
+                  "id": "1b8b3a756eaaae113f5ccebcd96aaf749e540db1ecbeb67a00c74a7602e706dd",
+                  "q_native": 3.6885153186390807,
+                  "A2_m2": 0.4049687582675933,
+                  "eligible": true,
+                  "reduction_pct": 41.468080558126076
+                },
+                "full": {
+                  "id": "86b7c199599eba3dc92af28a7c5654362d5c400b41583261a4cd3aff989c8b21",
+                  "q_native": 4.219049224826149,
+                  "A2_m2": 0.373537523489034,
+                  "eligible": true,
+                  "reduction_pct": 33.04920055478056
+                }
+              },
+              "gap_pct": -12.574726624786644,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.301669416255136,
+              "baseline_A2_m2": 0.29221706685552884,
+              "candidates": {
+                "hotspot": {
+                  "id": "1b8b3a756eaaae113f5ccebcd96aaf749e540db1ecbeb67a00c74a7602e706dd",
+                  "q_native": 3.6886823464882115,
+                  "A2_m2": 0.40509698590860926,
+                  "eligible": true,
+                  "reduction_pct": 41.46499756122929
+                },
+                "full": {
+                  "id": "86b7c199599eba3dc92af28a7c5654362d5c400b41583261a4cd3aff989c8b21",
+                  "q_native": 4.219178099375954,
+                  "A2_m2": 0.3736788513973585,
+                  "eligible": true,
+                  "reduction_pct": 33.04666080241217
+                }
+              },
+              "gap_pct": -12.573438247752721,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.301185953462123,
+              "baseline_A2_m2": 0.29209222182779315,
+              "candidates": {
+                "hotspot": {
+                  "id": "1b8b3a756eaaae113f5ccebcd96aaf749e540db1ecbeb67a00c74a7602e706dd",
+                  "q_native": 3.688898444416525,
+                  "A2_m2": 0.4049628219658374,
+                  "eligible": true,
+                  "reduction_pct": 41.45707694295711
+                },
+                "full": {
+                  "id": "86b7c199599eba3dc92af28a7c5654362d5c400b41583261a4cd3aff989c8b21",
+                  "q_native": 4.219198852041781,
+                  "A2_m2": 0.3735495256650158,
+                  "eligible": true,
+                  "reduction_pct": 33.041194416368796
+                }
+              },
+              "gap_pct": -12.568746490074282,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-shelf",
+          "right": "floor-shelf",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-shelf"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "4a6f5e4a94",
+      "report_sha256": "06528d13a119a82abfe6b6cabadbccf3fa3ea76e847c252b6a2f22f281fd102b",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "a2ae4f3c2b",
+      "report_sha256": "1a52858f4401a6e6b5468f2da3078059d36102d19b928b5f290d626222c7d3e7",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "ec506ffd29",
+      "report_sha256": "ea95436568d7749926b90e8463407ccea61aba6a51d0695689402865ae5ff7a5",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-shelf",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "7ce879f1b3",
+      "report_sha256": "c7d50d09f67d3415e834601557fbb70584c2832edf1586e302a07431f8715e8e",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -10.936553846224307,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "7283ae4d72f729be694d6ac70001fc5c50b14852c9f1449586278abc60f8b8ca",
+              "q": 3.609598537822226,
+              "A2_m2": 0.4209065739682871,
+              "baseline_q": 6.108799683885179,
+              "baseline_A2_m2": 0.3008763902871683,
+              "result_sha256": "1c2c774cac2319c9588c12f239fc7107b1fb3b7db9cdbe98183e743f775ddb9c"
+            },
+            "full": {
+              "id": "4e9cfc86b7924ea3e2596b0e453aaba598dbb67ae0285733c4dfad7ba96b2aa8",
+              "q": 4.052839513519322,
+              "A2_m2": 0.38647245174335926,
+              "baseline_q": 6.108799683885179,
+              "baseline_A2_m2": 0.3008763902871683,
+              "result_sha256": "315d9aaea9f5d1682c5516ae792bf9b04dfc66ccac42a1f18bd4d073adfc5095"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.10879968388518,
+              "baseline_A2_m2": 0.3008763902871683,
+              "candidates": {
+                "hotspot": {
+                  "id": "7283ae4d72f729be694d6ac70001fc5c50b14852c9f1449586278abc60f8b8ca",
+                  "q_native": 3.609598537822226,
+                  "A2_m2": 0.4209065739682871,
+                  "eligible": true,
+                  "reduction_pct": 40.9114928527738
+                },
+                "full": {
+                  "id": "4e9cfc86b7924ea3e2596b0e453aaba598dbb67ae0285733c4dfad7ba96b2aa8",
+                  "q_native": 4.052839513519322,
+                  "A2_m2": 0.38647245174335926,
+                  "eligible": true,
+                  "reduction_pct": 33.655714326161586
+                }
+              },
+              "gap_pct": -10.936553846224307,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.108755700980938,
+              "baseline_A2_m2": 0.3010320761461049,
+              "candidates": {
+                "hotspot": {
+                  "id": "7283ae4d72f729be694d6ac70001fc5c50b14852c9f1449586278abc60f8b8ca",
+                  "q_native": 3.609793320918791,
+                  "A2_m2": 0.4210294789323748,
+                  "eligible": true,
+                  "reduction_pct": 40.907878828103506
+                },
+                "full": {
+                  "id": "4e9cfc86b7924ea3e2596b0e453aaba598dbb67ae0285733c4dfad7ba96b2aa8",
+                  "q_native": 4.05296991843126,
+                  "A2_m2": 0.3866085699175583,
+                  "eligible": true,
+                  "reduction_pct": 33.65310192744427
+                }
+              },
+              "gap_pct": -10.934613540976015,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.1077878445957365,
+              "baseline_A2_m2": 0.30092724328324827,
+              "candidates": {
+                "hotspot": {
+                  "id": "7283ae4d72f729be694d6ac70001fc5c50b14852c9f1449586278abc60f8b8ca",
+                  "q_native": 3.609727324348651,
+                  "A2_m2": 0.42088651893027873,
+                  "eligible": true,
+                  "reduction_pct": 40.899595464132034
+                },
+                "full": {
+                  "id": "4e9cfc86b7924ea3e2596b0e453aaba598dbb67ae0285733c4dfad7ba96b2aa8",
+                  "q_native": 4.053008936752652,
+                  "A2_m2": 0.38647100852728655,
+                  "eligible": true,
+                  "reduction_pct": 33.6419495916379
+                }
+              },
+              "gap_pct": -10.937099308721642,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-shelf",
+          "right": "floor-shelf",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-shelf"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "70481becc0",
+      "report_sha256": "4b64437534bb7a33e913b0b7e4ef904134c061b9c05faafa93a8a3f137c140b3",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -14.764350776816551,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+              "q": 2.238362072028793,
+              "A2_m2": 0.5599850385548518,
+              "baseline_q": 7.58139276921377,
+              "baseline_A2_m2": 0.24177120087712117,
+              "result_sha256": "f736e2b83e60f514d96a092de9f5b424e95588af9560bd5bfedd6556742fadc7"
+            },
+            "full": {
+              "id": "97ed0b0158ad624a8ba73422a010442bbcdf8d913ca30d21e8331fdbc252f447",
+              "q": 2.6260867282981586,
+              "A2_m2": 0.5437992057237815,
+              "baseline_q": 7.58139276921377,
+              "baseline_A2_m2": 0.24177120087712117,
+              "result_sha256": "cf95645a67fcf98c48efac1c70b0a7d5931fa58ccc3d0755d69884ad418af0cb"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 7.58139276921377,
+              "baseline_A2_m2": 0.24177120087712117,
+              "candidates": {
+                "hotspot": {
+                  "id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+                  "q_native": 2.238362072028793,
+                  "A2_m2": 0.5599850385548518,
+                  "eligible": true,
+                  "reduction_pct": 70.47558225556855
+                },
+                "full": {
+                  "id": "97ed0b0158ad624a8ba73422a010442bbcdf8d913ca30d21e8331fdbc252f447",
+                  "q_native": 2.6260867282981586,
+                  "A2_m2": 0.5437992057237815,
+                  "eligible": true,
+                  "reduction_pct": 65.36142093887985
+                }
+              },
+              "gap_pct": -14.764350776816551,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 7.581323518295682,
+              "baseline_A2_m2": 0.24193611832842754,
+              "candidates": {
+                "hotspot": {
+                  "id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+                  "q_native": 2.23854976749036,
+                  "A2_m2": 0.5600580297789602,
+                  "eligible": true,
+                  "reduction_pct": 70.47283680628898
+                },
+                "full": {
+                  "id": "97ed0b0158ad624a8ba73422a010442bbcdf8d913ca30d21e8331fdbc252f447",
+                  "q_native": 2.6262533190492627,
+                  "A2_m2": 0.543867717176396,
+                  "eligible": true,
+                  "reduction_pct": 65.35890715240633
+                }
+              },
+              "gap_pct": -14.762610626581,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 7.581469346059948,
+              "baseline_A2_m2": 0.24177786828603579,
+              "candidates": {
+                "hotspot": {
+                  "id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+                  "q_native": 2.2498255332731385,
+                  "A2_m2": 0.5592398147797832,
+                  "eligible": true,
+                  "reduction_pct": 70.32467677993895
+                },
+                "full": {
+                  "id": "97ed0b0158ad624a8ba73422a010442bbcdf8d913ca30d21e8331fdbc252f447",
+                  "q_native": 2.6320824901090827,
+                  "A2_m2": 0.5426481042087773,
+                  "eligible": true,
+                  "reduction_pct": 65.28268637692292
+                }
+              },
+              "gap_pct": -14.522985441087073,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": "floor-only",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-only"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "e310d360a8",
+      "report_sha256": "e6c9fbcf928427431abad0d63764216307bef49510a1734ae1d79c5a817842a2",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "b4de2f7427",
+      "report_sha256": "55e3a01f75be70423b905c6e032a57c368bc326859eb580566abd31695724830",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "5d7f95a730",
+      "report_sha256": "ed84eaf6486541a8fcde91125d4d11240137051d24bad57cf1d5d8a0e52e2fe4",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "both",
+          "timed_gap_pct": 6.197330430797443e-07,
+          "timed_practical": "within_1pct",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": "floor-shelf",
+          "trigger": false,
+          "timed_gap_pct": 7.589769259025277e-07,
+          "scorable": true,
+          "best_families": [
+            "floor-shelf"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "79351cc24e",
+      "report_sha256": "fc80e20bb91acd938186cd4dc1e37c10ebe4bd0999f3fc759f6144d319dff812",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-entry",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "3b74c53220",
+      "report_sha256": "a1140274d3d31fd98de277aa91e28a3239c62849d44d659b3b6fac19ba5732f3",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-shelf",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "515cd2d507",
+      "report_sha256": "b761d9f74b5903d23ceb073261b033f7cc9f6f1ea9aeb69984b432470acfbe01",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "1255ab8051",
+      "report_sha256": "eabd3dc167faca78334bebd55a37d3740e5edc5868ab1ae8c38d6627732ca3f6",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -11.165679191791709,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+              "q": 3.7464872265198803,
+              "A2_m2": 0.3988242476983761,
+              "baseline_q": 6.3130067399682375,
+              "baseline_A2_m2": 0.2916531293880302,
+              "result_sha256": "04a8a5636ce9cfe519ecbae45d829286b0cdf42df31b52c343e7a99e8743d184"
+            },
+            "full": {
+              "id": "5aba7513cb48fbb9e880af6bf87cb155e953da121f8004af6269e4c3aea8b816",
+              "q": 4.21738714545753,
+              "A2_m2": 0.37197930941963453,
+              "baseline_q": 6.3130067399682375,
+              "baseline_A2_m2": 0.2916531293880302,
+              "result_sha256": "3fa79f9c8dcb26db3c29b02ff741d5634a3d7b6b95d901220d95e1a2e3fe7ca5"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.3130067399682375,
+              "baseline_A2_m2": 0.2916531293880302,
+              "candidates": {
+                "hotspot": {
+                  "id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+                  "q_native": 3.7464872265198803,
+                  "A2_m2": 0.3988242476983761,
+                  "eligible": true,
+                  "reduction_pct": 40.65447130286558
+                },
+                "full": {
+                  "id": "5aba7513cb48fbb9e880af6bf87cb155e953da121f8004af6269e4c3aea8b816",
+                  "q_native": 4.21738714545753,
+                  "A2_m2": 0.37197930941963453,
+                  "eligible": true,
+                  "reduction_pct": 33.19526939901938
+                }
+              },
+              "gap_pct": -11.165679191791709,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.3129614846759,
+              "baseline_A2_m2": 0.29181427805056304,
+              "candidates": {
+                "hotspot": {
+                  "id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+                  "q_native": 3.7466642560435424,
+                  "A2_m2": 0.3989544253283594,
+                  "eligible": true,
+                  "reduction_pct": 40.65124165356932
+                },
+                "full": {
+                  "id": "5aba7513cb48fbb9e880af6bf87cb155e953da121f8004af6269e4c3aea8b816",
+                  "q_native": 4.21753960668957,
+                  "A2_m2": 0.3721209956540506,
+                  "eligible": true,
+                  "reduction_pct": 33.19237544966436
+                }
+              },
+              "gap_pct": -11.164693033330563,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 6.312748636002208,
+              "baseline_A2_m2": 0.2916644418743844,
+              "candidates": {
+                "hotspot": {
+                  "id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+                  "q_native": 3.7470414448527105,
+                  "A2_m2": 0.3987770990440167,
+                  "eligible": true,
+                  "reduction_pct": 40.64326554231899
+                },
+                "full": {
+                  "id": "5aba7513cb48fbb9e880af6bf87cb155e953da121f8004af6269e4c3aea8b816",
+                  "q_native": 4.217924162261276,
+                  "A2_m2": 0.3719467022854954,
+                  "eligible": true,
+                  "reduction_pct": 33.18403114918829
+                }
+              },
+              "gap_pct": -11.163849782356456,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-shelf",
+          "right": "floor-shelf",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-shelf"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "0af2e6f616",
+      "report_sha256": "c9cf54adc532be16b9173d6733c3fa877acb6ba598b6a63f035453e18b9dedb7",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "full",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": true,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "d880609264",
+      "report_sha256": "a6899d6f31db5de9ac8a2414e85ca9a13f70fa160eae1208233c973d1440a2e2",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -11.05231472023277,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+              "q": 2.277141593279343,
+              "A2_m2": 0.6681555791409657,
+              "baseline_q": 5.665110166055043,
+              "baseline_A2_m2": 0.3228416833909034,
+              "result_sha256": "055d974612f77370ce02930a226e8e9a8391aa8db6ed1f893227521404142e54"
+            },
+            "full": {
+              "id": "e729fbce0c9ac2b69a66509e0679fdfab7a2b99eff3e66b9770e13ea60646ad4",
+              "q": 2.5600908962577806,
+              "A2_m2": 0.7104744450036892,
+              "baseline_q": 5.665110166055043,
+              "baseline_A2_m2": 0.3228416833909034,
+              "result_sha256": "5903e0ee83101e0e0f4fef7a1409d187576c038cda2e1088e64bb6009d329251"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 5.665110166055043,
+              "baseline_A2_m2": 0.3228416833909034,
+              "candidates": {
+                "hotspot": {
+                  "id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+                  "q_native": 2.277141593279343,
+                  "A2_m2": 0.6681555791409657,
+                  "eligible": true,
+                  "reduction_pct": 59.804107483666925
+                },
+                "full": {
+                  "id": "e729fbce0c9ac2b69a66509e0679fdfab7a2b99eff3e66b9770e13ea60646ad4",
+                  "q_native": 2.5600908962577806,
+                  "A2_m2": 0.7104744450036892,
+                  "eligible": true,
+                  "reduction_pct": 54.80951259169377
+                }
+              },
+              "gap_pct": -11.05231472023277,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 5.665058815826881,
+              "baseline_A2_m2": 0.32295367020630045,
+              "candidates": {
+                "hotspot": {
+                  "id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+                  "q_native": 2.277227210981694,
+                  "A2_m2": 0.6681923171899129,
+                  "eligible": true,
+                  "reduction_pct": 59.80223180349618
+                },
+                "full": {
+                  "id": "e729fbce0c9ac2b69a66509e0679fdfab7a2b99eff3e66b9770e13ea60646ad4",
+                  "q_native": 2.5602385280065927,
+                  "A2_m2": 0.7105063395245209,
+                  "eligible": true,
+                  "reduction_pct": 54.80649696250512
+                }
+              },
+              "gap_pct": -11.0540996055259,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 5.6646383377259975,
+              "baseline_A2_m2": 0.3228638709531428,
+              "candidates": {
+                "hotspot": {
+                  "id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+                  "q_native": 2.280653647763245,
+                  "A2_m2": 0.6683996533593365,
+                  "eligible": true,
+                  "reduction_pct": 59.73875979735033
+                },
+                "full": {
+                  "id": "e729fbce0c9ac2b69a66509e0679fdfab7a2b99eff3e66b9770e13ea60646ad4",
+                  "q_native": 2.565405186117991,
+                  "A2_m2": 0.7098239194419285,
+                  "eligible": true,
+                  "reduction_pct": 54.711933345636275
+                }
+              },
+              "gap_pct": -11.099671112212738,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": "floor-only",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-only"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    },
+    {
+      "case_id": "0dc1392ee1",
+      "report_sha256": "26ee77dc54a4daf2b6bb1743579a3e5ad91832a29598350388bd0e0f190d99a5",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "249a1dcd12",
+      "report_sha256": "1b8c96b4c9f783473550c3e8aeac317f390767fce6a4add955556d0fbf1ca808",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "8d228881e6",
+      "report_sha256": "5e51b4cfffdbc1254ba065b2150d2860ba48fcb60e179fb09acb6f11a9a8bbd3",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "fe773b166f",
+      "report_sha256": "bbb248d7d1ffb1164457250fc0799a6bb28fb203180f382e6bae72981f45acea",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "constraint_excluded",
+            "floor-entry": "constraint_excluded",
+            "floor-shelf": "constraint_excluded",
+            "floor-connector": "constraint_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "constraint_excluded",
+        "full": "constraint_excluded",
+        "floor-only": "constraint_excluded",
+        "floor-entry": "constraint_excluded",
+        "floor-shelf": "constraint_excluded",
+        "floor-connector": "constraint_excluded"
+      }
+    },
+    {
+      "case_id": "83814d2061",
+      "report_sha256": "fa847408ea290221a75477e30c982837c96f6aba32ed21fb91275138f15abcf5",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "input_error",
+            "floor-entry": "input_error",
+            "floor-shelf": "input_error",
+            "floor-connector": "input_error"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "input_error",
+        "full": "input_error",
+        "floor-only": "input_error",
+        "floor-entry": "input_error",
+        "floor-shelf": "input_error",
+        "floor-connector": "input_error"
+      }
+    },
+    {
+      "case_id": "19b18793d2",
+      "report_sha256": "e20897d410eda26fe6e9c455d7f8132b9fca662a2efeabf2956378b391cede4c",
+      "trigger_count": 0,
+      "fixed_unique_geometry_count": 0,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": false,
+          "reasons": [],
+          "availability": "neither",
+          "timed_gap_pct": null,
+          "timed_practical": null,
+          "timed_left_5pct": false,
+          "timed_right_5pct": false,
+          "adjudicated": false
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": null,
+          "right": null,
+          "trigger": false,
+          "timed_gap_pct": null,
+          "scorable": false,
+          "best_families": [],
+          "forced_status": {
+            "floor-only": "registration_excluded",
+            "floor-entry": "registration_excluded",
+            "floor-shelf": "registration_excluded",
+            "floor-connector": "registration_excluded"
+          },
+          "forced_qualified_count": 0,
+          "abstained": null,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "registration_excluded",
+        "full": "registration_excluded",
+        "floor-only": "registration_excluded",
+        "floor-entry": "registration_excluded",
+        "floor-shelf": "registration_excluded",
+        "floor-connector": "registration_excluded"
+      }
+    },
+    {
+      "case_id": "f317e77cf7",
+      "report_sha256": "ef22cb779f2dc0abb4554ff71388c949cca443586bab6948e6a78e0b63bddf17",
+      "trigger_count": 1,
+      "fixed_unique_geometry_count": 2,
+      "comparisons": [
+        {
+          "contrast": "product",
+          "seed": 30713,
+          "left": "hotspot",
+          "right": "full",
+          "trigger": true,
+          "reasons": [
+            "absolute_gap_over_1pct"
+          ],
+          "availability": "both",
+          "timed_gap_pct": -2.7021649119706717,
+          "timed_practical": "auto_lower",
+          "timed_left_5pct": true,
+          "timed_right_5pct": true,
+          "native": {
+            "hotspot": {
+              "id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+              "q": 2.5780034411638173,
+              "A2_m2": 0.4848774208802781,
+              "baseline_q": 9.863530166955062,
+              "baseline_A2_m2": 0.18687308253424312,
+              "result_sha256": "03f1fa127472267cae265126716c330a015719a2fdba7a37863e647feeff8fc6"
+            },
+            "full": {
+              "id": "3f5d62a956d9e2da3a422971ceff6e5dfd3babb1f40f6f6c816a144a13decb46",
+              "q": 2.6496000027455824,
+              "A2_m2": 0.4497784925484038,
+              "baseline_q": 9.863530166955062,
+              "baseline_A2_m2": 0.18687308253424312,
+              "result_sha256": "a051c8138bfd34265c8a77b95d3a419292ca915441b919a6c490caffe7d71011"
+            }
+          },
+          "adjudicated": true,
+          "native_reproduction_relative_tolerance": 1e-09,
+          "native_reproduction": {
+            "hotspot": {
+              "candidate": true,
+              "baseline": true
+            },
+            "full": {
+              "candidate": true,
+              "baseline": true
+            }
+          },
+          "native_reproduction_passed": true,
+          "by_level": {
+            "cubic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 9.86353016695506,
+              "baseline_A2_m2": 0.18687308253424312,
+              "candidates": {
+                "hotspot": {
+                  "id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+                  "q_native": 2.5780034411638173,
+                  "A2_m2": 0.4848774208802781,
+                  "eligible": true,
+                  "reduction_pct": 73.86327818207845
+                },
+                "full": {
+                  "id": "3f5d62a956d9e2da3a422971ceff6e5dfd3babb1f40f6f6c816a144a13decb46",
+                  "q_native": 2.6496000027455824,
+                  "A2_m2": 0.4497784925484038,
+                  "eligible": true,
+                  "reduction_pct": 73.1374066090221
+                }
+              },
+              "gap_pct": -2.7021649119706717,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "cubic640": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 9.863440582926348,
+              "baseline_A2_m2": 0.1870844092928702,
+              "candidates": {
+                "hotspot": {
+                  "id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+                  "q_native": 2.578439891494754,
+                  "A2_m2": 0.4849587756837526,
+                  "eligible": true,
+                  "reduction_pct": 73.8586158671849
+                },
+                "full": {
+                  "id": "3f5d62a956d9e2da3a422971ceff6e5dfd3babb1f40f6f6c816a144a13decb46",
+                  "q_native": 2.650576840459413,
+                  "A2_m2": 0.4498614977684716,
+                  "eligible": true,
+                  "reduction_pct": 73.12725901094217
+                }
+              },
+              "gap_pct": -2.72155660094563,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            },
+            "quintic1280": {
+              "status": "measured",
+              "error": null,
+              "fixed_shelf_admissible": true,
+              "baseline_q": 9.864607393551708,
+              "baseline_A2_m2": 0.18683942940957904,
+              "candidates": {
+                "hotspot": {
+                  "id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+                  "q_native": 2.5838091113762265,
+                  "A2_m2": 0.4844408183740245,
+                  "eligible": true,
+                  "reduction_pct": 73.80727880700849
+                },
+                "full": {
+                  "id": "3f5d62a956d9e2da3a422971ceff6e5dfd3babb1f40f6f6c816a144a13decb46",
+                  "q_native": 2.6544621198473717,
+                  "A2_m2": 0.4494809666960506,
+                  "eligible": true,
+                  "reduction_pct": 73.0910515345746
+                }
+              },
+              "gap_pct": -2.661669493901373,
+              "sign": "left_lower",
+              "within_1pct": false,
+              "left_5pct": true,
+              "right_5pct": true
+            }
+          }
+        },
+        {
+          "contrast": "forced_family",
+          "seed": 30713,
+          "left": "floor-only",
+          "right": "floor-only",
+          "trigger": false,
+          "timed_gap_pct": 0.0,
+          "scorable": true,
+          "best_families": [
+            "floor-only"
+          ],
+          "forced_status": {
+            "floor-only": "qualified",
+            "floor-entry": "qualified",
+            "floor-shelf": "qualified",
+            "floor-connector": "qualified"
+          },
+          "forced_qualified_count": 4,
+          "abstained": false,
+          "adjudicated": false
+        }
+      ],
+      "first_seed_statuses": {
+        "hotspot": "qualified",
+        "full": "qualified",
+        "floor-only": "qualified",
+        "floor-entry": "qualified",
+        "floor-shelf": "qualified",
+        "floor-connector": "qualified"
+      }
+    }
+  ]
+}
