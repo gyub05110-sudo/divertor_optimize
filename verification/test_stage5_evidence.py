@@ -24,6 +24,18 @@ def test_native_inventory_rejects_equal_size_duplicate_and_wrong_seed():
             pack.job_inventory(bad)
 
 
+def test_runtime_audit_requires_the_actual_mapped_amended_binary():
+    pack=evidence()
+    active=dict(active_transport_library="/stage5/native-physics/cap-sync/libFIREFLY.so",active_transport_sha256="correct")
+    runtime={"library_mappings":[active["active_transport_library"]],"active_transport_sha256":"correct"}
+    pack.check_loaded_library(runtime,active)
+    for damaged in (dict(runtime,active_transport_sha256="old"),
+                    dict(runtime,library_mappings=["/work/install/lib/libFIREFLY.so"]),
+                    dict(runtime,library_mappings=[*runtime["library_mappings"],"/work/install/lib/libFIREFLY.so"])):
+        with pytest.raises(ValueError,match="runtime"):
+            pack.check_loaded_library(damaged,active)
+
+
 def test_receipts_bind_raw_bytes_not_old_absolute_paths(tmp_path):
     pack=evidence()
     case,wall,seed=jobs()[0]
@@ -40,14 +52,15 @@ def test_receipts_bind_raw_bytes_not_old_absolute_paths(tmp_path):
     h=write(raw+".nc",b"native heat")
     log_hash=write(raw+".log",b"native stdout")
     native_attempt=raw.rsplit("/",1)[0]+f"/attempts/{seed}/001"
-    runtime={"ranks":4,"library_mappings":["/work/install/lib/libFIREFLY.so"]}
+    active="/stage5/native-physics/cap-sync/libFIREFLY.so"
+    runtime={"ranks":4,"library_mappings":[active],"active_transport_sha256":"compiled-sha"}
     runtime_hash=write(native_attempt+"/native.runtime.json",runtime)
-    bind=dict(raw_sha256=h,case_id=case,wall_id=wall,seed=seed,source_sha256="source",
+    bind=dict(raw_sha256=h,case_id=case,wall_id=wall,seed=seed,source_sha256="source",execution_sha256="sealed",
               wall_sha256="wall",pfc_sha256="pfc",mesh_sha256="mesh",ready_sha256="ready",
               histories=4096,ranks=4,log_sha256=log_hash,runtime=runtime,runtime_sha256=runtime_hash,
-              attempt="001",raw_file=f"{seed}.nc")
+              attempt="001",raw_file=f"{seed}.nc",active_transport_library=active,active_transport_sha256="compiled-sha")
     write(native_attempt+"/run.log",b"native stdout")
-    write(native_attempt+"/request.json",{"seed":seed})
+    write(native_attempt+"/request.json",{"seed":seed,"active_transport_library":active,"active_transport_sha256":"compiled-sha"})
     write(native_attempt+"/publish.json",bind)
     receipt=write(raw+".json",bind)
     launch=write(attempt+"/launch.json",{"job":list(job),"execution_sha256":"sealed"})
@@ -104,12 +117,28 @@ def test_portable_study_verifies_after_original_tree_is_removed(tmp_path,monkeyp
     fixed={}
     ready_for={}
     protocol=put("publication/protocol.ko.md")
+    incident_prefix="upper-wall-incident-v1/"
+    incident_raw={f"native/results/foo{j}/attempts/51031/001/native.nc":
+                  put(incident_prefix+f"native/results/foo{j}/attempts/51031/001/native.nc",f"failed {j}".encode())
+                  for j in range(2)}
+    rejected_seal=put(incident_prefix+"execution.json",{})
+    put("publication/execution.json",{})
+    incident=dict(first_execution_sha256=rejected_seal,files_sha256=dict(incident_raw,**{"execution.json":rejected_seal}),
+                  attempts=[dict(path=k,sha256=v) for k,v in incident_raw.items()])
+    ih=put("publication/first-run-incident.json",incident)
+    put(incident_prefix+"incident.json",incident)
+    monkeypatch.setattr(pack,"INCIDENT",ih,raising=False)
     for name in ("firefly-forecast.csv","firefly-products.csv","firefly-comparisons.pdf","firefly-comparisons.png",
                  "REPORT.ko.md","summarize.py","test_summarize.py"):
         put("publication/"+name,b"publication")
     baseline_report=put("stage4/stage4_report.json",{})
     driver=put("analysis-code/verification/stage5_metrics.py")
     outputs={}
+    active_lib="native-physics/version2/libFIREFLY.so"
+    lib_sha=put(active_lib,b"synthetic active FIREFLY")
+    mapped="/stage5/"+active_lib
+    marker_hash=put("native-physics/active-library.txt",(active_lib+"\n").encode())
+    env_hash=put("execution-environment.json",dict(active_transport_library=mapped,native_files_sha256={mapped:lib_sha}))
     for ci,cid in enumerate(cids):
         wall_ids=sorted({w for c,w,s in tasks if c==cid})
         names=[(30713,r) for r in ("baseline","hotspot","full","floor-only","floor-entry","floor-shelf","floor-connector")]
@@ -165,7 +194,16 @@ def test_portable_study_verifies_after_original_tree_is_removed(tmp_path,monkeyp
     panel=dict(stage4_source_sha256={"stage4_report.json":baseline_report},cases=cases,
                case_record_sha256={c["case_id"]:pack.codec.digest(catalog[f"inputs/{c['case_id']}/case.json"]) for c in cases})
     panel_hash=put("inputs/panel.json",panel)
-    seal=put("execution.json",dict(jobs=tasks,registration_sha256=reg_sha,protocol_sha256=protocol,code={},files=fixed))
+    fixed[active_lib]=lib_sha
+    fixed["native-physics/active-library.txt"]=marker_hash
+    fixed["execution-environment.json"]=env_hash
+    fixed["native-physics/amendment-r2.ko.md"]=put("native-physics/amendment-r2.ko.md",b"sealed amendment")
+    put("publication/amendment-r2.ko.md",b"sealed amendment")
+    plan=dict(jobs=tasks,registration_sha256=reg_sha,protocol_sha256=protocol,code={},files=fixed)
+    seal=put("execution.json",plan)
+    put("publication/execution-r2.json",plan)
+    put("publication/execution-r2.sha256",(seal+"\n").encode())
+    monkeypatch.setattr(pack,"EXECUTION",seal,raising=False)
     put("execution.sha256",(seal+"\n").encode())
     for cid,w,seed in tasks:
         folder=f"native/results/{cid}/{w}/"
@@ -176,9 +214,11 @@ def test_portable_study_verifies_after_original_tree_is_removed(tmp_path,monkeyp
         log_sha=put(stem+".log",b"log");put(sub+"run.log",b"log")
         bind=dict(case_id=cid,wall_id=w,seed=seed,source_sha256=ready["source_sha256"],mesh_sha256=ready["mesh_sha256"],
                   wall_sha256=ready["walls"][w]["wall_sha256"],pfc_sha256=ready["walls"][w]["pfc_sha256"],ready_sha256=ready_sha)
+        bind.update(active_transport_library=mapped,active_transport_sha256=lib_sha)
         put(sub+"request.json",bind)
-        native=dict(bind,raw_sha256=raw,raw_file=f"{seed}.nc",histories=4096,ranks=4,attempt="001",runtime={},
-                    runtime_sha256=put(sub+"native.runtime.json",{}),log_sha256=log_sha)
+        runtime={"library_mappings":[mapped],"active_transport_sha256":lib_sha}
+        native=dict(bind,raw_sha256=raw,raw_file=f"{seed}.nc",execution_sha256=seal,histories=4096,ranks=4,attempt="001",runtime=runtime,
+                    runtime_sha256=put(sub+"native.runtime.json",runtime),log_sha256=log_sha)
         receipt=put(stem+".json",native);put(sub+"publish.json",native)
         attempt=f"dispatch-attempts/{cid}/{w}/{seed}/001"
         launch=put(attempt+"/launch.json",dict(job=[cid,w,seed],execution_sha256=seal))
@@ -202,10 +242,9 @@ def test_portable_study_verifies_after_original_tree_is_removed(tmp_path,monkeyp
         assert len(reader.blocks)<len(reader.files)
         name="native/results/"+"/".join(map(str,tasks[0]))+".nc"
         assert manifest["files"][name]["sha256"]==pack.codec.hashed(b"synthetic-hdf")
-        if mode=="full":
-            assert reader.content(name)==b"synthetic-hdf"
-        else:
-            assert name not in reader.files
+        assert reader.content(name)==b"synthetic-hdf"
+        assert all(incident_prefix+n in reader.files for n in incident_raw)
+        assert reader.content(active_lib)==b"synthetic active FIREFLY"
         missing=dict(manifest["files"])
         del missing["publication/firefly-forecast.csv"]
         with pytest.raises(ValueError,match="evidence"):

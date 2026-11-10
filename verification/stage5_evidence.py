@@ -16,6 +16,8 @@ NAME="nf-stage5-firefly-20261110"
 MANIFEST="stage5-manifest.json"
 SEEDS=(51031,51047,51059,51071,51089,51109)
 REGISTRATION="d0627f34407ee7cb3fd054a6c8eecef17b1e20026c28ce068fdc3f0d224b7102"
+INCIDENT="ab9baefded88c6467267f69c6a1e0891434097e5dd6721387bb0426ed51a5146"
+EXECUTION="3151ee0a78584acd70714847b3957a16730c13347053d3ef2d2add070770e023"
 CODEC_SHA="1cac0d886d7aa125253a085e96f6c8639bcefd3940e0e12a00b09267b7e1f742"
 
 
@@ -46,6 +48,12 @@ def job_inventory(rows):
     return jobs
 
 
+def check_loaded_library(runtime,active):
+    mapped=[name for name in runtime["library_mappings"] if name.endswith("/libFIREFLY.so")]
+    require(mapped==[active["active_transport_library"]] and runtime["active_transport_sha256"]==active["active_transport_sha256"],
+            "native runtime mapped path or binary digest differs")
+
+
 def check_job(e,job,execution_sha,bindings):
     case,wall,seed=job
     stem=f"native/results/{case}/{wall}/{seed}"
@@ -65,7 +73,8 @@ def check_job(e,job,execution_sha,bindings):
     require(launch["job"]==list(job) and launch["execution_sha256"]==execution_sha and
             e.read(attempt+"/completion.json")["returncode"]==0,"launch or completion provenance differs")
     native=e.read(receipt)
-    expected=dict(bindings,case_id=case,wall_id=wall,seed=seed,histories=4096,ranks=4,raw_sha256=raw_sha)
+    expected=dict(bindings,case_id=case,wall_id=wall,seed=seed,histories=4096,ranks=4,raw_sha256=raw_sha,
+                  execution_sha256=execution_sha)
     require(all(native.get(k)==v for k,v in expected.items()),"native receipt or raw SHA differs")
     require(native["raw_file"]==f"{seed}.nc" and re.fullmatch(r"[0-9]+",native["attempt"]),
             "native attempt or raw filename differs")
@@ -74,6 +83,7 @@ def check_job(e,job,execution_sha,bindings):
     e.check(native_attempt+"run.log",native["log_sha256"])
     e.check(native_attempt+"native.runtime.json",native["runtime_sha256"])
     request=e.read(native_attempt+"request.json")
+    check_loaded_library(native["runtime"],request)
     require(e.read(native_attempt+"native.runtime.json")==native["runtime"] and
             e.read(native_attempt+"publish.json")==native and all(native.get(k)==v for k,v in request.items()),
             "original native job request, runtime or final audit differs")
@@ -101,12 +111,26 @@ def validate(e):
     require(reg["seeds"]==list(SEEDS) and reg["histories_per_seed"]==4096 and reg["mpi_ranks"]==4,
             "registered heat settings differ")
     plan=e.read("execution.json")
-    seal=e.check("execution.json")
+    seal=e.check("execution.json",EXECUTION)
     require(seal==e.content("execution.sha256").decode().strip() and plan["jobs"]==reg["jobs"] and
             plan["registration_sha256"]==reg_sha and plan["protocol_sha256"]==reg["protocol_sha256"],
             "native execution seal differs")
     e.check("publication/protocol.ko.md",reg["protocol_sha256"])
     e.check("publication/wall-registration.json",reg_sha)
+    rejected="upper-wall-incident-v1/"
+    e.check("publication/first-run-incident.json",INCIDENT)
+    e.check(rejected+"incident.json",INCIDENT)
+    incident=e.read(rejected+"incident.json")
+    e.check(rejected+"execution.json",incident["first_execution_sha256"])
+    e.check("publication/execution.json",incident["first_execution_sha256"])
+    e.check("publication/execution-r2.json",seal)
+    require(e.content("publication/execution-r2.sha256").decode().strip()==seal,"published amended execution seal differs")
+    e.check("publication/amendment-r2.ko.md",plan["files"]["native-physics/amendment-r2.ko.md"])
+    for name,sha in incident["files_sha256"].items():
+        e.check(rejected+codec.safe_path(name),sha)
+    require(len({r["path"] for r in incident["attempts"]})==len(incident["attempts"])==2,"expected two rejected raw jobs")
+    for r in incident["attempts"]:
+        e.check(rejected+codec.safe_path(r["path"]),r["sha256"])
     for name in ("firefly-forecast.csv","firefly-products.csv","firefly-comparisons.pdf","firefly-comparisons.png",
                  "REPORT.ko.md","summarize.py","test_summarize.py"):
         e.check("publication/"+name)
@@ -114,6 +138,15 @@ def validate(e):
         e.check("source-code/"+codec.safe_path(key),sha)
     for key,sha in plan["files"].items():
         e.check(key,sha)
+    marker="native-physics/active-library.txt"
+    e.check(marker,plan["files"][marker])
+    lib=codec.safe_path(e.content(marker).decode("ascii").strip())
+    require(re.fullmatch(r"native-physics/[A-Za-z0-9-]+/libFIREFLY\.so",lib),"invalid archived active binary path")
+    active=dict(active_transport_library="/stage5/"+lib,active_transport_sha256=e.check(lib,plan["files"][lib]))
+    env=e.read("execution-environment.json")
+    require(env["active_transport_library"]==active["active_transport_library"] and
+            env["native_files_sha256"][active["active_transport_library"]]==active["active_transport_sha256"],
+            "compiled runtime differs from execution environment")
     panel=e.read("inputs/panel.json")
     for name,sha in panel["stage4_source_sha256"].items():
         e.check("stage4/"+codec.safe_path(name),sha)
@@ -179,7 +212,7 @@ def validate(e):
             profile=f"profiles/{case}/{wall}.csv.gz"
             require(geometry["profile"]==profile,"portable ring profile path differs")
             e.check(profile,geometry["profile_sha256"])
-            bindings=dict(source_sha256=ready["source_sha256"],wall_sha256=asset["wall_sha256"],
+            bindings=dict(active,source_sha256=ready["source_sha256"],wall_sha256=asset["wall_sha256"],
                           mesh_sha256=ready["mesh_sha256"],pfc_sha256=asset["pfc_sha256"],ready_sha256=ready_sha)
             raw_ledgers=[]
             for seed in SEEDS:
@@ -200,18 +233,20 @@ def validate(e):
 def collect(study,stage4,repo):
     require((study/"metrics.json").is_file(),"complete metrics required before packaging")
     files={}
-    permitted={"inputs","source-code","dispatch-attempts","receipts","profiles","native","input-cdf-correction"}
-    for p in sorted(study.rglob("*")):
+    permitted={"inputs","source-code","dispatch-attempts","receipts","profiles","native","input-cdf-correction",
+               "upper-wall-incident-v1","native-physics"}
+    candidates=[p for p in study.iterdir() if p.is_file()]
+    for name in sorted(permitted):
+        candidates.extend((study/name).rglob("*"))
+    for p in sorted(candidates):
         if not p.is_file():
             continue
         rel=p.relative_to(study)
-        if len(rel.parts)>1 and rel.parts[0] not in permitted:
-            continue
         if any(v in ("__pycache__","runtime") for v in rel.parts) or p.suffix in (".pyc",".lock",".partial"):
             continue
         if ".pending" in p.suffixes and rel.parent.as_posix()!="native/historical_smoke":
             continue
-        if "/attempts/" in rel.as_posix() and p.suffix==".nc":
+        if rel.parts[:2]==("native","results") and "/attempts/" in rel.as_posix() and p.suffix==".nc":
             continue
         files[rel.as_posix()]=p
     reg=codec.as_json(files["wall-registration.json"].read_bytes())
@@ -254,7 +289,8 @@ def stored(name,mode):
         return False
     if mode=="full":
         return True
-    return (name.startswith(("publication/","profiles/","source-code/","analysis-code/")) or
+    return (bool(re.fullmatch(r"native/results/[a-z0-9]{10}/[0-9a-f]{64}/[0-9]+\.nc",name)) or
+            name.startswith(("publication/","profiles/","source-code/","analysis-code/","upper-wall-incident-v1/","native-physics/")) or
             name.endswith((".json",".sha256",".log",".md",".py",".sh",".ctr")) or
             ("/" not in name and name.endswith(".csv")))
 
@@ -282,8 +318,9 @@ def build(study,bundle,mode,stage4=None,repo=ROOT):
                                      "Rebuild with the included case model, mmesh.ctr and stage5_native_worker.py mesh action.",
                                      runtime="The historical OCI/chroot image, compiler, MPI installation and transient caches are external. "
                                      "Executable hashes and FIREFLY adapter patch accompany the archive.",
-                                     compact="Compact mode additionally omits bulk native NC, Stage 4 arrays, raw parquet and mesh diagnostics. "
-                                     "Match inventory_sha256 to the full compressed bundle for every input, log, profile and heat file."))
+                                     compact="Compact mode stores every production raw native heat NC, all 46 ring tables and receipts. "
+                                     "Stage 4 arrays, raw parquet and most intermediate mesh diagnostics are in the full bundle "
+                                     "with the same inventory_sha256."))
         (stage/MANIFEST).write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf8",newline="\n")
         sha=codec.digest(stage/MANIFEST)
         (stage/(MANIFEST+".sha256")).write_text(sha+"\n",encoding="ascii",newline="\n")
