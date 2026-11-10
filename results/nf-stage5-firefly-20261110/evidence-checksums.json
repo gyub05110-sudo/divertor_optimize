@@ -1,0 +1,81 @@
+{
+  "schema": "nf-stage5-archive-attestation.v1",
+  "study": "D:/DivertorOptimization/studies/nf-stage5-firefly-20261110-r2",
+  "publication_tree": "ed839d2",
+  "packages": {
+    "compact": {
+      "location": "results/nf-stage5-firefly-20261110/evidence-compact",
+      "manifest_sha256": "92935fc6cbd7effd44db7acb5d714de7c991b693d8d8c8143e0f17714c573181",
+      "inventory_sha256": "0ff06128fd9fe40bbbaa3af3c71aebdfd94c823cbeb2fdf8a33d29fe87ae277f",
+      "stored_files": 3504,
+      "source_files": 4148,
+      "native_counts": {
+        "accepted": 276,
+        "excluded_initial": 2,
+        "separate_controls": 5
+      },
+      "package_bytes": 101562002,
+      "zip_parts": {
+        "evidence-0001.zip": "7b73caeaad8ebe5fe332df9fac82818cdb21c659dbf9411f72ce0b6272fb0f97",
+        "evidence-0002.zip": "7cbbf24e6d553afa2d9129fe7898145a63c4bbafda418896b6891fab7e7ca6bf",
+        "evidence-0003.zip": "c309fe3308ae173c9c4474c41e3b9048466ced68ced28b3a3179ef32a4bd0196"
+      }
+    },
+    "full": {
+      "location": "D:/DivertorOptimization/studies/nf-stage5-firefly-20261110-r2/evidence-full",
+      "manifest_sha256": "e81fc12c96251bc897d8710725e739dfea5a0b38664b3cb3fd85df1127cdeb1d",
+      "inventory_sha256": "0ff06128fd9fe40bbbaa3af3c71aebdfd94c823cbeb2fdf8a33d29fe87ae277f",
+      "stored_files": 4141,
+      "source_files": 4148,
+      "native_counts": {
+        "accepted": 276,
+        "excluded_initial": 2,
+        "separate_controls": 5
+      },
+      "package_bytes": 509192822,
+      "zip_parts": {
+        "evidence-0001.zip": "83ee44909c532d9e0816ad647ee717d6b6c028415cf3785e53a67afeb3126ceb",
+        "evidence-0002.zip": "51ab29a4fbb88ff45cada1a11b72f97b8f1d08503e0a7efb078a815f5645901d",
+        "evidence-0003.zip": "6ebfe1b9e5b8d5872ab321d74ef8d68b71423494bc9c4a4c786c0e3301f2e135",
+        "evidence-0004.zip": "e452f3e790ec723bf862886d10d410a5c58d2621c637d89109c2d878717e4d33",
+        "evidence-0005.zip": "107a623369a7301c26586b9708fd42d4273e248a1e8a7fa2dae8e3795232b3e1",
+        "evidence-0006.zip": "d35e69a1f7ec51a2e9320e07a812dca5ce21ddb5e7547047f9e20d58ec0c4178",
+        "evidence-0007.zip": "fa55df6f87bdbd4c9176040a492955cedff71672b5e6020e63a07fd18e81a77b",
+        "evidence-0008.zip": "5d5997b352ace5611e720c137f6dc895c55a991ccfa6b43c133026f1bbd6f862",
+        "evidence-0009.zip": "c5f3abde4f9bcc841b04493b985c851c67ca5d6c388ae2d7964d673ab7f68d58",
+        "evidence-0010.zip": "f2d43dade8834d23f78a8b42854a9dc5fd0bfdc935d0b9cf4e7e71913b6cdb0d",
+        "evidence-0011.zip": "978eb7ad42816b998458507ac417ccc5dc6196cdb583b7c6816045aaef90687c",
+        "evidence-0012.zip": "91776b40459feb35f4c4d205c23ab7fe98446bd7feb2a1152194c5f21f309b43"
+      }
+    }
+  },
+  "git_compact_verification": "Exported all nine files independently from the published Git tree into an empty directory. Ran its standalone verifier with python -I -B -S and the pinned compact manifest, confirming 3504 stored files and 276 native receipts.",
+  "dataset_scope": "Seven native magnetic meshes, their sizes and fingerprints included in the inventory, kept at the original study location. All 276 accepted heat snapshots, both initially rejected snapshots and five controls are supplied in both bundles.",
+  "restored_replay": {
+    "path": "D:/DivertorOptimization/studies/nf-stage5-firefly-20261110-r2-portable-replay/replayed",
+    "replay_sha256": "5a48790c2ed7bb971393beda9b8621fca3f076167aade23d209b842ef871c442",
+    "metrics_sha256": "0e7d95205c34862d1c3a176c6d2933f02d9f6070f324fd58e3d89313c837fe9f",
+    "execution_sha256": "3151ee0a78584acd70714847b3957a16730c13347053d3ef2d2add070770e023",
+    "registration_sha256": "d0627f34407ee7cb3fd054a6c8eecef17b1e20026c28ce068fdc3f0d224b7102",
+    "source_metrics_sha256": "0e7d95205c34862d1c3a176c6d2933f02d9f6070f324fd58e3d89313c837fe9f",
+    "analyzer_sha256": "2f447f1eebe43788ddd79d987017f850e5d4e10e03e41545e1af06b2fd199dfb",
+    "case_count": 7,
+    "case_wall_count": 46,
+    "seed_jobs": 276,
+    "exact_cases": true,
+    "exact_profile_bytes": 46,
+    "mesh_digests_from_receipts": [
+      "1255ab8051",
+      "3264fdd71f",
+      "5d7f95a730",
+      "70481becc0",
+      "7ce879f1b3",
+      "d880609264",
+      "f317e77cf7"
+    ],
+    "floating_relative_tolerance": 5e-12,
+    "floating_absolute_tolerance": 5e-12
+  },
+  "decision_crosscheck_sha256": "8be3018a4a9a6e314a3c9d1174df280d1144105181e205035d2202e404754adf",
+  "windows_restore_note": "For a deep Windows restore path use the extended-length Windows path prefix or select a short temporary destination such as D:/s5. The detached full restore was verified using an extended-length path."
+}
