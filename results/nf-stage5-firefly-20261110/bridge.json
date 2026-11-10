@@ -1,0 +1,1564 @@
+{
+  "schema": "nf-stage5-input-bridge.v1",
+  "panel_sha256": "d78c153199e79ed7462bbd09c5f17cc0ea88d635233eaa240166542908c794a1",
+  "registration_sha256": "d0627f34407ee7cb3fd054a6c8eecef17b1e20026c28ce068fdc3f0d224b7102",
+  "representative_cases": [
+    "3264fdd71f",
+    "70481becc0"
+  ],
+  "input_cdf_correction": "Round-off in terminal donor CDF only; exact Stage 4 donor watts preserved.",
+  "historical_smoke": {
+    "source_power_W": 1000000.0,
+    "wall_W": 999999.9999999998,
+    "cap_W": 0.0,
+    "domain_loss_W": 0.0,
+    "censored_W": 0.0,
+    "closure_residual_W": -2.3283064365386963e-10,
+    "wall_above_midplane_W": 0.0,
+    "max_wall_distance_m": 2.584603016523946e-13,
+    "max_cell_area_relative_error": 0.0001784772124860945,
+    "historical_raw_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "raw_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "max_hload_discrepancy": 0.0,
+    "runtime": {
+      "ranks": 4,
+      "seconds": 30.373505568,
+      "cpu_seconds": 115.75653,
+      "library_mappings": [
+        "/usr/local/lib/libFLARE.so",
+        "/work/install/lib/libFIREFLY.so",
+        "/work/install/lib/python/firefly/f2py.cpython-313-x86_64-linux-gnu.so"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case_id": "3264fdd71f",
+      "representative": true,
+      "baseline_hotspot": "shelf",
+      "field_probes": 6608,
+      "max_abs_error_B_T": [
+        5.043588128250676e-07,
+        3.2706854511954653e-06,
+        2.1887025525302306e-10
+      ],
+      "max_abs_error_psiN": 3.677401604340602e-07,
+      "signed_F_T_m": -2.7447706622251933,
+      "axis_RZ_m": [
+        1.7007520198822021,
+        0.016885746270418167
+      ],
+      "xpoint_RZ_m": [
+        1.3907611897953485,
+        -1.070269770906762
+      ],
+      "lcfs_sha256": "02e63ddcb31f2a4f728e00183e4bb77150ffee8c46e976baccd7916dc2f58eba",
+      "equilibrium_sha256": "08c63a2158a04b2d139dcef8d853d3685769772dc8b77afff27488536e026a78",
+      "mesh_sha256": "1083cd38df571f7e97c8560d369ffcf47007b2d75efa6b433f49676e57d6ac5a",
+      "ready_sha256": "f98f79808a8416b460dc1d3fb826238df32d5006777a305e7086f3e4b9e8b829",
+      "source_sha256": "044ceb602e17adaf188d8e6481733ca13424ede39011e4d1e051233869f48107",
+      "source_W": 1000000.0000000002,
+      "donors": 1280,
+      "cdf_max_difference": 1.7763568394002505e-15,
+      "distinct_walls": 7,
+      "role_count": 7,
+      "minimum_captured_lower_W": 1000000.0000000002,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.04988971683394424,
+      "maximum_hit_error_mm": 0.05036688465309708,
+      "maximum_mean_abs_relative_length_error_pct": 0.24514857614694519,
+      "walls": [
+        {
+          "wall_id": "021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "83533b1303c8d00f9ed5b49d29794b9e45b4a8ec62b7c81bc589b365f5f338b4",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.3757267289524694e-05,
+          "weighted_p95_hit_error_m": 2.910331991226474e-05,
+          "max_hit_error_m": 2.9458414388844248e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024514857606815037,
+          "strikes_sha256": "e2dfe719f720258f9c84622887e30323f7f214e89af0a7eb30db26b9454ec35c",
+          "reference_sha256": "ff1f434ee73303638189e372affd7e90334273ca5ffe2c9fdcfa0da587a27d34",
+          "pass": true
+        },
+        {
+          "wall_id": "892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "52efbc528426432ed6187f305fa0529abf1af61bf529d57f8989dc8531f4cdd3",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.3757267289524694e-05,
+          "weighted_p95_hit_error_m": 2.910331991226474e-05,
+          "max_hit_error_m": 2.9458414388844248e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024514857606815037,
+          "strikes_sha256": "e2dfe719f720258f9c84622887e30323f7f214e89af0a7eb30db26b9454ec35c",
+          "reference_sha256": "1745509583260829cf609d4d4170b3e065a6106a09ca7bb3ce6d2ebf18a8c925",
+          "pass": true
+        },
+        {
+          "wall_id": "df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "96bee775e22e956f18c271200b74a1bb997d480db1b4ffbd1f17e0ba33da055c",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.3757267289524694e-05,
+          "weighted_p95_hit_error_m": 2.910331991226474e-05,
+          "max_hit_error_m": 2.9458414388844248e-05,
+          "weighted_mean_abs_relative_length_error": 0.002451485761469452,
+          "strikes_sha256": "a2ce83d7cf92d7303e3443a222b8a11fbb50132fc027c06a4437ca0c564ce2e5",
+          "reference_sha256": "533681c0e9bda7a46de4c165b28e2eb6ca6efe653a5da0d145efdf0eac4403dc",
+          "pass": true
+        },
+        {
+          "wall_id": "152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "13b1807cbc46da886600bfcc2796ae8885856bc46afd0d77c43bd90df8b15f34",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.635467275851467e-05,
+          "weighted_p95_hit_error_m": 4.9172580236031514e-05,
+          "max_hit_error_m": 4.978322198328286e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024507994728441814,
+          "strikes_sha256": "5aa067e3622f915e104a8f1e1ef913e04db08c41664599e7d04fc4bccc589baf",
+          "reference_sha256": "4997d2bdbc358c71971ceef374c02c92f72052ab7a49862421a75f038322bbe5",
+          "pass": true
+        },
+        {
+          "wall_id": "213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "ea766b8cb925b04bbff14a6e8c6aeb2d6c2ee308ab6b21373453e7c8c2b7c809",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.3757267289524694e-05,
+          "weighted_p95_hit_error_m": 2.910331991226474e-05,
+          "max_hit_error_m": 2.9458414388844248e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024514857606815037,
+          "strikes_sha256": "e2dfe719f720258f9c84622887e30323f7f214e89af0a7eb30db26b9454ec35c",
+          "reference_sha256": "1745509583260829cf609d4d4170b3e065a6106a09ca7bb3ce6d2ebf18a8c925",
+          "pass": true
+        },
+        {
+          "wall_id": "101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "fe95aba8db4b2667de4b1904983848783a49886cd28051a67fe0b3a615663197",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.6447036118954486e-05,
+          "weighted_p95_hit_error_m": 4.988971683394424e-05,
+          "max_hit_error_m": 5.036688465309708e-05,
+          "weighted_mean_abs_relative_length_error": 0.002449591023315532,
+          "strikes_sha256": "f09d3fb335e8c9a31b27e6327697248c63b1f9af7000563241b5284cde4e1fb1",
+          "reference_sha256": "1b7a6f58335b9a29e54cdb8decddf90c60260bdd8d3a799f7e43c3f345c55948",
+          "pass": true
+        },
+        {
+          "wall_id": "6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "48fcaa0ef7dd84118ff44c5030e4e3d7a5e9035d3799d13fe335aeae9924f7cf",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000002,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.585929301359813e-05,
+          "weighted_p95_hit_error_m": 4.3457315405253375e-05,
+          "max_hit_error_m": 4.4138929877395925e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024340347071681234,
+          "strikes_sha256": "8a234f2bdb82256c9722c8ee6f63af553bafaddcd02ebe1f97479500d2a1870d",
+          "reference_sha256": "0486fb2cffa3dfee42d1cf11bc3e75b1d2ad45da786955cdeb13d80d9f534095",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "7ce879f1b3",
+      "representative": false,
+      "baseline_hotspot": "shelf",
+      "field_probes": 6608,
+      "max_abs_error_B_T": [
+        5.006508208560412e-07,
+        3.269454899479385e-06,
+        2.244147090380011e-10
+      ],
+      "max_abs_error_psiN": 3.685630460825706e-07,
+      "signed_F_T_m": -2.7373798157691023,
+      "axis_RZ_m": [
+        1.7024935483932495,
+        0.013354191556572914
+      ],
+      "xpoint_RZ_m": [
+        1.3935895168157766,
+        -1.0753000277957367
+      ],
+      "lcfs_sha256": "26e38b4ce667a0895433c717ac2fe4a8b316599160145343303e74acbbbb5e30",
+      "equilibrium_sha256": "eb85ef99506dcfc26c5039ada6a21d0a4a72c686ef3b4c66804a37b05afbeb90",
+      "mesh_sha256": "1bb4aa9fae0270c540660308f74eaf92e1c8dc1d6716f69694bdf352a6b43e51",
+      "ready_sha256": "d00eb3e44f16e2d58eb9b7e18e79dda5546d14cdf9ab6a1fb84eca9a49cc0dbf",
+      "source_sha256": "1d468008e87d0c7ed9e14e50dc5ed20ab203ad7debf0905df209fc2a6d615472",
+      "source_W": 1000000.0,
+      "donors": 1280,
+      "cdf_max_difference": 3.1086244689504383e-15,
+      "distinct_walls": 7,
+      "role_count": 7,
+      "minimum_captured_lower_W": 1000000.0,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.052128369500102203,
+      "maximum_hit_error_mm": 0.054431775964597,
+      "maximum_mean_abs_relative_length_error_pct": 0.24926050656589033,
+      "walls": [
+        {
+          "wall_id": "9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "c4a15d5b4b6442db59820ebb1826ab59a7b8c991b41abce6dea06dd63f31bc2d",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.4760078880245296e-05,
+          "weighted_p95_hit_error_m": 3.0792312402315936e-05,
+          "max_hit_error_m": 3.113973608809702e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024841759103441255,
+          "strikes_sha256": "8385686c95b5603f100caa6f444095fab5741859ebaf0f064d6219bea274a14b",
+          "reference_sha256": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+          "pass": true
+        },
+        {
+          "wall_id": "d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "ac246a5ba39e4ecd83d6a331eea3d458ecaba8a7b4c6c882a606754747953083",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.4760078880245296e-05,
+          "weighted_p95_hit_error_m": 3.0792312402315936e-05,
+          "max_hit_error_m": 3.113973608809702e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024841759103441255,
+          "strikes_sha256": "8385686c95b5603f100caa6f444095fab5741859ebaf0f064d6219bea274a14b",
+          "reference_sha256": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+          "pass": true
+        },
+        {
+          "wall_id": "5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "d8b1f075a8a40e1f10264a7f26c5eb05b3a0d2b18dd715fdf286e4ef312a8afe",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.4760078880245296e-05,
+          "weighted_p95_hit_error_m": 3.0792312402315936e-05,
+          "max_hit_error_m": 3.113973608809702e-05,
+          "weighted_mean_abs_relative_length_error": 0.002484175911525513,
+          "strikes_sha256": "71dd7606cb98a7a7f5ea90a1008e714522eace30652b60362f9db4c6a6bd0617",
+          "reference_sha256": "c1546e6db32045819c7f6466926d2ce902d0205e4f2a8d43dabd4b8644f09222",
+          "pass": true
+        },
+        {
+          "wall_id": "f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "540dcc2634cbe718f914eec4490fe42d87fc9cf8a20477a2d33ba3498313ba5e",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.172429358690926e-05,
+          "weighted_p95_hit_error_m": 5.21283695001022e-05,
+          "max_hit_error_m": 5.4431775964597e-05,
+          "weighted_mean_abs_relative_length_error": 0.002489745673898708,
+          "strikes_sha256": "37ca4ae1efc5b8bcf06e0cd2694cdcb0a3726b1580b2dd5961761116253cfb39",
+          "reference_sha256": "d84ad3ee6edeb78118d59bf3dcf636a9a4ce996a289a08eb639eaacd2e45800a",
+          "pass": true
+        },
+        {
+          "wall_id": "3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "59d68fa53d5489ef92d996ebddef3386ee71c316ef82c70cf17a35e37b247ea3",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.4760078880245296e-05,
+          "weighted_p95_hit_error_m": 3.0792312402315936e-05,
+          "max_hit_error_m": 3.113973608809702e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024841759103441255,
+          "strikes_sha256": "8385686c95b5603f100caa6f444095fab5741859ebaf0f064d6219bea274a14b",
+          "reference_sha256": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+          "pass": true
+        },
+        {
+          "wall_id": "44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "00ad07b8088666599442bdea4f2af2ea58de6a55a16b5dc81a4e4f2e2d82ea0f",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.1840497219242484e-05,
+          "weighted_p95_hit_error_m": 5.145404247264708e-05,
+          "max_hit_error_m": 5.3462356275165535e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024926050656589034,
+          "strikes_sha256": "57d6674bd3e5ef241f1b4a0ee57446930a05a5f8f62af2cc3d699199b38d5ec6",
+          "reference_sha256": "4ff0c0e7dc59f3a404a57a1d4a1d538e88bd8c0786e0bc3ff8101850739cfb73",
+          "pass": true
+        },
+        {
+          "wall_id": "11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "3ac16de55c1dfea1b29f9cf914b0cb364d2293f2ca4b12dcd5d9fd745f6b1ba7",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.9628889070751253e-05,
+          "weighted_p95_hit_error_m": 4.5588146426519704e-05,
+          "max_hit_error_m": 4.7566684675281e-05,
+          "weighted_mean_abs_relative_length_error": 0.0024679073164276463,
+          "strikes_sha256": "d9f91400aebfb32a76baad1b7c575973d5770d643900d80cdfb4ba54797605d2",
+          "reference_sha256": "d7ead08282195f35a5fbc955372027405c7fd648b09a5cf20b7cd6e712daa21f",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "70481becc0",
+      "representative": true,
+      "baseline_hotspot": "floor",
+      "field_probes": 6614,
+      "max_abs_error_B_T": [
+        3.363987261528756e-07,
+        3.6893809357563256e-06,
+        8.741007917478782e-12
+      ],
+      "max_abs_error_psiN": 4.2631998553588346e-07,
+      "signed_F_T_m": 3.5739684470089936,
+      "axis_RZ_m": [
+        1.6843461990356445,
+        -0.022261369973421097
+      ],
+      "xpoint_RZ_m": [
+        1.2344370957391702,
+        -1.1726635745818204
+      ],
+      "lcfs_sha256": "98874745430217c9ef459b90a557ec2af21d0d0f51b13755d2a1a3dd7f384bc4",
+      "equilibrium_sha256": "59ebaeada61a0d161f01b99f61865cf279f88d00809c4fbdcffee293f42a5531",
+      "mesh_sha256": "ab82aa3446be0c0029f1cd1ac0f706f6fafa603362e797d20ffc0dd135630e1d",
+      "ready_sha256": "92d0d9d1ea2e6c96fe2790844c93200e3072f812e5508ece8c252ddd85af18a6",
+      "source_sha256": "f962facfe89a141531cd7d8c020ddc1c4615fd4b9d93ec58f4cdf4abc2fb985c",
+      "source_W": 1000000.0,
+      "donors": 1280,
+      "cdf_max_difference": 2.9976021664879227e-15,
+      "distinct_walls": 8,
+      "role_count": 9,
+      "minimum_captured_lower_W": 1000000.0,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.09065453001242584,
+      "maximum_hit_error_mm": 109.18388925256828,
+      "maximum_mean_abs_relative_length_error_pct": 0.23214355116648586,
+      "walls": [
+        {
+          "wall_id": "c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "ceed3b61b6d2924800885a422cc910d59de182d21e3b406a65560e716ee986a4",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 1.9273234974358462e-05,
+          "weighted_p95_hit_error_m": 2.3665084616604188e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.00230195433636993,
+          "strikes_sha256": "2a90427c24362f83503e60eeb95c92255c619e228ffd87d40fa83d24fef8fb8a",
+          "reference_sha256": "bca760c8e2b3851bbb6eb89afd70c4850b17f35ba449f7745a67d1f54a15a476",
+          "pass": true
+        },
+        {
+          "wall_id": "28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ],
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "2d533428f0172f078078bc58a89d756686e929e0f2abb19ef6f9fe0ce3b3846b",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.981171231562972e-05,
+          "weighted_p95_hit_error_m": 8.96761585825915e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.0022966506365807247,
+          "strikes_sha256": "86369ac8e242a8dd3604e9836a7bcccb3edef453a633ad8de82e3854f551daf2",
+          "reference_sha256": "6552d39dfbc0b088351ed058d39101d40603714bbc96c7a7825f7e05e96a13fd",
+          "pass": true
+        },
+        {
+          "wall_id": "000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "98c7f35b0f1f6d49dedeafffd4db3eb2b036d5689405a6477d417f3200d4ac8f",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.374063613165873e-05,
+          "weighted_p95_hit_error_m": 8.360621333004296e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.002289643767819249,
+          "strikes_sha256": "1de8d31c871a7f3ac21a3af8322d7151d534bf8b9afb9658fe30e19d72c4a248",
+          "reference_sha256": "58bd9c03334bced9e9b4d38f0e584d30ae6b7c8cc5ac3f30d2ed69367096b5af",
+          "pass": true
+        },
+        {
+          "wall_id": "8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "0107183b183c50aaf264113fde7769c5e8881a8debea77978cc0f588603fe39d",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 4.2997506589316335e-05,
+          "weighted_p95_hit_error_m": 9.065453001242584e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.002303281213230122,
+          "strikes_sha256": "fd93448ee951e1893a50c511419d097412157db00b003b85b474fb53af1af726",
+          "reference_sha256": "d946739505dfc66905872cd9b6881d576d16e0fd526656c026f103d40ecd4290",
+          "pass": true
+        },
+        {
+          "wall_id": "54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "173c26f88fbed205874d2c6c5c6f91f0428c13f32ac73bca81fd031467f6ade8",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.4928551268172605e-05,
+          "weighted_p95_hit_error_m": 8.28646750086385e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.0022858470210312103,
+          "strikes_sha256": "596ee5923b055ea44b77181d35d02a86b0f8bf93ee4ea1d084f20c73e292c61c",
+          "reference_sha256": "7909fb3b6fd97fdd4cb7ba2311b0ec17878f8fbbde8c670f62a36f21ed1a21e1",
+          "pass": true
+        },
+        {
+          "wall_id": "ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "e13eb0691c35401188cf8449b4705edb2742daf642a610e04e86fc80353a6efd",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 4.382577219289678e-05,
+          "weighted_p95_hit_error_m": 8.096105108558498e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.0023214355116648587,
+          "strikes_sha256": "60babf57104439a951ddb264e3fefdd926aeb9b36d4cd4bb6683d49441034675",
+          "reference_sha256": "810388635c19b0b48ee66ccc3c64609ec0347266609f2bed20a21d1276fb03b7",
+          "pass": true
+        },
+        {
+          "wall_id": "978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "hotspot",
+              30757
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "488ae8763862a3fd8d7b79ab8a95171e3105740b304eb48244b4ae167bf8c5c0",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.260910645464478e-05,
+          "weighted_p95_hit_error_m": 7.735840577455198e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.002279865364725711,
+          "strikes_sha256": "094fb3bcf53a8d222c3a7eb7bf54326b8aa217e963b4b22b75a13a91929c58f5",
+          "reference_sha256": "2417203790e1c92bd028adb0249e0431f92c1edde1f391f8037d2ff1b5f7b074",
+          "pass": true
+        },
+        {
+          "wall_id": "a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5",
+          "count_over_5mm": 1,
+          "donor_W_over_5mm": 7.005678348127657e-10,
+          "roles": [
+            [
+              "full",
+              30757
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "203fab4a172b254f1360be2071756a233e1e691c5f585fb4c42f60c11c4fb03b",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.870780711328235e-05,
+          "weighted_p95_hit_error_m": 8.851144904288513e-05,
+          "max_hit_error_m": 0.10918388925256828,
+          "weighted_mean_abs_relative_length_error": 0.002294088238419393,
+          "strikes_sha256": "c6915e9a3334e69aba207a0e485a38f2e310476cebf42410e00aab6086779eab",
+          "reference_sha256": "bb8daa870a86675843ba7e314960817287d848700ce6e18fb88bec9f14c69816",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "5d7f95a730",
+      "representative": false,
+      "baseline_hotspot": "floor",
+      "field_probes": 6612,
+      "max_abs_error_B_T": [
+        3.092209003852098e-07,
+        2.930929371591784e-06,
+        4.028821720680753e-11
+      ],
+      "max_abs_error_psiN": 3.721711141491113e-07,
+      "signed_F_T_m": -3.414445946041452,
+      "axis_RZ_m": [
+        1.7495076656341553,
+        -0.05247155949473381
+      ],
+      "xpoint_RZ_m": [
+        1.3078451363549757,
+        -1.1311253092398232
+      ],
+      "lcfs_sha256": "8431b03456361927bdd756a11388ace61be8b4b299d0af7cd4306b7fed106e31",
+      "equilibrium_sha256": "c82127337c93cb0a020b08e82f6ed12f2bf51d189b6d5e1c1494ab6f2761a3c9",
+      "mesh_sha256": "e93415b73232cfd3dc995979198f45bee8210669bc228fa941656fd5839f6a7d",
+      "ready_sha256": "7d66f1ba1e8c4e30e6fc44f55c902d078de53d405005a8d37f4d807522228c73",
+      "source_sha256": "f6fc3be48e2f7bc7a369b05cf66d8948db680e8ba5b60218bdf6a4f2e7e81eef",
+      "source_W": 1000000.0,
+      "donors": 1280,
+      "cdf_max_difference": 1.4432899320127035e-15,
+      "distinct_walls": 6,
+      "role_count": 7,
+      "minimum_captured_lower_W": 1000000.0,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.15098845898356755,
+      "maximum_hit_error_mm": 1.708142593789646,
+      "maximum_mean_abs_relative_length_error_pct": 0.15975776294877017,
+      "walls": [
+        {
+          "wall_id": "aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "e4da15638d5249851409b154ba9e457766e80a0500191961e4ca587378bc308c",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 1.7904989570636856e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356755,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015926258232130967,
+          "strikes_sha256": "8464de5324ee1755e98bb170a27a026196723cc5485601f3bcd6cf5b0e392480",
+          "reference_sha256": "8d4e9546e0e319002d9ff5749a89d1224131cee036fe5c56467355365cbaaa99",
+          "pass": true
+        },
+        {
+          "wall_id": "2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ],
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "7f1097c6eff0f8ca5c8951fbad2b3ea35959f177f674d2f5b4ce2b8705cf2264",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.7708471961493117e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356718,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015975776294876159,
+          "strikes_sha256": "1c65208942ca4f0663b594bee91fa95d4e6ed5b67346a9ebc6d4fe334dfc21f3",
+          "reference_sha256": "a40b773d0022287d63ddf6ee6fb62eae338717460bf11332559cc7489bd8cdf7",
+          "pass": true
+        },
+        {
+          "wall_id": "a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "e2a7fb439acdf676c4f734977deda375dd7539c27114dd67b21b4bbb07d1c6c8",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.770847195872893e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356718,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015975776294877017,
+          "strikes_sha256": "1f17825a2ae99eff1e4cde436bc0f1986d1c1c1acb0fadd7ad8a191706681c9f",
+          "reference_sha256": "dd1271203362e0de9be2551970246833b2fb4bb93ca1c68b53caa636772843b4",
+          "pass": true
+        },
+        {
+          "wall_id": "eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "2b9abd4e4862b94f882b1077b84faeb61a04d1ba5af854b6b26a66c4c0e919af",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.770796202643523e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356718,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015975740776604424,
+          "strikes_sha256": "b5a3b19ed9c510dfdd2ad4e2b3d8f0429b6393ecb6aab371410abfcc57aa737f",
+          "reference_sha256": "e98e2d01a886bfa62e20c87a74b8fb18180db0b3be86e18018d40cc4d1ea8450",
+          "pass": true
+        },
+        {
+          "wall_id": "53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "4e8be3416186bbd55b3f0bbd78dfa8207d9d2669c83e28761f67a25cd6fb16ed",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.7708471963595002e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356718,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015975748671469949,
+          "strikes_sha256": "7ecc05c62945711dd4fc6271f64787cb1358b5ddc90f9aec16d8c18f0d84dfa5",
+          "reference_sha256": "15926a8320c40068e1c9617ccbf538bf8b72620d2cffa9ed678f616955c698ef",
+          "pass": true
+        },
+        {
+          "wall_id": "6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "772917fb7297c7e3cd954be1cf0b5bb25fc522424e6bd47a6b07641ad38cd2b6",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.7707626990909892e-05,
+          "weighted_p95_hit_error_m": 0.00015098845898356718,
+          "max_hit_error_m": 0.0017081425937896459,
+          "weighted_mean_abs_relative_length_error": 0.0015975699919316421,
+          "strikes_sha256": "4d0f17bd30517c22fc920c0dc60c71348985d8ddfcd6c20dc4855bc997869e1c",
+          "reference_sha256": "9bb4d0c0c334589565b0e02bcd7ced96639eb41b2e276457350754f8f42ac6e2",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "1255ab8051",
+      "representative": false,
+      "baseline_hotspot": "shelf",
+      "field_probes": 6609,
+      "max_abs_error_B_T": [
+        5.065342984500454e-07,
+        3.2385871625018048e-06,
+        1.946260930196786e-10
+      ],
+      "max_abs_error_psiN": 3.72888469768462e-07,
+      "signed_F_T_m": -2.716784253799751,
+      "axis_RZ_m": [
+        1.7039339542388916,
+        0.015483861789107323
+      ],
+      "xpoint_RZ_m": [
+        1.3921622361861188,
+        -1.0713178502176812
+      ],
+      "lcfs_sha256": "09309e2f72d14d170fb3a0b99984f5da417ce48c9a1f171a39281b00af23efbf",
+      "equilibrium_sha256": "1e0df0a63d32e732fc8e9b98739b5b028154d463171c9b83d84864d528a4d9b0",
+      "mesh_sha256": "c91d6cda6b0fdbe05e42aa74ef0f4bce6849ce3c6d74578cb3e315913d854e25",
+      "ready_sha256": "6a9dd10b4aa0ab362b0b99f4bd47738f710d76492839e70d1c3302364d355432",
+      "source_sha256": "4b7ae9d9eae01e5f204a72f4447272c7283e85a62052cd96d0c6c4744ab2db8e",
+      "source_W": 1000000.0000000001,
+      "donors": 1280,
+      "cdf_max_difference": 9.992007221626409e-16,
+      "distinct_walls": 6,
+      "role_count": 7,
+      "minimum_captured_lower_W": 1000000.0000000001,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.036879378508014496,
+      "maximum_hit_error_mm": 0.037540507063967006,
+      "maximum_mean_abs_relative_length_error_pct": 0.23480060981858103,
+      "walls": [
+        {
+          "wall_id": "8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "2bcd4879974c2e0e023a9c6bbee0da616197e72754affa8105e673479ab5aeea",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.2997430934442563e-05,
+          "weighted_p95_hit_error_m": 2.961573753257785e-05,
+          "max_hit_error_m": 3.0039548949495606e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023480060973857728,
+          "strikes_sha256": "fae4f66dbe3e8d205b0ace243bfdbca57077c1bed17c16aa53aaf33fbc415c84",
+          "reference_sha256": "60be3c8ad5743572d51507db03ea85ddc3aa89f325496ce38bb11457d2a14130",
+          "pass": true
+        },
+        {
+          "wall_id": "cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "c3cdc2bdacbc54f1204ca382b55e6b9c94557b7a52022dbaa393d5ef78a06453",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.2997430934442563e-05,
+          "weighted_p95_hit_error_m": 2.961573753257785e-05,
+          "max_hit_error_m": 3.0039548949495606e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023480060973857728,
+          "strikes_sha256": "fae4f66dbe3e8d205b0ace243bfdbca57077c1bed17c16aa53aaf33fbc415c84",
+          "reference_sha256": "72d86755ee5d459fb00deaec7b539e9de85236a87b8d7ec5bb951787a81cf41a",
+          "pass": true
+        },
+        {
+          "wall_id": "41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "1cbbf4ae17261f074d366ed108e29c2cabecb3bfd613ddb8e0b199ce9eccf634",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.2997430934442563e-05,
+          "weighted_p95_hit_error_m": 2.961573753257785e-05,
+          "max_hit_error_m": 3.0039548949495606e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023480060981858103,
+          "strikes_sha256": "3d9f373ea6b8e546e78b86592b34c1a58bcf03ad916566ca2bd0d6d229b0db92",
+          "reference_sha256": "d65631a87ad14a4fa0342aa1f7dca1a615c0917e56335b29394dcd5b6703eaae",
+          "pass": true
+        },
+        {
+          "wall_id": "3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ],
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "ca874acb5a227cccfcd67a7fa4919dbbb47cf6aa1705abfeeb7345ecfc3fe166",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.366228517143861e-05,
+          "weighted_p95_hit_error_m": 3.687937850801449e-05,
+          "max_hit_error_m": 3.7540507063967e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023478586542330713,
+          "strikes_sha256": "c4625c1490c5e64321f0242b48942e61735d8de2dfedfc3e29ab716bf2e175e7",
+          "reference_sha256": "602aac4fdd66389113934b368257ee92ddc4a27ca84ec9fd65e298c16060ded8",
+          "pass": true
+        },
+        {
+          "wall_id": "7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "679937f0dd146533cfb73885a86094b8f2d62e4a2c7bae13944089c71f3944be",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.2997430934442563e-05,
+          "weighted_p95_hit_error_m": 2.961573753257785e-05,
+          "max_hit_error_m": 3.0039548949495606e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023480060973857728,
+          "strikes_sha256": "fae4f66dbe3e8d205b0ace243bfdbca57077c1bed17c16aa53aaf33fbc415c84",
+          "reference_sha256": "72d86755ee5d459fb00deaec7b539e9de85236a87b8d7ec5bb951787a81cf41a",
+          "pass": true
+        },
+        {
+          "wall_id": "e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "4274c7228b520a0ca749504884cccaad6fce6c0e2ff4eefe62efe2675077cfbd",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000001,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.0407566273208434e-05,
+          "weighted_p95_hit_error_m": 3.4673352582761644e-05,
+          "max_hit_error_m": 3.513014669673376e-05,
+          "weighted_mean_abs_relative_length_error": 0.0023317951782698375,
+          "strikes_sha256": "ba45d3d5f06733bc39884a318341d3ba8226b55795d119881c2aa455b440e282",
+          "reference_sha256": "ef98adab3fe2348f957c13b907a17617f7fd8deb5c52f270e5f68c332096aa87",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "d880609264",
+      "representative": false,
+      "baseline_hotspot": "floor",
+      "field_probes": 6611,
+      "max_abs_error_B_T": [
+        2.7902154203784946e-07,
+        3.1941035018578923e-06,
+        1.914344238684862e-10
+      ],
+      "max_abs_error_psiN": 4.237388618877347e-07,
+      "signed_F_T_m": 3.366579964803035,
+      "axis_RZ_m": [
+        1.7049405574798584,
+        -0.051394227892160416
+      ],
+      "xpoint_RZ_m": [
+        1.23020500415399,
+        -1.1556935800652657
+      ],
+      "lcfs_sha256": "62423896015debc36b5cd55de2a720a2040b464af9ad788bba4397fd0aa3724c",
+      "equilibrium_sha256": "ddde3c7dfbd4034ef61e2142b787a2e4c435e4f33d119851626277224e601cd3",
+      "mesh_sha256": "5bceb8a16d697d65aa16950b22d69f8767606ba9e17a762f5cfac0c0f6f14785",
+      "ready_sha256": "f7c405378365516a0a773c6b8d6c3f4206409a8eed360e20c561876bdc791870",
+      "source_sha256": "f1ee27c33a9778b79c6defc57159b5379e44127830c9776edc1dd93066bdb728",
+      "source_W": 999999.9999999998,
+      "donors": 1280,
+      "cdf_max_difference": 1.7763568394002505e-15,
+      "distinct_walls": 6,
+      "role_count": 7,
+      "minimum_captured_lower_W": 999999.9999999998,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.09957637919791623,
+      "maximum_hit_error_mm": 0.5795616936758264,
+      "maximum_mean_abs_relative_length_error_pct": 0.19521742567489628,
+      "walls": [
+        {
+          "wall_id": "aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "52ca2d24eebf2d29b2ba9c782551dfd11bc5c2e854c384529e5ed0435d18fa15",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.576444536675758e-05,
+          "weighted_p95_hit_error_m": 3.726086842395179e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.0019487570634682688,
+          "strikes_sha256": "f3f0f7af30d0ece7c7b6363a3ab01b35033696010558700dfca02d332d4b347b",
+          "reference_sha256": "775003716dd3c58ec7c998b80a61b96a011c5604676ae65f795aed8d9c68193a",
+          "pass": true
+        },
+        {
+          "wall_id": "e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ],
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "db79f85e2ec0aefef49a1d84d6af12af8e97f9c87f69416538ee5d4e008a50b8",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 7.239416908750035e-05,
+          "weighted_p95_hit_error_m": 9.385383081125245e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.001908170290768123,
+          "strikes_sha256": "5a911a11e203736ba7d5cc8f04cbef1e966824897b1962b6a3827933db8c598c",
+          "reference_sha256": "e40db12bb54debc9e67e1e8bb78dcb660fdbfdab821f3408c3d02e009121b552",
+          "pass": true
+        },
+        {
+          "wall_id": "3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "e4b3cabe4db1641ccb051b33f2751f29e7585ce398796a7c85ad325cba5db64c",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 6.527180866269248e-05,
+          "weighted_p95_hit_error_m": 9.185254593264005e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.001897847592949506,
+          "strikes_sha256": "f5def881c0fad7932785a5cce7741b92aa6aaa135f55437280b24ef848846ed7",
+          "reference_sha256": "a81ad60fe9db89c77a0b0ebd199ec2ac6336815c41f653fcf4a931b8eda738f6",
+          "pass": true
+        },
+        {
+          "wall_id": "7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "b24fa617d64e252ed61e362d8de1b74fce3b495fb6994f3dc38e5c5404d7ecde",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 6.621318960507502e-05,
+          "weighted_p95_hit_error_m": 9.223005186464264e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.0018995235985661287,
+          "strikes_sha256": "acd959d0ebcdb91b3bc09147abe94cbd13069cb2656016f38e1e97bb846b0fd5",
+          "reference_sha256": "001f5bfa751ffcb741e81346ece5aed47caed75076284fc95fbd280f87060152",
+          "pass": true
+        },
+        {
+          "wall_id": "eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "b9601eddd8f28564140a9fd2419ac50fdb235a45135c90f3fec4f29cb00af1d3",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 8.672548818830258e-05,
+          "weighted_p95_hit_error_m": 9.957637919791623e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.0019521742567489627,
+          "strikes_sha256": "2b8480d88fa39e330f900171a188419f9499535cfcc4d9ffab55c24ee5a3c29e",
+          "reference_sha256": "23b7cb7f1c0f0e2ba97d90885b7462e5cf44597d0cc305c184ae5a34b53b28b0",
+          "pass": true
+        },
+        {
+          "wall_id": "a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3916,
+          "native_pfc_sha256": "432ecb9b43857e64749eef276d28617085410c0b81619d95796dca3048709cf9",
+          "toroidal_direction": -1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 999999.9999999998,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 8.63487164454841e-05,
+          "weighted_p95_hit_error_m": 9.611022236130233e-05,
+          "max_hit_error_m": 0.0005795616936758264,
+          "weighted_mean_abs_relative_length_error": 0.0019417065356585827,
+          "strikes_sha256": "428ea0f1e49898645976733ac1d67ee4e5e2d9da3260237b887a8f8ee2645970",
+          "reference_sha256": "ac73a9988396baede3ad37a6a156e6b20ca8947b2f4710cc9b041f29fef0af16",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "case_id": "f317e77cf7",
+      "representative": false,
+      "baseline_hotspot": "floor",
+      "field_probes": 6613,
+      "max_abs_error_B_T": [
+        3.748623983168553e-07,
+        3.1488151061576097e-06,
+        4.6546944076908403e-10
+      ],
+      "max_abs_error_psiN": 5.336179502712923e-07,
+      "signed_F_T_m": -3.4154218005210835,
+      "axis_RZ_m": [
+        1.7163423299789429,
+        -0.04289267584681511
+      ],
+      "xpoint_RZ_m": [
+        1.2326128590462337,
+        -1.1929482001955942
+      ],
+      "lcfs_sha256": "b6c1bd10082e605177d368dc4fe71a0eed36214b13001331795caf9b8778e771",
+      "equilibrium_sha256": "d38a1eea3ccd7b60ec1f36c990cee96607423c38ade506ffe58ae406500f2695",
+      "mesh_sha256": "9f3c2003834cb6b8d80cc90f2446e17d8922cc2019415f9669bbfcee44a7d5db",
+      "ready_sha256": "8feee766906986f186c09aa9a56976776df157d29b9bc0afb72bc6c00c3c1665",
+      "source_sha256": "93d852103707427e5434b0a8555f393df79c2baac24471d5a68581221a4a52d4",
+      "source_W": 1000000.0000000003,
+      "donors": 1280,
+      "cdf_max_difference": 1.5543122344752192e-15,
+      "distinct_walls": 6,
+      "role_count": 7,
+      "minimum_captured_lower_W": 1000000.0000000003,
+      "maximum_unmapped_count": 0,
+      "maximum_p95_hit_error_mm": 0.04868161733527097,
+      "maximum_hit_error_mm": 0.2136721131597523,
+      "maximum_mean_abs_relative_length_error_pct": 0.21407207143599727,
+      "walls": [
+        {
+          "wall_id": "c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "baseline",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "0a2cb0f529e85c0db299e29e391cb82f58ca505a75c957d1df8b1fd6a033955b",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 1.0440894825586438e-05,
+          "weighted_p95_hit_error_m": 2.1469034992468918e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.0021407207143599727,
+          "strikes_sha256": "d2fba89863d34752a826873eb9eef8c092a2b629b10bd05f261a83d179d2c435",
+          "reference_sha256": "4fcd9f3f4379fe3eb8f654f298d5e0bb8ffcc269a2a4c63225c679439fb17beb",
+          "pass": true
+        },
+        {
+          "wall_id": "1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-only",
+              30713
+            ],
+            [
+              "hotspot",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "e29164c507869aefc815c93ba971516cea6d2250fd905913cad8c342ab63665c",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.0360242495993193e-05,
+          "weighted_p95_hit_error_m": 4.8681617335270966e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.0021314959127868628,
+          "strikes_sha256": "3ebe4b3bb40a16fa38a74c75fbdc1631323a3bb12aa9b5e8bf5665986acd91aa",
+          "reference_sha256": "92749efba9981eda5e64e173cb5c39081365df65ab65acd98ce3ffad0f2ac3d8",
+          "pass": true
+        },
+        {
+          "wall_id": "2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-entry",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "badb6b2c630ffe3beea52d91f4218ce68dd422547c70d2a29cfd8da4b5386dd2",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.664131417723365e-05,
+          "weighted_p95_hit_error_m": 4.27756761866841e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.002125457382104607,
+          "strikes_sha256": "f531639dbb6b352b6b3385f7d26b07c37d8706a63a266095bcf71639c9d670f7",
+          "reference_sha256": "e36466dcbad66104c8974078026eea4eddc704c876ec6cfd04d797b59209b0cc",
+          "pass": true
+        },
+        {
+          "wall_id": "b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-shelf",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "ce672c349ff390362a4e864516e43683d3cbf22b40cfc454a09c01e49eb818cb",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 3.0069593899706127e-05,
+          "weighted_p95_hit_error_m": 4.856465642063528e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.00213107418729038,
+          "strikes_sha256": "0e8a79e9ca16c2d74e901749b3f8f88a99bc48a79dad7f97d70b72a39535cffc",
+          "reference_sha256": "eaa20608ef1153261c0c0cfca142f1f64a4b5ed5f2fe49e5daf8461659e02404",
+          "pass": true
+        },
+        {
+          "wall_id": "9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "floor-connector",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "33d3840b8cc025015a9092ede3e5f7e166c2412289f74782c121a6b721eb0268",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.4913279740556e-05,
+          "weighted_p95_hit_error_m": 4.0803918249566494e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.002121723538232555,
+          "strikes_sha256": "bb9512639ce3ba792bbda7db58bc777638718ca53b57c1d78d7f76e424baec55",
+          "reference_sha256": "e05b380a0601f68e13452f3d209a879b052d85d091fb341d8e62e3e90dc11fdf",
+          "pass": true
+        },
+        {
+          "wall_id": "30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7",
+          "count_over_5mm": 0,
+          "donor_W_over_5mm": 0.0,
+          "roles": [
+            [
+              "full",
+              30713
+            ]
+          ],
+          "vertices": 3914,
+          "native_pfc_sha256": "126aaa0e52220838d38258287068a598dd7e1253f9ee8a59396ce2baea44b416",
+          "toroidal_direction": 1,
+          "donors": 1280,
+          "unmapped": 0,
+          "captured_lower_W": 1000000.0000000003,
+          "uncaptured_W": 0.0,
+          "above_midplane_W": 0.0,
+          "lower_count": 1280,
+          "weighted_median_hit_error_m": 2.6641406470677322e-05,
+          "weighted_p95_hit_error_m": 4.2775676186684095e-05,
+          "max_hit_error_m": 0.0002136721131597523,
+          "weighted_mean_abs_relative_length_error": 0.002125459012937731,
+          "strikes_sha256": "eba199920bad39cac5fc090a967d4a68b799d138f12ec3aca9ba9c7bb1b1fd26",
+          "reference_sha256": "098efc6e3d14d97352e121e057404af6d18793bc530f110da25ad257133ba743",
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2362 @@
+{
+  "schema": "nf-stage5-inputs.v1",
+  "stage4_source_sha256": {
+    "inputs/registration.json": "629906a4c416b43c80fc77a97d56ee166c66a439a8f63c61bfab99817e271e36",
+    "expected.json": "a93beab78292dae9ac282272290cf8533d629bcb0fbe7a888957ddfe72354115",
+    "stage4_report.json": "ea51d468e649f5e1cdef8015167c47c923564b0d958da37b1aca5df3e3520b29"
+  },
+  "driver_sha256": "02424a93d5ac8f21fd3780443bc6201ebff144cae68619cf35383f7ac9a58bc3",
+  "source_columns": [
+    "donor_id",
+    "x_low_m",
+    "x_high_m",
+    "x_mid_m",
+    "R_m",
+    "Z_m",
+    "sign_along_B",
+    "power_fraction",
+    "power_W"
+  ],
+  "native_source_columns": [
+    "R_m",
+    "Z_m",
+    "CDF"
+  ],
+  "field_probe_columns": [
+    "R_m",
+    "Z_m",
+    "BR_T",
+    "BZ_T",
+    "Bphi_T",
+    "psiN"
+  ],
+  "hit_columns": [
+    "R_m",
+    "Z_m",
+    "first_parallel_length_m"
+  ],
+  "field_units": "SI, poloidal flux Wb/rad",
+  "eqdsk_convention": "psi[Z,R] in C order, signed RBphi constant, archived ideal 144-turn coil",
+  "case_record_sha256": {
+    "3264fdd71f": "ad33273b5fdb6898293c48dca13609c4e0685b503fb50d7a1a7394b6e83c117c",
+    "7ce879f1b3": "ea18694166ede6cc911c4196d4f5033c9973fc91ae0f9b79a4b4f7d1aeb1ce4e",
+    "70481becc0": "db9e038d6f316ba46dfd777b018bc4109ef858539e157840afd0a9cd7b6217fd",
+    "5d7f95a730": "6f4bd0ad9b5753f5ec9409fc723107868a4b51803f2fd7ca43aef3fe65b0b57d",
+    "1255ab8051": "8f6c865f99fed629c36dde6e378c8533c79b2a389fee4b98a648056fb36bcd4b",
+    "d880609264": "bc2a4ee60dc1011ec744827cad9cb9d5948fa8f65ba5d150704a7bb045f03c43",
+    "f317e77cf7": "37051e50afeb430c8be06dd510136faa5d92b23264934a79392abed9a0d9cf92"
+  },
+  "cases": [
+    {
+      "case_id": "3264fdd71f",
+      "registration_rank": 3,
+      "time_ms": 1400,
+      "frame_index": 50,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_3264fdd71f.parquet",
+      "raw_sha256": "08c63a2158a04b2d139dcef8d853d3685769772dc8b77afff27488536e026a78",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "3ccb6ba036c887d74e80f15e4a5e6b3e1a20391ee2f81ad54cda432acedd57cb",
+        "normalized_sha256": "5584521af1b29a8cfd6e2111534019ab41d71f4e44cc9a3dc6200d235737861d"
+      },
+      "predicted_family": "floor-shelf",
+      "predicted_region": "shelf",
+      "predicted_floor_sufficient": false,
+      "abstained": false,
+      "baseline_peak_region": "shelf",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7007520198822021,
+          0.016885746270418167
+        ],
+        "xpoint_RZ_m": [
+          1.3907611897953485,
+          -1.070269770906762
+        ],
+        "omp_separatrix_RZ_m": [
+          2.272775449758115,
+          0.016885746270418167
+        ],
+        "psi_axis_Wb_per_rad": -0.3571522338893585,
+        "psi_sep_Wb_per_rad": -0.02624305300326038,
+        "F_T_m": -2.7447706622251933,
+        "tf_current_kA": -95.3045368828192,
+        "lcfs_vertices": 85,
+        "lcfs_sha256": "02e63ddcb31f2a4f728e00183e4bb77150ffee8c46e976baccd7916dc2f58eba",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 59,
+            "strike_RZ_m": [
+              1.4891408358343612,
+              -1.24478081475669
+            ],
+            "refinement_m": 8.856297540100823e-09
+          },
+          "inner": {
+            "segment": 69,
+            "strike_RZ_m": [
+              1.061492143818911,
+              -1.2594778564194302
+            ],
+            "refinement_m": 1.0326605176789582e-08
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "shelf"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_3264fdd71f.parquet",
+        "equilibrium_sha256": "08c63a2158a04b2d139dcef8d853d3685769772dc8b77afff27488536e026a78",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 50,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": -95.3045368828192,
+        "tf_interpolation_times_ms": [
+          1399.998779296875,
+          1400.048828125
+        ],
+        "tf_interpolation_currents_kA": [
+          -95.30007679462433,
+          -95.48294041061402
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318",
+          "wall_file": "walls/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318.wall",
+          "hit_file": "walls/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "d9711acd9fed2fc085c719f5421a0f6d24daf331263ee9b91888790fc8ca75f7",
+          "stage4_receipt_sha256": "26885b749ee2edee6891a0e07de7a07b988e9a8a1118bdf31af65f2b0c706a75",
+          "stage4_events_sha256": "837bcbf336697e9dcb211e134fa255cde4e4ed64f1ff72e6c898a1c9676a3439",
+          "stage4_peak_MW_m2": 6.301715976189746,
+          "stage4_A2_m2": 0.29205651341266686,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "be2cbc0b5b70f6de5a81a6eb06fb58a02a5f3ce8b6382e9014d6eb84e0714173",
+            "donors.csv.gz": "66d86a1d7d209ef1e3aa465a00e8e2a5170d69302e9b8beb5af64528fe649b9a",
+            "geometry.csv": "da0fe80bc50fe1a078357f65de64bd4ad0ce1fce99a352b2c858400f7f609b4a",
+            "profile.csv.gz": "3fb9cd7684836a60d5c4f2b1de2a115c5864feca3b78476dca58f9802e31250f"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c",
+          "wall_file": "walls/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c.wall",
+          "hit_file": "walls/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c.hits",
+          "candidate_id": "e0a9c6312a557f8054b921a2a7f37c545f8f9545fca23859b537d7db55dc4c54",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "ef68522c2904eb47cdcfd0facb3c7ddca14386b81902dde70a5c9ea3057e79f5",
+          "stage4_receipt_sha256": "7f01eedc89db10b340decb9da423dd9b4ca8871da6b8e2d20f770aef48704eac",
+          "stage4_events_sha256": "ab7a1801280ece9eca82b517aa6aaa934e4b222c79ec9d4fdceff77780446bbb",
+          "stage4_peak_MW_m2": 6.301715976189721,
+          "stage4_A2_m2": 0.29205651341266514,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "d0da733f8c4f8ea89b6433af03df3ee09a90f7ca051d8b149723b038a7ee922c",
+            "donors.csv.gz": "a39c27d9ad316f36c1bfe23dea107aa129c75786ccb7af01aa4e10b049c3ceaa",
+            "geometry.csv": "52ef62d161292b62d29aa44ceada3d9ddd3d280c7787f470271693a3f1416af9",
+            "profile.csv.gz": "d20b317723216c55c7cddad0195fa1d8f8b3e3adc2feb10fca3a8d5e5112556a"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038",
+          "wall_file": "walls/df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038.wall",
+          "hit_file": "walls/df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038.hits",
+          "candidate_id": "dfff1c5510c31bf39973039ce9cb203751e35c26202c8f7d2b96ad37e6124fad",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "4df3961f62186bd5531f9bbed47a86906c7257829b433951bb7057eedb0fd9eb",
+          "stage4_receipt_sha256": "41865407f10996bb08b33f402e07fa84330347b1ca18d7bb1c2449b13f75842e",
+          "stage4_events_sha256": "fe7bbead4dc125a3b7c7c5883b363cdc1bfc80f0ee065ecb7424341d4d9962f3",
+          "stage4_peak_MW_m2": 6.3017159761740436,
+          "stage4_A2_m2": 0.292056513415425,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "ac609db3738f6b40638cedf0c656be2b682df00dd628018f29d2600444aac601",
+            "donors.csv.gz": "d6fdad995a2465d1def06ea98df7f7d7b9221ad74a9b0089b6d9549d05219c41",
+            "geometry.csv": "8b7e8c4c9bb4bb49a30b110c59d37788f590820db711b6445c5d0c25fe69dab7",
+            "profile.csv.gz": "5c9d67d8bc6bfc57b4366343330adc45075f2bbbc1891466cddf4652e36837ce"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2",
+          "wall_file": "walls/152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2.wall",
+          "hit_file": "walls/152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2.hits",
+          "candidate_id": "a686085d36e59b16e58952a610b818dc4847c432cc8c15ceab78d81f2bed74a3",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "239cf63d0661b9a425537b4b744b572bdfa321d2f439e21a229c9b8e234fbf8a",
+          "stage4_receipt_sha256": "ce8d812a4e2a18b217c4156281320d3857209c8e65f833f1bf002a425bf2739e",
+          "stage4_events_sha256": "afe835874aa7bd4c6de42417a67f85659d715efc01c3ab17739e7c82576b8002",
+          "stage4_peak_MW_m2": 3.7394000546047144,
+          "stage4_A2_m2": 0.4015824827934112,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "20047ac3bdc2cf81e5f989795c015963541cd787f56e5221884466ce64ac736c",
+            "donors.csv.gz": "ae0a584a874509014fe19f7572cc91a7f55ea257c3cbb015a8168d190878981e",
+            "geometry.csv": "0d2c6bbefd40418a04f9039de88b4243e091c70d42a57e126cd7877045e0b882",
+            "profile.csv.gz": "5e9f1513bcbaf5be9b1b5eea272d899df3b4232300ca8de994972dbeae5205f5"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1",
+          "wall_file": "walls/213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1.wall",
+          "hit_file": "walls/213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1.hits",
+          "candidate_id": "25da4f3da7304b90c922c53848ea7e82a247da437c61dfcbc5569a593220a745",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "e18c4dce1798affa12ec81a05d4d3c80a6c931118ad711f49a8df4e352410197",
+          "stage4_receipt_sha256": "f17084cd4b363a043f13bc77e8e1e2b382e34357d9597e947e4e27373a6b2b61",
+          "stage4_events_sha256": "3a65c279fb40404f969001c462e599af32276c5fa71274ed3dcdd55a203ba80a",
+          "stage4_peak_MW_m2": 6.301715976189721,
+          "stage4_A2_m2": 0.29205651341266525,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "43bfde8cc001f5ebe2b1a89a457619d81ff60668a7c461229debf78caae6c18b",
+            "donors.csv.gz": "fee90895f44ad91a5b53001a3b119267b26610954dbe9f30402304c1d5527dc3",
+            "geometry.csv": "c2f362bd0f223a8a8ec7d64ca1a6c524cb9916c35fa3a909bf9a8e2a20c10e64",
+            "profile.csv.gz": "eccd3e32ae5699d458687df7cde1f6c524109f7ca659f86707546380f3b9328e"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d",
+          "wall_file": "walls/101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d.wall",
+          "hit_file": "walls/101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d.hits",
+          "candidate_id": "1b8b3a756eaaae113f5ccebcd96aaf749e540db1ecbeb67a00c74a7602e706dd",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "d9711acd9fed2fc085c719f5421a0f6d24daf331263ee9b91888790fc8ca75f7",
+          "stage4_receipt_sha256": "26885b749ee2edee6891a0e07de7a07b988e9a8a1118bdf31af65f2b0c706a75",
+          "stage4_events_sha256": "837bcbf336697e9dcb211e134fa255cde4e4ed64f1ff72e6c898a1c9676a3439",
+          "stage4_peak_MW_m2": 3.6885153186390807,
+          "stage4_A2_m2": 0.4049687582675933,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "c12d8836ded73676e53b4e9421fce09a580fc7ee3b44938b6152e8aeb23fcb95",
+            "donors.csv.gz": "8a3db5dbcd984e255900051e3aed30dbd7b36b8a874b83b624a3ab8580db7136",
+            "geometry.csv": "365d1516d65a8c4e2f43ff42eb5dd098d917b50352e0e4c1f86a8dcac688bd2f",
+            "profile.csv.gz": "5ffbbfee86e0e423993fb48f452ef972236486e825cd98e3c16c1377a0185f1f"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c",
+          "wall_file": "walls/6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c.wall",
+          "hit_file": "walls/6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c.hits",
+          "candidate_id": "86b7c199599eba3dc92af28a7c5654362d5c400b41583261a4cd3aff989c8b21",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\3264fdd71f\\30713\\full\\selected",
+          "stage4_result_sha256": "90d4086f06d1baf5595ec1170f6584287c2e2763e2b77637bbcbf04069ec8830",
+          "stage4_receipt_sha256": "31fcc74d8ee4174048fa1b67008c17d11b7622baddc725fd525cf53a4451bfeb",
+          "stage4_events_sha256": "406887900dd2d915dfa4afe2154ab6ffdec9e54eb20e02168778367b13992355",
+          "stage4_peak_MW_m2": 4.219049224826149,
+          "stage4_A2_m2": 0.373537523489034,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "1512a0ae28b719a2ab68ed8d818ac6d2a5fc490c5b3f77bd788ca7649b2fee89",
+            "donors.csv.gz": "b58a7d5f9ab876a8785fc414b6a84765849680d694dda7792e4fb1c1c2d9290f",
+            "geometry.csv": "a103f8548859677098da04285d505ce7233cfa9c986a2231efc7b5d588db83fe",
+            "profile.csv.gz": "c414b449b24e0e1e127f4b49f74091ae59cc53b9071752ec6a1920e0cfe2ae63"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "6d09666f863fd2a80185d06bd4af5d4ed1ed912bfbe342059e055922f41569de",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "7b9c5ca025a44813434698b4fa65cb9fe83fccb456b11b1ad18ed067acc23ff8",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318.wall": "00825eca955d3b58bdae628f0fb9d7db74f5f56909aefc9089ba64507462e4dd",
+        "walls/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318.hits": "ff1f434ee73303638189e372affd7e90334273ca5ffe2c9fdcfa0da587a27d34",
+        "OMP.csv": "1550da45f6b8eb8f1813b5c2b69ab3ef9ab6f09d7086aa8952060d447e807ef6",
+        "OMP.source": "044ceb602e17adaf188d8e6481733ca13424ede39011e4d1e051233869f48107",
+        "field_probes.txt": "d8cb273d29a417941712c43a06b2cbd8c5fa521109c5784b7597fd95f6fc2b77",
+        "walls/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c.wall": "9f2a94c7de7877dd0900fdf32a36e7deae3616e2634ab9aa5c46a934e391128c",
+        "walls/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c.hits": "1745509583260829cf609d4d4170b3e065a6106a09ca7bb3ce6d2ebf18a8c925",
+        "walls/df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038.wall": "1dd7e3b68262b058221f76a325057c435e0c6692ef1ac759b14ed3eb1eb4a0ca",
+        "walls/df2a3ffdd81f4a119742454d4e307d55d5b663f5dc7eec4540ebdfcfda8a9038.hits": "533681c0e9bda7a46de4c165b28e2eb6ca6efe653a5da0d145efdf0eac4403dc",
+        "walls/152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2.wall": "fbfea1b92eabdbae6f4b5154a134b1f18af25110e99938efeefe432970f0ba14",
+        "walls/152599132c23d80c2c8dc15f215f7ba3df9715d4f9e1804c25b55c3a9581ccd2.hits": "4997d2bdbc358c71971ceef374c02c92f72052ab7a49862421a75f038322bbe5",
+        "walls/213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1.wall": "c9761f930e0e97323050088c547ceeb64c59723135ab7d2be5256723362f20ba",
+        "walls/213b906b0c4387e71d566b6c470c8c2e6f4fddd41a8e790f8d5efbe79f93d3c1.hits": "1745509583260829cf609d4d4170b3e065a6106a09ca7bb3ce6d2ebf18a8c925",
+        "walls/101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d.wall": "675779f13a57c84635e3150b6b59029db30a26ed17e56edce289a1e0e63bea5d",
+        "walls/101945b18239d792e7dca880a3a970f22103b6e048e38705a906c73c30409f0d.hits": "1b7a6f58335b9a29e54cdb8decddf90c60260bdd8d3a799f7e43c3f345c55948",
+        "walls/6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c.wall": "d570ae1e8350ca19eb08f2cb5186956e6dac393805a0f0130000dc3223c839be",
+        "walls/6ace917369ec3a7cfe65e92b9e7867b5c23ce23ca5cefff9bd8170cef7d01e5c.hits": "0486fb2cffa3dfee42d1cf11bc3e75b1d2ad45da786955cdeb13d80d9f534095"
+      }
+    },
+    {
+      "case_id": "7ce879f1b3",
+      "registration_rank": 7,
+      "time_ms": 1400,
+      "frame_index": 52,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_7ce879f1b3.parquet",
+      "raw_sha256": "eb85ef99506dcfc26c5039ada6a21d0a4a72c686ef3b4c66804a37b05afbeb90",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "31b4ab2a9adf9c5e0738db573ec698b622536968288c910e33ae2eb3b93e9d9f",
+        "normalized_sha256": "c4911e9e21649d49e52b99338827dce899dddda59d4f3a510a0d5d9257075a9a"
+      },
+      "predicted_family": "floor-shelf",
+      "predicted_region": "shelf",
+      "predicted_floor_sufficient": false,
+      "abstained": false,
+      "baseline_peak_region": "shelf",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7024935483932495,
+          0.013354191556572914
+        ],
+        "xpoint_RZ_m": [
+          1.3935895168157766,
+          -1.0753000277957367
+        ],
+        "omp_separatrix_RZ_m": [
+          2.274323792184124,
+          0.013354191556572914
+        ],
+        "psi_axis_Wb_per_rad": -0.34972410746102084,
+        "psi_sep_Wb_per_rad": -0.018454851390849784,
+        "F_T_m": -2.7373798157691023,
+        "tf_current_kA": -95.04791026976051,
+        "lcfs_vertices": 85,
+        "lcfs_sha256": "26e38b4ce667a0895433c717ac2fe4a8b316599160145343303e74acbbbb5e30",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 59,
+            "strike_RZ_m": [
+              1.4886447617051557,
+              -1.2447807537714672
+            ],
+            "refinement_m": 8.219283538171758e-09
+          },
+          "inner": {
+            "segment": 69,
+            "strike_RZ_m": [
+              1.0643219745178443,
+              -1.2622102793405634
+            ],
+            "refinement_m": 3.485743660660258e-09
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "shelf"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_7ce879f1b3.parquet",
+        "equilibrium_sha256": "eb85ef99506dcfc26c5039ada6a21d0a4a72c686ef3b4c66804a37b05afbeb90",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 52,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": -95.04791026976051,
+        "tf_interpolation_times_ms": [
+          1399.9990234375,
+          1400.049072265625
+        ],
+        "tf_interpolation_currents_kA": [
+          -95.0328145866394,
+          -95.80646834659576
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78",
+          "wall_file": "walls/9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78.wall",
+          "hit_file": "walls/9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "1c2c774cac2319c9588c12f239fc7107b1fb3b7db9cdbe98183e743f775ddb9c",
+          "stage4_receipt_sha256": "c52c57e942b95ba46de6e41b7b40417bfa7c19e08b09fd3209016ed2ac0988a0",
+          "stage4_events_sha256": "a9265c493a5d1c25c1aa375313b8562a06dcf652e0d67706b401bae69c391332",
+          "stage4_peak_MW_m2": 6.108799683885179,
+          "stage4_A2_m2": 0.3008763902871683,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "69477335c6a1cd92f7e3627ae27564a9b103d91a3045f1121f26edbf916f7332",
+            "donors.csv.gz": "a4ac4e59b2747c64a9fe3dc49eaa6c701e71bdb3c34fade409975256759ff861",
+            "geometry.csv": "eef3908428f4bbcd9cd5128e88c540eea8d7820cd390b9ca419112bb5924bec1",
+            "profile.csv.gz": "c0647eb9219859dbbe0d77f11a959f3c70925374bd64c112ef6e198a7436c7d2"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05",
+          "wall_file": "walls/d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05.wall",
+          "hit_file": "walls/d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05.hits",
+          "candidate_id": "43ecc363284739531e845cd6b0b0e27954d203b6e92fab3fb7dc1883d00e87ff",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "ac76528cc4936d1ae413058d85a57fa68ddeb279f078406b222e7b850e34a6b1",
+          "stage4_receipt_sha256": "a13a46fd63f972334e2a4c288ab562b51d5914517c574b640341ee20ebbfb8d7",
+          "stage4_events_sha256": "6f3f4245516076244afe1ea335a7b6a90eb29b002efe018287ffa9b2db6f4be3",
+          "stage4_peak_MW_m2": 6.10879968388528,
+          "stage4_A2_m2": 0.30087639028716906,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "224e2236956163b3ce40d9dfd369a22c08fc8b4ffbcffe858cc54ccd1d3231b1",
+            "donors.csv.gz": "33a205ffd8c34f19567a77ccff69847df50b6b89b4bb0cae6c68fae41875ad1e",
+            "geometry.csv": "b43df1271f862cd60a8a631e0bd3894b220f67b252663f8dc71d7dd22604e9a0",
+            "profile.csv.gz": "36ef50faf84fd29f6028a323186a1bbe7567ac8e4d6c9e27b8906a86b8ae44ca"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b",
+          "wall_file": "walls/5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b.wall",
+          "hit_file": "walls/5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b.hits",
+          "candidate_id": "d5b74a2e126f8418877a39de4b3c14620423c0bf392e40333756f49f5024574a",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "f7fd4597d7c8d5363a1822e0ab44a77d4303c09d9096458bdec7b4314d406eeb",
+          "stage4_receipt_sha256": "c3ebe18b71c3a062027b563f09cf834c084c2d739eb57c16b4ba10b941be3764",
+          "stage4_events_sha256": "67e68be44e2a81f6c0451a159067a7144c2b4dbdf967b4bd6bb01194b3b486cf",
+          "stage4_peak_MW_m2": 6.1087996838627205,
+          "stage4_A2_m2": 0.3008763902914164,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "9763a739897b6084d981256ba8fe6dccac74f29ab2bc5188fe7ed4b7bb446ad0",
+            "donors.csv.gz": "21c1dcbbafb651eca270744648fb8b012b8c1c73f70989056d6560713333923a",
+            "geometry.csv": "f23e8c5a741ff30cd555abb49a030e5a61220a53c32a5f8e7b4d7ca9c24c888a",
+            "profile.csv.gz": "030687541d368e3ca833e5b31bfc7b41ad01c96baed641b6296248e647824869"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544",
+          "wall_file": "walls/f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544.wall",
+          "hit_file": "walls/f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544.hits",
+          "candidate_id": "bfdd2affa27687ff22dd60e9b01faff42948112a6bc276ea41d2e782578b06db",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "6b58d58f7a7c3998d23bba713df6cd95e5b69d0d1c6abd08a434de6cf4fae92a",
+          "stage4_receipt_sha256": "448b972edcdee5a41531c463f78dee3fb31039923b55d97810b1f40ba52307f0",
+          "stage4_events_sha256": "747bf0e064acf2888d32a6a0cb36658518414ed4605b6c9adb95e55a000c3640",
+          "stage4_peak_MW_m2": 3.558552101561622,
+          "stage4_A2_m2": 0.42120569843223643,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "af58ee823da04ccd680650d82d5b34ec4fdd5bb016d871024ca8968528ee1786",
+            "donors.csv.gz": "c5f257c1c417086b1824ce7a67681eb4a668bdcc202b84ee187f91f051c2573b",
+            "geometry.csv": "6a54f436a9f469492d234a12c83b979dd366c53dc383630f199c61224691356e",
+            "profile.csv.gz": "ee10b5e938cc74e1dec9583bf760c5885213bd617a074269e130b373f518caf5"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993",
+          "wall_file": "walls/3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993.wall",
+          "hit_file": "walls/3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993.hits",
+          "candidate_id": "ba625f4783b0e4e931150cc09b7cc77f6158757bc3afe5afa3d44d9dc6329926",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "bd0ba89c762325e6a043ce6f73e10b9209fc16e08b6ca2e13a63f6d8b5d5bcc4",
+          "stage4_receipt_sha256": "dfabdba0565d6860d8fc9e4a0085606651baf4379a5b2891900f4ca2ae260922",
+          "stage4_events_sha256": "f18301f9a3f8a66327cccf9cea57a2fde190f4963df82f105e5ba72f7561f741",
+          "stage4_peak_MW_m2": 6.10879968388528,
+          "stage4_A2_m2": 0.3008763902871691,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "a6a476d9730d9e3294658642117a04e62427e997a5c1fedf2a52a222974d6058",
+            "donors.csv.gz": "8e24fcd3e8eaf78160950e491f8a2199e8df52fa89a9d8e122ac7d4f1a073573",
+            "geometry.csv": "7888b1fc2fc8391461732e3d5e20ab645e2020563481bcfaea48e2f8757544a1",
+            "profile.csv.gz": "83cf8c7583e304882f9a691fd5f21f5099b1a66777816469ea8ea5106fbd0b96"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e",
+          "wall_file": "walls/44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e.wall",
+          "hit_file": "walls/44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e.hits",
+          "candidate_id": "7283ae4d72f729be694d6ac70001fc5c50b14852c9f1449586278abc60f8b8ca",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "1c2c774cac2319c9588c12f239fc7107b1fb3b7db9cdbe98183e743f775ddb9c",
+          "stage4_receipt_sha256": "c52c57e942b95ba46de6e41b7b40417bfa7c19e08b09fd3209016ed2ac0988a0",
+          "stage4_events_sha256": "a9265c493a5d1c25c1aa375313b8562a06dcf652e0d67706b401bae69c391332",
+          "stage4_peak_MW_m2": 3.609598537822226,
+          "stage4_A2_m2": 0.4209065739682871,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "2495e87e305c0b0078ef695b9e2d0da74939fec244a9ff8f42b37544cc4bbb3a",
+            "donors.csv.gz": "083d531e2bad9c9132adcbf18574415455949b3411e37bcb9eeea0f0bf40a1d6",
+            "geometry.csv": "65cfc66ff5e6b68911c1db91c2eef71233bb1bac998110be8c2467e8e8e7b7f3",
+            "profile.csv.gz": "0084881fce3b742305295a620c01d062014a58e8bcfd29af033d29d3cc582df7"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745",
+          "wall_file": "walls/11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745.wall",
+          "hit_file": "walls/11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745.hits",
+          "candidate_id": "4e9cfc86b7924ea3e2596b0e453aaba598dbb67ae0285733c4dfad7ba96b2aa8",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\7ce879f1b3\\30713\\full\\selected",
+          "stage4_result_sha256": "315d9aaea9f5d1682c5516ae792bf9b04dfc66ccac42a1f18bd4d073adfc5095",
+          "stage4_receipt_sha256": "823d2a0c7b2422bbc80e4e63dcfeff8b5d1adc85f1873485328f0642f9305fca",
+          "stage4_events_sha256": "9ac1e3a290dca0b57f693401b4239d86bae223f42f1790d6d3e81e8157d13658",
+          "stage4_peak_MW_m2": 4.052839513519322,
+          "stage4_A2_m2": 0.38647245174335926,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "6de194d7b0345acb4e598ac5cba37eaf179b50079f64ba4c4e5ad707ee97941f",
+            "donors.csv.gz": "1c42e44623713184256b9ca0d207f937f492a6675cb509ce4600295fb32f4c44",
+            "geometry.csv": "474573fc2099c82456f93380f63a15d8047124e8a99f8d7155314fc6b7d5c9a0",
+            "profile.csv.gz": "a434caf5747b636f3eabc0b3983b4a8539e1a3bd9cbb882fcc2efdc9e0f40618"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "aaf464751819c087e59c8549b8503b90138d80934210009eb90f3d0a880de52e",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "123c37fd6a47a82430ed1a67b1ffbf8570b201bf2ca204bbe3b792b5fa01a5e1",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78.wall": "6015a2ed9dbb1d0032c63928adaab164b3c7dd056a55d9c259feee76a7319871",
+        "walls/9025cf3314f25e8a8948dd2f72e327d386b4569b888ea8ad0d9192999990ff78.hits": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+        "OMP.csv": "22a5e1c578aa3712efaf363eab22043bfbe4a03ef66500b650647d52caa82500",
+        "OMP.source": "1d468008e87d0c7ed9e14e50dc5ed20ab203ad7debf0905df209fc2a6d615472",
+        "field_probes.txt": "69108d6011ddebe0161f1963ecda2052fc4eb453c63e8d0a2077b4c86bf29f0f",
+        "walls/d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05.wall": "37137b4dd04e070ec94cb393576ae80465777ba5d9c9f4f57d9ae497ad1c4ebc",
+        "walls/d85e41337b04a3ac8f88d792c23a402de81857266ac2c0dfe09c22a233fe8c05.hits": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+        "walls/5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b.wall": "221ea9297bb8a9563234fb5603135a84b943d6210f67b01405e9b2b4a0ac7c8e",
+        "walls/5cea0ad246acaa56a986426cccf60ecad1bc062e407466d26599e2849739154b.hits": "c1546e6db32045819c7f6466926d2ce902d0205e4f2a8d43dabd4b8644f09222",
+        "walls/f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544.wall": "31b18c28fe454a2315d6a15b0bab2d48fcdbaba66b8113b5f88447f6d8d1dc87",
+        "walls/f549fb3a5c38bd34eaa5d8b64fa56f02457c71fc944e0a5df562888c475d2544.hits": "d84ad3ee6edeb78118d59bf3dcf636a9a4ce996a289a08eb639eaacd2e45800a",
+        "walls/3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993.wall": "9d4e04d312ced2842db70d0c2d2df3fdacd58e2d993f2f4e73430c3fbb79a07c",
+        "walls/3cd94ec19cfff1bdb6f683173d619b4b8559e8176cda243ded25975f38b1b993.hits": "c1d1290c64bafc78b5a903dfabab8c3ec03e009a8c7747d47b03524bf4f68749",
+        "walls/44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e.wall": "74325a1f0e38f763dc088a80a930eb195a5ef7ffa7b735122b302091a13f9c6d",
+        "walls/44db43755c05fb37f5eb49591642587dc868fd5c926f05a9dd7e18694296a11e.hits": "4ff0c0e7dc59f3a404a57a1d4a1d538e88bd8c0786e0bc3ff8101850739cfb73",
+        "walls/11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745.wall": "2877808b065c350bc20b76927fbcf3e23eb2219eb9b28db19f5fe91f1a53e30f",
+        "walls/11cc4c082e00dd93af9c40edd1040f1962d25a23aacba2f780f19c8d9ce05745.hits": "d7ead08282195f35a5fbc955372027405c7fd648b09a5cf20b7cd6e712daa21f"
+      }
+    },
+    {
+      "case_id": "70481becc0",
+      "registration_rank": 8,
+      "time_ms": 1400,
+      "frame_index": 60,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_70481becc0.parquet",
+      "raw_sha256": "59ebaeada61a0d161f01b99f61865cf279f88d00809c4fbdcffee293f42a5531",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "1d9697dc5431b874396cea5b80198d42015316dfe23a771370584d4707467d48",
+        "normalized_sha256": "42c657b5cd1e7f31c9a21f5bcdcd67f10cee260e159aac574d0a16a0c3162f6e"
+      },
+      "predicted_family": "floor-only",
+      "predicted_region": "floor",
+      "predicted_floor_sufficient": true,
+      "abstained": false,
+      "baseline_peak_region": "floor",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.6843461990356445,
+          -0.022261369973421097
+        ],
+        "xpoint_RZ_m": [
+          1.2344370957391702,
+          -1.1726635745818204
+        ],
+        "omp_separatrix_RZ_m": [
+          2.242674502689254,
+          -0.022261369973421097
+        ],
+        "psi_axis_Wb_per_rad": -0.29877920833180716,
+        "psi_sep_Wb_per_rad": 0.0389375953642498,
+        "F_T_m": 3.5739684470089936,
+        "tf_current_kA": 124.09612663225673,
+        "lcfs_vertices": 91,
+        "lcfs_sha256": "98874745430217c9ef459b90a557ec2af21d0d0f51b13755d2a1a3dd7f384bc4",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 68,
+            "strike_RZ_m": [
+              1.3048621676382748,
+              -1.3583427141802626
+            ],
+            "refinement_m": 6.260495508678814e-10
+          },
+          "inner": {
+            "segment": 69,
+            "strike_RZ_m": [
+              1.0417426143986093,
+              -1.2404081407329155
+            ],
+            "refinement_m": 3.5479903822704404e-08
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "floor"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_70481becc0.parquet",
+        "equilibrium_sha256": "59ebaeada61a0d161f01b99f61865cf279f88d00809c4fbdcffee293f42a5531",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 60,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": 124.09612663225673,
+        "tf_interpolation_times_ms": [
+          1399.97607421875,
+          1400.0260009765625
+        ],
+        "tf_interpolation_currents_kA": [
+          123.98153164100647,
+          124.22066098499299
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f",
+          "wall_file": "walls/c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f.wall",
+          "hit_file": "walls/c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "f736e2b83e60f514d96a092de9f5b424e95588af9560bd5bfedd6556742fadc7",
+          "stage4_receipt_sha256": "33f658d6b3a20d8d03e263dc87998d0ae288b04a4720f96629cbc88a4e5d22a5",
+          "stage4_events_sha256": "f07be40d62122af97bb9054a6eae1d08ce48953a7557746ec346bf27a50203f6",
+          "stage4_peak_MW_m2": 7.58139276921377,
+          "stage4_A2_m2": 0.24177120087712117,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "ea5c10e14242ae1866af4663cee7a6ce20b78f373501f645b5380e692ad3e57c",
+            "donors.csv.gz": "d257cf9c6e5ed7989dc07b2e83c6ae939af6f08ad417d5c027a3bc2c37772516",
+            "geometry.csv": "335632f2b893519eb39e63eb9d81498d26aec3a36f047b40fe536c24b5414f90",
+            "profile.csv.gz": "9f2c02466c81060bd03af3c7ea1f5cc2336e8a2d0c2fab73538cebd378cac279"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5",
+          "wall_file": "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.wall",
+          "hit_file": "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.hits",
+          "candidate_id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "42b3a6cb4de367d83ca21251d6d88b4bda4a5d2f21a0a00922ada072234eefd7",
+          "stage4_receipt_sha256": "ae8f052054c09db5fecc91f6ce8fe6e807fa8b8ffeffd93306ff905ce31d3e97",
+          "stage4_events_sha256": "aec233d032f7777b85f5865db7b508cead8156d6ee4b6affcd6086a6f53b1568",
+          "stage4_peak_MW_m2": 2.238362072028793,
+          "stage4_A2_m2": 0.5599850385548518,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "c84eb908470d63b2bc34bc91c9e793144cea571712819fbd5f02cc9f0c8ce3b4",
+            "donors.csv.gz": "44fb395a4291d72d234ce16487f3928aa89ff171a848971fb2a327517abc1192",
+            "geometry.csv": "457edd871c58189711659005ce2476520e8db27a5c88e26e55c6fe7f35dd5f39",
+            "profile.csv.gz": "c7500f248591cb9e6a9e03c7e2d8fe5b67bfcc98a9db1a067a95e913cc3d1c2f"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675",
+          "wall_file": "walls/000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675.wall",
+          "hit_file": "walls/000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675.hits",
+          "candidate_id": "ef323f3128a0cf40ff5f37c9aad3d734ea8d9ae29f625c3c30dee320a7c6e496",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "dc8afd860e2242bb6ea5cf7b765eb10c210db72cffa42de5a649b31149f8c895",
+          "stage4_receipt_sha256": "ffa26323ee58d54aee53a7c7646a2059a5c0b3fd2132f364b81ee46e1d2217f2",
+          "stage4_events_sha256": "60c2d30df2b3b9c17dbd704568021286688447b13cc4dc0f44cc3dc11dfc3616",
+          "stage4_peak_MW_m2": 2.318699030749076,
+          "stage4_A2_m2": 0.504725786121474,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "81d3e149b994b366f3bd6d1fedaa0a234397bfa47661c340ab920017ea0298d1",
+            "donors.csv.gz": "cbfe6832db9c04abafa63ecb51c9da2e4e49e6819624d3b663b674ce8e8cc60d",
+            "geometry.csv": "231535dcb6e1c61492c2877132b75d40b709ead08ac9541ccabbec411a189a2f",
+            "profile.csv.gz": "26c70576932d3c61ab7111f89a2df722e27d7e9f6460ba8d1e8f9820e312012f"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341",
+          "wall_file": "walls/8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341.wall",
+          "hit_file": "walls/8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341.hits",
+          "candidate_id": "c2ce079a73e5379bd004111d3104e940b9058ac8372efe65cf3bc942f36c88a7",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "cd345ab1a5a55e83c48937e0ab851cddb2d5077289fc32ba2b09de1b7ab8c62d",
+          "stage4_receipt_sha256": "852382d33e048961aae9e653dececf62f0732a625b95da048f13203f00388fc5",
+          "stage4_events_sha256": "ce6d62c6a071b73c2d54daa13338793c2e9b1eafd0504d4eeb1c41874eb1e7f7",
+          "stage4_peak_MW_m2": 2.265065788122329,
+          "stage4_A2_m2": 0.5809526522321267,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "0cf006f16b97204d7aa198420df17db1226d0dc43ebbd43e6e75b4c978caf2c3",
+            "donors.csv.gz": "b5434d9a17be4aa032b7279bf901101d90f2f108d8d0fc17e54c1f7e1a9b6fe7",
+            "geometry.csv": "695aa0b1bd4d390309ac3ec21edc50458fd53a9400349a20a1fa3b09c0eda3e7",
+            "profile.csv.gz": "28af62e5a225967503a22e90477028002fc83c84ed2119e867e1dbe1d9435bd7"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e",
+          "wall_file": "walls/54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e.wall",
+          "hit_file": "walls/54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e.hits",
+          "candidate_id": "c03535a5fa065ebe977f614d2a02cc28a35613a507e974befc573f26419da503",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "8626324b87a8e5304a84335b225786dd1d3685df07ccea1d07522e83a2c43f74",
+          "stage4_receipt_sha256": "388f57181cfbb9e7d8bc2b2ea1e32b1655a1b590b79de2b0c8869f28b25355c8",
+          "stage4_events_sha256": "0db882d33efb5e21f7b111cfe53a1ad66b474f2005137afd827adbf6513286c7",
+          "stage4_peak_MW_m2": 2.3257861683579972,
+          "stage4_A2_m2": 0.5236735709161584,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "b68a6998b346f0c9ce766823c84bd51f1146376d89994cdc9376509117b788b3",
+            "donors.csv.gz": "90b58e0383e6a4c4cdcf215c585f5e65d928740db185eb6b75a2730dc7dc8d9a",
+            "geometry.csv": "019d56cf7c7477421b61ff3e4382610d5dfb0372f01352ebae2468e7eb32722d",
+            "profile.csv.gz": "848d956badc758155b25beadc61349b684daee0a76b8fc11f2d22f580f66ca4b"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5",
+          "wall_file": "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.wall",
+          "hit_file": "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.hits",
+          "candidate_id": "20c176868a3f299a5017c70de27291d7558ffa0465f3cb17a6843992f557c1b4",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "f736e2b83e60f514d96a092de9f5b424e95588af9560bd5bfedd6556742fadc7",
+          "stage4_receipt_sha256": "33f658d6b3a20d8d03e263dc87998d0ae288b04a4720f96629cbc88a4e5d22a5",
+          "stage4_events_sha256": "f07be40d62122af97bb9054a6eae1d08ce48953a7557746ec346bf27a50203f6",
+          "stage4_peak_MW_m2": 2.238362072028793,
+          "stage4_A2_m2": 0.5599850385548518,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "c84eb908470d63b2bc34bc91c9e793144cea571712819fbd5f02cc9f0c8ce3b4",
+            "donors.csv.gz": "77efac0a6722e9e7a559aed289cac02cad3ccf1a1ce5e920c5036d7f173b7b73",
+            "geometry.csv": "457edd871c58189711659005ce2476520e8db27a5c88e26e55c6fe7f35dd5f39",
+            "profile.csv.gz": "da682c18cebf3e6974fe576666104fdeaede179df8560c243b9f0d27c134f390"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a",
+          "wall_file": "walls/ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a.wall",
+          "hit_file": "walls/ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a.hits",
+          "candidate_id": "97ed0b0158ad624a8ba73422a010442bbcdf8d913ca30d21e8331fdbc252f447",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30713\\full\\selected",
+          "stage4_result_sha256": "cf95645a67fcf98c48efac1c70b0a7d5931fa58ccc3d0755d69884ad418af0cb",
+          "stage4_receipt_sha256": "5d13022af009256202f84516b8e50298b04cbecc4b7c3ee6a775924b1d9eb4dd",
+          "stage4_events_sha256": "f34c25aa6d303ae7e136d98a67ca17ff840d3a128eb1c064e26dc2e89590848d",
+          "stage4_peak_MW_m2": 2.6260867282981586,
+          "stage4_A2_m2": 0.5437992057237815,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "6fec762339cf8b72044e8b4484be812e99e6d33e334a729e9b26e389b3bca4c6",
+            "donors.csv.gz": "c00c3eaa81958051802da3bf9f9cec321a594e133b069461d68de5cbae41227a",
+            "geometry.csv": "28ea970968583db37e57c89093dfaaaec822fe20f0b8c2de9be2f751f7d01831",
+            "profile.csv.gz": "c4022a510d4b529c8a3e39224f7b34b3d9b4f094cd228a31b584ce4140f9eb45"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30757,
+          "wall_id": "978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787",
+          "wall_file": "walls/978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787.wall",
+          "hit_file": "walls/978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787.hits",
+          "candidate_id": "056b7657b41c768b527140ef9314376ba1aa0c97809acb14e23618157dfd5ae5",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30757\\hotspot\\selected",
+          "stage4_result_sha256": "0b99caa3cd0d2c833feab6dda037acd6f7d5d1fc5f7a03f2beff4712086f05fd",
+          "stage4_receipt_sha256": "79fb83b0f7b50b83d1e86d5c5a360eae27ce0d76b43b05f1fca43b07b852d0e4",
+          "stage4_events_sha256": "2d32e02d619cd1d8176e7c83cad56c22ad24cc7c40ec706d1c363c32b590364c",
+          "stage4_peak_MW_m2": 2.4342572270746508,
+          "stage4_A2_m2": 0.5043557566242366,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "de97393eddd217373caf1a02a9afde4f6a5fc379b26e05d2a1924016c70720cf",
+            "donors.csv.gz": "12d937d33dc9298240e645f75de2cdd3c77175f9fd73b198a4e3b7d2aa94f3e7",
+            "geometry.csv": "f82cec6230e22faf6b6da030eb408d1b1d8000acee9019fb481b527537538281",
+            "profile.csv.gz": "72981604a5a818a4310bb31e2a9967fcb3c84bd41c882ad75ccf847ce38e14e2"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30757,
+          "wall_id": "a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5",
+          "wall_file": "walls/a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5.wall",
+          "hit_file": "walls/a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5.hits",
+          "candidate_id": "15717f2ec4c8996b15b32d1c4e2d8eb95b8a25f5e7aee59cda1c7c2a7687e249",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\70481becc0\\30757\\full\\selected",
+          "stage4_result_sha256": "a27ef73bd43d9110c072529c2315a0ea172dc365727c1bb5b30e101a0df8a3f5",
+          "stage4_receipt_sha256": "fc2200bfae39988ae07a38676de85f326509c1e3bb4c424f7c1880a1ba2a8189",
+          "stage4_events_sha256": "8c5c990c4b7a35f96587165b8e58af9e1aa9161c88887f9c12f4a443ab390104",
+          "stage4_peak_MW_m2": 2.2551896437890364,
+          "stage4_A2_m2": 0.5519170084739147,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "a8f4185735819539875894771505b9d6c318fe72fef1e0c0c751fe01c63e340c",
+            "donors.csv.gz": "a98f2b0cdab716b8923870ee122e322f05eced7e778753283dc6a9f397fe6d3d",
+            "geometry.csv": "a85d4d8811c3a15cd1061b5222b06462ef1af55555de3e0a99761771664df730",
+            "profile.csv.gz": "81b8fdc0817bf46d38fbdc0f8a7d794b67cb00d74e47c66aab0ca51d4163dff0"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "69ffd170efbeba38569b4f96d593d7b06ddce24a1a4521372d6c5d0a6a17e858",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "a87410f453e6b5f5517c83b5d2d4dec9378be2f202df177cd53ff960b003274f",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f.wall": "03cd8ea7d314da68e0ba39766ff27256ead2396c7835732ace6d44449e1e52ca",
+        "walls/c36f950385a8155ce6db21cacc0601ec14aeeaad7469eb451b678f7b1e95181f.hits": "bca760c8e2b3851bbb6eb89afd70c4850b17f35ba449f7745a67d1f54a15a476",
+        "OMP.csv": "4577adc01b0d82f84155e4fa2c64417406cf8980cfb283e9cc375ffb65e1ad7d",
+        "OMP.source": "f962facfe89a141531cd7d8c020ddc1c4615fd4b9d93ec58f4cdf4abc2fb985c",
+        "field_probes.txt": "191a6ba09f4366b2e232b58af04fbf09a2e22ed09814b49d8973c9b1e4e5eedd",
+        "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.wall": "b1817689ef570a6f259107ef8d7601a4617848df360d462a5f28f89d439f7acb",
+        "walls/28627ab691c292b238664581dad7295ad1aa921b1c3221c62c12fe6d82c1b4f5.hits": "6552d39dfbc0b088351ed058d39101d40603714bbc96c7a7825f7e05e96a13fd",
+        "walls/000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675.wall": "258460d2a7ab376f4b7827f099be6a82c2171576f872d30f9c6482f2beadea3d",
+        "walls/000687817094b9420b1b9dbec63c59c6490f1521d0182b4c43088ce7a5c10675.hits": "58bd9c03334bced9e9b4d38f0e584d30ae6b7c8cc5ac3f30d2ed69367096b5af",
+        "walls/8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341.wall": "7bbd08dda13a38994dc32ffe754cd289942ac3b14a104ba73fd31e35080ad791",
+        "walls/8749f476f4b987d7730b194f5b002b636b24b7c8bc145b7b70ceb87ff5cee341.hits": "d946739505dfc66905872cd9b6881d576d16e0fd526656c026f103d40ecd4290",
+        "walls/54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e.wall": "50f996b8322b73fc0d4e631ed12b7a91dd4dd627f0fad434827637ddfcf2eb21",
+        "walls/54e0a111e091120bbcd92eca942b2ab10cdf1f5d5fcba58b6e413116049d3f8e.hits": "7909fb3b6fd97fdd4cb7ba2311b0ec17878f8fbbde8c670f62a36f21ed1a21e1",
+        "walls/ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a.wall": "d53f4f52842d4b51372ce71db0d947ef5daf066104af7873157aa795fc277be4",
+        "walls/ee29fc605664644e46f75f22266722957289ded4bfb7a0c36ce5571ddd27128a.hits": "810388635c19b0b48ee66ccc3c64609ec0347266609f2bed20a21d1276fb03b7",
+        "walls/978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787.wall": "79c2c6e446df684dee0c8cdfdfa7890eecdddf9202e9149fec90841f71f3d6ea",
+        "walls/978b884aab33049575fabb6ed680a3102746d0801574c564e387f717a20d2787.hits": "2417203790e1c92bd028adb0249e0431f92c1edde1f391f8037d2ff1b5f7b074",
+        "walls/a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5.wall": "1a4a01e1a95d7e9dfa747322231752ca514194102bf14f4e93e6867999fe4484",
+        "walls/a51ac91f56ff6e67803d502f4cefdb3b0880d0e928eed5490f38f09840b36db5.hits": "bb8daa870a86675843ba7e314960817287d848700ce6e18fb88bec9f14c69816"
+      }
+    },
+    {
+      "case_id": "5d7f95a730",
+      "registration_rank": 11,
+      "time_ms": 1400,
+      "frame_index": 55,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_5d7f95a730.parquet",
+      "raw_sha256": "c82127337c93cb0a020b08e82f6ed12f2bf51d189b6d5e1c1494ab6f2761a3c9",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "fc2ddbc2a34b7b0ebdbe989b01ec111f27874c7e70f24bf6bddef85c885d5d18",
+        "normalized_sha256": "9b166af17fc9ec419a3aad19e3fbae23dbb0255cac55492d4ca498a6bcc42f85"
+      },
+      "predicted_family": "floor-only",
+      "predicted_region": "floor",
+      "predicted_floor_sufficient": true,
+      "abstained": false,
+      "baseline_peak_region": "floor",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7495076656341553,
+          -0.05247155949473381
+        ],
+        "xpoint_RZ_m": [
+          1.3078451363549757,
+          -1.1311253092398232
+        ],
+        "omp_separatrix_RZ_m": [
+          2.3037226827888007,
+          -0.05247155949473381
+        ],
+        "psi_axis_Wb_per_rad": -0.30274263292174075,
+        "psi_sep_Wb_per_rad": -0.004939416692755235,
+        "F_T_m": -3.414445946041452,
+        "tf_current_kA": -118.5571509042171,
+        "lcfs_vertices": 89,
+        "lcfs_sha256": "8431b03456361927bdd756a11388ace61be8b4b299d0af7cd4306b7fed106e31",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 68,
+            "strike_RZ_m": [
+              1.3517154843855643,
+              -1.3581433383643169
+            ],
+            "refinement_m": 1.8811955777782738e-09
+          },
+          "inner": {
+            "segment": 70,
+            "strike_RZ_m": [
+              1.0174938064805852,
+              -1.1793434019579607
+            ],
+            "refinement_m": 2.501517227221126e-08
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "floor"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_5d7f95a730.parquet",
+        "equilibrium_sha256": "c82127337c93cb0a020b08e82f6ed12f2bf51d189b6d5e1c1494ab6f2761a3c9",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 55,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": -118.5571509042171,
+        "tf_interpolation_times_ms": [
+          1399.9820556640625,
+          1400.031982421875
+        ],
+        "tf_interpolation_currents_kA": [
+          -118.67848677730561,
+          -118.34089240932465
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da",
+          "wall_file": "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.wall",
+          "hit_file": "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "d8041d2bbbee6f0d65a80604c8a52514b4f4cf6d6ba45ce53588b60bbc99589d",
+          "stage4_receipt_sha256": "7d2a9b6855949399d774d163d9431d254449f7088ed802ffc6bae5ab5f023616",
+          "stage4_events_sha256": "449bff8393e6a5a38443cfdeea6fab52d45aac21fa155837ebdf1731524dea2a",
+          "stage4_peak_MW_m2": 8.056377613042205,
+          "stage4_A2_m2": 0.2425520162820975,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "6391563df697b86760034f1c7fa052bc8be9b52846843250c2cfe2b232590a7f",
+            "donors.csv.gz": "92f112c1b2cdb830950897c3a7fc4666b975459e1cc4ef794fae548a655acb06",
+            "geometry.csv": "8d331d5ca60fb79338136575daa5464515d9c890eb320eabdd58d0b3ff87f982",
+            "profile.csv.gz": "f66d0139f582357e9d8c1aa8b5fe05cc7f2fa5120b763a303cc72d637606c176"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444",
+          "wall_file": "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.wall",
+          "hit_file": "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.hits",
+          "candidate_id": "8f690e1661abe1b2e681780f3b10ad7a4b5b378f726cab5daf5686cdefef001a",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "4a9b70da026ffd1f5d463d5a144677944027e4b4bb6a4d65c1336d91ddcc8dbb",
+          "stage4_receipt_sha256": "58436bec321047d2f4df089048ce3718a5c9a4f3b049afccd46e68918431b93e",
+          "stage4_events_sha256": "8df4e6172738bc950175c598c6d58818b3bdf9dfcc998fc41012c6ebc581e468",
+          "stage4_peak_MW_m2": 4.1389153585787835,
+          "stage4_A2_m2": 0.40474006855897865,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "e147b5d73629a3f8c01de8e3cb5f37b93bccfd7bbabfed79d53c7209b4367289",
+            "donors.csv.gz": "73c403c90ad76588f967d34dc20d2b89b85b1ecaed6addbc51f2704681b064f1",
+            "geometry.csv": "7c5bdacdd231a0b3022f22dc0a001396e423dec0f287901fc472c64364c5c601",
+            "profile.csv.gz": "04d168bdc20122f22a9fdcde3812f21781898f9120fcdb32c803dd42422bac75"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac",
+          "wall_file": "walls/a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac.wall",
+          "hit_file": "walls/a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac.hits",
+          "candidate_id": "07f211f5eb07478391cceabfbfa71d116aa3b4da89927f3cbde8531c84052843",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "eb2ae46d6e924333585f111b90f8032750bf82de7758f032b16b76dde1fefbb3",
+          "stage4_receipt_sha256": "d85d0170f774fa08e07fa2e95b2e7d21d24be496d8335883f02d4b25bc0ec250",
+          "stage4_events_sha256": "b7245552b6179010a57662e867eb9ba3f633f3359b3ea48f4c5438932d6f882a",
+          "stage4_peak_MW_m2": 4.138915358579137,
+          "stage4_A2_m2": 0.4047400685589176,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "090753fcdec4c3727f65dcb3536d9c265e8d8cc406ba2d199a512818d46df805",
+            "donors.csv.gz": "8ebd94f0e0765091ebbe54a4065b16c38825ff34e0a52d3772fdaaed9d77e964",
+            "geometry.csv": "9d5463b899d87f9c2f4d72dca365e0fbf9616b52f8a41dca086421927c7604a2",
+            "profile.csv.gz": "615bedd1c71d31e44024c269ac4cf07c1d19b99206b4e29f79eee0af347c0dbd"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed",
+          "wall_file": "walls/eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed.wall",
+          "hit_file": "walls/eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed.hits",
+          "candidate_id": "393e0d023f6901c8bc9e653391e2c50075603e60045e297e641dbe65d3aaf03d",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "206ab9f549f01fd59ed596dfaa243a72af7f979ff3a745fa6d80357897e67f3d",
+          "stage4_receipt_sha256": "aed4b13fe4c7adf11904ad5928f5352f306bdeb2429700ec086bf1d2686cd9e0",
+          "stage4_events_sha256": "1ee2630213f4065c079355cf06fa5dc0382055e9ee6d1984206095af4f5d57d6",
+          "stage4_peak_MW_m2": 4.138915327165371,
+          "stage4_A2_m2": 0.40473063294148404,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "20514fc81c4cbce24b83c44d12708b32af2e389e18719e72ee1e18dba9016d8d",
+            "donors.csv.gz": "320691aa58fea7bad7eff820eccf658a25b67aa181112c5fbfc02413ded951f5",
+            "geometry.csv": "c1dfb1aac7877b23d21fbd73f92a8d8d752bc83866c185a5266dc2e198fd77e1",
+            "profile.csv.gz": "177b17d94566cb6bf33009d88609e874f4c94f6a2a042ca6dbb69b133a302845"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06",
+          "wall_file": "walls/53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06.wall",
+          "hit_file": "walls/53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06.hits",
+          "candidate_id": "bcbf7dede7dc4a9b4f83353438a0ecc49780e65d45b7feed4607933b3775cea3",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "4bcb20c89a44e17f9f95ab0e12ce44b0789b78dd9d44fa10fc4221a1fdb5b2dc",
+          "stage4_receipt_sha256": "5eec76733696696b1a0069c24c7d908df80d39e5d1857918b54d4b282902cc2d",
+          "stage4_events_sha256": "3da6f5e0b66b844e3ed8d77aa5b86be8dfd28fcc8254384877e60bcca56703a3",
+          "stage4_peak_MW_m2": 4.138915358561026,
+          "stage4_A2_m2": 0.40473780503464934,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "0e9b6b30bcb0ebc7eccfa6da691a5f375f93c75e25f78cc1ec31b9fe937c8127",
+            "donors.csv.gz": "63380ec7f77934f9f11a3e1c21e63185ea20e2d55fd7e4e95fd4fef25c0cedcb",
+            "geometry.csv": "66c53a69b54f6315e42867ebf061474d1030ea5c122558797513a29716bda73a",
+            "profile.csv.gz": "21d5e6cf9edd9825c62f6a7915e9ba33ffc55b5e9dd481afb06d6fb8657744cd"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444",
+          "wall_file": "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.wall",
+          "hit_file": "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.hits",
+          "candidate_id": "8f690e1661abe1b2e681780f3b10ad7a4b5b378f726cab5daf5686cdefef001a",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "d8041d2bbbee6f0d65a80604c8a52514b4f4cf6d6ba45ce53588b60bbc99589d",
+          "stage4_receipt_sha256": "7d2a9b6855949399d774d163d9431d254449f7088ed802ffc6bae5ab5f023616",
+          "stage4_events_sha256": "449bff8393e6a5a38443cfdeea6fab52d45aac21fa155837ebdf1731524dea2a",
+          "stage4_peak_MW_m2": 4.1389153585787835,
+          "stage4_A2_m2": 0.40474006855897865,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "e147b5d73629a3f8c01de8e3cb5f37b93bccfd7bbabfed79d53c7209b4367289",
+            "donors.csv.gz": "8a5db7b29623d8659c4532edaf3ef3ec1836d26a1c00698e0fcc84b8e87059cd",
+            "geometry.csv": "7c5bdacdd231a0b3022f22dc0a001396e423dec0f287901fc472c64364c5c601",
+            "profile.csv.gz": "24b4e6f1ddc95cea5c72792b9172f6e32380363b16bd83ff33838f4938dce592"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca",
+          "wall_file": "walls/6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca.wall",
+          "hit_file": "walls/6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca.hits",
+          "candidate_id": "7307ecb46b71bc321218d0678de111beb2cb561095e7585564aed3fd2788c734",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\5d7f95a730\\30713\\full\\selected",
+          "stage4_result_sha256": "95d85d0c8b34e25a010f98a06c3c64727ef51f3e8390095fb813f195baae1bb7",
+          "stage4_receipt_sha256": "ce81c1e542c694cfe9779a97aec245beb1de83a6933f21a1955badc577e1f7c0",
+          "stage4_events_sha256": "464db200568bf11e8d334076459ba0d0c067b2f1d612658c049e119a7931ab98",
+          "stage4_peak_MW_m2": 4.1389153329285575,
+          "stage4_A2_m2": 0.40472089219855284,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "ce36e740e2944331a4b219d02adf7bcf728c3845866756a936dea1171266c586",
+            "donors.csv.gz": "8290a83c91b45c4ac966fb6e74276625a12736cfa567510b6cf598b25f20a0ed",
+            "geometry.csv": "920f44890d2bf340c5d3b80ea80530f68f9be89e3fd446b99df6b7023bdce292",
+            "profile.csv.gz": "d42a0db538e62d022a474cfec0c2842c4b6bb4d2f9f63144d882b09705a8a25c"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "1b9812023017a0d7bb68ff85e2e9c57d8bfebb90b96a88c2a512a620274ba2c8",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "0f45af2a34e9eb1024129efc92fa86376cd35c1b4ae871b233fff173b0b16b69",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.wall": "8bedc82e4b6feae2a0b1c5ffc60469d69d73203b9fb278f20f632b99fb9e9b88",
+        "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.hits": "8d4e9546e0e319002d9ff5749a89d1224131cee036fe5c56467355365cbaaa99",
+        "OMP.csv": "a88067947200533bbbd5dbdf72d60e156e6df065308cefd8c378cba6da74da97",
+        "OMP.source": "f6fc3be48e2f7bc7a369b05cf66d8948db680e8ba5b60218bdf6a4f2e7e81eef",
+        "field_probes.txt": "c3d78d3d220a460d38dd58c08e9cdaa8e37f0329ec8ad14c8dc175eac6c2d395",
+        "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.wall": "615a38cb4caa9a9ce575e324fa822edd812a199322cd87561204ef6603aa16e4",
+        "walls/2bf566093a0ca678dad98fc36f9285680b36ff2ebd951528c06064ab8e2a9444.hits": "a40b773d0022287d63ddf6ee6fb62eae338717460bf11332559cc7489bd8cdf7",
+        "walls/a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac.wall": "f53741c86928c7a23f9a33b5363a96b7cc98611c6518f16045dfec912f7aa780",
+        "walls/a0ed83b31bbe1812876ef6d966c4a0157cbaa38b60ca6c809075615f9b6741ac.hits": "dd1271203362e0de9be2551970246833b2fb4bb93ca1c68b53caa636772843b4",
+        "walls/eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed.wall": "d1b322e324aa340a9fcda717aa2615fbf90206f3483591c6b3a23b342bb8f3c4",
+        "walls/eb24e1fd6e3e9dd5609d2498a31953292a967e318b90d2172dcb0014515fbeed.hits": "e98e2d01a886bfa62e20c87a74b8fb18180db0b3be86e18018d40cc4d1ea8450",
+        "walls/53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06.wall": "5a7be1fe81bb973534a108cd9348aaec3c23d439fe61bd0ef234e94870043419",
+        "walls/53c7005bd4af93a3012aa581eff45faadaeaa2397e4e0c5649b0172c74ab9f06.hits": "15926a8320c40068e1c9617ccbf538bf8b72620d2cffa9ed678f616955c698ef",
+        "walls/6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca.wall": "33497054b1eab0c3e2f5f2fc69ad6853e4e274abb4171b5681b3d7f618cf3ae6",
+        "walls/6332b4e6ac295c8bd27b48dd50e7e5800629365716116666ad5f7e490b3b8fca.hits": "9bb4d0c0c334589565b0e02bcd7ced96639eb41b2e276457350754f8f42ac6e2"
+      }
+    },
+    {
+      "case_id": "1255ab8051",
+      "registration_rank": 15,
+      "time_ms": 1400,
+      "frame_index": 52,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_1255ab8051.parquet",
+      "raw_sha256": "1e0df0a63d32e732fc8e9b98739b5b028154d463171c9b83d84864d528a4d9b0",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "69a92ebc6a50006f15582a42bc55891c209150a6c57b2b25cef230aff103cd88",
+        "normalized_sha256": "c6664a653fdf6a5710cf9d0e47c8ad447a1517efe2b50ab1ed47e8fd6d616c96"
+      },
+      "predicted_family": "floor-shelf",
+      "predicted_region": "shelf",
+      "predicted_floor_sufficient": false,
+      "abstained": false,
+      "baseline_peak_region": "shelf",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7039339542388916,
+          0.015483861789107323
+        ],
+        "xpoint_RZ_m": [
+          1.3921622361861188,
+          -1.0713178502176812
+        ],
+        "omp_separatrix_RZ_m": [
+          2.2753422545064885,
+          0.015483861789107323
+        ],
+        "psi_axis_Wb_per_rad": -0.3579430609386605,
+        "psi_sep_Wb_per_rad": -0.03214863536042161,
+        "F_T_m": -2.716784253799751,
+        "tf_current_kA": -94.33278659026914,
+        "lcfs_vertices": 86,
+        "lcfs_sha256": "09309e2f72d14d170fb3a0b99984f5da417ce48c9a1f171a39281b00af23efbf",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 59,
+            "strike_RZ_m": [
+              1.4897090142897986,
+              -1.2447808846061086
+            ],
+            "refinement_m": 3.0376785761010363e-09
+          },
+          "inner": {
+            "segment": 69,
+            "strike_RZ_m": [
+              1.062569904021764,
+              -1.2605185182098584
+            ],
+            "refinement_m": 9.877804191228798e-11
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "shelf"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_1255ab8051.parquet",
+        "equilibrium_sha256": "1e0df0a63d32e732fc8e9b98739b5b028154d463171c9b83d84864d528a4d9b0",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 52,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": -94.33278659026914,
+        "tf_interpolation_times_ms": [
+          1399.999755859375,
+          1400.0498046875
+        ],
+        "tf_interpolation_currents_kA": [
+          -94.32949298667909,
+          -95.004681722641
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e",
+          "wall_file": "walls/8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e.wall",
+          "hit_file": "walls/8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "04a8a5636ce9cfe519ecbae45d829286b0cdf42df31b52c343e7a99e8743d184",
+          "stage4_receipt_sha256": "12f4a9e0e26d04f25172c655e87fa81b693e0af64ee8bd5949f84f6a938271a5",
+          "stage4_events_sha256": "341ce7926eb330fc7313272a08265fe12deb9242228238dc4ac2448af52a634f",
+          "stage4_peak_MW_m2": 6.3130067399682375,
+          "stage4_A2_m2": 0.2916531293880302,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "6d5793c1a57be480f78ca7dcc163f1e7be0cbbbc0cd7825fe8f8a7296ec59c7b",
+            "donors.csv.gz": "ce27bbb8bba6e1ff16afe9998804ca8f7389221c661afc9fcfc8917108a18d14",
+            "geometry.csv": "14b12732dee6ce274b932c224cb12bc5c0f5326761d17313e217549bdef91841",
+            "profile.csv.gz": "c242f2058aea14c341b50c4156176c2ad8267a836185e912870812ff81c8aa4f"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301",
+          "wall_file": "walls/cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301.wall",
+          "hit_file": "walls/cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301.hits",
+          "candidate_id": "9a0fd9211ee76547a504f82ef4947f26aec67558a57b2d10558046346addf6ed",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "f73b1228ddb73bcf6040dcbd8d9e5786f9b17f5daee9aea0170abc4d45c1f0f2",
+          "stage4_receipt_sha256": "163d3f887f78fdb7a9c606351a19fb3f467ff04435169ce233f939b9c84e9a1d",
+          "stage4_events_sha256": "9beab529d511cfd2f7b7e9eb31620da949816f45413d09fd43144da397721d62",
+          "stage4_peak_MW_m2": 6.313006739967949,
+          "stage4_A2_m2": 0.29165312938802984,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "70a37e2b457196dbf41715c8192a135268a6c9ff1a997dcd57698161e5575de0",
+            "donors.csv.gz": "6394a58b1239ee227ad5eb824609331fdaf10c86aab0b40b6b1f9ccf7891ecd8",
+            "geometry.csv": "18c84bd8fe54d2abae7c2da86eeb6cfad231ae410631982d229a0cc117991a02",
+            "profile.csv.gz": "258a096292b25a438729656f4ed1b0ad83c1ad23b444ce7b89b48cf6770b2375"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0",
+          "wall_file": "walls/41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0.wall",
+          "hit_file": "walls/41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0.hits",
+          "candidate_id": "f60e01610830dd1b4c55ba5ec93dd0bbb719f83950f5bb740fde5f720437ff97",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "af11ca3250d9135880da58d6e0f4e7e8a2c697c19613fbebd71caae75f5c7e83",
+          "stage4_receipt_sha256": "b9b6ed411875e719bb4c47ef8fc00e313b005784e437f26336d6ec1f34320976",
+          "stage4_events_sha256": "574ca1c1da5e30ca874be2791ea03e9c523855c1a0a6ca9bf3538aa47a0ebe95",
+          "stage4_peak_MW_m2": 6.313006739951301,
+          "stage4_A2_m2": 0.2916531293909548,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "fac29611b8259046d3d6d410f98b660d9287fce5a467409c25559d65b53a8b0f",
+            "donors.csv.gz": "09eacf563385c53707dd60384d1339b6736f59a43aa0cfc425a88ace1bd7f3f7",
+            "geometry.csv": "1e1b264b03de33e13a00de32f1ab40306bb55f9e7be7cb6f153ddde3fbc26ac1",
+            "profile.csv.gz": "27998748ed20502cbef95697f3d8c3a1640326bd4bfc29622a81d8d140f5c76b"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c",
+          "wall_file": "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.wall",
+          "hit_file": "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.hits",
+          "candidate_id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "f27171657a7e636cc27357664a0e2fd11fa07b20353168711fcce42bffdce21e",
+          "stage4_receipt_sha256": "746587a1520cc4992f4718196f7d20a0f3b7e1ea3603fd6c469cac1c40beb62f",
+          "stage4_events_sha256": "12e5dc50bf5594e953448b6aebcdfaceef472e54abc1db4bae9eb1c89e9fffb1",
+          "stage4_peak_MW_m2": 3.7464872265198803,
+          "stage4_A2_m2": 0.3988242476983761,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "c34c5b5b9caa05a68f526be61cd5aa268101ee86b17b187a4ce453342f0954d8",
+            "donors.csv.gz": "da58d0340e38b8511f97862554168e41a140c44b2dcc7a6bc80f846b04febe95",
+            "geometry.csv": "e20f19c038dce26e0671442b41816cd96f5eed917de68afa9eaf8cdcc1ed91ae",
+            "profile.csv.gz": "ad7ea51f253ad47c4029d9f6275e4fa8e99c568f6a31568c6b5caed167fbe851"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc",
+          "wall_file": "walls/7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc.wall",
+          "hit_file": "walls/7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc.hits",
+          "candidate_id": "d613f47025ba4a62e89a44d337d5003784f80ab4e4462bffcd49d00a3b39c8f7",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "e222e0ab7712825914f363f8959d831056710094261d48fffea463245524ecda",
+          "stage4_receipt_sha256": "c27c3499c307bf61d4fa30774038b68801b1df0017d72b53175edde386a933bf",
+          "stage4_events_sha256": "d863aaa70f52a07b403b515a7bc205206a74e391d4b711353c2b66686e0315fd",
+          "stage4_peak_MW_m2": 6.313006739967949,
+          "stage4_A2_m2": 0.29165312938802984,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "bb66530a4f09ac30d858852b75552c79ab3ca50afdbbc3335c7f3f89d6eae61b",
+            "donors.csv.gz": "65516be9946b41dc2cd1d9f62705cf7f2dc2669b7a7584b518869bdd3cf95595",
+            "geometry.csv": "445dc0b72738f0e49e68f87e4e2775c42d207170443b481507bb8b202b63c397",
+            "profile.csv.gz": "0baca88a410e5e7b27198c11168efd6a6f095ec9ce51950bd7bcec1c1855b841"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c",
+          "wall_file": "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.wall",
+          "hit_file": "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.hits",
+          "candidate_id": "d2ad25dfc70aaefc9e8a9ede98303943d8d4b3bb0c7e93732af9533034e6076f",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "04a8a5636ce9cfe519ecbae45d829286b0cdf42df31b52c343e7a99e8743d184",
+          "stage4_receipt_sha256": "12f4a9e0e26d04f25172c655e87fa81b693e0af64ee8bd5949f84f6a938271a5",
+          "stage4_events_sha256": "341ce7926eb330fc7313272a08265fe12deb9242228238dc4ac2448af52a634f",
+          "stage4_peak_MW_m2": 3.7464872265198803,
+          "stage4_A2_m2": 0.3988242476983761,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "c34c5b5b9caa05a68f526be61cd5aa268101ee86b17b187a4ce453342f0954d8",
+            "donors.csv.gz": "6ffd0b528488c274f5e70720b6710c6f1822c6846159396da64321a9f8e80c80",
+            "geometry.csv": "e20f19c038dce26e0671442b41816cd96f5eed917de68afa9eaf8cdcc1ed91ae",
+            "profile.csv.gz": "7968d18f73ce2abe0ace06f3d82deef2f380f0ff34c3cc23f522910d6b43b72c"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251",
+          "wall_file": "walls/e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251.wall",
+          "hit_file": "walls/e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251.hits",
+          "candidate_id": "5aba7513cb48fbb9e880af6bf87cb155e953da121f8004af6269e4c3aea8b816",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\1255ab8051\\30713\\full\\selected",
+          "stage4_result_sha256": "3fa79f9c8dcb26db3c29b02ff741d5634a3d7b6b95d901220d95e1a2e3fe7ca5",
+          "stage4_receipt_sha256": "6d424139c4321680e6a0e27ba7011f727cdda9cdafae233383a4e0b8ed4e1fcd",
+          "stage4_events_sha256": "03b61e77da88317698e2c21a254a065adab474ca5c08fb87b102af69022efc06",
+          "stage4_peak_MW_m2": 4.21738714545753,
+          "stage4_A2_m2": 0.37197930941963453,
+          "stage4_peak_region": "shelf",
+          "files_sha256": {
+            "boundary.npz": "b781807ed3385310cc192172aea8e6fa83062392591f6c64c246e20a144ce443",
+            "donors.csv.gz": "1f0156ee2911a19bdc56b3ce36d24fc11027b0e4fc93c4594d9e9e4669e4fed1",
+            "geometry.csv": "49daf163c8e80920c6323582a7b4e418e214a17500a3c808c104d3fba1e1e00f",
+            "profile.csv.gz": "98204208f932226fc719e6532adde689c1088e553762bac266ff530f4d05c7a2"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "e88a77b44a9dc5dd83c3dea5fe5ad115dc359d59881822a7a31a78b53f01c8bb",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "04a541d4aa5e63ef62b2ad30e10c2e5c26501f2ee3b4560ec0fae4886509a7be",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e.wall": "1c869ffa254f41a96410d135451e6dd81d18317223f56622606a680826361a61",
+        "walls/8138c4e95dc4f90894f457793f93d5781324839f3a90f109ff355f3ac74d1f1e.hits": "60be3c8ad5743572d51507db03ea85ddc3aa89f325496ce38bb11457d2a14130",
+        "OMP.csv": "e2f1ff16e166d6d0de16be06a348dec3da4abcb8e2effd492a739ce509f984f4",
+        "OMP.source": "4b7ae9d9eae01e5f204a72f4447272c7283e85a62052cd96d0c6c4744ab2db8e",
+        "field_probes.txt": "06d7e4eac7232f42390fd5d443b4b2b753da30d4a9213bc355ea963cadec6edf",
+        "walls/cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301.wall": "81d4c7c75f499d5c896401c5fd556445e75b11d108dcf6a4b6fede9ca4c7c132",
+        "walls/cafc0cb61d5d565671eb9caa13d4f837c5903d343fe9b357e7e0a580b98d8301.hits": "72d86755ee5d459fb00deaec7b539e9de85236a87b8d7ec5bb951787a81cf41a",
+        "walls/41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0.wall": "6b688215ea21fba549b83468d1833aec72418fef51935eaf8cbad2413ae68403",
+        "walls/41de3fa70729205e371bbb23145c57de696e98fd66506cc8e7d86e397c9668d0.hits": "d65631a87ad14a4fa0342aa1f7dca1a615c0917e56335b29394dcd5b6703eaae",
+        "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.wall": "36da7775e1db73ca9117dd8403a1710aba11f621b7dcc04fe44a367000bcafe6",
+        "walls/3ec82908619448469470113647642be20c17a1a00fb23226ddd3a354432ce79c.hits": "602aac4fdd66389113934b368257ee92ddc4a27ca84ec9fd65e298c16060ded8",
+        "walls/7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc.wall": "14206574902cd8a9e87007ed4c5fba73a896f754aa7195b3b2b729acfb3e358f",
+        "walls/7cc1839632db039cc832063eac15d796040239134fd1b75cc7a73feffe6286bc.hits": "72d86755ee5d459fb00deaec7b539e9de85236a87b8d7ec5bb951787a81cf41a",
+        "walls/e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251.wall": "6e3815a9467800a74794df86bd8ce868a9ea613d11e50e235c06746618e780ab",
+        "walls/e38af5df861b1499ee4d83ce9824f7c6ba1a2630f71c8094a8f5d81c9d769251.hits": "ef98adab3fe2348f957c13b907a17617f7fd8deb5c52f270e5f68c332096aa87"
+      }
+    },
+    {
+      "case_id": "d880609264",
+      "registration_rank": 17,
+      "time_ms": 1400,
+      "frame_index": 62,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_d880609264.parquet",
+      "raw_sha256": "ddde3c7dfbd4034ef61e2142b787a2e4c435e4f33d119851626277224e601cd3",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "a8f80928bd1d4dba173942b0d8266012c9e56003b23684d5fb52c3e9f836377b",
+        "normalized_sha256": "915b17397a9ce3afbf5456c01a1cd294d4c5432edd1ddea1bf50955cf1136b8b"
+      },
+      "predicted_family": "floor-only",
+      "predicted_region": "floor",
+      "predicted_floor_sufficient": true,
+      "abstained": false,
+      "baseline_peak_region": "floor",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7049405574798584,
+          -0.051394227892160416
+        ],
+        "xpoint_RZ_m": [
+          1.23020500415399,
+          -1.1556935800652657
+        ],
+        "omp_separatrix_RZ_m": [
+          2.253367237733132,
+          -0.051394227892160416
+        ],
+        "psi_axis_Wb_per_rad": -0.41685338749955675,
+        "psi_sep_Wb_per_rad": -0.13195372877284878,
+        "F_T_m": 3.366579964803035,
+        "tf_current_kA": 116.89513766677206,
+        "lcfs_vertices": 88,
+        "lcfs_sha256": "62423896015debc36b5cd55de2a720a2040b464af9ad788bba4397fd0aa3724c",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 68,
+            "strike_RZ_m": [
+              1.2803735955197044,
+              -1.3584469208701289
+            ],
+            "refinement_m": 6.401854830546651e-09
+          },
+          "inner": {
+            "segment": 70,
+            "strike_RZ_m": [
+              1.0174915230568728,
+              -1.1654601857859488
+            ],
+            "refinement_m": 6.406694306241078e-08
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "floor"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_d880609264.parquet",
+        "equilibrium_sha256": "ddde3c7dfbd4034ef61e2142b787a2e4c435e4f33d119851626277224e601cd3",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 62,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": 116.89513766677206,
+        "tf_interpolation_times_ms": [
+          1399.952392578125,
+          1400.00244140625
+        ],
+        "tf_interpolation_currents_kA": [
+          117.22964428138734,
+          116.87798348140717
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da",
+          "wall_file": "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.wall",
+          "hit_file": "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "055d974612f77370ce02930a226e8e9a8391aa8db6ed1f893227521404142e54",
+          "stage4_receipt_sha256": "c0ebef6520ac91e96e4db2ae4b3ae44b0f7c7580ec069bcd4e25cd2c4a60d192",
+          "stage4_events_sha256": "b30e2264b3051f7d25bad330a42fdd96a31bf2bfb8e49496c6813d56f5ac1f5a",
+          "stage4_peak_MW_m2": 5.665110166055043,
+          "stage4_A2_m2": 0.3228416833909034,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "4391fa947eb90ab408fbb67cd9c586850ae6b93cba0f2c314c956c8044f57076",
+            "donors.csv.gz": "73f0011f78c93a4acc0a6fed96af2b6aa6d1899152aea408c89542e3b8d101c5",
+            "geometry.csv": "8d331d5ca60fb79338136575daa5464515d9c890eb320eabdd58d0b3ff87f982",
+            "profile.csv.gz": "a7ec79c9b023e990b7bef645dfbfbea3b6877cb776626bb322065b0e85e0190b"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4",
+          "wall_file": "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.wall",
+          "hit_file": "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.hits",
+          "candidate_id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "6e9da091a5f9fe87855a9864d26e93e04a4621373824e2ff09e69482825084c4",
+          "stage4_receipt_sha256": "953674a2bfb223f9cf31fd2f0262b6f8bb7ee1c3f4503628a0a55d1cb641e5cb",
+          "stage4_events_sha256": "44c1e0fc4610b2a02bca03108c4f429eacef998cc9bbc305f6699e39a3ba30d7",
+          "stage4_peak_MW_m2": 2.277141593279343,
+          "stage4_A2_m2": 0.6681555791409657,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "6b10f33999264e55902276c0d66066412794c40faf66eeb678eeea124d4f2cf2",
+            "donors.csv.gz": "858ff0a7b18717ac955afafbb46b17b572e9c0766bd2f1fe024a2c75d5bb0562",
+            "geometry.csv": "4539f9e1152b09d0241205a3eabc130fc9bfc9c558cc46df946db9883e2bc532",
+            "profile.csv.gz": "a43f7ddb9f78912dc81ba705055b96848e47e3b7f053661c998cd17db7ef118f"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f",
+          "wall_file": "walls/3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f.wall",
+          "hit_file": "walls/3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f.hits",
+          "candidate_id": "a60ae0b4d881fadc93a5fbc6fece3fd71c28b8fc1c031ddcb9e5f4db03601813",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "ecf00626123e5519e9e9f3f8c0b35aad53749307d9f87c4954b14c597145c90b",
+          "stage4_receipt_sha256": "80209a2308a52199d66669045ec28030db11c2fa73d43dbea31672c8bc21e77e",
+          "stage4_events_sha256": "5cf35f751d9f2feeaedc3e4684279e8a4d4cfe9134957d0238ae7b747e87f2ad",
+          "stage4_peak_MW_m2": 2.2772786347334635,
+          "stage4_A2_m2": 0.6351183431055828,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "f5daba1ff69d7050f04614888d252dc0e452e9b2de1da20c70e729c3dec90445",
+            "donors.csv.gz": "7656bc352396ddd324539edcbd92d35588ee78bcdb98d81dac9c8b0c3f08f844",
+            "geometry.csv": "4976454095b6981125a08f25b83e1fc366d461ed6df98202d6643bfcb1b6e9a0",
+            "profile.csv.gz": "1f5d241eea186223e328d2db9e0774a7c74ba7fc1a20661d894dc935276ab9b6"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8",
+          "wall_file": "walls/7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8.wall",
+          "hit_file": "walls/7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8.hits",
+          "candidate_id": "f259e942a0b5f2f1ead5d94bd397c824c743567d8b37263d14db8d4ced6e3bae",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "82a9baeb36da80cda74cc2aa060d7e017a02435c68962a37f64cab234cecde28",
+          "stage4_receipt_sha256": "15a1ceb60c3266e33627b219dd129fc6fec5f3f7e41a22c84b50f9c44aac1025",
+          "stage4_events_sha256": "a41cf7b0515bb4b4499a7619f9f5eddd6a7330b50076d07dc4330f3c13d43650",
+          "stage4_peak_MW_m2": 2.2816602671137782,
+          "stage4_A2_m2": 0.6405281679664603,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "fe5c5820a751629388db07358c484e4f5f8ace3c02469d6a34e3b464afa5e63e",
+            "donors.csv.gz": "3de69d155c8d146c4f99692b2991a6c0650ae37c650c3ceb6a54bd7c7b7423f4",
+            "geometry.csv": "ad03f3c99aa2ba0b4b532845612d3a8e27a303c0689848cf64036ef5197f9e38",
+            "profile.csv.gz": "c9b977f95b61c5ef4db3abcf58973b527992bbd9d5dca4ac6e066a94166a1b80"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093",
+          "wall_file": "walls/eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093.wall",
+          "hit_file": "walls/eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093.hits",
+          "candidate_id": "69195ec8090c62a174c1b9109a9e2e88be9b5a80a687e1316564566a49ba0c4e",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "29d732d0c6d8b53110096aa4407fcd0f9a525d2f6b27d665d71abff24e6ca3be",
+          "stage4_receipt_sha256": "a2e955efea4e240c2eed2d8acb416fb69d49b7c35c73d438dabd502e29cd8820",
+          "stage4_events_sha256": "75d87e2b4bfb0c0805f1e7af60c7e9dc35baf2559817f5a24413ce20da07eac8",
+          "stage4_peak_MW_m2": 2.595745935787285,
+          "stage4_A2_m2": 0.7166676345501659,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "3204ef9e2299b64199c6548d9a657aa5ca1514f880118cb104707b962b27774c",
+            "donors.csv.gz": "918694da93b205f19325973d477f38eb97ae431dede9f0171df7c7d1dfe35690",
+            "geometry.csv": "1c0c7d98ea1cdfe66aff290b1fd15b0d982067c40e362fb5d8de9266b36fdcb1",
+            "profile.csv.gz": "8b1b6607c1ed713a1f0f2657b499ef6f46bd7e96f1248e70774f4c98a06f95c6"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4",
+          "wall_file": "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.wall",
+          "hit_file": "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.hits",
+          "candidate_id": "f2056b8f1ea9c53c529153c84479b3c1f7368b607c17557ffbe2ddfc624bece5",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "055d974612f77370ce02930a226e8e9a8391aa8db6ed1f893227521404142e54",
+          "stage4_receipt_sha256": "c0ebef6520ac91e96e4db2ae4b3ae44b0f7c7580ec069bcd4e25cd2c4a60d192",
+          "stage4_events_sha256": "b30e2264b3051f7d25bad330a42fdd96a31bf2bfb8e49496c6813d56f5ac1f5a",
+          "stage4_peak_MW_m2": 2.277141593279343,
+          "stage4_A2_m2": 0.6681555791409657,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "6b10f33999264e55902276c0d66066412794c40faf66eeb678eeea124d4f2cf2",
+            "donors.csv.gz": "f3f3060e551f371cbe0f1f54a8968074926c292c40511035aa7760ccb628618c",
+            "geometry.csv": "4539f9e1152b09d0241205a3eabc130fc9bfc9c558cc46df946db9883e2bc532",
+            "profile.csv.gz": "3f87c9d8145b85d85fa816da5c52b8a3999325fd1ec0766d919b1a100676816e"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16",
+          "wall_file": "walls/a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16.wall",
+          "hit_file": "walls/a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16.hits",
+          "candidate_id": "e729fbce0c9ac2b69a66509e0679fdfab7a2b99eff3e66b9770e13ea60646ad4",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\d880609264\\30713\\full\\selected",
+          "stage4_result_sha256": "5903e0ee83101e0e0f4fef7a1409d187576c038cda2e1088e64bb6009d329251",
+          "stage4_receipt_sha256": "bcd1a6fe26bc07d4f668e3d5bfb7cd71fae4b2ef889eb425d13c2a15c771bded",
+          "stage4_events_sha256": "5aa552092040d645bc823d0be98dc8d7c5c381cb19220718904358f12cd1468c",
+          "stage4_peak_MW_m2": 2.5600908962577806,
+          "stage4_A2_m2": 0.7104744450036892,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "b0e2a6434a5cfd95f313f489fb5ab3cdd9f5036c95521dfe7e55e79c842b9219",
+            "donors.csv.gz": "aae34e4a4ba0c09fdcc70fd39aa6507989fbce49e7991c390b476c944d27b719",
+            "geometry.csv": "55a4c55fcb34a3019f7e1a82363b6398dc990912b52291774c44734caf6afcd0",
+            "profile.csv.gz": "f5433b25affab9922b2dcb93d06aafd0ffc15458aee181be540f4c68172e228e"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "4fbd3b148fa0557ddb372b1176106758ccdc184f2e65473a90032dbb796c128b",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "2d8a991549fa42fb1ead442b46365d4d5aa46f917c007f11667067e077c3fe3e",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.wall": "8bedc82e4b6feae2a0b1c5ffc60469d69d73203b9fb278f20f632b99fb9e9b88",
+        "walls/aa072a293275c1b8624f4f0d280132d3e0a0f4f4da27e0e10b6ac7a476ae50da.hits": "775003716dd3c58ec7c998b80a61b96a011c5604676ae65f795aed8d9c68193a",
+        "OMP.csv": "c9c73a2d0f1c6b24287cbe61c5c1ed2a4cd2730946361ed85d9a606404a6a4d1",
+        "OMP.source": "f1ee27c33a9778b79c6defc57159b5379e44127830c9776edc1dd93066bdb728",
+        "field_probes.txt": "136112bf93e9ed749752a22d4175c4f50f9763699136874878abca2c44d20a8b",
+        "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.wall": "7adf75cf1d73a88694cedc1d8cebc221e0c65aa572ad93861faabbdfefac1490",
+        "walls/e021470fe7c5017b96087f9d6b0ac281e711a960c7e6c4cb1225fefbd86270c4.hits": "e40db12bb54debc9e67e1e8bb78dcb660fdbfdab821f3408c3d02e009121b552",
+        "walls/3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f.wall": "4d2d39f0388b45d7ec0e561617b4a09342210cbe3abd60a53badd598888205ee",
+        "walls/3100e045a6e08594c384690735aa31848a257f3f2c5ad089834af457fa23f83f.hits": "a81ad60fe9db89c77a0b0ebd199ec2ac6336815c41f653fcf4a931b8eda738f6",
+        "walls/7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8.wall": "987df32862078aa2b0cce40f90f08251f7622dfd964976ff9e9fe8ab59bdf95b",
+        "walls/7ebd53e813a082760db55dd5c1ad0ff207a3207e6b51e28daaedd9a269abe8b8.hits": "001f5bfa751ffcb741e81346ece5aed47caed75076284fc95fbd280f87060152",
+        "walls/eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093.wall": "3509f82ac781f7091a197b73c26b295a7766c57e6dc5579dd77b058e7d6a962e",
+        "walls/eee4da9c5708be1af98eafbffef938f7266fcad75ffc88e4bde6008190a38093.hits": "23b7cb7f1c0f0e2ba97d90885b7462e5cf44597d0cc305c184ae5a34b53b28b0",
+        "walls/a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16.wall": "639b47030016f5844ba3444e31a7ae3cd599e52c31fec694020a34e854036e64",
+        "walls/a52bac864848313be313b833cc449e53448294b95c31b7232d487ba1abb44d16.hits": "ac73a9988396baede3ad37a6a156e6b20ca8947b2f4710cc9b041f29fef0af16"
+      }
+    },
+    {
+      "case_id": "f317e77cf7",
+      "registration_rank": 24,
+      "time_ms": 1400,
+      "frame_index": 60,
+      "raw_parquet": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_f317e77cf7.parquet",
+      "raw_sha256": "d38a1eea3ccd7b60ec1f36c990cee96607423c38ade506ffe58ae406500f2695",
+      "frame_fingerprint": {
+        "shape": [
+          65,
+          65
+        ],
+        "dimensional_sha256": "f3f265a51f88a3bdbb9354c7ebd54f84ad0ee90e63182343826b16a8b68134cd",
+        "normalized_sha256": "50ea53b9fc6f8edeb22f2fa4845c1ceab56c0aca63753993616af864f03e9eaf"
+      },
+      "predicted_family": "floor-only",
+      "predicted_region": "floor",
+      "predicted_floor_sufficient": true,
+      "abstained": false,
+      "baseline_peak_region": "floor",
+      "reference_SI": {
+        "power_W": 1000000.0,
+        "density_m3": 1e+19,
+        "chi_perp_m2_s": 0.3,
+        "lambda_q_m": 0.003,
+        "gamma": 7.0,
+        "kappa0": 2000.0
+      },
+      "topology": {
+        "axis_RZ_m": [
+          1.7163423299789429,
+          -0.04289267584681511
+        ],
+        "xpoint_RZ_m": [
+          1.2326128590462337,
+          -1.1929482001955942
+        ],
+        "omp_separatrix_RZ_m": [
+          2.252002032313607,
+          -0.04289267584681511
+        ],
+        "psi_axis_Wb_per_rad": -0.3082513395105056,
+        "psi_sep_Wb_per_rad": -0.07250391936888602,
+        "F_T_m": -3.4154218005210835,
+        "tf_current_kA": -118.59103474031541,
+        "lcfs_vertices": 90,
+        "lcfs_sha256": "b6c1bd10082e605177d368dc4fe71a0eed36214b13001331795caf9b8778e771",
+        "grid_shape_ZR": [
+          65,
+          65
+        ],
+        "grid_uniform_approx_max_m": [
+          1.424923539161682e-07,
+          5.587935447692871e-08
+        ]
+      },
+      "source_input_provenance": {
+        "baseline_lower_strike_legs": {
+          "outer": {
+            "segment": 68,
+            "strike_RZ_m": [
+              1.3026023153724704,
+              -1.358352330572883
+            ],
+            "refinement_m": 4.3894840855235876e-11
+          },
+          "inner": {
+            "segment": 69,
+            "strike_RZ_m": [
+              1.062884086583206,
+              -1.2608218860518385
+            ],
+            "refinement_m": 2.562892760633367e-08
+          }
+        },
+        "baseline_outer_strike_design": {
+          "location": "adjustable_interior",
+          "surfaces": [
+            "floor"
+          ]
+        },
+        "equilibrium_path": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\inputs\\raw\\d3d_shot_f317e77cf7.parquet",
+        "equilibrium_sha256": "d38a1eea3ccd7b60ec1f36c990cee96607423c38ade506ffe58ae406500f2695",
+        "geometry_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\d3d_optimization\\data\\DIIID_geom.json",
+        "geometry_sha256": "d8374eb3512e5e7b1b291cfb1dabaea6583c866e04f815ca2fe7c23a7add34b1",
+        "design_policy_path": "D:\\DivertorOptimization\\worktrees\\d3d-report-correction-20261104\\baseline_review\\optimization_region_policy.json",
+        "design_policy_sha256": "b10063781c0622570db90b5522084004267f324d04963eff09628cd2f3234ecb",
+        "wall_sha256": "8c9133f17d6c16af42a8834dccc64075b3dc6a73596f2261b7dca2adf6834ea5",
+        "omp_endpoints_RZ_m": {
+          "omp_entry": [
+            [
+              1.6807174746675833,
+              -1.2429636567829063
+            ],
+            [
+              1.6452814505546696,
+              -1.2447957888004426
+            ]
+          ],
+          "shelf": [
+            [
+              1.6452,
+              -1.2448
+            ],
+            [
+              1.40117,
+              -1.24477
+            ]
+          ],
+          "omp_connector": [
+            [
+              1.4002046434423296,
+              -1.2449831467624124
+            ],
+            [
+              1.3858170977951636,
+              -1.2481598577397073
+            ]
+          ],
+          "floor": [
+            [
+              1.4277,
+              -1.35782
+            ],
+            [
+              1.1645,
+              -1.35894
+            ]
+          ]
+        },
+        "omp_endpoints_sha256": "428d9cd9637bf8775a26dd1c071df499d9c9b5dc91d796bcc5daedea394b35d6",
+        "design_reference_sha256": "f0827adffce3f161f709ded564f8645f8d8798f9f8fa940b0486d832b5fc436b",
+        "time_ms": 1400.0,
+        "length_unit": "m",
+        "poloidal_flux_unit": "Wb/rad",
+        "magnetic_field_unit": "T",
+        "format": "DIII-D EFIT parquet",
+        "frame_index": 60,
+        "time_source": "exact efit_times match",
+        "tf_current_kA": -118.59103474031541,
+        "tf_interpolation_times_ms": [
+          1399.9625244140625,
+          1400.0125732421875
+        ],
+        "tf_interpolation_currents_kA": [
+          -118.8754168252945,
+          -118.49562316131592
+        ],
+        "toroidal_field_model": "ideal 144-turn coil with interpolated magnetics_bcoil (kA)"
+      },
+      "donor_count": 1280,
+      "roles": [
+        {
+          "role": "baseline",
+          "seed": 30713,
+          "wall_id": "c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10",
+          "wall_file": "walls/c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10.wall",
+          "hit_file": "walls/c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10.hits",
+          "candidate_id": null,
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\hotspot\\baseline",
+          "stage4_result_sha256": "03f1fa127472267cae265126716c330a015719a2fdba7a37863e647feeff8fc6",
+          "stage4_receipt_sha256": "37c3ac5d3393979129ff55041f110814913d109f595b208603d5653c045784af",
+          "stage4_events_sha256": "c8482b5e106800427155aa9a24d27ccb6f1c52ff29caac30e83960e6ceb1070d",
+          "stage4_peak_MW_m2": 9.863530166955062,
+          "stage4_A2_m2": 0.18687308253424312,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "c9c813f647b43a278d51dff5f0c1e5737371543d5efb1f35d8c70acb8c0ae9d2",
+            "donors.csv.gz": "a043bb5654a5ffbbd5cf933c75472673fc7abc7e2234904ba1e190e728addeb8",
+            "geometry.csv": "864892c31cfedd5bcd7aa7f87a0d9857c922f2978927c1490f64e3c3a29b2445",
+            "profile.csv.gz": "8e04d06af270e8652c430cc67f96b8fdceff73c2a1c250b54af2d0500ef286bb"
+          }
+        },
+        {
+          "role": "floor-only",
+          "seed": 30713,
+          "wall_id": "1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8",
+          "wall_file": "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.wall",
+          "hit_file": "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.hits",
+          "candidate_id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\floor-only\\selected",
+          "stage4_result_sha256": "1ca1a138cbec4bbb383e4b07fd894eca61722418108ea437fb3a77f3667569cc",
+          "stage4_receipt_sha256": "d86953f6f1d2debd86b318ad7b42f6875765e5d7e5d7662c3c2d40027291dcee",
+          "stage4_events_sha256": "f38e3109e9952e5db93c226c460b1cb6ae91e8e961eed031059cd63cdc8d7b0f",
+          "stage4_peak_MW_m2": 2.5780034411638173,
+          "stage4_A2_m2": 0.4848774208802781,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "61897068d4b039b041892ba63046576dc0c2d0d9107e2fc60b557b3db2f644a2",
+            "donors.csv.gz": "c3ef97eccada7bbfa8bb1eca117e6c92f99168936844a77e695269dc352aa4f1",
+            "geometry.csv": "fec6cba68e07a6db28ccaea7649d04ba1c48f4f4f1b711477ab220f5f9a1cfcd",
+            "profile.csv.gz": "f0c889cc933d26f15c7d622332bb7c379303f2d309da9640911f49ac8c93435d"
+          }
+        },
+        {
+          "role": "floor-entry",
+          "seed": 30713,
+          "wall_id": "2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77",
+          "wall_file": "walls/2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77.wall",
+          "hit_file": "walls/2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77.hits",
+          "candidate_id": "5a888810b5bb05412df22a82ed1e13b89abb8b7771ec9a839dccee04a4993c8b",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\floor-entry\\selected",
+          "stage4_result_sha256": "93a533e57ddd853c9eba9878804769a2a00f0972fd5324afa4da7cbdbdd444f1",
+          "stage4_receipt_sha256": "b95e149b713f676ba766cd735779f0a0904bc58f2905b4f18c32d5a01427aa5b",
+          "stage4_events_sha256": "efb81bdb8990893b5decaa3efe8291f8ccc0770604359b6696d13afd6235b058",
+          "stage4_peak_MW_m2": 2.649600039091792,
+          "stage4_A2_m2": 0.4497784722959793,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "247f7289d2f9d5bde01798feaafc7cc228af41f0644e6de64d017eca4185a815",
+            "donors.csv.gz": "f01b38875d52d79f7a49cda181c2ad9d02c9b4fb1d8de383ca5b2300564c4218",
+            "geometry.csv": "7c6f3ae9ef8d115076e74e9b16c94257042a8900d0aecb02d056a6eb6be4d07c",
+            "profile.csv.gz": "d7cc32ce1033fb8258bf110fc5064723f0f4e728fc94d4b85e32190a56778ae8"
+          }
+        },
+        {
+          "role": "floor-shelf",
+          "seed": 30713,
+          "wall_id": "b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c",
+          "wall_file": "walls/b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c.wall",
+          "hit_file": "walls/b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c.hits",
+          "candidate_id": "fc65936dc244dfe63e9e0c2772f601056a66d09c8950fddd44b0ed2d53755eab",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\floor-shelf\\selected",
+          "stage4_result_sha256": "87952f1e6bdba86b8ee34058ca5d61f41ef460635b366747732e2f0cd34be851",
+          "stage4_receipt_sha256": "8962c27fbe4c9bd5a25c251a4509b6566a8c9889fc7663673b29f888d7b76b10",
+          "stage4_events_sha256": "5654f3eed9b4658d69700a731882dd9c327a09d55ec6b8a563bd0ee13cb63496",
+          "stage4_peak_MW_m2": 2.578879471334618,
+          "stage4_A2_m2": 0.4832490961448221,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "620db1e78c82de4806b62666bda1b392fb9f53400b10a5d8cc24b87077ac67dd",
+            "donors.csv.gz": "478594258a32f2be195920451b6eca652494bf135574064c52d8afbabcebe183",
+            "geometry.csv": "8ae6d0d6c76e2513d6368d1836d3dbe45a2a509f6988824c32db708d4f619f9c",
+            "profile.csv.gz": "e91b8bcb7e26c0821e8ee6e7d27edcfd5ae1e1df84d3391d3ea306da6b5b4258"
+          }
+        },
+        {
+          "role": "floor-connector",
+          "seed": 30713,
+          "wall_id": "9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592",
+          "wall_file": "walls/9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592.wall",
+          "hit_file": "walls/9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592.hits",
+          "candidate_id": "3422cb41f0f5f90b40907682004959073b6762bb9cbd319833094f8a64956324",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\floor-connector\\selected",
+          "stage4_result_sha256": "5f37882eab035e3350d4324d14bfb11c8d4397b77810be2c247f9a33b04233dc",
+          "stage4_receipt_sha256": "6675e460333341ec22773788d048cfec134509ea16157144fb9c527a7a9f8158",
+          "stage4_events_sha256": "b6470aad22fddd16e1ddc3ba208061c16c8ddf0855cc2bd251ebab32cde753e8",
+          "stage4_peak_MW_m2": 2.6585779850386975,
+          "stage4_A2_m2": 0.4404362530549091,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "2cc6a97aae662b4a40de22f524e91b8735449b96844c451bf02dc9d4a9617e20",
+            "donors.csv.gz": "29134337bc2cf6bb026a346e41c3cd314bfe7f92a46ac528832310719e4b6bb2",
+            "geometry.csv": "16dca230c6fc34b8dbce0cb595fdf1b3199f48edcd1a57b6cb50d69186ab31c6",
+            "profile.csv.gz": "e645a99a91ae827cf56d6767ce7902b742439c25b3012b37b880fe5da726d24c"
+          }
+        },
+        {
+          "role": "hotspot",
+          "seed": 30713,
+          "wall_id": "1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8",
+          "wall_file": "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.wall",
+          "hit_file": "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.hits",
+          "candidate_id": "a3a3c79f9894bfdffdca9b603a6247a93512e1c364be25627a4df1892968ce42",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\hotspot\\selected",
+          "stage4_result_sha256": "03f1fa127472267cae265126716c330a015719a2fdba7a37863e647feeff8fc6",
+          "stage4_receipt_sha256": "37c3ac5d3393979129ff55041f110814913d109f595b208603d5653c045784af",
+          "stage4_events_sha256": "c8482b5e106800427155aa9a24d27ccb6f1c52ff29caac30e83960e6ceb1070d",
+          "stage4_peak_MW_m2": 2.5780034411638173,
+          "stage4_A2_m2": 0.4848774208802781,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "61897068d4b039b041892ba63046576dc0c2d0d9107e2fc60b557b3db2f644a2",
+            "donors.csv.gz": "aad849ea6ddd3d6eccddd186319f785479b2f18ff8a5e24dde42169dbcc610e4",
+            "geometry.csv": "fec6cba68e07a6db28ccaea7649d04ba1c48f4f4f1b711477ab220f5f9a1cfcd",
+            "profile.csv.gz": "10054435eb4fc7a1ccffae2554adee7c48416762b426d89cd66c2e2df21f8bdb"
+          }
+        },
+        {
+          "role": "full",
+          "seed": 30713,
+          "wall_id": "30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7",
+          "wall_file": "walls/30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7.wall",
+          "hit_file": "walls/30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7.hits",
+          "candidate_id": "3f5d62a956d9e2da3a422971ceff6e5dfd3babb1f40f6f6c816a144a13decb46",
+          "stage4_directory": "D:\\DivertorOptimization\\studies\\nf-stage4-20261109\\runs\\f317e77cf7\\30713\\full\\selected",
+          "stage4_result_sha256": "a051c8138bfd34265c8a77b95d3a419292ca915441b919a6c490caffe7d71011",
+          "stage4_receipt_sha256": "fbfd074a50be2e100263dbb891ec54ae485588f69ab244423810503043f313af",
+          "stage4_events_sha256": "474f4ec5877454ab3bce13c321c39e2a8841afd3db937c29cdb26784aec348c6",
+          "stage4_peak_MW_m2": 2.6496000027455824,
+          "stage4_A2_m2": 0.4497784925484038,
+          "stage4_peak_region": "floor",
+          "files_sha256": {
+            "boundary.npz": "6bfcfdb6cc346249fd124f250d39770ae18ce118187c7b20e335b71c3a3efc7c",
+            "donors.csv.gz": "6b5d731d39582c4cfaa74dff218c49299f6410350e1a4b1bc0a1d4eddf222d3c",
+            "geometry.csv": "b1e81bbf9cf48a29ce79b3a68af04b81f4f724e7192c9bdda663c133d24a57fb",
+            "profile.csv.gz": "bd4dbc37eaf1d9ab0365caec753dfea9b5bebefca97b56c537bb8934079f5dd6"
+          }
+        }
+      ],
+      "files_sha256": {
+        "model/fixed.geqdsk": "0acff2d0a788e5f2cd7bf534e0ad75956750b15f574e3ac803ba1c3cb562c880",
+        "model/.boundary": "58500eff20970c62dd29a18d092415b1e7e62de2aee2e2ff683890e3d133d256",
+        "model/.bfield": "0653a7723075ef164f102a33220bc4b7759d54368c84722d39abcb8a335d6aed",
+        "model/.equi2d": "02900d2ca6bbc3dd62216444342dfc42721027cfaac97ffc9e1c11ea013a66a7",
+        "model/wall.txt": "36a0471a5e39afae1bed4e2730f73451b75f80a0c54a5a36a2f5cf45cd5fb510",
+        "walls/c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10.wall": "d67c5782db8327ed351480157b342dad589f51e8c28b7d41e6c6035fcd3b7266",
+        "walls/c31c92e8859fbbc92d2720b69f71eaac830288b032d8d1f369d1bfdc999cfa10.hits": "4fcd9f3f4379fe3eb8f654f298d5e0bb8ffcc269a2a4c63225c679439fb17beb",
+        "OMP.csv": "29139efb198c72e499fc59188172d11a72b102a9ac3dcfab2d87eb7273a12789",
+        "OMP.source": "93d852103707427e5434b0a8555f393df79c2baac24471d5a68581221a4a52d4",
+        "field_probes.txt": "f25664ea01e039b5ff468475c17b484c2aa06a04dca1d9fffa409f2ec073c10d",
+        "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.wall": "384c0bbb7509eda8d1ebec1e32c451f5280f791c954c20f69fd6e098d7275274",
+        "walls/1605e2a5d59f2b5e32d5064f0c09c2273a6ee9ba0aae74bbba2582dd7e16d4b8.hits": "92749efba9981eda5e64e173cb5c39081365df65ab65acd98ce3ffad0f2ac3d8",
+        "walls/2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77.wall": "772ea79f426a8f333e4805ee55197ab31cea25b1e57ee97fd3fe390a80bcb131",
+        "walls/2006feaef7f1b00b868e075f27df22adc916172851e0a6c2418e7d2c0bc4bd77.hits": "e36466dcbad66104c8974078026eea4eddc704c876ec6cfd04d797b59209b0cc",
+        "walls/b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c.wall": "b4ebfdfb7cbaa33675a83268678c551cb87647bfe953046fd12b576c94946197",
+        "walls/b6c84e3d84b0a9394526f23438daf03aa6050ffcb6362e223632cef56017398c.hits": "eaa20608ef1153261c0c0cfca142f1f64a4b5ed5f2fe49e5daf8461659e02404",
+        "walls/9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592.wall": "522d46948d693a68eedbccdd69f767974a0b2e03d463b217065d3224a1e6380b",
+        "walls/9a135b363612eaf8a42fedde80ad1b9f6038a719148ac8933d253d7318e9b592.hits": "e05b380a0601f68e13452f3d209a879b052d85d091fb341d8e62e3e90dc11fdf",
+        "walls/30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7.wall": "d1cfc3a51d53ae9c61875aeb5642745e824a61b52865fab4393ecda334d4d763",
+        "walls/30d9e73d0edd560fa563147f35113cef4bb85bf59904fad56b2b334fa7b422c7.hits": "098efc6e3d14d97352e121e057404af6d18793bc530f110da25ad257133ba743"
+      }
+    }
+  ]
+}
