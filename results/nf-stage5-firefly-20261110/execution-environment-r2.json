@@ -1,0 +1,52 @@
+{
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:41:12) [MSC v.1944 64 bit (AMD64)]",
+  "interpreter_sha256": "b80d87439b8983f3dbcc27c29118c2b83684593ed1018228e89f0e581bb70262",
+  "windows_platform": "Windows-11-10.0.26200-SP0",
+  "analysis": {
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "h5py": "3.16.0"
+  },
+  "native_runtime": "WSL Ubuntu; archived FIREFLY/FLARE chroot",
+  "linux_kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "native_files_sha256": {
+    "/usr/local/bin/flare": "89775d2ed7ba2027dbe02fffa61bacaa21c65629c3fe535c72fda12177b0c7cf",
+    "/usr/local/lib/libFLARE.so": "4e1b879d23e66d442078d7549c4793599e908b63d0b4f730f32c1ebda898a06f",
+    "/usr/bin/python3": "e59d0124ff06c248546876e01fcfb1ea3cda63534949f94a9372bfcfe3bfc3f5",
+    "/usr/bin/mpirun": "96ab74bcbe60c8b6a750cd3b726ce6b2360991bcbc2a16635525a1979fc252ff",
+    "/work/install/lib/libFIREFLY.so": "d5ebfe0dc123f5bc44ad78a524f93ca71b7c74c48c9f3f14cb762a06bf5d6a68",
+    "/work/install/lib/python/firefly/f2py.cpython-313-x86_64-linux-gnu.so": "d30420eee99eb9d1442ab64d768c76f72e67a9629d07e6eab2f2b24bbeb27aea",
+    "/stage5/native-physics/cap-sync-v1/libFIREFLY.so": "3f5da3b88f37ba6420297c1590fd4207f4b5f2c0635cf97a5fed53bd806b34c0"
+  },
+  "monte_carlo": "MPI CPU, four ranks per job, two independent jobs concurrently",
+  "archived_adapter_patch_sha256": "0f27371417befd100bb021f2f0d261957122817031f2a0da5ec99e616efa473f",
+  "historical_smoke": {
+    "source_power_W": 1000000.0,
+    "wall_W": 999999.9999999998,
+    "cap_W": 0.0,
+    "domain_loss_W": 0.0,
+    "censored_W": 0.0,
+    "closure_residual_W": -2.3283064365386963e-10,
+    "wall_above_midplane_W": 0.0,
+    "max_wall_distance_m": 2.584603016523946e-13,
+    "max_cell_area_relative_error": 0.0001784772124860945,
+    "historical_raw_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "raw_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "max_hload_discrepancy": 0.0,
+    "runtime": {
+      "ranks": 4,
+      "seconds": 30.373505568,
+      "cpu_seconds": 115.75653,
+      "library_mappings": [
+        "/usr/local/lib/libFLARE.so",
+        "/work/install/lib/libFIREFLY.so",
+        "/work/install/lib/python/firefly/f2py.cpython-313-x86_64-linux-gnu.so"
+      ]
+    }
+  },
+  "active_transport_library": "/stage5/native-physics/cap-sync-v1/libFIREFLY.so",
+  "initial_execution_sha256": "07e34504025fb0370084e896e6b7bd67a0f49f5b0a32249284f9bbe8a365b1b8",
+  "repair_controls_sha256": "83c0f0cd650820c06d6a2e05d429302af78aa8177b71608943813f819ce7b7ed",
+  "repair_patch_sha256": "c7286dc93240c22248ec756d191d7ba6fe1bcb215cfde03b71909e72a0129f17",
+  "historical_smoke_note": "The frozen historical smoke in bridge.json used the same original compiled binary as the original study. The corrected binary has a separate three-run regression in native-physics/repair-controls/control-results.json."
+}

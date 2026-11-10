@@ -1,4 +1,5 @@
 """Inside the retained WSL image, call the pinned, compiled FIREFLY and FLARE APIs."""
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -70,10 +71,13 @@ def solve(mesh, wall, source, dest, seed, histories):
     if COMM.rank == 0:
         mapped = sorted({line.split()[-1] for line in Path("/proc/self/maps").read_text().splitlines()
                          if any(lib in line for lib in ("libFIREFLY.so", "libFLARE.so", "firefly/f2py."))})
-        if "/work/install/lib/libFIREFLY.so" not in mapped:
+        library = os.environ.get("STAGE5_THERMAL_LIBRARY", "/work/install/lib/libFIREFLY.so")
+        if [p for p in mapped if p.endswith("/libFIREFLY.so")] != [library]:
             raise ValueError("incorrect compiled FIREFLY runtime: " + str(mapped))
+        with open(library, "rb") as shared:
+            signature = hashlib.file_digest(shared, "sha256").hexdigest()
         dest.with_suffix(".runtime.json").write_text(json.dumps(dict(ranks=COMM.size,
-            seconds=time.monotonic()-start, cpu_seconds=sum(cpu), library_mappings=mapped)))
+            seconds=time.monotonic()-start, cpu_seconds=sum(cpu), library_mappings=mapped, active_transport_sha256=signature)))
 
 
 def main():

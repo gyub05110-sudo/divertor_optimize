@@ -48,6 +48,9 @@ def bindings(study):
     snapshots={p.relative_to(campaign.ROOT).as_posix():sha(p) for p in code}
     inputs=study/"inputs"
     fixed={p.relative_to(study).as_posix():sha(p) for p in sorted(inputs.rglob("*")) if p.is_file()}
+    repair=study/"native-physics"
+    if repair.is_dir():
+        fixed.update({p.relative_to(study).as_posix():sha(p) for p in sorted(repair.rglob("*")) if p.is_file()})
     from verification.stage5_native import wsl_path
     env_path=study/"execution-environment.json"
     fixed["execution-environment.json"]=sha(env_path)

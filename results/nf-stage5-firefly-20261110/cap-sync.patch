@@ -1,0 +1,12 @@
+--- a/src/fortran/tasks.f90
++++ b/src/fortran/tasks.f90
+@@ -591,6 +591,9 @@
+         ! - reflection at inner boundary
+         elseif (mod(istat, 10) == ISB_TAG) then
+            c%xi(2) = -0.9999876543210d0
++           ! Keep the tracked physical point on the same magnetic coordinate after the inner-boundary clamp.
++           ! A stale Cartesian point can put a nominal midplane impact on the opposite side of the cut.
++           if (cap_index>0 .and. tracing%boundary_flag(c%itube)==1) c%p=mesh%rzphicoords(c%mcoords)
+ !           dx = -dx
+ !           call tracing%xstep(c, dx, istat, n, u)
+ !           if (istat /= 0) then

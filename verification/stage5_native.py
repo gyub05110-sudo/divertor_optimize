@@ -296,6 +296,23 @@ def prepare_walls(study, case):
     return result
 
 
+def active_transport(study):
+    marker = study/"native-physics/active-library.txt"
+    if not marker.is_file():
+        return dict(active_transport_library="/work/install/lib/libFIREFLY.so",
+                    active_transport_sha256=PINNED["install/lib/libFIREFLY.so"])
+    relative = marker.read_text(encoding="ascii").strip()
+    parts = relative.split("/")
+    require(len(parts)==3 and parts[0]=="native-physics" and parts[2]=="libFIREFLY.so"
+            and parts[1] and all(c.isalnum() or c=="-" for c in parts[1]), "thermal library path")
+    mapped = "/stage5/"+relative
+    env = read(study/"execution-environment.json")
+    signature = digest(study/relative)
+    require(env["active_transport_library"]==mapped and env["native_files_sha256"].get(mapped)==signature,
+            "changed active thermal library")
+    return dict(active_transport_library=mapped, active_transport_sha256=signature)
+
+
 def context(study, case, wall, seed):
     registration = study/"wall-registration.json"
     require(digest(registration) == "d0627f34407ee7cb3fd054a6c8eecef17b1e20026c28ce068fdc3f0d224b7102"
@@ -323,13 +340,14 @@ def context(study, case, wall, seed):
                 seed_scheme="FIREFLY init_workspace", source_power_W=1e6, n0=1e19, T0=100.,
                 chi=.45, tau=TAU, max_history_seconds=.2, reflect_midplane=True, symmetry=64,
                 ready_sha256=digest(ready_path), registration_sha256=digest(registration),
-                native_libraries=PINNED, execution_sha256=plan_sha, **hashes)
+                preparation_libraries=PINNED, execution_sha256=plan_sha, **active_transport(study), **hashes)
 
 
 def final_evidence(path, final, request, wall, raw):
     runtime = read(path/"native.runtime.json")
     require(runtime["ranks"] == RANKS and runtime["cpu_seconds"] > 0 and runtime["seconds"] > 0 and
-            "/work/install/lib/libFIREFLY.so" in runtime["library_mappings"], "compiled runtime receipt")
+            [p for p in runtime["library_mappings"] if p.endswith("/libFIREFLY.so")]==[request["active_transport_library"]]
+            and runtime["active_transport_sha256"]==request["active_transport_sha256"], "compiled runtime receipt")
     ledger = audit_tally(raw, wall)
     require(ledger["wall_above_midplane_W"] < .3, "upper-leg contamination")
     signature = digest(raw)

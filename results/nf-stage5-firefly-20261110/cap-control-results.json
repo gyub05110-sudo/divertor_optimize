@@ -1,0 +1,148 @@
+{
+  "original_library_sha256": "d5ebfe0dc123f5bc44ad78a524f93ca71b7c74c48c9f3f14cb762a06bf5d6a68",
+  "synchronized_library_sha256": "3f5da3b88f37ba6420297c1590fd4207f4b5f2c0635cf97a5fed53bd806b34c0",
+  "historical_positive_F": {
+    "archived_raw_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "rebuilt_unmodified_sha256": "7c67df696c1c97fc0c7390cbf9c0b64f286dbff365dc8971e9367e6a12f0d79e",
+    "corrected_raw_sha256": "035caa7d15b4ba678de1bf56b11802e4269797ec61b42e3d2d6fd4ab1279216e",
+    "original_ledger": {
+      "source_power_W": 1000000.0,
+      "wall_W": 999999.9999999998,
+      "cap_W": 0.0,
+      "domain_loss_W": 0.0,
+      "censored_W": 0.0,
+      "closure_residual_W": -2.3283064365386963e-10,
+      "wall_above_midplane_W": 0.0,
+      "max_wall_distance_m": 2.584603016523946e-13,
+      "max_cell_area_relative_error": 0.0001784772124860945
+    },
+    "corrected_ledger": {
+      "source_power_W": 1000000.0,
+      "wall_W": 999999.9999999997,
+      "cap_W": 0.0,
+      "domain_loss_W": 0.0,
+      "censored_W": 0.0,
+      "closure_residual_W": -3.4924596548080444e-10,
+      "wall_above_midplane_W": 0.0,
+      "max_wall_distance_m": 2.584603016523946e-13,
+      "max_cell_area_relative_error": 0.0001784772124860945
+    },
+    "half_abs_native_cell_difference_W": 37573.943113014626,
+    "native_ring_peak_old_new_MW_m2": [
+      1.9055065735891454,
+      1.9176277342935193
+    ]
+  },
+  "prospective_negative_F": [
+    {
+      "case_id": "3264fdd71f",
+      "wall_id": "021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318",
+      "role": "baseline",
+      "seed": 51031,
+      "half_integrated_abs_profile_change_W": 12538.454943984061,
+      "results": [
+        {
+          "variant": "original",
+          "raw_sha256": "8a2e78f25db7eb251e83c4d376c62129d792bad731b4cee6e3f8193de4eeb4bb",
+          "source_power_W": 1000000.0,
+          "wall_W": 1000000.0000000002,
+          "cap_W": 0.0,
+          "domain_loss_W": 0.0,
+          "censored_W": 0.0,
+          "closure_residual_W": 2.3283064365386963e-10,
+          "wall_above_midplane_W": 36.553359153690025,
+          "max_wall_distance_m": 2.2559775569908735e-13,
+          "max_cell_area_relative_error": 0.0001784772124840961,
+          "z_cut_m": 0.016885746270418167,
+          "fully_upper_W": 36.553359153690025,
+          "straddling_cells_W": 0.0,
+          "peak_MW_m2": 3.503433495734075,
+          "A2_m2": 0.46296575645784527,
+          "peak_RZ_m": [
+            1.0607825924662309,
+            -1.2587927290792977
+          ],
+          "peak_surface": "imp_sloped"
+        },
+        {
+          "variant": "synchronized",
+          "raw_sha256": "8009e71a82294a06880a6e01d14b18d38d00c341bda052f07eb617312d54a39e",
+          "source_power_W": 1000000.0,
+          "wall_W": 1000000.0000000002,
+          "cap_W": 0.0,
+          "domain_loss_W": 0.0,
+          "censored_W": 0.0,
+          "closure_residual_W": 2.3283064365386963e-10,
+          "wall_above_midplane_W": 0.0,
+          "max_wall_distance_m": 2.2559775569908735e-13,
+          "max_cell_area_relative_error": 0.0001784772124840961,
+          "z_cut_m": 0.016885746270418167,
+          "fully_upper_W": 0.0,
+          "straddling_cells_W": 0.0,
+          "peak_MW_m2": 3.416517976716008,
+          "A2_m2": 0.45950305290608223,
+          "peak_RZ_m": [
+            1.0607825924662309,
+            -1.2587927290792977
+          ],
+          "peak_surface": "imp_sloped"
+        }
+      ]
+    },
+    {
+      "case_id": "3264fdd71f",
+      "wall_id": "892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c",
+      "role": "floor-only",
+      "seed": 51031,
+      "half_integrated_abs_profile_change_W": 12538.45494398581,
+      "results": [
+        {
+          "variant": "original",
+          "raw_sha256": "b867f2a3a02fc9cb19fd571a3206cff4682e67d72faf4f31c0d94c155acea082",
+          "source_power_W": 1000000.0,
+          "wall_W": 1000000.0000000002,
+          "cap_W": 0.0,
+          "domain_loss_W": 0.0,
+          "censored_W": 0.0,
+          "closure_residual_W": 2.3283064365386963e-10,
+          "wall_above_midplane_W": 36.553359153690025,
+          "max_wall_distance_m": 2.2559775569908735e-13,
+          "max_cell_area_relative_error": 0.0001784772124840961,
+          "z_cut_m": 0.016885746270418167,
+          "fully_upper_W": 36.553359153690025,
+          "straddling_cells_W": 0.0,
+          "peak_MW_m2": 3.503433495732021,
+          "A2_m2": 0.4629657564578817,
+          "peak_RZ_m": [
+            1.0607825924662302,
+            -1.258792729079297
+          ],
+          "peak_surface": "imp_sloped"
+        },
+        {
+          "variant": "synchronized",
+          "raw_sha256": "da27c28554fc153ce574469dd83a8a5539b6c8e4c6f2474820f1c3d3fdceb4a5",
+          "source_power_W": 1000000.0,
+          "wall_W": 1000000.0000000002,
+          "cap_W": 0.0,
+          "domain_loss_W": 0.0,
+          "censored_W": 0.0,
+          "closure_residual_W": 2.3283064365386963e-10,
+          "wall_above_midplane_W": 0.0,
+          "max_wall_distance_m": 2.2559775569908735e-13,
+          "max_cell_area_relative_error": 0.0001784772124840961,
+          "z_cut_m": 0.016885746270418167,
+          "fully_upper_W": 0.0,
+          "straddling_cells_W": 0.0,
+          "peak_MW_m2": 3.416517976714069,
+          "A2_m2": 0.4595030529061145,
+          "peak_RZ_m": [
+            1.0607825924662302,
+            -1.258792729079297
+          ],
+          "peak_surface": "imp_sloped"
+        }
+      ]
+    }
+  ]
+}
