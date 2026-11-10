@@ -1,0 +1,151 @@
+{
+  "schema": "nf-stage5-first-native-upper-wall-incident.v1",
+  "first_execution_sha256": "07e34504025fb0370084e896e6b7bd67a0f49f5b0a32249284f9bbe8a365b1b8",
+  "status": "Both first jobs failed original upper-wall QA; excluded from prospective heat comparisons.",
+  "files_sha256": {
+    "execution.json": "07e34504025fb0370084e896e6b7bd67a0f49f5b0a32249284f9bbe8a365b1b8",
+    "execution.sha256": "d940cb350b1581f1569a28b4120ca4302b4b786f577c0575f1fbd26eba93e09c",
+    "execution-environment.json": "fce38c1ac205128a0bf0186920920b710ed02a8fd93a51363f5bd9cef5b060f5",
+    "bridge.json": "c67c2b065680208f6be51eb11925451412ee294d702dbdce9abe4521d23168ce",
+    "bridge-cases.csv": "88b382c8a4389f10ed2c4568d0f2aa89e307efd0f7e2edebba8300fd76c55ec1",
+    "wall-registration.json": "d0627f34407ee7cb3fd054a6c8eecef17b1e20026c28ce068fdc3f0d224b7102",
+    "workflow.out.log": "fde5161754a57bea80f59d230d859264642df09b6441a24b844d236789ebb61c",
+    "workflow.err.log": "489edb128efab89e7cc05d82dc12ad363cae68edafcfa55d16749cbd44ddfc5f",
+    "dispatch-attempts/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/51031/001/completion.json": "1e90dc610bb377a69e1f8b0fac788890817a1a80696c4c1aad37c00bd6b642b2",
+    "dispatch-attempts/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/51031/001/launch.json": "a0cc7f18afae24ff8af920d39bd2430008f049d72207e71b847f59e76dea6f59",
+    "dispatch-attempts/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/51031/001/stdout.log": "639fa079cad90df44f2e8aa51bfc961c35f1665c7abf0d8f08d99c48ac9d57cb",
+    "dispatch-attempts/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/51031/001/completion.json": "829f902a9b8b290c7a7796fc2ccc669567ade3e26180f917902173e57ae7f7a9",
+    "dispatch-attempts/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/51031/001/launch.json": "7fb576252a167762d4ab5d305e9084e8746f4b1c9bd8de600efd39bb19887a91",
+    "dispatch-attempts/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/51031/001/stdout.log": "639fa079cad90df44f2e8aa51bfc961c35f1665c7abf0d8f08d99c48ac9d57cb",
+    "native/results/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/attempts/51031/001/native.nc": "b867f2a3a02fc9cb19fd571a3206cff4682e67d72faf4f31c0d94c155acea082",
+    "native/results/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/attempts/51031/001/native.runtime.json": "9fbf83e710871f315c529170bedaf86bab8d5a2ca67ad5d7a7b2b003d327e408",
+    "native/results/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/attempts/51031/001/request.json": "39e0a7e7b73bc9b6d84597d4122af2ce8d23798d6a9e57ce810e22c0e3ffa3bb",
+    "native/results/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/attempts/51031/001/run.log": "560c1434828e68884fed00628185e61031fc8f76a2cac65ac68a71878a7e95d0",
+    "native/results/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/attempts/51031/001/native.nc": "8a2e78f25db7eb251e83c4d376c62129d792bad731b4cee6e3f8193de4eeb4bb",
+    "native/results/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/attempts/51031/001/native.runtime.json": "bb80df0fe2736171c3b8283410961fb8eb4dd599b996b77532b9ccc01c4fed4a",
+    "native/results/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/attempts/51031/001/request.json": "46e751e7374e6cf986d2f0457cb47963037d881c7de9c755d9bd3024510fc854",
+    "native/results/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/attempts/51031/001/run.log": "cfeb419017f0ec0d7d5d853fa1296f8a8e48cd5388efdd9c570785fe8777ed5f",
+    "source-code/verification/stage5_bridge_report.py": "84c005f4532cc61ccb48d9303978be280f268864eacc8dc3342b9355e05b995f",
+    "source-code/verification/stage5_campaign.py": "95be9218093756bf202fe714600ea4e3daacde3ffcf1424e756719af2f6436d4",
+    "source-code/verification/stage5_dispatch.py": "8282f8beaadf4c25e99398db1926767bad07c3b7f04d38642b180000f40e55e1",
+    "source-code/verification/stage5_inputs.py": "02424a93d5ac8f21fd3780443bc6201ebff144cae68619cf35383f7ac9a58bc3",
+    "source-code/verification/stage5_metrics.py": "2f447f1eebe43788ddd79d987017f850e5d4e10e03e41545e1af06b2fd199dfb",
+    "source-code/verification/stage5_native.py": "3afe791297d0ec5fae9844b60924656cba269e76e209796d333da2a69248f159",
+    "source-code/verification/stage5_native_enter.sh": "329880af7817e273a2559eceaa30827cd50a4fea0dc7bf25ea99a66e3cb44d23",
+    "source-code/verification/stage5_native_worker.py": "f97b1b283b7ae8750900232dddc61622066fed12216b06e82905b248455fbc5b"
+  },
+  "attempts": [
+    {
+      "path": "native/results/3264fdd71f/892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c/attempts/51031/001/native.nc",
+      "sha256": "b867f2a3a02fc9cb19fd571a3206cff4682e67d72faf4f31c0d94c155acea082",
+      "ledger": {
+        "source_power_W": 1000000.0,
+        "wall_W": 1000000.0000000002,
+        "cap_W": 0.0,
+        "domain_loss_W": 0.0,
+        "censored_W": 0.0,
+        "closure_residual_W": 2.3283064365386963e-10,
+        "sector_multiplier": 64.0,
+        "cell_area_max_relative_error": {
+          "wall": 0.00017847721259622862,
+          "reflect_midplane": 0.0001784772124920897
+        },
+        "parameters": {
+          "nparticles": 4096.0,
+          "n0": 1e+19,
+          "T0": 100.0,
+          "chi": 0.45,
+          "tau": 1.6021766e-08,
+          "max_history_seconds": 0.2,
+          "domain_loss_fraction": 0.0,
+          "censored_fraction": 0.0
+        },
+        "wall_cells": 7253
+      },
+      "midplane_Z_m": 0.016885746270418167,
+      "upper_wall_W": 36.553359153690025,
+      "cells": [
+        {
+          "cell": 494,
+          "W": 8.46248147670752,
+          "Z_range_m": [
+            1.1197358333333334,
+            1.12164375
+          ]
+        },
+        {
+          "cell": 495,
+          "W": 3.900541083854556,
+          "Z_range_m": [
+            1.1178279166666667,
+            1.1197358333333334
+          ]
+        },
+        {
+          "cell": 7247,
+          "W": 24.190336593127952,
+          "Z_range_m": [
+            1.1039208602150536,
+            1.105920716845878
+          ]
+        }
+      ]
+    },
+    {
+      "path": "native/results/3264fdd71f/021606f6597e71819ae87d1a57605978aae101e680c5a4c7e84de77b2a153318/attempts/51031/001/native.nc",
+      "sha256": "8a2e78f25db7eb251e83c4d376c62129d792bad731b4cee6e3f8193de4eeb4bb",
+      "ledger": {
+        "source_power_W": 1000000.0,
+        "wall_W": 1000000.0000000002,
+        "cap_W": 0.0,
+        "domain_loss_W": 0.0,
+        "censored_W": 0.0,
+        "closure_residual_W": 2.3283064365386963e-10,
+        "sector_multiplier": 64.0,
+        "cell_area_max_relative_error": {
+          "wall": 0.00017847721259622862,
+          "reflect_midplane": 0.0001784772124920897
+        },
+        "parameters": {
+          "nparticles": 4096.0,
+          "n0": 1e+19,
+          "T0": 100.0,
+          "chi": 0.45,
+          "tau": 1.6021766e-08,
+          "max_history_seconds": 0.2,
+          "domain_loss_fraction": 0.0,
+          "censored_fraction": 0.0
+        },
+        "wall_cells": 7253
+      },
+      "midplane_Z_m": 0.016885746270418167,
+      "upper_wall_W": 36.553359153690025,
+      "cells": [
+        {
+          "cell": 494,
+          "W": 8.46248147670752,
+          "Z_range_m": [
+            1.1197358333333334,
+            1.12164375
+          ]
+        },
+        {
+          "cell": 495,
+          "W": 3.900541083854556,
+          "Z_range_m": [
+            1.1178279166666667,
+            1.1197358333333334
+          ]
+        },
+        {
+          "cell": 7247,
+          "W": 24.190336593127952,
+          "Z_range_m": [
+            1.1039208602150536,
+            1.105920716845878
+          ]
+        }
+      ]
+    }
+  ]
+}
