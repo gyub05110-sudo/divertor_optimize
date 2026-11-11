@@ -1,0 +1,20 @@
+{
+  "schema": "source-domain-audit-evidence.v1",
+  "checks": {
+    "source_cases": 7,
+    "unique_geometries": 46,
+    "native_ledgers": 276,
+    "route_histories": 4096,
+    "native_full_file_identity": true,
+    "existing_targeted_tests_passed": 20
+  },
+  "files_relative_to_repository": {
+    "results/nf-source-domain-audit-20261111/native-evidence.zip": "676f7273a017a06a38dd758f90cd7e7636f1faa474f46bcf1e42cc9869015545",
+    "results/nf-source-domain-audit-20261111/native-summary.json": "fbdf4d1d30186bde7208abaabb1214f19fe1fdf58549bd7476df5bce552f6399",
+    "results/nf-source-domain-audit-20261111/REPORT.ko.md": "140490ab3d12639d22b023e78ace75b6b927f89f43333ce06a845a866e517971",
+    "results/nf-source-domain-audit-20261111/reproduce.ko.md": "ab633b3d3f9fbc062b1166c6adaaaff050376ba184bd1feac0942be409d988de",
+    "results/nf-source-domain-audit-20261111/source-domain.json": "c6db6914a39814de5bd24bc52c836b042f05b66fd607949011f4a6686181b655",
+    "verification/source_domain_audit.py": "d6c75218f4d368cde14cc4bb236bde04b5dd7c97a6dbe5270abfc3cbc3586fa0",
+    "results/nf-stage5-firefly-20261110/REPORT.ko.md": "cb17f6e01ac9b6a9ea078eb7c21d7da6d3ba37b6b49f76215db5c05260cde3b1"
+  }
+}

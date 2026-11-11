@@ -1,0 +1,220 @@
+{
+  "case_id": "3264fdd71f",
+  "role": "floor-only",
+  "wall_id": "892b5e0939244002c986d16aa445f123f3f2ee3eeb024fbe63a125ceff5ef10c",
+  "seed": 51031,
+  "histories": 4096,
+  "ranks": 4,
+  "tally_byte_identity": {
+    "hload": true,
+    "area": true
+  },
+  "published_raw_sha256": "da27c28554fc153ce574469dd83a8a5539b6c8e4c6f2474820f1c3d3fdceb4a5",
+  "diagnostic_raw_sha256": "da27c28554fc153ce574469dd83a8a5539b6c8e4c6f2474820f1c3d3fdceb4a5",
+  "library_sha256": "dadffc874fe9cecf633016811dbb208e3fd647a5f8e2c2619c5b3aaa40cd50ec",
+  "published": {
+    "imp_total_W": 116271.62328375976,
+    "imp_sloped_W": 116271.62328375979,
+    "imp_vertical_W": 0.0,
+    "wall_W": 1000000.0000000002
+  },
+  "categories": {
+    "all_IMP_histories": {
+      "histories": 1426,
+      "IMP_deposit_W": 116271.62328375975
+    },
+    "first_physical_hit_IMP": {
+      "histories": 130,
+      "IMP_deposit_W": 20995.447963104554
+    },
+    "first_physical_hit_elsewhere_then_IMP": {
+      "histories": 1296,
+      "IMP_deposit_W": 95276.17532065521
+    },
+    "core_before_first_IMP": {
+      "histories": 1389,
+      "IMP_deposit_W": 113623.51089167566
+    },
+    "PFR_before_first_IMP": {
+      "histories": 487,
+      "IMP_deposit_W": 33131.742798843035
+    },
+    "core_but_not_PFR_before_first_IMP": {
+      "histories": 939,
+      "IMP_deposit_W": 83139.88048491674
+    },
+    "PFR_but_not_core_before_first_IMP": {
+      "histories": 37,
+      "IMP_deposit_W": 2648.112392084104
+    },
+    "both_core_and_PFR_before_first_IMP": {
+      "histories": 450,
+      "IMP_deposit_W": 30483.630406758926
+    },
+    "first_observed_Rx_crossing_above_X": {
+      "histories": 1300,
+      "IMP_deposit_W": 107350.08526220807
+    },
+    "first_observed_Rx_crossing_below_X": {
+      "histories": 126,
+      "IMP_deposit_W": 8921.538021551693
+    },
+    "explicit_ISB_ever": {
+      "histories": 41,
+      "IMP_deposit_W": 2791.2319610941513
+    },
+    "hidden_tmap_clamp_ever": {
+      "histories": 41,
+      "IMP_deposit_W": 2791.2319610941513
+    },
+    "any_artificial_clamp_ever": {
+      "histories": 41,
+      "IMP_deposit_W": 2791.2319610941513
+    },
+    "never_artificial_clamp": {
+      "histories": 1385,
+      "IMP_deposit_W": 113480.39132266562
+    },
+    "artificial_clamp_before_first_IMP": {
+      "histories": 23,
+      "IMP_deposit_W": 1604.7567736006101
+    }
+  },
+  "IMP_W_deposited_before_first_explicit_ISB": 114098.82083435866,
+  "IMP_W_deposited_before_either_artificial_clamp": 114098.82083435866,
+  "max_sampled_Z_m": 0.016885746270418167,
+  "midplane_Z_m": 0.016885746270418167,
+  "histories_above_midplane_1nm": 0,
+  "total_explicit_ISB_events": 67773,
+  "total_hidden_tmap_clamps": 118752,
+  "total_wall_events": 871809,
+  "first_wall_hit_counts": {
+    "1": 130,
+    "2": 3966
+  },
+  "first_wall_step_kind_counts": {
+    "cross_field": 3,
+    "parallel": 4093
+  },
+  "first_physical_IMP_contact_deposition_W": 433.7485706484561,
+  "notes": [
+    "Original source and native transport parameters retained; no random numbers added.",
+    "IMP criterion physical R<=1.1645m and Z<=-1.15m includes sloped segment69 and lower segment70; published native wall geometry provides exact sloped/vertical reconciliation.",
+    "Core/PFR flags require exact native psiN<1 confirmation at RZ, with Z above/below lower X point. Bilinear corner-flux screening can delay detection; first-step counters are observed entry times, not mathematically exact separatrix crossing times.",
+    "Max Z observed after transverse steps and each bstep return, not at every internal toroidal subsegment.",
+    "Explicit ISB and hidden torosf_map clamp events are both counted; weight-before-clamp is event-exact.",
+    "Attribution to histories that ever visited a region is associative; no changed-boundary causal control performed."
+  ],
+  "open_PFC_direct_trace": {
+    "file_sha256": "e2dfe719f720258f9c84622887e30323f7f214e89af0a7eb30db26b9454ec35c",
+    "donors": 1280,
+    "failures": 0,
+    "negative_direction_inner_hits": 982,
+    "positive_lower_direction_inner_hits": 0,
+    "note": "The published direct trace uses open PFC without the reflecting cap. Negative-direction connections are not the capped lower-leg experiment. The positive lower-directed donor path has zero inner hits."
+  },
+  "witnesses": [
+    {
+      "i": 1.0,
+      "steps": 18140.0,
+      "first_region": 1.0,
+      "first_step": 5375.0,
+      "first_kind": 2.0,
+      "wall_hits": 216.0,
+      "ISB": 0.0,
+      "cap_x": 0.0,
+      "cap_b": 1011.0,
+      "core": 1.0,
+      "pfr": 1.0,
+      "cross": 105.0,
+      "core_step": 44.0,
+      "pfr_step": 5616.0,
+      "imp_step": 5375.0,
+      "imp_weight": 2.3870862072894265e-06,
+      "other_weight": 1.427611058335573e-06,
+      "imp_before_ISB": 2.3870862072894265e-06,
+      "first_load": 5.21332416644779e-08,
+      "max_Z": 0.016885746270418167,
+      "min_Z": -1.259734746335009,
+      "min_R": 1.059577595750844,
+      "min_psi_interp": 0.9871414452977112,
+      "crossing_Z": -1.056599549320144,
+      "core_R": 2.246922058778924,
+      "core_Z": -0.15690492996038824,
+      "pfr_R": 1.0815769498588506,
+      "pfr_Z": -1.2469102475500133,
+      "tmap_clamps": 0.0,
+      "first_ISB_step": 0.0,
+      "first_tmap_step": 0.0,
+      "imp_before_both": 2.3870862072894265e-06
+    },
+    {
+      "i": 15.0,
+      "steps": 10669.0,
+      "first_region": 2.0,
+      "first_step": 29.0,
+      "first_kind": 2.0,
+      "wall_hits": 90.0,
+      "ISB": 0.0,
+      "cap_x": 0.0,
+      "cap_b": 781.0,
+      "core": 1.0,
+      "pfr": 1.0,
+      "cross": 164.0,
+      "core_step": 358.0,
+      "pfr_step": 128.0,
+      "imp_step": 225.0,
+      "imp_weight": 5.060053097213685e-07,
+      "other_weight": 3.3086919559036303e-06,
+      "imp_before_ISB": 5.060053097213685e-07,
+      "first_load": 5.21332416644779e-08,
+      "max_Z": 0.016885746270418167,
+      "min_Z": -1.259650361000786,
+      "min_R": 1.0613776767882501,
+      "min_psi_interp": 0.978903946559811,
+      "crossing_Z": -1.0760584206334711,
+      "core_R": 1.2599820935459234,
+      "core_Z": -0.8148674708068191,
+      "pfr_R": 1.477038596722622,
+      "pfr_Z": -1.2226572552412875,
+      "tmap_clamps": 0.0,
+      "first_ISB_step": 0.0,
+      "first_tmap_step": 0.0,
+      "imp_before_both": 5.060053097213685e-07
+    },
+    {
+      "i": 83.0,
+      "steps": 838407.0,
+      "first_region": 2.0,
+      "first_step": 833603.0,
+      "first_kind": 2.0,
+      "wall_hits": 174.0,
+      "ISB": 7.0,
+      "cap_x": 18.0,
+      "cap_b": 106538.0,
+      "core": 1.0,
+      "pfr": 1.0,
+      "cross": 96.0,
+      "core_step": 1.0,
+      "pfr_step": 835952.0,
+      "imp_step": 836275.0,
+      "imp_weight": 8.056600052568823e-07,
+      "other_weight": 3.009037260368117e-06,
+      "imp_before_ISB": 0.0,
+      "first_load": 5.21332416644779e-08,
+      "max_Z": 0.016885746270418167,
+      "min_Z": -1.259567549357793,
+      "min_R": 1.0594040464137984,
+      "min_psi_interp": 0.8093249892206736,
+      "crossing_Z": -1.0538196108628812,
+      "core_R": 2.2727239507233175,
+      "core_Z": 0.016639216501819296,
+      "pfr_R": 1.4296696175709975,
+      "pfr_Z": -1.1387136021882838,
+      "tmap_clamps": 12.0,
+      "first_ISB_step": 373990.0,
+      "first_tmap_step": 373994.0,
+      "imp_before_both": 0.0
+    }
+  ]
+}
